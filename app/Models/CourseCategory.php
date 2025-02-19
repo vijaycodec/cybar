@@ -1,0 +1,37 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+
+class CourseCategory extends Model
+{
+    use HasFactory;
+
+    // // Define the relationship between Services and Category
+
+    public function services()
+    {
+        return $this->hasMany(OurServices::class, 'category_id');
+    }
+    public function training()
+    {
+        return $this->hasMany(CorporateTraining::class, 'category_id');
+    }
+        
+        public function subCategories()
+    {
+        return $this->hasMany(SubCategory::class, 'category_id');
+    }
+    
+    public function coursecategory()
+    {
+        return $this->hasMany(SubCategory::class, 'category_id');
+    }
+    
+//     public function pageCategory()
+// {
+//     return $this->belongsTo(PageDetail::class, 'page_category_id');
+// }
+}

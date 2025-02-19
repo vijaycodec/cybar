@@ -1,0 +1,276 @@
+body {
+    zoom: 90% !important;
+}
+
+
+#logo_header_mobile {
+    max-width: 190px;
+}
+
+.wg-table.table-all-user>* {
+    min-width: 1260px;
+}
+
+.wgp-pagination svg {
+    height: 20px;
+}
+
+.wgp-pagination p {
+    font-size: 16px;
+}
+
+.pagination {
+    margin-left: 30px;
+}
+    .page-link {
+        padding: 1.1rem;
+        font-size: 16px;
+    }
+
+
+
+/* Center all table content */
+
+    /* Custom Modal Styling */
+  
+    .modal-content {
+        border-radius: 15px;
+        padding: 20px;
+    }
+
+    .modal-header {
+        border-bottom: none;
+        padding: 20;
+
+    }
+
+    .modal-footer {
+        border-top: none;
+        padding: 0;
+    }
+
+    .col-md-4 {
+        width: 16.333333%
+    }
+
+    .modal-body {
+        padding: 15px 20px;
+    }
+
+    .modal-dialog {
+        max-width: 50%;
+        /* Adjust the modal width */
+        margin: 20px auto;
+        /* Center the modal */
+    }
+
+    .description-short {
+        max-width: 300px;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Ensure button visibility */
+    .read-more {
+        display: inline-block;
+        font-size: 14px;
+        text-decoration: underline;
+        background: none;
+        border: none;
+        padding: 0;
+        color: #007bff;
+        margin-left: 5px;
+    }
+
+/*css for image preview */
+  /* Preview image styles */
+  #imgpreview {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    /* Make sure it doesn't overflow */
+    overflow: hidden;
+    /* Prevent overflow of large images */
+}
+
+#imgpreview img {
+    max-width: 80%;
+    /* Reduce image size for better UX */
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Delete button styles */
+#deleteImage {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#deleteImage:hover {
+    background-color: #c82333;
+}
+
+#deleteImage:focus {
+    outline: none;
+}
+
+.swal-button--confirm {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+}
+
+.swal-button--confirm.active,
+.swal-button--confirm:active,
+.show>.swal-button--confirm.dropdown-toggle,
+.swal-button--confirm:hover {
+    background-color: #b02a37 !important;
+    border-color: #a52834 !important;
+    color: #fff;
+}
+
+.swal-footer {
+    text-align: center;
+}
+
+.table-bordered>:not(caption)>*>* {
+    border-width: inherit;
+    line-height: 32px;
+    font-size: 14px;
+    border: 1px solid #e1e1e1;
+    vertical-align: middle;
+}
+
+.table-striped .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table-striped {
+    min-width: 1200px;
+}
+
+.table-striped th:nth-child(2),
+.table-striped td:nth-child(2) {
+    width: 250px;
+    padding-bottom: 18px;
+}
+
+.pname {
+    display: flex;
+    gap: 13px;
+}
+
+.view-icon {
+    width: 20px;
+    margin: 0 auto;
+}
+.wg-table.table-all-user>* {
+    min-width: 1260px;
+}
+
+/*------*/
+.wgp-pagination svg {
+    height: 20px;
+}
+
+.wgp-pagination p {
+    font-size: 16px;
+}
+
+.pagination {
+    margin-left: 30px;
+
+    .page-link {
+        padding: 1.1rem;
+        font-size: 16px;
+    }
+}
+
+.swal-button--confirm {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+}
+
+.swal-button--confirm.active,
+.swal-button--confirm:active,
+.show>.swal-button--confirm.dropdown-toggle,
+.swal-button--confirm:hover {
+    background-color: #b02a37 !important;
+    border-color: #a52834 !important;
+    color: #fff;
+}
+
+.swal-footer {
+    text-align: center;
+}
+
+.table-bordered>:not(caption)>*>* {
+    border-width: inherit;
+    line-height: 32px;
+    font-size: 14px;
+    border: 1px solid #e1e1e1;
+    vertical-align: middle;
+}
+
+.table-striped .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table-striped {
+    min-width: 1200px;
+}
+
+.table-striped th:nth-child(2),
+.table-striped td:nth-child(2) {
+    width: 250px;
+    padding-bottom: 18px;
+}
+
+.pname {
+    display: flex;
+    gap: 13px;
+}
+
+.view-icon {
+    width: 20px;
+    margin: 0 auto;
+}
+
+.delete {
+    background-color: transparent; /* Removes the background color */
+    border: none; /* Removes any border */
+    padding: 0; /* Removes padding */
+    cursor: pointer; /* Changes cursor to indicate clickable */
+}
+
+.delete .item {
+    background-color: transparent; /* Ensures no background color for the item */
+    color: inherit; /* Inherits text color from parent */
+}

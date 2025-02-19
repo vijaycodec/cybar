@@ -1,0 +1,231 @@
+.menu-fixed-cn {
+  position: sticky;
+  top: 50px;
+  z-index: 999;
+}
+
+.space7 {
+  padding: 120px 0px 50px;
+  border-bottom: 3px solid #ddd;
+}
+
+.space7_1 {
+  padding: 120px 0px 50px;
+  border-bottom: 3px solid #ddd;
+}
+
+.sticky_link:hover {
+  background: #dddddd;
+  border-bottom: 0px solid #18ba60;
+}
+
+.sapme_active,
+.sapme_active:hover {
+  color: #fff !important;
+  background: #18ba60;
+  border-bottom: 0px solid #18ba60;
+}
+
+.services-menu ul li a {
+  padding: 7px 8px;
+}
+
+.services-menu ul li {
+  padding: 0px 9px;
+
+}
+
+.sample7-tab {
+  border: 0px;
+  position: sticky;
+  z-index: 908;
+  top: 110px;
+  background: #fff;
+  display: grid !important;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 5px;
+  border: none !important;
+}
+
+.sample7-tab li {
+  background: #dae4f7;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  border-top: 3px solid #00a3af;
+  padding: 8px 6px;
+}
+
+.sample7-tab li.active {}
+
+.sample7-tab li a {
+  margin: 0px;
+  padding: 0px;
+  border-radius: 0px;
+  border: none transparent !important;
+  color: #00a3af;
+}
+
+.sample7-tab li.active a {
+  background: transparent;
+  color: #15416E;
+}
+
+.sample7-tab li.active a:hover,
+.sample7-tab li.active a:focus {
+  background: transparent;
+}
+
+.sample7-tab li:hover a {
+  color: #15416E;
+  background: transparent;
+}
+
+.sample7-content .active,
+.sample7-tb-content .active {
+  background: transparent;
+  border-bottom: 0px solid #18ba60;
+  padding-bottom: 0px;
+  color: inherit !important;
+  overscroll-behavior: contain;
+}
+
+.sample7-tab>li.active>a,
+.sample7-tab>li.active>a:focus,
+.sample7-tab>li.active>a:hover {
+  background: transparent;
+}
+
+.sample7-content {
+  overscroll-behavior: contain;
+
+  height: 350px;
+  overflow: auto;
+}
+
+.sample7-content .container,
+.sample7-tb-content .container {
+  width: 100%;
+  overscroll-behavior: contain;
+}
+
+.sample7-tb-content {
+  display: block !important;
+  padding: 10px 15px;
+  height: 350px;
+  overflow: auto;
+}
+
+.sample-tab2-menu,
+.sample-tab2-menu1 {
+  border: none;
+  position: sticky;
+  z-index: 908;
+  top: 110px;
+  background: #F1F2F8;
+  border: none !important;
+  display: grid !important;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 10px;
+}
+
+.sample-tab2-menu>li.active>a,
+.sample-tab2-menu>li.active>a:focus,
+.sample-tab2-menu>li.active>a:hover,
+.sample-tab2-menu1>li.active>a,
+.sample-tab2-menu1>li.active>a:focus,
+.sample-tab2-menu1>li.active>a:hover {
+  background: transparent;
+}
+
+.sample-tab2-menu li,
+.sample-tab2-menu1 li {
+  background: transparent;
+  /* padding: 8px 6px; */
+  cursor: pointer;
+  text-align: center;
+  border-top: 3px solid #00a3af;
+}
+
+.sample-tab2-menu li.active,
+.sample-tab2-menu1 li.active {
+  border-top: 3px solid #f96702;
+  border-bottom: none !important;
+}
+
+/* .sample-tab2-menu li a,
+.sample-tab2-menu1 li a {
+  margin: 0px;
+  padding: 0px;
+  border-radius: 0px;
+  border: none transparent !important;
+  color: #00a3af;
+} */
+
+.sample-tab2-menu li.active a,
+.sample-tab2-menu1 li.active a {
+  background: transparent;
+  color: #f96702 !important;
+}
+
+#testimonials1 .owl-controls .owl-buttons>div {
+  color: #18ba60;
+}
+
+#testimonials1 .owl-controls .owl-buttons>div i {
+  line-height: 40px;
+}
+
+#testimonials1 .owl-controls .owl-buttons>div.owl-next {
+  right: -9px;
+}
+
+.tab3-tab {
+  background: #ffffffad;
+}
+
+.tab3-tab1 {
+  position: sticky;
+  top: 120px;
+  z-index: 908;
+}
+
+.tab3-tab .tab3-tablinks {
+  display: block;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  text-align: start;
+}
+
+.tab3-tab .tab3-tablinks.tab3-active,
+.tab3-tab .tab3-tablinks.tab3-active:hover {
+  color: #fff !important;
+  background: #18ba60;
+  border-bottom: 0px solid #18ba60;
+}
+
+.tab3-tab .tab3-tablinks:hover {
+  color: #000 !important;
+  background: #dddddd;
+  border-bottom: 0px solid #18ba60;
+}
+
+.tab3-content {
+  padding-top: 0px;
+  height: 400px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  margin-top: 40px;
+}
+
+.tab3-content .container {
+  width: 100%;
+}
+
+.red-title h4 {
+  font-size: 18px;
+}
