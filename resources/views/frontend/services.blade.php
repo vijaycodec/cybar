@@ -28,7 +28,7 @@
 
                                     @foreach ($categories as $category)
                                         <li ><a class="{{ $loop->first ? 'active' : ' ' }}"
-                                                href="#{{ strtolower(str_replace(' ', '-', $category->name)) }}">{{ $category->name }}</a>
+                                                href="#{{ Str::slug($category->name) }}">{{ $category->name }}</a>
 
                                         </li>
                                     @endforeach
@@ -55,7 +55,7 @@
                             <!-- EC Council Accredited Certification Programs start  -->
                             @foreach ($categories as $category)
                            
-                                <div id="{{ strtolower(str_replace(' ', '-', $category->name)) }}"
+                                <div id="{{ Str::slug($category->name) }}"
                                     class="tabcontent1 code-div-box">
                                     <div class="mrgn-brdr">
                                         <div class="row box-wrap">
@@ -129,50 +129,59 @@
                 </div>
             </div>
         </section>
-      <section class="training-page training-page-m mobile-view">
-            @foreach ($categories as $index=>$category)
+        <section class="training-page training-page-m mobile-view">
+            @foreach ($categories as $index => $category)
                 <div class="m-container" id="m-ec">
-                    <div class="m-title m-bg{{ $index +1}}">
+                    <div class="m-title m-bg{{ $index + 1 }}">
                         <h3>{{ $category->name }}</h3> <!-- Parent Category Name -->
                     </div> 
-                    <div class="ser-slider1">
-                        <div id="ser-demo{{ $index + 1 }}" class="owl-carousel owl-theme indu-moblie">
-                            @foreach ($services->where('category_id', $category->id) as $service)
-                                <div class="item">
-                                    <div class="empower-industry-box">
-                                        <div class="cn-hover-box">
-                                            <div class="cn-hover-img">
-                                                <img src="{{ asset('uploads/backend/services/' . $service->images) }}" alt="{{ $service->subcategory->sub_category }}">
+                    
+                    @php
+                        $categoryServices = $services->where('category_id', $category->id)->values(); // Get services for this category
+                    @endphp
+        
+                    @foreach ($categoryServices->chunk(3) as $chunkIndex => $serviceChunk)
+                        <div class="ser-slider1">
+                            <div id="ser-demo{{ $index + 1 }}-{{ $chunkIndex + 1 }}" class="owl-carousel owl-theme indu-moblie">
+                                @foreach ($serviceChunk as $service)
+                                    <div class="item">
+                                        <div class="empower-industry-box">
+                                            <div class="cn-hover-box">
+                                                <div class="cn-hover-img">
+                                                    <img src="{{ asset('uploads/backend/services/' . $service->images) }}" alt="{{ $service->subcategory->sub_category }}">
+                                                </div>
+                                                <div class="cn-content">
+                                                    <p>{{ $service->description }}</p> 
+                                                </div>
                                             </div>
-                                            <div class="cn-content">
-                                                <p>{{ $service->description }}</p> 
+                                            <div class="cn-main-content">
+                                                <h3>{{ $service->subcategory->sub_category }}</h3> <!-- Subcategory Name -->
+                                                <a href="{{ route('l3-template', ['sub_category_id' => $service->subcategory->id, 'pageid' => $page_id, 'category_id' => $category->id]) }}">
+                                                    Know more <i class="fa fa-chevron-right"></i>
+                                                </a>
                                             </div>
-                                        </div>
-                                        <div class="cn-main-content">
-                                            <h3>{{ $service->subcategory->sub_category }}</h3> <!-- Subcategory Name -->
-                                            <a href="{{ route('l3-template', ['sub_category_id' => $service->subcategory->id, 'pageid' => $page_id, 'category_id' => $category->id]) }}">
-                                                Know more <i class="fa fa-chevron-right"></i>
-                                            </a>
                                         </div>
                                     </div>
-                                </div>
-                            @endforeach
+                                @endforeach
+                            </div>
+                            <div id="navigation-count{{ $index == 0 ? '' : $index }}-{{ $chunkIndex + 1 }}" class="count-nav-box couter-space"></div>
                         </div>
-                        <div id="navigation-count{{ $index == 0 ? '' : $index }}" class="count-nav-box couter-space"></div>
-                    </div>
+                    @endforeach
+        
                 </div>
             @endforeach
         </section>
-        <!-- main section end -->
-        <div class="ser-h"></div>
-        <!--  -->
-        {{-- <a href="#services-page" class="scrollToTop"><i class="fa fa-arrow-up"></i></a> --}}
+        
+                 <!-- main section end -->
+            <div class="ser-h"></div>
+                    <!--  -->
+                    {{-- <a href="#services-page" class="scrollToTop"><i class="fa fa-arrow-up"></i></a> --}}
 
-        <!--  -->
+                    <!--  -->
 
-        {{-- @include('frontend.layouts.footer') --}}
+                    {{-- @include('frontend.layouts.footer') --}}
 
-    </body>
+</body>
 
 @endsection
 
@@ -182,6 +191,8 @@
     <script src="assets/js/slider.js"></script>
     <script type="text/javascript" src="assets/js/common.js?v-1"></script>
     <script type="text/javascript" src="assets/js/mobile-menu.js"></script>
+    @include('frontend.layouts.right-menu-js')
+
     <!-- Jquery code -->
     <script type="text/javascript">
         function addVersionToFiles() {
@@ -254,7 +265,7 @@
             });
         });
     </script>
-    <script type="text/javascript">
+    {{-- <script type="text/javascript">
         $(function() {
             function initializeCarousel(carouselId, navigationCountId) {
                 $("#" + carouselId).owlCarousel({
@@ -314,7 +325,51 @@
             initializeCarousel("ser-demo15", "navigation-count14");
             initializeCarousel("ser-demo16", "navigation-count15");
         });
+    </script> --}}
+
+    <script>
+        $(document).ready(function () {
+            function initializeCarousel(carouselId, navigationCountId) {
+            $("#" + carouselId).owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                dots: true,
+                navText: [
+                    '<i class="fa fa-long-arrow-left" aria-hidden="true"></i>',
+                    '<i class="fa fa-long-arrow-right" aria-hidden="true"></i>'
+                ],
+                responsive: {
+                    0: { items: 1 },
+                    600: { items: 1 },
+                    900: { items: 1 },
+                    1200: { items: 3 }
+                },
+                onInitialized: function (event) {
+                    updateNavigationCount(event, navigationCountId);
+                },
+                onChanged: function (event) {
+                    updateNavigationCount(event, navigationCountId);
+                }
+            });
+    }
+
+            function updateNavigationCount(event, navigationCountId) {
+                if (!event.namespace) return;
+                var carousel = event.relatedTarget;
+                $("#" + navigationCountId).html(
+                    (carousel.relative(carousel.current()) + 1) + "/" + carousel.items().length
+                );
+            }
+
+            // 🚀 **Automatically Initialize All Carousels**
+            $("[id^=ser-demo]").each(function () {
+                let sliderId = $(this).attr("id");
+                let countId = sliderId.replace("ser-demo", "navigation-count"); // Generate corresponding count ID
+                initializeCarousel(sliderId, countId);
+            });
+        });
+
     </script>
 @endpush
 
-@include('frontend.layouts.right-menu-js')
