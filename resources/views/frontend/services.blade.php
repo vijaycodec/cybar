@@ -7,7 +7,7 @@
     <body class="with-zoom1 case2-header" id="services-page">
         <!-- Header start -->
 
-        @include('frontend.layouts.ser-header')
+        @include('frontend.layouts.ser-header',['categories' => $categories])
 
         <!-- Header end -->
         <!-- breadcrumbs -->
@@ -134,15 +134,22 @@
         </section>
         <section class="training-page training-page-m mobile-view">
             @foreach ($categories as $index => $category)
-                <div class="m-container" id="m-ec">
+                <div class="m-container" id="m-{{ Str::slug($category->name) }}">
                     <div class="m-title m-bg{{ $index + 1 }}">
                         <h3>{{ $category->name }}</h3> <!-- Parent Category Name -->
+<<<<<<< HEAD
+                    </div> 
+                    @php
+                        $categoryServices = $services->where('category_id', $category->id)->values(); // Get services for this category
+                    @endphp
+=======
                     </div>
 
                     @php
                         $categoryServices = $services->where('category_id', $category->id)->values(); // Get services for this category
                     @endphp
 
+>>>>>>> 5800d42fe1c109d453b44d047684570b5cd80a55
                     @foreach ($categoryServices->chunk(3) as $chunkIndex => $serviceChunk)
                         <div class="ser-slider1">
                             <div id="ser-demo{{ $index + 1 }}-{{ $chunkIndex + 1 }}"
@@ -175,6 +182,14 @@
                                 class="count-nav-box couter-space"></div>
                         </div>
                     @endforeach
+<<<<<<< HEAD
+                </div>
+            @endforeach
+        </section>
+                 <!-- main section end -->
+            <div class="ser-h"></div>
+                  
+=======
 
                 </div>
             @endforeach
@@ -186,6 +201,7 @@
         {{-- <a href="#services-page" class="scrollToTop"><i class="fa fa-arrow-up"></i></a> --}}
 
         <!--  -->
+>>>>>>> 5800d42fe1c109d453b44d047684570b5cd80a55
 
         {{-- @include('frontend.layouts.footer') --}}
 
@@ -396,4 +412,13 @@
             $(this).siblings('.cn-content').css("height", "100%");
         });
     </script>
+    <script>
+        $('.cn-content').click(function() {
+            $(this).css("height", "0%");
+        });
+
+        $('.cn-hover-img').click(function() {
+            $(this).siblings('.cn-content').css("height", "100%");
+        });
+    </script>
 @endpush
