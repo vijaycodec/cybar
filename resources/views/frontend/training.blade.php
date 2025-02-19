@@ -90,7 +90,7 @@
         <!-- mobile start  -->
         <section class="training-page training-page-m mobile-view">
             @foreach ($categories as $index => $category)
-                <div class="m-container" id="m-ec">
+                <div class="m-container" id="m-{{ Str::slug($category->name) }}">
                     <div class="m-title m-bg{{ $index + 1 }}">
                         <h3>{{ $category->name }}</h3> <!-- Parent Category Name -->
                     </div>
