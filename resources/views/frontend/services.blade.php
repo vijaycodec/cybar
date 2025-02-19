@@ -168,15 +168,9 @@
                 </div>
             @endforeach
         </section>
-        
                  <!-- main section end -->
             <div class="ser-h"></div>
-                    <!--  -->
-                    {{-- <a href="#services-page" class="scrollToTop"><i class="fa fa-arrow-up"></i></a> --}}
-
-                    <!--  -->
-
-                    {{-- @include('frontend.layouts.footer') --}}
+                  
 
 </body>
 
@@ -368,5 +362,14 @@
         });
 
     </script>
+    <script>
+        $('.cn-content').click(function() {
+            $(this).css("height", "0%");
+        });
+
+        $('.cn-hover-img').click(function() {
+            $(this).siblings('.cn-content').css("height", "100%");
+        });
+    </script>
 @endpush
 
