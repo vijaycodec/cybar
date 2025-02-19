@@ -14,14 +14,9 @@
    <div class="mobile-ser-tab">
       <h4>Training Categories</h4>
       <ul class="mobile-ser-menu">
-            <li><a href="#m-ec">EC Council Certification Programs</a></li>
-            <li><a href="#m-pecb">PECB Certification Programs</a></li>
-            <li><a href="#m-isist">Information security industry specialized </a></li>
-            <li><a href="#m-it">IT / Security Risk, Compliance & Governance</a></li>
-            <li><a href="#m-datascience">Data Science & Business Analytics</a></li>
-            <li><a href="#m-dt">Digital Transformation</a></li>
-            <li><a href="#m-sm">IT Operation, Project & Management</a></li>
-            <li><a href="#m-server">Server, Storage, Cloud & Virtualization</a></li>
+         @foreach($categories as $category)
+         <li><a href="#m-{{ Str::slug($category->name) }}">{{ $category->name }}</a></li>
+        @endforeach 
       </ul>
       <div class="bottom-btn">
          <a href="#" class="right-back">Back</a>

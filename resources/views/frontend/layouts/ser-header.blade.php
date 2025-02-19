@@ -3,4 +3,4 @@
 @include('frontend.layouts.main-menu-data') 
 </header>
 
-@include('frontend.layouts.ser-mobile-menu') 
+@include('frontend.layouts.ser-mobile-menu',['categories' => $categories]) 

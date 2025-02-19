@@ -7,7 +7,7 @@
     <body class="with-zoom1 case2-header" id="services-page">
         <!-- Header start -->
 
-        @include('frontend.layouts.ser-header')
+        @include('frontend.layouts.ser-header',['categories' => $categories])
 
         <!-- Header end -->
         <!-- breadcrumbs -->
@@ -131,15 +131,13 @@
         </section>
         <section class="training-page training-page-m mobile-view">
             @foreach ($categories as $index => $category)
-                <div class="m-container" id="m-ec">
+                <div class="m-container" id="m-{{ Str::slug($category->name) }}">
                     <div class="m-title m-bg{{ $index + 1 }}">
                         <h3>{{ $category->name }}</h3> <!-- Parent Category Name -->
                     </div> 
-                    
                     @php
                         $categoryServices = $services->where('category_id', $category->id)->values(); // Get services for this category
                     @endphp
-        
                     @foreach ($categoryServices->chunk(3) as $chunkIndex => $serviceChunk)
                         <div class="ser-slider1">
                             <div id="ser-demo{{ $index + 1 }}-{{ $chunkIndex + 1 }}" class="owl-carousel owl-theme indu-moblie">
@@ -167,7 +165,6 @@
                             <div id="navigation-count{{ $index == 0 ? '' : $index }}-{{ $chunkIndex + 1 }}" class="count-nav-box couter-space"></div>
                         </div>
                     @endforeach
-        
                 </div>
             @endforeach
         </section>
