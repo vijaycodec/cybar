@@ -133,7 +133,7 @@
       <section class="training-page training-page-m mobile-view">
             @foreach ($categories as $index=>$category)
                 <div class="m-container" id="m-ec">
-                    <div class="m-title">
+                    <div class="m-title m-bg{{ $index +1}}">
                         <h3>{{ $category->name }}</h3> <!-- Parent Category Name -->
                     </div> 
                     <div class="ser-slider1">
