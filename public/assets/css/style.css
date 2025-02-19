@@ -5504,26 +5504,6 @@ p{
     overflow: hidden;
 }
 
-/* Specify different heights for nth-of-type elements */
-.test_mob_app:nth-of-type(1) {
-    height: 400px;
-}
-
-.test_mob_app:nth-of-type(2) {
-    height: 300px;
-}
-
-.test_mob_app:nth-of-type(3) {
-    height: 200px;
-}
-
-.test_mob_app:nth-of-type(4) {
-    height: 300px;
-}
-
-.test_mob_app:nth-of-type(5) {
-    height: 400px;
-}
 
 .test_mob_app_btn {
     font-size: 13px;
@@ -5618,4 +5598,134 @@ p{
 }
 .career-scroll-top {
     display: block;
+}
+
+@media only screen and (max-width: 991px){
+  
+.trending-resources {
+  margin-left: auto;
+  margin-right: 0;
+}
+  .test_mob_app {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), linear-gradient(120.74deg, #FFB4B7 -1.19%, #DEB5E7 29.65%, #84B5FF 62.61%, #C68CFF 93.58%);
+  overflow: hidden;
+}
+
+.test_mob_app_btn {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 20px;
+  background: #fff;
+  margin-left: 64px;
+  
+  display: inline-block;
+  border: 1px solid black;
+  color: #000;
+  position: relative;
+  box-shadow: 3px 3px;
+}
+
+
+/* change to inline style */
+.test_mob_app {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), 
+      linear-gradient(120.74deg, #FFB4B7 -1.19%, #DEB5E7 29.65%, #84B5FF 62.61%, #C68CFF 93.58%);
+  overflow: hidden;
+}
+
+
+.test_mob_app_btn {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 20px;
+  background: #fff;
+  margin-left: 64px;
+  display: inline-block;
+  border: 1px solid black;
+  color: #000;
+  position: relative;
+  box-shadow: 3px 3px;
+}
+
+
+.custom-margin {
+  margin-right: 0%;
+}
+
+.custom-box {
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-right: 0px;
+  height: 400px;
+}
+
+.custom-heading {
+  font-size: 22px !important;
+  padding: 24px 20px 0px 24px !important;
+}
+.custom-image {
+  width: 100%;
+  height: 400px;
+  padding-left: 24px;
+  padding-top: 30px;
+}
+/* resource-view */
+.trending-heading {
+  color: #15416e;
+}
+
+.custom-margin-left {
+  margin-left: 0%;
+}
+
+.custom-margin-leftabove {
+  margin-left: 0%;
+}
+
+.custom-submit-style {
+  text-align: left !important;
+  margin-top: 20px;
+}
+
+/* blog view  */
+.trending-blogs {
+  margin-right: -60px;
+}
+
+.blog-view-padding-margin {
+  
+  padding-top: 40px !important;
+  margin-left: -7% !important;
+  
+}
+
+/* career */
+.career-link {
+  color: #666666;
+  text-decoration: none; /* Optional: Removes underline */
+}
+
+.career-link:hover {
+  color: #333333; /* Optional: Adds hover effect */
+}
+
+.career-heading {
+  color: #666666;
+  font-size: 22px; /* Optional: Add heading font size */
+  font-weight: bold;
+}
+
+.career-detail {
+  color: black;
+  margin: 5px 0; /* Optional: Adds spacing between paragraphs */
+}
+.career-margin-right {
+  margin-right: -15%;
+}
+.career-bg-top {
+  background: url('assets/images/image-bg-top.jpg') repeat fixed;
+}
+.career-scroll-top {
+  display: block;
+}
 }
