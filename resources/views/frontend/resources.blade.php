@@ -29,7 +29,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                       
+
                         <ul class="slider resocues owl-carousel owl-theme" id="resocues-menu">
                             @foreach ($categories1 as $category)
                                 <li><a href="#{{ strtolower(str_replace(' ', '-', $category)) }}">{{ $category }}</a>
@@ -37,7 +37,7 @@
                             @endforeach
                         </ul>
 
-                       
+
                     </div>
                 </div>
             </div>
@@ -50,7 +50,8 @@
                     <div class="col-sm-9">
                         <div class="wpb_text_column wpb_content_element">
                             @foreach ($categories as $category)
-                                <div class="wpb_wrapper rbg1 rsp" id="{{ strtolower(str_replace(' ', '-', $category->name)) }}">
+                                <div class="wpb_wrapper rbg1 rsp"
+                                    id="{{ strtolower(str_replace(' ', '-', $category->name)) }}">
                                     <div class="title-button">
                                         <h3 class="style1"><i class="fa fa-2x fa-file"></i>{{ $category->name }}</h3>
                                     </div>
@@ -58,37 +59,34 @@
                                         <div class="owl-carousel1 owl-carousel owl-theme">
                                             <!-- Check if category has resources -->
                                             @foreach ($category->resources as $resource)
-                                                        <div class="item">
-                                                            <a href="{{ route('resources-view', $resource->id) }}" tabindex="-1">
-                                                                <div class="card_wrapper">
-                                                                    <div class="card_img">
-                                                                        <div class="cn-hover-box">
-                                                                            <div class="cn-hover-img"> <img
-                                                                                    src="{{ asset('uploads/backend/resources/' . $resource->images) }}"
-                                                                                    class="img-fluid"
-                                                                                    alt="{{ $resource->title }}"> </div>
-                                                                            <div class="cn-content">
-                                                                                <p>{{ $resource->short_desc }}</p>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="bottom_strip d-sm-block">
-                                                                            <span
-                                                                                class="text_bottom_strip d-sm-block pull-left">
-                                                                                <span>ARTICLE</span>
-                                                                            </span>
-                                                                            <span
-                                                                                class="text_bottom_strip d-sm-block pull-right">
-                                                                                <span>21 Views </span>
-                                                                            </span>
-                                                                        </div>
+                                                <div class="item">
+                                                    <a href="{{ route('resources-view', $resource->id) }}" tabindex="-1">
+                                                        <div class="card_wrapper">
+                                                            <div class="card_img">
+                                                                <div class="cn-hover-box">
+                                                                    <div class="cn-hover-img"> <img
+                                                                            src="{{ asset('uploads/backend/resources/' . $resource->images) }}"
+                                                                            class="img-fluid" alt="{{ $resource->title }}">
+                                                                    </div>
+                                                                    <div class="cn-content">
+                                                                        <p>{{ $resource->short_desc }}</p>
                                                                     </div>
                                                                 </div>
-                                                            </a>
+                                                                <div class="bottom_strip d-sm-block">
+                                                                    <span class="text_bottom_strip d-sm-block pull-left">
+                                                                        <span>ARTICLE</span>
+                                                                    </span>
+                                                                    <span class="text_bottom_strip d-sm-block pull-right">
+                                                                        <span>21 Views </span>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                   
+                                                    </a>
+                                                </div>
                                             @endforeach
-                                           
-                                           
+
+
                                         </div>
                                     </div>
                                 </div>
@@ -120,30 +118,31 @@
                             </div>
 
                         </div>
-                       
-                        
+
+
                         <div class="resouces-n">
                             <div class="side-head mb-3">
                                 <h4 class="custom-heading">Trending Resources</h4>
                             </div>
                             @php
-                            $heights = ['400px', '300px', '200px', '300px'];
-                            $totalHeights = count($heights);
-                             @endphp
-                            @foreach ($trendings as  $index =>$resource)
-                            <div class="test_mob_app custom-box" style="height: {{ $heights[$index % $totalHeights] }}">
-                                <h2 class="custom-heading">
-                                    {{ $resource->name }}
-                                </h2>
-                                <a href="{{ route('resources-view-trending', $resource->id) }}{{ $resource->name }}" class="test_mob_app_btn">
-                                    Know more
-                                </a>
-                                <img src="{{ asset('assets/images/vapt-services.jpg') }}" class="custom-image">
-    
-                            </div>
+                                $heights = ['400px', '300px', '200px', '300px'];
+                                $totalHeights = count($heights);
+                            @endphp
+                            @foreach ($trendings as $index => $resource)
+                                <div class="test_mob_app custom-box" style="height: {{ $heights[$index % $totalHeights] }}">
+                                    <h2 class="custom-heading">
+                                        {{ $resource->name }}
+                                    </h2>
+                                    <a href="{{ route('resources-view-trending', $resource->id) }}{{ $resource->name }}"
+                                        class="test_mob_app_btn">
+                                        Know more
+                                    </a>
+                                    <img src="{{ asset('assets/images/vapt-services.jpg') }}" class="custom-image">
+
+                                </div>
                             @endforeach
                         </div>
-                       
+
                     </div>
                 </div>
             </div>
@@ -210,34 +209,70 @@
 
     <script type="text/javascript">
         $(document).ready(function() {
-            function initializeCarousel(carouselClass, navigationCountId) {
-                $(carouselClass).owlCarousel({
-                    loop: true,
-                    margin: 20,
-                    dots: true,
-                    nav: true,
-                    navText: [
-                        "<i class='fa fa-angle-left'></i>",
-                        "<i class='fa fa-angle-right'></i>"
-                    ],
-                    responsive: {
-                        0: {
-                            items: 1
+            function isMobile() {
+                const userAgent = navigator.userAgent.toLowerCase();
+                return /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/.test(userAgent);
+            }
+            if (isMobile()) {
+                function initializeCarousel(carouselClass, navigationCountId) {
+                    $(carouselClass).owlCarousel({
+                        loop: true,
+                        margin: 20,
+                        dots: true,
+                        nav: true,
+                        navText: [
+                            "<i class='fa fa-angle-left'></i>",
+                            "<i class='fa fa-angle-right'></i>"
+                        ],
+                        responsive: {
+                            0: {
+                                items: 1
+                            },
+                            768: {
+                                items: 2
+                            },
+                            992: {
+                                items: 3
+                            }
                         },
-                        768: {
-                            items: 2
+                        onInitialized: function(event) {
+                            updateNavigationCount(event, navigationCountId);
                         },
-                        992: {
-                            items: 3
+                        onChanged: function(event) {
+                            updateNavigationCount(event, navigationCountId);
                         }
-                    },
-                    onInitialized: function(event) {
-                        updateNavigationCount(event, navigationCountId);
-                    },
-                    onChanged: function(event) {
-                        updateNavigationCount(event, navigationCountId);
-                    }
-                });
+                    });
+                }
+            } else {
+                function initializeCarousel(carouselClass, navigationCountId) {
+                    $(carouselClass).owlCarousel({
+                        loop: true,
+                        margin: 20,
+                        dots: false,
+                        nav: true,
+                        navText: [
+                            "<i class='fa fa-angle-left'></i>",
+                            "<i class='fa fa-angle-right'></i>"
+                        ],
+                        responsive: {
+                            0: {
+                                items: 1
+                            },
+                            768: {
+                                items: 2
+                            },
+                            992: {
+                                items: 3
+                            }
+                        },
+                        onInitialized: function(event) {
+                            updateNavigationCount(event, navigationCountId);
+                        },
+                        onChanged: function(event) {
+                            updateNavigationCount(event, navigationCountId);
+                        }
+                    });
+                }
             }
 
             function updateNavigationCount(event, navigationCountId) {
