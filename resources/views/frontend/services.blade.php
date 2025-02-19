@@ -26,9 +26,8 @@
                                 </div>
                                 <ul class="case1-tab">
 
-
                                     @foreach ($categories as $category)
-                                        <li><a
+                                        <li ><a class="{{ $loop->first ? 'active' : ' ' }}"
                                                 href="#{{ strtolower(str_replace(' ', '-', $category->name)) }}">{{ $category->name }}</a>
 
                                         </li>
