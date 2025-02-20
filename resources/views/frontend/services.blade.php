@@ -169,7 +169,7 @@
  <div class="ser-h"></div>
                 
         {{-- @include('frontend.layouts.footer') --}}
-        <a href="#services-page" class="scrollToTop" ><i class="fa fa-arrow-up"></i></a> 
+        <a href="#services-page" class="scrollToTop scrrttop" ><i class="fa fa-arrow-up"></i></a> 
 
     </body>
 
@@ -386,5 +386,14 @@
         $('.cn-hover-img').click(function() {
             $(this).siblings('.cn-content').css("height", "100%");
         });
+</script>
+<script>
+    // Handle scroll to top button click
+    $('.scrrttop').on('click', function() {
+        // Remove active class from all items in case1-tab
+        $('.case1-tab li a').removeClass('active');
+        // Add active class to first li item
+        $('.case1-tab li:first-child a').addClass('active');
+    });
 </script>
 @endpush
