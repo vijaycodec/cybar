@@ -779,12 +779,22 @@ if (isMobile()) {
         $('.testo-popup-body').scrollTop(0);
     })
     $('.cn-content').click(function () {
-        $(this).css("height", "0%");
+        $(this).css({
+            "height": "0%"
+        }).find('p').css({
+            "display": "none"
+        });
     });
-
+    
     $('.cn-hover-img').click(function () {
-        $(this).siblings('.cn-content').css("height", "100%");
+        $(this).siblings('.cn-content').css({
+            "height": "100%"
+        }).find('p').css({
+            "display": "block",
+            "color": "#fff"
+        });
     });
+    
 
 
     $('.close-acrodin').on('click', function () {
