@@ -35,80 +35,63 @@
                     <a class="tf-button style-1 w208" href=" {{ route('sub-category.create') }}">
                         <i class="icon-plus"></i>Add new</a>
                 </div>
-            </div>
-            {{-- <div class="flex items-center justify-between mb-4">
-                <h3 class="text-lg font-semibold">Sub Category List</h3>
-                <a href="{{ route('sub-category.create') }}" class="tf-button style-1">Add New Sub-Category</a>
-            </div> --}}
 
-            {{-- <!-- Flash Messages -->
-            @if (session('success'))
-                <div class="alert alert-success mb-4">
-                    {{ session('success') }}
-                </div>
-            @endif
-
-            @if (session('error'))
-                <div class="alert alert-danger mb-4">
-                    {{ session('error') }}
-                </div>
-            @endif --}}
-
-            <div class="table-responsive">
-                <table id="categoryTable" class="table table-striped table-bordered " style="table-layout: auto;">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Sub Category Name</th>
-                            <th>Category</th>
-                            <th>Page Category</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-sm text-gray-700">
-                        @forelse ($subCategories as $index => $subCategory)
-                            <tr class="border-t">
-                                <td>{{ $loop->iteration + ($subCategories->currentPage() - 1) * $subCategories->perPage() }}
-                                </td>
-                                <td>{{ $subCategory->sub_category }}</td>
-                                <td>{{ $subCategory->category->name ?? 'N/A' }}</td>
-                                <td>{{ $subCategory->pageCategory->page_name ?? 'N/A' }}</td>
-                                <td style="padding: 10px;">
-                                    <div class="list-icon-function">
-                                        <button type="button" class="show" data-id="{{ $subCategory->id }}">
-                                            <div class="item eye">
-                                                <i class="icon-eye"></i>
-                                            </div>
-                                        </button>
-                                        <a href="{{ route('resources-category.edit', $subCategory->id) }}">
-                                            <div class="item edit">
-                                                <i class="icon-edit-3"></i>
-                                            </div>
-                                        </a>
-                                        <button type="button" class="delete" data-id="{{ $subCategory->id }}">
-                                            {{-- <a href="{{ route('resources-category.destroy', $category->id) }}"> --}}
-                                            <div class="item text-danger">
-                                                <i class="icon-trash-2"></i>
-                                            </div>
-                                            {{-- </a> --}}
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                        @empty
+                <div class="table-responsive">
+                    <table id="categoryTable" class="table table-striped table-bordered " style="table-layout: auto;">
+                        <thead>
                             <tr>
-                                <td colspan="5" class="text-center">No data found</td>
+                                <th>#</th>
+                                <th>Sub Category Name</th>
+                                <th>Category</th>
+                                <th>Page Category</th>
+                                <th>Actions</th>
                             </tr>
-                        @endforelse
-                    </tbody>
-                </table>
-            </div>
+                        </thead>
+                        <tbody class="text-sm text-gray-700">
+                            @forelse ($subCategories as $index => $subCategory)
+                                <tr class="border-t">
+                                    <td>{{ $loop->iteration + ($subCategories->currentPage() - 1) * $subCategories->perPage() }}
+                                    </td>
+                                    <td>{{ $subCategory->sub_category }}</td>
+                                    <td>{{ $subCategory->category->name ?? 'N/A' }}</td>
+                                    <td>{{ $subCategory->pageCategory->page_name ?? 'N/A' }}</td>
+                                    <td style="padding: 10px;">
+                                        <div class="list-icon-function">
+                                            <button type="button" class="show" data-id="{{ $subCategory->id }}">
+                                                <div class="item eye">
+                                                    <i class="icon-eye"></i>
+                                                </div>
+                                            </button>
+                                            <a href="{{ route('sub-category.edit', $subCategory->id) }}">
+                                                <div class="item edit">
+                                                    <i class="icon-edit-3"></i>
+                                                </div>
+                                            </a>
+                                            <button type="button" class="delete" data-id="{{ $subCategory->id }}">
+                                                {{-- <a href="{{ route('resources-category.destroy', $category->id) }}"> --}}
+                                                <div class="item text-danger">
+                                                    <i class="icon-trash-2"></i>
+                                                </div>
+                                                {{-- </a> --}}
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            @empty
+                                <tr>
+                                    <td colspan="5" class="text-center">No data found</td>
+                                </tr>
+                            @endforelse
+                        </tbody>
+                    </table>
+                </div>
 
-            <!-- Pagination Links -->
-            <div>
-                {!! $subCategories->withQueryString()->links('pagination::bootstrap-5') !!}
-            </div>
+                <!-- Pagination Links -->
+                <div>
+                    {!! $subCategories->withQueryString()->links('pagination::bootstrap-5') !!}
+                </div>
 
+            </div>
         </div>
     </div>
     <!-- Modal Structure -->
@@ -147,7 +130,7 @@
         $(document).ready(function() {
             // Handle delete button click
             $(document).on('click', '.delete', function() {
-                var brandId = $(this).data('id'); // Get ID from data attribute
+                var subcategoryId = $(this).data('id'); // Get ID from data attribute
                 Swal.fire({
                     title: 'Are you sure?',
                     text: "You won't be able to revert this!",
@@ -160,9 +143,9 @@
                     if (result.isConfirmed) {
                         // Perform AJAX request to delete
                         $.ajax({
-                            url: "{{ route('resources-category.destroy', ':id') }}"
+                            url: "{{ route('sub-category.destroy', ':id') }}"
                                 .replace(':id',
-                                    brandId),
+                                subcategoryId),
                             method: "DELETE",
                             data: {
                                 _token: "{{ csrf_token() }}" // CSRF Token
