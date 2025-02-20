@@ -4,7 +4,7 @@
     <div class="main-content-inner">
         <div class="main-content-wrap">
             <div class="flex items-center flex-wrap justify-between gap20 mb-27">
-                <h3>Category infomation</h3>
+                <h3> Course Category infomation</h3>
                 <ul class="breadcrumbs flex items-center flex-wrap justify-start gap10">
                     <li>
                         <a href="#">
@@ -16,14 +16,14 @@
                     </li>
                     <li>
                         <a href="#">
-                            <div class="text-tiny">Categories</div>
+                            <div class="text-tiny"> Course Categories</div>
                         </a>
                     </li>
                     <li>
                         <i class="icon-chevron-right"></i>
                     </li>
                     <li>
-                        <div class="text-tiny">New Category</div>
+                        <div class="text-tiny">New Course Category</div>
                     </li>
                 </ul>
             </div>
@@ -33,7 +33,7 @@
                     enctype="multipart/form-data">
                     @csrf
                     <a class="tf-button style-1 w208" style="padding-left: 75px;"
-                        href=" {{ route('resources-category.list') }}">
+                        href=" {{ route('course-category.list') }}">
                         Back</a>
                         <fieldset class="name">
                             <div class="body-title">Select Page Category <span class="tf-color-1">*</span></div>
@@ -54,25 +54,6 @@
                         <input class="flex-grow" type="text" placeholder="Category Name" name="title" tabindex="0"
                             value="{{ old('title') }}" aria-required="true" required="">
                     </fieldset>
-                    {{-- <fieldset>
-                        <div class="body-title">Upload images <span class="tf-color-1">*</span></div>
-                        <div class="upload-image flex-grow">
-                            <!-- Image preview container -->
-                            <div class="item" id="imgpreview" style="display:none; text-align: center;">
-                                <img src="" class="effect8" alt="Preview Image"
-                                    style="max-width: 50%; height: auto;">
-                                <button type="button" id="deleteImage" class="delete-btn">Delete</button>
-                            </div>
-                            <div id="upload-file" class="item up-load">
-                                <label class="uploadfile" for="myFile">
-                                    <span class="icon"><i class="icon-upload-cloud"></i></span>
-                                    <span class="body-text">Drop your images here or select <span class="tf-color">click to
-                                            browse</span></span>
-                                    <input type="file" id="myFile" name="image" accept="image/*">
-                                </label>
-                            </div>
-                        </div>
-                    </fieldset> --}}
                     <div class="bot">
                         <div></div>
                         <button class="tf-button w208" type="submit">Save</button>

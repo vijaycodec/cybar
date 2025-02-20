@@ -30,12 +30,16 @@
                 </ul>
             </div>
 
-
             <div class="wg-box">
                 <!-- form-edit-permission -->
                 <form id="resources-form" class="form-new-brand form-style-1">
                     @csrf
                     @method('PUT') <!-- Using PUT method for updating -->
+                    <a class="tf-button style-1 w208" style="padding-left: 75px;"
+                        href=" {{ route('resources-category.list') }}">Back</a>
+                    <a class="tf-button style-1 w208" style="padding-left: 75px;"
+                        href=" {{ route('resources.list') }}">Back</a>
+
                     <fieldset class="name">
                         <div class="body-title">Select Category <span class="tf-color-1">*</span></div>
                         <select class="flex-grow" name="category_id" tabindex="0" required id="category_id">
@@ -44,12 +48,10 @@
                             <option value="{{ $category->id
                              }}"{{ $resources->category_id == $category->id ? 'selected' : '' }}>{{ $category->name }}
                                 </option>
-
                             @endforeach
-
                         </select>
-
                     </fieldset>
+
                     <fieldset>
                         <div class="body-title">Upload Image <span class="tf-color-1">*</span></div>
                         <div class="upload-image flex-grow">
@@ -78,6 +80,7 @@
                             </div>
                         </div>
                     </fieldset>
+
                     <fieldset class="name">
                         <div class="body-title">Short Description <span class="tf-color-1">*</span></div>
                         <textarea class="flex-grow" style="height:90px;" type="text" placeholder="Short Description" name="short_desc"

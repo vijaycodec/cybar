@@ -13,11 +13,12 @@ class PageDetail extends Model
 
     public function pageCategory()
     {
-        return $this->hasMany(L3Catrgory::class, 'page_category_id');
+        return $this->hasMany(L3Category::class, 'page_category_id');
     }
-    // public function coursecategory_page()
+    
+    // public function l3Contant()
     // {
-    //     return $this->hasMany(CourseCategory::class, 'page_category_id');
+    //     return $this->hasMany(L3ContentInfo::class, 'page_category_id');
     // }
    
 }
