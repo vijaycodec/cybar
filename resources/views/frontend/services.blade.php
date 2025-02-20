@@ -35,14 +35,7 @@
 
                                 </ul>
 
-                                <!--  -->
-                                <!--                      <div class="codec-top codec-top-fixed">
-                                                                                                    <div class="codec-top-right">
-                                                                                                       <a href="#myHeader"><i class="fa fa-arrow-up"></i>
-                                                                                                          Back to Top</a>
-                                                                                                    </div>
-                                                                                                 </div> -->
-                                <!--  -->
+                               
                             </div>
                         </div>
                     </div>
@@ -141,9 +134,7 @@
                     @php
                         $categoryServices = $services->where('category_id', $category->id)->values(); // Get services for this category
                     @endphp
-
-                    </div>
-                    @foreach ($categoryServices->chunk(3) as $chunkIndex => $serviceChunk)
+                    @foreach ($categoryServices->chunk(5) as $chunkIndex => $serviceChunk)
                         <div class="ser-slider1">
                             <div id="ser-demo{{ $index + 1 }}-{{ $chunkIndex + 1 }}"
                                 class="owl-carousel owl-theme indu-moblie">
@@ -161,9 +152,7 @@
                                             </div>
                                             <div class="cn-main-content">
                                                 <h3>{{ $service->subcategory->sub_category }}</h3>
-                                                <!-- Subcategory Name -->
-                                                <a
-                                                    href="{{ route('l3-template', ['sub_category_id' => $service->subcategory->id, 'pageid' => $page_id, 'category_id' => $category->id]) }}">
+                                                <a href="{{ route('l3-template', ['sub_category_id' => $service->subcategory->id, 'pageid' => $page_id, 'category_id' => $category->id]) }}">
                                                     Know more <i class="fa fa-chevron-right"></i>
                                                 </a>
                                             </div>
@@ -171,11 +160,8 @@
                                     </div>
                                 @endforeach
                             </div>
-                            <div id="navigation-count{{ $index == 0 ? '' : $index }}-{{ $chunkIndex + 1 }}"
-                                class="count-nav-box couter-space"></div>
                         </div>
                     @endforeach
-
                 </div>
             @endforeach
         </section>
@@ -183,6 +169,7 @@
  <div class="ser-h"></div>
                 
         {{-- @include('frontend.layouts.footer') --}}
+        <a href="#services-page" class="scrollToTop" ><i class="fa fa-arrow-up"></i></a> 
 
     </body>
 
@@ -399,5 +386,5 @@
         $('.cn-hover-img').click(function() {
             $(this).siblings('.cn-content').css("height", "100%");
         });
-    </script>
+</script>
 @endpush
