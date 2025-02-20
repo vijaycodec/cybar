@@ -8,7 +8,7 @@
         <a id="button"></a>
         <!-- Header start -->
 
-        @include('frontend.layouts.res-header')
+        @include('frontend.layouts.res-header',['categories' => $categories1])
         <!-- banner start -->
         <section class="sec_ban" id="resources-banner">
             <div class="home-ban">
@@ -32,11 +32,9 @@
 
                         <ul class="slider resocues owl-carousel owl-theme" id="resocues-menu">
                             @foreach ($categories1 as $category)
-                                <li><a href="#{{ strtolower(str_replace(' ', '-', $category)) }}">{{ $category }}</a>
-                                </li>
+                                 <li><a href="#{{ Str::slug($category) }}">{{ $category }}</a></li>
                             @endforeach
                         </ul>
-
 
                     </div>
                 </div>
@@ -51,7 +49,7 @@
                         <div class="wpb_text_column wpb_content_element">
                             @foreach ($categories as $category)
                                 <div class="wpb_wrapper rbg1 rsp"
-                                    id="{{ strtolower(str_replace(' ', '-', $category->name)) }}">
+                                    id="{{ Str::slug($category->name) }}">
                                     <div class="title-button">
                                         <h3 class="style1"><i class="fa fa-2x fa-file"></i>{{ $category->name }}</h3>
                                     </div>
@@ -147,7 +145,7 @@
                 </div>
             </div>
         </section>
-        {{-- <a href="#main-body" class="scrollToTop" style="display: block;"><i class="fa fa-arrow-up"></i></a> --}}
+         <a href="#resources-banner" class="scrollToTop"><i class="fa fa-arrow-up"></i></a> 
 
         {{-- @include('frontend.layouts.footer') --}}
         </div>
@@ -204,8 +202,6 @@
             addVersionToFiles();
         };
     </script>
-
-
 
     <script type="text/javascript">
         $(document).ready(function() {

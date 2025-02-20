@@ -35,14 +35,7 @@
 
                                 </ul>
 
-                                <!--  -->
-                                <!--                      <div class="codec-top codec-top-fixed">
-                                                                                                    <div class="codec-top-right">
-                                                                                                       <a href="#myHeader"><i class="fa fa-arrow-up"></i>
-                                                                                                          Back to Top</a>
-                                                                                                    </div>
-                                                                                                 </div> -->
-                                <!--  -->
+                               
                             </div>
                         </div>
                     </div>
@@ -143,7 +136,7 @@
                     @endphp
 
                     </div>
-                    @foreach ($categoryServices->chunk(3) as $chunkIndex => $serviceChunk)
+                    @foreach ($categoryServices->chunk(5) as $chunkIndex => $serviceChunk)
                         <div class="ser-slider1">
                             <div id="ser-demo{{ $index + 1 }}-{{ $chunkIndex + 1 }}"
                                 class="owl-carousel owl-theme indu-moblie">
@@ -183,6 +176,7 @@
  <div class="ser-h"></div>
                 
         {{-- @include('frontend.layouts.footer') --}}
+        <a href="#services-page" class="scrollToTop" ><i class="fa fa-arrow-up"></i></a> 
 
     </body>
 
@@ -399,5 +393,5 @@
         $('.cn-hover-img').click(function() {
             $(this).siblings('.cn-content').css("height", "100%");
         });
-    </script>
+</script>
 @endpush
