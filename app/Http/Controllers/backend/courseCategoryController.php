@@ -13,9 +13,10 @@ class courseCategoryController extends Controller
 {
     public function index()
     {
-
-        $categories = CourseCategory::orderBy('id', 'ASC')->paginate(10);
-
+        $categories = CourseCategory::with('pageCategory')
+        ->orderBy('id', 'ASC')
+        ->paginate(10);
+        //dd($categories);
         return view('backend.courseCategory.index', compact('categories'));
     }
 
@@ -74,54 +75,34 @@ class courseCategoryController extends Controller
         ]);
     }
 
+    // Show form for editing a category
     public function edit($id)
     {
-        $category = CourseCategory::findOrFail($id);
-
-        return view('backend.category.edit', compact('category'));
+        $courseCategory = CourseCategory::findOrFail($id);
+        $categories = PageDetail::all(); // Fetch all page categories
+        return view('backend.courseCategory.edit', compact('courseCategory', 'categories'));
     }
 
     public function update(Request $request, $id)
     {
-        // Validate other fields
-        $validated = $request->validate([
-            'page_category' => 'required|string|max:255',
-            'name' => 'required|string|max:255',
+        // Validate input data
+        $request->validate([
+            'category_id' => 'required',
+                'name' => 'required',  
+                'title' => 'required', 
         ]);
 
-        $category = CourseCategory::findOrFail($id);
+        // Find the service or return 404
+        $courseCategory = CourseCategory::findOrFail($id);
 
-        // Update the category name and title
-        $category->page_category = $request->page_category;
-        $category->name = $request->name;
-        // Check if a new image is provided
-        if ($request->hasFile('image')) {
-            // Validate the image
-            $request->validate([
-                'image' => 'mimes:png,jpg,jpeg|max:2048'
-            ]);
+        // Update fields
+        $courseCategory->page_category = $request->category_id;
+        $courseCategory->name = $request->name;
+        $courseCategory->title = $request->title;
+        // Save changes
+        $courseCategory->save();
 
-            // Remove the old image from the upload folder if it exists
-            if ($category->images && file_exists(public_path('uploads/backend/category/' . $category->images))) {
-                unlink(public_path('uploads/backend/category/' . $category->images)); // Remove old image
-            }
-
-            // Handle the image upload if a new image is selected
-            $image = $request->file('image');
-            $file_extension = $image->extension();
-            $file_name = Carbon::now()->timestamp . '.' . $file_extension;
-
-            // Save the new image
-            $image->move(public_path('uploads/backend/category'), $file_name);
-
-            // Store the new image path in the database
-            $category->images = $file_name;
-        }
-
-        // Save the updated category data
-        $category->save();
-
-        return response()->json(['message' => 'Category updated successfully!']);
+        return redirect()->route('course-category.list')->with('success', 'Record has been updated successfully!');
     }
 
 
@@ -132,8 +113,13 @@ class courseCategoryController extends Controller
             $categories->delete();
             return response()->json([
                 'message' => 'Category deleted successfully!',
-                'redirect' => route('resources-category.list') // Include the redirect URL
+                'redirect' => route('course-category.list') // Include the redirect URL
             ], 200);
+        }else{
+            return response()->json([
+                'message' => 'No Category Found! ',
+                'redirect' => route('course-category.list') // Include the redirect URL
+            ], 404); 
         }
     }
 

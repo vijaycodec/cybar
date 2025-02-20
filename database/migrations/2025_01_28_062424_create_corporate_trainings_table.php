@@ -16,7 +16,7 @@ return new class extends Migration
             $table->integer('category_id');
             $table->integer('sub_category_id'); 
             $table->longText('description'); // Use text for long content
-            $table->string('images');
+            $table->string('images')->nullable();
             $table->timestamps();
         });
     }

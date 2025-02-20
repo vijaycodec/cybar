@@ -4,7 +4,7 @@
     <div class="main-content-inner">
         <div class="main-content-wrap">
             <div class="flex items-center flex-wrap justify-between gap20 mb-27">
-                <h3>All Categories</h3>
+                <h3>All Course Categories</h3>
                 <ul class="breadcrumbs flex items-center flex-wrap justify-start gap10">
                     <li>
                         <a href="{{ route('admin.dashboard') }}">
@@ -15,7 +15,7 @@
                         <i class="icon-chevron-right"></i>
                     </li>
                     <li>
-                        <div class="text-tiny">All Categories</div>
+                        <div class="text-tiny">All Course Categories</div>
                     </li>
                 </ul>
             </div>
@@ -48,24 +48,25 @@
                         </thead>
                         <tbody>
                             @if ($categories->count() > 0)
-                                @foreach ($categories as $category)
+                                @foreach ($categories as $index => $courseCategory)
                                     <tr>
-                                        <td  style="padding: 10px 10px;">{{ $category->id }}</td>
-                                        <td style="padding: 10px;">{{ $category->page_category }}</td>
-                                        <td  style="padding: 10px;">{{ $category->name }}</td>
+                                        <td  style="padding: 10px 10px;">{{ $courseCategory->id }}</td>
+                                        <td style="padding: 10px;">{{ $courseCategory->pageCategory->page_name }}</td>
+                                        {{-- <td>{{ $courseCategory->pageCategory->page_name }}</td> --}}
+                                        <td  style="padding: 10px;">{{ $courseCategory->name }}</td>
                                         <td style="padding: 10px;">
                                             <div class="list-icon-function">
-                                                <button type="button" class="show" data-id="{{ $category->id }}">
+                                                <button type="button" class="show" data-id="{{ $courseCategory->id }}">
                                                     <div class="item eye">
                                                         <i class="icon-eye"></i>
                                                     </div>
                                                 </button>
-                                                <a href="{{ route('resources-category.edit', $category->id) }}">
+                                                <a href="{{ route('course-category.edit', $courseCategory->id) }}">
                                                     <div class="item edit">
                                                         <i class="icon-edit-3"></i>
                                                     </div>
                                                 </a>
-                                                <button type="button" class="delete" data-id="{{ $category->id }}">
+                                                <button type="button" class="delete" data-id="{{ $courseCategory->id }}">
                                                     {{-- <a href="{{ route('resources-category.destroy', $category->id) }}"> --}}
                                                     <div class="item text-danger">
                                                         <i class="icon-trash-2"></i>
@@ -137,7 +138,7 @@
         $(document).ready(function() {
             // Handle delete button click
             $(document).on('click', '.delete', function() {
-                var brandId = $(this).data('id'); // Get ID from data attribute
+                var courseCategoryId = $(this).data('id'); // Get ID from data attribute
                 Swal.fire({
                     title: 'Are you sure?',
                     text: "You won't be able to revert this!",
@@ -150,9 +151,9 @@
                     if (result.isConfirmed) {
                         // Perform AJAX request to delete
                         $.ajax({
-                            url: "{{ route('resources-category.destroy', ':id') }}"
+                            url: "{{ route('course-category.destroy', ':id') }}"
                                 .replace(':id',
-                                    brandId),
+                                courseCategoryId),
                             method: "DELETE",
                             data: {
                                 _token: "{{ csrf_token() }}" // CSRF Token

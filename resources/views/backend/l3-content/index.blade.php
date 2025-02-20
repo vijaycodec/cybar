@@ -20,7 +20,7 @@
             <div class="wg-box">
                 <div class="flex items-center justify-between gap10 flex-wrap">
                     <div class="wg-filter flex-grow">
-                        <form class="form-search" method="GET" action="{{ route('l3-category.list') }}">
+                        <form class="form-search" method="GET" action="{{ route('l3-content.list') }}">
                             <fieldset class="name">
                                 <input type="text" placeholder="Search here..." name="search" tabindex="2"
                                     value="{{ request('search') }}" aria-required="true">
@@ -30,7 +30,7 @@
                             </div>
                         </form>
                     </div>
-                    <a class="tf-button style-1 w208" href="{{ route('l3-category.create') }}">
+                    <a class="tf-button style-1 w208" href="{{ route('l3-content.create') }}">
                         <i class="icon-plus"></i>Add New
                     </a>
                 </div>
@@ -46,19 +46,36 @@
                                     <th>Category</th>
                                     <th>Sub Category</th>
                                     <th>L3 Category</th>
-                                    <th>Description</th>
+                                    <th>Title</th>
+                                    <th>Significance Category Type</th>
+                                    <th>Program Type</th>
+                                    <th>Course Feature Type</th>
+                                    <th>Cyberwind Type</th>
+                                    <th>Industry Type</th>
+                                    {{-- <th>Testimonials Type</th> --}}
+                                    <th>Blog Category Type</th>
+                                    <th>Faqs Type</th>
                                     <th>Actions</th>
+                                    
                                 </tr>
                             </thead>
                             <tbody>
                                 @forelse ($l3Contents as $content)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $content->pageCategory->page_name ?? 'N/A' }}</td>
-                                        <td>{{ $content->category->name ?? 'N/A' }}</td>
-                                        <td>{{ $content->subCategory->sub_category ?? 'N/A' }}</td>
-                                        <td>{{ $content->l3Category->l3_category ?? 'N/A' }}</td>
-                                        <td>{{ $content->description }}</td>
+                                        <td>{{ optional($content->pageCategory)->page_name ?? 'N/A' }}</td>
+                                        <td>{{ optional($content->category)->name ?? 'N/A' }}</td>
+                                        <td>{{ optional($content->subCategory)->sub_category ?? 'N/A' }}</td>
+                                        <td>{{ optional($content->l3Category)->l3_category ?? 'N/A' }}</td>
+                                        <td>{{ $content->overview_title ?? 'N/A' }}</td>
+                                        <td>{{ optional($content->significanceCategory)->name ?? 'N/A' }}</td>
+                                        <td>{{ optional($content->programCategory)->name ?? 'N/A' }}</td>
+                                        <td>{{ optional($content->coursefeatureCategory)->name ?? 'N/A' }}</td>
+                                        <td>{{ optional($content->cyberwindCategory)->name ?? 'N/A' }}</td>
+                                        <td>{{ optional($content->industryCategory)->name ?? 'N/A' }}</td>
+                                        {{-- <td>{{ optional($content->testimonials)->name ?? 'N/A' }}</td> --}}
+                                        <td>{{ optional($content->blogCategory)->name ?? 'N/A' }}</td>
+                                        <td>{{ optional($content->faqCategory)->name ?? 'N/A' }}</td>
                                         <td>
                                             <div class="list-icon-function">
                                                 <button type="button" class="show" data-id="{{ $content->id }}">
@@ -66,7 +83,7 @@
                                                         <i class="icon-eye"></i>
                                                     </div>
                                                 </button>
-                                                <a href="{{ route('l3-category.edit', $content->id) }}">
+                                                <a href="{{ route('l3-content.edit', $content->id) }}">
                                                     <div class="item edit">
                                                         <i class="icon-edit-3"></i>
                                                     </div>
@@ -81,7 +98,7 @@
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="7" class="text-center">No L3 Content found</td>
+                                        <td colspan="10" class="text-center">No L3 Content found</td>
                                     </tr>
                                 @endforelse
                             </tbody>

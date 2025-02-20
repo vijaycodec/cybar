@@ -185,7 +185,7 @@
 
             //script for Delete
             $(document).on('click', '.delete', function() {
-                var resourceId = $(this).data('id'); // Get ID from data attribute
+                var serviceId = $(this).data('id'); // Get ID from data attribute
                 Swal.fire({
                     title: 'Are you sure?',
                     text: "You won't be able to revert this!",
@@ -198,8 +198,8 @@
                     if (result.isConfirmed) {
                         // Perform AJAX request to delete
                         $.ajax({
-                            url: "{{ route('resources.destroy', ':id') }}".replace(':id',
-                                resourceId),
+                            url: "{{ route('our-services.destroy', ':id') }}".replace(':id',
+                                serviceId),
                             method: "DELETE",
                             data: {
                                 _token: "{{ csrf_token() }}" // CSRF Token
