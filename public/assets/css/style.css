@@ -253,13 +253,16 @@ body{
     line-height: 1.4;
     display: none;
     }
-    .cn-hover-box:hover .cn-content{
-    height: 100%;
+    @media only screen and (min-width: 1024px) {
+        .cn-hover-box:hover .cn-content{
+            height: 100%;
+            }
+            .cn-hover-box:hover .cn-content p{
+            display: block;
+            color: #fff;
+            }
     }
-    .cn-hover-box:hover .cn-content p{
-    display: block;
-    color: #fff;
-    }
+
     .p40{
     padding-top: 40px;
     }
