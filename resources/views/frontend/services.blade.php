@@ -29,10 +29,8 @@
                                     @foreach ($categories as $category)
                                         <li><a class="{{ $loop->first ? 'active' : ' ' }}"
                                                 href="#{{ Str::slug($category->name) }}">{{ $category->name }}</a>
-
                                         </li>
                                     @endforeach
-
                                 </ul>
 
                                
@@ -371,22 +369,22 @@
     </script>
     <script>
         $('.cn-content').click(function() {
-            $(this).css("height", "0%");
+            $(this).css({
+                "height": "0%"
+            }).find('p').css({
+                "display": "none"
+            });
         });
 
         $('.cn-hover-img').click(function() {
-            $(this).siblings('.cn-content').css("height", "100%");
+            $(this).siblings('.cn-content').css({
+                "height": "100%"
+            }).find('p').css({
+                "display": "block",
+                "color": "#fff"
+            });
         });
     </script>
-    <script>
-        $('.cn-content').click(function() {
-            $(this).css("height", "0%");
-        });
-
-        $('.cn-hover-img').click(function() {
-            $(this).siblings('.cn-content').css("height", "100%");
-        });
-</script>
 <script>
     // Handle scroll to top button click
     $('.scrrttop').on('click', function() {

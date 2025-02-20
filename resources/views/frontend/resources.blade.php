@@ -35,7 +35,14 @@
                                  <li><a href="#{{ Str::slug($category) }}">{{ $category }}</a></li>
                             @endforeach
                         </ul>
-
+  <!-- control arrows -->
+                         <div class="prev">
+                         <i class='fa fa-caret-left'></i>
+                         </div>
+                         <div class="next">
+                         <i class='fa fa-caret-right'></i>
+                         </div> 
+                        <!--  -->
                     </div>
                 </div>
             </div>
