@@ -33,6 +33,7 @@ class DatabaseSeeder extends Seeder
         $this->call(BlogCategoryTableSeeder::class);
         $this->call(ProgramCategoryTableSeeder::class);
         $this->call(L3CategoryTableSeeder::class);
+        $this->call(MenuBlogCategoryTableSeeder::class);
 
  
     }
