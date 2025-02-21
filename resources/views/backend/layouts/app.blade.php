@@ -130,6 +130,30 @@
                                     <a href="javascript:void(0);" class="menu-item-button">
                                         <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
                                                 style="height:18px"></div>
+                                        <div class="text">Blog</div>
+                                    </a>
+            
+                                    <ul class="sub-menu">
+                                        <li class="sub-menu-item">
+                                            <a href="{{ route('menublog.list') }}" class="">
+                                                <div class="text"> Blog List</div>
+                                            </a>
+                                        </li>
+            
+            
+                                        <li class="sub-menu-item">
+                                            <a href="{{ route('menublog.create') }}" class="">
+                                                <div class="text">Add Blog</div>
+                                            </a>
+                                        </li>
+            
+                                    </ul>
+                                </li>
+
+                                <li class="menu-item has-children">
+                                    <a href="javascript:void(0);" class="menu-item-button">
+                                        <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
+                                                style="height:18px"></div>
                                         <div class="text">Course Categories</div>
                                     </a>
             

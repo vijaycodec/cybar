@@ -26,6 +26,7 @@ use App\Http\Controllers\backend\resourcesCategoriesController;
 use App\Http\Controllers\backend\resourcesController as BackendResourcesController;
 use App\Http\Controllers\backend\subcategoryController;
 use App\Http\Controllers\backend\corporateController;
+use App\Http\Controllers\backend\menublogController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Indexcontroller;
 
@@ -146,6 +147,15 @@ Route::middleware(['auth','admin','prevent_history'])->group(function () {
     Route::put('corporate-training/update/{id}', [corporateController::class, 'update'])->name('corporate-training.update');
     Route::delete('corporate-training/delete/{id}', [corporateController::class, 'destroy'])->name('corporate-training.destroy');
     Route::get('/get-categories/services', [corporateController::class, 'getSubCategories'])->name('get-categories.get');
+
+    // Menublog Routes
+    route::get('/menublog/list', [menublogController::class, 'index'])->name('menublog.list');
+    route::get('/menublog/create', [menublogController::class, 'create'])->name('menublog.create');
+    route::post('/menublog/store', [menublogController::class, 'store'])->name('menublog.store');
+    Route::get('/menublog/show/{id}', [menublogController::class, 'show'])->name('menublog.show');
+    route::get('/menublog/edit/{id}', [menublogController::class, 'edit'])->name('menublog.edit');
+    Route::put('menublog/update/{id}', [menublogController::class, 'update'])->name('menublog.update');
+    Route::delete('menublog/delete/{id}', [menublogController::class, 'destroy'])->name('menublog.destroy');
 
 });
 

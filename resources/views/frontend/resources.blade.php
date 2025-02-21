@@ -32,16 +32,16 @@
 
                         <ul class="slider resocues owl-carousel owl-theme" id="resocues-menu">
                             @foreach ($categories1 as $category)
-                                 <li><a href="#{{ Str::slug($category) }}">{{ $category }}</a></li>
+                                 <li><a class="{{ $loop->first ? 'active' : ' ' }}" href="#{{ Str::slug($category) }}">{{ $category }}</a></li>
                             @endforeach
                         </ul>
-  <!-- control arrows -->
-                         <div class="prev">
+                        <!-- control arrows -->
+                        <!-- <div class="prev">
                          <i class='fa fa-caret-left'></i>
                          </div>
                          <div class="next">
                          <i class='fa fa-caret-right'></i>
-                         </div> 
+                         </div> -->
                         <!--  -->
                     </div>
                 </div>
@@ -54,8 +54,8 @@
                 <div class="row">
                     <div class="col-sm-9">
                         <div class="wpb_text_column wpb_content_element">
-                            @foreach ($categories as $category)
-                                <div class="wpb_wrapper rbg1 rsp"
+                            @foreach ($categories as $index=>$category)
+                                <div class="wpb_wrapper rbg{{ $index+1 }} rsp"
                                     id="{{ Str::slug($category->name) }}">
                                     <div class="title-button">
                                         <h3 class="style1"><i class="fa fa-2x fa-file"></i>{{ $category->name }}</h3>
