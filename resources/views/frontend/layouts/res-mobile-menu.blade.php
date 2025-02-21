@@ -15,7 +15,7 @@
         <h4>Resources Categories</h4>
         <ul class="mobile-ser-menu">
          @foreach ($categories as $category)
-         <li><a href="#{{ Str::slug($category) }}">{{ $category }}</a>
+         <li><a href="#{{ Str::slug($category->name) }}">{{ $category->name }}</a>
          </li>
      @endforeach
             <li class="extra-link"><a href="#tr">Trending Resources</a></li>

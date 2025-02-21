@@ -154,6 +154,30 @@
                                     <a href="javascript:void(0);" class="menu-item-button">
                                         <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
                                                 style="height:18px"></div>
+                                        <div class="text">Event</div>
+                                    </a>
+            
+                                    <ul class="sub-menu">
+                                        <li class="sub-menu-item">
+                                            <a href="{{ route('menuevent.list') }}" class="">
+                                                <div class="text"> Event List</div>
+                                            </a>
+                                        </li>
+            
+            
+                                        <li class="sub-menu-item">
+                                            <a href="{{ route('menuevent.create') }}" class="">
+                                                <div class="text">Add Event</div>
+                                            </a>
+                                        </li>
+            
+                                    </ul>
+                                </li>
+
+                                <li class="menu-item has-children">
+                                    <a href="javascript:void(0);" class="menu-item-button">
+                                        <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
+                                                style="height:18px"></div>
                                         <div class="text">Course Categories</div>
                                     </a>
             

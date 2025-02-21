@@ -11,14 +11,11 @@ class resourcesController extends Controller
 {
     public function index()
     {
-        $categories1 = Category::pluck('name');
+        $categories = Category::with('resources')->where('category_type','resources')->get();
 
-        $categories = Category::with('resources')->get();
+        $trendings = Category::where('category_type','resources')->latest()->take(5)->get();
 
-        // $trendings = Category::all();
-        $trendings = Category::latest()->take(5)->get();
-
-        return view('frontend.resources', compact('categories', 'categories1', 'trendings'));
+        return view('frontend.resources', compact('categories', 'trendings'));
     }
 
 }

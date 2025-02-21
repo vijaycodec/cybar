@@ -8,7 +8,7 @@
         <a id="button"></a>
         <!-- Header start -->
 
-        @include('frontend.layouts.res-header',['categories' => $categories1])
+        @include('frontend.layouts.res-header',['categories' => $categories])
         <!-- banner start -->
         <section class="sec_ban" id="resources-banner">
             <div class="home-ban">
@@ -31,8 +31,8 @@
                     <div class="col-md-12 text-center">
 
                         <ul class="slider resocues owl-carousel owl-theme" id="resocues-menu">
-                            @foreach ($categories1 as $category)
-                                 <li><a class="{{ $loop->first ? 'active' : ' ' }}" href="#{{ Str::slug($category) }}">{{ $category }}</a></li>
+                            @foreach ($categories as $category)
+                                 <li><a class="{{ $loop->first ? 'active' : ' ' }}" href="#{{ Str::slug($category->name) }}">{{ $category->name}}</a></li>
                             @endforeach
                         </ul>
                         <!-- control arrows -->

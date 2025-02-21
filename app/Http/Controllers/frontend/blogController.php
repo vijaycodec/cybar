@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\MenuBlogCategory;
 
@@ -13,9 +14,9 @@ class blogController extends Controller
     {
         // $categories1 = MenuBlogCategory::pluck('name');
 
-        $categories = MenuBlogCategory::with('blogs')->get();
+        $categories = Category::with('blogs')->where('category_type','blog')->get();
 
-        $trendings = MenuBlogCategory::latest()->take(5)->get();
+        $trendings = Category::where('category_type','blog')->latest()->take(5)->get();
 
         return view('frontend.blog', compact('categories', 'trendings'));
     }
