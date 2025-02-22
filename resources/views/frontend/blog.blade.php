@@ -7,7 +7,7 @@
     <body id="body-main">
         <a id="button"></a>
         <!-- Header start -->
-        @include('frontend.layouts.blog-header')
+        @include('frontend.layouts.blog-header',['categories' => $categories])
         <!-- banner start -->
         <section class="sec_ban" id="resources-banner">
             <div class="home-ban">
@@ -47,7 +47,7 @@
         </section>
         <!-- tab menu end -->
         @foreach($categories as $index=> $category)
-        <section class="resc-sec blog-sec blog-bg" id="{{ Str::slug($category->name) }}">
+        <section class="resc-sec blog-sec {{ $index % 2 == 0 ? 'blog-bg' : '' }}" id="{{ Str::slug($category->name) }}">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
