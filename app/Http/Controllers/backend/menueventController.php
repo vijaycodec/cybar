@@ -118,7 +118,7 @@ class menueventController extends Controller
             'description' => 'required',
             'image' => 'mimes:png,jpg,jpeg|max:2048'
         ]);
-        $event = new MenuEvent();
+        $event = MenuEvent::findOrFail($id);
         $event->category_id = $request->category_id; 
         $event->short_desc = $request->short_desc;
         $event->description = $request->description;
@@ -149,7 +149,7 @@ class menueventController extends Controller
         $event->save();
 
         // return response()->route('menuevent.list')->json(['message' => 'event updated successfully!']);
-        return redirect()->route('menuevent.list')->with(['message' => 'event updated successfully!']);
+        return redirect()->route('menuevent.list')->with(['success' => 'event updated successfully!']);
     }
 
     //Delete event
