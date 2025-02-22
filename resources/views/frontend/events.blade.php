@@ -29,161 +29,44 @@
         <!-- banner end -->
         <!-- tab menu start -->
         <!-- tab menu end -->
-        <section class="testimonials testimonials-page event-space resc-sec " id="ps">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="wpb_text_column wpb_content_element">
-                            <div class="wpb_wrapper">
-                                <div class="title-button ">
-                                    <h3 class="style1">
-                                        <i class="fa fa-2x fa-file">
-                                        </i>
-                                        Professional Services
-                                    </h3>
-                                </div>
-                                <div class="carousel-wrap">
-                                    <div class="owl-carousel1 owl-carousel owl-theme">
-                                        <!-- testo 1 start -->
-                                        <div class="item">
-                                            <div class="event-box">
-                                                <img src="assets/images/vapt-services.jpg" class="img-fluid" alt="t1">
-                                            </div>
-                                        </div>
-                                        <!-- testo 1 end -->
-                                        <!-- testo 1 start -->
-                                        <div class="item">
-                                            <div class="event-box">
-                                                <img src="assets/images/vapt-services.jpg" class="img-fluid" alt="t1">
-                                            </div>
-                                        </div>
-                                        <!-- testo 1 end -->
-                                        <!-- testo 1 start -->
-                                        <div class="item">
-                                            <div class="event-box">
-                                                <img src="assets/images/vapt-services.jpg" class="img-fluid" alt="t1">
-                                            </div>
-                                        </div>
-                                        <!-- testo 1 end -->
-                                        <!-- testo 1 start -->
-                                        <div class="item">
-                                            <div class="event-box">
-                                                <img src="assets/images/vapt-services.jpg" class="img-fluid" alt="t1">
-                                            </div>
-                                        </div>
-                                        <!-- testo 1 end -->
-                                    </div>
-                                    <div id="navigation-count1" class="count-nav-box"></div>
 
-                                    <!--  -->
-
-                                </div>
-                                <div class="carousel-wrap mobile-view m-event">
-                                    <div class="owl-carousel2 owl-carousel owl-theme">
-                                        <!-- testo 1 start -->
-                                        <div class="item">
-                                            <div data-videourl="https://www.youtube.com/watch?v=GFHlGYB6Cio"
-                                                class="ceh-video button">
-                                                <img src="assets/images/video-thumb.jpg">
-                                            </div>
-                                        </div>
-                                        <!-- testo 1 end -->
-                                        <!-- testo 1 start -->
-                                        <div class="item">
-                                            <div data-videourl="https://www.youtube.com/watch?v=GFHlGYB6Cio"
-                                                class="ceh-video button">
-                                                <img src="assets/images/video-thumb.jpg">
-                                            </div>
-                                        </div>
-                                        <!-- testo 1 end -->
-                                        <!-- testo 1 start -->
-                                        <div class="item">
-                                            <div data-videourl="https://www.youtube.com/watch?v=GFHlGYB6Cio"
-                                                class="ceh-video button">
-                                                <img src="assets/images/video-thumb.jpg">
-                                            </div>
-                                        </div>
-                                        <!-- testo 1 end -->
-                                        <!-- testo 1 start -->
-                                        <div class="item">
-                                            <div data-videourl="https://www.youtube.com/watch?v=GFHlGYB6Cio"
-                                                class="ceh-video button">
-                                                <img src="assets/images/video-thumb.jpg">
-                                            </div>
-                                        </div>
-                                        <!-- testo 1 end -->
-                                    </div>
-
-                                    <div id="navigation-count2" class="count-nav-box"></div>
-
-                                    <!--  -->
-                                    <div class="event-all">
-                                        <a href="{{ route('events-view') }}">View All</a>
-                                    </div>
-                                    <!--  -->
-                                </div>
-
-                                <!-- -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </section>
         <!--  -->
         <section class="testimonials testimonials-page event-space testimonials-bg resc-sec " id="so">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="wpb_text_column wpb_content_element">
+                            @foreach ($categories as $index=>$category)
                             <div class="wpb_wrapper">
                                 <div class="title-button ">
-                                    <h3 class="style1 tbg1">
+                                    <h3 class="style1 tbg{{ $index+1 }}">
                                         <i class="fa fa-2x fa-file">
                                         </i>
-                                        Security Operations
+                                        {{ $category->name }}
                                     </h3>
                                 </div>
                                 <div class="carousel-wrap">
                                     <div class="owl-carousel3 owl-carousel owl-theme">
                                         <!-- testo 1 start -->
+                                        @foreach ($category->events as $event)
                                         <div class="item">
                                             <div class="event-box">
-                                                <img src="assets/images/vapt-services.jpg" class="img-fluid" alt="t1">
+                                                <img src="{{ asset('uploads/backend/events/' . $event->images) }}" class="img-fluid" alt="t1">
                                             </div>
                                         </div>
-                                        <!-- testo 1 end -->
-                                        <!-- testo 1 start -->
-                                        <div class="item">
-                                            <div class="event-box">
-                                                <img src="assets/images/vapt-services.jpg" class="img-fluid" alt="t1">
-                                            </div>
-                                        </div>
-                                        <!-- testo 1 end -->
-                                        <!-- testo 1 start -->
-                                        <div class="item">
-                                            <div class="event-box">
-                                                <img src="assets/images/vapt-services.jpg" class="img-fluid" alt="t1">
-                                            </div>
-                                        </div>
-                                        <!-- testo 1 end -->
-                                        <!-- testo 1 start -->
-                                        <div class="item">
-                                            <div class="event-box">
-                                                <img src="assets/images/vapt-services.jpg" class="img-fluid" alt="t1">
-                                            </div>
-                                        </div>
+                                        @endforeach
                                         <!-- testo 1 end -->
                                     </div>
                                     <div id="navigation-count3" class="count-nav-box"></div>
                                     <!--  -->
                                     <div class="event-all">
-                                        <a href="{{ route('events-view') }}">View All</a>
+                                        <a href="{{ route('events-view',$category->id) }}">View All</a>
                                     </div>
                                     <!--  -->
                                 </div>
                             </div>
+                            @endforeach
 
-                            <!-- -->
                         </div>
                     </div>
                 </div>
@@ -191,133 +74,7 @@
         </section>
         <!--  -->
         <!-- tab menu end -->
-        <section class="testimonials testimonials-page event-space resc-sec " id="as">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="wpb_text_column wpb_content_element">
-                            <div class="wpb_wrapper">
-                                <div class="title-button ">
-                                    <h3 class="style1 tbg2">
-                                        <i class="fa fa-2x fa-file">
-                                        </i>
-                                        Application Security
-                                    </h3>
-                                </div>
-                                <div class="carousel-wrap">
-                                    <div class="owl-carousel4 owl-carousel owl-theme">
-                                        <!-- testo 1 start -->
-                                        <div class="item">
-                                            <div class="event-box">
-                                                <img src="assets/images/vapt-services.jpg" class="img-fluid"
-                                                    alt="t1">
-                                            </div>
-                                        </div>
-                                        <!-- testo 1 end -->
-                                        <!-- testo 1 start -->
-                                        <div class="item">
-                                            <div class="event-box">
-                                                <img src="assets/images/vapt-services.jpg" class="img-fluid"
-                                                    alt="t1">
-                                            </div>
-                                        </div>
-                                        <!-- testo 1 end -->
-                                        <!-- testo 1 start -->
-                                        <div class="item">
-                                            <div class="event-box">
-                                                <img src="assets/images/vapt-services.jpg" class="img-fluid"
-                                                    alt="t1">
-                                            </div>
-                                        </div>
-                                        <!-- testo 1 end -->
-                                        <!-- testo 1 start -->
-                                        <div class="item">
-                                            <div class="event-box">
-                                                <img src="assets/images/vapt-services.jpg" class="img-fluid"
-                                                    alt="t1">
-                                            </div>
-                                        </div>
-                                        <!-- testo 1 end -->
-                                    </div>
-                                    <div id="navigation-count4" class="count-nav-box"></div>
-                                    <!--  -->
-                                    <div class="event-all">
-                                        <a href="{{ route('events-view') }}">View All</a>
-                                    </div>
-                                    <!--  -->
-                                </div>
-                            </div>
 
-                            <!-- -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--  -->
-        <section class="testimonials testimonials-page event-space testimonials-bg resc-sec " id="ws">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="wpb_text_column wpb_content_element">
-                            <div class="wpb_wrapper">
-                                <div class="title-button ">
-                                    <h3 class="style1 tbg3">
-                                        <i class="fa fa-2x fa-file">
-                                        </i>
-                                        Web Security
-                                    </h3>
-                                </div>
-                                <div class="carousel-wrap">
-                                    <div class="owl-carousel5 owl-carousel owl-theme">
-                                        <!-- testo 1 start -->
-                                        <div class="item">
-                                            <div class="event-box">
-                                                <img src="assets/images/vapt-services.jpg" class="img-fluid"
-                                                    alt="t1">
-                                            </div>
-                                        </div>
-                                        <!-- testo 1 end -->
-                                        <!-- testo 1 start -->
-                                        <div class="item">
-                                            <div class="event-box">
-                                                <img src="assets/images/vapt-services.jpg" class="img-fluid"
-                                                    alt="t1">
-                                            </div>
-                                        </div>
-                                        <!-- testo 1 end -->
-                                        <!-- testo 1 start -->
-                                        <div class="item">
-                                            <div class="event-box">
-                                                <img src="assets/images/vapt-services.jpg" class="img-fluid"
-                                                    alt="t1">
-                                            </div>
-                                        </div>
-                                        <!-- testo 1 end -->
-                                        <!-- testo 1 start -->
-                                        <div class="item">
-                                            <div class="event-box">
-                                                <img src="assets/images/vapt-services.jpg" class="img-fluid"
-                                                    alt="t1">
-                                            </div>
-                                        </div>
-                                        <!-- testo 1 end -->
-                                    </div>
-                                    <div id="navigation-count5" class="count-nav-box"></div>
-                                    <!--  -->
-                                    <div class="event-all">
-                                        <a href="{{ route('events-view') }}">View All</a>
-                                    </div>
-                                    <!--  -->
-                                </div>
-                            </div>
-
-                            <!-- -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <!--  -->
         {{-- <a href="#main-body" class="scrollToTop" style="display: block;">
             <i class="fa fa-arrow-up">

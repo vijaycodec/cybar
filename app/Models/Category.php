@@ -15,4 +15,15 @@ class Category extends Model
     {
         return $this->hasMany(Resource::class);
     }
+
+    public function blogs()
+    {
+        return $this->hasMany(MenuBlog::class);
+    }
+
+    public function events()
+    {
+        return $this->hasMany(MenuEvent::class);
+
+    }
 }

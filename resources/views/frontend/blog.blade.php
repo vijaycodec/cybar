@@ -70,10 +70,10 @@
                                                 </div>
                                                 <div class="template15-wrap-main-content">
                                                     <span><i>{{ $blog->created_at->format('d M Y') }}</i></span>
-                                                    <h4><a href="{{ route('blog-view') }}">{{$blog->sub_category}}</a></h4>
+                                                    <h4><a href="{{ route('blog-view', $blog->id) }}">{{$blog->sub_category}}</a></h4>
                                                     <p>
                                                         {{$blog->short_desc}}
-                                                        <a href="{{ route('blog-view') }}"> Read More[...]</a>
+                                                        <a href="{{ route('blog-view', $blog->id) }}"> Read More[...]</a>
                                                     </p>
                                                 </div>
                                             </div>

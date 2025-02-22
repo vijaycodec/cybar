@@ -36,7 +36,7 @@
                     @csrf
                     @method('PUT') <!-- Using PUT method for updating -->
                     <a class="tf-button style-1 w208" style="padding-left: 75px;"
-                        href=" {{ route('resources-category.list') }}">Back</a>
+                        href=" {{ route('resources.list') }}">Back</a>
                    
                     <fieldset class="name">
                         <div class="body-title">Select Category <span class="tf-color-1">*</span></div>

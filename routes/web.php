@@ -27,6 +27,7 @@ use App\Http\Controllers\backend\resourcesController as BackendResourcesControll
 use App\Http\Controllers\backend\subcategoryController;
 use App\Http\Controllers\backend\corporateController;
 use App\Http\Controllers\backend\menublogController;
+use App\Http\Controllers\backend\menueventController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Indexcontroller;
 
@@ -42,9 +43,11 @@ Route::get('/resources-view/{id?}', [resourcesViewController::class, 'view'])->n
 Route::get('/resources-view-trending/{id?}', [resourcesViewController::class, 'trendingResourceView'])->name('resources-view-trending');
 
 Route::get('/blog', [blogController::class, 'index'])->name('blogs');
-Route::get('/blog-view', [blogViewController::class, 'index'])->name('blog-view');
+Route::get('/blog-view/{id?}', [blogViewController::class, 'view'])->name('blog-view');
+Route::get('/blog-view-trending/{id?}', [blogViewController::class, 'trendingResourceView'])->name('blog-view-trending');
 Route::get('/events', [eventController::class, 'index'])->name('events');
-Route::get('/events-view', [eventViewController::class, 'index'])->name('events-view');
+Route::get('/events-view/{id?}', [eventViewController::class, 'view'])->name('events-view');
+
 Route::get('/testimonials', [testimonialsController::class, 'index'])->name('testimonials');
 Route::get('/career', [careerController::class, 'index'])->name('careers');
 Route::get('/contact', [contactController::class, 'index'])->name('contact');
@@ -156,6 +159,15 @@ Route::middleware(['auth','admin','prevent_history'])->group(function () {
     route::get('/menublog/edit/{id}', [menublogController::class, 'edit'])->name('menublog.edit');
     Route::put('menublog/update/{id}', [menublogController::class, 'update'])->name('menublog.update');
     Route::delete('menublog/delete/{id}', [menublogController::class, 'destroy'])->name('menublog.destroy');
+
+    // Event Routes
+    route::get('/menuevent/list', [menueventController::class, 'index'])->name('menuevent.list');
+    route::get('/menuevent/create', [menueventController::class, 'create'])->name('menuevent.create');
+    route::post('/menuevent/store', [menueventController::class, 'store'])->name('menuevent.store');
+    Route::get('/menuevent/show/{id}', [menueventController::class, 'show'])->name('menuevent.show');
+    route::get('/menuevent/edit/{id}', [menueventController::class, 'edit'])->name('menuevent.edit');
+    Route::put('menuevent/update/{id}', [menueventController::class, 'update'])->name('menuevent.update');
+    Route::delete('menuevent/delete/{id}', [menueventController::class, 'destroy'])->name('menuevent.destroy');
 
 });
 

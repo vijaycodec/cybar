@@ -17,6 +17,7 @@ class CategoryTableSeeder extends Seeder
         $users = [
             [
                 'id'                => 1,
+                'category_type'     => 'resources',
                 'name'              => 'Professional Services',
                 'title'             => 'The most effective learning system. World’s highest course completion rate.',
                 'created_at'        => now(),
@@ -24,6 +25,7 @@ class CategoryTableSeeder extends Seeder
             ],
             [
                 'id'                => 2,
+                'category_type'     => 'resources',
                 'name'              => 'Security Operations',
                 'title'             => 'The most effective learning system. World’s highest course completion rate.',
                 'created_at'        => now(),
@@ -31,6 +33,7 @@ class CategoryTableSeeder extends Seeder
             ],
             [
                 'id'                => 3,
+                'category_type'     => 'resources',
                 'name'              => 'Application Security',
                 'title'             => 'The most effective learning system. World’s highest course completion rate.',
                 'created_at'        => now(),
@@ -39,6 +42,7 @@ class CategoryTableSeeder extends Seeder
 
             [
                 'id'                => 4,
+                'category_type'     => 'resources',
                 'name'              => 'Web Security',
                 'title'             => 'The most effective learning system. World’s highest course completion rate.',
                 'created_at'        => now(),
@@ -46,6 +50,7 @@ class CategoryTableSeeder extends Seeder
             ],
             [
                 'id'                => 5,
+                'category_type'     => 'resources',
                 'name'              => 'VAPT',
                 'title'             => 'The most effective learning system. World’s highest course completion rate.',
                 'created_at'        => now(),
@@ -53,6 +58,7 @@ class CategoryTableSeeder extends Seeder
             ],
             [
                 'id'                => 6,
+                'category_type'     => 'resources',
                 'name'              => 'Career',
                 'title'             => 'The most effective learning system. World’s highest course completion rate.',
                 'created_at'        => now(),
@@ -61,13 +67,135 @@ class CategoryTableSeeder extends Seeder
            
             [
                 'id'                => 7,
+                'category_type'     => 'resources',
+                'name'              => 'Data Science',
+                'title'             => 'The most effective learning system. World’s highest course completion rate.',
+                'created_at'        => now(),
+                'updated_at'        => now(),
+            ],
+            // resources categories end here 
+            // event categories start here
+            [
+                'id'                => 8,
+                'category_type'     => 'event',
+                'name'              => 'Professional Services',
+                'title'             => 'The most effective learning system. World’s highest course completion rate.',
+                'created_at'        => now(),
+                'updated_at'        => now(),
+            ],
+            [
+                'id'                => 9,
+                'category_type'     => 'event',
+                'name'              => 'Security Operations',
+                'title'             => 'The most effective learning system. World’s highest course completion rate.',
+                'created_at'        => now(),
+                'updated_at'        => now(),
+            ],
+            [
+                'id'                => 10,
+                'category_type'     => 'event',
+                'name'              => 'Application Security',
+                'title'             => 'The most effective learning system. World’s highest course completion rate.',
+                'created_at'        => now(),
+                'updated_at'        => now(),
+            ],
+
+            [
+                'id'                => 11,
+                'category_type'     => 'event',
+                'name'              => 'Web Security',
+                'title'             => 'The most effective learning system. World’s highest course completion rate.',
+                'created_at'        => now(),
+                'updated_at'        => now(),
+            ],
+            [
+                'id'                => 12,
+                'category_type'     => 'event',
+                'name'              => 'VAPT',
+                'title'             => 'The most effective learning system. World’s highest course completion rate.',
+                'created_at'        => now(),
+                'updated_at'        => now(),
+            ],
+            [
+                'id'                => 13,
+                'category_type'     => 'event',
+                'name'              => 'Career',
+                'title'             => 'The most effective learning system. World’s highest course completion rate.',
+                'created_at'        => now(),
+                'updated_at'        => now(),
+            ],
+           
+            [
+                'id'                => 14,
+                'category_type'     => 'event',
                 'name'              => 'Data Science',
                 'title'             => 'The most effective learning system. World’s highest course completion rate.',
                 'created_at'        => now(),
                 'updated_at'        => now(),
             ],
             
-            
+           // event categories ends here
+           // blog categories start here
+
+            [
+                'id'                => 15,
+                'category_type'     => 'blog',
+                'name'              => 'Professional Services',
+                'title'             => 'The most effective learning system. World’s highest course completion rate.',
+                'created_at'        => now(),
+                'updated_at'        => now(),
+            ],
+            [
+                'id'                => 16,
+                'category_type'     => 'blog',
+                'name'              => 'Security Operations',
+                'title'             => 'The most effective learning system. World’s highest course completion rate.',
+                'created_at'        => now(),
+                'updated_at'        => now(),
+            ],
+            [
+                'id'                => 17,
+                'category_type'     => 'blog',
+                'name'              => 'Application Security',
+                'title'             => 'The most effective learning system. World’s highest course completion rate.',
+                'created_at'        => now(),
+                'updated_at'        => now(),
+            ],
+
+            [
+                'id'                => 18,
+                'category_type'     => 'blog',
+                'name'              => 'Web Security',
+                'title'             => 'The most effective learning system. World’s highest course completion rate.',
+                'created_at'        => now(),
+                'updated_at'        => now(),
+            ],
+            [
+                'id'                => 19,
+                'category_type'     => 'blog',
+                'name'              => 'VAPT',
+                'title'             => 'The most effective learning system. World’s highest course completion rate.',
+                'created_at'        => now(),
+                'updated_at'        => now(),
+            ],
+            [
+                'id'                => 20,
+                'category_type'     => 'blog',
+                'name'              => 'Career',
+                'title'             => 'The most effective learning system. World’s highest course completion rate.',
+                'created_at'        => now(),
+                'updated_at'        => now(),
+            ],
+           
+            [
+                'id'                => 21,
+                'category_type'     => 'blog',
+                'name'              => 'Data Science',
+                'title'             => 'The most effective learning system. World’s highest course completion rate.',
+                'created_at'        => now(),
+                'updated_at'        => now(),
+            ],
+            // blog categories ends here
         ];
             Category::insert($users);
     }
