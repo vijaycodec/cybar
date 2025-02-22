@@ -17,7 +17,7 @@ return new class extends Migration
             $table->text('sub_category'); 
             $table->text('short_desc'); 
             $table->longText('description'); // Use text for long content
-            $table->string('images');
+            $table->string('images')->nullable();
             $table->timestamps();
         });
     }
