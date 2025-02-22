@@ -10,13 +10,14 @@
                     <li><i class="icon-chevron-right"></i></li>
                     <li><a href="#"><div class="text-tiny">Menu Blog</div></a></li>
                     <li><i class="icon-chevron-right"></i></li>
-                    <li><div class="text-tiny">Edit Menu Blog</div></li>
+                    <li><div class="text-tiny">Edit  Blog</div></li>
                 </ul>
             </div>
 
             <div class="wg-box">
-                <form class="form-new-brand form-style-1" action="{{ route('menublog.store') }}" method="POST" enctype="multipart/form-data">
+                <form class="form-new-brand form-style-1" action="{{ route('menublog.update',$blogs->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
+                    @method('PUT')
                     <a class="tf-button style-1 w208" style="padding-left: 75px;" href="{{ route('menublog.list') }}">Back</a>
 
                     <fieldset class="name">

@@ -124,7 +124,8 @@ class menublogController extends Controller
             'description' => 'required',
            
         ]);
-        $blog = new MenuBlog();
+        $blog = MenuBlog::findOrFail($id);
+
         $blog->category_id = $request->category_id; 
         $blog->sub_category = $request->sub_category;
         $blog->short_desc = $request->short_desc;
@@ -155,7 +156,7 @@ class menublogController extends Controller
         // Save the updated category data
         $blog->save();
 
-        return redirect()->route('menublog.list')->with('message', 'Blog updated successfully!');
+        return redirect()->route('menublog.list')->with('success', 'Blog updated successfully!');
 
     }
 
