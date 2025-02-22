@@ -83,7 +83,7 @@
                                                     <i class="icon-eye"></i>
                                                 </div>
                                             </button>
-                                            <a href="{{ route('resources.edit', $event->id) }}">
+                                            <a href="{{ route('menuevent.edit', $event->id) }}">
                                                 <div class="item edit">
                                                     <i class="icon-edit-3"></i>
                                                 </div>

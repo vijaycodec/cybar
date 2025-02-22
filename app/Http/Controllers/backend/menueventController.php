@@ -96,4 +96,74 @@ class menueventController extends Controller
         }
     }
 
+    
+    public function edit($id)
+    {
+        $all_categories = Category::where('category_type', 'event')->get();
+
+        $events = MenuEvent::with('category')->findOrFail($id);
+
+        return view('backend.menuevent.edit', compact('events', 'all_categories'));
+    }
+
+    // Update Menu Blog
+
+    public function update(Request $request, $id)
+    {
+       
+        // Validate other fields
+        $validated = $request->validate([
+            'category_id' => 'required',
+            'short_desc' => 'required',
+            'description' => 'required',
+            'image' => 'mimes:png,jpg,jpeg|max:2048'
+        ]);
+        $event = new MenuEvent();
+        $event->category_id = $request->category_id; 
+        $event->short_desc = $request->short_desc;
+        $event->description = $request->description;
+        // Check if a new image is provided
+        if ($request->hasFile('image')) {
+            // Validate the image
+            $request->validate([
+                'image' => 'mimes:png,jpg,jpeg|max:2048'
+            ]);
+
+            // Remove the old image from the upload folder if it exists
+            if ($event->images && file_exists(public_path('uploads/backend/events/' . $event->images))) {
+                unlink(public_path('uploads/backend/event/' . $event->images)); // Remove old image
+            }
+
+            // Handle the image upload if a new image is selected
+            $image = $request->file('image');
+            $file_extension = $image->extension();
+            $file_name = Carbon::now()->timestamp . '.' . $file_extension;
+
+            // Save the new image
+            $image->move(public_path('uploads/backend/events'), $file_name);
+
+            // Store the new image path in the database
+            $event->images = $file_name;
+        }
+        // Save the updated category data
+        $event->save();
+
+        // return response()->route('menuevent.list')->json(['message' => 'event updated successfully!']);
+        return redirect()->route('menuevent.list')->with(['message' => 'event updated successfully!']);
+    }
+
+    //Delete event
+
+    public function destroy($id)
+    {
+        $event = MenuEvent::find($id);
+        if ($event) {
+            $event->delete();
+            return response()->json([
+                'message' => 'Event deleted successfully!',
+                'redirect' => route('menuevent.list') // Include the redirect URL
+            ], 200);
+        }
+    }
+
 }
