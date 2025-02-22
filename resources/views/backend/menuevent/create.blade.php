@@ -40,8 +40,13 @@
                         <input class="flex-grow" type="text" placeholder="Category Name" name="sub_category" tabindex="0"
                             value="{{ old('sub_category') }}" aria-required="true" required="">
                     </fieldset>
+                    <fieldset class="name">
+                        <div class="body-title"> Video URL  <span class="tf-color-1">*</span></div>
+                        <input class="flex-grow" type="text" placeholder="Video URL" name="video_url" tabindex="0"
+                            value="{{ old('video_url') }}" aria-required="true" >
+                    </fieldset>
                     <fieldset>
-                        <div class="body-title">Upload images <span class="tf-color-1">*</span></div>
+                        <div class="body-title">Upload thumbnails images <span class="tf-color-1">*</span></div>
                         <div class="upload-image flex-grow">
                             <!-- Image preview container -->
                             <div class="item" id="imgpreview" style="display:none; text-align: center;">
