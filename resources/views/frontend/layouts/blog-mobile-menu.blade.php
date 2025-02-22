@@ -14,13 +14,9 @@
    <div class="mobile-ser-tab">
       <h4>Blogs Categories</h4>
       <ul class="mobile-ser-menu">
-                     <li><a href="#ps">Professional Services</a></li>
-                     <li><a href="#so">Security Operations</a></li>
-                     <li><a href="#as">Application Security</a></li>
-                     <li><a href="#ws">Web Security</a></li>
-                     <li><a href="#vapt">VAPT</a></li>
-                     <li><a href="#echical-hacker">Ethical Hacker</a></li>
-                     <li><a href="#pecb">PECB</a></li>
+         @foreach($categories as $category)
+                     <li><a href="#{{ Str::slug($category->name) }}">{{ $category->name}}</a></li>
+                   @endforeach
       </ul>
       <div class="bottom-btn">
          <a href="javascript:void(0)" class="right-back">Back</a>
