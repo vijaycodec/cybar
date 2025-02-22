@@ -8,7 +8,7 @@
         <a id="button">
         </a>
         <!-- Header start -->
-        @include('frontend.layouts.event-header')
+        @include('frontend.layouts.event-header',['categories' => $categories])
         <!-- banner start -->
         <section class="sec_ban" id="resources-banner">
             <div class="home-ban">
@@ -31,12 +31,13 @@
         <!-- tab menu end -->
 
         <!--  -->
-        <section class="testimonials testimonials-page event-space testimonials-bg resc-sec " id="so">
+        @foreach ($categories as $index=>$category)
+        <section class="testimonials testimonials-page event-space testimonials-bg resc-sec " id="{{ Str::slug($category->name) }}">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="wpb_text_column wpb_content_element">
-                            @foreach ($categories as $index=>$category)
+                            
                             <div class="wpb_wrapper">
                                 <div class="title-button ">
                                     <h3 class="style1 tbg{{ $index+1 }}">
@@ -65,13 +66,13 @@
                                     <!--  -->
                                 </div>
                             </div>
-                            @endforeach
-
+                        
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        @endforeach
         <!--  -->
         <!-- tab menu end -->
 

@@ -66,6 +66,7 @@ class menueventController extends Controller
             $events->category_id = $request->category_id;
             $events->short_desc = $request->short_desc;
             $events->description = $request->description;
+            $events->video_url = $request->video_url;
 
             
             if ($request->hasFile('image')) {

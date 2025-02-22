@@ -16,7 +16,7 @@
                     <img src="{{ asset('assets/images/resouces-bg-img.jpg') }}" class="img-fluid rs-banner" alt="home banner">
                 </div>
                 <div class="over-h2">
-                    <h1>Event</h1>
+                    <h1>{{ $categories->name }}</h1>
 
                 </div>
             </div>
@@ -33,10 +33,10 @@
                         </div>
                     </div>
 
-                    @foreach ($events as $event);
+                    @foreach ($events as $event)
                     <div class="col-md-3">
                         <div class="event-box">
-                            <div data-videourl="https://www.youtube.com/watch?v=GFHlGYB6Cio" class="ceh-video button">
+                            <div data-videourl="{{ $event->video_url }}" class="ceh-video button">
                                 <img src="{{ asset('uploads/backend/events/' . $event->images) }}">
                             </div>
                         </div>

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('short_desc'); 
             $table->longText('description'); // Use text for long content
             $table->string('images');
+            $table->string('video_url')->nullable();
             $table->timestamps();
         });
     }
