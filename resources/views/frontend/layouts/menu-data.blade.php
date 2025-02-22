@@ -2889,11 +2889,11 @@
                About Us
             </a>
          </li>
-         <li class="nav-item"><a class="mobile-nav-link" href="resources.php">Resources</a></li>
-         <li class="nav-item"><a class="mobile-nav-link" href="blog.php">Blogs</a></li>
-         <li class="nav-item"><a class="mobile-nav-link" href="events.php">Event</a></li>
-         <li class="nav-item"><a class="mobile-nav-link" href="testimonials.php">Testimonial</a></li>
-         <li class="nav-item"><a class="mobile-nav-link" href="careers.php">Careers</a></li>
+         <li class="nav-item"><a class="mobile-nav-link" href="{{ route('resources') }}">Resources</a></li>
+         <li class="nav-item"><a class="mobile-nav-link" href="{{ route('blogs') }}">Blogs</a></li>
+         <li class="nav-item"><a class="mobile-nav-link" href="{{ route('events') }}">Event</a></li>
+         <li class="nav-item"><a class="mobile-nav-link" href="{{ route('testimonials') }}">Testimonial</a></li>
+         <li class="nav-item"><a class="mobile-nav-link" href="{{ route('careers') }}">Careers</a></li>
          <li class="nav-item"><a class="mobile-nav-link" href="#">Contact Us</a></li>
       </ul>
       <div class="bottom-btn">
