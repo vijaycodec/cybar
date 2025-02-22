@@ -3,7 +3,7 @@
 @section('title', 'Blogs')
 
 @section('content')
-
+{{-- test --}}
     <body id="body-main">
         <a id="button"></a>
         <!-- Header start -->
@@ -47,7 +47,7 @@
         </section>
         <!-- tab menu end -->
         @foreach($categories as $index=> $category)
-        <section class="resc-sec blog-sec" id="{{ Str::slug($category->name) }}">
+        <section class="resc-sec blog-sec blog-bg" id="{{ Str::slug($category->name) }}">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
