@@ -39,6 +39,7 @@
                             <tr>
                                 <th>#</th>
                                 <th>Category Name</th>
+                                <th>Sub Category Name</th>
                                 <th>Image</th>
                                 <th>Short Description</th>
                                 <th>Description</th>
@@ -50,7 +51,8 @@
                                 @foreach ($blogs as $blog)
                                     <tr>
                                         <td>{{ $blog->id }}</td>
-                                        <td>{{ $blog->category->name ?? 'N/A' }}</td> <!-- Using the relationship -->
+                                        <td>{{ $blog->category->name ?? 'N/A' }}</td> 
+                                        <td>{{ $blog->sub_category ?? 'N/A' }}</td>  
                                         <td>
                                             @if ($blog->images)
                                                 <img src="{{ asset('uploads/backend/blog/' . $blog->images) }}"

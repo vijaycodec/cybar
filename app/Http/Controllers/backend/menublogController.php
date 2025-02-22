@@ -101,6 +101,7 @@ class menublogController extends Controller
     }
    
 
+    
     public function edit($id)
     {
         $all_categories = Category::where('category_type', 'blog')->get();
@@ -108,6 +109,66 @@ class menublogController extends Controller
         $blogs = MenuBlog::with('category')->findOrFail($id);
 
         return view('backend.menublog.edit', compact('blogs', 'all_categories'));
+    }
+
+    // Update Menu Blog
+
+    public function update(Request $request, $id)
+    {
+       
+        // Validate other fields
+        $validated = $request->validate([
+            'category_id' => 'required',
+            'sub_category' => 'required',
+            'short_desc' => 'required',
+            'description' => 'required',
+           
+        ]);
+        $blog = new MenuBlog();
+        $blog->category_id = $request->category_id; 
+        $blog->sub_category = $request->sub_category;
+        $blog->short_desc = $request->short_desc;
+        $blog->description = $request->description;
+        // Check if a new image is provided
+        if ($request->hasFile('image')) {
+            // Validate the image
+            $request->validate([
+                'image' => 'mimes:png,jpg,jpeg|max:2048'
+            ]);
+
+            // Remove the old image from the upload folder if it exists
+            if ($blog->images && file_exists(public_path('uploads/backend/blog/' . $blog->images))) {
+                unlink(public_path('uploads/backend/blog/' . $blog->images)); // Remove old image
+            }
+
+            // Handle the image upload if a new image is selected
+            $image = $request->file('image');
+            $file_extension = $image->extension();
+            $file_name = Carbon::now()->timestamp . '.' . $file_extension;
+
+            // Save the new image
+            $image->move(public_path('uploads/backend/blog'), $file_name);
+
+            // Store the new image path in the database
+            $blog->images = $file_name;
+        }
+        // Save the updated category data
+        $blog->save();
+
+        return redirect()->route('menublog.list')->with('message', 'Blog updated successfully!');
+
+    }
+
+    public function destroy($id)
+    {
+        $blog = MenuBlog::find($id);
+        if ($blog) {
+            $blog->delete();
+            return response()->json([
+                'message' => 'Blog deleted successfully!',
+                'redirect' => route('menublog.list') // Include the redirect URL
+            ], 200);
+        }
     }
 
 
