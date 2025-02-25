@@ -3,81 +3,65 @@
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
-use App\Models\BlogCategory;
-use App\Models\ClassStyle;
-use App\Models\CourseFeatureCategory;
 use App\Models\CourseFeatureTitle;
-use App\Models\CyberwindCategory;
-use App\Models\FaqCategory;
 use App\Models\FaqSubCategory;
-use App\Models\IndustryCategory;
-use App\Models\L3Category;
 use App\Models\L3ContentInfo;
 use App\Models\L3OverviewSubDescription;
-use App\Models\PageDetail;
-use App\Models\ProgramCategory;
 use App\Models\ProgramSubCategory;
-use App\Models\SignificanceCategory;
 use App\Models\SignificanceTitle;
 use App\Models\TestimonialDetails;
 use Illuminate\Http\Request;
-use Illuminate\Support\Carbon;
+use App\Repositories\Interfaces\L3ContentRepositoryInterface;
 
 class l3_contentController extends Controller
 {
+
+    protected $l3ContentRepository;
+
+    public function __construct(L3ContentRepositoryInterface $l3ContentRepository)
+    {
+        $this->l3ContentRepository = $l3ContentRepository;
+    }
+
     public function index()
     {
-        $l3Contents = L3ContentInfo::all();
-        // $l3Contents = L3Category::with(['pageCategory', 'category', 'subCategory'])
-        // ->orderBy('id', 'ASC')
-        // ->paginate(3);
+        $l3Contents = $this->l3ContentRepository->getAllL3Contents();
         return view('backend.l3-content.index', compact('l3Contents'));
     }
 
     public function create()
     {
-        $page_categories = PageDetail::all();
-        $significanceCategories = SignificanceCategory::all();
-        $courseFeatureCategories = CourseFeatureCategory::all();
-        $cyberwindCategories = CyberwindCategory::all();
-        $industryCategories = IndustryCategory::all();
-        $faqCategories = FaqCategory::all();
-        $blogCategories = BlogCategory::all();
-        $programCategories = ProgramCategory::all();
+        $data = $this->l3ContentRepository->getCreateData();
 
-        return view('backend.l3-content.create', compact('page_categories', 'significanceCategories', 
-                                            'courseFeatureCategories', 
-                                            'cyberwindCategories', 
-                                            'industryCategories', 
-                                            'faqCategories', 
-                                            'blogCategories',
-                                        'programCategories'));
+        $page_categories = $data['page_categories'];
+        $significanceCategories = $data['significanceCategories'];
+        $courseFeatureCategories = $data['courseFeatureCategories'];
+        $cyberwindCategories = $data['cyberwindCategories'];
+        $industryCategories = $data['industryCategories'];
+        $faqCategories = $data['faqCategories'];
+        $blogCategories = $data['blogCategories'];
+        $programCategories = $data['programCategories'];
+    
+        return view('backend.l3-content.create', compact(
+            'page_categories',
+            'significanceCategories',
+            'courseFeatureCategories',
+            'cyberwindCategories',
+            'industryCategories',
+            'faqCategories',
+            'blogCategories',
+            'programCategories'
+        ));
     }
 
     public function l3GetL3Categories(Request $request)
     {
-
-        $categoryId = $request->category_id;
-        $pageCategoryId = $request->page_category_id;
-        $subCategoryId = $request->sub_category_Id;
-
-        $l3categories = L3Category::whereIn('id', function ($query) use ($pageCategoryId, $categoryId, $subCategoryId) {
-            $query->selectRaw('MIN(id)') // Selects the first ID per unique l3_category
-                ->from('l3_categories')
-                ->where('page_category_id', $pageCategoryId)
-                ->where('category_id', $categoryId)
-                ->where('sub_category_id', $subCategoryId)
-                ->groupBy('l3_category'); // Groups by l3_category to remove duplicates
-        })
-            ->orderBy('id', 'desc') // Ensures latest records appear first
-            ->get();
+        $l3categories = $this->l3ContentRepository->getL3Categories($request);
         return response()->json($l3categories);
     }
 
     public function store(Request $request)
     {
-
-        // dd($request->all());
 
         $rules = [
             'page_category_id' => 'required',
@@ -125,16 +109,15 @@ class l3_contentController extends Controller
                 $rules['incident_title'] = 'required|String';
                 $rules['Video_link'] = 'required|string';
                 $rules['incident_description'] = 'required|string';
-                break; 
+                break;
             case 'cehkit':
                 // $rules['main_title'] = 'required|String';
                 $rules['kit_title'] = 'required|string';
                 $rules['ceh_description'] = 'required|string';
-                break;  
+                break;
             case 'program':
                 $rules['program_category_id'] = 'required|exists:program_categories,id';
-                break;          
-
+                break;
         }
 
         $request->validate($rules);
@@ -150,45 +133,9 @@ class l3_contentController extends Controller
         switch ($request->l3_category_type) {
 
             case 'overview':
-                // Check if an overview already exists in l3_content_infos
-                $existingOverview = L3ContentInfo::whereNotNull('overview_title')
-                                    ->orWhereNotNull('overview_description')
-                                    ->first();
-           
-                // If no existing overview is found, create a new one
-                if (!$existingOverview) {
-                   
-                    $l3ContentInfo = L3ContentInfo::create([
-                        'overview_title' => $request->overview_title ?? null,
-                        'overview_description' => $request->overview_description ?? null
-                    ]);
-                } else {
-                    // Use the existing overview
-                    $l3ContentInfo = $existingOverview;
-            
-                    // Update overview details if new values are provided
-                    if ($request->overview_title) {
-                        $l3ContentInfo->overview_title = $request->overview_title;
-                    }
-                    if ($request->overview_description) {
-                        $l3ContentInfo->overview_description = $request->overview_description;
-                    }
-                    $l3ContentInfo->save();
-                }
-            
-                // Store sub_descriptions if available
-                if ($request->has('overview_sub_descriptions')) {
-                   
-                    foreach ($request->overview_sub_descriptions as $subDesc) {
-                        L3OverviewSubDescription::create([
-                            'l3_content_info_id' => $l3ContentInfo->id,
-                            'sub_description' => $subDesc
-                        ]);
-                    }
-                }
-            
+                $l3ContentInfo->overview_title = $request->overview_title;
+                $l3ContentInfo->overview_description = $request->overview_description;
                 break;
-            
 
             case 'significance':
                 $l3ContentInfo->significance_category_type = $request->significance_type;
@@ -231,63 +178,62 @@ class l3_contentController extends Controller
                 $l3ContentInfo->Video_link = $request->Video_link;
                 $l3ContentInfo->incident_description = $request->incident_description;
                 $l3ContentInfo->images = $this->uploadImage($request, 'incidents');
-                break;    
+                break;
             case 'cehkit':
-                if($request->main_title){
+                if ($request->main_title) {
                     $l3ContentInfo->main_title = $request->main_title;
                 }
                 $l3ContentInfo->kit_title = $request->kit_title;
                 $l3ContentInfo->ceh_description = $request->ceh_description;
                 $l3ContentInfo->images = $this->uploadImage($request, 'cehkit');
-                break;  
+                break;
             case 'program':
-                  if($request->program_category_id){
+                if ($request->program_category_id) {
                     $l3ContentInfo->program_category_id  = $request->program_category_id;
                 }
-                if($request->program_title ){
-                  
+                if ($request->program_title) {
+
                     $l3ContentInfo->program_title = $request->program_title;
                 }
-                if($request->program_subcategory){
+                if ($request->program_subcategory) {
                     $programSubCategory = new ProgramSubCategory();
-                    $programSubCategory->program_category_id  = $request->program_category_id;  
-                    $programSubCategory->name  = $request->program_subcategory;  
+                    $programSubCategory->program_category_id  = $request->program_category_id;
+                    $programSubCategory->name  = $request->program_subcategory;
                     $programSubCategory->description = $request->program_description;
-                    if($request->image)  {
-                        $programSubCategory->image = $this->uploadImage($request, 'program');  
+                    if ($request->image) {
+                        $programSubCategory->image = $this->uploadImage($request, 'program');
                     }
                     $programSubCategory->save();
-                }else{
+                } else {
                     $l3ContentInfo->program_description  = $request->program_description;
-                    if($request->image){
-                        $l3ContentInfo->images = $this->uploadImage($request, 'program'); 
+                    if ($request->image) {
+                        $l3ContentInfo->images = $this->uploadImage($request, 'program');
                     }
                 }
-                
+
                 break;
-    
         }
 
         $l3ContentInfo->save();
 
+        if ($request->l3_category_type == 'overview') {
+
+            if ($request->has('overview_sub_descriptions')) {
+                foreach ($request->overview_sub_descriptions as $subDesc) {
+                    L3OverviewSubDescription::create([
+                        'l3_content_info_id' => $l3ContentInfo->id,
+                        'sub_description' => $subDesc,
+                    ]);
+                }
+            }
+        }
+
         // Optional: If you're using a separate table for significance titles
         if ($request->l3_category_type == 'significance') {
-            // dd('ok');
-            // Fetch the first record from the SignificanceTitle table
-            $significance = SignificanceTitle::first();
-
-            if ($significance) {
-                // If a record exists, update it
-                $significance->l3_content_info_id = $l3ContentInfo->id; // Update the linked content info
-                $significance->title = $request->Significance_title; // Update the title
-                $significance->save(); // Save changes
-            } else {
-                // If no record exists, create a new one
-                $significance = new SignificanceTitle();
-                $significance->l3_content_info_id = $l3ContentInfo->id; // Set the linked content info
-                $significance->title = $request->Significance_title; // Set the title
-                $significance->save(); // Save new record
-            }
+            SignificanceTitle::updateOrCreate(
+                ['l3_content_info_id' => $l3ContentInfo->id], // Condition
+                ['title' => $request->input('Significance_title', 'Default Title')] // Use default if null
+            );
         }
 
         // Optional: If you're using a separate table for coursefeature titles 
@@ -321,11 +267,11 @@ class l3_contentController extends Controller
         if ($request->l3_category_type == 'testimonials') {
             $testimonials = new TestimonialDetails();
             $testimonials->l3_content_info_id = $l3ContentInfo->id;
-            $testimonials->testimonial_name  = $request->testimonials_name;  
-            $testimonials->designation  = $request->designation;  
-            $testimonials->testimonial_description = $request->testimonials_description;  
-            $testimonials->testimonial_short_description = $request->testimonials_short_description;  
-            $testimonials->testimonial_title = $request->testimonials_title;  
+            $testimonials->testimonial_name  = $request->testimonials_name;
+            $testimonials->designation  = $request->designation;
+            $testimonials->testimonial_description = $request->testimonials_description;
+            $testimonials->testimonial_short_description = $request->testimonials_short_description;
+            $testimonials->testimonial_title = $request->testimonials_title;
             $testimonials->images = $this->uploadImage($request, 'testimonials');
             $testimonials->save();
         }
@@ -333,19 +279,45 @@ class l3_contentController extends Controller
         return redirect()->route('l3-content.create')->with('success', 'Form data saved successfully!');
     }
 
-    /**
-     *  Helper Function to Handle Image Upload
-     */
-    private function uploadImage($request, $folder)
+    private function uploadImage(Request $request, $folder)
     {
         if ($request->hasFile('image')) {
-            $request->validate(['image' => 'mimes:png,jpg,jpeg,webp|max:4096']);
+            $request->validate([
+                'image' => 'mimes:png,jpg,jpeg,webp|max:4096',
+            ]);
 
             $image = $request->file('image');
-            $file_name = Carbon::now()->timestamp . '.' . $image->extension();
-            $image->move(public_path("uploads/frontend/l3_template/{$folder}"), $file_name);
+
+            // Validate MIME type 
+            $mimeType = mime_content_type($image->getPathname());
+            $allowedTypes = ['image/png', 'image/jpeg', 'image/webp'];
+
+            if (!in_array($mimeType, $allowedTypes, true)) {
+                throw new \Exception('Invalid file type detected');
+            }
+
+            // Prevent directory traversal 
+            $folder = basename($folder);
+
+            // Validate file name 
+            $originalName = preg_replace('/[^a-zA-Z0-9._-]/', '', $image->getClientOriginalName());
+            if (preg_match('/\.(php|exe|sh|bat|phtml|jsp|asp|aspx|cgi|pl)$/i', $originalName)) {
+                throw new \Exception('Disallowed file type');
+            }
+
+            // Limit file name length 
+            if (strlen($originalName) > 255) {
+                throw new \Exception('File name too long');
+            }
+            // Enforce safe naming convention 
+            $originalName = str_replace(" ", "_", $originalName);
+            // Generate unique filename 
+            $file_name = md5(uniqid()) . '.' . $image->getClientOriginalExtension();
+            // Store file securely 
+            $path = $image->storeAs("uploads/{$folder}", $file_name, 'public');
             return $file_name;
         }
         return null;
     }
+
 }

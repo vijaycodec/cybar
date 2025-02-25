@@ -5,6 +5,8 @@ namespace App\Providers;
 use Anhskohbo\NoCaptcha\Facades\NoCaptcha;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Validator;
+use App\Repositories\L3ContentRepository;
+use App\Repositories\Interfaces\L3ContentRepositoryInterface;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +15,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->bind(L3ContentRepositoryInterface::class, L3ContentRepository::class);
+
     }
 
     /**

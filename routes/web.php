@@ -52,7 +52,7 @@ Route::get('/testimonials', [testimonialsController::class, 'index'])->name('tes
 Route::get('/career', [careerController::class, 'index'])->name('careers');
 Route::get('/contact', [contactController::class, 'index'])->name('contact');
 Route::get('/cn-insight', [cnInsightController::class, 'index'])->name('cn-insight');
-Route::get('/l3-template', [l3templateController::class, 'getl3'])->name('l3-template');
+Route::post('/l3-template', [l3templateController::class, 'getl3'])->name('l3-template');
 
 Route::get('/login', [loginController::class, 'login'])->name('login');
 // Route::get('/add-blog-data', [Indexcontroller::class, 'add_blog_data'])->name('add_blog_data');
@@ -139,8 +139,8 @@ Route::middleware(['auth','admin','prevent_history'])->group(function () {
     Route::put('l3-content/update/{id}', [l3_contentController::class, 'update'])->name('l3-content.update');
     Route::delete('l3-content/delete/{id}', [l3_contentController::class, 'destroy'])->name('l3-content.destroy');
     //category and sub-category and L3 Dependent Routes 
-    Route::get('content/l3-get-categories', [l3_contentController::class, 'l3GetL3Categories'])->name('l3-get-l3categories');
-
+    Route::get('content/l3-get-categories', [l3_contentController::class, 'l3GetL3Categories'])->name('l3-get-l3categories') ->middleware('throttle:10,1'); // 10 requests per minute;
+    
     // corporate training Routes
     route::get('/corporate-training/list', [corporateController::class, 'index'])->name('corporate-training.list');
     route::get('/corporate-training/create/{pageId}', [corporateController::class, 'create'])->name('corporate-training.create');

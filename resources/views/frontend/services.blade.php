@@ -69,8 +69,18 @@
                                                         </div>
                                                         <div class="cn-main-content">
                                                             <h3>{{ $service->subcategory->sub_category }}</h3>
-                                                            <a
+                                                            {{-- <a
                                                                 href="{{ route('l3-template', ['sub_category_id' => $service->subcategory->id, 'pageid' => $page_id, 'category_id' => $category->id]) }}">
+                                                                Know more <i class="fa fa-chevron-right"></i>
+                                                            </a> --}}
+                                                            <form id="l3Form-{{ $service->subcategory->id }}" action="{{ route('l3-template') }}" method="POST" style="display:inline;">
+                                                                @csrf
+                                                                <input type="hidden" name="sub_category_id" value="{{ $service->subcategory->id }}">
+                                                                <input type="hidden" name="pageid" value="{{ $page_id }}">
+                                                                <input type="hidden" name="category_id" value="{{ $category->id }}">
+                                                            </form>
+                                                            
+                                                            <a href="javascript:void(0);" onclick="document.getElementById('l3Form-{{ $service->subcategory->id }}').submit();" >
                                                                 Know more <i class="fa fa-chevron-right"></i>
                                                             </a>
                                                         </div>
@@ -96,8 +106,18 @@
                                                                     </div>
                                                                     <div class="cn-main-content">
                                                                         <h3>{{ $service->subcategory->sub_category }}</h3>
-                                                                        <a
+                                                                        {{-- <a
                                                                             href="{{ route('l3-template', ['sub_category_id' => $service->subcategory->id, 'pageid' => $page_id, 'category_id' => $category->id]) }}">
+                                                                            Know more <i class="fa fa-chevron-right"></i>
+                                                                        </a> --}}
+                                                                        <form id="l3Form-{{ $service->subcategory->id }}" action="{{ route('l3-template') }}" method="POST" style="display:inline;">
+                                                                            @csrf
+                                                                            <input type="hidden" name="sub_category_id" value="{{ $service->subcategory->id }}">
+                                                                            <input type="hidden" name="pageid" value="{{ $page_id }}">
+                                                                            <input type="hidden" name="category_id" value="{{ $category->id }}">
+                                                                        </form>
+                                                                        
+                                                                        <a href="javascript:void(0);" onclick="document.getElementById('l3Form-{{ $service->subcategory->id }}').submit();" >
                                                                             Know more <i class="fa fa-chevron-right"></i>
                                                                         </a>
                                                                     </div>
@@ -150,7 +170,16 @@
                                             </div>
                                             <div class="cn-main-content">
                                                 <h3>{{ $service->subcategory->sub_category }}</h3>
-                                                <a href="{{ route('l3-template', ['sub_category_id' => $service->subcategory->id, 'pageid' => $page_id, 'category_id' => $category->id]) }}">
+                                                {{-- <a href="{{ route('l3-template', ['sub_category_id' => $service->subcategory->id, 'pageid' => $page_id, 'category_id' => $category->id]) }}">
+                                                    Know more <i class="fa fa-chevron-right"></i>
+                                                </a> --}}
+                                                <form id="l3Form-{{ $service->subcategory->id }}" action="{{ route('l3-template') }}" method="POST" style="display:inline;">
+                                                    @csrf
+                                                    <input type="hidden" name="sub_category_id" value="{{ $service->subcategory->id }}">
+                                                    <input type="hidden" name="pageid" value="{{ $page_id }}">
+                                                    <input type="hidden" name="category_id" value="{{ $category->id }}">
+                                                </form>
+                                                <a href="javascript:void(0);" onclick="document.getElementById('l3Form-{{ $service->subcategory->id }}').submit();" >
                                                     Know more <i class="fa fa-chevron-right"></i>
                                                 </a>
                                             </div>

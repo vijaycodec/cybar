@@ -12,9 +12,9 @@ class l3templateController extends Controller
     public function getl3(Request $request)
     {
 
-        $subcategoryId = $request->query('sub_category_id'); // Fetch query string parameter
-        $pageId = $request->query('pageid');
-        $categoryId = $request->query('category_id');
+        $subcategoryId = $request->sub_category_id; // Fetch query string parameter
+        $pageId = $request->pageid;
+        $categoryId = $request->category_id;
 
         // dd($sub_category_id, $pageid, $category_id);
 
@@ -40,7 +40,6 @@ class l3templateController extends Controller
             ]) 
             ->get();
           
-            // dd($l3Categories->toArray());
 
             $contentInfos = $l3Categories->flatMap->contentInfos; // 
 
