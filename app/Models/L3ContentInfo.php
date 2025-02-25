@@ -9,9 +9,13 @@ class L3ContentInfo extends Model
 {
     use HasFactory;
 
-    // Custom relations without FK
-
-
+    protected $fillable = [
+        'page_category_id',
+        'category_id',
+        'sub_category_id',
+        'l3_category_id',
+    ];
+    
     public function l3Category()
     {
         return $this->belongsTo(L3Category::class, 'l3_category_id', 'id');

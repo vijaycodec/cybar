@@ -325,8 +325,7 @@
                                                 @if ($contentInfo->images)
                                                     <div class="col-md-3">
                                                         <div class="template12-img">
-                                                            <img
-                                                                src="{{ asset('uploads/frontend/l3_template/significance/' . $contentInfo->images) }}">
+                                                            <img src="{{ Storage::url('uploads/significance/' . $contentInfo->images) }}" alt="Image">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-9">
@@ -445,8 +444,7 @@
                         @foreach ($l3Categories as $category)
                         @foreach ($category->contentInfos as $contentInfo)
                         @if($contentInfo->program_title)
-                            {!!$contentInfo->program_title  !!}
-                        
+                           <h2>{!!$contentInfo->program_title  !!}</h2> 
                         @endif
                         @endforeach
                         @endforeach
@@ -1131,13 +1129,12 @@
                     <!-- col -->
                     @foreach ($l3Categories as $category)
                         @foreach ($category->contentInfos as $contentInfo)
-                            <!-- Overview Section -->
                             @if ($contentInfo->ceh_description)
                                 <div class="item">
                                     <div class="price-box">
                                         <div class="pri-box-number"><span>{{ $loop->iteration }}</span></div>
                                         <div class="price-box-img"><img
-                                                src="{{ asset('uploads/frontend/l3_template/cehkit/' . $contentInfo->images) }}">
+                                                src="{{ Storage::url('uploads/cehkit/' . $contentInfo->images) }}">
                                         </div>
                                         <div class="price-body">
                                             <div class="price-title">
@@ -1152,15 +1149,12 @@
                                             <div class="price-btn1">
                                                 <a href="#" class="price-btn btn-color1">Inquire Now</a>
                                             </div>
-
-
                                         </div>
                                     </div>
                                 </div>
                             @endif
                         @endforeach
                     @endforeach
-
 
                 </div>
                 {{-- <div id="navigation-count4" class="count-nav-box"></div> --}}
@@ -1783,7 +1777,6 @@
     </div>
 
     <!-- Global Popup for mobile course -features read more (Only One in the Page) End-->
-        <a href="#main-content-body" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
 
 </body>
 {{-- @endsection --}}
