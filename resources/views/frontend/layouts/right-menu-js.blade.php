@@ -32,7 +32,7 @@
             // Smooth scroll to target
             $('html, body').animate({
                 scrollTop: targetPosition
-            }, 500);
+            }, 800);
         }
     });
 
