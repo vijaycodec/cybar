@@ -1898,5 +1898,5 @@
 
     <script type="text/javascript" src="{{ asset('assets/js/l3-check.js') }}"></script>
     <script src="{{ asset('assets/js/slider.js') }}"></script>
+    @include ('frontend.layouts.right-menu-js')
 @endpush
-@include ('frontend.layouts.right-menu-js')
