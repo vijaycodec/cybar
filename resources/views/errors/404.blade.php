@@ -90,7 +90,7 @@
     <p>Oops! The page you are looking for doesn’t exist or has been moved.</p>
     <div class="button-container">
         <a href="javascript:history.back()">Go Back</a>
-        <a href=" {{ url('/home') }}"> Go Home Page</a>
+        <a href=" {{ url('/') }}"> Go Home Page</a>
 
     </div>
 </body>
