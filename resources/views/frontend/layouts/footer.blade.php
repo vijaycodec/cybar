@@ -84,7 +84,12 @@
                 <p>New Delhi House, Barakhamba Road, New Delhi,110001</p>
                 <p>+91 99 | +91 88</p>
                 <p>011 43 | 011 430</p>
-                <p>Email:- info@cybarwind.com</p>
+                <p>Email: <span id="footer_email"></span></p>
+<script>
+    document.getElementById("footer_email").innerHTML = 
+        '<a href="mailto:' + 'info' + '@' + 'cybarwind.com">info[at]cybarwind[dot]com</a>';
+</script>
+
             </div>
             
         </div>
