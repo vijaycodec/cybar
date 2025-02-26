@@ -34,29 +34,31 @@ use App\Http\Controllers\Indexcontroller;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+Route::middleware(['FrameGuard'])->group(function () {
+    Route::get('/', [homeController::class, 'index'])->name('home');
+    Route::get('/services', [servicesController::class, 'getServices'])->name('services');
+    Route::get('/training', [trainingController::class, 'get_training'])->name('training');
+    Route::get('/resources', [resourcesController::class, 'index'])->name('resources');
+    Route::get('/resources-view/{id?}', [resourcesViewController::class, 'view'])->name('resources-view');
+    Route::get('/resources-view-trending/{id?}', [resourcesViewController::class, 'trendingResourceView'])->name('resources-view-trending');
 
-Route::get('/', [homeController::class, 'index'])->name('home');
-Route::get('/services', [servicesController::class, 'getServices'])->name('services');
-Route::get('/training', [trainingController::class, 'get_training'])->name('training');
-Route::get('/resources', [resourcesController::class, 'index'])->name('resources');
-Route::get('/resources-view/{id?}', [resourcesViewController::class, 'view'])->name('resources-view');
-Route::get('/resources-view-trending/{id?}', [resourcesViewController::class, 'trendingResourceView'])->name('resources-view-trending');
+    Route::get('/blog', [blogController::class, 'index'])->name('blogs');
+    Route::get('/blog-view/{id?}', [blogViewController::class, 'view'])->name('blog-view');
+    Route::get('/blog-view-trending/{id?}', [blogViewController::class, 'trendingResourceView'])->name('blog-view-trending');
+    Route::get('/events', [eventController::class, 'index'])->name('events');
+    Route::get('/events-view/{id?}', [eventViewController::class, 'view'])->name('events-view');
 
-Route::get('/blog', [blogController::class, 'index'])->name('blogs');
-Route::get('/blog-view/{id?}', [blogViewController::class, 'view'])->name('blog-view');
-Route::get('/blog-view-trending/{id?}', [blogViewController::class, 'trendingResourceView'])->name('blog-view-trending');
-Route::get('/events', [eventController::class, 'index'])->name('events');
-Route::get('/events-view/{id?}', [eventViewController::class, 'view'])->name('events-view');
+    Route::get('/testimonials', [testimonialsController::class, 'index'])->name('testimonials');
+    Route::get('/career', [careerController::class, 'index'])->name('careers');
+    Route::get('/contact', [contactController::class, 'index'])->name('contact');
+    Route::get('/cn-insight', [cnInsightController::class, 'index'])->name('cn-insight');
+    Route::get('/l3-template', [l3templateController::class, 'getl3'])->name('l3-template');
 
-Route::get('/testimonials', [testimonialsController::class, 'index'])->name('testimonials');
-Route::get('/career', [careerController::class, 'index'])->name('careers');
-Route::get('/contact', [contactController::class, 'index'])->name('contact');
-Route::get('/cn-insight', [cnInsightController::class, 'index'])->name('cn-insight');
-Route::post('/l3-template', [l3templateController::class, 'getl3'])->name('l3-template');
+    Route::get('/login', [loginController::class, 'login'])->name('login');
+    // Route::get('/add-blog-data', [Indexcontroller::class, 'add_blog_data'])->name('add_blog_data');
+    Route::post('/login/user', [loginController::class, 'loginsave'])->name('loginsave');
 
-Route::get('/login', [loginController::class, 'login'])->name('login');
-// Route::get('/add-blog-data', [Indexcontroller::class, 'add_blog_data'])->name('add_blog_data');
-Route::post('/login/user', [loginController::class, 'loginsave'])->name('loginsave');
+});
 
 Route::middleware(['auth','admin','prevent_history'])->group(function () {
 
