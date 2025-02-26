@@ -5,44 +5,31 @@ namespace App\Http\Controllers\frontend;
 use App\Http\Controllers\Controller;
 use App\Models\L3Category;
 use App\Models\L3ContentInfo;
+use App\Repositories\Interfaces\L3CategoryRepositoryInterface;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class l3templateController extends Controller
 {
-    public function getl3(Request $request)
-    {
 
-        $subcategoryId = $request->sub_category_id; // Fetch query string parameter
+    protected $l3CategoryRepository;
+
+    public function __construct(L3CategoryRepositoryInterface $l3CategoryRepository)
+    {
+        $this->l3CategoryRepository = $l3CategoryRepository;
+    }
+
+    public function getL3(Request $request)
+    {
         $pageId = $request->pageid;
         $categoryId = $request->category_id;
+        $subcategoryId = $request->sub_category_id;
 
-        // dd($sub_category_id, $pageid, $category_id);
+        $l3Categories = $this->l3CategoryRepository->getL3Categories($pageId, $categoryId, $subcategoryId);
 
-        $l3Categories = L3Category::whereHas('contentInfos', function ($query) use ($pageId, $categoryId, $subcategoryId) {
-            $query->where('page_category_id', $pageId)
-                ->where('category_id', $categoryId)
-                ->where('sub_category_id', $subcategoryId);
-        })
-            ->with([
-                'contentInfos' => function ($query) {
-                    $query->with('overviewSubDescriptions'); // Ensure it loads sub descriptions
-                },
-                'contentInfos.significanceCategory',
-                'contentInfos.significance_title',
-                'contentInfos.coursefeatureCategory',
-                'contentInfos.coursefeature_title',
-                'contentInfos.cyberwindCategory',
-                'contentInfos.industryCategory',
-                'contentInfos.blogCategory',
-                'contentInfos.testimonials', // Fetch class style
-                'contentInfos.faqCategory.faqSubCategory',
-                'contentInfos.programCategory.programSubCategories',
-            ]) 
-            ->get();
-          
+        $contentInfos = $l3Categories->flatMap->contentInfos;
 
-            $contentInfos = $l3Categories->flatMap->contentInfos; // 
-
- return view('frontend.l3-template', compact('l3Categories','contentInfos'));
+        return view('frontend.l3-template', compact('l3Categories', 'contentInfos'));
     }
+
 }
