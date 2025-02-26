@@ -11,4 +11,6 @@ interface L3ContentRepositoryInterface
 
     public function getL3Categories(Request $request);
 
+    public function store(Request $request);
+
 }
