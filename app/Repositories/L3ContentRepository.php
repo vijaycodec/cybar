@@ -254,7 +254,7 @@ class L3ContentRepository implements L3ContentRepositoryInterface
                    // Generate unique filename 
                    $file_name = md5(uniqid()) . '.' . $image->getClientOriginalExtension();
                    // Store file securely 
-                   $path = $image->storeAs("uploads/frontend/l3_template/{$folder}", $file_name);
+                   $path = $image->storeAs("uploads/frontend/l3_template/{$folder}", $file_name,'public');
                    return $file_name;
                }
                return null;

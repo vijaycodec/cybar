@@ -338,7 +338,9 @@ if (isMobile()) {
     }
 
     // Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
+    if(document.getElementById("defaultOpen")){
+        document.getElementById("defaultOpen").click();
+    }
 
     // bottom to top scrollbar
     // var btn = $('.codec-top a');
@@ -922,9 +924,10 @@ if (isMobile()) {
             });
         });
         // Target the menu element and observe it
-        const menu2 = $("#why-cyberwind")[0]; // Convert jQuery object to DOM element for observer
-        observer2.observe(menu2);
-        
+        const menu2 = $("#why-cyberwind")[0];
+        if(menu2){
+            observer2.observe(menu2);
+        } // Convert jQuery object to DOM element for observer
     
         // Create an Intersection Observer using jQuery
         const observer3 = new IntersectionObserver((entries) => {
@@ -937,7 +940,9 @@ if (isMobile()) {
     
         // Target the menu element and observe it
         const menu3 = $("#faqs_mob")[0]; // Convert jQuery object to DOM element for observer
-        observer3.observe(menu3);
+        if(menu3){
+            observer3.observe(menu3);
+        }
 
     });
 
@@ -1647,8 +1652,9 @@ if (isMobile()) {
         });
         // Target the menu element
         const menu = document.querySelector('#tabmenu1');
-        observer.observe(menu); // Start observing the menu
-
+        if(menu){
+            observer.observe(menu); // Start observing the menu
+        }
         // Reset course features menu
         function resetTabs2() {
             // Remove 'active' class from all tabs and content
@@ -1682,8 +1688,9 @@ if (isMobile()) {
         });
         // Target the menu element
         const menu2 = document.querySelector('#tabmenu2');
-        observer2.observe(menu2); // Start observing the menu
-
+        if(menu2){
+            observer2.observe(menu2); // Start observing the menu
+        }
 
         // Reset Program menu
         function resetTabs4() {
@@ -1720,8 +1727,9 @@ if (isMobile()) {
 
         // Target the menu element
         const menu4 = document.querySelector('#program_tab1');
-        observer4.observe(menu4); // Start observing the menu
-
+        if(menu4){
+            observer4.observe(menu4); // Start observing the menu
+        }
         // Reset smaller menus when navigating to other tabs
         $('#program_tab1 a[data-toggle="tab"]').on('click', function () {
             resetTabs4(); // Reset all menus when a tab is clicked
@@ -1756,8 +1764,9 @@ if (isMobile()) {
 
         // Target the menu element
         const menu5 = document.querySelector('#program_tab2');
-        observer5.observe(menu5); // Start observing the menu
-
+        if(menu5){
+            observer5.observe(menu5); // Start observing the menu
+        }
         // Reset smaller menus when navigating to other tabs
         $('#program_tab2 a[data-toggle="tab"]').on('click', function () {
             resetTabs5(); // Reset all menus when a tab is clicked
@@ -1807,8 +1816,9 @@ if (isMobile()) {
 
         // Target the menu element
         const menu3 = document.querySelector('.why-chossetab');
-        observer3.observe(menu3); // Start observing the menu
-
+        if(menu3){
+            observer3.observe(menu3); // Start observing the menu
+        }
     });
 
 
