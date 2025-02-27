@@ -262,6 +262,10 @@
                             @endforeach
                         </select>
                     </div>
+                    <div class="l3-form form-group sub_category">
+                        <div class="body-title">Faqs Title :<span class="tf-color-1">*</span></div>
+                        <textarea class="summernote" name="faq_title">{{ old('title') }}</textarea>
+                     </div>
                     <div class="name l3-form sub_category" id="">
                         <div class="body-title">Sub Category Name <span class="tf-color-1">*</span></div>
                         <input class="flex-grow" type="text" placeholder="Sub Category Name" name="subcategory" tabindex="0"
@@ -486,7 +490,7 @@
                     $('#faqs_form').show();
                     // $('.faqs_category').show();
                     $('.sub_category').show();
-                    // $('.faqs_title').show();
+                    $('.faq_title').show();
                     $('.faqs_desc').show();
                     $('#l3_category_type').val('faqs'); // Set hidden input to 'faqs
                 } else if (selectedL3Category === "blog") {

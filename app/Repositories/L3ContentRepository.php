@@ -15,7 +15,9 @@ use Illuminate\Http\Request;
 use App\Models\L3OverviewSubDescription;
 use App\Models\SignificanceTitle;
 use App\Models\CourseFeatureTitle;
+use App\Models\CyberwindTitle;
 use App\Models\FaqSubCategory;
+use App\Models\IndustryTitle;
 use App\Models\TestimonialDetails;
 use App\Models\ProgramSubCategory;
 use App\Repositories\Interfaces\L3ContentRepositoryInterface;
@@ -199,6 +201,7 @@ class L3ContentRepository implements L3ContentRepositoryInterface
                    $faqSubCategory = new FaqSubCategory();
                    $faqSubCategory->faq_category_id  = $request->faq_category_id;  // Linking the significance with the l3_content_info
                    $faqSubCategory->name  = $request->subcategory;  // Linking the significance with the l3_content_info
+                   $faqSubCategory->title  = $request->faq_title;  // Linking the significance with the l3_content_info
                    $faqSubCategory->description = $request->subcategory_description;  // Store significance title
                    $faqSubCategory->save();
                }
@@ -215,6 +218,44 @@ class L3ContentRepository implements L3ContentRepositoryInterface
                    $testimonials->images = $this->uploadImage($request, 'testimonials');
                    $testimonials->save();
                }
+
+               if ($request->l3_category_type == 'industries') {
+                // dd('ok');
+                // Fetch the first record from the SignificanceTitle table
+                $significance = IndustryTitle::first();
+    
+                if ($significance) {
+                    // If a record exists, update it
+                    $significance->l3_content_info_id = $l3ContentInfo->id; // Update the linked content info
+                    $significance->title = $request->industries_title; // Update the title
+                    $significance->save(); // Save changes
+                } else {
+                    // If no record exists, create a new one
+                    $significance = new IndustryTitle();
+                    $significance->l3_content_info_id = $l3ContentInfo->id; // Set the linked content info
+                    $significance->title = $request->industries_title; // Set the title
+                    $significance->save(); // Save new record
+                }
+            }
+
+            if ($request->l3_category_type == 'cyberwind') {
+                // dd('ok');
+                // Fetch the first record from the SignificanceTitle table
+                $significance = CyberwindTitle::first();
+    
+                if ($significance) {
+                    // If a record exists, update it
+                    $significance->l3_content_info_id = $l3ContentInfo->id; // Update the linked content info
+                    $significance->title = $request->cyberwind_title; // Update the title
+                    $significance->save(); // Save changes
+                } else {
+                    // If no record exists, create a new one
+                    $significance = new CyberwindTitle();
+                    $significance->l3_content_info_id = $l3ContentInfo->id; // Set the linked content info
+                    $significance->title = $request->cyberwind_title; // Set the title
+                    $significance->save(); // Save new record
+                }
+            }
        
                return redirect()->route('l3-content.create')->with('success', 'Form data saved successfully!');
            }

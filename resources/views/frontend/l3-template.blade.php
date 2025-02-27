@@ -1176,10 +1176,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 cn-title ceh-title">
-                    <h2>Cybersecurity Incidents Are Exploding.<br>So are Cyber Jobs !</h2>
-                    <p>Certified Ethical Hacker (C|EH) - Build Your Career with the Most in-Demand Ethical Hacking
-                        Certification
-                        Program in the World</p>
+                    @foreach ($l3Categories as $category)
+                        @foreach ($category->contentInfos as $contentInfo)
+                            @if ($contentInfo->incident_title)
+                                <h2>{!! $contentInfo->incident_title !!}</h2>
+                            @endif
+                        @endforeach
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -1235,8 +1238,14 @@
                 <div class="row">
                     <div class="col-md-12 cn-title ceh-title">
                         <!-- <h1>Industries we cater</h1> -->
-                        <h2> Industries We empower through our commitment towards growth
-                        </h2>
+                        @foreach ($l3Categories as $category)
+                        {{-- <li class="active"><a data-toggle="tab" href="#ic">BANKING & FINANCE</a></li> --}}
+                            @foreach ($category->contentInfos as $contentInfo)
+                                @if ($contentInfo->industry_title)
+                                    <h2>{!! $contentInfo->industry_title->title !!}</h2>
+                                @endif
+                            @endforeach
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -1301,11 +1310,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 cn-title">
-                        <h2>What next for the essential eight?</h2>
-                        <p>The technology – still been unexplored meet different challenges. The challenges act as the
-                            force
-                            that
-                            obligates us to evolve</p>
+                        @foreach ($l3Categories as $category)
+                            
+                            @foreach ($category->contentInfos as $contentInfo)
+                                @if ($contentInfo->cyberwind_title)
+                                    <h2>{!! $contentInfo->cyberwind_title->title !!}</h2>
+                                @endif
+                            @endforeach
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -1468,7 +1480,15 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="tsto-title">
-                            <h2><i class="fa  fa-commenting"></i>What our customers have to say about cybarwind</h2>
+                            @foreach ($l3Categories as $category)
+                                @foreach ($category->contentInfos as $contentInfo)
+                                    @foreach ($contentInfo->testimonials as $index => $testimonial)
+                                        @if ($testimonial->testimonial_title)
+                                            <h2><i class="fa  fa-commenting"></i>{!! $testimonial->testimonial_title !!}</h2>
+                                        @endif
+                                    @endforeach
+                                @endforeach
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -1565,14 +1585,18 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 cn-title ceh-title">
-                        <h2>Is This C|EH Course For Me?</h2>
-                        <p>We have helped over 250,000 people answer this question over the past 20 years and we are
-                            excited
-                            to help
-                            you with this big decision! Choosing the right credential can seem like a difficult task,
-                            here
-                            are some
-                            things you should consider</p>
+                        @foreach ($l3Categories as $category)
+                            @foreach ($category->contentInfos as $contentInfo)
+                                @if ($contentInfo->faqCategory)
+                                    @foreach ($contentInfo->faqCategory->faqSubCategory as $faqSubCategory)
+                                        @if ($faqSubCategory->title)
+                                            <h2>{!! $faqSubCategory->title !!}</h2>
+                                            @php break 2; @endphp
+                                        @endif
+                                    @endforeach
+                                @endif
+                            @endforeach
+                        @endforeach
                     </div>
                 </div>
             </div>
