@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Anhskohbo\NoCaptcha\Facades\NoCaptcha;
+use App\Repositories\CategoryRepository;
+use App\Repositories\Interfaces\CategoryRepositoryInterface;
 use App\Repositories\Interfaces\L3CategoryRepositoryInterface;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Validator;
@@ -17,15 +19,9 @@ class AppServiceProvider extends ServiceProvider
      */
    public function register(): void
 {
-    $this->app->bind(
-        L3CategoryRepositoryInterface::class,
-        L3CategoryRepository::class
-    );
-
-    $this->app->bind(
-        L3ContentRepositoryInterface::class,
-        L3ContentRepository::class
-    );
+    $this->app->bind(L3CategoryRepositoryInterface::class,L3CategoryRepository::class);
+    $this->app->bind(L3ContentRepositoryInterface::class,L3ContentRepository::class);
+    $this->app->bind(CategoryRepositoryInterface::class,CategoryRepository::class);
 }
 
     /**
