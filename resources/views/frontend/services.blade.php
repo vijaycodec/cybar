@@ -70,9 +70,9 @@
                                                         <div class="cn-main-content">
                                                             <h3>{{ $service->subcategory->sub_category }}</h3>
                                                             <a
-                                                                href="{{ route('l3-template', ['sub_category_id' => $service->subcategory->id, 'pageid' => $page_id, 'category_id' => $category->id]) }}">
-                                                                Know more <i class="fa fa-chevron-right"></i>
-                                                            </a>
+                                                            href="{{ route('l3-template', ['sb' => $service->subcategory->id, 'pg' => $page_id, 'ct' => $category->id]) }}">
+                                                            Know more <i class="fa fa-chevron-right"></i>
+                                                        </a>
                                                          
                                                         </div>
                                                     </div>
@@ -98,7 +98,7 @@
                                                                     <div class="cn-main-content">
                                                                         <h3>{{ $service->subcategory->sub_category }}</h3>
                                                                         <a
-                                                                            href="{{ route('l3-template', ['sub_category_id' => $service->subcategory->id, 'pageid' => $page_id, 'category_id' => $category->id]) }}">
+                                                                            href="{{ route('l3-template', ['sb' => $service->subcategory->id, 'pg' => $page_id, 'ct' => $category->id]) }}">
                                                                             Know more <i class="fa fa-chevron-right"></i>
                                                                         </a>
                                                                         
@@ -152,10 +152,9 @@
                                             </div>
                                             <div class="cn-main-content">
                                                 <h3>{{ $service->subcategory->sub_category }}</h3>
-                                                <a href="{{ route('l3-template', ['sub_category_id' => $service->subcategory->id, 'pageid' => $page_id, 'category_id' => $category->id]) }}">
-                                                    Know more <i class="fa fa-chevron-right"></i>
-                                                </a>
-                                               
+                                                <a href="{{ route('l3-template', ['sb' => $service->subcategory->id, 'pg' => $page_id, 'ct' => $category->id]) }}">
+                                                                            Know more <i class="fa fa-chevron-right"></i>
+                                                 </a>
                                             </div>
                                         </div>
                                     </div>

@@ -5,6 +5,9 @@ namespace App\Http\Controllers\frontend;
 use App\Http\Controllers\Controller;
 use App\Repositories\Interfaces\L3CategoryRepositoryInterface;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use Exception;
+
 
 class l3templateController extends Controller
 {
@@ -18,14 +21,22 @@ class l3templateController extends Controller
 
     public function getL3(Request $request)
     {
-        $pageId = $request->query('pageid');
-        $categoryId = $request->query('category_id');
-        $subcategoryId = $request->query('sub_category_id');
+        try {
+            $pageId = $request->query('pg');
+            $categoryId = $request->query('ct');
+            $subcategoryId = $request->query('sb');
 
-        $l3Categories = $this->l3CategoryRepository->getL3Categories($pageId, $categoryId, $subcategoryId);
+            $l3Categories = $this->l3CategoryRepository->getL3Categories($pageId, $categoryId, $subcategoryId);
 
-        $contentInfos = $l3Categories->flatMap->contentInfos;
+            if ($l3Categories->isEmpty()) {
+                abort(404, 'No L3 categories found.');
+            }
+            $contentInfos = $l3Categories->flatMap->contentInfos;
 
-        return view('frontend.l3-template', compact('l3Categories', 'contentInfos'));
+            return view('frontend.l3-template', compact('l3Categories', 'contentInfos'));
+        } catch (Exception $e) {
+            Log::error('Error in getL3: ' . $e->getMessage());
+            return back()->with('error', 'Something went wrong. Please try again later.');
+        }
     }
 }
