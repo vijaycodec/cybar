@@ -36,10 +36,19 @@
                 <form id="category-form" class="form-new-brand form-style-1">
                     @csrf
                     @method('PUT') <!-- Using PUT method for updating -->
+                    <a class="tf-button style-1 w208" style="padding-left: 75px;"
+                        href=" {{ route('resources-category.list') }}">Back</a>
                     <fieldset class="name">
                         <div class="body-title mb-10">Category Name <span class="tf-color-1">*</span></div>
                         <input class="mb-10" type="text" placeholder="Enter Category name" name="name"
                             id="category-name" tabindex="0" value="{{ $category->name }}">
+                        <p id="name-error" class="tf-color-1 error-text"></p> <!-- Error Below Input -->
+                    </fieldset>
+
+                    <fieldset class="name">
+                        <div class="body-title mb-10">Category Type <span class="tf-color-1">*</span></div>
+                        <input class="mb-10" type="text" placeholder="Enter Category name" name="category_type"
+                            id="category-name" tabindex="0" value="{{ $category->category_type }}">
                         <p id="name-error" class="tf-color-1 error-text"></p> <!-- Error Below Input -->
                     </fieldset>
 

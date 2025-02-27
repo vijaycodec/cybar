@@ -40,6 +40,11 @@
                         <input class="flex-grow" type="text" placeholder="Category Name" name="name" tabindex="0"
                             value="{{ old('name') }}" aria-required="true" required="">
                     </fieldset>
+                    <fieldset class="name">
+                        <div class="body-title">Category Type <span class="tf-color-1">*</span></div>
+                        <input class="flex-grow" type="text" placeholder="Category Type" name="category_type" tabindex="0"
+                            value="{{ old('category_type') }}" aria-required="true" required="">
+                    </fieldset>
 
                     <fieldset class="name">
                         <div class="body-title">Category Title <span class="tf-color-1">*</span></div>
