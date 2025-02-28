@@ -10,6 +10,12 @@ class OurServices extends Model
 
     use HasFactory;
 
+    protected $fillable = [
+        'category_id', 
+        'sub_category_id',
+        'description', // Include all the columns you want to allow
+        ];
+
     public function course_category()
     {
         return $this->belongsTo(CourseCategory::class, 'category_id');
