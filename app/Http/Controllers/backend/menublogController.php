@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Illuminate\Http\Request;
 //use App\Models\Category;
-use App\Models\MenuBlogCategory;
 use App\Models\MenuBlog;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Validator;
@@ -101,7 +100,6 @@ class menublogController extends Controller
     }
    
 
-    
     public function edit($id)
     {
         $all_categories = Category::where('category_type', 'blog')->get();

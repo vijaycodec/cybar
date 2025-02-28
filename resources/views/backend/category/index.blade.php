@@ -80,11 +80,9 @@
                                                     </div>
                                                 </a>
                                                 <button type="button" class="delete" data-id="{{ $category->id }}">
-                                                    {{-- <a href="{{ route('resources-category.destroy', $category->id) }}"> --}}
                                                     <div class="item text-danger">
                                                         <i class="icon-trash-2"></i>
                                                     </div>
-                                                    {{-- </a> --}}
                                                 </button>
                                             </div>
                                         </td>
@@ -106,13 +104,10 @@
                 
                 <div class="divider"></div>
                 <div class="flex items-center justify-between flex-wrap gap10 wgp-pagination">
-
-
                 </div>
             </div>
         </div>
     </div>
-
 
     <!-- Modal Structure -->
     <div class="modal fade" id="CategoryModal" tabindex="-1" aria-labelledby="CategoryModalLabel" aria-hidden="true">
@@ -151,7 +146,7 @@
         $(document).ready(function() {
             // Handle delete button click
             $(document).on('click', '.delete', function() {
-                var brandId = $(this).data('id'); // Get ID from data attribute
+                var categoryId = $(this).data('id'); // Get ID from data attribute
                 Swal.fire({
                     title: 'Are you sure?',
                     text: "You won't be able to revert this!",
@@ -166,11 +161,9 @@
                         $.ajax({
                             url: "{{ route('resources-category.destroy', ':id') }}"
                                 .replace(':id',
-                                    brandId),
-                            method: "DELETE",
-                            data: {
-                                _token: "{{ csrf_token() }}" // CSRF Token
-                            },
+                                categoryId),
+                                method: "POST",                            
+                                data: { _token: "{{ csrf_token() }}", _method:"DELETE"},
                             success: function(response) {
                                 Swal.fire(
                                     'Deleted!',
