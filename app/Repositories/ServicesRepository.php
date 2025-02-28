@@ -49,7 +49,7 @@ class ServicesRepository implements ServicesRepositoryInterface
         // Handle image update
         if ($request->hasFile('image')) {
             if ($service->images) {
-                $this->uploadService->uploadService->deleteImage($service->images,'services' );
+                $this->uploadService->deleteImage($service->images,'services');
             }
             $service->images = $this->uploadService->uploadImage($request, 'services');
         }
@@ -57,7 +57,6 @@ class ServicesRepository implements ServicesRepositoryInterface
         $service->save();
         return $service;
     }
-
 
     public function delete($id)
     {
