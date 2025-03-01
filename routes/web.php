@@ -28,8 +28,8 @@ use App\Http\Controllers\backend\subcategoryController;
 use App\Http\Controllers\backend\corporateController;
 use App\Http\Controllers\backend\menublogController;
 use App\Http\Controllers\backend\menueventController;
+use App\Http\Controllers\backend\menutestimonialController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Indexcontroller;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -170,6 +170,15 @@ Route::middleware(['auth','admin','prevent_history'])->group(function () {
     route::get('/menuevent/edit/{id}', [menueventController::class, 'edit'])->name('menuevent.edit');
     Route::put('menuevent/update/{id}', [menueventController::class, 'update'])->name('menuevent.update');
     Route::delete('menuevent/delete/{id}', [menueventController::class, 'destroy'])->name('menuevent.destroy');
+
+    // Testimonials Routes
+    route::get('/menutestimonial/list', [menutestimonialController::class, 'index'])->name('menutestimonial.list');
+    route::get('/menutestimonial/create', [menutestimonialController::class, 'create'])->name('menutestimonial.create');
+    route::post('/menutestimonial/store', [menutestimonialController::class, 'store'])->name('menutestimonial.store');
+    Route::get('/menutestimonial/show/{id}', [menutestimonialController::class, 'show'])->name('menutestimonial.show');
+    route::get('/menutestimonial/edit/{id}', [menutestimonialController::class, 'edit'])->name('menutestimonial.edit');
+    Route::put('menutestimonial/update/{id}', [menutestimonialController::class, 'update'])->name('menutestimonial.update');
+    Route::delete('menutestimonial/delete/{id}', [menutestimonialController::class, 'destroy'])->name('menutestimonial.destroy');
 
 });
 

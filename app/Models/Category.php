@@ -26,4 +26,10 @@ class Category extends Model
         return $this->hasMany(MenuEvent::class);
 
     }
+
+    public function testimonials()
+    {
+        return $this->hasMany(MenuTestimonial::class);
+
+    }
 }

@@ -45,7 +45,7 @@
    </head>
    <body class="with-zoom1" id="training-page">
       <!-- Header start -->
-         @include('frontend.layouts.training-header')
+         {{-- @include('frontend.layouts.training-header') --}}
       <!-- Header end -->
       <!-- breadcrumbs -->
       <!--<div class="breadcrumbs">-->

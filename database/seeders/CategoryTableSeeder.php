@@ -196,6 +196,68 @@ class CategoryTableSeeder extends Seeder
                 'updated_at'        => now(),
             ],
             // blog categories ends here
+
+            // Testimonialscategories start here
+
+            [
+                'id'                => 22,
+                'category_type'     => 'testimonials',
+                'name'              => 'Professional Services testo',
+                'title'             => 'The most effective learning system. World’s highest course completion rate.',
+                'created_at'        => now(),
+                'updated_at'        => now(),
+            ],
+            [
+                'id'                => 23,
+                'category_type'     => 'testimonials',
+                'name'              => 'Security Operations testo',
+                'title'             => 'The most effective learning system. World’s highest course completion rate.',
+                'created_at'        => now(),
+                'updated_at'        => now(),
+            ],
+            [
+                'id'                => 24,
+                'category_type'     => 'testimonials',
+                'name'              => 'Application Security testo',
+                'title'             => 'The most effective learning system. World’s highest course completion rate.',
+                'created_at'        => now(),
+                'updated_at'        => now(),
+            ],
+
+            [
+                'id'                => 25,
+                'category_type'     => 'testimonials',
+                'name'              => 'Web Security testo',
+                'title'             => 'The most effective learning system. World’s highest course completion rate.',
+                'created_at'        => now(),
+                'updated_at'        => now(),
+            ],
+            [
+                'id'                => 26,
+                'category_type'     => 'testimonials',
+                'name'              => 'VAPT testo',
+                'title'             => 'The most effective learning system. World’s highest course completion rate.',
+                'created_at'        => now(),
+                'updated_at'        => now(),
+            ],
+            [
+                'id'                => 27,
+                'category_type'     => 'testimonials testo',
+                'name'              => 'Career',
+                'title'             => 'The most effective learning system. World’s highest course completion rate.',
+                'created_at'        => now(),
+                'updated_at'        => now(),
+            ],
+           
+            [
+                'id'                => 28,
+                'category_type'     => 'testimonials testo',
+                'name'              => 'Data Science',
+                'title'             => 'The most effective learning system. World’s highest course completion rate.',
+                'created_at'        => now(),
+                'updated_at'        => now(),
+            ],
+            // Testimonials categories ends here
         ];
             Category::insert($users);
     }
