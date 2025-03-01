@@ -663,7 +663,19 @@ color: #222;
     background: #ffc000 !important;
 }
 .tbg3{
-    background: #7b7b7b !important;
+    background: #d40f0f !important;
+}
+.tbg4{
+    background: #69ca28 !important;
+}
+.tbg5{
+    background: #6e5dcc !important;
+}
+.tbg6{
+    background: #1ddafc !important;
+}
+.tbg7{
+    background: #fced1d !important;
 }
 .event-title h2 {
     font-size: 22px;

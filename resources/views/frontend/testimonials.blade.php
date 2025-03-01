@@ -9,7 +9,7 @@
         </a>
         <!-- Header start -->
 
-        @include('frontend.layouts.testo-header')
+        @include('frontend.layouts.testo-header',['categories' => $categories])
         <!-- banner start -->
         <section class="sec_ban" id="resources-banner">
             <div class="home-ban">
@@ -55,11 +55,11 @@
                                                         data-name="{{ $testimonial->user_name }}"
                                                         data-designation="{{ $testimonial->designation }}"
                                                         data-description="{{ $testimonial->testimonial_description }}"
-                                                        data-image="{{ Storage::url('uploads/backend/testimonial/' . $testimonial->images) }}">
+                                                        data-image="{{ asset('storage/uploads/backend/testimonial/' . $testimonial->images)}}">
                                                         <div class="row">
                                                             <div class="col-md-4">
                                                                 <div class="ceh-testo-image">
-                                                                  <img src="{{ Storage::url('uploads/backend/testimonial/' . $testimonial->images)}}" alt="blog Image" width="100">
+                                                                  <img src="{{ asset('storage/uploads/backend/testimonial/' . $testimonial->images)}}" alt="blog Image" width="100">
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-8">
