@@ -20,8 +20,8 @@
                 <div class="dark_cta"></div>
                 <video autoplay="" loop="" muted="" playsinline="" class="row full-banner banner center-mk-vid"
                     poster="../content/dam/www/marketing/images/banners/solutions-insights-grow-2.jpg">
-                    <source src="asset('{{asset('assets/video/solutions-webbg-grow-v1-small.mp4')}}')" type="video/mp4">
-                    <source src="asset('{{asset('assets/video/solutions-webbg-grow-v1-small.mp4')}}')" type="video/webm">
+                    <source src="{{ asset('assets/video/solutions-webbg-grow-v1-small.mp4') }}" type="video/mp4">
+                    {{-- <source src="{{ asset('assets/video/solutions-webbg-grow-v1-small.mp4') }}" type="video/webm"> --}}
                     Your browser does not support the video tag.
                 </video>
                 <div class="video-content container">
