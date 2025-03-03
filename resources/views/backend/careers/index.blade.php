@@ -42,6 +42,7 @@
                                 <th> Sub Category Name</th>
                                 <th>Location</th>
                                 <th>Educational Background</th>
+                                <th>Image</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -54,6 +55,15 @@
                                         <td>{{ $career->subcategory ?? 'N/A' }}</td> 
                                         <td>{{ $career->location ?? 'N/A' }}</td>  
                                         <td>{{ $career->educational_background ?? 'N/A' }}</td> 
+                                        <td>
+                                            @if ($career->images)
+                                                <img src="{{ asset('storage/uploads/backend/career/' . $career->images) }}"
+                                                    alt="Career Image" width="100">
+                                            @else
+                                                <span>No image available</span>
+                                            @endif
+                                        </td>
+                                       
                                         <td>
                                             <div class="list-icon-function">
                                                 <button type="button" class="show" data-id="{{ $career->id }}">

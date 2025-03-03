@@ -51,6 +51,34 @@
                         <textarea class="flex-grow" name="educational_background" aria-required="true" required="">{{ old('educational_background') }}</textarea>
                     </div>
 
+                    <fieldset>
+                        <div class="body-title">Upload thumbnails images <span class="tf-color-1">*</span></div>
+                        <div class="upload-image flex-grow">
+                            <!-- Image preview container -->
+                            <div class="item" id="imgpreview" style="display:none; text-align: center;">
+                                <img src="" class="effect8" alt="Preview Image" style="max-width: 50%; height: auto; border-radius: 5px;">
+                                <button type="button" id="deleteImage" class="delete-btn">Delete</button>
+                            </div>
+                            <div id="upload-file" class="item up-load">
+                                <label class="uploadfile" for="myFile">
+                                    <span class="icon"><i class="icon-upload-cloud"></i></span>
+                                    <span class="body-text">Drop your images here or select <span class="tf-color">click to browse</span></span>
+                                    <input type="file" id="myFile" name="image" accept="image/*">
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <label><strong> Short Description :</strong></label>
+                        <textarea class="summernote" name="short_desc">{{ old('short_desc') }}</textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label><strong>Description :</strong></label>
+                        <textarea class="summernote" name="description">{{ old('description') }}</textarea>
+                    </div>
+
                     <div class="bot">
                         <div></div>
                         <button class="tf-button w208" type="submit">Save</button>
