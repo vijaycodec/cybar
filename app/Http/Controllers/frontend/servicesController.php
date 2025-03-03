@@ -3,28 +3,29 @@
 namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
-use App\Models\CourseCategory;
-use App\Models\OurServices;
-use App\Models\SubCategory;
-use Illuminate\Http\Request;
+
+use App\Repositories\Interfaces\ServicesRepositoryInterface;
 
 class servicesController extends Controller
 {
+
+    protected $servicesRepository;
+
+    public function __construct(ServicesRepositoryInterface $servicesRepository)
+    {
+        $this->servicesRepository = $servicesRepository;
+    }
+
     public function getServices()
     {
-             $page_id=1;
+        $page_id = 1;
 
-             $services = OurServices::with('course_category','subcategory')->get();
-                          $groupedServices = $services->groupBy('category_id');
+        $services = $this->servicesRepository->getAllServices();
+        $groupedServices = $this->servicesRepository->getGroupedServices();
+        $categories = $this->servicesRepository->getCategoriesByPage($page_id);
 
-
-             $categories = CourseCategory::with('services')
-             
-             ->where('page_category', $page_id)
-             ->get();
-
-            return view('frontend.services', compact('categories','services','page_id','groupedServices'));
-        }
+        return view('frontend.services', compact('categories', 'services', 'page_id', 'groupedServices'));
+    }
 
     }
 

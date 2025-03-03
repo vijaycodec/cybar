@@ -1,5 +1,7 @@
 <?php
 namespace App\Repositories;
+
+use App\Models\Category;
 use App\Repositories\Interfaces\TestimonialRepositoryInterface;
 use App\Models\MenuTestimonial;
 use App\Repositories\Interfaces\UploadServiceInterface;
@@ -73,5 +75,18 @@ class TestimonialRepository implements TestimonialRepositoryInterface
     
         $testimonial->delete();
         return true;
+    }
+
+
+    //Frontend methods for testimonials 
+
+    public function getAllCategories()
+    {
+        return Category::with('testimonials')->where('category_type', 'testimonials')->get();
+    }
+
+    public function getTrendingCategories()
+    {
+        return Category::where('category_type', 'testimonials')->latest()->take(10)->get();
     }
 }

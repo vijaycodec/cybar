@@ -202,6 +202,30 @@
                                     <a href="javascript:void(0);" class="menu-item-button">
                                         <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
                                                 style="height:18px"></div>
+                                        <div class="text">Careers</div>
+                                    </a>
+            
+                                    <ul class="sub-menu">
+                                        <li class="sub-menu-item">
+                                            <a href="{{ route('career.list') }}" class="">
+                                                <div class="text"> Careers List</div>
+                                            </a>
+                                        </li>
+            
+            
+                                        <li class="sub-menu-item">
+                                            <a href="{{ route('career.create') }}" class="">
+                                                <div class="text">Add Careers</div>
+                                            </a>
+                                        </li>
+            
+                                    </ul>
+                                </li>
+
+                                <li class="menu-item has-children">
+                                    <a href="javascript:void(0);" class="menu-item-button">
+                                        <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
+                                                style="height:18px"></div>
                                         <div class="text">Course Categories</div>
                                     </a>
             

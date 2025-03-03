@@ -3,8 +3,12 @@
 namespace App\Providers;
 
 use Anhskohbo\NoCaptcha\Facades\NoCaptcha;
+use App\Repositories\CareerRepository;
 use App\Repositories\CategoryRepository;
+use App\Repositories\CorporateTrainingRepository;
+use App\Repositories\Interfaces\CareerRepositoryInterface;
 use App\Repositories\Interfaces\CategoryRepositoryInterface;
+use App\Repositories\Interfaces\CorporateTrainingRepositoryInterface;
 use App\Repositories\Interfaces\L3CategoryRepositoryInterface;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Validator;
@@ -31,8 +35,10 @@ class AppServiceProvider extends ServiceProvider
     $this->app->bind(L3ContentRepositoryInterface::class,L3ContentRepository::class);
     $this->app->bind(CategoryRepositoryInterface::class,CategoryRepository::class);
     $this->app->bind(ServicesRepositoryInterface::class,ServicesRepository::class);
+    $this->app->bind(CorporateTrainingRepositoryInterface::class,CorporateTrainingRepository::class);
     $this->app->bind(MenuBlogRepositoryInterface::class,MenuBlogRepository::class);
     $this->app->bind(TestimonialRepositoryInterface::class,TestimonialRepository::class);
+    $this->app->bind(CareerRepositoryInterface::class,CareerRepository::class);
       // Bind the upload service interface to its implementation category Repository
     $this->app->bind(UploadServiceInterface::class,ImageService::class);  // comman for image upload ,delete service
 }

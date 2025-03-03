@@ -1,5 +1,7 @@
 <?php
 namespace App\Repositories;
+
+use App\Models\CourseCategory;
 use App\Repositories\Interfaces\ServicesRepositoryInterface;
 use App\Models\OurServices;
 use App\Repositories\Interfaces\UploadServiceInterface;
@@ -69,5 +71,23 @@ class ServicesRepository implements ServicesRepositoryInterface
     
         $category->delete();
         return true;
+    }
+
+
+    //frontend services Repository 
+
+    public function getAllServices()
+    {
+        return OurServices::with('course_category', 'subcategory')->get();
+    }
+
+    public function getGroupedServices()
+    {
+        return $this->getAllServices()->groupBy('category_id');
+    }
+
+    public function getCategoriesByPage($pageId)
+    {
+        return CourseCategory::with('services')->where('page_category', $pageId)->get();
     }
 }

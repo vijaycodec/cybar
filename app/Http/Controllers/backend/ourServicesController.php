@@ -53,7 +53,8 @@ class OurServicesController extends Controller
     public function edit($id)
     {
         $service = $this->servicesRepository->getById($id);
-        $categories = CourseCategory::all();
+        $categories = CourseCategory::where('page_category',1)->get();
+        
         $subCategories = SubCategory::where('category_id', $service->category_id)->get();
 
         return view('backend.our-services.edit', compact('service', 'categories', 'subCategories'));

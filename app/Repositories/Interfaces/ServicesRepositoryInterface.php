@@ -2,8 +2,6 @@
 
 namespace App\Repositories\Interfaces;
 
-use Illuminate\Http\Request;
-
 interface ServicesRepositoryInterface
 {
     public function getAll();
@@ -11,6 +9,11 @@ interface ServicesRepositoryInterface
     public function create(array $data , $request);
     public function update($id, array $data, $request);
     public function delete($id);
+
+    //Frontend interface implementation
+    public function getAllServices();
+    public function getGroupedServices();
+    public function getCategoriesByPage($pageId);
 }
 
 

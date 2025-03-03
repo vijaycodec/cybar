@@ -242,8 +242,8 @@ class CategoryTableSeeder extends Seeder
             ],
             [
                 'id'                => 27,
-                'category_type'     => 'testimonials testo',
-                'name'              => 'Career',
+                'category_type'     => 'testimonials',
+                'name'              => 'Career testo',
                 'title'             => 'The most effective learning system. World’s highest course completion rate.',
                 'created_at'        => now(),
                 'updated_at'        => now(),
@@ -251,13 +251,75 @@ class CategoryTableSeeder extends Seeder
            
             [
                 'id'                => 28,
-                'category_type'     => 'testimonials testo',
-                'name'              => 'Data Science',
+                'category_type'     => 'testimonials',
+                'name'              => 'Data Science testo',
                 'title'             => 'The most effective learning system. World’s highest course completion rate.',
                 'created_at'        => now(),
                 'updated_at'        => now(),
             ],
             // Testimonials categories ends here
+
+            // careers categories start here
+
+            [
+                'id'                => 29,
+                'category_type'     => 'careers',
+                'name'              => 'Professional Services cr',
+                'title'             => 'The most effective learning system. World’s highest course completion rate.',
+                'created_at'        => now(),
+                'updated_at'        => now(),
+            ],
+            [
+                'id'                => 30,
+                'category_type'     => 'careers',
+                'name'              => 'Security Operations cr',
+                'title'             => 'The most effective learning system. World’s highest course completion rate.',
+                'created_at'        => now(),
+                'updated_at'        => now(),
+            ],
+            [
+                'id'                => 31,
+                'category_type'     => 'careers',
+                'name'              => 'Application Security cr',
+                'title'             => 'The most effective learning system. World’s highest course completion rate.',
+                'created_at'        => now(),
+                'updated_at'        => now(),
+            ],
+
+            [
+                'id'                => 32,
+                'category_type'     => 'careers',
+                'name'              => 'Web Security cr',
+                'title'             => 'The most effective learning system. World’s highest course completion rate.',
+                'created_at'        => now(),
+                'updated_at'        => now(),
+            ],
+            [
+                'id'                => 33,
+                'category_type'     => 'careers',
+                'name'              => 'VAPT testo cr',
+                'title'             => 'The most effective learning system. World’s highest course completion rate.',
+                'created_at'        => now(),
+                'updated_at'        => now(),
+            ],
+            [
+                'id'                => 34,
+                'category_type'     => 'careers',
+                'name'              => 'Career cr',
+                'title'             => 'The most effective learning system. World’s highest course completion rate.',
+                'created_at'        => now(),
+                'updated_at'        => now(),
+            ],
+           
+            [
+                'id'                => 35,
+                'category_type'     => 'careers ',
+                'name'              => 'Data Science cr',
+                'title'             => 'The most effective learning system. World’s highest course completion rate.',
+                'created_at'        => now(),
+                'updated_at'        => now(),
+            ],
+            // careers categories ends here
         ];
             Category::insert($users);
     }

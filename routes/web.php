@@ -29,6 +29,7 @@ use App\Http\Controllers\backend\corporateController;
 use App\Http\Controllers\backend\menublogController;
 use App\Http\Controllers\backend\menueventController;
 use App\Http\Controllers\backend\menutestimonialController;
+use App\Http\Controllers\backend\careerController  as BackendCareerController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -179,6 +180,15 @@ Route::middleware(['auth','admin','prevent_history'])->group(function () {
     route::get('/menutestimonial/edit/{id}', [menutestimonialController::class, 'edit'])->name('menutestimonial.edit');
     Route::put('menutestimonial/update/{id}', [menutestimonialController::class, 'update'])->name('menutestimonial.update');
     Route::delete('menutestimonial/delete/{id}', [menutestimonialController::class, 'destroy'])->name('menutestimonial.destroy');
+
+    // Careers Routes
+    route::get('/career/list', [BackendCareerController::class, 'index'])->name('career.list');
+    route::get('/career/create', [BackendCareerController::class, 'create'])->name('career.create');
+    route::post('/career/store', [BackendCareerController::class, 'store'])->name('career.store');
+    Route::get('/career/show/{id}', [BackendCareerController::class, 'show'])->name('career.show');
+    route::get('/career/edit/{id}', [BackendCareerController::class, 'edit'])->name('career.edit');
+    Route::put('career/update/{id}', [BackendCareerController::class, 'update'])->name('career.update');
+    Route::delete('career/delete/{id}', [BackendCareerController::class, 'destroy'])->name('career.destroy');
 
 });
 

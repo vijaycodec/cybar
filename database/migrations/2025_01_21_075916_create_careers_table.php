@@ -13,7 +13,12 @@ return new class extends Migration
     {
         Schema::create('careers', function (Blueprint $table) {
             $table->id();
+            $table->integer('category_id');
+            $table->text('subcategory');
+            $table->text('location'); 
+            $table->Text('educational_background'); // Use text for long content
             $table->timestamps();
+
         });
     }
 

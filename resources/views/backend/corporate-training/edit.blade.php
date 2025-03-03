@@ -90,11 +90,13 @@
 @endsection
 
 @push('scripts')
-    <script>
-        $('#category').change(function() {
-            var categoryId = $(this).val();
-            $('#sub_category').html('<option value="" disabled selected>Loading...</option>');
+<script>
+    $(document).ready(function() {
+        let categoryId = {{ $corporateTraining->category_id }};
+        let subCategoryId = {{ $corporateTraining->sub_category_id }};
 
+        function loadSubCategories(categoryId, selectedSubCategory) {
+            $('#sub_category').html('<option value="" disabled selected>Loading...</option>');
             $.ajax({
                 url: "{{ route('get-categories.get') }}",
                 type: "GET",
@@ -102,10 +104,18 @@
                 success: function(data) {
                     $('#sub_category').html('<option value="" disabled selected>Select Sub category</option>');
                     $.each(data, function(key, value) {
-                        $('#sub_category').append('<option value="' + value.id + '">' + value.name + '</option>');
+                        $('#sub_category').append('<option value="' + value.id + '" ' + (value.id == selectedSubCategory ? 'selected' : '') + '>' + value.sub_category + '</option>');
                     });
                 }
             });
+        }
+
+        loadSubCategories(categoryId, subCategoryId);
+
+        $('#category').change(function() {
+            let categoryId = $(this).val();
+            loadSubCategories(categoryId, null);
         });
-    </script>
+    });
+</script>
 @endpush
