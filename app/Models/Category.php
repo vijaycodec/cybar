@@ -32,4 +32,10 @@ class Category extends Model
         return $this->hasMany(MenuTestimonial::class);
 
     }
+
+    public function careers()
+    {
+        return $this->hasMany(Career::class);
+
+    }
 }

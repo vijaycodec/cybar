@@ -3,16 +3,22 @@
 namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
-use App\Models\Category;
-use Illuminate\Http\Request;
+use App\Repositories\Interfaces\TestimonialRepositoryInterface;
 
 class testimonialsController extends Controller
 {
+    protected $testimonialRepository;
+
+    public function __construct(TestimonialRepositoryInterface $testimonialRepository)
+    {
+        $this->testimonialRepository = $testimonialRepository;
+    }
     public function index()
     {
-        $categories = Category::with('testimonials')->where('category_type','testimonials')->get();
+        $categories = $this->testimonialRepository->getAllCategories();
+        $trendings = $this->testimonialRepository->getTrendingCategories();
 
-        $trendings = Category::where('category_type','testimonials')->latest()->take(10)->get();
         return view('frontend.testimonials', compact('categories', 'trendings'));
     }
+       
 }

@@ -11,6 +11,12 @@ interface TestimonialRepositoryInterface
     public function create(array $data , $request);
     public function update($id, array $data, $request);
     public function delete($id);
+
+
+    //Frontend Interface Methods 
+    public function getAllCategories();
+    public function getTrendingCategories();
+
 }
 
 
