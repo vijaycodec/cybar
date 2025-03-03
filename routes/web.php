@@ -30,6 +30,7 @@ use App\Http\Controllers\backend\menublogController;
 use App\Http\Controllers\backend\menueventController;
 use App\Http\Controllers\backend\menutestimonialController;
 use App\Http\Controllers\backend\careerController  as BackendCareerController;
+use App\Http\Controllers\frontend\careerViewController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -51,6 +52,7 @@ Route::middleware(['FrameGuard'])->group(function () {
 
     Route::get('/testimonials', [testimonialsController::class, 'index'])->name('testimonials');
     Route::get('/career', [careerController::class, 'index'])->name('careers');
+    Route::get('/career-view/{id?}', [careerViewController::class, 'view'])->name('careers-view');
     Route::get('/contact', [contactController::class, 'index'])->name('contact');
     Route::get('/cn-insight', [cnInsightController::class, 'index'])->name('cn-insight');
     Route::get('/l3-template', [l3templateController::class, 'getl3'])->name('l3-template');

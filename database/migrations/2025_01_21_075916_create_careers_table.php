@@ -16,7 +16,10 @@ return new class extends Migration
             $table->integer('category_id');
             $table->text('subcategory');
             $table->text('location'); 
-            $table->Text('educational_background'); // Use text for long content
+            $table->text('educational_background'); // Use text for long content
+            $table->text('short_desc'); 
+            $table->longText('description'); // Use text for long content
+            $table->string('images')->nullable();
             $table->timestamps();
 
         });

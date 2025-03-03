@@ -36,7 +36,10 @@ class CareerController extends Controller
                 'category_id' => 'required',
                 'subcategory' => 'required',
                 'location' => 'required',
-                'educational_background' => 'required'
+                'educational_background' => 'required',
+                'short_desc' => 'required',
+                'description' => 'required',
+                'image' => 'nullable'
             ]);
  
             $this->careerRepository->create($validated, $request);

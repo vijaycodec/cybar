@@ -32,18 +32,18 @@
                         <!--  -->
                         <!-- Slider -->
                         <ul class="slider resocues owl-carousel owl-theme" id="resocues-menu">
-                            @foreach ($categories as $index=> $category)
+                            @foreach ($categories as $index => $category)
                                 <li><a class="{{ $loop->first ? 'active' : ' ' }}"
                                         href="#{{ Str::slug($category->name) }}">{{ $category->name }}</a></li>
                             @endforeach
                         </ul>
                         <!-- control arrows -->
                         <!-- <div class="prev">
-                  <i class='fa fa-caret-left'></i>
-            </div>
-            <div class="next">
-                  <i class='fa fa-caret-right'></i>
-           </div> -->
+                          <i class='fa fa-caret-left'></i>
+                    </div>
+                    <div class="next">
+                          <i class='fa fa-caret-right'></i>
+                   </div> -->
                         <!--  -->
                     </div>
                 </div>
@@ -64,28 +64,29 @@
                                     <!-- Carousel Wrapper -->
                                     <div class="carousel-wrap">
                                         <div class="owl-carousel1 owl-carousel owl-theme">
-                                            @foreach ($category->careers as $career )
-                                            <div class="item">
-                                                <a href="careers-view.php" class="career-link">
-                                                    <h4 class="career-heading">{{ $career->subcategory }}</h4>
-                                                    <p class="career-detail">{{ $career->location }}</p>
-                                                    <p class="career-detail">{{ $career->educational_background }}
-                                                    </p>
-                                                </a>
+                                            @foreach ($category->careers as $career)
+                                                <div class="item">
+                                                    <a href="careers-view.php" class="career-link">
+                                                        <h4 class="career-heading">{{ $career->subcategory }}</h4>
+                                                        <p class="career-detail">{{ $career->location }}</p>
+                                                        <p class="career-detail">{{ $career->educational_background }}
+                                                        </p>
+                                                    </a>
 
-                                                <div class="copy-right">
-                                                    <ul>
-                                                        <li><a target="_blank" href="#" class="icoFacebook"
-                                                                title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                                                        <li><a target="_blank" href="#" class="icoTwitter"
-                                                                title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                                                        <li><a target="_blank" href="#" class="icoGoogle"
-                                                                title="Google +"><i class="fa fa-google-plus"></i></a></li>
-                                                        <li><a target="_blank" href="#" title="linkedin"><i
-                                                                    class="fa fa-linkedin"></i></a></li>
-                                                    </ul>
+                                                    <div class="copy-right">
+                                                        <ul>
+                                                            <li><a target="_blank" href="#" class="icoFacebook"
+                                                                    title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                                            <li><a target="_blank" href="#" class="icoTwitter"
+                                                                    title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                                            <li><a target="_blank" href="#" class="icoGoogle"
+                                                                    title="Google +"><i class="fa fa-google-plus"></i></a>
+                                                            </li>
+                                                            <li><a target="_blank" href="#" title="linkedin"><i
+                                                                        class="fa fa-linkedin"></i></a></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
-                                            </div>
                                             @endforeach
 
                                         </div>
@@ -119,28 +120,11 @@
                             <div class="view_blog career-margin-right">
                                 <h4 class="btm-bdr">Top Viewed Career</h4>
                                 <ul class="career-bg-top">
-                                    <li><i class="fa fa-caret-right" aria-hidden="true"></i> <a
-                                            href="careers-view.php">Penetration Tester / Exploiter</a></li>
-                                    <li><i class="fa fa-caret-right" aria-hidden="true"></i> <a
-                                            href="careers-view.php">Information Security Engineer</a></li>
-                                    <li><i class="fa fa-caret-right" aria-hidden="true"></i> <a
-                                            href="careers-view.php">Telecom Security Consultant / Mobile Application
-                                            Security</a></li>
-                                    <li><i class="fa fa-caret-right" aria-hidden="true"></i> <a
-                                            href="careers-view.php">Penetration Tester</a></li>
-                                    <li><i class="fa fa-caret-right" aria-hidden="true"></i> <a
-                                            href="careers-view.php">Senior Engineer - Professional Services</a></li>
-                                    <li><i class="fa fa-caret-right" aria-hidden="true"></i> <a
-                                            href="careers-view.php">Security Operations/VAPT/Malware Detections/Incident
-                                            Investigations</a></li>
-                                    <li><i class="fa fa-caret-right" aria-hidden="true"></i><a
-                                            href="careers-view.php">Application Security</a></li>
-                                    <li><i class="fa fa-caret-right" aria-hidden="true"></i> <a
-                                            href="careers-view.php">VAPT
-                                            Analyst , Penetration Testing, Vulnerability Assessment</a></li>
-                                    <li><i class="fa fa-caret-right" aria-hidden="true"></i> <a
-                                            href="careers-view.php">VAPT
-                                            Analyst , Penetration Testing, Vulnerability Assessment</a></li>
+                                    @foreach ($trendings as $career)
+                                        <li><i class="fa fa-caret-right" aria-hidden="true"></i> <a
+                                                href="{{ route('careers-view', $career->id) }}">{{ $career->subcategory }}</a>
+                                        </li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
@@ -158,74 +142,60 @@
             <!-- career 1 end -->
             <!-- career 1 start -->
             @foreach ($categories as $index => $category)
-            <div class="rbg{{ $index+1 }} m-career" id="m-career1">
-               
-                <div class="career-title">
-                    <h3> {{ $category->name }}</h3>
-                </div>
-                
-                <div class="carousel-wrap">
-                    <div class="owl-carousel11 owl-carousel owl-theme">
-                        @foreach ($category->careers as $career)
-                        <div class="item">
-                            <div class="blog-cat-inn">
-                                <div class="blog-cat">
-                                    <a href="careers-view.php">
-                                        <h4>{{ $career->subcategory }}</h4>
-                                        <p>Location : {{ $career->location}} Educational Background :  {{ $career->educational_background  }}</p>
-                                    </a>
-                                    <div class="copy-right">
-                                        <ul>
-                                            <li><a target="_blank" href="#" class="icoFacebook"
-                                                    title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a target="_blank" href="#" class="icoTwitter" title="Twitter"><i
-                                                        class="fa fa-twitter"></i></a></li>
-                                            <li><a target="_blank" href="#" class="icoGoogle" title="Google +"><i
-                                                        class="fa fa-google-plus"></i></a></li>
-                                            <li><a target="_blank" href="#" title="linkedin"><i
-                                                        class="fa fa-linkedin"></i></a></li>
-                                        </ul>
-                                        <div class="clearfix"></div>
+                <div class="rbg{{ $index + 1 }} m-career" id="m-career1">
+
+                    <div class="career-title">
+                        <h3> {{ $category->name }}</h3>
+                    </div>
+
+                    <div class="carousel-wrap">
+                        <div class="owl-carousel11 owl-carousel owl-theme">
+                            @foreach ($category->careers as $career)
+                                <div class="item">
+                                    <div class="blog-cat-inn">
+                                        <div class="blog-cat">
+                                            <a href="careers-view.php">
+                                                <h4>{{ $career->subcategory }}</h4>
+                                                <p>Location : {{ $career->location }} Educational Background :
+                                                    {{ $career->educational_background }}</p>
+                                            </a>
+                                            <div class="copy-right">
+                                                <ul>
+                                                    <li><a target="_blank" href="#" class="icoFacebook"
+                                                            title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                                    <li><a target="_blank" href="#" class="icoTwitter"
+                                                            title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                                    <li><a target="_blank" href="#" class="icoGoogle"
+                                                            title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                                                    <li><a target="_blank" href="#" title="linkedin"><i
+                                                                class="fa fa-linkedin"></i></a></li>
+                                                </ul>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
+                            @endforeach
 
-                            </div>
                         </div>
-                        @endforeach
-                       
+                        <div id="navigation-count11" class="count-nav-box"></div>
                     </div>
-                    <div id="navigation-count11" class="count-nav-box"></div>
                 </div>
-            </div>
             @endforeach
             <!-- career 1 end -->
-            
+
         </section>
         <!--  -->
         <div class="offer-sec-inn mobile-view offer-sec-inn1 career-space" id="tvc">
             <div class="view_blog">
                 <h4 class="btm-bdr">Top Viewed Career</h4>
                 <ul>
-                    <li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="careers-view.php">Penetration
-                            Tester /
-                            Exploiter</a></li>
-                    <li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="careers-view.php">Information
-                            Security
-                            Engineer</a></li>
-                    <li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="careers-view.php">Telecom Security
-                            Consultant / Mobile Application Security</a></li>
-                    <li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="careers-view.php">Penetration
-                            Tester</a></li>
-                    <li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="careers-view.php">Senior Engineer -
-                            Professional Services</a></li>
-                    <li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="careers-view.php">Security
-                            Operations/VAPT/Malware Detections/Incident Investigations</a></li>
-                    <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="careers-view.php">Application
-                            Security</a></li>
-                    <li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="careers-view.php">VAPT Analyst ,
-                            Penetration Testing, Vulnerability Assessment</a></li>
-                    <li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="careers-view.php">VAPT Analyst ,
-                            Penetration Testing, Vulnerability Assessment</a></li>
+                    @foreach ($trendings as $career)
+                        <li><i class="fa fa-caret-right" aria-hidden="true"></i> <a
+                                href="{{ route('careers-view', $career->id) }}">{{ $career->subcategory }}</a>
+                        </li>
+                    @endforeach
                 </ul>
             </div>
         </div>

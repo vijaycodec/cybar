@@ -2458,11 +2458,11 @@ body{
     padding-top: 10px;
     }
     .view_blog ul li:hover {
-    background: #28a745;
+    background: #dddddd;
     padding-left: 10px;
     }
     .view_blog ul li:hover a{
-    color: #fff;
+    color: #1DA1F2;
     }
     .view_blog ul li i {
     position: absolute;

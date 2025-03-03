@@ -9,7 +9,7 @@
       </div>
    </header>
    <!--  -->
-   <?php include_once 'include/menu-data.php'; ?>
+   @include('frontend.layouts.menu-data')
 
    <div class="mobile-ser-tab">
       <!-- <h4>Resources Categories</h4> -->
