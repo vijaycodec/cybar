@@ -48,8 +48,8 @@
                                     </div>
                                     <!--  -->
                                     <div class="job-detail">
-                                        <p> Location : {{ $careers->location }}</p>
-                                        <p> Educational Background : {{ $careers->educational_background }}</p>
+                                        <p class="career-detail"><strong>Location :</strong> {{ $careers->location }}</p>
+                                        <p class="career-detail"><strong>Educational Background :</strong> {{ $careers->educational_background }}</p>
                                         <p>{!! $careers->description !!}</p>
 
 

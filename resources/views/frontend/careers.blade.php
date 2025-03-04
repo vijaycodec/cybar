@@ -68,11 +68,9 @@
                                                 <div class="item">
                                                     <a href="careers-view.php" class="career-link">
                                                         <h4 class="career-heading">{{ $career->subcategory }}</h4>
-                                                        <p class="career-detail">{{ $career->location }}</p>
-                                                        <p class="career-detail">{{ $career->educational_background }}
-                                                        </p>
+                                                        <p class="career-detail"><strong>Location :</strong> {{ $career->location }}</p>
+                                                        <p class="career-detail"><strong>Educational Background :</strong> {{ $career->educational_background }}</p>
                                                     </a>
-
                                                     <div class="copy-right">
                                                         <ul>
                                                             <li><a target="_blank" href="#" class="icoFacebook"
