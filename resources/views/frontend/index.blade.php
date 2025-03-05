@@ -5892,7 +5892,19 @@
         };
     </script>
 
+    <script>
+        $('.close-acrodin').click(function(e) {
+            e.preventDefault();
+            var $panel = $(this).closest('.acc__panel');
+            $panel.slideUp();
+            $(this).closest('.acc').find('.acc__title.active').removeClass('active');
 
+            var $accTitle = $(this).closest('.acc__card').find('.acc__title');
+            if ($accTitle.length > 0) {
+                $('html, body').scrollTop($accTitle.offset().top - 60);
+            }
+        });
+    </script>
 
     <script>
         $("#awrad-slider").owlCarousel({
