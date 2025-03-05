@@ -6,32 +6,40 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\MenuEvent;
-use Illuminate\Support\Carbon;
-use Illuminate\Support\Facades\Validator;
-use Intervention\Image\Laravel\Facades\Image;
+use App\Repositories\Interfaces\MenuEventRepositoryInterface;
+
 
 class menueventController extends Controller
 {
-   // Display a listing of the events
+
+    protected $menuEventRepository;
+
+    public function __construct(MenuEventRepositoryInterface $menuEventRepository)
+    {
+        $this->menuEventRepository = $menuEventRepository;
+    }
+
    public function index()
    {
-       $events = MenuEvent::with('category')->orderBy('id', 'ASC')->paginate(10);
+       $events = $this->menuEventRepository->getAllEvents();
+
        return view('backend.menuevent.index', compact('events'));
    }
 
-//     public function getShortDescription($description)
-//     {
-//         // Remove HTML tags and split the description into words
-//         $words = explode(' ', strip_tags($description));
+    public function getShortDescription($description)
+    {
+        // Remove HTML tags and split the description into words
+        $words = explode(' ', strip_tags($description));
 
-//         // If there are more than 20 words, truncate and add "..."
-//         if (count($words) > 19) {
+        // If there are more than 20 words, truncate and add "..."
+        if (count($words) > 19) {
 
-//             return implode(' ', array_slice($words, 0, 19)) . '...';
-//         }
+            return implode(' ', array_slice($words, 0, 19)) . '...';
+        }
 
-//         return implode(' ', $words);  // Return as is if less than or equal to 20 words
-//     }
+        return implode(' ', $words);  // Return as is if less than or equal to 20 words
+    }
+
 
 
     public function create()
@@ -45,64 +53,35 @@ class menueventController extends Controller
 
     public function store(Request $request)
     {
-        // Using Validator::make to validate the request data
-
-        $validator = Validator::make($request->all(), [
-            
+        $validated = $request->validate([
+           
             'category_id' => 'required',
             'short_desc' => 'required',
             'description' => 'required',
-            'image' => 'mimes:png,jpg,jpeg|max:2048'
+            'video_url' => 'nullable',
+
         ]);
 
-        // Check if validation fails
-        if ($validator->fails()) {
-            return redirect()->back()->withErrors($validator)->withInput();
-        }
-
         try {
+            $this->menuEventRepository->createEvent($validated, $request);
 
-            $events = new MenuEvent();
-            $events->category_id = $request->category_id;
-            $events->short_desc = $request->short_desc;
-            $events->description = $request->description;
-            $events->video_url = $request->video_url;
-
-            
-            if ($request->hasFile('image')) {
-                // Validate the image
-                $request->validate([
-                    'image' => 'mimes:png,jpg,jpeg|max:2048'
-                ]);
-    
-    
-                // Handle the image upload if a new image is selected
-                $image = $request->file('image');
-                $file_extension = $image->extension();
-                $file_name = Carbon::now()->timestamp . '.' . $file_extension;
-    
-                // Save the new image
-                $image->move(public_path('uploads/backend/events'), $file_name);
-    
-                // Store the new image path in the database
-                $events->images = $file_name;
-            } 
-                $events->save();
-                return redirect()->route('menuevent.list')->with('success', 'Record has been added successfully !');
-            
+            return redirect()->route('menuevent.list')
+                             ->with('success', 'Record has been added successfully !');
         } catch (\Exception $e) {
-            // Catch any exceptions and log the error
-            return redirect()->back()->with('error', 'An error occurred while adding the events: ' . $e->getMessage());
+            return redirect()->back()
+                             ->with('error', 'An error occurred while adding the event: ' . $e->getMessage());
         }
     }
 
-    
     public function edit($id)
     {
-        $all_categories = Category::where('category_type', 'event')->get();
+        // Retrieve categories for event via the category repository.
+        $all_categories = $this->menuEventRepository->getCategoriesByType('event');
 
-        $events = MenuEvent::with('category')->findOrFail($id);
+        // Retrieve the specific blog via the menu blog repository.
+        $events = $this->menuEventRepository->getEventById($id);
 
+        // Pass the retrieved data to the view.
         return view('backend.menuevent.edit', compact('events', 'all_categories'));
     }
 
@@ -111,58 +90,37 @@ class menueventController extends Controller
     public function update(Request $request, $id)
     {
        
-        // Validate other fields
-        $validated = $request->validate([
+        try {
+            $validated = $request->validate([
+               
             'category_id' => 'required',
             'short_desc' => 'required',
             'description' => 'required',
-            'image' => 'mimes:png,jpg,jpeg|max:2048'
+            'video_url' => 'nullable',
+            'image' => 'nullable'
+           
         ]);
-        $event = MenuEvent::findOrFail($id);
-        $event->category_id = $request->category_id; 
-        $event->short_desc = $request->short_desc;
-        $event->description = $request->description;
-        // Check if a new image is provided
-        if ($request->hasFile('image')) {
-            // Validate the image
-            $request->validate([
-                'image' => 'mimes:png,jpg,jpeg|max:2048'
-            ]);
+        $this->menuEventRepository->updateEvent($id, $validated, $request);
 
-            // Remove the old image from the upload folder if it exists
-            if ($event->images && file_exists(public_path('uploads/backend/events/' . $event->images))) {
-                unlink(public_path('uploads/backend/event/' . $event->images)); // Remove old image
-            }
-
-            // Handle the image upload if a new image is selected
-            $image = $request->file('image');
-            $file_extension = $image->extension();
-            $file_name = Carbon::now()->timestamp . '.' . $file_extension;
-
-            // Save the new image
-            $image->move(public_path('uploads/backend/events'), $file_name);
-
-            // Store the new image path in the database
-            $event->images = $file_name;
-        }
-        // Save the updated category data
-        $event->save();
-
-        // return response()->route('menuevent.list')->json(['message' => 'event updated successfully!']);
-        return redirect()->route('menuevent.list')->with(['success' => 'event updated successfully!']);
+        return redirect()->route('menuevent.list')->with('message', 'Events updated successfully!');
+    } catch (\Exception $e) {
+        return response()->json(['error' => 'Something went wrong: ' . $e->getMessage()], 500);
+    }
     }
 
     //Delete event
 
     public function destroy($id)
     {
-        $event = MenuEvent::find($id);
-        if ($event) {
-            $event->delete();
+        try {
+            $this->menuEventRepository->deleteEvent($id);
+    
             return response()->json([
                 'message' => 'Event deleted successfully!',
-                'redirect' => route('menuevent.list') // Include the redirect URL
+                'redirect' => route('menuevent.list')
             ], 200);
+        } catch (\Exception $e) {
+            return response()->json(['error' => 'Something went wrong: ' . $e->getMessage()], 500);
         }
     }
 

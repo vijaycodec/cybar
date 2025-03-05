@@ -8,7 +8,7 @@
         <a id="button"></a>
         <!-- Header start -->
 
-        @include('frontend.layouts.career-header')
+        @include('frontend.layouts.career-header',['categories' => $categories])
 
         <!-- banner start -->
         <section class="sec_ban" id="career-banner">
@@ -66,7 +66,7 @@
                                         <div class="owl-carousel1 owl-carousel owl-theme">
                                             @foreach ($category->careers as $career)
                                                 <div class="item">
-                                                    <a href="careers-view.php" class="career-link">
+                                                    <a href="{{ route('careers-view', $career->id) }}" class="career-link">
                                                         <h4 class="career-heading">{{ $career->subcategory }}</h4>
                                                         <p class="career-detail"><strong>Location :</strong> {{ $career->location }}</p>
                                                         <p class="career-detail"><strong>Educational Background :</strong> {{ $career->educational_background }}</p>
@@ -91,8 +91,6 @@
                                     </div>
                                 </div>
                             @endforeach
-
-
                         </div>
                     </div>
 
@@ -140,7 +138,7 @@
             <!-- career 1 end -->
             <!-- career 1 start -->
             @foreach ($categories as $index => $category)
-                <div class="rbg{{ $index + 1 }} m-career" id="m-career1">
+                <div class="rbg{{ $index + 1 }} m-career" id="mob-{{ Str::slug($category->name) }}">
 
                     <div class="career-title">
                         <h3> {{ $category->name }}</h3>

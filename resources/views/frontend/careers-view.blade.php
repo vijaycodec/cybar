@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Careers')
+@section('title', 'Careers-view')
 
 @section('content')
 
@@ -100,9 +100,11 @@
 
 <a href="#body-main" class="scrollToTop career-scroll-top"><i class="fa fa-arrow-up"></i></a>
 @push('scripts')
-    <script type="text/javascript" src="assets/js/common.js?v=1"></script>
+    {{-- <script type="text/javascript" src="assets/js/common.js?v=1"></script>
     <script type="text/javascript" src="assets/js/mobile-menu.js"></script>
-    <script type="text/javascript">
+    <script type="text/javascript"> --}}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
         $(document).ready(function() {
             "use strict";
             var offSetTop = 100;

@@ -61,6 +61,7 @@
     <script src="assets/js/slider.js"></script>
     <script type="text/javascript" src="assets/js/common.js"></script>
     <script type="text/javascript" src="assets/js/mobile-menu.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script type="text/javascript">
         //

@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Anhskohbo\NoCaptcha\Facades\NoCaptcha;
+use App\Models\MenuEvent;
 use App\Repositories\CareerRepository;
 use App\Repositories\CategoryRepository;
 use App\Repositories\CorporateTrainingRepository;
@@ -15,11 +16,13 @@ use Illuminate\Support\Facades\Validator;
 use App\Repositories\L3ContentRepository;
 use App\Repositories\Interfaces\L3ContentRepositoryInterface;
 use App\Repositories\Interfaces\MenuBlogRepositoryInterface;
+use App\Repositories\Interfaces\MenuEventRepositoryInterface;
 use App\Repositories\Interfaces\ServicesRepositoryInterface;
 use App\Repositories\Interfaces\TestimonialRepositoryInterface;
 use App\Repositories\Interfaces\UploadServiceInterface;
 use App\Repositories\L3CategoryRepository;
 use App\Repositories\MenuBlogRepository;
+use App\Repositories\MenuEventRepository;
 use App\Repositories\ServicesRepository;
 use App\Repositories\TestimonialRepository;
 use App\Services\ImageService;
@@ -37,6 +40,7 @@ class AppServiceProvider extends ServiceProvider
     $this->app->bind(ServicesRepositoryInterface::class,ServicesRepository::class);
     $this->app->bind(CorporateTrainingRepositoryInterface::class,CorporateTrainingRepository::class);
     $this->app->bind(MenuBlogRepositoryInterface::class,MenuBlogRepository::class);
+    $this->app->bind(MenuEventRepositoryInterface::class,MenuEventRepository::class);
     $this->app->bind(TestimonialRepositoryInterface::class,TestimonialRepository::class);
     $this->app->bind(CareerRepositoryInterface::class,CareerRepository::class);
       // Bind the upload service interface to its implementation category Repository

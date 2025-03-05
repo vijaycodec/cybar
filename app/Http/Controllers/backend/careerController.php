@@ -51,24 +51,45 @@ class CareerController extends Controller
     } 
     public function edit($id)
     {
+        // Retrieve categories for careers via the category repository.
+        $categories = $this->careerRepository->getCategoriesByType('careers');
+
         $career = $this->careerRepository->getById($id);
-        return view('backend.careers.edit', compact('career'));
+        return view('backend.careers.edit', compact('career', 'categories'));
     }
 
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'title' => 'required',
+       
+        try {
+            $validated = $request->validate([
+            'category_id' => 'required',
+            'subcategory' => 'required',
+            'location' => 'required',
+            'educational_background' => 'required',
+            'short_desc' => 'required',
             'description' => 'required',
         ]);
 
-        $this->careerRepository->update($id, $request->all());
-        return redirect()->route('careers.index')->with('success', 'Career updated successfully!');
-    }
+        $this->careerRepository->update($id, $validated, $request);
 
+        return redirect()->route('career.list')->with('message', 'Testimonials updated successfully!');
+        } catch (\Exception $e) {
+            return response()->json(['error' => 'Something went wrong: ' . $e->getMessage()], 500);
+        }
+    }
+    
     public function destroy($id)
     {
-        $this->careerRepository->delete($id);
-        return redirect()->route('careers.index')->with('success', 'Career deleted successfully!');
+        try {
+            $this->careerRepository->delete($id);
+    
+            return response()->json([
+                'message' => 'career deleted successfully!',
+                'redirect' => route('career.list')
+            ], 200);
+        } catch (\Exception $e) {
+            return response()->json(['error' => 'Something went wrong: ' . $e->getMessage()], 500);
+        }
     }
 }

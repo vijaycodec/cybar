@@ -50,4 +50,52 @@ class menutestimonialController extends Controller
        }
    } 
 
+   public function edit($id)
+    {
+        // Retrieve categories for blogs via the category repository.
+        $categories = $this->testimonialRepository->getCategoriesByType('testimonials');
+
+        // Retrieve the specific blog via the menu blog repository.
+        $testimonials = $this->testimonialRepository->getById($id);
+
+        // Pass the retrieved data to the view.
+        return view('backend.testimonial.edit', compact('testimonials', 'categories'));
+    }
+
+
+    public function update(Request $request, $id)
+    {
+       
+        try {
+            $validated = $request->validate([
+                'user_name' => 'required',
+                'category_id' => 'required',
+                'designation' => 'required',
+                'short_desc' => 'required',
+                'description' => 'required',           
+        ]);
+        $this->testimonialRepository->update($id, $validated, $request);
+
+        return redirect()->route('menutestimonial.list')->with('message', 'Testimonials updated successfully!');
+    } catch (\Exception $e) {
+        return response()->json(['error' => 'Something went wrong: ' . $e->getMessage()], 500);
+    }
+    }
+
+
+    public function destroy($id)
+    {
+        try {
+            $this->testimonialRepository->delete($id);
+    
+            return response()->json([
+                'message' => 'testimonial deleted successfully!',
+                'redirect' => route('menutestimonial.list')
+            ], 200);
+        } catch (\Exception $e) {
+            return response()->json(['error' => 'Something went wrong: ' . $e->getMessage()], 500);
+        }
+    }
+
+
 }

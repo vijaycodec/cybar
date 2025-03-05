@@ -180,8 +180,8 @@
             });
 
 
-            //script for Delete
-            $(document).on('click', '.delete', function() {
+           //script for Delete
+           $(document).on('click', '.delete', function() {
                 var careerId = $(this).data('id'); // Get ID from data attribute
                 Swal.fire({
                     title: 'Are you sure?',
@@ -195,7 +195,7 @@
                     if (result.isConfirmed) {
                         // Perform AJAX request to delete
                         $.ajax({
-                            url: "{{ route('menublog.destroy', ':id') }}".replace(':id',
+                            url: "{{ route('career.destroy', ':id') }}".replace(':id',
                             careerId),
                             method: "DELETE",
                             data: {
@@ -230,22 +230,22 @@
         $(document).ready(function() {
             // Show permission details in modal
             $(document).on('click', '.show', function() {
-                var blogsId = $(this).data('id');
+                var careerId = $(this).data('id');
                 $.ajax({
-                    url: "{{ route('menublog.show', ':id') }}".replace(':id', blogsId),
+                    url: "{{ route('career.show', ':id') }}".replace(':id', careerId),
                     method: "GET",
                     success: function(blog) {
                         // Correctly access properties with a hyphen
                         $('#blog_name').text(blog
                             .blog_name); // Use default value if undefined
-                        $('#short_desc').text(response.short_desc); // Handle null or undefined
-                        $('#description').html(response.description);
+                        $('#subcategory').text(response.subcategory); // Handle null or undefined
+                        $('#location').html(response.location);
                         $('#blogs-created-at').text(response.created_at);
                         $('#blogModalShow').modal('show');
 
                     },
                     error: function() {
-                        Swal.fire('Error!', 'Unable to fetch blogs details.', 'error');
+                        Swal.fire('Error!', 'Unable to fetch careers details.', 'error');
                     }
                 });
             });

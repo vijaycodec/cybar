@@ -23,7 +23,17 @@ class TestimonialRepository implements TestimonialRepositoryInterface
 
     public function getById($id)
     {
-        return MenuTestimonial::findOrFail($id);
+        return MenuTestimonial::with('category')->findOrFail($id);
+    }
+
+    // public function getBlogById($id): MenuTestimonial
+    // {
+    //     return MenuTestimonial::with('category')->findOrFail($id);
+    // }
+
+    public function getCategoriesByType(string $type)
+    {
+        return Category::where('category_type', $type)->get();
     }
 
     public function create(array $data, $request)

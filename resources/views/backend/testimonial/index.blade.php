@@ -177,15 +177,16 @@
 @endsection
 
 @push('scripts')
+    
     <script>
         $(document).ready(function() {
             // Handle Read More button click
             $(document).on('click', '.read-more', function() {
-                var testimonialId = $(this).data('id');
+                var testimonial = $(this).data('id');
                 var fullDescription = $(this).data('description');
 
                 // Set the full description in the modal
-                $('#modal-testimonial-user_name').text(testimonialId); // to do category name instead of blog Id 
+                $('#modal-blog-name').text(testimonialId); // to do category name instead of testimonial Id 
                 $('#modal-testimonial-description').html(fullDescription);
 
                 // Show the modal
@@ -208,8 +209,8 @@
                     if (result.isConfirmed) {
                         // Perform AJAX request to delete
                         $.ajax({
-                            url: "{{ route('menublog.destroy', ':id') }}".replace(':id',
-                            testimonialId),
+                            url: "{{ route('menutestimonial.destroy', ':id') }}".replace(':id',
+                                testimonialId),
                             method: "DELETE",
                             data: {
                                 _token: "{{ csrf_token() }}" // CSRF Token
@@ -243,22 +244,22 @@
         $(document).ready(function() {
             // Show permission details in modal
             $(document).on('click', '.show', function() {
-                var blogsId = $(this).data('id');
+                var testimonialsId = $(this).data('id');
                 $.ajax({
-                    url: "{{ route('menublog.show', ':id') }}".replace(':id', blogsId),
+                    url: "{{ route('menutestimonial.show', ':id') }}".replace(':id', testimonialsId),
                     method: "GET",
-                    success: function(blog) {
+                    success: function(testimonial) {
                         // Correctly access properties with a hyphen
-                        $('#blog_name').text(blog
-                            .blog_name); // Use default value if undefined
+                        $('#testimonial_name').text(testimonial
+                            .testimonial_name); // Use default value if undefined
                         $('#short_desc').text(response.short_desc); // Handle null or undefined
                         $('#description').html(response.description);
-                        $('#blogs-created-at').text(response.created_at);
-                        $('#blogModalShow').modal('show');
+                        $('#testimonials-created-at').text(response.created_at);
+                        $('#testimonialModalShow').modal('show');
 
                     },
                     error: function() {
-                        Swal.fire('Error!', 'Unable to fetch blogs details.', 'error');
+                        Swal.fire('Error!', 'Unable to fetch testimonials details.', 'error');
                     }
                 });
             });

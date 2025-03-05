@@ -40,6 +40,7 @@
                                 <th>#</th>
                                 <th>Category Name</th>
                                 <th>Image</th>
+                                <th>Video Url</th>
                                 <th>Short Description</th>
                                 <th>Description</th>
                                 <th>Action</th>
@@ -53,12 +54,13 @@
                                     <td>{{ $event->category->name ?? 'N/A' }}</td> <!-- Using the relationship -->
                                     <td>
                                         @if ($event->images)
-                                            <img src="{{ asset('uploads/backend/events/' . $event->images) }}"
+                                            <img src="{{ asset('storage/uploads/backend/event/' . $event->images) }}"
                                                 alt="Event Image" width="100">
                                         @else
                                             <span>No image available</span>
                                         @endif
                                     </td>
+                                    <td>{{ $event->video_url ?? 'N/A' }}</td> 
                                     <td style="max-width: 400px;"> <!-- Increase width here -->
                                         <!-- Short description (up to 10 words) -->
                                         <span>{{ $event->short_desc }}</span>

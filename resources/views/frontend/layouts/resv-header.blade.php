@@ -1,4 +1,4 @@
 <header  id="myHeader" class="site-header">
-<?php include 'main-menu-data.php' ?> 
+@include('frontend.layouts.main-menu-data') 
 </header>
-<?php include 'resv-mobile-menu.php' ?>
+@include('frontend.layouts.resv-mobile-menu')
