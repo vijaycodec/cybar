@@ -2848,8 +2848,159 @@
                                 </div>
                                 <!--  -->
                             </div>
-                           
-                           
+                            <div id="tab117" class="tab-content2">
+                                <!--  -->
+                                <div class="home-content-tab">
+                                    <div class="row rowp">
+                                        <div class="col-md-7">
+                                            <div class="red-title">
+                                                <p> In a world teeming with digital threats, ethical hacking emerges as a
+                                                    formidable
+                                                    strategy to
+                                                    fortify cyber defenses. Ethical hackers, or "white hat" hackers, are
+                                                    cybersecurity
+                                                    experts who use
+                                                    their skills to identify vulnerabilities and strengthen security
+                                                    measures. Explore
+                                                    the realm of
+                                                    ethical hacking with our comprehensive courses that empower individuals
+                                                    and
+                                                    organizations to
+                                                    combat cyber threats proactively.
+                                                </p>
+                                                <p> In a world teeming with digital threats, ethical hacking emerges as a
+                                                    formidable
+                                                    strategy to
+                                                    fortify cyber defenses. Ethical hackers, or "white hat" hackers, are
+                                                    cybersecurity
+                                                    experts who use
+                                                    their skills to identify vulnerabilities and strengthen security
+                                                    measures. Explore
+                                                    the realm of
+                                                    ethical hacking with our comprehensive courses that empower individuals
+                                                    and
+                                                    organizations to
+                                                    combat cyber threats proactively.
+                                                </p>
+                                                <p> In a world teeming with digital threats, ethical hacking emerges as a
+                                                    formidable
+                                                    strategy to
+                                                    fortify cyber defenses. Ethical hackers, or "white hat" hackers, are
+                                                    cybersecurity
+                                                    experts who use
+                                                    their skills to identify vulnerabilities and strengthen security
+                                                    measures. Explore
+                                                    the realm of
+                                                    ethical hacking with our comprehensive courses that empower individuals
+                                                    and
+                                                    organizations to
+                                                    combat cyber threats proactively.
+                                                </p>
+                                                <a href="#" class="homeread-more">Read More</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="template12-img">
+                                                <img src="{{asset('assets/images/working-1.png')}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--  -->
+                            </div>
+                            <div id="tab118" class="tab-content2">
+                                <!--  -->
+                                <div class="home-slider">
+                                    <div id="home-slider3" class="owl-carousel owl-theme">
+                                        <div class="itmes">
+                                            <div class="home-banner1">
+                                                <img src="/assets/images/Training-calendar-Codec-Networks.webp"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                        <div class="itmes">
+                                            <div class="home-banner1">
+                                                <img src="/assets/images/IT-Security.webp" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="itmes">
+                                            <div class="home-banner1">
+                                                <img src="/assets/images/ec-council-training-certification.webp"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                        <div class="itmes">
+                                            <div class="home-banner1">
+                                                <img src="/assets/images/governance-risk-compliance.webp" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--  -->
+                            </div>
+                            <div id="tab119" class="tab-content2">
+                                <!--  -->
+                                <div class="home-slider">
+                                    <div id="home-slider4" class="owl-carousel owl-theme">
+                                        <div class="itmes">
+                                            <div class="home-banner1">
+                                                <img src="/assets/images/Training-calendar-Codec-Networks.webp"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                        <div class="itmes">
+                                            <div class="home-banner1">
+                                                <img src="/assets/images/IT-Security.webp" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="itmes">
+                                            <div class="home-banner1">
+                                                <img src="assets/images/ec-council-training-certification.webp"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                        <div class="itmes">
+                                            <div class="home-banner1">
+                                                <img src="/assets/images/governance-risk-compliance.webp"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--  -->
+                            </div>
+                            <!--  -->
+                            <div id="tab110" class="tab-content2">
+                                <!--  -->
+                                <div class="home-slider">
+                                    <div id="home-slider5" class="owl-carousel owl-theme">
+                                        <div class="itmes">
+                                            <div class="home-banner1">
+                                                <img src="/assets/images/Training-calendar-Codec-Networks.webp"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                        <div class="itmes">
+                                            <div class="home-banner1">
+                                                <img src="/assets/images/IT-Security.webp" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="itmes">
+                                            <div class="home-banner1">
+                                                <img src="/assets/images/ec-council-training-certification.webp"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                        <div class="itmes">
+                                            <div class="home-banner1">
+                                                <img src="/assets/images/governance-risk-compliance.webp"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--  -->
+                            </div>
                             <!--  -->
                         </div>
                     </div>
@@ -5089,6 +5240,7 @@
         </section>
 
         <!-- resources/views/mobile-components/m-testimonials.blade.php  -->
+        @include('frontend.layouts.mobile-components.m-testimonials')
 
         <!-- Our Customers end -->
         <section class="core-domain-section-blog mhspace mhspace1" id="mhome-div11"
@@ -5712,6 +5864,8 @@
     <!-- Jquery code -->
     <script src="{{asset('assets/js/slider.js')}}"></script>
     <script type="text/javascript" src="{{asset('assets/js/common.js?v-1')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/homepage.js?v14')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/mobile-menu.js')}}"></script>
     <script type="text/javascript" src="{{asset('assets/js/main.js?v=32')}}"></script>
 
     <script type="text/javascript">
@@ -5739,7 +5893,7 @@
         };
     </script>
 
-<script>
+    <script>
         $('.close-acrodin').click(function(e) {
             e.preventDefault();
             var $panel = $(this).closest('.acc__panel');
@@ -5859,5 +6013,6 @@
         //   }, 0.01);
         // });
     </script>
+        @include('frontend.layouts.right-menu-js')
 @endpush
 
