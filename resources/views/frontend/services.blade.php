@@ -136,8 +136,7 @@
                     @endphp
                     @foreach ($categoryServices->chunk(5) as $chunkIndex => $serviceChunk)
                         <div class="ser-slider1">
-                            <div id="ser-demo{{ $index + 1 }}-{{ $chunkIndex + 1 }}"
-                                class="owl-carousel owl-theme indu-moblie">
+                            <div id="ser-demo{{ $index + 1 }}-{{ $chunkIndex + 1 }}" class="owl-carousel owl-theme indu-moblie">
                                 @foreach ($serviceChunk as $service)
                                     <div class="item">
                                         <div class="empower-industry-box">
@@ -153,18 +152,24 @@
                                             <div class="cn-main-content">
                                                 <h3>{{ $service->subcategory->sub_category }}</h3>
                                                 <a href="{{ route('l3-template', ['sb' => $service->subcategory->id, 'pg' => $page_id, 'ct' => $category->id]) }}">
-                                                                            Know more <i class="fa fa-chevron-right"></i>
-                                                 </a>
+                                                    Know more <i class="fa fa-chevron-right"></i>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 @endforeach
+                            </div>
+        
+                            <!-- ✅ Counter for this slider -->
+                            <div id="navigation-count{{ $index + 1 }}-{{ $chunkIndex + 1 }}" class="count-nav-box counter-space">
+                                1/{{ count($serviceChunk) }}
                             </div>
                         </div>
                     @endforeach
                 </div>
             @endforeach
         </section>
+        
                  <!-- main section end -->
  <div class="ser-h"></div>
                 
@@ -317,7 +322,7 @@
         });
     </script> --}}
 
-    <script>
+    {{-- <script>
         $(document).ready(function() {
             function initializeCarousel(carouselId, navigationCountId) {
                 $("#" + carouselId).owlCarousel({
@@ -368,6 +373,59 @@
                 initializeCarousel(sliderId, countId);
             });
         });
+    </script> --}}
+
+    <script>
+        $(function () {
+    function initializeCarousel(carouselId, navigationCountId) {
+        let $carousel = $("#" + carouselId);
+        let $countDisplay = $("#" + navigationCountId);
+
+        $carousel.owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            dots: true,
+            navText: [
+                '<i class="fa fa-long-arrow-left" aria-hidden="true"></i>',
+                '<i class="fa fa-long-arrow-right" aria-hidden="true"></i>'
+            ],
+            responsive: {
+                0: { items: 1 },
+                600: { items: 1 },
+                900: { items: 1 },
+                1200: { items: 3 }
+            },
+            onInitialized: function (event) {
+                updateNavigationCount(event, $countDisplay);
+            },
+            onTranslated: function (event) {
+                updateNavigationCount(event, $countDisplay);
+            }
+        });
+
+        function updateNavigationCount(event, $countDisplay) {
+            if (!event.namespace) return;
+
+            let carousel = event.relatedTarget;
+            let currentIndex = carousel.relative(carousel.current()) + 1;
+            let totalItems = carousel.items().length;
+
+            console.log("Slider: " + navigationCountId + " | Current: " + currentIndex + " / " + totalItems);
+
+            // ✅ Update counter dynamically
+            $countDisplay.text(currentIndex + "/" + totalItems);
+        }
+    }
+
+    // ✅ Automatically initialize all carousels
+    $("[id^='ser-demo']").each(function () {
+        let carouselId = $(this).attr("id");
+        let counterId = carouselId.replace("ser-demo", "navigation-count");
+        initializeCarousel(carouselId, counterId);
+    });
+});
+
     </script>
     <script>
         $('.cn-content').click(function() {

@@ -30,79 +30,64 @@
         <!-- tab menu start -->
         <!-- tab menu end -->
         @foreach ($categories as $index => $category)
-            <section class="testimonials testimonials-page testo1 resc-sec {{ $index % 2 == 1 ? 'blog-bg' : '' }}" id="{{ Str::slug($category->name) }}">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="wpb_text_column wpb_content_element">
-                                <div class="wpb_wrapper">
-
-                                    <div class="title-button ">
-                                        <h3 class="style1 tbg{{ $index+1 }}">
-                                            <i class="fa fa-2x fa-file">
-                                            </i>
-                                            {{ $category->name }}
-                                        </h3>
-                                        </h3>
-                                    </div>
-                                    <div class="carousel-wrap">
-                                        <div class="owl-carousel1 owl-carousel owl-theme">
-                                            <!-- testo 1 start -->
-                                            @foreach ($category->testimonials as $testimonial)
-                                                <div class="item">
-                                                    {{-- <div class="ceh-testo-box" data-target="client-testimonials-popup1"> --}}
-                                                    <div class="ceh-testo-box" data-target="#global-testimonial-popup"
-                                                        data-name="{{ $testimonial->user_name }}"
-                                                        data-designation="{{ $testimonial->designation }}"
-                                                        data-description="{{ $testimonial->testimonial_description }}"
-                                                        data-image="{{ asset('storage/uploads/backend/testimonial/' . $testimonial->images)}}">
-                                                        <div class="row">
-                                                            <div class="col-md-4">
-                                                                <div class="ceh-testo-image">
-                                                                  <img src="{{ asset('storage/uploads/backend/testimonial/' . $testimonial->images)}}" alt="blog Image" width="100">
-                                                                </div>
+        <section class="testimonials testimonials-page testo1 resc-sec {{ $index % 2 == 1 ? 'blog-bg' : '' }}" id="{{ Str::slug($category->name) }}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="wpb_text_column wpb_content_element">
+                            <div class="wpb_wrapper">
+                                <div class="title-button">
+                                    <h3 class="style1 tbg{{ $index+1 }}">
+                                        <i class="fa fa-2x fa-file"></i>
+                                        {{ $category->name }}
+                                    </h3>
+                                </div>
+                                <div class="carousel-wrap">
+                                    <div class="owl-carousel owl-carousel{{ $index }} owl-theme">
+                                        @foreach ($category->testimonials as $testimonial)
+                                            <div class="item">
+                                                <div class="ceh-testo-box" data-target="#global-testimonial-popup"
+                                                    data-name="{{ $testimonial->user_name }}"
+                                                    data-designation="{{ $testimonial->designation }}"
+                                                    data-description="{{ $testimonial->testimonial_description }}"
+                                                    data-image="{{ asset('storage/uploads/backend/testimonial/' . $testimonial->images)}}">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="ceh-testo-image">
+                                                                <img src="{{ asset('storage/uploads/backend/testimonial/' . $testimonial->images)}}" alt="Testimonial Image" width="100">
                                                             </div>
-                                                            <div class="col-md-8">
-                                                                <div class="ceh-testo-cont">
-                                                                    <div class="ceh-testo-title">
-                                                                        <h3>
-                                                                            {{ $testimonial->user_name }}
-                                                                        </h3>
-                                                                        <span>
-                                                                            {{ $testimonial->designation }}
-                                                                        </span>
-                                                                    </div>
-                                                                    <div class="ceh-testo-body">
-                                                                        <p>
-                                                                            {{ $testimonial->testimonial_short_description }}
-                                                                        </p>
-                                                                        <span>
-                                                                            Read More
-                                                                        </span>
-                                                                    </div>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="ceh-testo-cont">
+                                                                <div class="ceh-testo-title">
+                                                                    <h3>{{ $testimonial->user_name }}</h3>
+                                                                    <span>{{ $testimonial->designation }}</span>
+                                                                </div>
+                                                                <div class="ceh-testo-body">
+                                                                    <p>{{ $testimonial->testimonial_short_description }}</p>
+                                                                    <span>Read More</span>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            @endforeach
-                                        </div>
-                                        <div id="navigation-count" class="count-nav-box"></div>
+                                            </div>
+                                        @endforeach
                                     </div>
+                                    <!-- Dynamic Counter for Each Section -->
+                                    <div id="navigation-count-{{ $index }}" class="count-nav-box"></div>
                                 </div>
-
-                                @include('frontend.mobile-components.m-testimonials')
                             </div>
+                            @include('frontend.mobile-components.m-testimonials')
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
+        
         @endforeach
 
-        {{-- <a href="#body-main" class="scrollToTop" style="display: block;">
-        <i class="fa fa-arrow-up">
-        </i>
-      </a> --}}
+        <a href="#main-body" class="scrollToTop" style="display: block;"><i class="fa fa-arrow-up"></i></a>
         {{-- @include('frontend.layouts.footer') --}}
         </div>
         <!-- Global Popup fot Testomonials (Only One in the Page) -->
@@ -212,7 +197,7 @@
             addVersionToFiles();
         };
     </script>
-    <script type="text/javascript">
+    {{-- <script type="text/javascript">
         $(document).ready(function() {
             function initializeCarousel(carouselClass, navigationCountId) {
                 $(carouselClass).owlCarousel({
@@ -259,7 +244,77 @@
             initializeCarousel('.owl-carousel4', "navigation-count3");
 
         });
+    </script> --}}
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            function isMobile() {
+                return /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase());
+            }
+    
+            function initializeCarousel(carouselClass, navigationCountId) {
+                $("." + carouselClass).each(function(index) {
+                    let $carousel = $(this);
+                    let navCountId = navigationCountId + "-" + index; // Unique counter ID
+                    
+                    let totalSlides = $carousel.find(".item").length;
+                    
+                    // If no slides, hide the counter and return
+                    if (totalSlides === 0) {
+                        $("#" + navCountId).hide();
+                        return;
+                    }
+    
+                    // Check if mobile view
+                    let isMobileView = isMobile();
+    
+                    // Hide counter on desktop
+                    if (!isMobileView) {
+                        $("#" + navCountId).hide();
+                    }
+    
+                    // Initialize Owl Carousel
+                    $carousel.owlCarousel({
+                        loop: totalSlides > 1, // Disable loop if only 1 slide
+                        margin: 20,
+                        dots: isMobileView, // Show dots only on mobile
+                        nav: totalSlides > 1, // Hide navigation if only 1 slide
+                        navText: [
+                            "<i class='fa fa-angle-left'></i>",
+                            "<i class='fa fa-angle-right'></i>"
+                        ],
+                        responsive: {
+                            0: { items: 1 },
+                            768: { items: isMobileView ? 1 : 2 }, // If mobile, show only 1 item
+                            992: { items: 2 }
+                        },
+                        onInitialized: function(event) {
+                            if (isMobileView) updateNavigationCount(event, navCountId);
+                        },
+                        onChanged: function(event) {
+                            if (isMobileView) updateNavigationCount(event, navCountId);
+                        }
+                    });
+                });
+            }
+    
+            function updateNavigationCount(event, navigationCountId) {
+                if (!event.namespace) return;
+                let carousel = event.relatedTarget;
+                let totalSlides = carousel.items().length;
+                let currentSlide = carousel.relative(carousel.current()) + 1;
+    
+                $("#" + navigationCountId).html(currentSlide + " / " + totalSlides).show();
+            }
+    
+            // Initialize carousel for all sections dynamically
+            initializeCarousel("owl-carousel", "navigation-count");
+        });
     </script>
+    
+
+    
+    
     <script>
         $("#resocues-menu").owlCarousel({
             loop: true,
