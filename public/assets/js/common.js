@@ -23,7 +23,7 @@ if (isMobile) {
                 $(tabContent).hide();
 
                 var activeTab = $(this).find("a").attr("href");
-                $(activeTab).fadeIn();
+                $(activeTab).show();
                 return false;
             });
         }
@@ -194,7 +194,7 @@ if (isMobile) {
                 $(tabContent).hide();
 
                 var activeTab = $(this).find("a").attr("href");
-                $(activeTab).fadeIn();
+                $(activeTab).show();
                 return false;
             });
         }
