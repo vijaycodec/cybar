@@ -2,6 +2,12 @@
 
 @section('title', 'Home | Cyber Security Industry Solutions')
 
+<style>
+    .cn-hover-box:hover .cn-content.height {
+        height: 0px;
+        display: block;
+    }
+</style>
 {{-- <title>Cyber Security Industry Solutions Services Training in Delhi,NCR</title> --}}
 {{-- <meta name="viewport" content="width=device-width, initial-scale=1"> --}}
 
@@ -5855,11 +5861,11 @@
 
 @push('scripts')
     <!-- Jquery code -->
-    {{-- <script src="/assets/js/slider.js"></script>
+    <script src="/assets/js/slider.js"></script>
     <script type="text/javascript" src="/assets/js/common.js?v-1"></script>
     <script type="text/javascript" src="/assets/js/homepage.js?v14"></script>
     <script type="text/javascript" src="/assets/js/mobile-menu.js"></script>
-    <script type="text/javascript" src="/assets/js/main.js?v=32"></script> --}}
+    <script type="text/javascript" src="/assets/js/main.js?v=32"></script>
     <script type="text/javascript">
         function addVersionToFiles() {
             var version = new Date().getTime();
@@ -6016,11 +6022,3 @@
     </script>
 @endpush
 
-<style>
-    .cn-hover-box:hover .cn-content.height {
-        height: 0px;
-        display: block;
-    }
-</style>
-
-</html>

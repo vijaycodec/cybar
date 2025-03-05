@@ -35,11 +35,7 @@
                             @endforeach
                         </select>
                     </fieldset>
-                    <fieldset class="name">
-                        <div class="body-title"> sub Category Name <span class="tf-color-1">*</span></div>
-                        <input class="flex-grow" type="text" placeholder="Category Name" name="sub_category" tabindex="0"
-                            value="{{ old('sub_category') }}" aria-required="true" required="">
-                    </fieldset>
+                    
                     <fieldset class="name">
                         <div class="body-title"> Video URL  <span class="tf-color-1">*</span></div>
                         <input class="flex-grow" type="text" placeholder="Video URL" name="video_url" tabindex="0"

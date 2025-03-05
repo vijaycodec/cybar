@@ -7,8 +7,7 @@
     <body>
         <a id="button"></a>
         <!-- Header start -->
-        @include('frontend.layouts.header')
-
+        @include('frontend.layouts.resv-header')
         <!-- banner start -->
         <section class="sec_ban resource-detail-banner" id="resources-banner">
             <div class="home-ban">
@@ -141,28 +140,8 @@
                                         </div>
                                     </div>
                                     <div class="resources-conetent3 rv-space" id="rv3">
-                                        @if (session('success'))
-                                            <div class="alert alert-success">
-                                                {{ session('success') }}
-                                            </div>
-                                        @endif
-
-                                        @if ($errors->any())
-                                            <div class="alert alert-danger">
-                                                <ul>
-                                                    @foreach ($errors->all() as $error)
-                                                        <li>{{ $error }}</li>
-                                                    @endforeach
-                                                </ul>
-                                            </div>
-                                        @endif
+                                       
                                         <h3>
-                                            <!-- Your choice of data platform is critical. It will serve as the foundation
-
-                                                                                for your digital transformation, enabling you to gain actionable insight and
-                                                                                drive immense and measurable value back to the business. This white paper
-                                                                                highlights why Cloudera Enterprise is uniquely suited to the task. -->
-
                                             Comments
                                         </h3>
                                         <div class="comment-form">
@@ -204,7 +183,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4" id="rv4">
                             <div class="mb-4">
                                 <h4>Trending Resources</h4>
                             </div>
@@ -237,7 +216,9 @@
 @endsection
 
 @push('scripts')
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+{{-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> --}}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <!-- Jquery code -->
     <script type="text/javascript">
         $(document).ready(function() {
@@ -278,7 +259,7 @@
             addVersionToFiles();
         };
     </script>
-    <script>
+    {{-- <script>
         $('#comments-form').on('submit', function(e) {
             e.preventDefault();
 
@@ -362,9 +343,9 @@
                 }
             });
         });
-    </script>
+    </script> --}}
     <!-- Include the reCAPTCHA API -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    {{-- <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
         function onSubmit(event) {
             event.preventDefault(); // Prevent the form from submitting immediately
@@ -372,6 +353,7 @@
             // Trigger reCAPTCHA validation before submission
             grecaptcha.execute();
         }
-    </script>
+    </script> --}}
     <!-- End of recaptcha -->
+    @include('frontend.layouts.right-menu-js')
 @endpush

@@ -46,6 +46,12 @@
                         </select>
                     </fieldset>
 
+                    <fieldset class="name">
+                        <div class="body-title"> Video URL <span class="tf-color-1">*</span></div>
+                        <input class="flex-grow" type="text" placeholder="Video URL" name="video_url" tabindex="0"
+                            value="{{ old('video_url', $events->video_url) }}" aria-required="true">
+                    </fieldset>
+
                     <!-- Upload Images -->
                     <fieldset>
                         <div class="body-title">Upload Image <span class="tf-color-1">*</span></div>
@@ -54,7 +60,7 @@
                             <!-- Image preview container -->
                             <div class="item" id="imgpreview" style="text-align: center;">
                                 @if ($events->images)
-                                    <img src="{{ asset('uploads/backend/events/' . $events->images) }}" id="preview-img"
+                                    <img src="{{ asset('storage/uploads/backend/event/' . $events->images) }}" id="preview-img"
                                         class="effect8" alt="Preview Image" style="max-width: 50%; height: auto;">
                                     <!-- Adjusted image width -->
                                     <button type="button" id="deleteImage" class="delete-btn">Delete</button>

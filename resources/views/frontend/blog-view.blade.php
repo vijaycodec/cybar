@@ -7,7 +7,7 @@
     <body>
         <a id="button"></a>
         <!-- Header start -->
-        @include('frontend.layouts.header')
+        @include('frontend.layouts.blogv-header')
 
         <!-- banner start -->
         <section class="sec_ban resource-detail-banner" id="resources-banner">
@@ -204,9 +204,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4" id="rv4">
                             <div class="mb-4">
-                                <h4>Trending Resources</h4>
+                                <h4>Trending Blogs</h4>
                             </div>
                             @php
                             $heights = ['400px', '300px', '200px', '300px'];
@@ -237,7 +237,8 @@
 @endsection
 
 @push('scripts')
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+{{-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> --}}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Jquery code -->
     <script type="text/javascript">
         $(document).ready(function() {
@@ -363,6 +364,7 @@
             });
         });
     </script>
+        @include('frontend.layouts.right-menu-js')
     <!-- Include the reCAPTCHA API -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
