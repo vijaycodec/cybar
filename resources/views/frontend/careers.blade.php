@@ -132,56 +132,43 @@
         <!--  -->
         <!--  -->
         <section class="mobile-view">
-
-            <!-- career 1 start -->
-
-            <!-- career 1 end -->
-            <!-- career 1 start -->
             @foreach ($categories as $index => $category)
                 <div class="rbg{{ $index + 1 }} m-career" id="mob-{{ Str::slug($category->name) }}">
-
                     <div class="career-title">
-                        <h3> {{ $category->name }}</h3>
+                        <h3>{{ $category->name }}</h3>
                     </div>
-
+        
                     <div class="carousel-wrap">
-                        <div class="owl-carousel11 owl-carousel owl-theme">
+                        <div class="owl-carousel11 owl-carousel owl-theme owl-carousel-{{ $index }}"> {{-- Dynamic Class --}}
                             @foreach ($category->careers as $career)
                                 <div class="item">
                                     <div class="blog-cat-inn">
                                         <div class="blog-cat">
-                                            <a href="careers-view.php">
+                                            <a href="{{ route('careers-view', $career->id) }}">
                                                 <h4>{{ $career->subcategory }}</h4>
                                                 <p>Location : {{ $career->location }} Educational Background :
                                                     {{ $career->educational_background }}</p>
                                             </a>
                                             <div class="copy-right">
                                                 <ul>
-                                                    <li><a target="_blank" href="#" class="icoFacebook"
-                                                            title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                                                    <li><a target="_blank" href="#" class="icoTwitter"
-                                                            title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                                                    <li><a target="_blank" href="#" class="icoGoogle"
-                                                            title="Google +"><i class="fa fa-google-plus"></i></a></li>
-                                                    <li><a target="_blank" href="#" title="linkedin"><i
-                                                                class="fa fa-linkedin"></i></a></li>
+                                                    <li><a target="_blank" href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                                    <li><a target="_blank" href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                                    <li><a target="_blank" href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                                                    <li><a target="_blank" href="#" title="linkedin"><i class="fa fa-linkedin"></i></a></li>
                                                 </ul>
                                                 <div class="clearfix"></div>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             @endforeach
-
                         </div>
-                        <div id="navigation-count11" class="count-nav-box"></div>
+                        <div id="navigation-count-{{ $index }}" class="count-nav-box"></div> {{-- Dynamic Counter ID --}}
                     </div>
                 </div>
             @endforeach
-            <!-- career 1 end -->
-
         </section>
+        
         <!--  -->
         <div class="offer-sec-inn mobile-view offer-sec-inn1 career-space" id="tvc">
             <div class="view_blog">
@@ -440,7 +427,7 @@
             </div>
         </section>
 
-        <a href="#body-main" class="scrollToTop" style="display: block;"><i class="fa fa-arrow-up"></i></a>
+        <a href="#main-body" class="scrollToTop" style="display: block;"><i class="fa fa-arrow-up"></i></a>
 
         </div>
     </body>
@@ -508,7 +495,7 @@
             addVersionToFiles();
         };
     </script>
-    <script type="text/javascript">
+    {{-- <script type="text/javascript">
         $(document).ready(function() {
             function initializeCarousel(carouselClass, navigationCountId) {
                 $(carouselClass).owlCarousel({
@@ -562,7 +549,75 @@
             initializeCarousel('.owl-carousel11', "navigation-count11");
 
         });
+    </script> --}}
+
+
+    <script>
+        $(document).ready(function() {
+            function initializeCarousel(carouselId, navigationCountId) {
+                let $carousel = $("#" + carouselId);
+                let totalSlides = $carousel.find(".item").length; // Count slides
+    
+                // If no slides exist, show "0 / 0" and return
+                if (totalSlides === 0) {
+                    $("#" + navigationCountId).text("0 / 0");
+                    return;
+                }
+    
+                // Initialize Owl Carousel only if there are slides
+                $carousel.owlCarousel({
+                    loop: totalSlides > 1, // Loop only if more than 1 slide
+                    margin: 20,
+                    dots: true,
+                    nav: totalSlides > 1, // Show nav only if more than 1 slide
+                    navText: [
+                        "<i class='fa fa-angle-left'></i>",
+                        "<i class='fa fa-angle-right'></i>"
+                    ],
+                    responsive: {
+                        0: { items: 1 },
+                        768: { items: 2 },
+                        992: { items: 3 }
+                    },
+                    onInitialized: function(event) {
+                        updateNavigationCount(event, navigationCountId);
+                    },
+                    onChanged: function(event) {
+                        updateNavigationCount(event, navigationCountId);
+                    }
+                });
+            }
+    
+            function updateNavigationCount(event, navigationCountId) {
+                if (!event.namespace) return;
+                let carousel = event.relatedTarget;
+                let currentSlide = carousel.relative(carousel.current()) + 1;
+                let totalSlides = carousel.items().length;
+                $("#" + navigationCountId).text(currentSlide + " / " + totalSlides).show();
+            }
+    
+            // Dynamically initialize each carousel inside .carousel-wrap
+            $(".carousel-wrap").each(function(index) {
+                let $carousel = $(this).find(".owl-carousel");
+                let carouselId = "owl-carousel-" + index;
+                let counterId = "navigation-count-" + index;
+    
+                // Assign unique IDs if not already set
+                if (!$carousel.attr("id")) {
+                    $carousel.attr("id", carouselId);
+                }
+    
+                if (!$("#" + counterId).length) {
+                    $(this).append(`<div id="${counterId}" class="count-nav-box"></div>`);
+                }
+    
+                initializeCarousel(carouselId, counterId);
+            });
+        });
     </script>
+    
+    
+    
     <script>
         $("#resocues-menu").owlCarousel({
             loop: true,

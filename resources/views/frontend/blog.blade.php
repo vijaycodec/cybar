@@ -52,16 +52,13 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="wpb_text_column wpb_content_element">
-                           
-                            <div class="wpb_wrapper" >
+                            <div class="wpb_wrapper">
                                 <div class="title-button bbg{{ $index + 1 }}">
                                     <h3 class="style1"><i class="fa fa-2x fa-file"></i>{{$category->name}}</h3>
                                 </div>
                                 <div class="carousel-wrap">
-
-                                  
-                                    <div class="owl-carousel1 owl-carousel owl-theme">
-                                        <!--  -->
+                                    <!-- Owl Carousel -->
+                                    <div class="owl-carousel owl-theme" id="carousel-{{ $index }}" data-index="{{ $index }}">
                                         @foreach($category->blogs as $blog)
                                         <div class="item">
                                             <div class="template15-wrap-main">
@@ -80,21 +77,22 @@
                                         </div>
                                         @endforeach
                                     </div>
-                                  
-                                    <div id="navigation-count" class="count-nav-box"></div>
+        
+                                    <!-- Navigation Counter (Now Outside the Carousel) -->
+                                    <div id="navigation-count-{{ $index }}" class="count-nav-box"></div>
                                 </div>
                             </div>
-                            
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        
         @endforeach
         <!--  -->
 
         <!--  -->
-        {{-- <a href="#body-main" class="scrollToTop" style="display: block;"><i class="fa fa-arrow-up"></i></a> --}}
+        <a href="#body-main" class="scrollToTop" style="display: block;"><i class="fa fa-arrow-up"></i></a>
         {{-- @include('frontend.layouts.footer') --}}
         </div>
     </body>
@@ -148,7 +146,7 @@
             addVersionToFiles();
         };
     </script>
-    <script type="text/javascript">
+    {{-- <script type="text/javascript">
         $(document).ready(function() {
             function initializeCarousel(carouselClass, navigationCountId) {
                 $(carouselClass).owlCarousel({
@@ -198,6 +196,61 @@
             initializeCarousel('.owl-carousel7', "navigation-count6");
 
         });
+    </script> --}}
+
+    <script>
+   $(document).ready(function() {
+    function initializeCarousel(carouselId, navigationCountId) {
+        let $carousel = $("#" + carouselId);
+        let totalSlides = $carousel.find(".item").length; // Count slides
+
+        // If no slides exist, show "0/0" and return
+        if (totalSlides === 0) {
+            $("#" + navigationCountId).text("0 / 0");
+            return;
+        }
+
+        // Initialize Owl Carousel if slides exist
+        $carousel.owlCarousel({
+            loop: true,
+            margin: 20,
+            dots: true,
+            nav: true,
+            navText: [
+                "<i class='fa fa-angle-left'></i>",
+                "<i class='fa fa-angle-right'></i>"
+            ],
+            responsive: {
+                0: { items: 1 },
+                768: { items: 2 },
+                992: { items: 3 }
+            },
+            onInitialized: function(event) {
+                updateNavigationCount(event, navigationCountId);
+            },
+            onChanged: function(event) {
+                updateNavigationCount(event, navigationCountId);
+            }
+        });
+    }
+
+    function updateNavigationCount(event, navigationCountId) {
+        if (!event.namespace) return;
+        var carousel = event.relatedTarget;
+        var currentSlide = carousel.relative(carousel.current()) + 1;
+        var totalSlides = carousel.items().length;
+        $("#" + navigationCountId).text(currentSlide + " / " + totalSlides);
+    }
+
+    $(".carousel-wrap").each(function() {
+        let carousel = $(this).find(".owl-carousel");
+        let index = carousel.data("index"); 
+        let counterId = "navigation-count-" + index;
+        initializeCarousel(carousel.attr("id"), counterId);
+    });
+});
+
+
     </script>
     <script>
         $("#resocues-menu").owlCarousel({

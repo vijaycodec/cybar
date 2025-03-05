@@ -61,17 +61,16 @@
                                         <h3 class="style1"><i class="fa fa-2x fa-file"></i>{{ $category->name }}</h3>
                                     </div>
                                     <div class="carousel-wrap">
-                                        <div class="owl-carousel1 owl-carousel owl-theme">
-                                            <!-- Check if category has resources -->
+                                        <div class="owl-carousel1 owl-carousel owl-theme" id="carousel-{{ $index }}">
                                             @foreach ($category->resources as $resource)
                                                 <div class="item">
                                                     <a href="{{ route('resources-view', $resource->id) }}" tabindex="-1">
                                                         <div class="card_wrapper">
                                                             <div class="card_img">
                                                                 <div class="cn-hover-box">
-                                                                    <div class="cn-hover-img"> <img
-                                                                            src="{{ asset('uploads/backend/resources/' . $resource->images) }}"
-                                                                            class="img-fluid" alt="{{ $resource->title }}">
+                                                                    <div class="cn-hover-img"> 
+                                                                        <img src="{{ asset('uploads/backend/resources/' . $resource->images) }}" 
+                                                                             class="img-fluid" alt="{{ $resource->title }}">
                                                                     </div>
                                                                     <div class="cn-content">
                                                                         <p>{{ $resource->short_desc }}</p>
@@ -90,10 +89,11 @@
                                                     </a>
                                                 </div>
                                             @endforeach
-
-
                                         </div>
+                                        <!-- Counter display -->
+                                        <div id="navigation-count-{{ $index }}" class="count-nav-box"></div>
                                     </div>
+                                    
                                 </div>
                             @endforeach
                         </div>
@@ -152,7 +152,7 @@
                 </div>
             </div>
         </section>
-         <a href="#resources-banner" class="scrollToTop"><i class="fa fa-arrow-up"></i></a> 
+        <a href="#main-body" class="scrollToTop" style="display: block;"><i class="fa fa-arrow-up"></i></a>
 
         {{-- @include('frontend.layouts.footer') --}}
         </div>
@@ -210,7 +210,7 @@
         };
     </script>
 
-    <script type="text/javascript">
+    {{-- <script type="text/javascript">
         $(document).ready(function() {
             function isMobile() {
                 const userAgent = navigator.userAgent.toLowerCase();
@@ -296,7 +296,72 @@
             initializeCarousel('.owl-carousel16', "navigation-count15");
 
         });
+    </script> --}}
+
+    <script>
+        $(document).ready(function () {
+            function isMobile() {
+                const userAgent = navigator.userAgent.toLowerCase();
+                return /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/.test(userAgent);
+            }
+    
+            function initializeCarousel(carouselId, navigationCountId) {
+                let $carousel = $("#" + carouselId);
+                let totalSlides = $carousel.find(".item").length; // Count total slides
+    
+                // If no slides exist, show "0 / 0" and return
+                if (totalSlides === 0) {
+                    $("#" + navigationCountId).text("0 / 0");
+                    return;
+                }
+    
+                // Initialize Owl Carousel if slides exist
+                $carousel.owlCarousel({
+                    loop: true,
+                    margin: 20,
+                    dots: isMobile(),
+                    nav: true,
+                    navText: [
+                        "<i class='fa fa-angle-left'></i>",
+                        "<i class='fa fa-angle-right'></i>"
+                    ],
+                    responsive: {
+                        0: { items: 1 },
+                        768: { items: 2 },
+                        992: { items: 3 }
+                    },
+                    onInitialized: function (event) {
+                        updateNavigationCount(event, navigationCountId);
+                    },
+                    onChanged: function (event) {
+                        updateNavigationCount(event, navigationCountId);
+                    }
+                });
+            }
+    
+            function updateNavigationCount(event, navigationCountId) {
+                if (!event.namespace) return;
+                var carousel = event.relatedTarget;
+                var currentSlide = carousel.relative(carousel.current()) + 1;
+                var totalSlides = carousel.items().length;
+                $("#" + navigationCountId).text(currentSlide + " / " + totalSlides);
+            }
+    
+            // Loop through each owl-carousel and initialize with unique ID
+            $(".owl-carousel1").each(function (index) {
+                let $carousel = $(this);
+                let carouselId = "carousel-" + index;
+                let navigationCountId = "navigation-count-" + index;
+    
+                // Assign IDs dynamically
+                $carousel.attr("id", carouselId);
+                $("#navigation-count").attr("id", navigationCountId);
+    
+                initializeCarousel(carouselId, navigationCountId);
+            });
+        });
     </script>
+    
     <script>
         $("#resocues-menu").owlCarousel({
             loop: true,

@@ -21,7 +21,6 @@
                                             <li id="li_border"><a class="tablinks1 {{ $loop->first ? 'active' : ' ' }}"
                                                     href="#{{ Str::slug($category->name) }}"
                                                     onclick="openCity(event, '{{ Str::slug($category->name) }}')">{{ $category->name }}</a>
-
                                             </li>
                                         @endforeach
                                     </ul>
@@ -109,7 +108,7 @@
                                     <div class="item">
                                         <div class="mrgn-btm-iconbx">
                                             <a
-                                                href="{{ route('l3-template', ['sub_category_id' => $singleTraining->subcategory->id, 'pageid' => $page_id, 'category_id' => $category->id]) }}">
+                                                href="{{ route('l3-template', ['sb' => $singleTraining->subcategory->id, 'pg' => $page_id, 'ct' => $category->id]) }}">
                                                 <div class="iconbox">
                                                     <div class="box-header">
                                                         <div class="box-icon pst-listing">
