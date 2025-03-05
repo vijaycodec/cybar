@@ -5863,8 +5863,6 @@
     <!-- Jquery code -->
     <script src="{{asset('assets/js/slider.js')}}"></script>
     <script type="text/javascript" src="{{asset('assets/js/common.js?v-1')}}"></script>
-    <script type="text/javascript" src="{{asset('assets/js/homepage.js?v14')}}"></script>
-    <script type="text/javascript" src="{{asset('assets/js/mobile-menu.js')}}"></script>
     <script type="text/javascript" src="{{asset('assets/js/main.js?v=32')}}"></script>
 
     <script type="text/javascript">
@@ -5892,7 +5890,7 @@
         };
     </script>
 
-    <script>
+<script>
         $('.close-acrodin').click(function(e) {
             e.preventDefault();
             var $panel = $(this).closest('.acc__panel');
