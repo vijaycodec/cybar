@@ -5861,11 +5861,11 @@
 
 @push('scripts')
     <!-- Jquery code -->
-    <script src="/assets/js/slider.js"></script>
-    <script type="text/javascript" src="/assets/js/common.js?v-1"></script>
-    <script type="text/javascript" src="/assets/js/homepage.js?v14"></script>
-    <script type="text/javascript" src="/assets/js/mobile-menu.js"></script>
-    <script type="text/javascript" src="/assets/js/main.js?v=32"></script>
+    <script src="{{asset('assets/js/slider.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/common.js?v-1')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/homepage.js?v14')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/mobile-menu.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/main.js?v=32')}}"></script>
     <script type="text/javascript">
         function addVersionToFiles() {
             var version = new Date().getTime();
