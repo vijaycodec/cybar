@@ -5866,6 +5866,7 @@
     <script type="text/javascript" src="{{asset('assets/js/homepage.js?v14')}}"></script>
     <script type="text/javascript" src="{{asset('assets/js/mobile-menu.js')}}"></script>
     <script type="text/javascript" src="{{asset('assets/js/main.js?v=32')}}"></script>
+
     <script type="text/javascript">
         function addVersionToFiles() {
             var version = new Date().getTime();
@@ -5891,19 +5892,7 @@
         };
     </script>
 
-    <script>
-        $('.close-acrodin').click(function(e) {
-            e.preventDefault();
-            var $panel = $(this).closest('.acc__panel');
-            $panel.slideUp();
-            $(this).closest('.acc').find('.acc__title.active').removeClass('active');
 
-            var $accTitle = $(this).closest('.acc__card').find('.acc__title');
-            if ($accTitle.length > 0) {
-                $('html, body').scrollTop($accTitle.offset().top - 60);
-            }
-        });
-    </script>
 
     <script>
         $("#awrad-slider").owlCarousel({
@@ -5950,15 +5939,6 @@
 
         });
 
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'auto' // Remove this line or change 'smooth' to 'auto'
-                });
-            });
-        });
     </script>
     <script>
         $('.cn-content').click(function() {
