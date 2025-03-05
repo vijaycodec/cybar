@@ -1,3 +1,27 @@
+function isMobile() {
+   const userAgent = navigator.userAgent.toLowerCase();
+   return /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/.test(userAgent);
+}
+
+if(isMobile){
+   $('.cn-content').click(function () {
+      $(this).css({
+          "height": "0%"
+      }).find('p').css({
+          "display": "none"
+      });
+  });
+  
+  $('.cn-hover-img').click(function () {
+      $(this).siblings('.cn-content').css({
+          "height": "100%"
+      }).find('p').css({
+          "display": "block",
+          "color": "#fff"
+      });
+  });
+}
+
 // sider start for web
 $("#home-slider1, #home-slider2, #home-slider3, #home-slider4, #home-slider5, #home-slider11, #home-slider12, #home-slider13, #home-slider14, #home-slider15").owlCarousel({
     loop: true,
