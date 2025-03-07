@@ -30,6 +30,7 @@ use App\Http\Controllers\backend\menublogController;
 use App\Http\Controllers\backend\menueventController;
 use App\Http\Controllers\backend\menutestimonialController;
 use App\Http\Controllers\backend\careerController  as BackendCareerController;
+use App\Http\Controllers\backend\seoController;
 use App\Http\Controllers\frontend\careerViewController;
 use Illuminate\Support\Facades\Route;
 
@@ -191,6 +192,19 @@ Route::middleware(['auth','admin','prevent_history'])->group(function () {
     route::get('/career/edit/{id}', [BackendCareerController::class, 'edit'])->name('career.edit');
     Route::put('career/update/{id}', [BackendCareerController::class, 'update'])->name('career.update');
     Route::delete('career/delete/{id}', [BackendCareerController::class, 'destroy'])->name('career.destroy');
+
+    // SEO Details Routes
+    route::get('/seo-details/list', [seoController::class, 'index'])->name('seo-details.list');
+    route::get('/seo-details/create', [seoController::class, 'create'])->name('seo-details.create');
+    route::post('/seo-details/store', [seoController::class, 'store'])->name('seo-details.store');
+    Route::get('/seo-details/show/{id}', [seoController::class, 'show'])->name('seo-details.show');
+    route::get('/seo-details/edit/{id}', [seoController::class, 'edit'])->name('seo-details.edit');
+    Route::put('seo-details/update/{id}', [seoController::class, 'update'])->name('seo-details.update');
+    Route::delete('seo-details/delete/{id}', [seoController::class, 'destroy'])->name('seo-details.destroy');
+
+     // L3 category and sub-category Dependent Routes 
+     Route::get('/seo-get-categories', [seoController::class, 'SeoGetCategories'])->name('seo-get-categories');
+     Route::get('/seo-get-subcategories', [seoController::class, 'SeoGetSubCategories'])->name('seo-get-subcategories');
 
 });
 

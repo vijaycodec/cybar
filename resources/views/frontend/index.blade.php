@@ -9,7 +9,8 @@
     }
 </style>
 {{-- <title>Cyber Security Industry Solutions Services Training in Delhi,NCR</title> --}}
-{{-- <meta name="viewport" content="width=device-width, initial-scale=1"> --}}
+{{--
+<meta name="viewport" content="width=device-width, initial-scale=1"> --}}
 
 {{-- @include('frontend.layouts.header-css') --}}
 {{-- test --}}
@@ -27,7 +28,8 @@
                 <video autoplay="" loop="" muted="" playsinline="" class="row full-banner banner center-mk-vid"
                     poster="../content/dam/www/marketing/images/banners/solutions-insights-grow-2.jpg">
                     <source src="{{ asset('assets/video/solutions-webbg-grow-v1-small.mp4') }}" type="video/mp4">
-                    {{-- <source src="{{ asset('assets/video/solutions-webbg-grow-v1-small.mp4') }}" type="video/webm"> --}}
+                    {{--
+                    <source src="{{ asset('assets/video/solutions-webbg-grow-v1-small.mp4') }}" type="video/webm"> --}}
                     Your browser does not support the video tag.
                 </video>
                 <div class="video-content container">
@@ -102,7 +104,8 @@
                     <div class="col-md-4">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/forensic-seervices.jpg')}}"> </div>
+                                <div class="cn-hover-img"> <img src="{{asset('assets/images/forensic-seervices.jpg')}}">
+                                </div>
                                 <div class="cn-content">
                                     <p>Identify and resolve Ecrime incidents that adversely impact organizations with
                                         cybercrime /
@@ -161,11 +164,11 @@
                 <div class="row">
                     <div class="cn-tabs1">
                         <ul id="tabs-nav1" class="home-tabs">
-                            <li><a href="#tab11">Vulnerability Assesement & Penetration Testing</a></li>
-                            <li><a href="#tab12">IT Security Audit, Risk & Compliance</a></li>
-                            <li><a href="#tab13">Managed IT Security Solutions </a></li>
-                            <li><a href="#tab14">Digital Forensic & Cyber Fraud Management </a></li>
-                            <li><a href="#tab15">SOC (Security Operation Center) as a Service </a></li>
+                            <li><a class="scr-tabs1" href="#tab11">Vulnerability Assesement & Penetration Testing</a></li>
+                            <li><a class="scr-tabs1" href="#tab12">IT Security Audit, Risk & Compliance</a></li>
+                            <li><a class="scr-tabs1" href="#tab13">Managed IT Security Solutions </a></li>
+                            <li><a class="scr-tabs1" href="#tab14">Digital Forensic & Cyber Fraud Management </a></li>
+                            <li><a class="scr-tabs1" href="#tab15">SOC (Security Operation Center) as a Service </a></li>
                         </ul>
                         <!-- END tabs-nav -->
                         <div id="tabs-content">
@@ -990,7 +993,8 @@
                     <div class="col-md-2 width238">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/security-audit-compliance.jpg')}}"> </div>
+                                <div class="cn-hover-img"> <img
+                                        src="{{asset('assets/images/security-audit-compliance.jpg')}}"> </div>
                                 <div class="cn-content">
                                     <p>Help organizations with regular and structured evaluation of compliance with the
                                         security
@@ -1007,7 +1011,8 @@
                     <div class="col-md-2 width238">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/managed-it-services.jpg')}}"> </div>
+                                <div class="cn-hover-img"> <img src="{{asset('assets/images/managed-it-services.jpg')}}">
+                                </div>
                                 <div class="cn-content">
                                     <p>Preferred Service Partner" for corporate clients with array of customized security
                                         solutions
@@ -1024,7 +1029,8 @@
                     <div class="col-md-2 width238">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/forensic-seervices.jpg')}}"> </div>
+                                <div class="cn-hover-img"> <img src="{{asset('assets/images/forensic-seervices.jpg')}}">
+                                </div>
                                 <div class="cn-content">
                                     <p>Identify and resolve Ecrime incidents that adversely impact organizations with
                                         cybercrime /
@@ -1064,7 +1070,8 @@
                     <div class="item ">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/security-audit-compliance.jpg')}}"> </div>
+                                <div class="cn-hover-img"> <img
+                                        src="{{asset('assets/images/security-audit-compliance.jpg')}}"> </div>
                                 <div class="cn-content">
                                     <p>Help organizations with regular and structured evaluation of compliance with the
                                         security
@@ -1099,7 +1106,8 @@
                     <div class="item">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/managed-it-services.jpg')}}"> </div>
+                                <div class="cn-hover-img"> <img src="{{asset('assets/images/managed-it-services.jpg')}}">
+                                </div>
                                 <div class="cn-content">
                                     <p>Preferred Service Partner" for corporate clients with array of customized security
                                         solutions
@@ -1116,7 +1124,8 @@
                     <div class="item">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/forensic-seervices.jpg')}}"> </div>
+                                <div class="cn-hover-img"> <img src="{{asset('assets/images/forensic-seervices.jpg')}}">
+                                </div>
                                 <div class="cn-content">
                                     <p>Identify and resolve Ecrime incidents that adversely impact organizations with
                                         cybercrime /
@@ -1168,11 +1177,11 @@
                 <div class="row">
                     <div class="cn-tabs">
                         <ul id="tabs-nav" class="home-tabs">
-                            <li><a href="#tab1">Vulnerability Assesement & Penetration Testing</a></li>
-                            <li><a href="#tab2">IT Security Audit, Risk & Compliance</a></li>
-                            <li><a href="#tab3">Managed IT Security Solutions </a></li>
-                            <li><a href="#tab4">Digital Forensic & Cyber Fraud Management </a></li>
-                            <li><a href="#tab5">SOC (Security Operation Center) as a Service </a></li>
+                            <li><a class="scr-tabs" href="#tab1">Vulnerability Assesement & Penetration Testing</a></li>
+                            <li><a class="scr-tabs" href="#tab2">IT Security Audit, Risk & Compliance</a></li>
+                            <li><a class="scr-tabs" href="#tab3">Managed IT Security Solutions </a></li>
+                            <li><a class="scr-tabs" href="#tab4">Digital Forensic & Cyber Fraud Management </a></li>
+                            <li><a class="scr-tabs" href="#tab5">SOC (Security Operation Center) as a Service </a></li>
                         </ul>
                         <!-- END tabs-nav -->
                         <div id="tabs-content">
@@ -2618,7 +2627,8 @@
                     <div class="col-md-2 width238">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/security-audit-compliance.jpg')}}"> </div>
+                                <div class="cn-hover-img"> <img
+                                        src="{{asset('assets/images/security-audit-compliance.jpg')}}"> </div>
                                 <div class="cn-content">
                                     <p>Help organizations with regular and structured evaluation of compliance with the
                                         security
@@ -2635,7 +2645,8 @@
                     <div class="col-md-2 width238">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/managed-it-services.jpg')}}"> </div>
+                                <div class="cn-hover-img"> <img src="{{asset('assets/images/managed-it-services.jpg')}}">
+                                </div>
                                 <div class="cn-content">
                                     <p>Preferred Service Partner" for corporate clients with array of customized security
                                         solutions
@@ -2652,7 +2663,8 @@
                     <div class="col-md-2 width238">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/forensic-seervices.jpg')}}"> </div>
+                                <div class="cn-hover-img"> <img src="{{asset('assets/images/forensic-seervices.jpg')}}">
+                                </div>
                                 <div class="cn-content">
                                     <p>Identify and resolve Ecrime incidents that adversely impact organizations with
                                         cybercrime /
@@ -2692,7 +2704,8 @@
                     <div class="item">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/forensic-seervices.jpg')}}"> </div>
+                                <div class="cn-hover-img"> <img src="{{asset('assets/images/forensic-seervices.jpg')}}">
+                                </div>
                                 <div class="cn-content">
                                     <p>Identify and resolve Ecrime incidents that adversely impact organizations with
                                         cybercrime /
@@ -2709,7 +2722,8 @@
                     <div class="item ">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/security-audit-compliance.jpg')}}"> </div>
+                                <div class="cn-hover-img"> <img
+                                        src="{{asset('assets/images/security-audit-compliance.jpg')}}"> </div>
                                 <div class="cn-content">
                                     <p>Help organizations with regular and structured evaluation of compliance with the
                                         security
@@ -2744,7 +2758,8 @@
                     <div class="item">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/managed-it-services.jpg')}}"> </div>
+                                <div class="cn-hover-img"> <img src="{{asset('assets/images/managed-it-services.jpg')}}">
+                                </div>
                                 <div class="cn-content">
                                     <p>Preferred Service Partner" for corporate clients with array of customized security
                                         solutions
@@ -2810,11 +2825,11 @@
                 <div class="row">
                     <div class="cn-tabs1">
                         <ul id="tabs-nav2" class="desktop home-nav-v2">
-                            <li><a href="#tab116">Cybersecurity </a></li>
-                            <li><a href="#tab117">Ethical Hacking </a></li>
-                            <li><a href="#tab118">Penetration Testing </a></li>
-                            <li><a href="#tab119">Vulnerability Assessment</a></li>
-                            <li><a href="#tab110">Certification </a></li>
+                            <li><a class="scr-tabs2" href="#tab116">Cybersecurity </a></li>
+                            <li><a class="scr-tabs2" href="#tab117">Ethical Hacking </a></li>
+                            <li><a class="scr-tabs2" href="#tab118">Penetration Testing </a></li>
+                            <li><a class="scr-tabs2" href="#tab119">Vulnerability Assessment</a></li>
+                            <li><a class="scr-tabs2" href="#tab110">Certification </a></li>
                         </ul>
                         <!-- END tabs-nav -->
                         <div id="tabs-content">
@@ -2841,7 +2856,8 @@
                                         </div>
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="{{asset('assets/images/governance-risk-compliance.webp')}}" alt="">
+                                                <img src="{{asset('assets/images/governance-risk-compliance.webp')}}"
+                                                    alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -2914,8 +2930,7 @@
                                     <div id="home-slider3" class="owl-carousel owl-theme">
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="/assets/images/Training-calendar-Codec-Networks.webp"
-                                                    alt="">
+                                                <img src="/assets/images/Training-calendar-Codec-Networks.webp" alt="">
                                             </div>
                                         </div>
                                         <div class="itmes">
@@ -2925,8 +2940,7 @@
                                         </div>
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="/assets/images/ec-council-training-certification.webp"
-                                                    alt="">
+                                                <img src="/assets/images/ec-council-training-certification.webp" alt="">
                                             </div>
                                         </div>
                                         <div class="itmes">
@@ -2944,8 +2958,7 @@
                                     <div id="home-slider4" class="owl-carousel owl-theme">
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="/assets/images/Training-calendar-Codec-Networks.webp"
-                                                    alt="">
+                                                <img src="/assets/images/Training-calendar-Codec-Networks.webp" alt="">
                                             </div>
                                         </div>
                                         <div class="itmes">
@@ -2955,14 +2968,12 @@
                                         </div>
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="assets/images/ec-council-training-certification.webp"
-                                                    alt="">
+                                                <img src="assets/images/ec-council-training-certification.webp" alt="">
                                             </div>
                                         </div>
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="/assets/images/governance-risk-compliance.webp"
-                                                    alt="">
+                                                <img src="/assets/images/governance-risk-compliance.webp" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -2976,8 +2987,7 @@
                                     <div id="home-slider5" class="owl-carousel owl-theme">
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="/assets/images/Training-calendar-Codec-Networks.webp"
-                                                    alt="">
+                                                <img src="/assets/images/Training-calendar-Codec-Networks.webp" alt="">
                                             </div>
                                         </div>
                                         <div class="itmes">
@@ -2987,14 +2997,12 @@
                                         </div>
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="/assets/images/ec-council-training-certification.webp"
-                                                    alt="">
+                                                <img src="/assets/images/ec-council-training-certification.webp" alt="">
                                             </div>
                                         </div>
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="/assets/images/governance-risk-compliance.webp"
-                                                    alt="">
+                                                <img src="/assets/images/governance-risk-compliance.webp" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -3773,31 +3781,25 @@
             <div class="container">
                 <div class="row">
                     <div id="client-logo" class="owl-carousel owl-theme">
-                        <div class="item"> <img src="assets/images/clients/eccoincil-partnerlogo.png"
-                                class="img-fluid" alt="">
+                        <div class="item"> <img src="assets/images/clients/eccoincil-partnerlogo.png" class="img-fluid"
+                                alt="">
                         </div>
-                        <div class="item"> <img src="assets/images/clients/pecb-partnerlogo.png" class="img-fluid"
-                                alt=""></div>
-                        <div class="item"><img src="assets/images/clients/mcafee.png" class="img-fluid"
-                                alt=""></div>
-                        <div class="item"><img src="assets/images/clients/being-cert-logopartner.png"
-                                class="img-fluid" alt="">
+                        <div class="item"> <img src="assets/images/clients/pecb-partnerlogo.png" class="img-fluid" alt="">
                         </div>
-                        <div class="item"><img src="assets/images/clients/quick-heal.png" class="img-fluid"
-                                alt=""></div>
+                        <div class="item"><img src="assets/images/clients/mcafee.png" class="img-fluid" alt=""></div>
+                        <div class="item"><img src="assets/images/clients/being-cert-logopartner.png" class="img-fluid"
+                                alt="">
+                        </div>
+                        <div class="item"><img src="assets/images/clients/quick-heal.png" class="img-fluid" alt=""></div>
                         <div class="item"><img src="assets/images/clients/shophospartnerlogo.png" alt="Owl Image">
                         </div>
-                        <div class="item"><img src="assets/images/clients/symantec.png" class="img-fluid"
-                                alt=""></div>
-                        <div class="item"><img src="assets/images/clients/tenable.png" class="img-fluid"
-                                alt=""></div>
-                        <div class="item"><img src="assets/images/clients/kesperskypartner.png" class="img-fluid"
-                                alt=""></div>
-                        <div class="item"><img src="assets/images/clients/acunetix-partner-logo.png"
-                                alt="Owl Image"></div>
+                        <div class="item"><img src="assets/images/clients/symantec.png" class="img-fluid" alt=""></div>
+                        <div class="item"><img src="assets/images/clients/tenable.png" class="img-fluid" alt=""></div>
+                        <div class="item"><img src="assets/images/clients/kesperskypartner.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="item"><img src="assets/images/clients/acunetix-partner-logo.png" alt="Owl Image"></div>
                         <div class="item"><img src="assets/images/clients/seqrite.png" alt="Owl Image"></div>
-                        <div class="item"><img src="assets/images/clients/inspira-partnerlogo.png" class="img-fluid"
-                                alt="">
+                        <div class="item"><img src="assets/images/clients/inspira-partnerlogo.png" class="img-fluid" alt="">
                         </div>
                     </div>
                 </div>
@@ -3819,11 +3821,11 @@
                 <div class="row">
                     <div class="cn-tabs1">
                         <ul id="tabs-nav4" class="desktop home-nav-v2">
-                            <li><a href="#tab1116-1">Cybersecurity </a></li>
-                            <li><a href="#tab1117-2">Ethical Hacking </a></li>
-                            <li><a href="#tab1118-3">Penetration Testing </a></li>
-                            <li><a href="#tab1119-4">Vulnerability Assessment</a></li>
-                            <li><a href="#tab1110-5">Certification </a></li>
+                            <li><a class="scr-tabs4" href="#tab1116-1">Cybersecurity </a></li>
+                            <li><a class="scr-tabs4" href="#tab1117-2">Ethical Hacking </a></li>
+                            <li><a class="scr-tabs4" href="#tab1118-3">Penetration Testing </a></li>
+                            <li><a class="scr-tabs4" href="#tab1119-4">Vulnerability Assessment</a></li>
+                            <li><a class="scr-tabs4" href="#tab1110-5">Certification </a></li>
                         </ul>
                         <!-- END tabs-nav -->
                         <div id="tabs-content">
@@ -3833,8 +3835,7 @@
                                     <div id="home-slider11" class="owl-carousel owl-theme">
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="assets/images/Training-calendar-Codec-Networks.webp"
-                                                    alt="">
+                                                <img src="assets/images/Training-calendar-Codec-Networks.webp" alt="">
                                             </div>
                                         </div>
                                         <div class="itmes">
@@ -3844,8 +3845,7 @@
                                         </div>
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="assets/images/ec-council-training-certification.webp"
-                                                    alt="">
+                                                <img src="assets/images/ec-council-training-certification.webp" alt="">
                                             </div>
                                         </div>
                                         <div class="itmes">
@@ -3863,8 +3863,7 @@
                                     <div id="home-slider12" class="owl-carousel owl-theme">
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="assets/images/Training-calendar-Codec-Networks.webp"
-                                                    alt="">
+                                                <img src="assets/images/Training-calendar-Codec-Networks.webp" alt="">
                                             </div>
                                         </div>
                                         <div class="itmes">
@@ -3874,8 +3873,7 @@
                                         </div>
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="assets/images/ec-council-training-certification.webp"
-                                                    alt="">
+                                                <img src="assets/images/ec-council-training-certification.webp" alt="">
                                             </div>
                                         </div>
                                         <div class="itmes">
@@ -3955,8 +3953,7 @@
                                     <div id="home-slider14" class="owl-carousel owl-theme">
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="assets/images/Training-calendar-Codec-Networks.webp"
-                                                    alt="">
+                                                <img src="assets/images/Training-calendar-Codec-Networks.webp" alt="">
                                             </div>
                                         </div>
                                         <div class="itmes">
@@ -3966,8 +3963,7 @@
                                         </div>
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="assets/images/ec-council-training-certification.webp"
-                                                    alt="">
+                                                <img src="assets/images/ec-council-training-certification.webp" alt="">
                                             </div>
                                         </div>
                                         <div class="itmes">
@@ -3986,8 +3982,7 @@
                                     <div id="home-slider15" class="owl-carousel owl-theme">
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="assets/images/Training-calendar-Codec-Networks.webp"
-                                                    alt="">
+                                                <img src="assets/images/Training-calendar-Codec-Networks.webp" alt="">
                                             </div>
                                         </div>
                                         <div class="itmes">
@@ -3997,8 +3992,7 @@
                                         </div>
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="assets/images/ec-council-training-certification.webp"
-                                                    alt="">
+                                                <img src="assets/images/ec-council-training-certification.webp" alt="">
                                             </div>
                                         </div>
                                         <div class="itmes">
@@ -4227,8 +4221,7 @@
                                 <a href="#partnter1">
                                     <div class="team-details">
                                         <div class="team-img part-bg1">
-                                            <img src="assets/images/Industries/Technology-IT-Telecom.png" alt=""
-                                                title="">
+                                            <img src="assets/images/Industries/Technology-IT-Telecom.png" alt="" title="">
                                             <h3 class="team-name">Technology, IT <br>&amp; Telecom</h3>
                                         </div>
                                         <div class="team-bottom">
@@ -4243,8 +4236,7 @@
                                 <a href="#partnter2">
                                     <div class="team-details">
                                         <div class="team-img part-bg2">
-                                            <img src="assets/images/Industries/Education.png" alt=""
-                                                title="">
+                                            <img src="assets/images/Industries/Education.png" alt="" title="">
                                             <h3 class="team-name">Education</h3>
                                         </div>
                                         <div class="team-bottom">
@@ -4259,8 +4251,8 @@
                                 <a href="#partnter3">
                                     <div class="team-details">
                                         <div class="team-img part-bg3">
-                                            <img src="assets/images/Industries/Banking-Finance-Insurance.png"
-                                                alt="" title="">
+                                            <img src="assets/images/Industries/Banking-Finance-Insurance.png" alt=""
+                                                title="">
                                             <h3 class="team-name">Banking, Finance <br>&amp; Insurance</h3>
                                         </div>
                                         <div class="team-bottom">
@@ -4276,8 +4268,7 @@
                                 <a href="#partnter4">
                                     <div class="team-details">
                                         <div class="team-img part-bg4">
-                                            <img src="assets/images/Industries/Healthcare.png" alt=""
-                                                title="">
+                                            <img src="assets/images/Industries/Healthcare.png" alt="" title="">
                                             <h3 class="team-name">Healthcare</h3>
                                         </div>
                                         <div class="team-bottom">
@@ -4292,8 +4283,7 @@
                                 <a href="#partnter5">
                                     <div class="team-details">
                                         <div class="team-img part-bg5">
-                                            <img src="assets/images/Industries/Retail-E-Commerce.png" alt=""
-                                                title="">
+                                            <img src="assets/images/Industries/Retail-E-Commerce.png" alt="" title="">
                                             <h3 class="team-name">Retail <br>&amp; E-Commerce</h3>
                                         </div>
                                         <div class="team-bottom">
@@ -4308,8 +4298,7 @@
                                 <a href="#partnter6">
                                     <div class="team-details">
                                         <div class="team-img part-bg6">
-                                            <img src="assets/images/Industries/Power-Energy.png" alt=""
-                                                title="">
+                                            <img src="assets/images/Industries/Power-Energy.png" alt="" title="">
                                             <h3 class="team-name">Power &amp; Energy</h3>
                                         </div>
                                         <div class="team-bottom">
@@ -4324,8 +4313,7 @@
                                 <a href="#partnter7">
                                     <div class="team-details">
                                         <div class="team-img part-bg7">
-                                            <img src="assets/images/Industries/Government-Defence.png" alt=""
-                                                title="">
+                                            <img src="assets/images/Industries/Government-Defence.png" alt="" title="">
                                             <h3 class="team-name">Government <br>&amp; Defence</h3>
                                         </div>
                                         <div class="team-bottom">
@@ -4340,8 +4328,7 @@
                                 <a href="#partnter8">
                                     <div class="team-details">
                                         <div class="team-img part-bg8">
-                                            <img src="assets/images/Industries/Utilities.png" alt=""
-                                                title="">
+                                            <img src="assets/images/Industries/Utilities.png" alt="" title="">
                                             <h3 class="team-name">Utilities</h3>
                                         </div>
                                         <div class="team-bottom">
@@ -4356,8 +4343,8 @@
                                 <a href="#partnter9">
                                     <div class="team-details">
                                         <div class="team-img part-bg9">
-                                            <img src="assets/images/Industries/Industruies-Manufacturing.png"
-                                                alt="" title="">
+                                            <img src="assets/images/Industries/Industruies-Manufacturing.png" alt=""
+                                                title="">
                                             <h3 class="team-name">Industruies <br>&amp; Manufacturing</h3>
                                         </div>
                                         <div class="team-bottom">
@@ -4372,8 +4359,7 @@
                                 <a href="#partnter10">
                                     <div class="team-details">
                                         <div class="team-img part-bg10">
-                                            <img src="assets/images/Industries/Tourism-Hospitality.png" alt=""
-                                                title="">
+                                            <img src="assets/images/Industries/Tourism-Hospitality.png" alt="" title="">
                                             <h3 class="team-name">Tourism &amp; Hospitality</h3>
                                         </div>
                                         <div class="team-bottom">
@@ -4388,8 +4374,7 @@
                                 <a href="#partnter11">
                                     <div class="team-details">
                                         <div class="team-img part-bg11">
-                                            <img src="assets/images/Industries/Media-Entertainment.png" alt=""
-                                                title="">
+                                            <img src="assets/images/Industries/Media-Entertainment.png" alt="" title="">
                                             <h3 class="team-name">Media <br>&amp; Entertainment</h3>
                                         </div>
                                         <div class="team-bottom">
@@ -4404,8 +4389,7 @@
                                 <a href="#partnter12">
                                     <div class="team-details">
                                         <div class="team-img part-bg12">
-                                            <img src="assets/images/Industries/RealEstate.png" alt=""
-                                                title="">
+                                            <img src="assets/images/Industries/RealEstate.png" alt="" title="">
                                             <h3 class="team-name">Real Estate</h3>
                                         </div>
                                         <div class="team-bottom">
@@ -4427,48 +4411,38 @@
                                             alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg" alt="">
                                     </li>
                                     <li>
                                         <img src="https://www.cybarwind.com/demo/assets/images/clients/ncdc-client-logo.jpg"
                                             alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -4482,48 +4456,38 @@
                                             alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg" alt="">
                                     </li>
                                     <li>
                                         <img src="https://www.cybarwind.com/demo/assets/images/clients/ncdc-client-logo.jpg"
                                             alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -4537,48 +4501,38 @@
                                             alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg" alt="">
                                     </li>
                                     <li>
                                         <img src="https://www.cybarwind.com/demo/assets/images/clients/ncdc-client-logo.jpg"
                                             alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -4592,48 +4546,38 @@
                                             alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg" alt="">
                                     </li>
                                     <li>
                                         <img src="https://www.cybarwind.com/demo/assets/images/clients/ncdc-client-logo.jpg"
                                             alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -4647,48 +4591,38 @@
                                             alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg" alt="">
                                     </li>
                                     <li>
                                         <img src="https://www.cybarwind.com/demo/assets/images/clients/ncdc-client-logo.jpg"
                                             alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -4702,48 +4636,38 @@
                                             alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg" alt="">
                                     </li>
                                     <li>
                                         <img src="https://www.cybarwind.com/demo/assets/images/clients/ncdc-client-logo.jpg"
                                             alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -4757,48 +4681,38 @@
                                             alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg" alt="">
                                     </li>
                                     <li>
                                         <img src="https://www.cybarwind.com/demo/assets/images/clients/ncdc-client-logo.jpg"
                                             alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -4812,48 +4726,38 @@
                                             alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg" alt="">
                                     </li>
                                     <li>
                                         <img src="https://www.cybarwind.com/demo/assets/images/clients/ncdc-client-logo.jpg"
                                             alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -4867,48 +4771,38 @@
                                             alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg" alt="">
                                     </li>
                                     <li>
                                         <img src="https://www.cybarwind.com/demo/assets/images/clients/ncdc-client-logo.jpg"
                                             alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -4922,48 +4816,38 @@
                                             alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg" alt="">
                                     </li>
                                     <li>
                                         <img src="https://www.cybarwind.com/demo/assets/images/clients/ncdc-client-logo.jpg"
                                             alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -4977,48 +4861,38 @@
                                             alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg" alt="">
                                     </li>
                                     <li>
                                         <img src="https://www.cybarwind.com/demo/assets/images/clients/ncdc-client-logo.jpg"
                                             alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -5032,48 +4906,38 @@
                                             alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg" alt="">
                                     </li>
                                     <li>
                                         <img src="https://www.cybarwind.com/demo/assets/images/clients/ncdc-client-logo.jpg"
                                             alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/aic.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/MCX.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/hcl-logo.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg"
-                                            alt="">
+                                        <img src="https://www.cybarwind.com/demo/assets/images/clients/metlife.jpg" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -5107,8 +4971,8 @@
                             <div class="ceh-testo-box" data-target="client-testimonials-popup1">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <div class="ceh-testo-image"><img src="/assets/images/testo.jpg"
-                                                class="img-fluid" alt="t1">
+                                        <div class="ceh-testo-image"><img src="/assets/images/testo.jpg" class="img-fluid"
+                                                alt="t1">
                                         </div>
                                     </div>
                                     <div class="col-md-8">
@@ -5139,8 +5003,8 @@
                             <div class="ceh-testo-box" data-target="client-testimonials-popup2">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <div class="ceh-testo-image"><img src="/assets/images/testo.jpg"
-                                                class="img-fluid" alt="t1">
+                                        <div class="ceh-testo-image"><img src="/assets/images/testo.jpg" class="img-fluid"
+                                                alt="t1">
                                         </div>
                                     </div>
                                     <div class="col-md-8">
@@ -5171,8 +5035,8 @@
                             <div class="ceh-testo-box" data-target="client-testimonials-popup3">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <div class="ceh-testo-image"><img src="/assets/images/testo.jpg"
-                                                class="img-fluid" alt="t1">
+                                        <div class="ceh-testo-image"><img src="/assets/images/testo.jpg" class="img-fluid"
+                                                alt="t1">
                                         </div>
                                     </div>
                                     <div class="col-md-8">
@@ -5203,8 +5067,8 @@
                             <div class="ceh-testo-box" data-target="client-testimonials-popup4">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <div class="ceh-testo-image"><img src="/assets/images/testo.jpg"
-                                                class="img-fluid" alt="t1">
+                                        <div class="ceh-testo-image"><img src="/assets/images/testo.jpg" class="img-fluid"
+                                                alt="t1">
                                         </div>
                                     </div>
                                     <div class="col-md-8">
@@ -5243,8 +5107,7 @@
         @include('frontend.layouts.mobile-components.m-testimonials')
 
         <!-- Our Customers end -->
-        <section class="core-domain-section-blog mhspace mhspace1" id="mhome-div11"
-            style="background-color: #e5e8ee;">
+        <section class="core-domain-section-blog mhspace mhspace1" id="mhome-div11" style="background-color: #e5e8ee;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 cn-title">
@@ -5258,10 +5121,10 @@
                 <div class="row">
                     <div class="cn-tabs1">
                         <ul id="tabs-nav3" class="desktop home-blog-navs">
-                            <li><a href="#blog">Blog </a></li>
-                            <li><a href="#podcast">Podcast </a></li>
-                            <li><a href="#news">Newsletter </a></li>
-                            <li><a href="#event">Event & Webinar </a></li>
+                            <li><a class="scr-tabs3" href="#blog">Blog </a></li>
+                            <li><a class="scr-tabs3" href="#podcast">Podcast </a></li>
+                            <li><a class="scr-tabs3" href="#news">Newsletter </a></li>
+                            <li><a class="scr-tabs3" href="#event">Event & Webinar </a></li>
                         </ul>
                         <!-- END tabs-nav -->
                         <div id="tabs-content">
@@ -5827,8 +5690,8 @@
                             <div class="box-image-career123"> <img src="/assets/images/career-img-png.png"
                                     class="img-fluid-career12" alt=""> </div>
                             <div class="box-button-career">
-                                <a href="https://www.cybarwind.com/new-demo/asaraf/codec/careers.php"
-                                    target="_blank">Join Our
+                                <a href="https://www.cybarwind.com/new-demo/asaraf/codec/careers.php" target="_blank">Join
+                                    Our
                                     Team</a>
                             </div>
                         </div>
@@ -5847,8 +5710,8 @@
                     <p>We bring together the best and the brightest in the industry to solve transformative cases with Data.
                     </p>
                     <div class="wpb_wrapper bdr-top1 pt-4 mt-4">
-                        <p class="text-center"><a class="chevron chevron link-more aos-init aos-animate"
-                                style="color:#fff;" href="#">Browse Cybar Wind Job </a></p>
+                        <p class="text-center"><a class="chevron chevron link-more aos-init aos-animate" style="color:#fff;"
+                                href="#">Browse Cybar Wind Job </a></p>
                     </div>
                 </div>
             </div>
@@ -5888,13 +5751,13 @@
                 }
             }
         }
-        window.onload = function() {
+        window.onload = function () {
             addVersionToFiles();
         };
     </script>
 
     <script>
-        $('.close-acrodin').click(function(e) {
+        $('.close-acrodin').click(function (e) {
             e.preventDefault();
             var $panel = $(this).closest('.acc__panel');
             $panel.slideUp();
@@ -5954,10 +5817,10 @@
 
     </script>
     <script>
-        $('.cn-content').click(function() {
+        $('.cn-content').click(function () {
             $(this).addClass('height');
         });
-        $('.cn-hover-img').click(function() {
+        $('.cn-hover-img').click(function () {
             $('.cn-content').removeClass('height');
         });
     </script>
@@ -5973,28 +5836,28 @@
         }
 
         // Open the corresponding popup when clicking on elements with the class "popup-btn"
-        $(".ceh-testo-box").click(function(e) {
+        $(".ceh-testo-box").click(function (e) {
             e.preventDefault();
             var target = $(this).data('target');
             openPopup(target);
         });
 
         // Close the popup when clicking on elements with the class "close_1"
-        $(".close_1").click(function(e) {
+        $(".close_1").click(function (e) {
             e.preventDefault();
             var target = $(this).closest('.popup').attr('id');
             closePopup(target);
         });
 
         // Close the popup when clicking outside the popup
-        $(".popup").click(function(event) {
+        $(".popup").click(function (event) {
             if ($(event.target).is('.popup')) {
                 var target = $(this).attr('id');
                 closePopup(target);
             }
         });
 
-        $('.close_1, .popup').on('click', function() {
+        $('.close_1, .popup').on('click', function () {
             $('.testo-popup-body').scrollTop(0);
         })
     </script>
@@ -6013,6 +5876,28 @@
         //   }, 0.01);
         // });
     </script>
-        @include('frontend.layouts.right-menu-js')
-@endpush
+    <script>
+        function scrollToFirstElement(className, offset = 100) {
+            document.querySelectorAll(`.${className}`).forEach(element => {
+                element.addEventListener("click", function () {
+                    setTimeout(() => {
+                        const firstElement = document.querySelector(`.${className}`);
+                        if (firstElement) {
+                            window.scrollTo({
+                                top: firstElement.offsetTop - offset,
+                                behavior: "smooth"
+                            });
+                        }
+                    }, 0); // Ensures content loads before scrolling
+                });
+            });
+        }
 
+        // Example usage:
+        scrollToFirstElement("scr-tabs", 180);
+        scrollToFirstElement("scr-tabs1", 180);
+        scrollToFirstElement("scr-tabs3", 200);
+        scrollToFirstElement("industry-slider", 150);
+    </script>
+    @include('frontend.layouts.right-menu-js')
+@endpush
