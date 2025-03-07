@@ -2973,8 +2973,8 @@
    <!-- Jquery code -->
    @push('scripts')
    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-   <script type="text/javascript" src="assets/js/custom.js"></script>
-   <script type="text/javascript" src="assets/js/mobile-menu.js?v=2"></script>
+   {{-- <script type="text/javascript" src="assets/js/custom.js"></script>
+   <script type="text/javascript" src="assets/js/mobile-menu.js?v=2"></script> --}}
    <script type="text/javascript"> $(document).ready(function(){
       "use strict";
       var offSetTop = 100;

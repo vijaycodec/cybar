@@ -324,6 +324,29 @@
                                     <a href="javascript:void(0);" class="menu-item-button">
                                         <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
                                                 style="height:18px"></div>
+                                        <div class="text">SEO Details</div>
+                                    </a>
+            
+                                    <ul class="sub-menu">
+                                        <li class="sub-menu-item">
+                                            <a href="{{ route('seo-details.list') }}" class="">
+                                                <div class="text"> SEO Details List</div>
+                                            </a>
+                                        </li>
+
+                                        <li class="sub-menu-item">
+                                            {{-- <a href="{{ route('our-services.create, ['pageId' => 1]') }}" class="">
+                                                <div class="text">Our Services </div>
+                                            </a> --}}
+                                            <a href="{{ route('seo-details.create') }}" class=""> <div class="text">Add L3 Category </div></a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="menu-item has-children">
+                                    <a href="javascript:void(0);" class="menu-item-button">
+                                        <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
+                                                style="height:18px"></div>
                                         <div class="text">L3 Category</div>
                                     </a>
             

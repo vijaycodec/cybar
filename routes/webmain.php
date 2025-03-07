@@ -30,6 +30,7 @@ use App\Http\Controllers\backend\menublogController;
 use App\Http\Controllers\backend\menueventController;
 use App\Http\Controllers\backend\menutestimonialController;
 use App\Http\Controllers\backend\careerController  as BackendCareerController;
+use App\Http\Controllers\backend\seoController;
 use App\Http\Controllers\frontend\careerViewController;
 use Illuminate\Support\Facades\Route;
 
@@ -38,8 +39,14 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::middleware(['FrameGuard'])->group(function () {
     Route::get('/', [homeController::class, 'index'])->name('home');
-    Route::get('/services', [servicesController::class, 'getServices'])->name('services');
-    Route::get('/training', [trainingController::class, 'get_training'])->name('training');
+    // Route::get('/services', [servicesController::class, 'getServices'])->name('services');
+    Route::get('/services/{category?}', [ServicesController::class, 'getServices'])
+    ->where('category', '[A-Za-z0-9-]+') // Allow slugs
+    ->name('services');
+    // Route::get('/training', [trainingController::class, 'get_training'])->name('training');
+    Route::get('/training/{category?}', [trainingController::class, 'get_training'])
+    ->where('category', '[A-Za-z0-9-]+')
+    ->name('training');
     Route::get('/resources', [resourcesController::class, 'index'])->name('resources');
     Route::get('/resources-view/{id?}', [resourcesViewController::class, 'view'])->name('resources-view');
     Route::get('/resources-view-trending/{id?}', [resourcesViewController::class, 'trendingResourceView'])->name('resources-view-trending');
@@ -52,10 +59,13 @@ Route::middleware(['FrameGuard'])->group(function () {
 
     Route::get('/testimonials', [testimonialsController::class, 'index'])->name('testimonials');
     Route::get('/career', [careerController::class, 'index'])->name('careers');
-        Route::get('/career-view/{id?}', [careerViewController::class, 'view'])->name('careers-view');
+    Route::get('/career-view/{id?}', [careerViewController::class, 'view'])->name('careers-view');
     Route::get('/contact', [contactController::class, 'index'])->name('contact');
     Route::get('/cn-insight', [cnInsightController::class, 'index'])->name('cn-insight');
-    Route::get('/l3-template', [l3templateController::class, 'getl3'])->name('l3-template');
+    // Route::get('/l3-template', [l3templateController::class, 'getl3'])->name('l3-template');
+    // Route::get('/l3-template/{page_name}/{category_name}/{sub_category_name}', [L3TemplateController::class, 'getl3'])->name('l3-template');
+    Route::get('l3-template/{page_name}/{category_name}/{sub_category_name}', [L3TemplateController::class, 'getl3'])
+    ->name('l3-template');
 
     Route::get('/login', [loginController::class, 'login'])->name('login');
     // Route::get('/add-blog-data', [Indexcontroller::class, 'add_blog_data'])->name('add_blog_data');
@@ -191,6 +201,19 @@ Route::middleware(['auth','admin','prevent_history'])->group(function () {
     route::get('/career/edit/{id}', [BackendCareerController::class, 'edit'])->name('career.edit');
     Route::put('career/update/{id}', [BackendCareerController::class, 'update'])->name('career.update');
     Route::delete('career/delete/{id}', [BackendCareerController::class, 'destroy'])->name('career.destroy');
+
+    // SEO Details Routes
+    route::get('/seo-details/list', [seoController::class, 'index'])->name('seo-details.list');
+    route::get('/seo-details/create', [seoController::class, 'create'])->name('seo-details.create');
+    route::post('/seo-details/store', [seoController::class, 'store'])->name('seo-details.store');
+    Route::get('/seo-details/show/{id}', [seoController::class, 'show'])->name('seo-details.show');
+    route::get('/seo-details/edit/{id}', [seoController::class, 'edit'])->name('seo-details.edit');
+    Route::put('seo-details/update/{id}', [seoController::class, 'update'])->name('seo-details.update');
+    Route::delete('seo-details/delete/{id}', [seoController::class, 'destroy'])->name('seo-details.destroy');
+
+    Route::get('/seo-get-categories', [seoController::class, 'SeoGetCategories'])->name('seo-get-categories');
+    Route::get('/seo-get-subcategories', [seoController::class, 'SeoGetSubCategories'])->name('seo-get-subcategories');
+
 
 });
 
