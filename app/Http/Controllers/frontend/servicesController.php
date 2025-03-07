@@ -16,16 +16,27 @@ class servicesController extends Controller
         $this->servicesRepository = $servicesRepository;
     }
 
-    public function getServices()
-    {
-        $page_id = 1;
+    // public function getServices()
+    // {
+    //     $page_id = 1;
 
-        $services = $this->servicesRepository->getAllServices();
-        $groupedServices = $this->servicesRepository->getGroupedServices();
-        $categories = $this->servicesRepository->getCategoriesByPage($page_id);
+    //     $services = $this->servicesRepository->getAllServices();
+    //     $groupedServices = $this->servicesRepository->getGroupedServices();
+    //     $categories = $this->servicesRepository->getCategoriesByPage($page_id);
 
-        return view('frontend.services', compact('categories', 'services', 'page_id', 'groupedServices'));
-    }
+    //     return view('frontend.services', compact('categories', 'services', 'page_id', 'groupedServices'));
+    // }
+
+    public function getServices($category = null)
+{
+    $page_id = 1;
+    
+    $services = $this->servicesRepository->getAllServices();
+    $groupedServices = $this->servicesRepository->getGroupedServices();
+    $categories = $this->servicesRepository->getCategoriesByPage($page_id);
+
+    return view('frontend.services', compact('categories', 'services', 'page_id', 'groupedServices'));
+}
 
     }
 
