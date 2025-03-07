@@ -3,11 +3,12 @@
 @section('title', 'Blogs')
 
 @section('content')
-{{-- test --}}
+    {{-- test --}}
+
     <body id="body-main">
         <a id="button"></a>
         <!-- Header start -->
-        @include('frontend.layouts.blog-header',['categories' => $categories])
+        @include('frontend.layouts.blog-header', ['categories' => $categories])
         <!-- banner start -->
         <section class="sec_ban" id="resources-banner">
             <div class="home-ban">
@@ -29,65 +30,70 @@
                         <!--  -->
                         <!-- Slider -->
                         <ul class="slider resocues owl-carousel owl-theme" id="resocues-menu">
-                            @foreach($categories as $category)
-                            <li><a class="{{ $loop->first ? 'active' : ' ' }}" href="#{{ Str::slug($category->name) }}" >{{$category->name}}</a></li>
-                           @endforeach
+                            @foreach ($categories as $category)
+                                <li><a class="{{ $loop->first ? 'active' : ' ' }}"
+                                        href="#{{ Str::slug($category->name) }}">{{ $category->name }}</a></li>
+                            @endforeach
                         </ul>
                         <!-- control arrows -->
                         <!-- <div class="prev">
-                         <i class='fa fa-caret-left'></i>
-                         </div>
-                         <div class="next">
-                         <i class='fa fa-caret-right'></i>
-                         </div> -->
+                             <i class='fa fa-caret-left'></i>
+                             </div>
+                             <div class="next">
+                             <i class='fa fa-caret-right'></i>
+                             </div> -->
                         <!--  -->
                     </div>
                 </div>
             </div>
         </section>
         <!-- tab menu end -->
-        @foreach($categories as $index=> $category)
-        <section class="resc-sec blog-sec {{ $index % 2 == 0 ? 'blog-bg' : '' }}" id="{{ Str::slug($category->name) }}">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="wpb_text_column wpb_content_element">
-                            <div class="wpb_wrapper">
-                                <div class="title-button bbg{{ $index + 1 }}">
-                                    <h3 class="style1"><i class="fa fa-2x fa-file"></i>{{$category->name}}</h3>
-                                </div>
-                                <div class="carousel-wrap">
-                                    <!-- Owl Carousel -->
-                                    <div class="owl-carousel owl-theme" id="carousel-{{ $index }}" data-index="{{ $index }}">
-                                        @foreach($category->blogs as $blog)
-                                        <div class="item">
-                                            <div class="template15-wrap-main">
-                                                <div class="template15-wrap-main-img">
-                                                    <img src="{{ asset('uploads/backend/blog/' . $blog->images) }}" />
-                                                </div>
-                                                <div class="template15-wrap-main-content">
-                                                    <span><i>{{ $blog->created_at->format('d M Y') }}</i></span>
-                                                    <h4><a href="{{ route('blog-view', $blog->id) }}">{{$blog->sub_category}}</a></h4>
-                                                    <p>
-                                                        {{$blog->short_desc}}
-                                                        <a href="{{ route('blog-view', $blog->id) }}"> Read More[...]</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        @endforeach
+        @foreach ($categories as $index => $category)
+            <section class="resc-sec blog-sec {{ $index % 2 == 0 ? 'blog-bg' : '' }}" id="{{ Str::slug($category->name) }}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="wpb_text_column wpb_content_element">
+                                <div class="wpb_wrapper">
+                                    <div class="title-button bbg{{ $index + 1 }}">
+                                        <h3 class="style1"><i class="fa fa-2x fa-file"></i>{{ $category->name }}</h3>
                                     </div>
-        
-                                    <!-- Navigation Counter (Now Outside the Carousel) -->
-                                    <div id="navigation-count-{{ $index }}" class="count-nav-box"></div>
+                                    <div class="carousel-wrap">
+                                        <!-- Owl Carousel -->
+                                        <div class="owl-carousel owl-theme" id="carousel-{{ $index }}"
+                                            data-index="{{ $index }}">
+                                            @foreach ($category->blogs as $blog)
+                                                <div class="item">
+                                                    <div class="template15-wrap-main">
+                                                        <div class="template15-wrap-main-img">
+                                                            <img
+                                                                src="{{ asset('uploads/backend/blog/' . $blog->images) }}" />
+                                                        </div>
+                                                        <div class="template15-wrap-main-content">
+                                                            <span><i>{{ $blog->created_at->format('d M Y') }}</i></span>
+                                                            <h4><a
+                                                                    href="{{ route('blog-view', $blog->id) }}">{{ $blog->sub_category }}</a>
+                                                            </h4>
+                                                            <p>
+                                                                {{ $blog->short_desc }}
+                                                                <a href="{{ route('blog-view', $blog->id) }}"> Read
+                                                                    More[...]</a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            @endforeach
+                                        </div>
+
+                                        <!-- Navigation Counter (Now Outside the Carousel) -->
+                                        <div id="navigation-count-{{ $index }}" class="count-nav-box"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        
+            </section>
         @endforeach
         <!--  -->
 
@@ -199,58 +205,62 @@
     </script> --}}
 
     <script>
-   $(document).ready(function() {
-    function initializeCarousel(carouselId, navigationCountId) {
-        let $carousel = $("#" + carouselId);
-        let totalSlides = $carousel.find(".item").length; // Count slides
+        $(document).ready(function() {
+            function initializeCarousel(carouselId, navigationCountId) {
+                let $carousel = $("#" + carouselId);
+                let totalSlides = $carousel.find(".item").length; // Count slides
 
-        // If no slides exist, show "0/0" and return
-        if (totalSlides === 0) {
-            $("#" + navigationCountId).text("0 / 0");
-            return;
-        }
+                // If no slides exist, show "0/0" and return
+                if (totalSlides === 0) {
+                    $("#" + navigationCountId).text("0 / 0");
+                    return;
+                }
 
-        // Initialize Owl Carousel if slides exist
-        $carousel.owlCarousel({
-            loop: true,
-            margin: 20,
-            dots: true,
-            nav: true,
-            navText: [
-                "<i class='fa fa-angle-left'></i>",
-                "<i class='fa fa-angle-right'></i>"
-            ],
-            responsive: {
-                0: { items: 1 },
-                768: { items: 2 },
-                992: { items: 3 }
-            },
-            onInitialized: function(event) {
-                updateNavigationCount(event, navigationCountId);
-            },
-            onChanged: function(event) {
-                updateNavigationCount(event, navigationCountId);
+                // Initialize Owl Carousel if slides exist
+                $carousel.owlCarousel({
+                    loop: true,
+                    margin: 20,
+                    dots: true,
+                    nav: true,
+                    navText: [
+                        "<i class='fa fa-angle-left'></i>",
+                        "<i class='fa fa-angle-right'></i>"
+                    ],
+                    responsive: {
+                        0: {
+                            items: 1
+                        },
+                        768: {
+                            items: 2
+                        },
+                        992: {
+                            items: 3
+                        }
+                    },
+                    onInitialized: function(event) {
+                        updateNavigationCount(event, navigationCountId);
+                    },
+                    onChanged: function(event) {
+                        updateNavigationCount(event, navigationCountId);
+                    }
+                });
             }
+
+            function updateNavigationCount(event, navigationCountId) {
+                if (!event.namespace) return;
+                var carousel = event.relatedTarget;
+                var currentSlide = carousel.relative(carousel.current()) + 1;
+                var totalSlides = carousel.items().length;
+                $("#" + navigationCountId).text(currentSlide + " / " + totalSlides);
+            }
+
+            $(".carousel-wrap").each(function() {
+                let carousel = $(this).find(".owl-carousel");
+                let index = carousel.data("index");
+                let counterId = "navigation-count-" + index;
+                initializeCarousel(carousel.attr("id"), counterId);
+            });
         });
-    }
-
-    function updateNavigationCount(event, navigationCountId) {
-        if (!event.namespace) return;
-        var carousel = event.relatedTarget;
-        var currentSlide = carousel.relative(carousel.current()) + 1;
-        var totalSlides = carousel.items().length;
-        $("#" + navigationCountId).text(currentSlide + " / " + totalSlides);
-    }
-
-    $(".carousel-wrap").each(function() {
-        let carousel = $(this).find(".owl-carousel");
-        let index = carousel.data("index"); 
-        let counterId = "navigation-count-" + index;
-        initializeCarousel(carousel.attr("id"), counterId);
-    });
-});
-
-
     </script>
     <script>
         $("#resocues-menu").owlCarousel({
@@ -293,6 +303,27 @@
                 } else {
                     $scrollToTopButton.fadeOut();
                 }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            var sections = $('.resc-sec'); // Sections to track
+            var navLinks = $('.menu-left-right ul li a'); // Navbar links
+
+            $(window).on('scroll', function() {
+                var scrollPos = $(window).scrollTop();
+
+                sections.each(function() {
+                    var top = $(this).offset().top - 150; // Adjust offset for better visibility
+                    var bottom = top + $(this).outerHeight();
+                    var id = $(this).attr('id');
+
+                    if (scrollPos >= top && scrollPos < bottom) {
+                        navLinks.removeClass('active');
+                        $(".menu-left-right ul li a[href='#" + id + "']").addClass('active');
+                    }
+                });
             });
         });
     </script>
