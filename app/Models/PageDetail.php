@@ -20,5 +20,10 @@ class PageDetail extends Model
     // {
     //     return $this->hasMany(L3ContentInfo::class, 'page_category_id');
     // }
+    
+    public function seopageCategory()
+    {
+        return $this->hasMany(Seo::class, 'page_category_id');
+    }
    
 }

@@ -7,7 +7,7 @@
     <body class="with-zoom1 case2-header" id="services-page">
         <!-- Header start -->
 
-        @include('frontend.layouts.ser-header',['categories' => $categories])
+        @include('frontend.layouts.ser-header', ['categories' => $categories])
 
         <!-- Header end -->
         <!-- breadcrumbs -->
@@ -27,13 +27,21 @@
                                 <ul class="case1-tab">
 
                                     @foreach ($categories as $category)
-                                        <li><a class="{{ $loop->first ? 'active' : ' ' }}"
+                                        {{-- <li><a class="{{ $loop->first ? 'active' : ' ' }}"
                                                 href="#{{ Str::slug($category->name) }}">{{ $category->name }}</a>
+                                        </li> --}}
+                                        <li>
+                                            <a href="javascript:void(0);"
+                                                class="{{ request()->segment(2) === Str::slug($category->name) ? 'active' : '' }} {{ $loop->first ? 'active' : ' ' }}"
+                                                data-category="{{ Str::slug($category->name) }}"
+                                                onclick="updateURL('{{ Str::slug($category->name) }}')">
+                                                {{ $category->name }}
+                                            </a>
                                         </li>
                                     @endforeach
                                 </ul>
 
-                               
+
                             </div>
                         </div>
                     </div>
@@ -69,11 +77,24 @@
                                                         </div>
                                                         <div class="cn-main-content">
                                                             <h3>{{ $service->subcategory->sub_category }}</h3>
-                                                            <a
+                                                            {{-- <a
                                                             href="{{ route('l3-template', ['sb' => $service->subcategory->id, 'pg' => $page_id, 'ct' => $category->id]) }}">
                                                             Know more <i class="fa fa-chevron-right"></i>
-                                                        </a>
-                                                         
+                                                        </a> --}}
+                                                        @php
+                                                        $page_name = 'services';
+                                                        $category_slug = isset($category->name) ? Str::slug($category->name) : 'unknown-category';
+                                                        $subcategory_slug = isset($service->subcategory->sub_category) ? Str::slug($service->subcategory->sub_category) : 'unknown-subcategory';
+                                                 
+                                                      @endphp
+                                                    
+                                                    <a href="{{ route('l3-template', [
+                                                            'page_name' => $page_name, 
+                                                            'category_name' => $category_slug, 
+                                                            'sub_category_name' => $subcategory_slug
+                                                        ]) }}">
+                                                        Know more <i class="fa fa-chevron-right"></i>
+                                                    </a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -97,11 +118,26 @@
                                                                     </div>
                                                                     <div class="cn-main-content">
                                                                         <h3>{{ $service->subcategory->sub_category }}</h3>
-                                                                        <a
+                                                                        {{-- <a
                                                                             href="{{ route('l3-template', ['sb' => $service->subcategory->id, 'pg' => $page_id, 'ct' => $category->id]) }}">
                                                                             Know more <i class="fa fa-chevron-right"></i>
-                                                                        </a>
-                                                                        
+                                                                        </a> --}}
+
+                                                                        @php
+                                                                        $page_name = 'services';
+                                                                        $category_slug = isset($category->name) ? Str::slug($category->name) : 'unknown-category';
+                                                                        $subcategory_slug = isset($service->subcategory->sub_category) ? Str::slug($service->subcategory->sub_category) : 'unknown-subcategory';
+                                                                 
+                                                                      @endphp
+                                                                    
+                                                                    <a href="{{ route('l3-template', [
+                                                                            'page_name' => $page_name, 
+                                                                            'category_name' => $category_slug, 
+                                                                            'sub_category_name' => $subcategory_slug
+                                                                        ]) }}">
+                                                                        Know more <i class="fa fa-chevron-right"></i>
+                                                                    </a>
+
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -130,13 +166,14 @@
                 <div class="m-container" id="m-{{ Str::slug($category->name) }}">
                     <div class="m-title m-bg{{ $index + 1 }}">
                         <h3>{{ $category->name }}</h3> <!-- Parent Category Name -->
-                    </div> 
+                    </div>
                     @php
                         $categoryServices = $services->where('category_id', $category->id)->values(); // Get services for this category
                     @endphp
                     @foreach ($categoryServices->chunk(5) as $chunkIndex => $serviceChunk)
                         <div class="ser-slider1">
-                            <div id="ser-demo{{ $index + 1 }}-{{ $chunkIndex + 1 }}" class="owl-carousel owl-theme indu-moblie">
+                            <div id="ser-demo{{ $index + 1 }}-{{ $chunkIndex + 1 }}"
+                                class="owl-carousel owl-theme indu-moblie">
                                 @foreach ($serviceChunk as $service)
                                     <div class="item">
                                         <div class="empower-industry-box">
@@ -151,17 +188,34 @@
                                             </div>
                                             <div class="cn-main-content">
                                                 <h3>{{ $service->subcategory->sub_category }}</h3>
-                                                <a href="{{ route('l3-template', ['sb' => $service->subcategory->id, 'pg' => $page_id, 'ct' => $category->id]) }}">
+                                                {{-- <a
+                                                    href="{{ route('l3-template', ['sb' => $service->subcategory->id, 'pg' => $page_id, 'ct' => $category->id]) }}">
                                                     Know more <i class="fa fa-chevron-right"></i>
-                                                </a>
+                                                </a> --}}
+
+                                                @php
+                                                $page_name = 'services';
+                                                $category_slug = $category->slug ;
+                                                $subcategory_slug = $service->subcategory->slug;
+                                         
+                                              @endphp
+                                            
+                                            <a href="{{ route('l3-template', [
+                                                    'page_name' => $page_name, 
+                                                    'category_name' => $category_slug, 
+                                                    'sub_category_name' => $subcategory_slug
+                                                ]) }}">
+                                                Know more <i class="fa fa-chevron-right"></i>
+                                            </a>
                                             </div>
                                         </div>
                                     </div>
                                 @endforeach
                             </div>
-        
+
                             <!-- ✅ Counter for this slider -->
-                            <div id="navigation-count{{ $index + 1 }}-{{ $chunkIndex + 1 }}" class="count-nav-box counter-space">
+                            <div id="navigation-count{{ $index + 1 }}-{{ $chunkIndex + 1 }}"
+                                class="count-nav-box counter-space">
                                 1/{{ count($serviceChunk) }}
                             </div>
                         </div>
@@ -169,12 +223,12 @@
                 </div>
             @endforeach
         </section>
-        
-                 <!-- main section end -->
- <div class="ser-h"></div>
-                
+
+        <!-- main section end -->
+        <div class="ser-h"></div>
+
         {{-- @include('frontend.layouts.footer') --}}
-        <a href="#services-page" class="scrollToTop scrrttop" ><i class="fa fa-arrow-up"></i></a> 
+        <a href="#services-page" class="scrollToTop scrrttop"><i class="fa fa-arrow-up"></i></a>
 
     </body>
 
@@ -376,56 +430,64 @@
     </script> --}}
 
     <script>
-        $(function () {
-    function initializeCarousel(carouselId, navigationCountId) {
-        let $carousel = $("#" + carouselId);
-        let $countDisplay = $("#" + navigationCountId);
+        $(function() {
+            function initializeCarousel(carouselId, navigationCountId) {
+                let $carousel = $("#" + carouselId);
+                let $countDisplay = $("#" + navigationCountId);
 
-        $carousel.owlCarousel({
-            loop: true,
-            margin: 10,
-            nav: true,
-            dots: true,
-            navText: [
-                '<i class="fa fa-long-arrow-left" aria-hidden="true"></i>',
-                '<i class="fa fa-long-arrow-right" aria-hidden="true"></i>'
-            ],
-            responsive: {
-                0: { items: 1 },
-                600: { items: 1 },
-                900: { items: 1 },
-                1200: { items: 3 }
-            },
-            onInitialized: function (event) {
-                updateNavigationCount(event, $countDisplay);
-            },
-            onTranslated: function (event) {
-                updateNavigationCount(event, $countDisplay);
+                $carousel.owlCarousel({
+                    loop: true,
+                    margin: 10,
+                    nav: true,
+                    dots: true,
+                    navText: [
+                        '<i class="fa fa-long-arrow-left" aria-hidden="true"></i>',
+                        '<i class="fa fa-long-arrow-right" aria-hidden="true"></i>'
+                    ],
+                    responsive: {
+                        0: {
+                            items: 1
+                        },
+                        600: {
+                            items: 1
+                        },
+                        900: {
+                            items: 1
+                        },
+                        1200: {
+                            items: 3
+                        }
+                    },
+                    onInitialized: function(event) {
+                        updateNavigationCount(event, $countDisplay);
+                    },
+                    onTranslated: function(event) {
+                        updateNavigationCount(event, $countDisplay);
+                    }
+                });
+
+                function updateNavigationCount(event, $countDisplay) {
+                    if (!event.namespace) return;
+
+                    let carousel = event.relatedTarget;
+                    let currentIndex = carousel.relative(carousel.current()) + 1;
+                    let totalItems = carousel.items().length;
+
+                    console.log("Slider: " + navigationCountId + " | Current: " + currentIndex + " / " +
+                    totalItems);
+
+                    // ✅ Update counter dynamically
+                    $countDisplay.text(currentIndex + "/" + totalItems);
+                }
             }
+
+            // ✅ Automatically initialize all carousels
+            $("[id^='ser-demo']").each(function() {
+                let carouselId = $(this).attr("id");
+                let counterId = carouselId.replace("ser-demo", "navigation-count");
+                initializeCarousel(carouselId, counterId);
+            });
         });
-
-        function updateNavigationCount(event, $countDisplay) {
-            if (!event.namespace) return;
-
-            let carousel = event.relatedTarget;
-            let currentIndex = carousel.relative(carousel.current()) + 1;
-            let totalItems = carousel.items().length;
-
-            console.log("Slider: " + navigationCountId + " | Current: " + currentIndex + " / " + totalItems);
-
-            // ✅ Update counter dynamically
-            $countDisplay.text(currentIndex + "/" + totalItems);
-        }
-    }
-
-    // ✅ Automatically initialize all carousels
-    $("[id^='ser-demo']").each(function () {
-        let carouselId = $(this).attr("id");
-        let counterId = carouselId.replace("ser-demo", "navigation-count");
-        initializeCarousel(carouselId, counterId);
-    });
-});
-
     </script>
     <script>
         $('.cn-content').click(function() {
@@ -445,13 +507,65 @@
             });
         });
     </script>
-<script>
-    // Handle scroll to top button click
-    $('.scrrttop').on('click', function() {
-        // Remove active class from all items in case1-tab
-        $('.case1-tab li a').removeClass('active');
-        // Add active class to first li item
-        $('.case1-tab li:first-child a').addClass('active');
-    });
-</script>
+    <script>
+        // Handle scroll to top button click
+        $('.scrrttop').on('click', function() {
+            // Remove active class from all items in case1-tab
+            $('.case1-tab li a').removeClass('active');
+            // Add active class to first li item
+            $('.case1-tab li:first-child a').addClass('active');
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let pathSegments = window.location.pathname.split('/');
+            let category = pathSegments[2]; // Extract category name from URL
+
+            if (category) {
+                // Scroll to category section smoothly
+                let targetSection = document.getElementById(category);
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+
+                // Highlight the correct category in the menu
+                document.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
+                let activeLink = document.querySelector(`a[data-category="${category}"]`);
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
+            }
+        });
+
+        function updateURL(category) {
+            if (history.pushState) {
+                let newUrl = `/services/${category}`;
+
+                // Prevent duplicate updates
+                if (window.location.pathname !== newUrl) {
+                    history.pushState({
+                        path: newUrl
+                    }, '', newUrl);
+                }
+
+                // Scroll to category section smoothly
+                let targetSection = document.getElementById(category);
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+
+                // Highlight selected category in the menu
+                document.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
+                let activeLink = document.querySelector(`a[data-category="${category}"]`);
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
+            }
+        }
+    </script>
 @endpush
