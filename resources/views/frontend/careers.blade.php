@@ -434,7 +434,7 @@
             </div>
         </section>
 
-        <a href="#main-body" class="scrollToTop" style="display: block;"><i class="fa fa-arrow-up"></i></a>
+        <a href="#body-main" class="scrollToTop" style="display: block;"><i class="fa fa-arrow-up"></i></a>
 
         </div>
     </body>

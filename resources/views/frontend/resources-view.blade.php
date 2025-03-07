@@ -5,7 +5,7 @@
 @section('content')
 
     <body>
-        <a id="button"></a>
+        <a id="body-main"></a>
         <!-- Header start -->
         @include('frontend.layouts.resv-header')
         <!-- banner start -->
@@ -209,6 +209,7 @@
                 </div>
             </div>
         </section>
+        <a href="#body-main" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
         <!-- resouces details end -->
         {{-- @include('frontend.layouts.footer') --}}
         </div>
