@@ -1,51 +1,34 @@
-<!DOCTYPE html>
-<html>
-   <head>
-      <title> CN Insight</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- CSS start -->
-      <link rel="stylesheet" type="text/css"   href="assets/css/bootstrap.min.css">
-      <link  rel="stylesheet" type="text/css" href="assets/css/style.css" >
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link  rel="stylesheet" type="text/css" href="assets/css/owlcarousel.css" >
-      <link  rel="stylesheet" type="text/css" href="assets/css/swiper.css" >
-      <link  rel="stylesheet" type="text/css" href="assets/css//menu.css" >
-      <link  rel="stylesheet" type="text/css" href="assets/css/menutoggle.css" >
-      <link  rel="stylesheet" type="text/css" href="assets/css/menubar.css" >
-      <link  rel="stylesheet" type="text/css" href="assets/css/mobile-menu.css" >
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-      <link rel="stylesheet"
-         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-      <link rel="stylesheet" type="text/css" href="assets/css/ceh2.css">
-      <link rel="stylesheet" type="text/css" href="assets/css/services.css">
-      <script type="text/javascript" src="assets/js/jquery.min.js"></script>
-      <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-      <script type="text/javascript" src="assets/js/main-menu.js"></script>
-      <style type="text/css">
-         .with-zoom1 .container{
-         width: 100%;
-         max-width: 1370px;
-         }
-         .codec-top-fixed{
-         position: relative;
-         left: 0;
-         text-align: center;
-         margin-left: auto;
-         margin-right: auto;
-         top: 5px;
-         }
-         .cspace{
-         padding-top: 100px;
-         }
-         .training_cat{
-         position: sticky;
-         top: 80px;
-         }
-      </style>
-   </head>
+@extends('frontend.layouts.app')
+
+@section('title', 'Blogs')
+<style type="text/css">
+   .with-zoom1 .container{
+   width: 100%;
+   max-width: 1370px;
+   }
+   .codec-top-fixed{
+   position: relative;
+   left: 0;
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+   top: 5px;
+   }
+   .cspace{
+   padding-top: 100px;
+   }
+   .training_cat{
+   position: sticky;
+   top: 80px;
+   }
+</style>
+
+@section('content')
+     
    <body class="with-zoom1" id="training-page">
       <!-- Header start -->
-         {{-- @include('frontend.layouts.training-header') --}}
+         @include('frontend.layouts.cn-insight-header')
+                                    
       <!-- Header end -->
       <!-- breadcrumbs -->
       <!--<div class="breadcrumbs">-->
@@ -2986,7 +2969,9 @@
       <a href="#training-page" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
       @include('frontend.layouts.footer')
    </body>
+@endsection
    <!-- Jquery code -->
+   @push('scripts')
    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
    <script type="text/javascript" src="assets/js/custom.js"></script>
    <script type="text/javascript" src="assets/js/mobile-menu.js?v=2"></script>
@@ -3151,4 +3136,4 @@
    </script>
    
    @include('frontend.layouts.right-menu-js')
-</html>
+@endpush

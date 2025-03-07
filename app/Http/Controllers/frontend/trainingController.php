@@ -4,10 +4,7 @@ namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\CourseCategory;
-use App\Models\OurServices;
-use App\Models\SubCategory;
 use App\Models\CorporateTraining;
-use Illuminate\Http\Request;
 
 class trainingController extends Controller
 {
@@ -15,8 +12,6 @@ class trainingController extends Controller
     {
         $page_id=2;
 
-        //$training = CorporateTraining::all();
-//dd($training);
         $trainings = CorporateTraining::with('course_category','subcategory')->get();
         //dd($services);
         $categories = CourseCategory::with('training')

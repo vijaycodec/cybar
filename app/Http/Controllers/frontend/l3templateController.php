@@ -19,14 +19,10 @@ class l3templateController extends Controller
         $this->l3CategoryRepository = $l3CategoryRepository;
     }
 
-    public function getL3(Request $request)
+    public function getl3($page_name, $category_name, $sub_category_name)
     {
-        try {
-            $pageId = $request->query('pg');
-            $categoryId = $request->query('ct');
-            $subcategoryId = $request->query('sb');
 
-            $l3Categories = $this->l3CategoryRepository->getL3Categories($pageId, $categoryId, $subcategoryId);
+            $l3Categories = $this->l3CategoryRepository->getL3Categories($page_name, $category_name, $sub_category_name);
 
             if ($l3Categories->isEmpty()) {
                 abort(404, 'No L3 categories found.');
@@ -34,9 +30,6 @@ class l3templateController extends Controller
             $contentInfos = $l3Categories->flatMap->contentInfos;
 
             return view('frontend.l3-template', compact('l3Categories', 'contentInfos'));
-        } catch (Exception $e) {
-            Log::error('Error in getL3: ' . $e->getMessage());
-            return back()->with('error', 'Something went wrong. Please try again later.');
-        }
+       
     }
 }

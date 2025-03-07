@@ -2,14 +2,84 @@
 
 namespace App\Repositories;
 
+use App\Models\CourseCategory;
 use App\Models\L3Category;
+use App\Models\PageDetail;
+use App\Models\SubCategory;
 use App\Repositories\Interfaces\L3CategoryRepositoryInterface;
 use Illuminate\Support\Facades\Cache;
 
 class L3CategoryRepository implements L3CategoryRepositoryInterface
 {
-    public function getL3Categories($pageId, $categoryId, $subcategoryId)
+    // public function getL3Categories($page_name, $category_name, $sub_category_name)
+    // {
+    //     // dd($page_name);
+
+    //     // dd($sub_category_name);
+      
+    //     $pageId=PageDetail::where('page_name',$page_name)->first('id');
+    //     $pageId=$pageId->id;
+
+    //     $categoryId=CourseCategory::where('page_category',$pageId)->where('slug',$category_name)->first('id');
+    //     $categoryId=$categoryId->id;
+
+    //     $subcategoryId=SubCategory::where('page_category_id',$pageId)->where('category_id',$categoryId)->where('slug',$sub_category_name)->first('id');
+    //     $subcategoryId=$subcategoryId->id;
+
+    //     return L3Category::whereHas('contentInfos', function ($query) use ($pageId, $categoryId, $subcategoryId) {
+    //         $query->where('page_category_id', $pageId)
+    //             ->where('category_id', $categoryId)
+    //             ->where('sub_category_id', $subcategoryId);
+    //     })
+    //     ->with([
+    //         'contentInfos' => function ($query) {
+    //             $query->with([
+    //                 'overviewSubDescriptions',
+    //                 'significanceCategory',
+    //                 'significance_title',
+    //                 'coursefeatureCategory',
+    //                 'coursefeature_title',
+    //                 'cyberwindCategory',
+    //                 'industryCategory',
+    //                 'blogCategory',
+    //                 'testimonials',
+    //                 'faqCategory.faqSubCategory',
+    //                 'programCategory.programSubCategories',
+    //             ]);
+    //         }
+    //     ])
+    //     ->get();
+    // }
+
+    public function getL3Categories($page_name, $category_name, $sub_category_name)
     {
+        // Retrieve page ID
+        $page = PageDetail::where('page_name', $page_name)->first();
+        if (!$page) {
+            return collect(); // Return empty collection instead of JSON response
+        }
+        $pageId = $page->id;
+
+        // Retrieve category ID
+        $category = CourseCategory::where('page_category', $pageId)
+                                  ->where('slug', $category_name)
+                                  ->first();
+        if (!$category) {
+            return collect(); // Return empty collection instead of JSON response
+        }
+        $categoryId = $category->id;
+
+        // Retrieve subcategory ID
+        $subcategory = SubCategory::where('page_category_id', $pageId)
+                                  ->where('category_id', $categoryId)
+                                  ->where('slug', $sub_category_name)
+                                  ->first();
+        if (!$subcategory) {
+            return collect(); // Return empty collection instead of JSON response
+        }
+        $subcategoryId = $subcategory->id;
+
+        // Retrieve L3 Categories
         return L3Category::whereHas('contentInfos', function ($query) use ($pageId, $categoryId, $subcategoryId) {
             $query->where('page_category_id', $pageId)
                 ->where('category_id', $categoryId)

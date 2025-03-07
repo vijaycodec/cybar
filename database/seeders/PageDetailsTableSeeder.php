@@ -16,7 +16,7 @@ class PageDetailsTableSeeder extends Seeder
         $pageDetails = [
             [
                 'id'                => 1,
-                'page_name'         => 'Our Services',
+                'page_name'         => 'Services',
                 'table_name'        => 'our_services',
                 'status'            => 1,
                 'created_at'        => now(),
@@ -24,7 +24,7 @@ class PageDetailsTableSeeder extends Seeder
             ],
             [
                 'id'                => 2,
-                'page_name'         => 'Corporate Training',
+                'page_name'         => 'Trainings',
                 'table_name'        => 'corporate_trainings',
                 'status'            => 1,
                 'created_at'        => now(),

@@ -411,4 +411,30 @@
             });
         });
     </script>
+    {{-- script for when scrolling page then resources menu script also scroll active --}}
+    <script>
+        $(document).ready(function () {
+    var sections = $('.resc-sec .wpb_wrapper'); // Sections to track
+    var navLinks = $('.menu-left-right ul li a'); // Navigation links
+    
+    function updateActiveNav() {
+        var scrollPosition = $(window).scrollTop();
+        var offset = 150; // Adjust this value based on your layout
+        
+        sections.each(function () {
+            var currentSection = $(this);
+            var sectionTop = currentSection.offset().top - offset;
+            var sectionId = currentSection.attr('id');
+
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + currentSection.outerHeight()) {
+                navLinks.removeClass('active');
+                $(".menu-left-right ul li a[href='#" + sectionId + "']").addClass('active');
+            }
+        });
+    }
+
+    $(window).on('scroll', updateActiveNav);
+    updateActiveNav(); // Run on page load in case of refresh mid-scroll
+});
+    </script>
 @endpush

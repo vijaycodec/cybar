@@ -2880,7 +2880,7 @@
          </li>
          <!--  -->
          <li class="nav-item">
-            <a class="mobile-nav-link" href="CN-Insigh.php">
+            <a class="mobile-nav-link" href="{{ route('cn-insight') }}">
                CN Insight
             </a>
          </li>

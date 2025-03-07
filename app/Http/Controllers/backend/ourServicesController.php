@@ -24,6 +24,7 @@ class OurServicesController extends Controller
 
     public function create($pageId)
     {
+        $pageId=1;
         $categories = CourseCategory::where('page_category', $pageId)->get();
         return view('backend.our-services.create', compact('categories'));
     }

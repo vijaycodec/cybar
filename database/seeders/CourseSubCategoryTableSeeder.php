@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\SubCategory;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
 
 class CourseSubCategoryTableSeeder extends Seeder
@@ -1331,16 +1331,16 @@ class CourseSubCategoryTableSeeder extends Seeder
                 'created_at'        => now(),
                 'updated_at'        => now(),
             ],
-
-
-
-            
-
-                     
-           
                        
         ];
 
-        SubCategory::insert($CourseSubCategoryDetails);
+        $records = collect($CourseSubCategoryDetails)->map(function ($record) {
+            $record['slug'] = Str::slug($record['sub_category']);
+            $record['created_at'] = now();
+            $record['updated_at'] = now();
+            return $record;
+        })->toArray();
+
+        SubCategory::insert($records);
     }
 }
