@@ -2967,7 +2967,7 @@
       </section>
       <!-- mobile end -->
       <a href="#training-page" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
-      @include('frontend.layouts.footer')
+      {{-- @include('frontend.layouts.footer') --}}
    </body>
 @endsection
    <!-- Jquery code -->

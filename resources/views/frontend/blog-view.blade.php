@@ -5,7 +5,7 @@
 @section('content')
 
     <body>
-        <a id="button"></a>
+        <a id="body-main"></a>
         <!-- Header start -->
         @include('frontend.layouts.blogv-header')
 
@@ -233,6 +233,8 @@
         <!-- resouces details end -->
         {{-- @include('frontend.layouts.footer') --}}
         </div>
+        <a href="#body-main" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
+
     </body>
 @endsection
 

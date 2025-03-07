@@ -111,6 +111,9 @@
                 <a href="javascript:void(0)" class="close_21 close_1"> Close</a>
             </div>
         </div>
+
+        <a href="#body-main" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
+
     </body>
 
 @endsection
