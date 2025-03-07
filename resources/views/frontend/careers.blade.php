@@ -8,7 +8,7 @@
         <a id="button"></a>
         <!-- Header start -->
 
-        @include('frontend.layouts.career-header',['categories' => $categories])
+        @include('frontend.layouts.career-header', ['categories' => $categories])
 
         <!-- banner start -->
         <section class="sec_ban" id="career-banner">
@@ -39,11 +39,11 @@
                         </ul>
                         <!-- control arrows -->
                         <!-- <div class="prev">
-                          <i class='fa fa-caret-left'></i>
-                    </div>
-                    <div class="next">
-                          <i class='fa fa-caret-right'></i>
-                   </div> -->
+                                  <i class='fa fa-caret-left'></i>
+                            </div>
+                            <div class="next">
+                                  <i class='fa fa-caret-right'></i>
+                           </div> -->
                         <!--  -->
                     </div>
                 </div>
@@ -68,8 +68,10 @@
                                                 <div class="item">
                                                     <a href="{{ route('careers-view', $career->id) }}" class="career-link">
                                                         <h4 class="career-heading">{{ $career->subcategory }}</h4>
-                                                        <p class="career-detail"><strong>Location :</strong> {{ $career->location }}</p>
-                                                        <p class="career-detail"><strong>Educational Background :</strong> {{ $career->educational_background }}</p>
+                                                        <p class="career-detail"><strong>Location :</strong>
+                                                            {{ $career->location }}</p>
+                                                        <p class="career-detail"><strong>Educational Background :</strong>
+                                                            {{ $career->educational_background }}</p>
                                                     </a>
                                                     <div class="copy-right">
                                                         <ul>
@@ -137,9 +139,10 @@
                     <div class="career-title">
                         <h3>{{ $category->name }}</h3>
                     </div>
-        
+
                     <div class="carousel-wrap">
-                        <div class="owl-carousel11 owl-carousel owl-theme owl-carousel-{{ $index }}"> {{-- Dynamic Class --}}
+                        <div class="owl-carousel11 owl-carousel owl-theme owl-carousel-{{ $index }}">
+                            {{-- Dynamic Class --}}
                             @foreach ($category->careers as $career)
                                 <div class="item">
                                     <div class="blog-cat-inn">
@@ -151,10 +154,14 @@
                                             </a>
                                             <div class="copy-right">
                                                 <ul>
-                                                    <li><a target="_blank" href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                                                    <li><a target="_blank" href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                                                    <li><a target="_blank" href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
-                                                    <li><a target="_blank" href="#" title="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                                    <li><a target="_blank" href="#" class="icoFacebook"
+                                                            title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                                    <li><a target="_blank" href="#" class="icoTwitter"
+                                                            title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                                    <li><a target="_blank" href="#" class="icoGoogle"
+                                                            title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                                                    <li><a target="_blank" href="#" title="linkedin"><i
+                                                                class="fa fa-linkedin"></i></a></li>
                                                 </ul>
                                                 <div class="clearfix"></div>
                                             </div>
@@ -168,7 +175,7 @@
                 </div>
             @endforeach
         </section>
-        
+
         <!--  -->
         <div class="offer-sec-inn mobile-view offer-sec-inn1 career-space" id="tvc">
             <div class="view_blog">
@@ -557,13 +564,13 @@
             function initializeCarousel(carouselId, navigationCountId) {
                 let $carousel = $("#" + carouselId);
                 let totalSlides = $carousel.find(".item").length; // Count slides
-    
+
                 // If no slides exist, show "0 / 0" and return
                 if (totalSlides === 0) {
                     $("#" + navigationCountId).text("0 / 0");
                     return;
                 }
-    
+
                 // Initialize Owl Carousel only if there are slides
                 $carousel.owlCarousel({
                     loop: totalSlides > 1, // Loop only if more than 1 slide
@@ -575,9 +582,15 @@
                         "<i class='fa fa-angle-right'></i>"
                     ],
                     responsive: {
-                        0: { items: 1 },
-                        768: { items: 2 },
-                        992: { items: 3 }
+                        0: {
+                            items: 1
+                        },
+                        768: {
+                            items: 2
+                        },
+                        992: {
+                            items: 3
+                        }
                     },
                     onInitialized: function(event) {
                         updateNavigationCount(event, navigationCountId);
@@ -587,7 +600,7 @@
                     }
                 });
             }
-    
+
             function updateNavigationCount(event, navigationCountId) {
                 if (!event.namespace) return;
                 let carousel = event.relatedTarget;
@@ -595,29 +608,29 @@
                 let totalSlides = carousel.items().length;
                 $("#" + navigationCountId).text(currentSlide + " / " + totalSlides).show();
             }
-    
+
             // Dynamically initialize each carousel inside .carousel-wrap
             $(".carousel-wrap").each(function(index) {
                 let $carousel = $(this).find(".owl-carousel");
                 let carouselId = "owl-carousel-" + index;
                 let counterId = "navigation-count-" + index;
-    
+
                 // Assign unique IDs if not already set
                 if (!$carousel.attr("id")) {
                     $carousel.attr("id", carouselId);
                 }
-    
+
                 if (!$("#" + counterId).length) {
                     $(this).append(`<div id="${counterId}" class="count-nav-box"></div>`);
                 }
-    
+
                 initializeCarousel(carouselId, counterId);
             });
         });
     </script>
-    
-    
-    
+
+
+
     <script>
         $("#resocues-menu").owlCarousel({
             loop: true,
@@ -641,6 +654,38 @@
                     items: 6
                 }
             }
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            // Function to update the active tab based on scroll position
+            function updateActiveTab() {
+                var scrollPosition = $(window).scrollTop();
+                var offset = 150; // Adjust this offset if needed
+
+                // Loop through each category section
+                $('.rbg1, .rbg2, .rbg3, .rbg4').each(function() {
+                    var sectionId = $(this).attr('id');
+                    var sectionTop = $(this).offset().top - offset;
+                    var sectionBottom = sectionTop + $(this).outerHeight();
+
+                    // Check if the section is in view
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                        // Remove active class from all tabs
+                        $('.tab-sec ul li a').removeClass('active');
+                        // Add active class to the corresponding tab
+                        $('.tab-sec ul li a[href="#' + sectionId + '"]').addClass('active');
+                    }
+                });
+            }
+
+            // Call the function on scroll
+            $(window).scroll(function() {
+                updateActiveTab();
+            });
+
+            // Call the function on page load
+            updateActiveTab();
         });
     </script>
     @include('frontend.layouts.right-menu-js')
