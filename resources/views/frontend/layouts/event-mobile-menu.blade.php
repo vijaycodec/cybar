@@ -2,7 +2,7 @@
    <header class="mobile-nav-top ser-menu-top">
       <div class="menu-col"><span class="hamburger material-icons" id="ham"><i class="fa fa-bars"></i></span></div>
       <div class="mobile-logo">
-         <a href="index.php"><img src="assets/images/logo-codec.svg"></a>
+         <a href="{{ route('home') }}"><img src="{{ asset('assets/images/logo-codec.svg') }}"></a>
       </div>
       <div class="ser-menu">
       <span class="ser-icon-right"><i class="fa fa-bars"></i></span>

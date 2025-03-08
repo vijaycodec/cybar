@@ -18,20 +18,10 @@
                                 <div class="ecsp_div">
                                     <ul class="tab2">
                                         @foreach ($categories as $category)
-                                            {{-- <li id="li_border"><a class="tablinks1 {{ $loop->first ? 'active' : ' ' }}"
+                                            <li id="li_border"><a class="tablinks1 {{ $loop->first ? 'active' : ' ' }}"
                                                     href="#{{ Str::slug($category->name) }}"
                                                     onclick="openCity(event, '{{ Str::slug($category->name) }}')">{{ $category->name }}</a>
-                                            </li> --}}
-
-                                            <li id="li_border">
-                                                <a href="javascript:void(0);"
-                                                    class="tablinks1 {{ request()->segment(2) === Str::slug($category->name) ? 'active' : '' }} {{ $loop->first ? 'active' : ' ' }}"
-                                                    data-category="{{ Str::slug($category->name) }}"
-                                                    onclick="openCity(event, '{{ Str::slug($category->name) }}'); updateURL('{{ Str::slug($category->name) }}')">
-                                                    {{ $category->name }}
-                                                </a>
                                             </li>
-                                            
                                         @endforeach
                                     </ul>
                                 </div>
@@ -70,25 +60,10 @@
                                                                 <p>{{ $training->description }}</p>
                                                             </div>
                                                             <span class="box-readmore">
-                                                                {{-- <a
+                                                                <a
                                                                     href="{{ route('l3-template', ['sub_category_id' => $training->subcategory->id, 'pageid' => $page_id, 'category_id' => $category->id]) }}">Learn
                                                                     more
-                                                                    <i class="fa fa-chevron-right"></i></a> --}}
-
-                                                                    @php
-                                                                    $page_name = 'trainings';
-                                                                    $category_slug = $category->slug;
-                                                                    $subcategory_slug = $training->subcategory->slug;
-                                                             
-                                                                  @endphp
-                                                                
-                                                                <a href="{{ route('l3-template', [
-                                                                        'page_name' => $page_name, 
-                                                                        'category_name' => $category_slug, 
-                                                                        'sub_category_name' => $subcategory_slug
-                                                                    ]) }}">
-                                                                    Know more <i class="fa fa-chevron-right"></i>
-                                                                </a>
+                                                                    <i class="fa fa-chevron-right"></i></a>
                                                             </span>
                                                         </div>
                                                     </div>
@@ -121,7 +96,6 @@
 
                     @php
                         $categoryTrainings = $trainings->where('category_id', $category->id)->values(); // Get trainings for this category
-                       
                     @endphp
 
                     @foreach ($categoryTrainings->chunk(5) as $chunkIndex => $trainingChunk)
@@ -131,17 +105,10 @@
                             <div id="ser-demo{{ $index + 1 }}-{{ $chunkIndex + 1 }}"
                                 class="owl-carousel owl-theme indu-moblie">
                                 @foreach ($trainingChunk as $singleTraining)
-
-                                @php
-                                    
-                                    $page_name = 'trainings';
-                                    $category_slug = $category->slug;
-                                    $subcategory_slug = $singleTraining->subcategory->slug;
-                                @endphp     
                                     <div class="item">
                                         <div class="mrgn-btm-iconbx">
-                                            {{-- <a href="{{ route('l3-template', ['sb' => $singleTraining->subcategory->id, 'pg' => $page_id, 'ct' => $category->id]) }}"> --}}
-                                            <a href="{{ route('l3-template', ['page_name' => $page_name, 'category_name' => $category_slug,  'sub_category_name' => $subcategory_slug]) }}">
+                                            <a
+                                                href="{{ route('l3-template', ['sb' => $singleTraining->subcategory->id, 'pg' => $page_id, 'ct' => $category->id]) }}">
                                                 <div class="iconbox">
                                                     <div class="box-header">
                                                         <div class="box-icon pst-listing">
@@ -338,63 +305,4 @@
             });
         });
     </script>
-
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-    let pathSegments = window.location.pathname.split('/');
-    let category = pathSegments[2]; // Extract category name from URL
-
-    if (category) {
-        // Scroll to category section smoothly
-        let targetSection = document.getElementById(category);
-        if (targetSection) {
-            targetSection.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-
-        // Highlight the correct category in the menu
-        document.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
-        let activeLink = document.querySelector(`a[data-category="${category}"]`);
-        if (activeLink) {
-            activeLink.classList.add('active');
-        }
-    }
-});
-
-function updateURL(category) {
-    if (history.pushState) {
-        let currentPath = window.location.pathname;
-        let newUrl;
-
-        if (currentPath.includes('/training')) {
-            newUrl = `/training/${category}`; // Update URL for training page
-        } else {
-            newUrl = `/services/${category}`; // Default to services
-        }
-
-        // Prevent duplicate updates
-        if (window.location.pathname !== newUrl) {
-            history.pushState({ path: newUrl }, '', newUrl);
-        }
-
-        // Scroll to category section smoothly
-        let targetSection = document.getElementById(category);
-        if (targetSection) {
-            targetSection.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-
-        // Highlight selected category in the menu
-        document.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
-        let activeLink = document.querySelector(`a[data-category="${category}"]`);
-        if (activeLink) {
-            activeLink.classList.add('active');
-        }
-    }
-}
-
-</script>
 @endpush
