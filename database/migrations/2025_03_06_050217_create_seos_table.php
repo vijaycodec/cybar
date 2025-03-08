@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('seos', function (Blueprint $table) {
             $table->id();
             $table->string('page_name');
-            $table->string('category_name');
-            $table->string('sub_category_name');
+            $table->string('category_name')->nullable();
+            $table->string('sub_category_name')->nullable();
             $table->text('template_name');
             $table->text('seo_title');
             $table->text('seo_description');
