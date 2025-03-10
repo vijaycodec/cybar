@@ -287,3 +287,55 @@
     <!-- main section end -->
   </body>
 @endsection
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const countrySelect = document.getElementById("hmx_country");
+    const countryCodeSpan = document.getElementById("countryCode");
+    const phoneCodeInput = document.getElementById("phone_code");
+    const countryIcon = document.getElementById("country_icon");
+
+    // Country list with dialing codes and flag URLs
+    const countries = [
+        { name: "India", code: "IN", dialCode: "+91", flag: "assets/images/flags/in.svg" },
+        { name: "United States", code: "US", dialCode: "+1", flag: "assets/images/flags/us.svg" },
+        { name: "United Kingdom", code: "GB", dialCode: "+44", flag: "assets/images/flags/gb.svg" },
+        { name: "Canada", code: "CA", dialCode: "+1", flag: "assets/images/flags/ca.svg" },
+        { name: "Australia", code: "AU", dialCode: "+61", flag: "assets/images/flags/au.svg" },
+        { name: "Germany", code: "DE", dialCode: "+49", flag: "assets/images/flags/de.svg" },
+        { name: "France", code: "FR", dialCode: "+33", flag: "assets/images/flags/fr.svg" },
+        { name: "Singapore", code: "SG", dialCode: "+65", flag: "assets/images/flags/sg.svg" }
+    ];
+
+    // Populate country dropdown
+    countries.forEach(country => {
+        const option = document.createElement("option");
+        option.value = country.code;
+        option.textContent = `${country.name} (${country.dialCode})`;
+        option.dataset.dialCode = country.dialCode;
+        option.dataset.flag = country.flag;
+        countrySelect.appendChild(option);
+    });
+
+    // Change country code and flag on selection
+    countrySelect.addEventListener("change", function () {
+        const selectedOption = countrySelect.options[countrySelect.selectedIndex];
+        const dialCode = selectedOption.dataset.dialCode;
+        const flag = selectedOption.dataset.flag;
+
+        if (dialCode) {
+            countryCodeSpan.textContent = dialCode;
+            phoneCodeInput.value = dialCode;
+        }
+        if (flag) {
+            countryIcon.src = flag;
+            countryIcon.style.display = "inline";
+        }
+    });
+
+    // Set default country to India
+    countrySelect.value = "IN";
+    countrySelect.dispatchEvent(new Event("change"));
+});
+
+</script>
