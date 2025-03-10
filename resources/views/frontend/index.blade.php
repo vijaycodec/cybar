@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Home | Cyber Security Industry Solutions')
+@section('title', 'Cybarwind | Cyber Security Industry Solutions')
 
 <style>
     .cn-hover-box:hover .cn-content.height {

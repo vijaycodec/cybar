@@ -46,7 +46,7 @@
                     <!-- Category (Dependent on Page Category) -->
                     <fieldset class="name">
                         <div class="body-title">Select Course<span class="tf-color-1">*</span></div>
-                        <select class="flex-grow" name="category_id" id="category" required>
+                        <select class="flex-grow" name="category_id" id="category" >
                             <option value="" disabled selected>Select category</option>
                         </select>
                     </fieldset>
@@ -54,7 +54,7 @@
                     <!-- Sub Category (Dependent on Category) -->
                     <fieldset class="name">
                         <div class="body-title">Select Sub Course <span class="tf-color-1">*</span></div>
-                        <select class="flex-grow" name="sub_category_id" id="sub_category" required>
+                        <select class="flex-grow" name="sub_category_id" id="sub_category" >
                             <option value="" disabled selected>Select Sub category</option>
                         </select>
                     </fieldset>
@@ -86,9 +86,10 @@
 
                     <fieldset class="name">
                         <div class="body-title">Google Analytics <span class="tf-color-1">*</span></div>
-                        <input class="flex-grow" type="text" placeholder="Google Analytics" name="google_analytics" tabindex="0"
-                            value="{{ old('google_analytics') }}" aria-required="true" required="">
+                        <textarea class="flex-grow" placeholder="Google Analytics" name="google_analytics" tabindex="0"
+                            aria-required="true" required="">{{ old('google_analytics') }}</textarea>
                     </fieldset>
+                    
 
                     <div class="bot">
                         <div></div>
