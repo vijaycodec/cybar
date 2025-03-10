@@ -22,22 +22,26 @@ class resourcesController extends Controller
 
         $trendings = Category::where('category_type','resources')->latest()->take(5)->get();
 
-        $seoData = Seo::where('page_name', $page_name)
+        $seoDetails = Seo::where('page_name', $page_name)
         ->where('category_name', $category)
         ->where('sub_category_name', $sub_category)
         ->first();
 
     // Define default values if any field is NULL
         $seoData = [
-            'page_name'       => $seoData->page_name ?? 'Resources page',
-            'category_name'   => $seoData->category_name ?? 'General Resources Category',
-            'sub_category_name' => $seoData->sub_category_name ?? 'General Resources Subcategory',
-            'template_name'   => $seoData->template_name ?? 'default-template',
-            'seo_title'       => $seoData->seo_title ?? 'Default Resources Title',
-            'seo_description' => $seoData->seo_description ?? 'Default Resources Description',
-            'seo_keywords'    => $seoData->seo_keywords ?? 'default,Resources keywords',
-            'google_analytics' => $seoData->google_analytics ?? 'Resources google analytics',
+            'page_name'       => $seoDetails->page_name ?? 'Resources page',
+            'category_name'   => $seoDetails->category_name ?? 'General Resources Category',
+            'sub_category_name' => $seoDetails->sub_category_name ?? 'General Resources Subcategory',
+            'template_name'   => $seoDetails->template_name ?? 'default-template',
+            'seo_title'       => $seoDetails->seo_title ?? 'Default Resources Title',
+            'seo_description' => $seoDetails->seo_description ?? 'Default Resources Description',
+            'seo_keywords'    => $seoDetails->seo_keywords ?? 'default,Resources keywords',
         ];
+
+        if (!empty($seoDetails->google_analytics)) {
+
+            $seoData['google_analytics'] = $seoDetails->google_analytics;
+        }
 
         return view('frontend.resources', compact('categories', 'trendings','seoData'));
     }
