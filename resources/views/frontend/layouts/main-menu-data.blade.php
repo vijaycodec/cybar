@@ -32,7 +32,7 @@
                <div class="navigation-container" id="navigation-container">
                   <nav id="ctl00_GlobalHeader_GlobalSiteMainMenu_navigation" class="site-main-navigation nocontent" role="navigation">
                      <ul class="navbar-nav mr-auto">
-                        <li class="navbarnew" id="bootstrap-edits">
+                        {{-- <li class="navbarnew" id="bootstrap-edits">
                            <a class="nav-link dropdown-toggle droparrow-toggle" href="{{ route('services') }}" id="navbarDropdownMenuLink" data-toggle="sub-toggle" aria-haspopup="true" aria-expanded="false"><i class="fa fa-th"></i>&nbsp;Services</a>
                            <div id="navpp" class=" raw navigation-dropdown add-to-ul navigation-dropdown trainingpagenav" >
                               <ul id="lalo" class="uldropdown" >
@@ -2057,12 +2057,16 @@
                                  <!--------------------------------------------------------------Application-Development end----------------------------------------------------->
                               </ul>
                            </div>
+                        </li> --}}
+                        <li class="navbarnew " id="bootstrap-edits">
+                           <a class="nav-link" href="{{ route('services') }}"><i class="fa fa-th"></i>&nbsp;Services</a>
+                        </li>
+                        <li class="navbarnew " id="bootstrap-edits">
+                           <a class="nav-link" href="{{ route('training') }}"><i class="fa fa-th"></i>&nbsp;Corporate Training</a>
                         </li>
                         <li class="navbarnew " id="bootstrap-edits">
                            <a class="nav-link" href="{{ route('cn-insight') }}"><i class="fa fa-th"></i>&nbsp;CN Insight</a>
                         </li>
-
-
                      </ul>
                   </nav>
                </div>
