@@ -216,7 +216,7 @@
             <li>
               <div class="hm_cn_hol home_frm_mobs">
               <div class="coun_flag_form">
-                <img id="country_icon" src="" alt="">
+                <img id="country_icon" src="" alt="flag">
               </div>
               <select id="hmx_country" class="form-control banner_country" data-validation="required"
                 data-validation-error-msg="&lt;br&gt;&lt;br&gt;Please Select your country" name="country"
@@ -260,17 +260,8 @@
             </li>
             <!-- added new captcha-->
             <li>
-              <div class="new_captcha">
-              <input type="text" name="captcha" id="txtInput" class="form_txtfildsty" style="width:55%"
-                placeholder="Type the code" value="" maxlength="10" data-validation="required"
-                data-validation-error-msg="Please enter your captcha">
-              <!-- <span id="txtcaptcha" class="captcha_value_new">Habcdd</span> -->
-              <span id="txtcaptcha" class="captcha_value_new" style="top:0px;right:0px;"></span>
-              <input type="hidden" id="confirm_captcha" name="confirm_captcha" value="">
-
-              <span class="error" style="display:none" id="txtInput_err"></span>
-
-              </div>
+              <div class="g-recaptcha" data-sitekey="{{ env('NOCAPTCHA_SITEKEY') }}"></div>
+              <span id="recaptcha-error"></span>
             </li>
             <li>
               <input type="submit" name="btn_submit" id="btn_submit_frm" value="Submit" class="con_sub">
@@ -297,15 +288,49 @@
 
     // Country list with dialing codes and flag URLs
     const countries = [
-        { name: "India", code: "IN", dialCode: "+91", flag: "assets/images/flags/in.svg" },
-        { name: "United States", code: "US", dialCode: "+1", flag: "assets/images/flags/us.svg" },
-        { name: "United Kingdom", code: "GB", dialCode: "+44", flag: "assets/images/flags/gb.svg" },
-        { name: "Canada", code: "CA", dialCode: "+1", flag: "assets/images/flags/ca.svg" },
-        { name: "Australia", code: "AU", dialCode: "+61", flag: "assets/images/flags/au.svg" },
-        { name: "Germany", code: "DE", dialCode: "+49", flag: "assets/images/flags/de.svg" },
-        { name: "France", code: "FR", dialCode: "+33", flag: "assets/images/flags/fr.svg" },
-        { name: "Singapore", code: "SG", dialCode: "+65", flag: "assets/images/flags/sg.svg" }
-    ];
+    { name: "Afghanistan", code: "AF", dialCode: "+93", flag: "assets/images/flags/af.svg" },
+    { name: "Albania", code: "AL", dialCode: "+355", flag: "assets/images/flags/al.svg" },
+    { name: "Algeria", code: "DZ", dialCode: "+213", flag: "assets/images/flags/dz.svg" },
+    { name: "Andorra", code: "AD", dialCode: "+376", flag: "assets/images/flags/ad.svg" },
+    { name: "Angola", code: "AO", dialCode: "+244", flag: "assets/images/flags/ao.svg" },
+    { name: "Argentina", code: "AR", dialCode: "+54", flag: "assets/images/flags/ar.svg" },
+    { name: "Australia", code: "AU", dialCode: "+61", flag: "assets/images/flags/au.svg" },
+    { name: "Austria", code: "AT", dialCode: "+43", flag: "assets/images/flags/at.svg" },
+    { name: "Bangladesh", code: "BD", dialCode: "+880", flag: "assets/images/flags/bd.svg" },
+    { name: "Belgium", code: "BE", dialCode: "+32", flag: "assets/images/flags/be.svg" },
+    { name: "Brazil", code: "BR", dialCode: "+55", flag: "assets/images/flags/br.svg" },
+    { name: "Canada", code: "CA", dialCode: "+1", flag: "assets/images/flags/ca.svg" },
+    { name: "China", code: "CN", dialCode: "+86", flag: "assets/images/flags/cn.svg" },
+    { name: "Denmark", code: "DK", dialCode: "+45", flag: "assets/images/flags/dk.svg" },
+    { name: "Egypt", code: "EG", dialCode: "+20", flag: "assets/images/flags/eg.svg" },
+    { name: "France", code: "FR", dialCode: "+33", flag: "assets/images/flags/fr.svg" },
+    { name: "Germany", code: "DE", dialCode: "+49", flag: "assets/images/flags/de.svg" },
+    { name: "India", code: "IN", dialCode: "+91", flag: "assets/images/flags/in.svg" },
+    { name: "Indonesia", code: "ID", dialCode: "+62", flag: "assets/images/flags/id.svg" },
+    { name: "Italy", code: "IT", dialCode: "+39", flag: "assets/images/flags/it.svg" },
+    { name: "Japan", code: "JP", dialCode: "+81", flag: "assets/images/flags/jp.svg" },
+    { name: "Malaysia", code: "MY", dialCode: "+60", flag: "assets/images/flags/my.svg" },
+    { name: "Mexico", code: "MX", dialCode: "+52", flag: "assets/images/flags/mx.svg" },
+    { name: "Netherlands", code: "NL", dialCode: "+31", flag: "assets/images/flags/nl.svg" },
+    { name: "New Zealand", code: "NZ", dialCode: "+64", flag: "assets/images/flags/nz.svg" },
+    { name: "Pakistan", code: "PK", dialCode: "+92", flag: "assets/images/flags/pk.svg" },
+    { name: "Philippines", code: "PH", dialCode: "+63", flag: "assets/images/flags/ph.svg" },
+    { name: "Russia", code: "RU", dialCode: "+7", flag: "assets/images/flags/ru.svg" },
+    { name: "Saudi Arabia", code: "SA", dialCode: "+966", flag: "assets/images/flags/sa.svg" },
+    { name: "Singapore", code: "SG", dialCode: "+65", flag: "assets/images/flags/sg.svg" },
+    { name: "South Africa", code: "ZA", dialCode: "+27", flag: "assets/images/flags/za.svg" },
+    { name: "South Korea", code: "KR", dialCode: "+82", flag: "assets/images/flags/kr.svg" },
+    { name: "Spain", code: "ES", dialCode: "+34", flag: "assets/images/flags/es.svg" },
+    { name: "Sweden", code: "SE", dialCode: "+46", flag: "assets/images/flags/se.svg" },
+    { name: "Switzerland", code: "CH", dialCode: "+41", flag: "assets/images/flags/ch.svg" },
+    { name: "Thailand", code: "TH", dialCode: "+66", flag: "assets/images/flags/th.svg" },
+    { name: "Turkey", code: "TR", dialCode: "+90", flag: "assets/images/flags/tr.svg" },
+    { name: "United Kingdom", code: "GB", dialCode: "+44", flag: "assets/images/flags/gb.svg" },
+    { name: "United States", code: "US", dialCode: "+1", flag: "assets/images/flags/us.svg" },
+    { name: "Vietnam", code: "VN", dialCode: "+84", flag: "assets/images/flags/vn.svg" },
+    { name: "Zimbabwe", code: "ZW", dialCode: "+263", flag: "assets/images/flags/zw.svg" }
+];
+
 
     // Populate country dropdown
     countries.forEach(country => {
@@ -339,3 +364,4 @@
 });
 
 </script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>

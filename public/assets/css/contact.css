@@ -368,3 +368,13 @@ select[size] {
 .short {
   min-height: 63px;
 }
+
+.coun_flag_form {
+  position: absolute;
+  height: 20px;
+  width: 30px;
+  top: 9px;
+  left: 2px;
+  display: none;
+  border: #000 1px solid;
+}
