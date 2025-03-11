@@ -32,6 +32,7 @@ use App\Http\Controllers\backend\menutestimonialController;
 use App\Http\Controllers\backend\careerController  as BackendCareerController;
 use App\Http\Controllers\backend\seoController;
 use App\Http\Controllers\frontend\careerViewController;
+use App\Http\Controllers\frontend\templateController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -61,6 +62,10 @@ Route::middleware(['FrameGuard'])->group(function () {
     Route::get('/login', [loginController::class, 'login'])->name('login');
     // Route::get('/add-blog-data', [Indexcontroller::class, 'add_blog_data'])->name('add_blog_data');
     Route::post('/login/user', [loginController::class, 'loginsave'])->name('loginsave');
+
+    Route::get('/template1', [templateController::class, 'template1'])->name('template1');
+    Route::get('/template2', [templateController::class, 'template2'])->name('template2');
+    Route::get('/fraud-detection', [templateController::class, 'fraudDetection'])->name('fraud-detection');
 
 });
 

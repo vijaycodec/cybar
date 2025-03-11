@@ -21,4 +21,9 @@ public function category()
     return $this->belongsTo(CourseCategory::class, 'category_id');
 }
 
+public function seosubCategory()
+{
+    return $this->belongsTo(Seo::class, 'sub_category_id');
+}
+
 }

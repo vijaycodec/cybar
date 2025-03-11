@@ -37,18 +37,42 @@
                     @method('PUT') <!-- Using PUT method for updating -->
                     <a class="tf-button style-1 w208" style="padding-left: 75px;"
                         href=" {{ route('resources.list') }}">Back</a>
-                   
+
                     <fieldset class="name">
                         <div class="body-title">Select Category <span class="tf-color-1">*</span></div>
                         <select class="flex-grow" name="category_id" tabindex="0" required id="category_id">
                             <option value="" disabled selected>Select a category</option>
                             @foreach ($all_categories as $category)
-                            <option value="{{ $category->id
-                             }}"{{ $resources->category_id == $category->id ? 'selected' : '' }}>{{ $category->name }}
+                                <option
+                                    value="{{ $category->id }}"{{ $resources->category_id == $category->id ? 'selected' : '' }}>
+                                    {{ $category->name }}
                                 </option>
                             @endforeach
                         </select>
                     </fieldset>
+
+                    {{-- <fieldset class="name">
+                        <div class="body-title">Short Title <span class="tf-color-1">*</span></div>
+                        <textarea class="flex-grow" style="height:90px;" type="text" placeholder="Short Description" name="short_desc"
+                            id="short_desc" tabindex="0" aria-required="true" value="{{ $resources->short_desc }}">{{ $resources->short_desc }}
+                        </textarea>
+                    </fieldset>
+                    <p id="short_desc-error" class="tf-color-1"></p> --}}
+
+                    <fieldset class="name">
+                        <div class="body-title">Short title <span class="tf-color-1">*</span></div>
+                        <input class="flex-grow" id="short_desc" type="text" placeholder="Short Description"
+                            name="short_desc" tabindex="0" value="{{ old('short_desc', $resources->short_desc) }}"
+                            aria-required="true" required>
+                    </fieldset>
+
+                    <fieldset class="name">
+                        <div class="body-title">Category Slug <span class="tf-color-1">*</span></div>
+                        <input class="flex-grow" id="categorySlug" type="text" placeholder="Category Name" name="slug"
+                            tabindex="0" value="{{ old('slug', $resources->slug) }}" aria-required="true" required
+                            readonly>
+                    </fieldset>
+
 
                     <fieldset>
                         <div class="body-title">Upload Image <span class="tf-color-1">*</span></div>
@@ -78,14 +102,6 @@
                             </div>
                         </div>
                     </fieldset>
-
-                    <fieldset class="name">
-                        <div class="body-title">Short Description <span class="tf-color-1">*</span></div>
-                        <textarea class="flex-grow" style="height:90px;" type="text" placeholder="Short Description" name="short_desc"
-                            id="short_desc" tabindex="0" aria-required="true" value="{{ $resources->short_desc }}">{{ $resources->short_desc }}
-                        </textarea>
-                    </fieldset>
-                    <p id="short_desc-error" class="tf-color-1"></p>
 
                     <div class="form-group">
                         <label><strong>Description :</strong></label>
@@ -190,4 +206,27 @@
             });
         });
     </script>
+
+<script>
+    $(document).ready(function() {
+        function slugify(text) {
+            if (typeof text !== 'string') text = ''; // Ensure text is always a string
+            return text.toLowerCase()
+                .trim()
+                .replace(/\s+/g, '-') // Replace spaces with hyphens
+                .replace(/[^\w\-]+/g, '') // Remove all non-word characters
+                .replace(/\-\-+/g, '-'); // Replace multiple hyphens with a single hyphen
+        }
+
+        $('#short_desc').on('input', function() {
+            var title = $(this).val() || ''; // Ensure title is never undefined
+            title = String(title); // Explicitly convert title to a string
+            var slug = slugify(title);
+            $('#categorySlug').val(slug); // Update slug field dynamically
+        });
+    });
+</script>
+
+
+
 @endpush

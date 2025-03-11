@@ -416,27 +416,179 @@
     {{-- script for when scrolling page then resources menu script also scroll active --}}
     <script>
         $(document).ready(function () {
-    var sections = $('.resc-sec .wpb_wrapper'); // Sections to track
-    var navLinks = $('.menu-left-right ul li a'); // Navigation links
-    
-    function updateActiveNav() {
-        var scrollPosition = $(window).scrollTop();
-        var offset = 150; // Adjust this value based on your layout
+        var sections = $('.resc-sec .wpb_wrapper'); // Sections to track
+        var navLinks = $('.menu-left-right ul li a'); // Navigation links
         
-        sections.each(function () {
-            var currentSection = $(this);
-            var sectionTop = currentSection.offset().top - offset;
-            var sectionId = currentSection.attr('id');
+            function updateActiveNav() {
+                var scrollPosition = $(window).scrollTop();
+                var offset = 150; // Adjust this value based on your layout
+                
+                sections.each(function () {
+                    var currentSection = $(this);
+                    var sectionTop = currentSection.offset().top - offset;
+                    var sectionId = currentSection.attr('id');
 
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + currentSection.outerHeight()) {
-                navLinks.removeClass('active');
-                $(".menu-left-right ul li a[href='#" + sectionId + "']").addClass('active');
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + currentSection.outerHeight()) {
+                        navLinks.removeClass('active');
+                        $(".menu-left-right ul li a[href='#" + sectionId + "']").addClass('active');
+                    }
+                });
             }
+
+            $(window).on('scroll', updateActiveNav);
+            updateActiveNav(); // Run on page load in case of refresh mid-scroll
         });
+    </script>
+
+
+{{-- script for seo routes change # to / --}}
+{{-- <script>
+    // Flag to prevent scroll-based active updates immediately after a manual click
+    let manualActive = false;
+
+    // Update the active state for the resources menu
+    function updateActiveState(category) {
+        console.log('updateActiveState called with:', category);
+        // Remove active class from all resource menu links
+        document.querySelectorAll('#resocues-menu a').forEach(el => el.classList.remove('active'));
+        // Add active class to the clicked link if found
+        let activeLink = document.querySelector(`#resocues-menu a[data-category="${category}"]`);
+        if (activeLink) {
+            activeLink.classList.add('active');
+            console.log('Active class added to:', activeLink);
+        } else {
+            console.log('No activeLink found for:', category);
+        }
     }
 
-    $(window).on('scroll', updateActiveNav);
-    updateActiveNav(); // Run on page load in case of refresh mid-scroll
-});
-    </script>
+    // Update the URL and active state on clicking a resource category
+    function updateResourceURL(category) {
+        console.log('updateResourceURL clicked for:', category);
+        if (history.pushState) {
+            let newUrl = `/resources/${category}`;
+            if (window.location.pathname !== newUrl) {
+                history.pushState({ path: newUrl }, '', newUrl);
+            }
+            // Scroll smoothly to the target section
+            let targetSection = document.getElementById(category);
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+            // Update the active state
+            updateActiveState(category);
+            // Set manualActive flag to true so that scroll updates are paused temporarily
+            manualActive = true;
+            // Increase delay to 1500ms to ensure the scroll handler doesn’t override too quickly
+            setTimeout(() => manualActive = false, 1500);
+        }
+    }
+
+    // On initial page load, if URL has a category, scroll and update active state.
+    document.addEventListener("DOMContentLoaded", function() {
+        let pathSegments = window.location.pathname.split('/');
+        let urlCategory = pathSegments[2]; // e.g., /resources/{category}
+        if (urlCategory) {
+            let targetSection = document.getElementById(urlCategory);
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+            updateActiveState(urlCategory);
+        }
+        // If no category is in the URL, the Blade‑set first category remains active.
+    });
+
+    // jQuery-based scroll tracking to update the active state as you scroll the page.
+    $(document).ready(function () {
+        // Select the sections you want to track (adjust selector as needed)
+        var sections = $('.resc-sec .wpb_wrapper');
+        // Use the same resource menu links
+        var navLinks = $('#resocues-menu a');
+
+        function updateActiveNav() {
+            // If a manual click has recently occurred, skip scroll updates
+            if (manualActive) return;
+
+            var scrollPosition = $(window).scrollTop();
+            var offset = 150; // Adjust this offset based on your layout
+
+            sections.each(function () {
+                var section = $(this);
+                var sectionTop = section.offset().top - offset;
+                var sectionId = section.attr('id');
+
+                // Check if the current scroll position is within this section
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + section.outerHeight()) {
+                    navLinks.removeClass('active');
+                    $("#resocues-menu a[data-category='" + sectionId + "']").addClass('active');
+                }
+            });
+        }
+
+        // Bind the scroll event and run on page load in case of a mid-scroll refresh
+        $(window).on('scroll', updateActiveNav);
+        updateActiveNav();
+    });
+</script>
+<script>
+    $(document).ready(function(){
+        // Initialize your Owl Carousel (if not already initialized)
+        var $owlMenu = $("#resocues-menu");
+        $owlMenu.owlCarousel({
+            // your Owl Carousel options, e.g.:
+            items: 4,
+            loop: false,
+            margin: 10,
+            nav: true
+        });
+    
+        // Delegate click event on carousel anchors
+        $owlMenu.on('click', 'a', function(e) {
+            e.preventDefault(); // Prevent default anchor behavior
+            
+            var $this = $(this);
+            var category = $this.data('category');
+            var newUrl = '/resources/' + category;
+    
+            // Update browser URL if different
+            if(window.location.pathname !== newUrl) {
+                history.pushState({ path: newUrl }, '', newUrl);
+            }
+    
+            // Scroll to the target section smoothly using jQuery animation
+            var $targetSection = $('#' + category);
+            if($targetSection.length) {
+                $('html, body').animate({
+                    scrollTop: $targetSection.offset().top
+                }, 500);
+            }
+    
+            // Remove active class from all carousel links, then add to the clicked one.
+            $owlMenu.find('a').removeClass('active');
+            $this.addClass('active');
+        });
+    
+        // (Optional) On page load, if URL has a category, update active state and scroll.
+        (function() {
+            var pathSegments = window.location.pathname.split('/');
+            var urlCategory = pathSegments[2]; // expecting /resources/{category}
+            if(urlCategory) {
+                var $targetSection = $('#' + urlCategory);
+                if($targetSection.length) {
+                    $('html, body').animate({
+                        scrollTop: $targetSection.offset().top
+                    }, 500);
+                }
+                // Update active state on carousel
+                $owlMenu.find('a').removeClass('active');
+                $owlMenu.find("a[data-category='" + urlCategory + "']").addClass('active');
+            }
+            // If no URL category, let your Blade-set first item be active.
+        })();
+    });
+</script> --}}
+    
 @endpush

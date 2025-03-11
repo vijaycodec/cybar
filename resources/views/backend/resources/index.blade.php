@@ -40,7 +40,8 @@
                                 <th>#</th>
                                 <th>Category Name</th>
                                 <th>Image</th>
-                                <th>Short Description</th>
+                                <th>Short Title</th>
+                                <th>Slug</th>
                                 <th>Description</th>
                                 <th>Action</th>
                             </tr>
@@ -63,6 +64,7 @@
                                             <!-- Short description (up to 10 words) -->
                                             <span>{{ $resource->short_desc }}</span>
                                         </td>
+                                        <td>{{ $resource->slug ?? 'N/A' }}</td> 
                                         <td style="max-width: 400px;"> <!-- Increase width here -->
                                             <!-- Short description (up to 10 words) -->
                                             <span class="description-short">
