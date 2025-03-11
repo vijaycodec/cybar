@@ -378,3 +378,56 @@ select[size] {
   display: none;
   border: #000 1px solid;
 }
+
+.banner_phone {
+  text-indent: 35px;
+}
+
+.form-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.line {
+  width: 40px;
+  background-color: #15416e;
+  height: 100%;
+  position: absolute;
+}
+
+.line.left1 {
+  left: -200px;
+}
+.line.right1 {
+  right: -200px;
+}
+
+.line.left2 {
+  left: -100px;
+  background-color: #18ba60;
+}
+.line.right2 {
+  right: -100px;
+  background-color: #18ba60
+}
+
+.line.left3 {
+  width: 10px;
+  left: -50px;
+  background-color: #18ba60;
+}
+.line.right3 {
+  width: 10px;
+  right: -50px;
+  background-color: #18ba60
+}
+
+.line.left4 {
+  width: 10px;
+  left: -150px;
+}
+.line.right4 {
+  width: 10px;
+  right: -150px;
+}
