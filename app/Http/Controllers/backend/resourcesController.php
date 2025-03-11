@@ -60,6 +60,7 @@ class resourcesController extends Controller
         // Using Validator::make to validate the request data
         $validator = Validator::make($request->all(), [
             'category_id' => 'required',
+            'slug' => 'required',
             'short_desc' => 'required',
             'description' => 'required',
             'image' => 'mimes:png,jpg,jpeg|max:2048'
@@ -74,6 +75,7 @@ class resourcesController extends Controller
 
             $resource = new Resource();
             $resource->category_id = $request->category_id;
+            $resource->slug = $request->slug;
             $resource->short_desc = $request->short_desc;
             $resource->description = $request->description;
 
@@ -139,10 +141,12 @@ class resourcesController extends Controller
     public function update(Request $request, $id)
     {
        
+        //dd($request->slug);
         // Validate other fields
         $validated = $request->validate([
             'category_id' => 'required',
             'short_desc' => 'required|string',
+            'slug' => 'required',
             'description' => 'required',
 
         ]);
@@ -151,6 +155,7 @@ class resourcesController extends Controller
 
         $resources->category_id = $request->category_id;
         $resources->short_desc = $request->short_desc;
+        $resources->slug = $request->slug;
         $resources->description = $request->description;
         // Check if a new image is provided
         if ($request->hasFile('image')) {

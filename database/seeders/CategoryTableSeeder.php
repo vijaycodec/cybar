@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Category;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 
 class CategoryTableSeeder extends Seeder
 {
@@ -20,7 +21,7 @@ class CategoryTableSeeder extends Seeder
                 'category_type'     => 'resources',
                 'name'              => 'Professional Services',
                 'title'             => 'The most effective learning system. World’s highest course completion rate.',
-                'created_at'        => now(),
+                'created_at'         => now(),
                 'updated_at'        => now(),
             ],
             [
@@ -78,7 +79,7 @@ class CategoryTableSeeder extends Seeder
             [
                 'id'                => 8,
                 'category_type'     => 'event',
-                'name'              => 'Professional Services',
+                'name'              => 'Professional Services ev',
                 'title'             => 'The most effective learning system. World’s highest course completion rate.',
                 'created_at'        => now(),
                 'updated_at'        => now(),
@@ -86,7 +87,7 @@ class CategoryTableSeeder extends Seeder
             [
                 'id'                => 9,
                 'category_type'     => 'event',
-                'name'              => 'Security Operations',
+                'name'              => 'Security Operations ev',
                 'title'             => 'The most effective learning system. World’s highest course completion rate.',
                 'created_at'        => now(),
                 'updated_at'        => now(),
@@ -94,7 +95,7 @@ class CategoryTableSeeder extends Seeder
             [
                 'id'                => 10,
                 'category_type'     => 'event',
-                'name'              => 'Application Security',
+                'name'              => 'Application Security ev',
                 'title'             => 'The most effective learning system. World’s highest course completion rate.',
                 'created_at'        => now(),
                 'updated_at'        => now(),
@@ -103,7 +104,7 @@ class CategoryTableSeeder extends Seeder
             [
                 'id'                => 11,
                 'category_type'     => 'event',
-                'name'              => 'Web Security',
+                'name'              => 'Web Security ev',
                 'title'             => 'The most effective learning system. World’s highest course completion rate.',
                 'created_at'        => now(),
                 'updated_at'        => now(),
@@ -111,7 +112,7 @@ class CategoryTableSeeder extends Seeder
             [
                 'id'                => 12,
                 'category_type'     => 'event',
-                'name'              => 'VAPT',
+                'name'              => 'VAPT ev',
                 'title'             => 'The most effective learning system. World’s highest course completion rate.',
                 'created_at'        => now(),
                 'updated_at'        => now(),
@@ -119,7 +120,7 @@ class CategoryTableSeeder extends Seeder
             [
                 'id'                => 13,
                 'category_type'     => 'event',
-                'name'              => 'Career',
+                'name'              => 'Career ev',
                 'title'             => 'The most effective learning system. World’s highest course completion rate.',
                 'created_at'        => now(),
                 'updated_at'        => now(),
@@ -128,7 +129,7 @@ class CategoryTableSeeder extends Seeder
             [
                 'id'                => 14,
                 'category_type'     => 'event',
-                'name'              => 'Data Science',
+                'name'              => 'Data Science ev',
                 'title'             => 'The most effective learning system. World’s highest course completion rate.',
                 'created_at'        => now(),
                 'updated_at'        => now(),
@@ -140,7 +141,7 @@ class CategoryTableSeeder extends Seeder
             [
                 'id'                => 15,
                 'category_type'     => 'blog',
-                'name'              => 'Professional Services',
+                'name'              => 'Professional Services bg',
                 'title'             => 'The most effective learning system. World’s highest course completion rate.',
                 'created_at'        => now(),
                 'updated_at'        => now(),
@@ -148,7 +149,7 @@ class CategoryTableSeeder extends Seeder
             [
                 'id'                => 16,
                 'category_type'     => 'blog',
-                'name'              => 'Security Operations',
+                'name'              => 'Security Operations bg',
                 'title'             => 'The most effective learning system. World’s highest course completion rate.',
                 'created_at'        => now(),
                 'updated_at'        => now(),
@@ -156,7 +157,7 @@ class CategoryTableSeeder extends Seeder
             [
                 'id'                => 17,
                 'category_type'     => 'blog',
-                'name'              => 'Application Security',
+                'name'              => 'Application Security bg',
                 'title'             => 'The most effective learning system. World’s highest course completion rate.',
                 'created_at'        => now(),
                 'updated_at'        => now(),
@@ -165,7 +166,7 @@ class CategoryTableSeeder extends Seeder
             [
                 'id'                => 18,
                 'category_type'     => 'blog',
-                'name'              => 'Web Security',
+                'name'              => 'Web Security bg',
                 'title'             => 'The most effective learning system. World’s highest course completion rate.',
                 'created_at'        => now(),
                 'updated_at'        => now(),
@@ -173,7 +174,7 @@ class CategoryTableSeeder extends Seeder
             [
                 'id'                => 19,
                 'category_type'     => 'blog',
-                'name'              => 'VAPT',
+                'name'              => 'VAPT bg',
                 'title'             => 'The most effective learning system. World’s highest course completion rate.',
                 'created_at'        => now(),
                 'updated_at'        => now(),
@@ -181,7 +182,7 @@ class CategoryTableSeeder extends Seeder
             [
                 'id'                => 20,
                 'category_type'     => 'blog',
-                'name'              => 'Career',
+                'name'              => 'Career bg',
                 'title'             => 'The most effective learning system. World’s highest course completion rate.',
                 'created_at'        => now(),
                 'updated_at'        => now(),
@@ -190,7 +191,7 @@ class CategoryTableSeeder extends Seeder
             [
                 'id'                => 21,
                 'category_type'     => 'blog',
-                'name'              => 'Data Science',
+                'name'              => 'Data Science bg',
                 'title'             => 'The most effective learning system. World’s highest course completion rate.',
                 'created_at'        => now(),
                 'updated_at'        => now(),
@@ -321,6 +322,14 @@ class CategoryTableSeeder extends Seeder
             ],
             // careers categories ends here
         ];
-            Category::insert($users);
+          
+            $records = collect($users)->map(function ($record) {
+                $record['slug'] = Str::slug($record['name']);
+                return $record;
+            })->toArray();
+    
+            Category::insert($records);
+
     }
+    
 }

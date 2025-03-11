@@ -5719,7 +5719,7 @@
         <!-- modal end -->
 
         {{-- @include('frontend.layouts.footer') --}}
-        {{-- <a href="#mian-body" class="scrollToTop"><i class="fa fa-arrow-up"></i></a> --}}
+        <a href="#mian-body" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
     </body>
 @endsection
 

@@ -26,22 +26,26 @@ class servicesController extends Controller
         $groupedServices = $this->servicesRepository->getGroupedServices();
         $categories = $this->servicesRepository->getCategoriesByPage($page_id);
 
-        $seoData = Seo::where('page_name', $page_name)
+        $seoDetails = Seo::where('page_name', $page_name)
         ->where('category_name', $category)
         ->where('sub_category_name', $sub_category)
         ->first();
 
     // Define default values if any field is NULL
         $seoData = [
-            'page_name'       => $seoData->page_name ?? 'Services Page',
-            'category_name'   => $seoData->category_name ?? 'General Services Category',
-            'sub_category_name' => $seoData->sub_category_name ?? 'General Subcategory',
-            'template_name'   => $seoData->template_name ?? 'default-template',
-            'seo_title'       => $seoData->seo_title ?? 'Default Service Title',
-            'seo_description' => $seoData->seo_description ?? 'Default Services Description',
-            'seo_keywords'    => $seoData->seo_keywords ?? 'default,Services keywords',
-            'google_analytics' => $seoData->google_analytics ?? 'Test google analytics',
+            'page_name'       => $seoDetails->page_name ?? 'Services Page',
+            'category_name'   => $seoDetails->category_name ?? 'General Services Category',
+            'sub_category_name' => $seoDetails->sub_category_name ?? 'General Subcategory',
+            'template_name'   => $seoDetails->template_name ?? 'default-template',
+            'seo_title'       => $seoDetails->seo_title ?? 'Default Service Title',
+            'seo_description' => $seoDetails->seo_description ?? 'Default Services Description',
+            'seo_keywords'    => $seoDetails->seo_keywords ?? 'default,Services keywords',
         ];
+
+        if (!empty($seoDetails->google_analytics)) {
+
+            $seoData['google_analytics'] = $seoDetails->google_analytics;
+        }
 
         return view('frontend.services', compact('categories', 'services', 'page_id', 'groupedServices','seoData'));
     }

@@ -34,4 +34,9 @@ class CourseCategory extends Model
     {
         return $this->belongsTo(PageDetail::class, 'page_category');
     }
+
+    public function seocategory()
+    {
+        return $this->hasMany(Seo::class, 'category_id');
+    }
 }
