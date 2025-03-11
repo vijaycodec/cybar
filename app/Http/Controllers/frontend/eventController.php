@@ -37,7 +37,6 @@ class eventController extends Controller
             'seo_title'       => $seoDetails->seo_title ?? 'Default Event Title',
             'seo_description' => $seoDetails->seo_description ?? 'Default Event Description',
             'seo_keywords'    => $seoDetails->seo_keywords ?? 'default,Event keywords',
-            'google_analytics' => $seoDetails->google_analytics ?? 'Event google analytics',
         ];
 
         if (!empty($seoDetails->google_analytics)) {
