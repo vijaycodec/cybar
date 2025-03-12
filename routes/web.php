@@ -30,6 +30,7 @@ use App\Http\Controllers\backend\menublogController;
 use App\Http\Controllers\backend\menueventController;
 use App\Http\Controllers\backend\menutestimonialController;
 use App\Http\Controllers\backend\careerController  as BackendCareerController;
+use App\Http\Controllers\backend\EnquiryController;
 use App\Http\Controllers\backend\seoController;
 use App\Http\Controllers\frontend\careerViewController;
 use App\Http\Controllers\frontend\templateController;
@@ -66,6 +67,8 @@ Route::middleware(['FrameGuard'])->group(function () {
     Route::get('/template1', [templateController::class, 'template1'])->name('template1');
     Route::get('/template2', [templateController::class, 'template2'])->name('template2');
     Route::get('/fraud-detection', [templateController::class, 'fraudDetection'])->name('fraud-detection');
+
+    Route::post('/submit-enquiry', [EnquiryController ::class, 'submitEnquiry'])->name('submit.enquiry');
 
 });
 
@@ -210,6 +213,8 @@ Route::middleware(['auth','admin','prevent_history'])->group(function () {
      // L3 category and sub-category Dependent Routes 
      Route::get('/seo-get-categories', [seoController::class, 'SeoGetCategories'])->name('seo-get-categories');
      Route::get('/seo-get-subcategories', [seoController::class, 'SeoGetSubCategories'])->name('seo-get-subcategories');
+
+
 
 });
 
