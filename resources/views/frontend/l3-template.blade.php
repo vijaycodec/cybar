@@ -325,7 +325,7 @@
                                                 @if ($contentInfo->images)
                                                     <div class="col-md-3">
                                                         <div class="template12-img">
-                                                            <img src="{{ Storage::url('uploads/significance/' . $contentInfo->images) }}" alt="Image">
+                                                            <img src="{{ asset('storage/uploads/frontend/l3_template/significance/' . $contentInfo->images) }}" alt="Image">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-9">
@@ -402,7 +402,7 @@
                                                 @if ($contentInfo->images)
                                                     <div class="template12-img">
                                                         <img
-                                                            src="{{ asset('uploads/frontend/l3_template/significance/' . $contentInfo->images) }}">
+                                                            src="{{ asset('storage/uploads/frontend/l3_template/significance/' . $contentInfo->images) }}">
                                                     </div>
                                                     {{-- <div class="red-title"> --}}
                                                     @if ($contentInfo->significanceCategory)
@@ -502,7 +502,9 @@
                                             <div class="container module-tab">
                                                 <div class="row">
                                                     <div class="pro-title">
-                                                        <h3>{{ $contentInfo->programCategory->name }}</h3>
+                                                        @if($contentInfo->program_sub_title)
+                                                             <h3>{!!$contentInfo->program_sub_title  !!}</h3> 
+                                                        @endif
                                                     </div>
 
                                                     <div class="pro-ul-box">
@@ -645,7 +647,7 @@
                                                                     @if ($subCategory->image)
                                                                         <div class="template12-img">
                                                                             <img
-                                                                                src="{{ asset('uploads/frontend/l3_template/program/' . $subCategory->image) }}">
+                                                                                src="{{ asset('storage/uploads/frontend/l3_template/program/' . $subCategory->image) }}">
                                                                         </div>
                                                                     @endif
 
@@ -663,11 +665,11 @@
                                             <div class="container">
                                                 <div class="row">
                                                     <div class="pro-title">
-                                                        {{-- <h3>Who is it for?</h3>
-                                                            <p>20-module program, designed to prepare you for success in the
-                                                                challenging CEH
-                                                                certification exam.
-                                                            </p> --}}
+                                                        
+                                                        @if($contentInfo->program_sub_title)
+                                                            <h3>{!!$contentInfo->program_sub_title  !!}</h3> 
+                                                        @endif
+
                                                     </div>
                                                     <!--  -->
                                                     <div class="pro-ul-box">
@@ -700,7 +702,7 @@
                                                             <div class="brochure-img">
                                                                 @if ($contentInfo->images)
                                                                     <img
-                                                                        src="{{ asset('uploads/frontend/l3_template/program/' . $contentInfo->images) }}">
+                                                                        src="{{ asset('storage/uploads/frontend/l3_template/program/' . $contentInfo->images) }}">
                                                                 @else
                                                                     <img
                                                                         src="https://www.eccouncil.org/wp-content/uploads/2023/01/CEH-cover-broucher-scaled.jpg.webp">
@@ -777,9 +779,10 @@
                                             <div class="container">
                                                 <div class="row">
                                                     <div class="pro-title">
-                                                        <h3>{{ $contentInfo->programCategory->name }}</h3>
-                                                        <p>20-module program, designed to prepare you for success in the
-                                                            challenging CEH certification exam.</p>
+                                                        @if($contentInfo->program_sub_title)
+                                                            <h3>{!!$contentInfo->program_sub_title  !!}</h3> 
+                                                        @endif
+                                                        
                                                     </div>
                                                     <div class="outline-heigh1">
                                                         <div class="row">
@@ -873,7 +876,7 @@
                                                                 <div class="vert-box box-height">
                                                                     @if ($subCategory->image)
                                                                         <div class="template12-img">
-                                                                            <img src="{{ asset('uploads/frontend/l3_template/program/' . $subCategory->image) }}"
+                                                                            <img src="{{ asset('storage/uploads/frontend/l3_template/program/' . $subCategory->image) }}"
                                                                                 alt="{{ $subCategory->name }}">
                                                                         </div>
                                                                     @endif
@@ -900,6 +903,9 @@
                                                     <div class="row">
                                                         <div class="pro-title">
                                                             {{-- add dynamic title from backend  --}}
+                                                            @if($contentInfo->program_sub_title)
+                                                                <h3>{!!$contentInfo->program_sub_title  !!}</h3> 
+                                                             @endif
                                                         </div>
                                                         <div class="pro-ul-box">
                                                             <p>{!! $contentInfo->program_description !!}</p>
@@ -925,7 +931,7 @@
                                                         <div class="col-md-4">
                                                             <div class="brochure-img">
                                                                 @if ($contentInfo->images)
-                                                                    <img src="{{ asset('uploads/frontend/l3_template/program/' . $contentInfo->images) }}"
+                                                                    <img src="{{ asset('storage/uploads/frontend/l3_template/program/' . $contentInfo->images) }}"
                                                                         alt="Brochure Image">
                                                                 @else
                                                                     <img src="https://www.eccouncil.org/wp-content/uploads/2023/01/CEH-cover-broucher-scaled.jpg.webp"
@@ -960,13 +966,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 cn-title">
-                        <!--<h2>COURSE FEATURES</h2>-->
-                        <!--<p>The essential technology that matter most for business today</p>-->
+                        {{-- <h2>COURSE FEATURES</h2>
+                        <p>The essential technology that matter most for business today</p> --}}
                          @foreach ($l3Categories as $category)
                             @foreach ($category->contentInfos as $contentInfo)
                                 @if ($contentInfo->coursefeature_title)
-                                    <p>{!! $contentInfo->coursefeature_title->title !!}</p>
-                                   
+                                    <h2>{!! $contentInfo->coursefeature_title->title !!}</h2>
                                 @endif
                             @endforeach
                         @endforeach
@@ -1007,7 +1012,7 @@
                                                     <div class="col-md-3">
                                                         <div class="template12-img">
                                                             <img
-                                                                src="{{ asset('uploads/frontend/l3_template/coursefeature/' . $contentInfo->images) }}">
+                                                                src="{{ asset('storage/uploads/frontend/l3_template/coursefeature/' . $contentInfo->images) }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-9">
@@ -1073,10 +1078,10 @@
 
                                         data-title="{{ $contentInfo->coursefeatureCategory->name }}"
                                         data-description="{{ e($description) }}" {{-- Use e() instead of htmlspecialchars() --}}
-                                        data-image="{{ asset('uploads/frontend/l3_template/coursefeature/' . $contentInfo->images) }}">
+                                        data-image="{{ asset('storage/uploads/frontend/l3_template/coursefeature/' . $contentInfo->images) }}">
 
                                         <div class="mobile-cf-content">
-                                            <img src="{{ asset('uploads/frontend/l3_template/coursefeature/' . $contentInfo->images) }}"
+                                            <img src="{{ asset('storage/uploads/frontend/l3_template/coursefeature/' . $contentInfo->images) }}"
                                                 alt="">
                                             <h3>{{ $contentInfo->coursefeatureCategory->name }}</h3>
                                             <p>{!! $contentInfo->course_feature_short_description !!}</p>
@@ -1133,8 +1138,8 @@
                                 <div class="item">
                                     <div class="price-box">
                                         <div class="pri-box-number"><span>{{ $loop->iteration }}</span></div>
-                                        <div class="price-box-img"><img
-                                                src="{{ Storage::url('uploads/cehkit/' . $contentInfo->images) }}">
+                                        <div class="price-box-img">
+                                            <img src="{{ asset('storage/uploads/frontend/l3_template/cehkit/' . $contentInfo->images) }}" alt="Image">
                                         </div>
                                         <div class="price-body">
                                             <div class="price-title">
@@ -1212,7 +1217,7 @@
                             @if ($contentInfo->Video_link)
                                 <div data-videourl="{{ $contentInfo->Video_link }}" class="ceh-video button">
                                     <img
-                                        src="{{ asset('uploads/frontend/l3_template/incidents/' . $contentInfo->images) }}">
+                                        src="{{ asset('storage/uploads/frontend/l3_template/incidents/' . $contentInfo->images) }}">
                                 </div>
                             @endif
                         @endforeach
@@ -1267,7 +1272,7 @@
                                                     <div class="cn-hover-img">
                                                         @if ($contentInfo->industryCategory)
                                                             <img
-                                                                src="{{ asset('uploads/frontend/l3_template/industry/' . $contentInfo->images) }}">
+                                                                src="{{ asset('storage/uploads/frontend/l3_template/industry/' . $contentInfo->images) }}">
                                                         @endif
                                                     </div>
                                                     <div class="cn-content">
@@ -1360,7 +1365,7 @@
                                                         <div class="col-md-5">
                                                             <div class="template12-img">
                                                                 <img
-                                                                    src="{{ asset('uploads/frontend/l3_template/cyberwind/' . $contentInfo->images) }}">
+                                                                    src="{{ asset('storage/uploads/frontend/l3_template/cyberwind/' . $contentInfo->images) }}">
                                                             </div>
                                                         </div>
                                                         <div class="col-md-7">
@@ -1438,7 +1443,7 @@
                                                 @if ($contentInfo->images)
                                                     <div class="template12-img">
                                                         <img
-                                                            src="{{ asset('uploads/frontend/l3_template/cyberwind/' . $contentInfo->images) }}">
+                                                            src="{{ asset('storage/uploads/frontend/l3_template/cyberwind/' . $contentInfo->images) }}">
                                                     </div>
                                                     {{-- <div class="red-title"> --}}
                                                     @if ($contentInfo->cyberwindCategory)
@@ -1506,12 +1511,12 @@
                                                  data-name="{{ $testimonial->testimonial_name }}"
                                                 data-designation="{{ $testimonial->designation }}"
                                                 data-description="{{ $testimonial->testimonial_description }}"
-                                                data-image="{{ asset('uploads/frontend/l3_template/testimonials/' . $testimonial->images) }}">
+                                                data-image="{{ asset('storage/uploads/frontend/l3_template/testimonials/' . $testimonial->images) }}">
 
                                                 <div class="row">
                                                     <div class="col-md-4">
                                                         <div class="ceh-testo-image">
-                                                            <img src="{{ asset('uploads/frontend/l3_template/testimonials/' . $testimonial->images) }}"
+                                                            <img src="{{ asset('storage/uploads/frontend/l3_template/testimonials/' . $testimonial->images) }}"
                                                                 class="img-fluid">
                                                         </div>
                                                     </div>

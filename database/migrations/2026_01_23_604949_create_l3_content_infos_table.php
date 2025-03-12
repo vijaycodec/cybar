@@ -58,8 +58,9 @@ return new class extends Migration
             $table->text('ceh_description')->nullable();
             
             //
-              //faq section columns
+              //program section columns
             $table->unsignedBigInteger('program_category_id')->nullable(); // Linked to program_categories
+            $table->text('program_sub_title')->nullable();
             $table->text('program_description')->nullable(); // Category Description
             $table->string('program_image')->nullable(); // Program Image
             
