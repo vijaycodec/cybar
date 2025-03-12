@@ -39,6 +39,7 @@ class MenuBlogRepository implements MenuBlogRepositoryInterface
         $blog = new MenuBlog();
         $blog->category_id = $data['category_id'];
         $blog->sub_category = $data['sub_category'];
+        $blog->slug = $data['slug'];
         $blog->short_desc = $data['short_desc'];
         $blog->description = $data['description'];
 
@@ -56,6 +57,7 @@ class MenuBlogRepository implements MenuBlogRepositoryInterface
         $blog = MenuBlog::findOrFail($id);
         $blog->category_id = $data['category_id'];
         $blog->sub_category = $data['sub_category'];
+        $blog->slug = $data['slug'];
         $blog->short_desc = $data['short_desc'];
         $blog->description = $data['description'];
 

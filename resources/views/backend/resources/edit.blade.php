@@ -81,7 +81,7 @@
                             <!-- Image preview container -->
                             <div class="item" id="imgpreview" style="text-align: center;">
                                 @if ($resources->images)
-                                    <img src="{{ asset('uploads/backend/resources/' . $resources->images) }}"
+                                    <img src="{{ asset('storage/uploads/backend/resources/' . $resources->images) }}"
                                         id="preview-img" class="effect8" alt="Preview Image"
                                         style="max-width: 50%; height: auto;">
                                     <!-- Adjusted image width -->
@@ -207,26 +207,23 @@
         });
     </script>
 
-<script>
-    $(document).ready(function() {
-        function slugify(text) {
-            if (typeof text !== 'string') text = ''; // Ensure text is always a string
-            return text.toLowerCase()
-                .trim()
-                .replace(/\s+/g, '-') // Replace spaces with hyphens
-                .replace(/[^\w\-]+/g, '') // Remove all non-word characters
-                .replace(/\-\-+/g, '-'); // Replace multiple hyphens with a single hyphen
-        }
+    <script>
+        $(document).ready(function() {
+            function slugify(text) {
+                if (typeof text !== 'string') text = ''; // Ensure text is always a string
+                return text.toLowerCase()
+                    .trim()
+                    .replace(/\s+/g, '-') // Replace spaces with hyphens
+                    .replace(/[^\w\-]+/g, '') // Remove all non-word characters
+                    .replace(/\-\-+/g, '-'); // Replace multiple hyphens with a single hyphen
+            }
 
-        $('#short_desc').on('input', function() {
-            var title = $(this).val() || ''; // Ensure title is never undefined
-            title = String(title); // Explicitly convert title to a string
-            var slug = slugify(title);
-            $('#categorySlug').val(slug); // Update slug field dynamically
+            $('#short_desc').on('input', function() {
+                var title = $(this).val() || ''; // Ensure title is never undefined
+                title = String(title); // Explicitly convert title to a string
+                var slug = slugify(title);
+                $('#categorySlug').val(slug); // Update slug field dynamically
+            });
         });
-    });
-</script>
-
-
-
+    </script>
 @endpush

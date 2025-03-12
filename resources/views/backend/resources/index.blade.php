@@ -54,7 +54,7 @@
                                         <td>{{ $resource->category->name ?? 'N/A' }}</td> <!-- Using the relationship -->
                                         <td>
                                             @if ($resource->images)
-                                                <img src="{{ asset('uploads/backend/resources/' . $resource->images) }}"
+                                                <img src="{{ asset('storage/uploads/backend/resources/' . $resource->images) }}"
                                                     alt="Resource Image" width="100">
                                             @else
                                                 <span>No image available</span>

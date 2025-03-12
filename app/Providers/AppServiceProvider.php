@@ -17,12 +17,14 @@ use App\Repositories\L3ContentRepository;
 use App\Repositories\Interfaces\L3ContentRepositoryInterface;
 use App\Repositories\Interfaces\MenuBlogRepositoryInterface;
 use App\Repositories\Interfaces\MenuEventRepositoryInterface;
+use App\Repositories\Interfaces\ResourceRepositoryInterface;
 use App\Repositories\Interfaces\ServicesRepositoryInterface;
 use App\Repositories\Interfaces\TestimonialRepositoryInterface;
 use App\Repositories\Interfaces\UploadServiceInterface;
 use App\Repositories\L3CategoryRepository;
 use App\Repositories\MenuBlogRepository;
 use App\Repositories\MenuEventRepository;
+use App\Repositories\ResourceRepository;
 use App\Repositories\ServicesRepository;
 use App\Repositories\TestimonialRepository;
 use App\Services\ImageService;
@@ -43,6 +45,7 @@ class AppServiceProvider extends ServiceProvider
     $this->app->bind(MenuEventRepositoryInterface::class,MenuEventRepository::class);
     $this->app->bind(TestimonialRepositoryInterface::class,TestimonialRepository::class);
     $this->app->bind(CareerRepositoryInterface::class,CareerRepository::class);
+    $this->app->bind(ResourceRepositoryInterface::class,ResourceRepository::class);
       // Bind the upload service interface to its implementation category Repository
     $this->app->bind(UploadServiceInterface::class,ImageService::class);  // comman for image upload ,delete service
 }
