@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->integer('category_id');
             $table->text('subcategory');
+            $table->string('slug');
             $table->text('location'); 
             $table->text('educational_background'); // Use text for long content
             $table->text('short_desc'); 

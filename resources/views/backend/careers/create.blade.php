@@ -36,10 +36,24 @@
                         </select>
                     </fieldset>
                 
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <div class="body-title"> Sub Category Name<span class="tf-color-1">*</span></div>
                         <textarea class="flex-grow" name="subcategory" aria-required="true" required="">{{ old('subcategory') }}</textarea>
-                    </div> 
+                    </div>  --}}
+
+                    <fieldset class="name">
+                        <div class="body-title">Sub Category Name <span class="tf-color-1">*</span></div>
+                        <input class="flex-grow" id="subcategory" type="text" placeholder="Sub Category Name" name="subcategory"
+                            tabindex="0" value="{{ old('subcategory') }}" aria-required="true" required >
+                    </fieldset>
+
+
+                    <fieldset class="name">
+                        <div class="body-title">Category Slug <span class="tf-color-1">*</span></div>
+                        <input class="flex-grow" id="categorySlug" type="text" placeholder="Category Name" name="slug"
+                            tabindex="0" value="{{ old('slug') }}" aria-required="true" required readonly>
+                    </fieldset>
+
 
                     <div class="form-group">
                         <div class="body-title"> Location<span class="tf-color-1">*</span></div>
@@ -88,4 +102,25 @@
         </div>
     </div>
 @endsection
+
+@push('scripts')
+    <!-- jQuery script to generate slug on change -->
+    <script>
+        $(document).ready(function() {
+            function slugify(text) {
+                return text.toString().toLowerCase()
+                    .trim()
+                    .replace(/\s+/g, '-') // Replace spaces with hyphens
+                    .replace(/[^\w\-]+/g, '') // Remove all non-word characters
+                    .replace(/\-\-+/g, '-'); // Replace multiple hyphens with single hyphen
+            }
+
+            $('#subcategory').on('input', function() {
+                var title = $(this).val();
+                var slug = slugify(title);
+                $('#categorySlug').val(slug); // Set generated slug in the input field
+            });
+        });
+    </script>
+@endpush
 

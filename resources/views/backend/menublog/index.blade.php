@@ -40,6 +40,7 @@
                                 <th>#</th>
                                 <th>Category Name</th>
                                 <th>Sub Category Name</th>
+                                <th>Sub Category Slug</th>
                                 <th>Image</th>
                                 <th>Short Description</th>
                                 <th>Description</th>
@@ -52,7 +53,8 @@
                                     <tr>
                                         <td>{{ $blog->id }}</td>
                                         <td>{{ $blog->category->name ?? 'N/A' }}</td> 
-                                        <td>{{ $blog->sub_category ?? 'N/A' }}</td>  
+                                        <td>{{ $blog->sub_category ?? 'N/A' }}</td>
+                                        <td>{{ $blog->slug ?? 'N/A' }}</td>    
                                         <td>
                                             @if ($blog->images)
                                                 <img src="{{ asset('uploads/backend/blog/' . $blog->images) }}"

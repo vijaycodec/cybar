@@ -35,6 +35,7 @@ class CareerController extends Controller
             $validated = $request->validate([
                 'category_id' => 'required',
                 'subcategory' => 'required',
+                'slug' => 'required',
                 'location' => 'required',
                 'educational_background' => 'required',
                 'short_desc' => 'required',
@@ -65,6 +66,7 @@ class CareerController extends Controller
             $validated = $request->validate([
             'category_id' => 'required',
             'subcategory' => 'required',
+            'slug' => 'required',
             'location' => 'required',
             'educational_background' => 'required',
             'short_desc' => 'required',

@@ -37,6 +37,7 @@ class CareerRepository implements CareerRepositoryInterface
         $career = new Career();
         $career->category_id = $data['category_id'];
         $career->subcategory = $data['subcategory'];
+        $career->slug = $data['slug'];
         $career->location = $data['location'];
         $career->educational_background = $data['educational_background'];
         $career->description = $data['description'];
@@ -55,6 +56,7 @@ class CareerRepository implements CareerRepositoryInterface
         $career = Career::findOrFail($id);
         $career->category_id = $data['category_id'];
         $career->subcategory = $data['subcategory'];
+        $career->slug = $data['slug'];
         $career->location = $data['location'];
         $career->educational_background = $data['educational_background'];
         $career->description = $data['description'];

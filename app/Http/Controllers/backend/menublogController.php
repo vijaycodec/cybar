@@ -48,6 +48,7 @@ class menublogController extends Controller
         $validated = $request->validate([
             'category_id' => 'required',
             'sub_category' => 'required',
+            'slug' => 'required',
             'short_desc'   => 'required',
             'description'  => 'required',
         ]);
@@ -85,6 +86,7 @@ class menublogController extends Controller
             $validated = $request->validate([
             'category_id' => 'required',
             'sub_category' => 'required',
+            'slug' => 'required',
             'short_desc' => 'required',
             'description' => 'required',
            

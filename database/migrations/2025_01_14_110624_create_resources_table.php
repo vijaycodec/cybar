@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->integer('category_id');
             $table->text('short_desc'); 
+            $table->string('slug');
             $table->longText('description'); // Use text for long content
             $table->string('images');
             $table->timestamps();

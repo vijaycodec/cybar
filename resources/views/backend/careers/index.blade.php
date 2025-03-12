@@ -40,6 +40,7 @@
                                 <th>#</th>
                                 <th>Category Name</th>
                                 <th> Sub Category Name</th>
+                                <th> Sub Category Slug</th>
                                 <th>Location</th>
                                 <th>Educational Background</th>
                                 <th>Image</th>
@@ -53,6 +54,7 @@
                                         <td>{{ $career->id }}</td>
                                         <td>{{ $career->category->name ?? 'N/A' }}</td> 
                                         <td>{{ $career->subcategory ?? 'N/A' }}</td> 
+                                        <td>{{ $career->slug ?? 'N/A' }}</td> 
                                         <td>{{ $career->location ?? 'N/A' }}</td>  
                                         <td>{{ $career->educational_background ?? 'N/A' }}</td> 
                                         <td>
