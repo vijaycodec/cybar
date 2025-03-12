@@ -373,15 +373,19 @@
                     @endforeach
                 </select>
             </div>
+            <div class="l3-form form-group program_title">
+                <div class="body-title">Program Top Title(H) :<span class="tf-color-1">*</span></div>
+                <input type="text" class="" name="program_title">{{ old('program_title') }}</input>
+            </div>
             <div class="name l3-form program_subcategory" id="">
                 <div class="body-title">Program Sub-Category Name </div>
                 <input class="flex-grow" type="text" placeholder="Sub Category Name" name="program_subcategory" tabindex="0"
                     value="{{ old('program_subcategory') }}">
             </div>
-            <div class="l3-form form-group program_title">
-                <div class="body-title">Program Title(H) :<span class="tf-color-1">*</span></div>
-                <input type="text" class="" name="program_title">{{ old('program_title') }}</input>
-            </div>
+            <div class="l3-form form-group program_sub_title">
+                <div class="body-title">Program Sub Title(H) :<span class="tf-color-1">*</span></div>
+                <textarea class="summernote" name="program_sub_title">{{ old('program_sub_title') }}</textarea>
+            </div>
             <div class="l3-form form-group program_description">
                 <div class="body-title"> Description : <span class="tf-color-1">*</span></div>
                 <textarea class="summernote" name="program_description">{{ old('program_description') }}</textarea>
@@ -522,6 +526,7 @@
                     $('.program_subcategory').show(); 
                     $('.program_description').show(); 
                     $('.program_title').show();
+                    $('.program_sub_title').show();
                     $('.comman_images').show();
                     $('#l3_category_type').val('program'); // Set hidden input to 'cehkit'
                 } else if (selectedL3Category === "history") {  

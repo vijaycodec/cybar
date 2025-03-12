@@ -30,7 +30,7 @@ class SendEnquiryMail implements ShouldQueue
      */
     public function handle(): void
     {
-        $adminEmail = env('ADMIN_EMAIL');
+        $adminEmail = env('ADMIN_EMAIL', 'pratapv495@gmail.com'); // Fallback email
         Mail::to($adminEmail)->send(new EnquiryMail($this->data));
     }
 }
