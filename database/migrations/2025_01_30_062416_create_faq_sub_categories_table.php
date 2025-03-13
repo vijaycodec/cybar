@@ -14,7 +14,10 @@ return new class extends Migration
         Schema::create('faq_sub_categories', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('faq_category_id'); // Foreign key to ceh_categories
+            $table->unsignedBigInteger('page_id'); // This ensures a proper link with l3_content_infos
+            $table->unsignedBigInteger('sub_category_id'); // This ensures a proper link with l3_content_infos
             $table->string('name'); // Name of the subcategory
+            $table->text('title')->nullable(); // Name of the subcategory
             $table->text('description')->nullable(); // Description of the subcategory
             $table->timestamps();
         

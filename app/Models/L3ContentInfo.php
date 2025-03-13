@@ -76,7 +76,6 @@ class L3ContentInfo extends Model
         return $this->belongsTo(BlogCategory::class, 'blog_category_type', 'id');
     }
 
-
     public function testimonials()
     {
         return $this->hasMany(TestimonialDetails::class, 'l3_content_info_id','id');
@@ -87,6 +86,10 @@ class L3ContentInfo extends Model
         {
             return $this->belongsTo(ProgramCategory::class, 'program_category_id');
         }
-    
 
+        public function programSubCategory()
+        {
+            return $this->hasOne(ProgramSubCategory::class, 'sub_category_id', 'sub_category_id');
+        }
+    
 }

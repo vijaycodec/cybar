@@ -806,11 +806,7 @@
 	.site-main-navigation>ul>li:first-child, .site-main-navigation>ul>li.open:first-child {
 		margin: 0
 	}
-	.site-main-navigation>ul>li.nav-highlight>a, .site-main-navigation>ul>li.open.nav-highlight>a {
-		border-bottom-color: #fff;
-		background-color: #285481;
-
-	}
+	
 	.site-main-navigation>ul>li.nav-highlight>a:after, .site-main-navigation>ul>li.open.nav-highlight>a:after {
 		content: ""
 	}

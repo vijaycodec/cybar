@@ -147,6 +147,8 @@ class L3ContentRepository implements L3ContentRepositoryInterface
                 if ($request->program_subcategory) {
                     $programSubCategory = new ProgramSubCategory();
                     $programSubCategory->program_category_id  = $request->program_category_id;
+                    $programSubCategory->sub_category_id = $request->sub_category_id;
+                    $programSubCategory->page_id = $request->page_category_id;
                     $programSubCategory->name  = $request->program_subcategory;
                     
                     $programSubCategory->description = $request->program_description;
@@ -215,6 +217,8 @@ class L3ContentRepository implements L3ContentRepositoryInterface
         if ($request->l3_category_type == 'faqs') {
             $faqSubCategory = new FaqSubCategory();
             $faqSubCategory->faq_category_id  = $request->faq_category_id;  // Linking the significance with the l3_content_info
+            $faqSubCategory->sub_category_id = $request->sub_category_id;
+            $faqSubCategory->page_id = $request->page_category_id;
             $faqSubCategory->name  = $request->subcategory;  // Linking the significance with the l3_content_info
             $faqSubCategory->title  = $request->faq_title;  // Linking the significance with the l3_content_info
             $faqSubCategory->description = $request->subcategory_description;  // Store significance title

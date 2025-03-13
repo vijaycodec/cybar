@@ -12,32 +12,73 @@ use Illuminate\Support\Facades\Cache;
 class L3CategoryRepository implements L3CategoryRepositoryInterface
 {
 
+    // public function getL3Categories($pageId, $categoryId, $subcategoryId)
+    // {
+    //     return L3Category::whereHas('contentInfos', function ($query) use ($pageId, $categoryId, $subcategoryId) {
+    //         $query->where('page_category_id', $pageId)
+    //             ->where('category_id', $categoryId)
+    //             ->where('sub_category_id', $subcategoryId);
+    //     })
+    //     ->with([
+    //         'contentInfos' => function ($query) {
+    //             $query->with([
+    //                 'overviewSubDescriptions',
+    //                 'significanceCategory',
+    //                 'significance_title',
+    //                 'coursefeatureCategory',
+    //                 'coursefeature_title',
+    //                 'cyberwindCategory',
+    //                 'industryCategory',
+    //                 'blogCategory',
+    //                 'testimonials',
+    //                 'faqCategory.faqSubCategory',
+    //                 'programCategory.programSubCategories',
+    //             ]);
+    //         }
+    //     ])
+    //     ->get();
+    // }
+
+
     public function getL3Categories($pageId, $categoryId, $subcategoryId)
-    {
-        return L3Category::whereHas('contentInfos', function ($query) use ($pageId, $categoryId, $subcategoryId) {
-            $query->where('page_category_id', $pageId)
-                ->where('category_id', $categoryId)
-                ->where('sub_category_id', $subcategoryId);
-        })
-        ->with([
-            'contentInfos' => function ($query) {
-                $query->with([
-                    'overviewSubDescriptions',
-                    'significanceCategory',
-                    'significance_title',
-                    'coursefeatureCategory',
-                    'coursefeature_title',
-                    'cyberwindCategory',
-                    'industryCategory',
-                    'blogCategory',
-                    'testimonials',
-                    'faqCategory.faqSubCategory',
-                    'programCategory.programSubCategories',
-                ]);
-            }
-        ])
-        ->get();
-    }
+{
+    return L3Category::whereHas('contentInfos', function ($query) use ($pageId, $categoryId, $subcategoryId) {
+        $query->where('page_category_id', $pageId)
+              ->where('category_id', $categoryId)
+              ->where('sub_category_id', $subcategoryId);
+    })
+    ->with([
+        'contentInfos' => function ($query) use ($subcategoryId, $pageId) {
+            $query->with([
+                'overviewSubDescriptions',
+                'significanceCategory',
+                'significance_title',
+                'coursefeatureCategory',
+                'coursefeature_title',
+                'cyberwindCategory',
+                'industryCategory',
+                'blogCategory',
+                'testimonials',
+                // 'faqCategory.faqSubCategory',
+                'programCategory' => function ($query) use ($subcategoryId, $pageId) {  
+                    $query->with(['programSubCategories' => function ($subQuery) use ($subcategoryId, $pageId) {
+                        $subQuery->where('page_id', $pageId)  // Match page_id
+                                 ->where('sub_category_id', $subcategoryId); // Match subcategory_id
+                    }]);
+                },
+
+                'faqCategory' => function ($query) use ($subcategoryId, $pageId) {
+                    $query->with(['faqSubCategory' => function ($subQuery) use ($subcategoryId, $pageId) {
+                        $subQuery->where('page_id', $pageId)
+                                 ->where('sub_category_id', $subcategoryId);
+                    }]);
+                },
+            ]);
+        }
+    ])
+    ->get();
+}
+
 }
 
 

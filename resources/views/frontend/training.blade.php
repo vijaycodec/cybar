@@ -63,7 +63,7 @@
                                                             </div>
                                                             <span class="box-readmore">
                                                                 <a
-                                                                    href="{{ route('l3-template', ['sub_category_id' => $training->subcategory->id, 'pageid' => $page_id, 'category_id' => $category->id]) }}">Learn
+                                                                    href="{{ route('l3-template', ['sb' => $training->subcategory->id, 'pg' => $page_id, 'ct' => $category->id]) }}">Learn
                                                                     more
                                                                     <i class="fa fa-chevron-right"></i></a>
                                                             </span>
@@ -166,30 +166,7 @@
             });
         });
     </script>
-    <script type="text/javascript">
-        function addVersionToFiles() {
-            var version = new Date().getTime();
-            var links = document.getElementsByTagName('link');
-            var scripts = document.getElementsByTagName('script');
-            // Add version to CSS files
-            for (var i = 0; i < links.length; i++) {
-                var href = links[i].getAttribute('href');
-                if (href && href.endsWith('.css')) {
-                    links[i].setAttribute('href', href + '?v=' + version);
-                }
-            }
-            // Add version to script files
-            for (var i = 0; i < scripts.length; i++) {
-                var src = scripts[i].getAttribute('src');
-                if (src) {
-                    scripts[i].setAttribute('src', src + '?v=' + version);
-                }
-            }
-        }
-        window.onload = function() {
-            addVersionToFiles();
-        };
-    </script>
+
 
     {{-- <script type="text/javascript">
         $(function() {
