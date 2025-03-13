@@ -63,7 +63,7 @@
                                                             </div>
                                                             <span class="box-readmore">
                                                                 <a
-                                                                    href="{{ route('l3-template', ['sub_category_id' => $training->subcategory->id, 'pageid' => $page_id, 'category_id' => $category->id]) }}">Learn
+                                                                    href="{{ route('l3-template', ['sb' => $training->subcategory->id, 'pg' => $page_id, 'ct' => $category->id]) }}">Learn
                                                                     more
                                                                     <i class="fa fa-chevron-right"></i></a>
                                                             </span>
