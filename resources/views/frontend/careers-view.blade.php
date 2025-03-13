@@ -156,29 +156,6 @@
 
     <!-- End of recaptcha -->
 
-    <script type="text/javascript">
-        function addVersionToFiles() {
-            var version = new Date().getTime();
-            var links = document.getElementsByTagName('link');
-            var scripts = document.getElementsByTagName('script');
-            // Add version to CSS files
-            for (var i = 0; i < links.length; i++) {
-                var href = links[i].getAttribute('href');
-                if (href && href.endsWith('.css')) {
-                    links[i].setAttribute('href', href + '?v=' + version);
-                }
-            }
-            // Add version to script files
-            for (var i = 0; i < scripts.length; i++) {
-                var src = scripts[i].getAttribute('src');
-                if (src) {
-                    scripts[i].setAttribute('src', src + '?v=' + version);
-                }
-            }
-        }
-        window.onload = function() {
-            addVersionToFiles();
-        };
-    </script>
+
     @include('frontend.layouts.right-menu-js')
 @endpush

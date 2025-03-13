@@ -5731,7 +5731,7 @@
     <script type="text/javascript" src="{{asset('assets/js/mobile-menu.js')}}"></script>
     <script type="text/javascript" src="{{asset('assets/js/main.js?v=32')}}"></script>
 
-    <script type="text/javascript">
+    {{-- <script type="text/javascript">
         function addVersionToFiles() {
             var version = new Date().getTime();
             var links = document.getElementsByTagName('link');
@@ -5754,7 +5754,7 @@
         window.onload = function () {
             addVersionToFiles();
         };
-    </script>
+    </script> --}}
 
     <script>
         $('.close-acrodin').click(function (e) {
