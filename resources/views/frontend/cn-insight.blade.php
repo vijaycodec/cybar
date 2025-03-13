@@ -1185,6 +1185,7 @@
 
     </body>
 @endsection
+<<<<<<< HEAD
 <!-- Jquery code -->
 
 <script type="text/javascript" src="assets/js/carousel.js"></script>
@@ -1192,3 +1193,149 @@
 <script src='assets/js/pagination.js'></script>
 <script type="text/javascript" src="assets/js/custom.js"></script>
 <script type="text/javascript" src="assets/js/pagination-custom.js"></script>
+=======
+   <!-- Jquery code -->
+   @push('scripts')
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+   {{-- <script type="text/javascript" src="assets/js/custom.js"></script>
+   <script type="text/javascript" src="assets/js/mobile-menu.js?v=2"></script> --}}
+   <script type="text/javascript"> $(document).ready(function(){
+      "use strict";
+      var offSetTop = 100;
+      var $scrollToTopButton = $('.scrollToTop');
+      //Check to see if the window is top if not then display button
+      $(window).scroll(function(){
+      if ($(this).scrollTop() > offSetTop) {
+      $scrollToTopButton.fadeIn();
+      } else {
+      $scrollToTopButton.fadeOut();
+      }
+      });
+      });
+   </script>
+   <script type="text/javascript">
+      $(document).ready(function () {
+      $('.ecsp_div a').bind('click', function (e) {
+      e.preventDefault();
+      var target = $(this).attr("href");
+      $('html, body').stop().animate({
+      scrollTop: $(target).offset().top - 80
+      }, 100, function () {
+      // location.hash = target;
+      });
+      return false;
+      });
+      });
+   </script>
+
+   <script type="text/javascript">
+      $(function () {
+      function initializeCarousel(carouselId, navigationCountId) {
+      $("#" + carouselId).owlCarousel({
+          loop: true,
+          margin: 10,
+          nav: true,
+          dots: true,
+          navigationText: ['<i class="fa fa-long-arrow-left" aria-hidden="true"></i>', '<i class="fa fa-long-arrow-right" aria-hidden="true"></i>'],
+          responsive: {
+              0: { items: 1 },
+              600: { items: 1 },
+              900: { items: 1 },
+              1200: { items: 3 }
+          },
+          onInitialized: function(event) {
+              updateNavigationCount(event, navigationCountId);
+          },
+          onChanged: function(event) {
+              updateNavigationCount(event, navigationCountId);
+          }
+      });
+      }
+      
+      
+      function updateNavigationCount(event, navigationCountId) {
+      if (!event.namespace)  {
+      return;
+      }
+      var carousel = event.relatedTarget;
+      $("#" + navigationCountId).html(carousel.relative(carousel.current()) + 1 + '/' + carousel.items().length);
+      }
+      initializeCarousel("ser-demo1", "navigation-count");
+      initializeCarousel("ser-demo2", "navigation-count1");
+      initializeCarousel("ser-demo3", "navigation-count2");
+      initializeCarousel("ser-demo4", "navigation-count3");
+      initializeCarousel("ser-demo5", "navigation-count4");
+      initializeCarousel("ser-demo6", "navigation-count5");
+      initializeCarousel("ser-demo7", "navigation-count6");
+      initializeCarousel("ser-demo8", "navigation-count7");
+      initializeCarousel("ser-demo9", "navigation-count8");
+      initializeCarousel("ser-demo10", "navigation-count9");
+      initializeCarousel("ser-demo11", "navigation-count10");
+      initializeCarousel("ser-demo12", "navigation-count11");
+      initializeCarousel("ser-demo13", "navigation-count12");
+      initializeCarousel("ser-demo14", "navigation-count13");
+      initializeCarousel("ser-demo15", "navigation-count14");
+      initializeCarousel("ser-demo16", "navigation-count15");
+      });
+   </script>
+   <script>
+      var youtubeVideo = {
+      videoBtn:'[data-videourl]',
+      
+      model: function() {
+      
+          function videoinit() {
+              $('body').on('click', youtubeVideo.videoBtn, function(event) {
+                event.preventDefault();
+                  var videoSrc = $(this).data('videourl');
+      
+                  var ID = '';
+                  var url = videoSrc.replace(/(>|<)/gi, '').split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
+                  if (url[2] !== undefined) {
+                      ID = url[2].split(/[^0-9a-z_\-]/i);
+                      ID = ID[0];
+                  } else {
+                      ID = url;
+                  }
+      
+                  var videoElement = $('<div class="video-popup-model">' + '<div class="video-layer">' + '<div class="video-model-close-layer">' + '</div>' + '<div class="model-wrapper">' + '<div class="videomodel">' + '<div class="videoscreen">' + '<iframe width="100%" height="auto" class="videlement"' + 'src="https://www.youtube.com/embed/' + ID + '?rel=0&amp;controls=1&amp;showinfo=0&amp;autoplay=1' + '" frameborder="0"' + 'allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"' + 'allowfullscreen></iframe>' + '</div>' + '<div class="modelCloseBtn">' + '</div>' + '</div>' + '</div>' + '</div>' + '</div>');
+      
+                  $('body').prepend(videoElement);
+                  var videoWidth = $('.video-popup-model .videlement').width();
+                  var videHeight = (9 / 16) * videoWidth;
+                  $('.video-popup-model .videlement').height(videHeight);
+                  $('body').find('.video-popup-model').addClass('smooth_show');
+              });
+          }
+          videoinit();
+      
+          function modelClose() {
+              $('body').on('click', '.modelCloseBtn', function(event) {
+                  var model = $(this).parents('.video-popup-model')
+                  model.removeClass('smooth_show');
+                  setTimeout(function() {
+                      model.remove();
+                  }, 500);
+                  $('body').removeClass('no-reload');
+              });
+          }
+          modelClose();
+      
+          function modelLayerClose() {
+              $('body').on('click', '.video-model-close-layer', function(event) {
+                  $(".modelCloseBtn").trigger('click');
+              });
+          }
+          modelLayerClose();
+      },
+      init: function() {
+          youtubeVideo.model();
+      }
+      };
+      
+      youtubeVideo.init();
+   </script>
+   
+   @include('frontend.layouts.right-menu-js')
+@endpush
+>>>>>>> cfaa4615ad8397f55fdc76212dde9cdf44a13724
