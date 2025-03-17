@@ -2,14 +2,14 @@
     <div class="col-xs-12 btm-menu footer-menu1">
         <div class="container">
             <ul>
-                <li><a href="training.php">Corporate Training</a></li>
-                <li><a href="resources.php">Resources</a></li>
-                <li><a href="careers.php">Career</a></li>
-                <li><a href="template15.php">Blog</a></li>
-                <li><a href="events.php">Events</a></li>
+                <li><a href="{{ route('training') }}">Corporate Training</a></li>
+                <li><a href="{{ route('resources') }}">Resources</a></li>
+                <li><a href="{{ route('careers') }}">Career</a></li>
+                <li><a href="{{ route('blogs') }}">Blog</a></li>
+                <li><a href="{{ route('events') }}">Events</a></li>
                
-                <li><a href="template2.php">About Us</a></li>
-                <li><a href="https://www.cybarwind.com/contact.php">Contact Us</a></li>
+                <li><a href="{{ route('template2') }}">About Us</a></li>
+                <li><a href="{{ route('contact') }}">Contact Us</a></li>
             </ul>
         </div>
     </div>
@@ -24,14 +24,14 @@
                             <ul id="menu-footer-menu" class="menu col-xs-12 col-sm-6 col-md-3">
                                 <li class="menu-item mb-footer-menu" id="mobile-footer-menu1">Trainings</li>   
                                 <div class="mobile-footer-content" id="mobile-footer-content1">
-                                <li class="menu-item"><a href="training.php">Ec-Council Programs</a></li>
-                                <li class="menu-item"><a href="training.php">PECB Programs</a></li>
+                                <li class="menu-item"><a href="{{ route('training') }}">Ec-Council Programs</a></li>
+                                <li class="menu-item"><a href="{{ route('training') }}">PECB Programs</a></li>
                                 
-                                <li class="menu-item"><a href="training.php">Data Science Analytics</a></li>
-                                <li class="menu-item"><a href="training.php">Ec-Council Programs</a></li>
-                                <li class="menu-item"><a href="training.php">Security Programs</a></li>
-                                <li class="menu-item"><a href="training.php">SOC-SIEM </a></li>
-                                <li class="menu-item"><a href="training.php">Ec- Council</a></li>
+                                <li class="menu-item"><a href="{{ route('training') }}">Data Science Analytics</a></li>
+                                <li class="menu-item"><a href="{{ route('training') }}">Ec-Council Programs</a></li>
+                                <li class="menu-item"><a href="{{ route('training') }}">Security Programs</a></li>
+                                <li class="menu-item"><a href="{{ route('training') }}">SOC-SIEM </a></li>
+                                <li class="menu-item"><a href="{{ route('training') }}">Ec- Council</a></li>
                                 </div>
                             </ul>
                             <ul id="menu-footer-menu" class="menu col-xs-12 col-sm-6 col-md-3">
@@ -50,11 +50,11 @@
                                 <li class="menu-item mb-footer-menu" id="mobile-footer-menu3">More</li>
                                 <!--  -->
                                  <div class="mobile-footer-content" id="mobile-footer-content3">
-                                <li class="menu-item"><a href="template2.php">About Company</a></li>
-                                <li class="menu-item"><a href="careers.php">Careers</a></li>
-                                <li class="menu-item"><a href="template15.php">Blogs</a></li>
-                                <li class="menu-item"><a href="testimonials.php">Testimonioals</a></li>
-                                <li class="menu-item"><a href="resources.php">Resources</a></li>
+                                <li class="menu-item"><a href="#">About Company</a></li>
+                                <li class="menu-item"><a href="{{ route('careers') }}">Careers</a></li>
+                                <li class="menu-item"><a href="{{ route('blogs') }}">Blogs</a></li>
+                                <li class="menu-item"><a href="{{ route('testimonials') }}">Testimonioals</a></li>
+                                <li class="menu-item"><a href="{{ route('resources') }}">Resources</a></li>
                                 </div>
                                 <!--  -->
                             </ul>
@@ -62,10 +62,10 @@
                                 <li class="menu-item mb-footer-menu" id="mobile-footer-menu4">Other</li>
                                 <!--  -->
                                 <div class="mobile-footer-content" id="mobile-footer-content4">
-                                <li class="menu-item"><a href="template1.php">Registration Steps</a></li>
-                                <li class="menu-item"><a href="template1.php">FAQ’s </a></li>
-                                <li class="menu-item"><a href="template1.php">Refund Policy</a></li>
-                                <li class="menu-item"><a href="template1.php">Reschedule Policy</a></li>
+                                <li class="menu-item"><a href="#">Registration Steps</a></li>
+                                <li class="menu-item"><a href="#">FAQ’s </a></li>
+                                <li class="menu-item"><a href="#">Refund Policy</a></li>
+                                <li class="menu-item"><a href="#">Reschedule Policy</a></li>
                                  </div>
                                 <!--  -->
                             </ul>
