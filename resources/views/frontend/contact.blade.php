@@ -242,7 +242,7 @@
                                                             <div class="hm_num">
                                                                 <input type="hidden" id="phone_code" name="phone_code" value="+91">
                                                                 <span id="countryCode" style="top:8px !important;">+91</span>
-                                                                <input type="" id="banner_phone"class="form-control banner_phone hmm_nmnm" name="phone_no" type="number" placeholder="" style="width:300.48px;" data-validation="required"data-validation-error-msg="Please enter your phone"value="">
+                                                                <input type="" id="banner_phone"class="form-control banner_phone hmm_nmnm" name="phone_no" type="number" placeholder="" style="width:140%;" data-validation="required"data-validation-error-msg="Please enter your phone"value="">
                                                                 <span id="banner_phone_err" class="error" style="display:none"></span>
                                                               </div>
                                                             <input type="hidden" value="" id="country-code" name="country_code">

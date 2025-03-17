@@ -431,3 +431,16 @@ select[size] {
   width: 10px;
   right: -150px;
 }
+
+@media only screen and (max-width: 768px) {
+  .line.left1,
+  .line.right1,
+  .line.left2,
+  .line.right2,
+  .line.left3,
+  .line.right3,
+  .line.left4,
+  .line.right4 {
+    display: none;
+  }
+}
