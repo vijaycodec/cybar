@@ -87,7 +87,7 @@
     </script>
     <script type="text/javascript">
         $('.owl-carousel1').owlCarousel({
-            loop: true,
+            loop: false,
             // Enable loop
             margin: 20,
             // Increase margin between items
@@ -123,7 +123,7 @@
     </script>
     <script>
         $("#resocues-menu").owlCarousel({
-            loop: true,
+            loop: false,
             margin: 10,
             nav: true,
             dots: false,

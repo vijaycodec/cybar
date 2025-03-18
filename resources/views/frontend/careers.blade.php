@@ -552,7 +552,7 @@
 
                 // Initialize Owl Carousel only if there are slides
                 $carousel.owlCarousel({
-                    loop: totalSlides > 1, // Loop only if more than 1 slide
+                    loop: false, // Loop only if more than 1 slide
                     margin: 20,
                     dots: true,
                     nav: totalSlides > 1, // Show nav only if more than 1 slide
@@ -612,7 +612,7 @@
 
     <script>
         $("#resocues-menu").owlCarousel({
-            loop: true,
+            loop: false,
             margin: 10,
             nav: true,
             dots: false,

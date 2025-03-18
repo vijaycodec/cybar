@@ -183,7 +183,7 @@
 
                 // Initialize Owl Carousel if slides exist
                 $carousel.owlCarousel({
-                    loop: true,
+                    loop: false,
                     margin: 20,
                     dots: true,
                     nav: true,
@@ -223,7 +223,7 @@
     </script>
     <script>
         $("#resocues-menu").owlCarousel({
-            loop: true,
+            loop: false,
             margin: 10,
             nav: true,
             dots: false,

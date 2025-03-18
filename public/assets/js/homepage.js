@@ -24,7 +24,7 @@ if(isMobile){
 
 // sider start for web
 $("#home-slider1, #home-slider2, #home-slider3, #home-slider4, #home-slider5, #home-slider11, #home-slider12, #home-slider13, #home-slider14, #home-slider15").owlCarousel({
-    loop: true,
+    loop: false,
     margin: 10,
     nav: true,
     dots: true,
@@ -48,7 +48,7 @@ $("#home-slider1, #home-slider2, #home-slider3, #home-slider4, #home-slider5, #h
 
  // review
  $("#client-testimonials").owlCarousel({
-    loop: true,
+    loop: false,
     margin: 10,
     nav: true,
     dots: true,
