@@ -98,7 +98,7 @@ if (isMobile()) {
 
     $(function () {
         $("#owl-demo63").owlCarousel({
-            loop: true,
+            loop: false,
             margin: 10,
             nav: true,
             dots: true,
@@ -136,7 +136,7 @@ if (isMobile()) {
         var owl = $("#owl-demo64");
 
         owl.owlCarousel({
-            loop: true,
+            loop: false,
             margin: 10,
             nav: true,
             dots: true,
@@ -190,7 +190,7 @@ if (isMobile()) {
         var owl = $("#owl-demo65");
 
         owl.owlCarousel({
-            loop: true,
+            loop: false,
             margin: 10,
             nav: true,
             dots: true,
@@ -224,7 +224,7 @@ if (isMobile()) {
 
     $(function () {
         $("#client-testimonials").owlCarousel({
-            loop: true,
+            loop: false,
             margin: 10,
             nav: true,
             dots: true,
@@ -283,7 +283,7 @@ if (isMobile()) {
     // });
 
     $("#owl-demo9").owlCarousel({
-        loop: true,
+        loop: false,
         margin: 10,
         nav: true,
         dots: true,
@@ -315,7 +315,7 @@ if (isMobile()) {
 
     $(function () {
         $("#owl-demo62").owlCarousel({
-            loop: true,
+            loop: false,
             margin: 10,
             nav: true,
             dots: true,
@@ -695,7 +695,7 @@ if (isMobile()) {
 
     $(function () {
         $("#owl-demo63").owlCarousel({
-            loop: true,
+            loop: false,
             margin: 10,
             nav: true,
             dots: true,
@@ -733,7 +733,7 @@ if (isMobile()) {
         var owl = $("#owl-demo64");
 
         owl.owlCarousel({
-            loop: true,
+            loop: false,
             margin: 10,
             nav: true,
             dots: true,
@@ -774,7 +774,7 @@ if (isMobile()) {
         var owl = $("#owl-demo65");
 
         owl.owlCarousel({
-            loop: true,
+            loop: false,
             margin: 10,
             nav: true,
             dots: true,
@@ -808,7 +808,7 @@ if (isMobile()) {
 
     $(function () {
         $("#client-testimonials").owlCarousel({
-            loop: true,
+            loop: false,
             margin: 10,
             nav: true,
             dots: true,
@@ -830,7 +830,7 @@ if (isMobile()) {
     });
 
     $("#owl-demo9").owlCarousel({
-        loop: true,
+        loop: false,
         margin: 10,
         nav: true,
         dots: true,
@@ -862,7 +862,7 @@ if (isMobile()) {
 
     $(function () {
         $("#owl-demo62").owlCarousel({
-            loop: true,
+            loop: false,
             margin: 10,
             nav: true,
             dots: true,

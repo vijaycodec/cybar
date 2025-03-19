@@ -5731,7 +5731,8 @@
     <script type="text/javascript" src="{{asset('assets/js/mobile-menu.js')}}"></script>
     <script type="text/javascript" src="{{asset('assets/js/main.js?v=32')}}"></script>
 
-    {{-- <script type="text/javascript">
+    {{--
+    <script type="text/javascript">
         function addVersionToFiles() {
             var version = new Date().getTime();
             var links = document.getElementsByTagName('link');
@@ -5877,20 +5878,28 @@
         // });
     </script>
     <script>
-        function scrollToFirstElement(className, offset = 100) {
-            document.querySelectorAll(`.${className}`).forEach(element => {
-                element.addEventListener("click", function () {
-                    setTimeout(() => {
-                        const firstElement = document.querySelector(`.${className}`);
-                        if (firstElement) {
-                            window.scrollTo({
-                                top: firstElement.offsetTop - offset,
-                                behavior: "smooth"
-                            });
-                        }
-                    }, 0); // Ensures content loads before scrolling
+        function isMobile() {
+            const userAgent = navigator.userAgent.toLowerCase();
+            return /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/.test(
+                userAgent
+            );
+        }
+        if (!isMobile()) {
+            function scrollToFirstElement(className, offset = 100) {
+                document.querySelectorAll(`.${className}`).forEach(element => {
+                    element.addEventListener("click", function () {
+                        setTimeout(() => {
+                            const firstElement = document.querySelector(`.${className}`);
+                            if (firstElement) {
+                                window.scrollTo({
+                                    top: firstElement.offsetTop - offset,
+                                    behavior: "smooth"
+                                });
+                            }
+                        }, 0); // Ensures content loads before scrolling
+                    });
                 });
-            });
+            }
         }
 
         // Example usage:
