@@ -1,0 +1,1542 @@
+
+/* pwc start */
+
+.page-primary-col--orange .page-section.page-section--col-primary {
+    background: #d04a02;
+}
+.page-section.page-section--col-primary {
+    background: #d04a02;
+}
+section, .page-section {
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+#wrapper section:before, #wrapper section:after {
+    content: " ";
+    display: table;
+}
+section.fullwidth .parsys.sectionpar {
+    width: 100%;
+    padding: 0;
+}
+/*@media (min-width: 768px)*/
+body .hero-title-component .hero-title {
+    background: transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 500px;
+    max-height: 1000px;
+}
+/*@media (min-width: 768px)*/
+.hero-title-component .hero-title>.container>.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+}
+/*@media (min-width: 768px)*/
+.hero-title-component .hero-title .textColumn {
+    top: 300px;
+    background: #2d2d2d;
+    position: relative;
+   /* z-index: 100;*/
+    width: 66.66%;
+}
+
+.page-section.page-section--col-white-1 {
+
+    background: #d04a02 !important;
+}
+section, .page-section {
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+#wrapper section:before, #wrapper section:after {
+    content: " ";
+    display: table;
+}
+.stat-bar .stat-bar__listing {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+/*@media (min-width: 768px)*/
+.stat-bar .stat-bar__listing {
+    display: table;
+}
+.stat-bar .stat-bar__listing {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.hero-title-textpanel--compaign .textColumn, .hero-title-textpanel--compaign .hero-title-textpanel {
+    background: transparent !important;
+}
+
+.hero-title-textpanel--compaign .textColumn, .hero-title-textpanel--compaign .hero-title-textpanel {
+    background: transparent !important;
+}
+
+/*@media (min-width: 768px)*/
+.hero-title-textpanel {
+    background: #2d2d2d;
+    margin: 0;
+    padding: 40px 30px 50px 0;
+}
+.hero-title-textpanel--compaign h1 {
+    line-height: 1.3em !important;
+    font-size: 2.5rem !important;
+    font-family: "PwC ITC Charter",Georgia,Serif;
+    margin: 0 !important;
+}
+.hero-title-textpanel--compaign .compaign-hlight__inner {
+    background: #2d2d2d;
+    box-shadow: 15px 0 0 #2d2d2d, -15px 0 0 #2d2d2d;
+    line-height: 1.3em;
+    padding-top: 4px;
+    padding-bottom: 12px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+.hero-title-textpanel p.sub-heading {
+    font-size: 1.429rem;
+    line-height: 1.5;
+}
+.hero-title-textpanel p.sub-heading {
+    font-weight: 700;
+}
+.hero-title-textpanel--compaign p.sub-heading {
+    line-height: 1.5em !important;
+    font-size: 1.25rem !important;
+    font-weight: bold !important;
+    margin: 0 !important;
+}
+.hero-title-textpanel p {
+    color: #fff;
+}
+.hero-title-textpanel--compaign p {
+    font-family: "PwC Helvetica Neue",Arial,Sans-Serif;
+}
+
+
+element.style {
+}
+@media (min-width: 768px)
+.hero-title-component--lg-h1 .hero-title-textpanel h1 {
+    font-size: 3.214rem;
+}
+.container h1:first-of-type, .container h2:first-of-type, .container h3:first-of-type {
+    margin-top: 0;
+}
+.hero-title-textpanel--compaign h1 {
+    line-height: 1.3em !important;
+    font-size: 2.5rem !important;
+    font-family: "PwC ITC Charter",Georgia,Serif;
+    margin: 0 !important;
+}
+.hero-title-textpanel h1, .hero-title-textpanel p {
+    font-style: normal;
+}
+.hero-title-textpanel h1 {
+    color: #fff;
+    margin: 0 0 10px;
+    font-weight: bold;
+    font-size: 2.714rem;
+    line-height: 1.3;
+    font-weight: 400;
+}
+@media (min-width: 768px){
+.stat-bar.stat-bar--3-items .stat-bar__item {
+    width: 33%;
+}
+.stat-bar .stat-bar__item::before {
+    content: '';
+    width: 60px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+}
+.stat-bar .stat-bar__listing .stat-bar__item .stat-bar__item-content {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    flex: 1 0 auto;
+    margin-top: 17px;
+}
+.stat-bar .stat-bar__item .stat-bar__stat {
+    margin: 0 0 6px;
+}
+.stat-bar .stat-bar__item p {
+    color: #fff;
+    margin: 0;
+}
+.stat-bar .stat-bar__stat {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    margin-bottom: 6px;
+    padding: 0;
+    font-family: "PwC Helvetica Neue",Arial,Sans-Serif;
+}
+.stat-bar .stat-bar__stat .stat-bar__stat-primary {
+    font-size: 42px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    flex: 0 0 auto;
+    margin-right: .714rem;
+}
+.stat-bar .stat-bar__stat .stat-bar__stat-small {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    flex: 1 1 auto;
+    margin: 0;
+}
+/*
+@media (min-width: 768px)*/
+.stat-bar .stat-bar__item .stat-bar__stat-small {
+    display: block;
+    margin-bottom: 0;
+    word-break: break-word;
+}
+.stat-bar .stat-bar__item .stat-bar__stat-small {
+    font-weight: normal;
+    line-height: 1.3em;
+    margin: 0;
+    color: #fff;
+}
+/*@media (min-width: 992px)*/
+.stat-bar .stat-bar__item .stat-bar__label {
+    margin: 0;
+}
+.stat-bar .stat-bar__item .stat-bar__label {
+    font-family: "PwC Helvetica Neue",Arial,Sans-Serif;
+    font-size: 1.125rem;
+    margin: 0 0 10px;
+    padding: 0;
+    font-weight: normal;
+}
+.stat-bar .stat-bar__item p {
+    color: #fff;
+    margin: 0;
+}
+.page-secondary-col--orange .stat-bar {
+    background: #d04a02;
+}
+.stat-bar .stat-bar__item .stat-bar__label {
+    margin: 0;
+}
+
+.stat-bar .stat-bar__item .stat-bar__label {
+    font-family: "PwC Helvetica Neue",Arial,Sans-Serif;
+    font-size: 21px;
+    margin: 0 0 10px;
+    padding: 0;
+    font-weight: normal;
+}
+.stat-bar--3-items{
+    height: 180px;
+}
+.stat-bar__item{
+    position: relative;
+    top: 38px;
+}
+
+
+/*full report start*/
+.page-section.page-section--col-light-grey {
+    background: #f2f2f2;
+}
+
+section, .page-section {
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+.pwcscrolling .sectionpar, .pwcscrolling #footer-wrapper {
+    padding: 0 15px;
+}
+
+/*@media (min-width: 1200px)*/
+.sectionpar {
+    width: 1170px;
+}
+/*@media (min-width: 768px)*/
+.parsys_column.pwccol1-longform, .parsys_column.pwccol1-longform-left, .parsys_column.pwccol2-longform, .parsys_column.pwccol2-longformb, .parsys_column.pwccol2-longformc, .parsys_column.pwccol3-longform {
+    margin-left: -15px;
+    width: calc(100% + 30px);
+}
+
+.pwccol1-longform {
+    width: 66%;
+    margin: 0 auto;
+}
+.pwccol3-home, .pwccol4-home, .pwccol4-home-c, .pwccol2-landing, .pwccol2-landing, .pwccol2-landinga, .pwccol2-landingb, .pwccol3-landing, .pwccol3-landing-c, .pwccol2-content, .pwccol2-contenta, .pwccol2-contentb, .pwccol2-contentc, .pwccol3-content, .pwccol1-longform, .pwccol2-longform {
+    display: table;
+    position: relative;
+    width: 100%;
+    table-layout: fixed;
+}
+.standard-spacing .pwccol1-longform .parsys_column, .standard-spacing .pwccol2-longform .parsys_column, .standard-spacing .pwccol2-longformb .parsys_column, .standard-spacing .pwccol2-longformc .parsys_column, .standard-spacing .pwccol3-longform .parsys_column {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/*@media (min-width: 768px)*/
+.parsys_column.pwccol1-longform .parsys_column, .parsys_column.pwccol1-longform-left .parsys_column, .parsys_column.pwccol2-longform .parsys_column, .parsys_column.pwccol2-longformb .parsys_column, .parsys_column.pwccol2-longformc .parsys_column, .parsys_column.pwccol3-longform .parsys_column {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+/*@media (min-width: 768px)*/
+.pwccol1-longform .pwccol1-longform-c0 {
+    width: calc((100% / 12) * 8);
+    display: block;
+}
+.pwccol1-longform .pwccol1-longform-c0 {
+    width: 100%;
+}
+.pwccol1-longform .parsys_column, .pwccol2-longform .parsys_column, .pwccol2-longformb .parsys_column, .pwccol2-longformc .parsys_column, .pwccol3-longform .parsys_column {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.pwccol3-home .parsys_column, .pwccol4-home .parsys_column, .pwccol4-home-c .parsys_column, .pwccol2-landing .parsys_column, .pwccol2-landinga .parsys_column, .pwccol2-landingb .parsys_column, .pwccol3-landing .parsys_column, .pwccol3-landing-c .parsys_column, .pwccol2-content .parsys_column, .pwccol2-contenta .parsys_column, .pwccol2-contentb .parsys_column, .pwccol2-contentc .parsys_column, .pwccol3-content .parsys_column, .pwccol1-longform .parsys_column, .pwccol2-longform .parsys_column {
+    display: table-cell;
+}
+.pwccol1-longform-c0 {
+    width: 66%;
+    margin: 0 auto;
+}
+.standard-spacing .image, .standard-spacing .text, .standard-spacing .twittersearch, .standard-spacing .contactscollection, .standard-spacing .indexlist, .standard-spacing .videoplayer.section, .standard-spacing .rightrailcontact-component, .standard-spacing .facetednavigation, .standard-spacing .highlights, .standard-spacing .separator, .standard-spacing .table, .standard-spacing .chart, .standard-spacing .chart-v2, .standard-spacing .list, .standard-spacing .typepadblog, .standard-spacing .summaryexplorer, .standard-spacing .awards, .standard-spacing .reference, .standard-spacing .tabsnew.section, .standard-spacing .inlinequote {
+    margin-top: 40px;
+}
+.standard-reading .page-section .parsys_column.pwccol1-longform .parsys_column.pwccol1-longform-c0 .text.parbase.section .text-component, .standard-reading .page-section .parsys_column.pwccol1-longform .parsys_column.pwccol1-longform-c0 .quote-component blockquote {
+    padding-right: calc(48.75px * 2);
+}
+.pwccol1-longform h2:first-child, .pwccol1-longform h3:first-child, .pwccol1-longform h4:first-child, .pwccol1-longform h5:first-child, .pwccol2-longform h2:first-child, .pwccol2-longform h3:first-child, .pwccol2-longform h4:first-child, .pwccol2-longform h5:first-child, .pwccol2-longformb h2:first-child, .pwccol2-longformb h3:first-child, .pwccol2-longformb h4:first-child, .pwccol2-longformb h5:first-child, .pwccol2-longformc h2:first-child, .pwccol2-longformc h3:first-child, .pwccol2-longformc h4:first-child, .pwccol2-longformc h5:first-child, .pwccol3-longform h2:first-child, .pwccol3-longform h3:first-child, .pwccol3-longform h4:first-child, .pwccol3-longform h5:first-child {
+    margin-top: 0;
+}
+
+.text-component h2:first-child, .text-component h3:first-child {
+    margin-top: 0;
+}
+.text-component>h2 {
+    margin-bottom: 40px;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+h2, .h2 {
+    font-size: 2.375rem;
+    line-height: 1.3em;
+}
+h1, h2, .h1, .h2 {
+    font-family: "PwC ITC Charter",Georgia,Serif;
+    font-style: normal;
+    font-weight: normal;
+    color: #2d2d2d;
+}
+.text-component h2+p {
+    margin-top: -10px;
+}
+/*@media (min-width: 1200px)*/
+.text-component p, .text-component ol li, .text-component ul li {
+    font-size: 1.125rem;
+}
+.text-component p, .text-component ol li, .text-component ul li {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+.text-component p {
+    margin: 0 0 35px;
+}
+.text-component h3, .text-component h4, .text-component h5 {
+    margin-bottom: 20px;
+}
+
+.text-component h2, .text-component h3, .text-component h4, .text-component h5, .text-component h6 {
+    margin-top: 40px;
+}
+.text-component h3 {
+    font-size: 1.75rem;
+}
+/*@media (min-width: 1200px)*/
+.text-component p, .text-component ol li, .text-component ul li {
+    font-size: 1.125rem;
+}
+
+.text-component p, .text-component ol li, .text-component ul li {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+.text-component p {
+    margin: 0 0 35px;
+}
+.pwccol1-longform .pwccol1-longform-c0 {
+    width: calc((100% / 12) * 8);
+    display: block;
+}
+.ai-container {
+    position: relative;
+    line-height: 12px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 940px;
+    height: 560px;
+    overflow: hidden;
+    font-size: 11px;
+    font-family: Arial;
+}
+.ai-sectors {
+    top: 0;
+    width: 141px;
+    line-height: 16px;
+    text-align: right;
+    z-index: 3;
+}
+
+.ai-container * {
+    margin: 0;
+    vertical-align: baseline;
+}
+.ai-sectors, .ai-source {
+    left: 0;
+    position: absolute;
+}
+.ai-container, .ai-container * {
+    padding: 0;
+    box-sizing: border-box;
+}
+.html{
+    margin-left: 100px;
+}
+
+/*health care start*/
+section.fullwidth .parsys.sectionpar {
+    width: 100%;
+    padding: 0;
+}
+.webtile {
+    border-bottom: 1px solid #fff;
+}
+.page-primary-col--orange .page-section.page-section--col-primary {
+    background: #d04a02;
+}
+
+.page-section.page-section--col-primary {
+    background: ##d04a02;
+}
+section, .page-section {
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+.cta-webtile .cta-webtile__link {
+    min-height: 170px;
+    padding: 40px 0;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+.cta-webtile .cta-webtile__link .cta-webtile__icon {
+    z-index: 3;
+}
+/*@media (min-width: 992px)*/
+.col-md-push-2 {
+    left: 16.66666667%;
+}
+/*@media (min-width: 992px)*/
+.col-md-1 {
+    width: 8.33333333%;
+}
+.cta-webtile .cta-webtile__link .cta-webtile__content .cta-webtile__title {
+    margin: 0;
+    color: #fff;
+    font-size: 19px;
+    font-family: "PwC Helvetica Neue",Arial,Sans-Serif;
+}
+.cta-webtile .cta-webtile__link .cta-webtile__content .cta-webtile__heading {
+    font-weight: bold;
+    margin: 0;
+    font-size: 36px;
+    color: #fff;
+    font-family: "PwC Helvetica Neue",Arial,Sans-Serif;
+}
+.cta-webtile .cta-webtile__link .cta-webtile__content .cta-webtile__heading:after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-image: url('https://www.pwc.com/etc.clientlibs/pwc/clientlibs/…-colors/resources/images/common/Right_Chevron.svg');
+    position: relative;
+    top: 1;
+    left: 10px;
+    transform: translateX(0);
+    transition: transform .2s ease;
+}
+.page-section.page-section--col-light-grey {
+    background: #f2f2f2;
+}
+
+section, .page-section {
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+section.fullwidth .parsys.sectionpar {
+    width: 100%;
+    padding: 0;
+}
+.standard-spacing .relatedcontent:first-child {
+    margin-bottom: 40px;
+}
+
+.standard-spacing .relatedcontent {
+    padding: 0;
+}
+
+element.style {
+}
+.standard-spacing .sectionpar .section .related-content {
+    padding: 0;
+}
+.container h1:first-of-type, .container h2:first-of-type, .container h3:first-of-type {
+    margin-top: 0;
+}
+
+.related-content .related-content__title {
+    margin: 0 0 20px;
+    color: #7d7d7d;
+    font-family: "PwC Helvetica Neue",Arial,Sans-Serif;
+    font-weight: bold;
+}
+/*@media (min-width: 768px)*/
+.related-content .related-content__item {
+    margin-bottom: 0;
+}
+.related-content .related-content__item {
+    margin-bottom: 40px;
+}
+@media (min-width: 768px){
+.col-sm-3 {
+    width: 25%;
+}
+}
+.related-content a.related-content__item-link {
+    display: block;
+    text-decoration: none;
+}
+a, a:hover, a:focus {
+    color: inherit;
+}
+.related-content a.related-content__item-link img {
+    margin-bottom: 20px;
+}
+.img-responsive {
+	margin-left: 50px;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.related-content a.related-content__item-link .related-content__item-heading {
+    border-bottom: 2px solid transparent;
+    color: #2d2d2d;
+    display: inline;
+    line-height: 1.3em;
+    padding-bottom: 2px;
+    transition: all 250ms ease-in-out;
+    word-break: break-word;
+    font-family: "PwC ITC Charter",Georgia,Serif;
+}
+
+.container h1:first-of-type, .container h2:first-of-type, .container h3:first-of-type {
+    margin-top: 0;font-size: 16px;
+    color: black;
+}
+.regular {
+    font-style: normal;
+    font-weight: normal;
+}
+.related-content .related-content__item-abstract {
+    color: #6d6e71;
+    letter-spacing: 0;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.font_value{
+
+    font-size: 19px;
+}
+#pp{
+    font-size: 21px;
+}
+#pp_1{
+    font-size: 41px;
+}
+#pp_2{
+    font-size: 32px;
+}
+@media only screen and (max-width: 480px) {
+#pp{
+    font-size: 10px;
+}
+
+}
+
+#pdf{
+    font-size: 17px;
+    bottom: 8px;
+    position: absolute;
+}
+
+
+/* highlight start */
+.page-section.page-section--col-light-grey {
+    background: #f2f2f2;
+}
+section, .page-section {
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+.standard-spacing .pwccol1-longform .parsys_column, .standard-spacing .pwccol2-longform .parsys_column, .standard-spacing .pwccol2-longformb .parsys_column, .standard-spacing .pwccol2-longformc .parsys_column, .standard-spacing .pwccol3-longform .parsys_column {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+/* @media (min-width: 768px) */
+.pwccol2-longform .parsys_column.pwccol2-longform-c0, .pwccol2-longform .parsys_column.pwccol2-longform-c1 {
+    width: 50%;
+}
+.standard-spacing .image, .standard-spacing .text, .standard-spacing .twittersearch, .standard-spacing .contactscollection, .standard-spacing .indexlist, .standard-spacing .videoplayer.section, .standard-spacing .rightrailcontact-component, .standard-spacing .facetednavigation, .standard-spacing .highlights, .standard-spacing .separator, .standard-spacing .table, .standard-spacing .chart, .standard-spacing .chart-v2, .standard-spacing .list, .standard-spacing .typepadblog, .standard-spacing .summaryexplorer, .standard-spacing .awards, .standard-spacing .reference, .standard-spacing .tabsnew.section, .standard-spacing .inlinequote {
+    margin-top: 40px;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+/* @media (min-width: 1200px) */
+.standard-reading .page-section .parsys_column.pwccol2-longform .parsys_column.pwccol2-longform-c0 .text.parbase.section .text-component, .standard-reading .page-section .parsys_column.pwccol2-longform .parsys_column.pwccol2-longform-c0 .quote-component blockquote {
+    padding-right: 48.75px;
+}
+.text-component>h2 {
+    margin-bottom: 40px;
+}
+
+element.style {
+}
+.standard-spacing .pwccol1-longform .parsys_column, .standard-spacing .pwccol2-longform .parsys_column, .standard-spacing .pwccol2-longformb .parsys_column, .standard-spacing .pwccol2-longformc .parsys_column, .standard-spacing .pwccol3-longform .parsys_column {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+/* @media (min-width: 768px) */
+.pwccol2-longform .parsys_column.pwccol2-longform-c0, .pwccol2-longform .parsys_column.pwccol2-longform-c1 {
+    width: 50%;
+}
+/* @media (min-width: 1200px) */
+.standard-reading .page-section .parsys_column.pwccol2-longform .parsys_column.pwccol2-longform-c0 .text.parbase.section .text-component, .standard-reading .page-section .parsys_column.pwccol2-longform .parsys_column.pwccol2-longform-c0 .quote-component blockquote {
+    padding-right: 48.75px;
+}
+.text .text-component ul, .text .text-component ol, .textimage .textimage-text ul, .textimage .textimage-text ol, .text.is-edited {
+    display: block;
+    padding-left: 30px;
+}
+
+.text-component ul, .text-component ol {
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+/* @media (min-width: 1200px) */
+.text-component p, .text-component ol li, .text-component ul li {
+    font-size: 1.125rem;
+}
+.text-component p, .text-component ol li, .text-component ul li {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+.text-component ul li, .text-component ol li {
+    margin-bottom: 25px;
+}
+.page-primary-col--orange .text-component ul>li:before {
+    background-color: #d04a02;
+}
+.text-component ul>li:before {
+    content: '';
+    background-color: #e0301e;
+    margin-left: -9px;
+    height: 8px;
+    width: 8px;
+    display: inline-block;
+    position: relative;
+    right: 8px;
+    top: -2px;
+}
+.standard-reading .page-section .parsys_column.pwccol2-longform .parsys_column.pwccol2-longform-c0 .text.parbase.section .text-component, .standard-reading .page-section .parsys_column.pwccol2-longform .parsys_column.pwccol2-longform-c0 .quote-component blockquote {
+    padding-right: 48.75px;
+}
+.text-component p, .text-component ol li, .text-component ul li {
+    font-size: 1.125rem;
+}
+
+.text-component p, .text-component ol li, .text-component ul li {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+.text-component p {
+    margin: 0 0 35px;
+}
+.standard-spacing .sectionpar .text.section p:last-child {
+    margin-bottom: 0;
+}
+
+.text-component p+p {
+    margin-top: -8px;
+}
+/* @media (min-width: 1200px) */
+.text-component p, .text-component ol li, .text-component ul li {
+    font-size: 1.125rem;
+}
+.text-component p, .text-component ol li, .text-component ul li {
+    font-size: 19px;
+    line-height: 1.7;
+}
+.text-component p {
+    margin: 0 0 35px;
+}
+p {
+    font-size: 1rem;
+    line-height: 1.7em;
+    font-family: "PwC Helvetica Neue",Arial,Sans-Serif;
+}
+.text-component p .btn.btn--transparent, .text-component p .btn.btn--transparent:link, .text-component p .btn.btn--transparent:visited, .text-component p .btn.btn--transparent:hover {
+    font-size: 1rem;
+}
+
+.btn--transparent, .btn--transparent:link, .btn--transparent:visited, body .text-component .btn.btn--transparent, body .text-component .btn.btn--transparent:link, body .text-component .btn.btn--transparent:visited {
+    background: transparent;
+    border: 1px solid #7d7d7d;
+    color: #2d2d2d;
+    font-size: 15px;
+}
+.text-component p .btn.btn--transparent {
+    margin-right: 25px;
+}
+.text-component .btn {
+    max-width: 64ch;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.btn, .btn:link, .btn:hover, .btn:focus {
+    border-radius: 0;
+    color: #fff;
+    display: inline-block;
+    padding: 14px 23px;
+    font-size: 1rem;
+    line-height: 1.14em;
+    font-family: "PwC Helvetica Neue",Arial,Sans-Serif;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background .2s ease-out;
+}
+.text-component p>a, .text-component td>a, .text-component li>a {
+    font-size: inherit;
+    text-decoration: none;
+}
+.text-component a {
+    text-decoration: none;
+    border-bottom: 1px solid #7d7d7d;
+    font-weight: bold;
+}
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#longform{
+    position: absolute;
+}
+#longform_1{
+    margin-left: 69px;
+}
+#highlights{
+    font-size: 39px;
+}
+#overview{
+    height: 1100px;
+}
+
+
+
+/*sizing the prize start*/
+
+
+
+.page-section.page-section--col-white {
+	/*margin-left: 80px;*/
+    background: #fff !important;
+}
+section, .page-section {
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+
+.standard-spacing .image, .standard-spacing .text, .standard-spacing .twittersearch, .standard-spacing .contactscollection, .standard-spacing .indexlist, .standard-spacing .videoplayer.section, .standard-spacing .rightrailcontact-component, .standard-spacing .facetednavigation, .standard-spacing .highlights, .standard-spacing .separator, .standard-spacing .table, .standard-spacing .chart, .standard-spacing .chart-v2, .standard-spacing .list, .standard-spacing .typepadblog, .standard-spacing .summaryexplorer, .standard-spacing .awards, .standard-spacing .reference, .standard-spacing .tabsnew.section, .standard-spacing .inlinequote {
+    margin-top: 40px;
+}
+
+div.image {
+    position: relative;
+    margin: 0;
+    display: block;
+    clear: both;
+    width: 100%;
+}
+.image>.asset-sharing-component, .asset-sharing-component.video-asset, .asset-sharing-component.image-asset {
+    display: inline-block;
+    max-width: 100%;
+    position: relative;
+}
+.parsys_column div.image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.asset-sharing-component .vtn-share-asset {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+}
+.asset-sharing-component .vtn-share-asset .cont-vtn-share {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+}
+
+/*@media (min-width: 721px)*/
+.asset-sharing-component .vtn-share-asset .cont-vtn-share .txt-asset-share {
+    margin-right: 7px;
+}
+.asset-sharing-component .vtn-share-asset .cont-vtn-share .txt-asset-share {
+    font: italic normal 16px Georgia;
+}
+/*@media (min-width: 721px)*/
+.asset-sharing-component .vtn-share-asset .cont-vtn-share .txt-asset-share, .asset-sharing-component .vtn-share-asset .cont-vtn-share .dv-btns-share {
+    display: inline-block;
+    vertical-align: middle;
+}
+.asset-sharing-component .vtn-share-asset .cont-vtn-share .txt-asset-share, .asset-sharing-component .vtn-share-asset .cont-vtn-share .dv-btns-share {
+    display: inline-block;
+    vertical-align: middle;
+}
+.asset-sharing-component .vtn-share-asset .cont-vtn-share .btn-share-fb, .asset-sharing-component .vtn-share-asset .cont-vtn-share .btn-share-tw, .asset-sharing-component .vtn-share-asset .cont-vtn-share .btn-share-ln, .asset-sharing-component .vtn-share-asset .cont-vtn-share .btn-share-pr, .asset-sharing-component .vtn-share-asset .cont-vtn-share .btn-share-wb {
+    width: 36px;
+    height: 36px;
+    margin: 0 1px;
+}
+.asset-sharing-component.image-asset .btn-asset-share {
+    opacity: 0;
+    display: none;
+}
+
+/*@media (min-width: 721px)*/
+.asset-sharing-component .btn-asset-share {
+    width: 36px;
+    height: 36px;
+}
+.asset-sharing-component .btn-asset-share {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 32px;
+    height: 32px;
+    transition: opacity .25s;
+    cursor: pointer;
+}
+.asset-sharing-component .ico-share {
+    background-position: 0 100%;
+    background-size: 100%;
+}
+.asset-sharing-component .ico-share-hover, .asset-sharing-component .ico-share {
+    max-width: 100%;
+    background-size: 100%;
+    background-image: url(components-colors/resources/images/assetsharing/iconos-asset-sharing.png);
+}
+.standard-reading .page-section .parsys_column.parsys_column.pwccol2-longformb .parsys_column.pwccol2-longformb-c0 .text.parbase.section .text-component, .standard-reading .page-section .parsys_column.parsys_column.pwccol2-longformb .parsys_column.pwccol2-longformb-c0 .quote-component blockquote {
+    padding-right: calc(48.75px * 2);
+}
+.text-component p, .text-component ol li, .text-component ul li {
+    font-size: 1.125rem;
+}
+.text-component p, .text-component ol li, .text-component ul li {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+.text-component p {
+    margin: 0 0 35px;
+}
+sub {
+    bottom: -0.25em;
+}
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sub {
+    bottom: -0.25em;
+}
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+.standard-spacing .sectionpar .text.section p:last-child {
+    margin-bottom: 0;
+}
+
+.text-component p+p {
+    margin-top: -8px;
+}
+/*@media (min-width: 1200px)*/
+.text-component p, .text-component ol li, .text-component ul li {
+    font-size: 1.125rem;
+}
+.text-component p, .text-component ol li, .text-component ul li {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+.text-component p {
+    margin: 0 0 35px;
+}
+sub {
+    bottom: -0.25em;
+}
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+.standard-spacing .pwccol1-longform .parsys_column, .standard-spacing .pwccol2-longform .parsys_column, .standard-spacing .pwccol2-longformb .parsys_column, .standard-spacing .pwccol2-longformc .parsys_column, .standard-spacing .pwccol3-longform .parsys_column {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/*@media (min-width: 768px)*/
+.pwccol2-longformb .parsys_column.pwccol2-longformb-c1 {
+    width: calc((100% / 12)*4);
+}
+/*@media (min-width: 768px)*/
+.parsys_column.pwccol1-longform .parsys_column, .parsys_column.pwccol1-longform-left .parsys_column, .parsys_column.pwccol2-longform .parsys_column, .parsys_column.pwccol2-longformb .parsys_column, .parsys_column.pwccol2-longformc .parsys_column, .parsys_column.pwccol3-longform .parsys_column {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.pwccol1-longform .parsys_column, .pwccol2-longform .parsys_column, .pwccol2-longformb .parsys_column, .pwccol2-longformc .parsys_column, .pwccol3-longform .parsys_column {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.pwccol2-longformb .parsys_column, .pwccol2-longformc .parsys_column, .pwccol3-longform .parsys_column {
+    display: table-cell;
+}
+.pwccol2-longformb-c1 {
+    padding-left: 15px;
+}
+.pwccol2-longformb-c1, .pwccol2-longformc-c0 {
+    width: 33.33%;
+}
+.pwccol2-longformb-c0, .pwccol2-longformb-c1, .pwccol2-longformc-c0, .pwccol2-longformc-c1, .pwccol3-longform-c0, .pwccol3-longform-c1, .pwccol3-longform-c2 {
+    vertical-align: top;
+    display: inline-block;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+.standard-reading .page-section .parsys_column.parsys_column.pwccol2-longformb .parsys_column.pwccol2-longformb-c1 .text.parbase.section .text-component, .standard-reading .page-section .parsys_column.parsys_column.pwccol2-longformb .parsys_column.pwccol2-longformb-c1 .quote-component blockquote {
+    padding-right: 48.75px;
+}
+.text-component h3, .text-component h4, .text-component h5 {
+    margin-bottom: 20px;
+}
+
+.text-component h2, .text-component h3, .text-component h4, .text-component h5, .text-component h6 {
+    margin-top: 40px;
+}
+.text-component p, .text-component ol li, .text-component ul li {
+    font-size: 1.125rem;
+}
+
+.text-component p, .text-component ol li, .text-component ul li {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+.text-component p {
+    margin: 0 0 35px;
+}
+.standard-spacing .sectionpar .text.section p:last-child {
+    margin-bottom: 0;
+}
+.text-component p+p {
+    margin-top: -8px;
+}
+/*@media (min-width: 1200px)*/
+.text-component p, .text-component ol li, .text-component ul li {
+    font-size: 1.125rem;
+}
+.text-component p, .text-component ol li, .text-component ul li {
+    font-size: 19px !important;
+    line-height: 1.7;
+}
+.text-component p {
+    margin: 0 0 35px;
+}
+.text-component p .btn.btn--transparent, .text-component p .btn.btn--transparent:link, .text-component p .btn.btn--transparent:visited, .text-component p .btn.btn--transparent:hover {
+    font-size: 1rem;
+}
+.btn--transparent, .btn--transparent:link, .btn--transparent:visited, body .text-component .btn.btn--transparent, body .text-component .btn.btn--transparent:link, body .text-component .btn.btn--transparent:visited {
+    background: transparent;
+    font-size: 15px;
+    border: 1px solid #7d7d7d;
+    color: #2d2d2d;
+}
+.text-component p .btn.btn--transparent {
+    margin-right: 25px;
+}
+.text-component .btn {
+    max-width: 64ch;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.btn, .btn:link, .btn:hover, .btn:focus {
+    border-radius: 0;
+    color: #fff;
+    display: inline-block;
+    padding: 14px 23px;
+    font-size: 1rem;
+    line-height: 1.14em;
+    font-family: "PwC Helvetica Neue",Arial,Sans-Serif;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background .2s ease-out;
+}
+.text-component p>a, .text-component td>a, .text-component li>a {
+    font-size: inherit;
+    text-decoration: none;
+}
+.text-component a {
+    text-decoration: none;
+    border-bottom: 1px solid #7d7d7d;
+    font-weight: bold;
+}
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.page-section.page-section--col-light-grey {
+    background: #f2f2f2;
+}
+
+
+/*contact start*/
+
+section, .page-section {
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+section {
+
+    table-layout: fixed;
+}
+.pwccol2-longformb, .pwccol2-longformc, .pwccol3-longform {
+    display: table;
+    position: relative;
+    width: 100%;
+    table-layout: fixed;
+}
+.standard-spacing .pwccol1-longform .parsys_column, .standard-spacing .pwccol2-longform .parsys_column, .standard-spacing .pwccol2-longformb .parsys_column, .standard-spacing .pwccol2-longformc .parsys_column, .standard-spacing .pwccol3-longform .parsys_column {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/*@media (min-width: 768px)*/
+.pwccol2-longformb .parsys_column.pwccol2-longformb-c0 {
+    width: calc((100% / 12)*8);
+}
+.pwccol1-longform .parsys_column, .pwccol2-longform .parsys_column, .pwccol2-longformb .parsys_column, .pwccol2-longformc .parsys_column, .pwccol3-longform .parsys_column {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.pwccol2-longformb .parsys_column, .pwccol2-longformc .parsys_column, .pwccol3-longform .parsys_column {
+    display: table-cell;
+}
+.pwccol2-longformb-c0 {
+    padding-right: 15px;
+}
+.rightrailcontact {
+	margin-left: 140px;
+    background: transparent;
+    color: #414141;
+    font: .8571rem arial,helvetica,sans-serif;
+    line-height: 1.2em;
+}
+.rightrailcontact div, .rightrailcontact div:before, .rightrailcontact div:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.rightrailcontact #scrollcontactheader {
+    font-size: 25px;
+    font-family: "PwC Helvetica Neue",Arial,Sans-Serif;
+    color: #7d7d7d;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 34px;
+}
+.rightrailcontact div, .rightrailcontact div:before, .rightrailcontact div:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.rightrailcontact div, .rightrailcontact div:before, .rightrailcontact div:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.contactCol-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.contactCol-container .contactCol {
+    width: 50%;
+}
+
+.contactCol .leftline, .contactCol .noleftline {
+    margin-bottom: 20px;
+}
+.contactCol .leftline, .contactCol .noleftline {
+    margin-bottom: 20px;
+}
+.rightrailcontact div, .rightrailcontact div:before, .rightrailcontact div:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.rightrailcontact div, .rightrailcontact div:before, .rightrailcontact div:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.noleftline {
+    display: table;
+}
+.rightrailcontact .rightrails-profile-img {
+    float: left;
+    margin-top: 0;
+}
+.noleftline .contact-content {
+    display: table-cell;
+    vertical-align: top;
+    padding-left: 20px;
+    padding-right: 20px;
+    word-break: break-word;
+}
+.contactCol .contact-name {
+    display: inline-block;
+    font-size: 1.375rem;
+    color: #2d2d2d;
+    line-height: 1.3em;
+    font-family: "PwC ITC Charter",Georgia,Serif;
+    border-bottom: 2px solid transparent;
+    margin-bottom: 0;
+}
+.contactCol .contact-name {
+    display: inline-block;
+    font-size: 26px;
+    color: #2d2d2d;
+    line-height: 1.3em;
+    font-family: "PwC ITC Charter",Georgia,Serif;
+    border-bottom: 2px solid transparent;
+    margin-bottom: 0;
+}
+.contactCol p {
+    border-left: 0;
+    padding-left: 0;
+}
+.rightrailcontact a {
+    color: inherit;
+}
+.contactCol .contact-info {
+    font-size: 1.125rem;
+    font-family: "PwC Helvetica Neue",Arial,Sans-Serif;
+    line-height: 1.5em;
+    color: #464646;
+}
+.contactCol .contact-info p {
+    font-size: 14px;
+    margin-bottom: 0;
+    line-height: 1.5em;
+}
+.contactCol .contact-link a {
+    margin: 0 5px;
+    display: inline-block;
+    float: left;
+}
+.contactCol .contact-link a {
+    margin: 0 5px;
+    display: inline-block;
+    float: left;
+}
+.rightrailcontact img.right-rails-img {
+    margin-top: 3px;
+}
+.contactModule a.underline-link {
+    padding-bottom: 1px;
+}
+
+.contactModule a.underline-link {
+    border-bottom: 1px solid #7d7d7d;
+    color: #2d2d2d;
+    font-weight: bold;
+    font-family: "PwC Helvetica Neue",Arial,Sans-Serif;
+    font-size: 1.125rem;
+    margin-top: 10px;
+}
+.contactCol .contact-link a {
+	font-size: 16px;
+    /*margin: 0 5px;*/
+    display: inline-block;
+    float: left;
+}
+.rightrailcontact a:nth-of-type(2) {
+    color: inherit;
+    text-decoration: none;
+}
+.pwcscrolling #socialfollow {
+    background-color: transparent;
+}
+
+#socialfollow {
+   /* background-color: #7d7d7d;*/
+    padding: 5px 10px 5px 5px;
+}
+.pwcscrolling #socialfollow span {
+    display: block;
+    color: #2d2d2d;
+    margin-bottom: 25px;
+    padding-left: 0;
+    font-size: 1.8rem;
+}
+.pwcscrolling #socialfollow a {
+    margin: 0 2px 0 0;
+}
+
+#socialfollow a {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    margin: 0 5px;
+}
+.pwcscrolling #socialfollow a img {
+    width: 22px;
+    height: 22px;
+}
+
+
+/*get in touch start*/
+.bottom-kick {
+    color: #2d2d2d;
+    position: relative;
+}
+.bottom-kick-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+/*@media (min-width: 768px)*/
+.bottom-kick__bar {
+    height: 70px;
+    padding: 20px 0;
+    position: relative;
+}
+
+.bottom-kick__bar {
+    background-color: #ffb600;
+    color: #2d2d2d;
+    height: 60px;
+    width: 100%;
+    padding: 15px 0;
+    transition: transform 600ms ease-out;
+}
+button[disabled], html input[disabled] {
+    cursor: default;
+}
+.bottom-kick__bar-wrapper {
+    background: transparent;
+    border: 0;
+}
+.bottom-kick__bar-label {
+    font-size: 2.0rem;
+}
+
+.bottom-kick__bar-label {
+    font-family: "PwC ITC Charter",Georgia,Serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+/*@media (min-width: 768px)*/
+.bottom-kick__btn-wrapper--rotate {
+    animation: buttonrotatedown 350ms forwards;
+}
+/*@media (min-width: 768px)*/
+.bottom-kick__btn-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 70px;
+    float: none;
+    transform: translateY(-45px);
+}
+.bottom-kick__btn-wrapper--rotate {
+    cursor: not-allowed;
+}
+.bottom-kick__btn-wrapper {
+    height: 32px;
+    width: 32px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 250ms ease-out;
+}
+.bottom-kick__btn {
+    height: 26px;
+    width: 70px;
+    float: none;
+}
+
+.bottom-kick__btn {
+    position: relative;
+    overflow: hidden;
+    height: 32px;
+    width: 32px;
+    float: left;
+}
+.bottom-kick__btn-icon {
+    height: 70px;
+    width: 70px;
+}
+
+.bottom-kick__btn-icon {
+    border-radius: 100%;
+    display: block;
+    height: 32px;
+    width: 32px;
+    text-indent: -9999px;
+}
+.bottom-kick__btn-icon:before {
+    content: '';
+    background: #ffb600;
+    border-radius: 100%;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+.bottom-kick__btn-arrow {
+    position: relative;
+    top: 0;
+    float: left;
+    height: 15px;
+    width: 32px;
+    transform: translateX(-50%);
+}
+.bottom-kick__btn-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    height: 11px;
+    width: 16px;
+    transition: transform 350ms ease-out;
+    transform: translate(-50%,-50%);
+    transform-origin: center;
+}
+.bottom-kick__btn-arrow:before, .bottom-kick__btn-arrow:after {
+    top: 0;
+    width: 19px;
+    height: 3px;
+}
+
+.bottom-kick__btn-arrow:before {
+    transform: translate(0,0) rotate(
+-45deg
+);
+}
+.bottom-kick__btn-arrow:before, .bottom-kick__btn-arrow:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: #2d2d2d;
+    border-radius: 5px;
+    top: 5px;
+    left: 0;
+    width: 10px;
+    height: 2px;
+}
+.bottom-kick__btn-arrow:after {
+    left: 12px;
+}
+/*@media (min-width: 768px)*/
+.bottom-kick__btn-arrow:before, .bottom-kick__btn-arrow:after {
+    top: 0;
+    width: 19px;
+    height: 3px;
+}
+.bottom-kick__btn-arrow:after {
+    transform: translate(0,0) rotate(
+45deg
+);
+    left: 6px;
+}
+.bottom-kick__btn-arrow:before, .bottom-kick__btn-arrow:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: #2d2d2d;
+    border-radius: 5px;
+    top: 5px;
+    left: 0;
+    width: 10px;
+    height: 2px;
+}
+.bottom-kick__btn-hide {
+    float: right;
+    cursor: pointer;
+    display: none;
+}
+
+#potential{
+	font-size: 21px;
+}
+
+
+/*media query start*/
+@media only screen and (max-width: 480px) {
+	.hero-title-component .hero-title .textColumn {
+		top: 200px;
+	}
+}
+@media (max-width: 768px){
+.hero-title-component .hero-title .textColumn {
+        top: 200px;
+    }
+}
+
+/*@media only screen and (max-width: 480px) {*/
+/*    #joj{*/
+/*        color:white !important;*/
+/*    }*/
+/*}*/
