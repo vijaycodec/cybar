@@ -31,41 +31,41 @@ class commentController extends Controller
         try {
             // Validate input using Validator::make
             $validator = Validator::make($request->all(), [
-                'name' => 'required',
-                'email' => 'required|email|unique:comments',
-                'message' => 'required',
-                'g-recaptcha-response' => 'required|captcha'  // Validate reCAPTCHA
+                'name' => 'required|string|min:3|max:100', // Name must be between 3-100 characters
+                'email' => 'required|email|max:255', // Valid email required
+                'message' => 'required|min:5|max:500', // Min 5, max 500 characters
+                // 'g-recaptcha-response' => 'required|captcha'  // Uncomment if using reCAPTCHA
             ]);
-
-            // Check if validation fails
+    
+            // If validation fails, return JSON response
             if ($validator->fails()) {
-                return redirect()->back()
-                    ->withErrors($validator)
-                    ->withInput(); // Return old input for user convenience
+                return response()->json([
+                    'success' => false,
+                    'errors' => $validator->errors()
+                ], 422);
             }
-
-            // Save the new category
+    
+            // Save the new comment
             $comment = new Comment();
             $comment->name = $request->name;
             $comment->email = $request->email;
             $comment->resource_id = $request->resource_id;
             $comment->message = $request->message;
-
             $comment->save();
-
+    
             return response()->json([
-                'status' => 'message',
-                'message' => 'Your comment has been submitted.',
-            ]);
-
+                'success' => true,
+                'message' => 'Form submitted successfully!'
+            ], 200);
+    
         } catch (\Exception $e) {
-            // Handle any unexpected errors
-            return redirect()->back()
-                ->withErrors(['error' => 'Something went wrong. Please try again later.'])
-                ->withInput();
+            return response()->json([
+                'success' => false,
+                'message' => 'Something went wrong. Please try again later.'
+            ], 500);
         }
     }
-
+    
     public function show($id)
     {
         $permission = Comment::findOrFail($id);
@@ -79,6 +79,7 @@ class commentController extends Controller
 
     public function edit($id)
     {
+
         $category = Comment::findOrFail($id);
 
         return view('backend.category.edit', compact('category'));

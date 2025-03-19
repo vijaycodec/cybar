@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Resources-view')
+@section('title', 'Blog-view')
 
 @section('content')
 
@@ -166,14 +166,15 @@
                                             Comments
                                         </h3>
                                         <div class="comment-form">
-                                            <form id="comments-form" method="POST" action="">
+                                            <form id="comments-form" method="POST" action="{{ route('resources-comment.store') }}">
                                                 @csrf <!-- Add CSRF token for security -->
                                                 <div class="comment-input">
                                                     <input type="text" class="form-control" name="name"
                                                         placeholder="Full Name" id="name">
                                                 </div>
+                                                <span id="name-error" style="color: red; font-size: 14px; margin-top: 5px;">
+                                                </span>
                                               
-
                                                 @if (isset($resource) && $resource)
                                                     <input type="hidden" class="form-control" name="resource_id"
                                                         value="{{ $resource->category->id }}">
@@ -186,11 +187,17 @@
                                                     <input type="email" class="form-control" name="email"
                                                         placeholder="Email" id="email">
                                                 </div>
+                                                <span id="email-error" style="color: red; font-size: 14px; margin-top: 5px;">
+                                                </span>
                                                 <div class="comment-input">
                                                     <textarea placeholder="Message" name="message" id="comment"></textarea>
                                                 </div>
-                                                <div class="g-recaptcha" data-sitekey="{{ env('NOCAPTCHA_SITEKEY') }}">
+                                                <span id="comment-error" style="color: red; font-size: 14px; margin-top: 5px;">
+                                                </span>
+                                                {{-- <div class="g-recaptcha" data-sitekey="{{ env('NOCAPTCHA_SITEKEY') }}">
                                                 </div>
+                                                <span id="recaptcha-error" style="color: red; font-size: 14px; margin-top: 5px;">
+                                                </span> --}}
 
                                                 <div class="comment-submit  custom-submit-style">
                                                     <input type="submit" value="Submit">
@@ -239,7 +246,6 @@
 @endsection
 
 @push('scripts')
-{{-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> --}}
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Jquery code -->
     <script type="text/javascript">
@@ -257,101 +263,96 @@
             });
         });
     </script>
-    <script>
-        $('#comments-form').on('submit', function(e) {
-            e.preventDefault();
 
-            $('#name-error').text('');
-            $('#email-error').text('');
-            $('#comment-error').text('');
-            $('#recaptcha-error').text('');
-            // Validate the form before submitting
-            var name = $('#name').val();
-            var email = $('#email').val();
-            var comment = $('#comment').val();
-            var recaptchaResponse = grecaptcha.getResponse(); // Get reCAPTCHA token
-             //alert(recaptchaResponse);
-            // console.log(name); // Log the name to debug
-            var hasError = false;
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-            if (!name) {
-                $('#name-error').text('Name is required.');
-                hasError = true;
+<script>
+    $(document).ready(function() {
+        $("#comments-form").submit(function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            let isValid = true;
+
+            // Name validation (Only letters, at least 3 chars)
+            let name = $("#name").val().trim();
+            if (!/^[A-Za-z\s]{3,}$/.test(name)) {
+                $("#name-error").text("Full Name must be at least 3 characters.").show();
+                isValid = false;
+            } else {
+                $("#name-error").hide();
             }
 
-            if (!email) {
-                $('#email-error').text('email is required.');
-                hasError = true;
+            // Email validation
+            let email = $("#email").val().trim();
+            let emailPattern = /^[a-zA-Z][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailPattern.test(email)) {
+                $("#email-error").text("Please enter a valid email address.").show();
+                isValid = false;
+            } else {
+                $("#email-error").hide();
             }
 
-            if (!comment) {
-                $('#comment-error').text('comment is required.');
-                hasError = true;
+            // Message validation
+            let message = $("#comment").val().trim();
+            if (message.length < 50  || message.length > 500) {
+                $("#comment-error").text("Message must be at least 50 characters.").show();
+                isValid = false;
+            } else {
+                $("#comment-error").hide();
             }
 
+            // Google reCAPTCHA validation
+            // let recaptchaResponse = grecaptcha.getResponse();
+            // if (recaptchaResponse.length === 0) {
+            //     $("#recaptcha-error").text("Please verify the captcha.").show();
+            //     isValid = false;
+            // } else {
+            //     $("#recaptcha-error").hide();
+            // }
 
-
-            if (!recaptchaResponse) {
-                $('#recaptcha-error').text('Please complete the reCAPTCHA verification.');
-                hasError = true;
-            }
-
-            if (hasError) return; // Stop if validation fails
-
-            // Show confirmation alert
-            Swal.fire({
-                title: 'Are you sure?',
-                text: "You are about to update this category!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes, submit it!'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    var formData = $('#comments-form').serialize();
-                    formData += &g-recaptcha-response=${recaptchaResponse}; // Append reCAPTCHA token
-                    $.ajax({
-                        url: "{{ route('resources-comment.store') }}",
-                        method: "POST",
-                        data: formData,
-                        headers: {
-                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr(
-                                'content') // Add CSRF token
-                        },
-                        // processData: false, // Important for file upload
-                        // contentType: false, // Important for file upload
-                        success: function(response) {
-                            Swal.fire('Success!', response.message, 'success').then(() => {
-                                // window.location.href =
-                                //     "{{ route('resources-category.list') }}";
-                                location.reload(); // Reload the page
+            // If all validations pass, submit form via AJAX
+            if (isValid) {
+                $.ajax({
+                    url: "{{ route('resources-comment.store') }}",
+                    type: "POST",
+                    data: $("#comments-form").serialize(),
+                    dataType: "json",
+                    success: function(response) {
+                        if (response.success) {
+                            Swal.fire({
+                                title: "Success!",
+                                text: response.message,
+                                icon: "success",
+                                confirmButtonText: "OK"
+                            }).then(() => {
+                                $("#comments-form")[0].reset();
+                                grecaptcha.reset();
                             });
-                        },
-                        error: function(xhr) {
-                            if (xhr.status === 422) {
-                                $('#name-error').text(xhr.responseJSON.errors.name[0]);
-                                Swal.fire('Error!', 'Please fix validation errors.', 'error');
-                            } else {
-                                Swal.fire('Error!', 'Something went wrong. Try again later.',
-                                    'error');
-                            }
+                        } else {
+                            Swal.fire({
+                                title: "Error!",
+                                text: "Something went wrong. Please try again.",
+                                icon: "error",
+                                confirmButtonText: "OK"
+                            });
                         }
-                    });
-                }
-            });
+                    },
+                    error: function(xhr) {
+                        Swal.fire({
+                            title: "Error!",
+                            text: "An error occurred: " + xhr.responseText,
+                            icon: "error",
+                            confirmButtonText: "OK"
+                        });
+                    }
+                });
+            }
         });
-    </script>
-        @include('frontend.layouts.right-menu-js')
-    <!-- Include the reCAPTCHA API -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script>
-        function onSubmit(event) {
-            event.preventDefault(); // Prevent the form from submitting immediately
+    });
+</script>
 
-            // Trigger reCAPTCHA validation before submission
-            grecaptcha.execute();
-        }
-    </script>
-    <!-- End of recaptcha -->
+        @include('frontend.layouts.right-menu-js')
+
+
 @endpush

@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Codec Network - PWC</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS start -->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="template/assets/css/bootstrap.min.css">
+
     <!--
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style1.css">
+    <link rel="stylesheet" type="text/css" href="template/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="template/assets/css/style1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/owlcarousel.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/swiper.css">
-    <link rel="stylesheet" type="text/css" href="assets/css//menu.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/menutoggle.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/menubar.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/resouces/owl-carousel.css">
-    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/js/main-menu.js"></script>
+    <link rel="stylesheet" type="text/css" href="template/assets/css/owlcarousel.css">
+    <link rel="stylesheet" type="text/css" href="template/assets/css/swiper.css">
+    <link rel="stylesheet" type="text/css" href="template/assets/css//menu.css">
+    <link rel="stylesheet" type="text/css" href="template/assets/css/menutoggle.css">
+    <link rel="stylesheet" type="text/css" href="template/assets/css/menubar.css">
+    <link rel="stylesheet" type="text/css" href="template/assets/css/resouces/owl-carousel.css">
+    
+    <script type="text/javascript" src="template/assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="template/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="template/assets/js/main-menu.js"></script>
     <style type="text/css">
         .active {
             color: #18ba60 !important;
@@ -32,7 +33,6 @@
             border-bottom: 3px solid #18ba60;
             padding-bottom: 10px;
         }
-
 
         @media only screen and (max-width: 600px) {
             #padding {
@@ -44,10 +44,8 @@
 
 <body>
 
-
-
     <!-- Header end -->
-
+@include('frontend.layouts.header')
 
 
 
@@ -58,28 +56,15 @@
     <div>
 
 
-
-
-
-
-
-
-
-
-
-
-
         <section id="title"
             class="no-background__mobile page-section page-section--col-primary page-section--col-dark nomove fullwidth   videobghost "
             data-width="1600" data-height="900"
             data-image="/content/dam/pwc/gx/en/issues/analytics/assets/ai-hero.jpg/jcr:content/renditions/original"
             data-wcmmode="false" data-parallax="false"
-            style="background-size: cover;background-position: center center;background-image: url(assets/images/original.jpg);">
-
+            style="background-size: cover;background-position: center center;background-image: url(template/assets/images/original.jpg);">
 
             <div class="parsys sectionpar">
                 <div class="herotitle section">
-
 
                     <div class="dpe-component-wrapper hero-title-component hero-title-component--lg-h1">
                         <div class="hero-title hero-title-textpanel--compaign">
@@ -119,9 +104,6 @@
 
             </div>
         </section>
-
-
-
 
     </div>
 
@@ -4833,7 +4815,7 @@ Number.prototype.formatMoney=function(e,t,i){var a=this,e=isNaN(e=Math.abs(e))?2
                             <div class="row">
                                 <div
                                     class="col-md-1 col-md-push-2 col-sm-2 col-sm-push-1 hidden-xs hidden-sm cta-webtile__icon">
-                                    <img src="{{ asset('assets/images/icon_download.webp') }}"
+                                    <img src="{{ asset('template/assets/images/icon_download.webp') }}"
                                         class="cta-webtile__icon-img" alt="Download">
                                 </div>
                                 <div class="col-md-7 col-md-push-2 col-sm-10 col-sm-push-1 cta-webtile__content">
@@ -4886,7 +4868,7 @@ Number.prototype.formatMoney=function(e,t,i){var a=this,e=isNaN(e=Math.abs(e))?2
                             <img id="sizzing" class="js-lazy-loading image-component_background " alt=""
                                 width="1170" height="84.87179487179488%" data-emptytext="Image"
                                 style="background-color: transparent; width: 100%;"
-                                src="assets/images/sizing-the-prize-regions.webp">
+                                src="template/assets/images/sizing-the-prize-regions.webp">
 
 
 
@@ -5360,20 +5342,20 @@ Number.prototype.formatMoney=function(e,t,i){var a=this,e=isNaN(e=Math.abs(e))?2
 
                     <ul style="margin-left:125px;" id="tabs-nav1" class="desktop">
                         <li class="active">
-                            <img src="assets/images/tab-ai-1.png" class="secnav-tabs__tab-icon img-responsive">
+                            <img src="template/assets/images/tab-ai-1.png" class="secnav-tabs__tab-icon img-responsive">
 
                             <a href="#tab11">HEALTHCARE</a>
                         </li>
                         <li>
-                            <img src="assets/images/tab-ai-3.png" class="secnav-tabs__tab-icon img-responsive">
+                            <img src="template/assets/images/tab-ai-3.png" class="secnav-tabs__tab-icon img-responsive">
                             <a href="#tab12">INSURANCE</a>
                         </li>
                         <li>
-                            <img src="assets/images/tab-ai-2.webp" class="secnav-tabs__tab-icon img-responsive">
+                            <img src="template/assets/images/tab-ai-2.webp" class="secnav-tabs__tab-icon img-responsive">
                             <a style="font-size: 15px;" href="#tab13">BANKING</a>
                         </li>
                         <li>
-                            <img src="assets/images/tab-ai-4.png" class="secnav-tabs__tab-icon img-responsive">
+                            <img src="template/assets/images/tab-ai-4.png" class="secnav-tabs__tab-icon img-responsive">
 
                             <a href="#tab14">TRAVEL & HOSPITALITY</a>
                         </li>
@@ -5386,7 +5368,7 @@ Number.prototype.formatMoney=function(e,t,i){var a=this,e=isNaN(e=Math.abs(e))?2
                                 <div class="row rowp">
                                     <div class="col-md-5">
                                         <div class="template12-img">
-                                            <img src="assets/images/tab-thumbnail-automating-trust-2.webp">
+                                            <img src="template/assets/images/tab-thumbnail-automating-trust-2.webp">
                                         </div>
 
                                     </div>
@@ -5453,7 +5435,7 @@ Number.prototype.formatMoney=function(e,t,i){var a=this,e=isNaN(e=Math.abs(e))?2
                                 <div class="row rowp">
                                     <div class="col-md-5">
                                         <div class="template12-img">
-                                            <img src="assets/images/tab-thumbnail-automating-trust-2.webp">
+                                            <img src="template/assets/images/tab-thumbnail-automating-trust-2.webp">
                                         </div>
 
                                     </div>
@@ -5497,7 +5479,7 @@ Number.prototype.formatMoney=function(e,t,i){var a=this,e=isNaN(e=Math.abs(e))?2
                                 <div class="row rowp">
                                     <div class="col-md-5">
                                         <div class="template12-img">
-                                            <img src="assets/images/tab-thumbnail-automating-trust-2.webp">
+                                            <img src="template/assets/images/tab-thumbnail-automating-trust-2.webp">
                                         </div>
 
                                     </div>
@@ -5566,7 +5548,7 @@ Number.prototype.formatMoney=function(e,t,i){var a=this,e=isNaN(e=Math.abs(e))?2
                                 <div class="row rowp">
                                     <div class="col-md-5">
                                         <div class="template12-img">
-                                            <img src="assets/images/tab-thumbnail-automating-trust-2.webp">
+                                            <img src="template/assets/images/tab-thumbnail-automating-trust-2.webp">
                                         </div>
 
                                     </div>
@@ -6193,8 +6175,8 @@ new part end -->
 
 <!-- Jquery code -->
 
-<script type="text/javascript" src="assets/js/carousel.js"></script>
-<script type="text/javascript" src="assets/js/swiper.js"></script>
-<script type="text/javascript" src="assets/js/custom.js"></script>
+<script type="text/javascript" src="template/assets/js/carousel.js"></script>
+<script type="text/javascript" src="template/assets/js/swiper.js"></script>
+<script type="text/javascript" src="template/assets/js/custom.js"></script>
 
 </html>

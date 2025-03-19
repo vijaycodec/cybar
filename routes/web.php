@@ -31,6 +31,7 @@ use App\Http\Controllers\backend\menueventController;
 use App\Http\Controllers\backend\menutestimonialController;
 use App\Http\Controllers\backend\careerController  as BackendCareerController;
 use App\Http\Controllers\backend\EnquiryController;
+use App\Http\Controllers\backend\jobCarrerController;
 use App\Http\Controllers\backend\seoController;
 use App\Http\Controllers\frontend\careerViewController;
 use App\Http\Controllers\frontend\templateController;
@@ -55,7 +56,7 @@ Route::middleware(['FrameGuard'])->group(function () {
 
     Route::get('/testimonials', [testimonialsController::class, 'index'])->name('testimonials');
     Route::get('/career', [careerController::class, 'index'])->name('careers');
-        Route::get('/career-view/{id?}', [careerViewController::class, 'view'])->name('careers-view');
+    Route::get('/career-view/{id?}', [careerViewController::class, 'view'])->name('careers-view');
     Route::get('/contact', [contactController::class, 'index'])->name('contact');
     Route::get('/cn-insight', [cnInsightController::class, 'index'])->name('cn-insight');
     Route::get('/l3-template', [l3templateController::class, 'getl3'])->name('l3-template');
@@ -69,6 +70,8 @@ Route::middleware(['FrameGuard'])->group(function () {
     Route::get('/fraud-detection', [templateController::class, 'fraudDetection'])->name('fraud-detection');
 
     Route::post('/submit-enquiry', [EnquiryController ::class, 'submitEnquiry'])->name('submit.enquiry');
+    Route::post('/comment/user', [commentController::class, 'store'])->name('resources-comment.store');
+    Route::post('/career/jobs', [jobCarrerController::class, 'store'])->name('job.career.store');
 
 });
 
@@ -78,7 +81,6 @@ Route::middleware(['auth','admin','prevent_history'])->group(function () {
 
     Route::get('/dashboard', [dashboardController::class, 'dashboard'])->name('admin.dashboard');
 
-    Route::post('/comment/user', [commentController::class, 'store'])->name('resources-comment.store');
     Route::get('/comment/user/list', [commentController::class, 'index'])->name('resources-comment.list');
     Route::get('/comment/user/show/{id}', [commentController::class, 'show'])->name('resources-comment.show');
     Route::get('/comment/user/delete/{id}', [commentController::class, 'destroy'])->name('resources-comment.destroy');
@@ -213,8 +215,6 @@ Route::middleware(['auth','admin','prevent_history'])->group(function () {
      // L3 category and sub-category Dependent Routes 
      Route::get('/seo-get-categories', [seoController::class, 'SeoGetCategories'])->name('seo-get-categories');
      Route::get('/seo-get-subcategories', [seoController::class, 'SeoGetSubCategories'])->name('seo-get-subcategories');
-
-
 
 });
 
