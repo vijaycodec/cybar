@@ -236,7 +236,7 @@
         $(document).ready(function() {
             function initializeCarousel(carouselId, navigationCountId) {
                 $("#" + carouselId).owlCarousel({
-                    loop: true,
+                    loop: false,
                     margin: 10,
                     nav: true,
                     dots: true,

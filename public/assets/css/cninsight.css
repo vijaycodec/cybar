@@ -1,0 +1,132 @@
+/* Added css for cn-insight */
+
+.active {
+    color: #18ba60 !important;
+    background: transparent;
+    border: 2px solid #18ba60 !important;
+    padding-bottom: 10px;
+}
+
+ul#tabs-nav {
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+    overflow: auto;
+}
+
+#mf ul#tabs-nav {
+    text-align: center;
+}
+
+li {
+    text-align: -webkit-match-parent;
+}
+
+ul.tab2 li a, .active {
+    background-color: #15416e;
+    color: #fff !important;
+}
+
+.active {
+    color: #FFF;
+    background: #18ba60 !important;
+    border: 2px solid #18ba60 !important;
+    padding-bottom: 10px;
+}
+
+
+ul#tabs-nav li {
+    margin-right: 2px;
+    padding: 6px 6px;
+    cursor: pointer;
+    font-size: 18px;
+    background: #15416E;
+    float: left;
+    width: 19%;
+    text-align: center;
+    min-width: 230px;
+}
+
+#template15 ul#tabs-nav li {
+    font-size: 18px;
+    background: #15416E;
+    float: none;
+    width: inherit;
+    min-width: inherit;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0px 10px;
+}
+
+#tabs-nav li a {
+    text-decoration: none;
+    color: #FFF;
+}
+#template15 ul#tabs-nav li.active a, #template15 ul#tabs-nav li:hover a {
+    color: #fff;
+}
+
+ul#tabs-nav1 {
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+    overflow: auto;
+}
+
+#template15 ul#tabs-nav1 {
+    text-align: center;
+}
+
+ul.tab2 li a, .active {
+    background-color: #15416e;
+    color: #fff !important;
+}
+
+.active {
+    color: #FFF !important;
+    background: #18ba60 !important;
+    border: 2px solid #18ba60 !important;
+    padding-bottom: 10px;
+}
+
+ul#tabs-nav1 li {
+    margin-right: 2px;
+    padding: 6px 6px;
+    cursor: pointer;
+    font-size: 18px;
+    background: #e5e8ee;
+    float: left;
+    width: 19%;
+    text-align: center;
+    min-width: 230px;
+}
+
+#template15 ul#tabs-nav1 li {
+    background: #ccc !important;
+    border: 2px solid #ccc;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: auto 30px;
+    width: inherit;
+    max-width: inherit;
+    float: none;
+    display: inline-block;
+}
+
+#template15 ul#tabs-nav1 li.active, #template15 ul#tabs-nav1 li:hover {
+    outline: 0;
+    background-color: #18ba60 !important;
+    border-color: #18ba60 !important;
+}
+
+#template15 ul#tabs-nav1 li.active, #template15 ul#tabs-nav1 li:hover {
+    outline: 0;
+    background-color: #18ba60 !important;
+    border-color: #18ba60 !important;
+}
+#template15 #tabs-nav1 li a {
+    color: #333;
+}
+#template15 #tabs-nav1 li.active a, #template15 #tabs-nav1 li:hover a {
+    color: #fff;
+}
