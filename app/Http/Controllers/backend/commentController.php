@@ -29,15 +29,18 @@ class commentController extends Controller
     public function store(Request $request)
     {
         try {
-            // Validate input using Validator::make
+            // Debugging: Log incoming request
+    
+            // Validate input
             $validator = Validator::make($request->all(), [
-                'name' => 'required|string|min:3|max:100', // Name must be between 3-100 characters
-                'email' => 'required|email|max:255', // Valid email required
-                'message' => 'required|min:5|max:500', // Min 5, max 500 characters
+                'name' => 'required|string|min:3|max:100',
+                'email' => 'required|email|max:255',
+                'message' => 'required|min:5|max:500',
+                'resource_id' => 'required|integer',
                 // 'g-recaptcha-response' => 'required|captcha'  // Uncomment if using reCAPTCHA
+    
             ]);
     
-            // If validation fails, return JSON response
             if ($validator->fails()) {
                 return response()->json([
                     'success' => false,
@@ -45,7 +48,7 @@ class commentController extends Controller
                 ], 422);
             }
     
-            // Save the new comment
+            // Save the comment
             $comment = new Comment();
             $comment->name = $request->name;
             $comment->email = $request->email;
@@ -57,14 +60,15 @@ class commentController extends Controller
                 'success' => true,
                 'message' => 'Form submitted successfully!'
             ], 200);
-    
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Something went wrong. Please try again later.'
+                'message' => 'Something went wrong. Please try again later.',
+                'error' => $e->getMessage()
             ], 500);
         }
     }
+    
     
     public function show($id)
     {

@@ -36,6 +36,7 @@ class resourcesCategoriesController extends Controller
         try {
             $validated = $request->validate([
                 'name' => 'required|string|max:255',
+                'slug' => 'required',
                 'category_type' => 'required|string|max:255',
                 'title' => 'required|string|max:255',
                 'image' => 'nullable|mimes:png,jpg,jpeg,webp|max:4096'
@@ -75,6 +76,7 @@ class resourcesCategoriesController extends Controller
         try {
             $validated = $request->validate([
                 'name' => 'required|string|max:255',
+                'slug' => 'required',
                 'category_type' => 'required|string|max:255',
                 'title' => 'required|string|max:255',
                 'image' => 'nullable|mimes:png,jpg,jpeg,webp|max:4096'

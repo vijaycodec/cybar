@@ -43,6 +43,7 @@
                                 <th>#</th>
                                 <th>Pages Category </th>
                                 <th>Name</th>
+                                <th>Slug</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -54,6 +55,7 @@
                                         <td style="padding: 10px;">{{ $courseCategory->pageCategory->page_name }}</td>
                                         {{-- <td>{{ $courseCategory->pageCategory->page_name }}</td> --}}
                                         <td  style="padding: 10px;">{{ $courseCategory->name }}</td>
+                                        <td  style="padding: 10px;">{{ $courseCategory->slug }}</td>
                                         <td style="padding: 10px;">
                                             <div class="list-icon-function">
                                                 <button type="button" class="show" data-id="{{ $courseCategory->id }}">

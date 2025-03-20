@@ -282,12 +282,7 @@
                         @foreach ($l3Categories as $category)
                             @foreach ($category->contentInfos as $contentInfo)
                                 @if ($contentInfo->significance_title)
-                                    <p>{!! $contentInfo->significance_title->title !!}</p>
-                                    {{-- <h2>SIGNIFICANCE OF CEH IN DIFFERENT INDUSTRY
-                                    </h2>
-                                    <p>CEH training and certification hold significant importance in the cybersecurity
-                                        industry as they validate an individual's proficiency in ethical hacking
-                                        techniques and practices.</p> --}}
+                                    <h2>{!! $contentInfo->significance_title->title !!}</h2>
                                 @endif
                             @endforeach
                         @endforeach

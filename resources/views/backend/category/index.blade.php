@@ -42,6 +42,7 @@
                             <tr>
                                 <th>#</th>
                                 <th>Name</th>
+                                <th>Slug</th>
                                 <th>Category Type</th>
                                 <th>Title</th>
                                 <th>Image</th>
@@ -54,6 +55,7 @@
                                     <tr>
                                         <td  style="padding: 10px 10px;">{{ $category->id }}</td>
                                         <td  style="padding: 10px;">{{ $category->name }}</td>
+                                        <td  style="padding: 10px;">{{ $category->slug }}</td>
                                         <td  style="padding: 10px;">{{ $category->category_type }}</td>
                                         <td style="padding: 10px;">{{ $category->title }}</td>
                                         <td style="padding: 10px;">

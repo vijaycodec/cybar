@@ -32,6 +32,7 @@ use App\Http\Controllers\backend\menutestimonialController;
 use App\Http\Controllers\backend\careerController  as BackendCareerController;
 use App\Http\Controllers\backend\EnquiryController;
 use App\Http\Controllers\backend\jobCarrerController;
+use App\Http\Controllers\backend\SearchController;
 use App\Http\Controllers\backend\seoController;
 use App\Http\Controllers\frontend\careerViewController;
 use App\Http\Controllers\frontend\templateController;
@@ -72,6 +73,8 @@ Route::middleware(['FrameGuard'])->group(function () {
     Route::post('/submit-enquiry', [EnquiryController ::class, 'submitEnquiry'])->name('submit.enquiry');
     Route::post('/comment/user', [commentController::class, 'store'])->name('resources-comment.store');
     Route::post('/career/jobs', [jobCarrerController::class, 'store'])->name('job.career.store');
+
+    Route::get('/search-resources', [SearchController::class, 'search']);
 
 });
 

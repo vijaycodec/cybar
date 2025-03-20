@@ -36,6 +36,7 @@ class courseCategoryController extends Controller
                 'category_id' => 'required',
                 'name' => 'required',  
                 'title' => 'required',  
+                'slug' => 'required',
             ]);
 
             // Check if validation fails
@@ -49,7 +50,9 @@ class courseCategoryController extends Controller
             $category = new CourseCategory();
             $category->page_category = $request->category_id;
             $category->name = $request->name;
+            $category->slug = $request->slug;
             $category->title = $request->title;
+            
             // Save the updated category data
 
             $category->save();
@@ -90,6 +93,7 @@ class courseCategoryController extends Controller
             'category_id' => 'required',
                 'name' => 'required',  
                 'title' => 'required', 
+                'slug' => 'required',
         ]);
 
         // Find the service or return 404
@@ -98,6 +102,7 @@ class courseCategoryController extends Controller
         // Update fields
         $courseCategory->page_category = $request->category_id;
         $courseCategory->name = $request->name;
+        $courseCategory->slug = $request->slug;
         $courseCategory->title = $request->title;
         // Save changes
         $courseCategory->save();

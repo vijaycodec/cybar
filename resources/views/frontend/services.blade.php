@@ -62,7 +62,7 @@
                                                         <div class="cn-hover-box">
                                                             <div class="cn-hover-img">
                                                                 <img
-                                                                    src="{{ asset('uploads/backend/services/' . $service->images) }}">
+                                                                    src="{{ asset('storage/uploads/backend/services/' . $service->images) }}">
                                                             </div>
                                                             <div class="cn-content">
                                                                 <p>{{ $service->description }}</p>

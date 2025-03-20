@@ -30,8 +30,11 @@ use App\Http\Controllers\backend\menublogController;
 use App\Http\Controllers\backend\menueventController;
 use App\Http\Controllers\backend\menutestimonialController;
 use App\Http\Controllers\backend\careerController  as BackendCareerController;
+use App\Http\Controllers\backend\EnquiryController;
+use App\Http\Controllers\backend\jobCarrerController;
 use App\Http\Controllers\backend\seoController;
 use App\Http\Controllers\frontend\careerViewController;
+use App\Http\Controllers\frontend\templateController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -43,10 +46,7 @@ Route::middleware(['FrameGuard'])->group(function () {
     Route::get('/services/{category?}', [ServicesController::class, 'getServices'])
     ->where('category', '[A-Za-z0-9-]+') // Allow slugs
     ->name('services');
-    // Route::get('/training', [trainingController::class, 'get_training'])->name('training');
-    Route::get('/training/{category?}', [trainingController::class, 'get_training'])
-    ->where('category', '[A-Za-z0-9-]+')
-    ->name('training');
+    Route::get('/training', [trainingController::class, 'get_training'])->name('training');
     Route::get('/resources', [resourcesController::class, 'index'])->name('resources');
     Route::get('/resources-view/{id?}', [resourcesViewController::class, 'view'])->name('resources-view');
     Route::get('/resources-view-trending/{id?}', [resourcesViewController::class, 'trendingResourceView'])->name('resources-view-trending');
@@ -63,13 +63,20 @@ Route::middleware(['FrameGuard'])->group(function () {
     Route::get('/contact', [contactController::class, 'index'])->name('contact');
     Route::get('/cn-insight', [cnInsightController::class, 'index'])->name('cn-insight');
     // Route::get('/l3-template', [l3templateController::class, 'getl3'])->name('l3-template');
-    // Route::get('/l3-template/{page_name}/{category_name}/{sub_category_name}', [L3TemplateController::class, 'getl3'])->name('l3-template');
-    Route::get('l3-template/{page_name}/{category_name}/{sub_category_name}', [L3TemplateController::class, 'getl3'])
-    ->name('l3-template');
+    Route::get('/services/{category_name?}/{sub_category_name?}', [L3TemplateController::class, 'getl3'])
+    ->name('l3services');
 
     Route::get('/login', [loginController::class, 'login'])->name('login');
     // Route::get('/add-blog-data', [Indexcontroller::class, 'add_blog_data'])->name('add_blog_data');
     Route::post('/login/user', [loginController::class, 'loginsave'])->name('loginsave');
+
+    Route::get('/template1', [templateController::class, 'template1'])->name('template1');
+    Route::get('/template2', [templateController::class, 'template2'])->name('template2');
+    Route::get('/fraud-detection', [templateController::class, 'fraudDetection'])->name('fraud-detection');
+
+    Route::post('/submit-enquiry', [EnquiryController ::class, 'submitEnquiry'])->name('submit.enquiry');
+    Route::post('/comment/user', [commentController::class, 'store'])->name('resources-comment.store');
+    Route::post('/career/jobs', [jobCarrerController::class, 'store'])->name('job.career.store');
 
 });
 
@@ -79,7 +86,6 @@ Route::middleware(['auth','admin','prevent_history'])->group(function () {
 
     Route::get('/dashboard', [dashboardController::class, 'dashboard'])->name('admin.dashboard');
 
-    Route::post('/comment/user', [commentController::class, 'store'])->name('resources-comment.store');
     Route::get('/comment/user/list', [commentController::class, 'index'])->name('resources-comment.list');
     Route::get('/comment/user/show/{id}', [commentController::class, 'show'])->name('resources-comment.show');
     Route::get('/comment/user/delete/{id}', [commentController::class, 'destroy'])->name('resources-comment.destroy');
@@ -211,9 +217,9 @@ Route::middleware(['auth','admin','prevent_history'])->group(function () {
     Route::put('seo-details/update/{id}', [seoController::class, 'update'])->name('seo-details.update');
     Route::delete('seo-details/delete/{id}', [seoController::class, 'destroy'])->name('seo-details.destroy');
 
-    Route::get('/seo-get-categories', [seoController::class, 'SeoGetCategories'])->name('seo-get-categories');
-    Route::get('/seo-get-subcategories', [seoController::class, 'SeoGetSubCategories'])->name('seo-get-subcategories');
-
+     // L3 category and sub-category Dependent Routes 
+     Route::get('/seo-get-categories', [seoController::class, 'SeoGetCategories'])->name('seo-get-categories');
+     Route::get('/seo-get-subcategories', [seoController::class, 'SeoGetSubCategories'])->name('seo-get-subcategories');
 
 });
 

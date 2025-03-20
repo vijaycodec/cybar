@@ -41,9 +41,12 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Sub Category Name</th>
-                                <th>Category</th>
                                 <th>Page Category</th>
+                                <th>Category</th>
+                                <th>Sub Category Name</th>
+                                <th>slug</th>
+                                
+                                
                                 <th>Actions</th>
                             </tr>
                         </thead>
@@ -52,9 +55,10 @@
                                 <tr class="border-t">
                                     <td>{{ $loop->iteration + ($subCategories->currentPage() - 1) * $subCategories->perPage() }}
                                     </td>
-                                    <td>{{ $subCategory->sub_category }}</td>
-                                    <td>{{ $subCategory->category->name ?? 'N/A' }}</td>
                                     <td>{{ $subCategory->pageCategory->page_name ?? 'N/A' }}</td>
+                                    <td>{{ $subCategory->category->name ?? 'N/A' }}</td>
+                                    <td>{{ $subCategory->sub_category }}</td>
+                                    <td>{{ $subCategory->slug }}</td>
                                     <td style="padding: 10px;">
                                         <div class="list-icon-function">
                                             <button type="button" class="show" data-id="{{ $subCategory->id }}">
