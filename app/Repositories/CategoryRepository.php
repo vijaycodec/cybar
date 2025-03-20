@@ -32,6 +32,7 @@ class CategoryRepository implements CategoryRepositoryInterface
     {
         $category = new Category();
         $category->name = $data['name'];
+        $category->slug = $data['slug'];
         $category->category_type = $data['category_type'];
         $category->title = $data['title'];
 
@@ -49,6 +50,7 @@ class CategoryRepository implements CategoryRepositoryInterface
     {
         $category = Category::findOrFail($id);
         $category->name = $data['name'];
+        $category->slug = $data['slug'];
         $category->category_type = $data['category_type'];
         $category->title = $data['title'];
 

@@ -82,17 +82,12 @@
                                                             Know more <i class="fa fa-chevron-right"></i>
                                                         </a> --}}
                                                         @php
-                                                        $page_name = 'services';
                                                         $category_slug = isset($category->name) ? Str::slug($category->name) : 'unknown-category';
                                                         $subcategory_slug = isset($service->subcategory->sub_category) ? Str::slug($service->subcategory->sub_category) : 'unknown-subcategory';
                                                  
                                                       @endphp
                                                     
-                                                    <a href="{{ route('l3-template', [
-                                                            'page_name' => $page_name, 
-                                                            'category_name' => $category_slug, 
-                                                            'sub_category_name' => $subcategory_slug
-                                                        ]) }}">
+                                                    <a href="{{ url('services/' . $category_slug . '/' . $subcategory_slug) }}">
                                                         Know more <i class="fa fa-chevron-right"></i>
                                                     </a>
                                                         </div>
@@ -130,13 +125,13 @@
                                                                  
                                                                       @endphp
                                                                     
-                                                                    <a href="{{ route('l3-template', [
+                                                                    {{-- <a href="{{ route('l3-template', [
                                                                             'page_name' => $page_name, 
                                                                             'category_name' => $category_slug, 
                                                                             'sub_category_name' => $subcategory_slug
                                                                         ]) }}">
                                                                         Know more <i class="fa fa-chevron-right"></i>
-                                                                    </a>
+                                                                    </a> --}}
 
                                                                     </div>
                                                                 </div>
@@ -200,20 +195,20 @@
                                          
                                               @endphp
                                             
-                                            <a href="{{ route('l3-template', [
+                                            {{-- <a href="{{ route('l3-template', [
                                                     'page_name' => $page_name, 
                                                     'category_name' => $category_slug, 
                                                     'sub_category_name' => $subcategory_slug
                                                 ]) }}">
                                                 Know more <i class="fa fa-chevron-right"></i>
                                             </a>
-                                            </div>
+                                            </div> --}}
                                         </div>
                                     </div>
                                 @endforeach
                             </div>
 
-                            <!-- ✅ Counter for this slider -->
+                            <!-- Counter for this slider -->
                             <div id="navigation-count{{ $index + 1 }}-{{ $chunkIndex + 1 }}"
                                 class="count-nav-box counter-space">
                                 1/{{ count($serviceChunk) }}
@@ -455,7 +450,7 @@
                 }
             }
 
-            // ✅ Automatically initialize all carousels
+            // Automatically initialize all carousels
             $("[id^='ser-demo']").each(function() {
                 let carouselId = $(this).attr("id");
                 let counterId = carouselId.replace("ser-demo", "navigation-count");

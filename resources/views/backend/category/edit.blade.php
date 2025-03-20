@@ -41,8 +41,14 @@
                     <fieldset class="name">
                         <div class="body-title mb-10">Category Name <span class="tf-color-1">*</span></div>
                         <input class="mb-10" type="text" placeholder="Enter Category name" name="name"
-                            id="category-name" tabindex="0" value="{{ $category->name }}">
+                             id="categorySelect" tabindex="0" value="{{ $category->name }}">
                         <p id="name-error" class="tf-color-1 error-text"></p> <!-- Error Below Input -->
+                    </fieldset>
+
+                    <fieldset class="name">
+                        <div class="body-title">Sub  Category Slug <span class="tf-color-1">*</span></div>
+                        <input class="flex-grow" id="categorySlug" type="text" placeholder="Category Name" name="slug"
+                            tabindex="0" value="{{ $category->slug }}" aria-required="true" required readonly>
                     </fieldset>
 
                     <fieldset class="name">
@@ -178,6 +184,23 @@
                         }
                     });
                 }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            function slugify(text) {
+                return text.toString().toLowerCase()
+                    .trim()
+                    .replace(/\s+/g, '-') // Replace spaces with hyphens
+                    .replace(/[^\w\-]+/g, '') // Remove all non-word characters
+                    .replace(/\-\-+/g, '-'); // Replace multiple hyphens with single hyphen
+            }
+    
+            $('#categorySelect').on('input', function() {
+                var title = $(this).val();
+                var slug = slugify(title);
+                $('#categorySlug').val(slug); // Set generated slug in the input field
             });
         });
     </script>

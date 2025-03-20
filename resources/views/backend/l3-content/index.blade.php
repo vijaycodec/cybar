@@ -78,11 +78,11 @@
                                         <td>{{ optional($content->faqCategory)->name ?? 'N/A' }}</td>
                                         <td>
                                             <div class="list-icon-function">
-                                                <button type="button" class="show" data-id="{{ $content->id }}">
+                                                {{-- <button type="button" class="show" data-id="{{ $content->id }}">
                                                     <div class="item eye">
                                                         <i class="icon-eye"></i>
                                                     </div>
-                                                </button>
+                                                </button> --}}
                                                 <a href="{{ route('l3-content.edit', $content->id) }}">
                                                     <div class="item edit">
                                                         <i class="icon-edit-3"></i>
@@ -106,7 +106,7 @@
                     </div>
 
                     <!-- Pagination -->
-                    <div class="mt-4">
+                    <div class="mt-10">
                         {{-- {!! $l3Contents->withQueryString()->links('pagination::bootstrap-5') !!} --}}
                     </div>
                 </div>
@@ -114,3 +114,52 @@
         </div>
     </div>
     @endsection
+    @push('scripts')
+    <script>
+        $(document).ready(function() {
+            // Handle delete button click
+            $(document).on('click', '.delete', function() {
+                var l3ContentId = $(this).data('id'); // Get ID from data attribute
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "You won't be able to revert this!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // Perform AJAX request to delete
+                        $.ajax({
+                            url: "{{ route('l3-content.destroy', ':id') }}"
+                                .replace(':id',
+                                l3ContentId),
+                            method: "DELETE",
+                            data: {
+                                _token: "{{ csrf_token() }}" // CSRF Token
+                            },
+                            success: function(response) {
+                                Swal.fire(
+                                    'Deleted!',
+                                    response.message,
+                                    'success'
+                                ).then(() => {
+                                    location
+                                        .reload(); // Reload the page or update the DOM
+                                });
+                            },
+                            error: function(xhr) {
+                                Swal.fire(
+                                    'Error!',
+                                    'Unable to delete. Please try again later.',
+                                    'error'
+                                );
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+@endpush

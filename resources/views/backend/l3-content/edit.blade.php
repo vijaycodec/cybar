@@ -65,8 +65,10 @@
             </div>
 
             <div class="wg-box">
-                <form class="form-new-brand form-style-1" action="" method="POST" enctype="multipart/form-data">
+                <form class="form-new-brand form-style-1" action="{{ route('l3-content.update', $l3Content->id) }}"
+                    method="POST" enctype="multipart/form-data">
                     @csrf
+                    @method('PUT')
                     <a class="tf-button style-1 w208" style="padding-left: 75px;"
                         href="{{ route('l3-content.list') }}">Back</a>
 
@@ -137,6 +139,24 @@
                         <input type="text" class="" name="overview_title"
                             value="{{ $l3Content->overview_title }}">
                     </div>
+
+                    <div class="l3-form" id="overview_sub_desc" style="display: none;">
+                        <div class="body-title">SelectS ub Descriptions: <span class="tf-color-1"></span></div>
+                        <select id="overview_count" class="flex-grow l3_content">
+                            <option value="">Select</option>
+
+                            @for ($i = 1; $i <= 10; $i++)
+                                <option value="{{ $i }}" {{ $i == $l3overview_count_desc ? 'selected' : '' }}>
+                                    {{ $i }}
+                                </option>
+                            @endfor
+                        </select>
+
+
+                    </div>
+
+
+                    <div class="form-group" id="dynamic_overview_sections"></div>
                     <!-- Overview Form ends-->
 
                     <!-- Significance Form Start -->
@@ -165,8 +185,7 @@
 
                     <div class="l3-form form-group significance_title">
                         <div class="body-title">Significance Title :<span class="tf-color-1">*</span></div>
-
-                        <textarea class="summernote" name="Significance_title">{{ $l3Content->Significance_title }}</textarea>
+                        <textarea class="summernote" name="Significance_title">{{ $significanceTitle ? $significanceTitle->title : '' }}</textarea>
                     </div>
                     <!-- Significance Form ends-->
 
@@ -187,7 +206,7 @@
                     <!-- Course Feature Title Form -->
                     <div class="l3-form form-group coursefeature_title">
                         <div class="body-title">Course Feature Title :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="coursefeature_title">{{ old('coursefeature_title') }}</textarea>
+                        <textarea class="summernote" name="coursefeature_title">{{ $coursefeatureTitle ? $coursefeatureTitle->title : '' }}</textarea>
                     </div>
 
                     <div class="l3-form form-group course_feature_short_description">
@@ -221,7 +240,7 @@
                     <!-- Cyberwind Title Form -->
                     <div class="l3-form form-group cyberwind_title">
                         <div class="body-title">Cyberwind Title :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="cyberwind_title">{{ old('cyberwind_title') }}</textarea>
+                        <textarea class="summernote" name="cyberwind_title">{{ $cyberwindTitle ? $cyberwindTitle->title : '' }}</textarea>
                     </div>
                     <div class="l3-form form-group cyberwind_short_description">
                         <div class="body-title">Cyberwind Short Description :<span class="tf-color-1">*</span></div>
@@ -252,7 +271,7 @@
                     <!-- Industries Title Form -->
                     <div class="l3-form form-group industries_title">
                         <div class="body-title">Industries Title : <span class="tf-color-1">*</span></div>
-                        <textarea class="" name="industries_title">{{ old('industries_title') }}</textarea>
+                        <textarea class="" name="industries_title">{{ $industryTitle ? $industryTitle->title : '' }}</textarea>
                     </div>
                     <div class="l3-form form-group industries_desc">
                         <div class="body-title">Industries Description :<span class="tf-color-1">*</span></div>
@@ -274,17 +293,22 @@
                             @endforeach
                         </select>
                     </div>
+                    <div class="l3-form form-group sub_category">
+                        <div class="body-title">Faqs Title :<span class="tf-color-1">*</span></div>
+                        <textarea class="summernote" name="faq_title">{{ $FaqsData ? $FaqsData->title : '' }}</textarea>
+
+                    </div>
                     <div class="name l3-form sub_category" id="">
                         <div class="body-title">Sub Category Name <span class="tf-color-1">*</span></div>
                         <input class="flex-grow" type="text" placeholder="Sub Category Name" name="subcategory"
-                            tabindex="0" value="{{ old('subcategory') }}">
+                            tabindex="0" value="{{ $FaqsData ? $FaqsData->name : '' }}">
 
                     </div>
                     <div class="l3-form form-group faqs_desc">
                         <div class="body-title">SubCategory Description : <span class="tf-color-1">*</span></div>
-                        <textarea class="" name="subcategory_description">{{ old('subcategory_description') }}</textarea>
-                    </div> 
-                    
+                        <textarea class="" name="subcategory_description">{{ $FaqsData ? $FaqsData->description : '' }}</textarea>
+                    </div>
+
                     <!-- FAQ'S Form End -->
 
                     {{-- Blog Form Start --}}
@@ -308,7 +332,8 @@
                     </div>
                     <div class="l3-form form-group blog_title">
                         <div class="body-title">Blog Title : <span class="tf-color-1">*</span></div>
-                        <input type="text" name="blog_title" placeholder="Enter Blog Title" value="{{ old('blog_description', $l3Content->blog_description ?? '') }}">
+                        <input type="text" name="blog_description" placeholder="Enter Blog Title"
+                            value="{{ $l3Content->blog_description }}">
                     </div>
 
                     {{-- Blog Form End --}}
@@ -317,23 +342,26 @@
                     <div class="name l3-form" id="testimonial_form" style="display: none;">
 
                         <div class="body-title">Testimonial Title : </div>
-                        <input type="text" name="testimonials_title" {{ old('testimonial_title') }}></input>
+                        <input type="text" name="testimonials_title"
+                            value="{{ $testimonialData ? $testimonialData->testimonial_title : '' }}"></input>
                     </div>
                     <div class="l3-form form-group testimonial_name">
                         <div class="body-title">Client Name : <span class="tf-color-1">*</span></div>
-                        <input type="text" name="testimonials_name" value="{{ old('testimonial_name') }}"></input>
+                        <input type="text" name="testimonials_name"
+                            value="{{ $testimonialData ? $testimonialData->testimonial_name : '' }}"></input>
                     </div>
                     <div class="l3-form testimonial_designation">
                         <div class="body-title">Client Designation: <span class="tf-color-1">*</span></div>
-                        <input type="text" name="designation" value="{{ old('designation') }}"></input>
+                        <input type="text" name="designation"
+                            value="{{ $testimonialData ? $testimonialData->designation : '' }}"></input>
                     </div>
                     <div class="l3-form  testimonials_short_description">
                         <div class="body-title">Testimonial Short Description :<span class="tf-color-1">*</span></div>
-                        <textarea class="" name="testimonials_short_description">{{ old('testimonials_short_description') }}</textarea>
+                        <textarea class="" name="testimonials_short_description">{{ $testimonialData ? $testimonialData->testimonial_short_description : '' }}</textarea>
                     </div>
                     <div class="l3-form  testimonial_description">
                         <div class="body-title">Testimonial Description :<span class="tf-color-1">*</span></div>
-                        <textarea class="" name="testimonials_description">{{ old('testimonial_description') }}</textarea>
+                        <textarea class="" name="testimonials_description">{{ $testimonialData ? $testimonialData->testimonial_description : '' }}</textarea>
                     </div>
 
                     <!-- Testimonials form ends -->
@@ -342,16 +370,16 @@
                     <div class="name l3-form" id="incident_form" style="display: none;">
 
                         <div class="body-title">Incident Title :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="incident_title">{{ old('incident_title') }}</textarea>
+                        <textarea class="summernote" name="incident_title">{{ $l3Content->incident_title }}</textarea>
                     </div>
                     <div class="l3-form form-group Video_link">
                         <div class="body-title">Video Link : <span class="tf-color-1">*</span></div>
-                        <input type="text" name="Video_link" value="{{ old('Video_link') }}"> </input>
+                        <input type="text" name="Video_link" value="{{ $l3Content->Video_link }}"> </input>
                     </div>
 
                     <div class="l3-form  incident_description">
                         <div class="body-title">Incident Description :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="incident_description">{{ old('incident_description') }}</textarea>
+                        <textarea class="summernote" name="incident_description">{{ $l3Content->incident_description }}</textarea>
                     </div>
 
 
@@ -361,15 +389,16 @@
                     {{-- CEH kit form start --}}
                     <div class="l3-form form-group cehkit_form" id="cehkit_form">
                         <div class="body-title">CEH KIT Title (Top) : <span class="tf-color-1"></span></div>
-                        <textarea class="summernote" name="main_title">{{ old('main_title') }}</textarea>
+                        <textarea class="summernote" name="main_title">{{ $l3Content ? $l3Content->main_title : '' }}</textarea>
                     </div>
                     <div class="form-group l3-form  kit_title">
                         <div class="body-title">Sub Title :<span class="tf-color-1">*</span></div>
-                        <input type="text" name="kit_title" id="">{{ old('kit_title') }}</input>
+                        <input type="text" name="kit_title" id=""
+                            value="{{ $l3Content ? $l3Content->kit_title : '' }}"></input>
                     </div>
                     <div class="l3-form  ceh_description">
                         <div class="body-title">CEH KIT Description :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="ceh_description">{{ old('ceh_description') }}</textarea>
+                        <textarea class="summernote" name="ceh_description">{{ $l3Content->ceh_description }}</textarea>
                     </div>
 
 
@@ -387,11 +416,22 @@
                             @endforeach
                         </select>
                     </div>
+
+                    <div class="l3-form form-group program_title">
+                        <div class="body-title">Program Top Title(H) :<span class="tf-color-1">*</span></div>
+                        <input type="text" class="" name="program_title" value="{{ $l3Content ? $l3Content->program_title : ''  }}"></input>
+                    </div>
+
                     <div class="name l3-form program_subcategory" id="">
                         <div class="body-title">Program Sub-Category Name </div>
                         <input class="flex-grow" type="text" placeholder="Sub Category Name"
                             name="program_subcategory" tabindex="0"
-                            value="{{ $l3Content->name == $category->id ? 'selected' : '' }}">
+                            value="{{ $program_sub_data ? $program_sub_data->name : '' }}">
+                    </div>
+
+                    <div class="l3-form form-group program_sub_title">
+                        <div class="body-title">Program Sub Title(H) :<span class="tf-color-1">*</span></div>
+                        <textarea class="summernote" name="program_sub_title">{{  $l3Content ? $l3Content->program_sub_title : '' }}</textarea>
                     </div>
 
                     {{-- @foreach ($programCategories as $subcategory)
@@ -403,64 +443,127 @@
                         </div>
                     @endforeach --}}
 
-                    <div class="l3-form form-group program_description">
+                    {{-- <div class="l3-form form-group program_description">
                         <div class="body-title"> program Description : <span class="tf-color-1">*</span></div>
                         <textarea class="summernote" name="program_description">{{ old('program_description', $l3Content->program_description ?? '') }}</textarea>
+                    </div> --}}
+
+
+                    <div class="l3-form form-group program_description">
+                        <div class="body-title"> Program Description : <span class="tf-color-1">*</span></div>
+                        <textarea class="summernote" name="program_description">
+                            @if (old('program_description'))
+                            {{ old('program_description') }}
+                            @elseif(isset($program_sub_data) && $program_sub_data->description)
+                            {{ $program_sub_data->description }}
+                            @elseif(isset($l3Content) && $l3Content->program_description)
+                            {{ $l3Content->program_description }}
+                            @endif
+                        </textarea>
                     </div>
+
                     <!-- Program Form End -->
 
                     {{-- comman Image for required form start --}}
-                    <fieldset class="l3-form comman_images">
-                        <div class="body-title">Upload images <span class="tf-color-1">*</span></div>
+
+                    <fieldset>
+                        <div class="body-title blog_image">Upload Image <span class="tf-color-1">*</span></div>
                         <div class="upload-image flex-grow">
-                            <!-- Image preview container -->
-                            <div class="item" id="imgpreview" style="display:none; text-align: center;">
-                                <img src="" class="effect8" alt="Preview Image"
-                                    style="max-width: 50%; height: auto; border-radius: 5px;">
-                                <button type="button" id="deleteImage" class="delete-btn">Delete</button>
-                            </div>
-                            <div id="upload-file" class="item up-load">
-                                <label class="uploadfile" for="myFile">
-                                    <span class="icon"><i class="icon-upload-cloud"></i></span>
-                                    <span class="body-text">Drop your images here or select <span class="tf-color">click
-                                            to browse</span></span>
-                                    <input type="file" id="myFile" name="image" accept="image/*">
-                                </label>
-                            </div>
+
+                            @php
+                                $imagePath = null;
+
+                                if (isset($program_sub_data) && !empty($program_sub_data->image)) {
+                                    $imagePath = asset(
+                                        'storage/uploads/frontend/l3_template/program/' . $program_sub_data->image,
+                                    );
+                                } elseif (!empty($l3Content->images) && !empty($l3Content->program_category_id)) {
+                                    $imagePath = asset(
+                                        'storage/uploads/frontend/l3_template/program/' . $l3Content->images,
+                                    );
+                                } elseif (
+                                    !empty($l3Content->images) &&
+                                    !empty($l3Content->significance_category_type)
+                                ) {
+                                    $imagePath = asset(
+                                        'storage/uploads/frontend/l3_template/significance/' . $l3Content->images,
+                                    );
+                                } elseif (!empty($l3Content->images) && !empty($l3Content->course_feature_type)) {
+                                    $imagePath = asset(
+                                        'storage/uploads/frontend/l3_template/coursefeature/' . $l3Content->images,
+                                    );
+                                } elseif (!empty($l3Content->images) && !empty($l3Content->kit_title)) {
+                                    $imagePath = asset(
+                                        'storage/uploads/frontend/l3_template/cehkit/' . $l3Content->images,
+                                    );
+                                } elseif (!empty($l3Content->images) && !empty($l3Content->Video_link)) {
+                                    $imagePath = asset(
+                                        'storage/uploads/frontend/l3_template/incidents/' . $l3Content->images,
+                                    );
+                                } elseif (!empty($l3Content->images) && !empty($l3Content->industry_type)) {
+                                    $imagePath = asset(
+                                        'storage/uploads/frontend/l3_template/industry/' . $l3Content->images,
+                                    );
+                                } elseif (!empty($l3Content->images) && !empty($l3Content->cyberwind_type)) {
+                                    $imagePath = asset(
+                                        'storage/uploads/frontend/l3_template/cyberwind/' . $l3Content->images,
+                                    );
+                                } elseif (!empty($testimonialData->images)) {
+                                    $imagePath = asset(
+                                        'storage/uploads/frontend/l3_template/testimonials/' . $testimonialData->images,
+                                    );
+                                }
+
+                            @endphp
+
+                            <!-- If an image exists, show preview and delete button -->
+                            @if ($imagePath)
+                                <div class="item" id="imgpreview" style="text-align: center;">
+                                    <img src="{{ $imagePath }}" id="preview-img" class="effect8"
+                                        style="max-width: 50%; height: auto;" alt="Preview Image">
+                                    <button type="button" id="deleteImage" class="delete-btn">Delete</button>
+                                      <!-- Hidden Input to Store Existing Image Path -->
+                                 
+                                </div>
+                                <!-- Upload file input (Always displayed) -->
+                                <div id="upload-file" class="item up-load">
+                                    <label class="uploadfile" for="myFile">
+                                        <span class="icon"><i class="icon-upload-cloud"></i></span>
+                                        <span class="body-text">Drop your images here or select
+                                            <span class="tf-color">click to browse</span>
+                                        </span>
+                                        <input type="file" id="myFile" name="image" accept="image/*">
+                                    </label>
+                                </div>
+                            @endif
+
+                             @if (!$imagePath)
+                                <fieldset>
+                                    <div class="upload-image flex-grow">
+                                        <!-- Image preview container -->
+                                        <div class="item" id="imgpreview" style="display:none; text-align: center;">
+                                            <img src="" class="effect8" alt="Preview Image"
+                                                style="max-width: 50%; height: auto; border-radius: 5px;">
+                                            <button type="button" id="deleteImage" class="delete-btn">Delete</button>
+                                        </div>
+                                        <div id="upload-file" class="item up-load blog_image">
+                                            <label class="uploadfile" for="myFile">
+                                                <span class="icon"><i class="icon-upload-cloud"></i></span>
+                                                <span class="body-text">Drop your images here or select <span
+                                                        class="tf-color">click to
+                                                        browse</span></span>
+                                                <input type="file" id="myFile" name="image" accept="image/*">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            @endif
+
                         </div>
                     </fieldset>
 
-                    {{-- <fieldset>
-                        <div class="body-title">Upload Image <span class="tf-color-1">*</span></div>
-                        <div class="upload-image flex-grow">
 
-                            <!-- Image preview container -->
-                            <div class="item" id="imgpreview" style="text-align: center;">
-                                @if ($l3Content->images)
-                                    <img src="{{ asset('uploads/frontend/l3_template/' . $l3Content->images) }}"
-                                        id="preview-img" class="effect8" alt="Preview Image"
-                                        style="max-width: 50%; height: auto;">
-                                    <!-- Adjusted image width -->
-                                    <button type="button" id="deleteImage" class="delete-btn">Delete</button>
-                                @else
-                                    <img src="" id="preview-img" class="effect8"
-                                        style="display:none; max-width: 50%; height: auto;">
-                                @endif
-                            </div>
-
-                            <div id="upload-file" class="item up-load">
-                                <label class="uploadfile" for="myFile">
-                                    <span class="icon"><i class="icon-upload-cloud"></i></span>
-                                    <span class="body-text">Drop your images here or select <span class="tf-color">click to
-                                            browse</span></span>
-                                    <input type="file" id="myFile" name="image" accept="image/*">
-                                </label>
-                            </div>
-                        </div>
-                    </fieldset> --}}
                     {{-- comman Image for required form End --}}
-
-
                     <input type="hidden" id="l3_category_type" name="l3_category_type" value="">
 
                     <div class="bot">
@@ -477,7 +580,6 @@
 @endsection
 @push('scripts')
     <script>
-     
         $(document).ready(function() {
             function toggleForms() {
                 var selectedL3Category = $("#l3_category option:selected").text().trim().toLowerCase();
@@ -516,7 +618,9 @@
 
                     if (selectedL3Category === "overview") {
                         $('#overview_form').show();
+                        $('.blog_image').hide();
                         $('.overview_title').show(); // Ensure the title is shown
+                        $('#overview_sub_desc').show();
                         $('#l3_category_type').val(selectedL3Category);
                     } else if (selectedL3Category === "significance") {
                         $('#significance_form').show();
@@ -529,6 +633,7 @@
                         $('#program_form').show();
                         $('.program_subcategory').show();
                         $('.program_title').show();
+                        $('.program_sub_title').show();
                         $('.program_description').show();
                         $('.comman_images').show();
                         $('#l3_category_type').val('program'); // Set hidden input to 'cehkit'
@@ -558,13 +663,37 @@
                         $('.sub_category').show();
                         $('.faqs_heading').show();
                         $('.faqs_title').show();
+                        $('.blog_image').hide();
                         $('.faqs_desc').show();
                         $('#l3_category_type').val('faqs'); // Set hidden input to 'faqs
                     } else if (selectedL3Category === "blog") {
-                        $('#blog_form').show(); 
+                        $('#blog_form').show();
                         $('.blog_title').show();
+                        $('.blog_image').hide();
                         $('#style_form').show();
                         $('#l3_category_type').val('blog'); // Set hidden input to 'blog'
+                    } else if (selectedL3Category === "cehkit") {
+                        $('.cehkit_form').show();
+                        $('.kit_title').show();
+                        $('.ceh_description').show();
+                        $('.comman_images').show();
+                        $('#l3_category_type').val('cehkit'); // Set hidden input to 'cehkit'
+                    } else if (selectedL3Category === "incidents") {
+                        $('#incident_form').show();
+                        $('.Video_link').show();
+                        $('.incident_description').show();
+                        $('.comman_images').show();
+                        $('#l3_category_type').val('incidents'); // Set hidden input to 'incidents'
+
+                    } else if (selectedL3Category === "testimonials") {
+                        $('#testimonial_form').show();
+                        // $('.testimonials_title').show(); 
+                        $('.testimonial_name').show();
+                        $('.testimonial_designation').show();
+                        $('.testimonial_description').show();
+                        $('.testimonials_short_description').show();
+                        $('.comman_images').show();
+                        $('#l3_category_type').val('testimonials'); // Set hidden input to 'testimonials'
                     }
                 }
             }
@@ -621,6 +750,55 @@
                     sub_category_Id: $(this).val()
                 }, '#l3_category', 'Select L3 category');
             });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            // Convert Laravel array into JavaScript array
+            let existingData = @json($l3overview_desc ?? []);
+
+            function generateSubDescriptions(count) {
+                let container = $('#dynamic_overview_sections');
+                container.empty(); // Clear previous content
+
+                // Iterate through the number of descriptions needed
+                for (let i = 0; i < count; i++) {
+                    let content = existingData[i]?.sub_description ??
+                        ''; // Fetch specific overview_sub_descriptions
+
+                    let subForm = `
+                        <div class="overview-sub-section">
+                            <div class="body-title">Overview Sub Description ${i + 1} :<span class="tf-color-1">*</span></div>
+                            <textarea id="overview_sub_description_${i + 1}" class="mr-5 summernote" name="overview_sub_descriptions[]">${content}</textarea>
+                        </div>
+                    `;
+
+                    container.append(subForm);
+                }
+
+                // Re-initialize Summernote for new textareas
+                $('.summernote').summernote({
+                    height: 150,
+                    toolbar: [
+                        ['style', ['bold', 'italic', 'underline', 'clear']],
+                        ['para', ['ul', 'ol', 'paragraph']],
+                        ['insert', ['link', 'picture', 'video']]
+                    ]
+                });
+            }
+
+            // Generate fields when dropdown value changes
+            $('#overview_count').change(function() {
+                let count = parseInt($(this).val()) || 0;
+                generateSubDescriptions(count);
+            });
+
+            // Auto-generate fields on page load if a value is preselected
+            let initialCount = parseInt($('#overview_count').val()) || existingData.length;
+            if (initialCount > 0) {
+                generateSubDescriptions(initialCount);
+            }
         });
     </script>
 @endpush

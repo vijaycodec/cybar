@@ -49,21 +49,14 @@
                             <ul id="menu-footer-menu" class="menu col-xs-12 col-sm-6 col-md-3">
                                 <li class="menu-item mb-footer-menu" id="mobile-footer-menu3">More</li>
                                 <!--  -->
-<<<<<<< HEAD
+
                                  <div class="mobile-footer-content" id="mobile-footer-content3">
                                 <li class="menu-item"><a href="#">About Company</a></li>
                                 <li class="menu-item"><a href="{{ route('careers') }}">Careers</a></li>
                                 <li class="menu-item"><a href="{{ route('blogs') }}">Blogs</a></li>
                                 <li class="menu-item"><a href="{{ route('testimonials') }}">Testimonioals</a></li>
                                 <li class="menu-item"><a href="{{ route('resources') }}">Resources</a></li>
-=======
-                                <div class="mobile-footer-content" id="mobile-footer-content3">
-                                    <li class="menu-item"><a href="#">About Company</a></li>
-                                    <li class="menu-item"><a href="{{ route('careers') }}">Careers</a></li>
-                                    <li class="menu-item"><a href="{{ route('blogs') }}">Blogs</a></li>
-                                    <li class="menu-item"><a href="{{ route('testimonials') }}">Testimonioals</a></li>
-                                    <li class="menu-item"><a href="{{ route('resources') }}">Resources</a></li>
->>>>>>> e01e41539c97bb8c1cfafffa91123de6b4576a00
+
                                 </div>
                                 <!--  -->
                             </ul>
@@ -71,19 +64,13 @@
                                 <li class="menu-item mb-footer-menu" id="mobile-footer-menu4">Other</li>
                                 <!--  -->
                                 <div class="mobile-footer-content" id="mobile-footer-content4">
-<<<<<<< HEAD
+
                                 <li class="menu-item"><a href="#">Registration Steps</a></li>
                                 <li class="menu-item"><a href="#">FAQ’s </a></li>
                                 <li class="menu-item"><a href="#">Refund Policy</a></li>
                                 <li class="menu-item"><a href="#">Reschedule Policy</a></li>
                                  </div>
-=======
-                                    <li class="menu-item"><a href="#">Registration Steps</a></li>
-                                    <li class="menu-item"><a href="#">FAQ’s </a></li>
-                                    <li class="menu-item"><a href="#">Refund Policy</a></li>
-                                    <li class="menu-item"><a href="#">Reschedule Policy</a></li>
-                                </div>
->>>>>>> e01e41539c97bb8c1cfafffa91123de6b4576a00
+
                                 <!--  -->
                             </ul>
                         </div>
