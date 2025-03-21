@@ -462,11 +462,15 @@ $(document).ready(function(){
     var stickyNavTop = $('.sticky_nav_container').position().top;
     //Add or remove sticky-nav depending on where the sticky-nav is
     var stickyNav = function() {
-    //Current distance from the top
-    var scrollTop = $(window).scrollTop();
+    // Get the height of the header
+    var headerHeight = $('header').outerHeight();
+    // Get the height of the sticky-control menu
+    var stickyControlHeight = $('#sticky-control').outerHeight();
+    // Current distance from the top including header height
+    var scrollTop = $(window).scrollTop() + headerHeight;
     if (scrollTop >= stickyNavTop) {
     $('.sticky_nav_container').addClass('sticky');
-    var scrollDistance = $(window).scrollTop() + 100;
+    var scrollDistance = $(window).scrollTop() + headerHeight + stickyControlHeight + 100;
     // Show/hide menu on scroll
     // if (scrollDistance >= 500) {
     //     $('.sticky_nav_container').fadeIn("fast");
@@ -505,7 +509,7 @@ $(document).ready(function(){
     //move the current position of the page to the target, minus 50px
     fixHeight();
     $('html,body').animate({
-    scrollTop: target.offset().top - $('.sticky_nav_container').height() + 50
+    scrollTop: target.offset().top - $('.sticky_nav_container').height() - $('#sticky-control').outerHeight() + 50
     }, 1000, fixHeight());
     }
     //however if the sticky-nav is not currently sticky
@@ -513,7 +517,7 @@ $(document).ready(function(){
     //move the current position of the page to the position of the target, minus the height of the sticky nav minus 40px
     fixHeight();
     $('html,body').animate({
-    scrollTop: target.offset().top - $('.sticky_nav_container').height() + 50
+    scrollTop: target.offset().top - $('.sticky_nav_container').height() - $('#sticky-control').outerHeight() + 50
     }, 1000);
     }
     return false;

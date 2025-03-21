@@ -39,11 +39,11 @@
                         </ul>
                         <!-- control arrows -->
                         <!-- <div class="prev">
-                             <i class='fa fa-caret-left'></i>
-                             </div>
-                             <div class="next">
-                             <i class='fa fa-caret-right'></i>
-                             </div> -->
+                                     <i class='fa fa-caret-left'></i>
+                                     </div>
+                                     <div class="next">
+                                     <i class='fa fa-caret-right'></i>
+                                     </div> -->
                         <!--  -->
                     </div>
                 </div>
@@ -66,23 +66,25 @@
                                             data-index="{{ $index }}">
                                             @foreach ($category->blogs as $blog)
                                                 <div class="item">
-                                                    <div class="template15-wrap-main">
-                                                        <div class="template15-wrap-main-img">
-                                                            <img
-                                                                src="{{ asset('uploads/backend/blog/' . $blog->images) }}" />
+                                                    <a href="{{ route('blog-view', $blog->id) }}">
+                                                        <div class="template15-wrap-main">
+                                                            <div class="template15-wrap-main-img">
+                                                                <img src="{{ asset('uploads/backend/blog/' . $blog->images) }}" />
+                                                            </div>
+                                                            <div class="template15-wrap-main-content">
+                                                                <span><i>{{ $blog->created_at->format('d M Y') }}</i></span>
+                                                                <h4><a
+                                                                        href="{{ route('blog-view', $blog->id) }}">{{ $blog->sub_category }}</a>
+                                                                </h4>
+                                                                <p>
+                                                                    {{ $blog->short_desc }}
+                                                                    <a href="{{ route('blog-view', $blog->id) }}">
+                                                                        Read More[...]
+                                                                    </a>
+                                                                </p>
+                                                            </div>
                                                         </div>
-                                                        <div class="template15-wrap-main-content">
-                                                            <span><i>{{ $blog->created_at->format('d M Y') }}</i></span>
-                                                            <h4><a
-                                                                    href="{{ route('blog-view', $blog->id) }}">{{ $blog->sub_category }}</a>
-                                                            </h4>
-                                                            <p>
-                                                                {{ $blog->short_desc }}
-                                                                <a href="{{ route('blog-view', $blog->id) }}"> Read
-                                                                    More[...]</a>
-                                                            </p>
-                                                        </div>
-                                                    </div>
+                                                    </a>
                                                 </div>
                                             @endforeach
                                         </div>
@@ -108,31 +110,33 @@
 
 @push('scripts')
     <!-- Jquery code -->
-    {{-- <script src="assets/js/slider.js"></script>
+    {{--
+    <script src="assets/js/slider.js"></script>
     <script type="text/javascript" src="assets/js/common.js"></script>
     <script type="text/javascript" src="assets/js/mobile-menu.js"></script> --}}
     <script type="text/javascript">
         //
-        $('.menu-left-right ul li a').on('click', function(e) {
+        $('.menu-left-right ul li a').on('click', function (e) {
             var target = this.hash,
                 $target = $(target);
 
             $('html, body').stop().animate({
                 'scrollTop': $target.offset().top - 100
-            }, 100, 'swing', function() {
+            }, 100, 'swing', function () {
                 window.location.hash = target;
             });
         });
-        $(document).ready(function() {
-            $('.menu-left-right ul li a').click(function() {
+        $(document).ready(function () {
+            $('.menu-left-right ul li a').click(function () {
                 $('li a').removeClass("active");
                 $(this).addClass("active");
             });
         });
     </script>
 
-    {{-- <script type="text/javascript">
-        $(document).ready(function() {
+    {{--
+    <script type="text/javascript">
+        $(document).ready(function () {
             function initializeCarousel(carouselClass, navigationCountId) {
                 $(carouselClass).owlCarousel({
                     loop: true,
@@ -154,10 +158,10 @@
                             items: 3
                         }
                     },
-                    onInitialized: function(event) {
+                    onInitialized: function (event) {
                         updateNavigationCount(event, navigationCountId);
                     },
-                    onChanged: function(event) {
+                    onChanged: function (event) {
                         updateNavigationCount(event, navigationCountId);
                     }
                 });
@@ -184,7 +188,7 @@
     </script> --}}
 
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             function initializeCarousel(carouselId, navigationCountId) {
                 let $carousel = $("#" + carouselId);
                 let totalSlides = $carousel.find(".item").length; // Count slides
@@ -216,10 +220,10 @@
                             items: 3
                         }
                     },
-                    onInitialized: function(event) {
+                    onInitialized: function (event) {
                         updateNavigationCount(event, navigationCountId);
                     },
-                    onChanged: function(event) {
+                    onChanged: function (event) {
                         updateNavigationCount(event, navigationCountId);
                     }
                 });
@@ -233,7 +237,7 @@
                 $("#" + navigationCountId).text(currentSlide + " / " + totalSlides);
             }
 
-            $(".carousel-wrap").each(function() {
+            $(".carousel-wrap").each(function () {
                 let carousel = $(this).find(".owl-carousel");
                 let index = carousel.data("index");
                 let counterId = "navigation-count-" + index;
@@ -271,12 +275,12 @@
 
     @include('frontend.layouts.right-menu-js')
     <script type="text/javascript">
-        $(document).ready(function() {
+        $(document).ready(function () {
             "use strict";
             var offSetTop = 100;
             var $scrollToTopButton = $('.scrollToTop');
             //Check to see if the window is top if not then display button
-            $(window).scroll(function() {
+            $(window).scroll(function () {
                 if ($(this).scrollTop() > offSetTop) {
                     $scrollToTopButton.fadeIn();
                 } else {
@@ -286,14 +290,14 @@
         });
     </script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             var sections = $('.resc-sec'); // Sections to track
             var navLinks = $('.menu-left-right ul li a'); // Navbar links
 
-            $(window).on('scroll', function() {
+            $(window).on('scroll', function () {
                 var scrollPos = $(window).scrollTop();
 
-                sections.each(function() {
+                sections.each(function () {
                     var top = $(this).offset().top - 150; // Adjust offset for better visibility
                     var bottom = top + $(this).outerHeight();
                     var id = $(this).attr('id');
