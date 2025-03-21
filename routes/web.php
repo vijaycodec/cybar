@@ -34,10 +34,13 @@ use App\Http\Controllers\backend\EnquiryController;
 use App\Http\Controllers\backend\jobCarrerController;
 use App\Http\Controllers\backend\SearchController;
 use App\Http\Controllers\backend\seoController;
+use App\Http\Controllers\frontend\BrochurePdfController;
 use App\Http\Controllers\frontend\careerViewController;
 use App\Http\Controllers\frontend\templateController;
 use App\Http\Controllers\frontend\NewsLetteViewsController;
 use App\Http\Controllers\frontend\PodcastController;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -80,6 +83,9 @@ Route::middleware(['FrameGuard'])->group(function () {
 
     Route::get('/news-letter', [NewsLetteViewsController ::class, 'newLetterView'])->name('newLetter.View');
     Route::get('/podcast', [PodcastController ::class, 'podcast'])->name('podcast.View');
+
+    Route::get('/download-brochure/{file}', [BrochurePdfController::class, 'download'])
+    ->name('download.brochure');
 
 });
 

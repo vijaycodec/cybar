@@ -690,7 +690,16 @@
                                                             <div class="brochure-box">
                                                                 {!! $contentInfo->program_description !!}
 
-                                                           <a href="#" onclick="alert('Brochure not available')">Download Brochure</a>
+                                                               @if (!empty($contentInfo->brochure_pdf))
+                                                                    <a href="{{ route('download.brochure', ['file' => $contentInfo->brochure_pdf]) }}"
+                                                                        class="btn btn-primary">
+                                                                        Download Brochure
+                                                                    </a>
+                                                                @else
+                                                                    <a href="#"
+                                                                        onclick="alert('Brochure not available')">Download
+                                                                        Brochure</a>
+                                                                @endif  
                                                             </div>
                                                             <!--  -->
                                                         </div>

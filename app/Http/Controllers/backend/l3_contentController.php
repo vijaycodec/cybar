@@ -217,24 +217,27 @@ class l3_contentController extends Controller
                     'error' => 'L3Content not found or already deleted.'
                 ], 404);
             }
-
+            
             // Delete associated images if they exist
             if ($l3ContentInfo->images) {
                 $this->deleteImage($l3ContentInfo->images, 'significance');
             }
-
-            // Delete associated records (example: program_subcategories, faqs, etc.)
-            // ProgramSubCategory::where('l3_content_info_id', $id)->delete();
-            // FaqSubCategory::where('l3_content_info_id', $id)->delete();
-            // 
-
-            // L3OverviewSubDescription::where('l3_content_info_id', $id)->delete();
+          
             if (isset($l3ContentInfo) && !empty($l3ContentInfo->overview_title)) {
                 L3OverviewSubDescription::where('l3_content_info_id', $id)->delete();
-            } elseif (!empty($l3Content->program_category_id) && !empty($l3Content->program_category_id)) {
+            }
+            if (!empty($l3ContentInfo->program_category_id)) {
                 ProgramSubCategory::where('l3_content_info_id', $id)->delete();
-            } elseif (!empty($testimonialData->l3_content_info_id) && !empty($testimonialData->l3_content_info_id)) {
+            }
+
+            $testimonialRecords = TestimonialDetails::where('l3_content_info_id', $id)->get();
+            if ($testimonialRecords->isNotEmpty()) {
                 TestimonialDetails::where('l3_content_info_id', $id)->delete();
+            }
+
+            $faqRecords = FaqSubCategory::where('l3_content_info_id', $id)->get();
+            if ($faqRecords->isNotEmpty()) {
+                FaqSubCategory::where('l3_content_info_id', $id)->delete();
             }
 
             // Finally, delete the main L3Content record
