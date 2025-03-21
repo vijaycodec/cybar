@@ -5887,7 +5887,8 @@
         if (!isMobile()) {
             function scrollToFirstElement(className, offset = 100) {
                 document.querySelectorAll(`.${className}`).forEach(element => {
-                    element.addEventListener("click", function () {
+                    element.addEventListener("click", function (e) {
+                        e.preventDefault();
                         setTimeout(() => {
                             const firstElement = document.querySelector(`.${className}`);
                             if (firstElement) {
@@ -5899,14 +5900,15 @@
                         }, 0); // Ensures content loads before scrolling
                     });
                 });
-            }
+            } 
+            scrollToFirstElement("scr-tabs", 80);
+            scrollToFirstElement("scr-tabs1", 80);
+            scrollToFirstElement("scr-tabs3", 80);
+            scrollToFirstElement("industry-slider", 70);
         }
 
         // Example usage:
-        scrollToFirstElement("scr-tabs", 180);
-        scrollToFirstElement("scr-tabs1", 180);
-        scrollToFirstElement("scr-tabs3", 200);
-        scrollToFirstElement("industry-slider", 150);
+
     </script>
     @include('frontend.layouts.right-menu-js')
 @endpush
