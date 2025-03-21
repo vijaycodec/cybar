@@ -39,4 +39,9 @@ class CourseCategory extends Model
     {
         return $this->hasMany(Seo::class, 'category_id');
     }
+
+    public function l3Contents()
+    {
+        return $this->hasMany(L3ContentInfo::class, 'category_id');
+    }
 }
