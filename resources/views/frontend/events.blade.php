@@ -50,7 +50,7 @@
                                         @foreach ($category->events as $event)
                                         <div class="item">
                                             <div class="event-box">
-                                                <img src="{{ asset('uploads/backend/events/' . $event->images) }}" class="img-fluid" alt="t1">
+                                                <img src="{{ asset('storage/uploads/backend/event/' . $event->images) }}" class="img-fluid" alt="t1">
                                             </div>
                                         </div>
                                         @endforeach

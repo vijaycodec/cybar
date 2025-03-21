@@ -71,7 +71,7 @@
                                                             <div class="card_img">
                                                                 <div class="cn-hover-box">
                                                                     <div class="cn-hover-img"> 
-                                                                        <img src="{{ asset('uploads/backend/resources/' . $resource->images) }}" 
+                                                                        <img src="{{ asset('storage/uploads/backend/resources/' . $resource->images) }}" 
                                                                              class="img-fluid" alt="{{ $resource->title }}">
                                                                     </div>
                                                                     <div class="cn-content">
