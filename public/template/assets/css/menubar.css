@@ -1,0 +1,146 @@
+.navbar{
+	border:0px
+}
+
+.navbar-default {
+	background-color: #e6ecef;
+	margin-bottom: 0px;
+	top: -10px;
+}	
+.navbarnew {
+	height: 40px;
+	/*width: 149px;*/
+}
+
+/*@media only screen and (max-width: 600px) {*/
+    
+/*    .navbarnew {*/
+/*height: 61px;*/
+	/*width: 149px;*/
+/*}*/
+
+    
+/*}*/
+
+
+.navbar-right {
+	padding: 0px 100px 0px 0px;
+	/* margin-left: 0px; */
+}
+.fa-th{	
+	font-size: 16px;
+	padding-right: 10px;
+
+}
+#data_search {
+	width: 42%;
+	max-height: 234px;
+	overflow-y: scroll;
+	position: absolute;
+	z-index: 1;
+	background-color: #fcfcfc;
+}
+
+#data_search a{ color:#333;
+font-size:13px;
+}
+#data_search p {
+	margin: 0px 0px 0px 0px;
+	border-bottom: 1px solid #8f8f91;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	/* font-size: 10px; */
+}
+.w3l_search {
+	float: right;
+	width: 37.33%;
+	margin: 0px 0px -15px 0px;
+}
+
+.w3l_search input[type="search"] {
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	color: #7d7b7b;
+	outline: none;
+	border: 1px solid #cccccc;
+	background: none;
+	-webkit-appearance: none;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	
+}
+button.btn.btn-default.search {
+	background: #15416e;
+	padding: 12px 15px 15px;
+	/* float: right; */
+	outline: none;
+	border: none;
+	position: absolute;
+	/*margin-left: -46px;*/
+	border-radius: 0px;
+}
+
+.btn:hover:not(.btn-link):not(.btn-flat):not(.btn-fab) {
+	box-shadow: 0 0px 0px 0 rgba(0,0,0,.12),0 0px 0px 0 rgba(0,0,0,.12) !important;
+}
+button.btn.btn-default.search:hover {
+
+}
+.w3l_search i.fa.fa-search {
+	font-size: 17px;
+	color: #fff;
+}
+
+
+
+
+
+
+.searchnav {
+	width: 350px;
+	height: 40px;
+	/* border: 0px; */
+	color: #000;
+	padding-left: 35px;
+	border: 1px solid #d5d3d3;
+	border-radius: 5px;
+}
+button.btn.btn-default.search {
+	padding: 1px 10px 7px;
+	float: left;
+	outline: none;
+	border: none;
+	position: relative;
+	margin-right: -35px;
+	border-radius: 0px;
+	top: 10px;
+	background-color: transparent;
+}
+
+	btn:hover:not(.btn-link):not(.btn-flat):not(.btn-fab) {
+	box-shadow: 0px !important;
+
+}
+
+.contactnavbar  {
+	height: 40px !important;
+	padding: 10px 15px !important;
+	color: #000 !important;
+	border: 1px solid #15416e !important;
+	border-radius:5px;
+	padding-top: 17px;
+}
+
+.contactnavbar:hover {
+	color:#fff !important;
+	background-color: #15416e !important;
+
+}
+
+.navbar-nav > li {
+	float: left;
+ margin-bottom: -8px;
+	margin-top: 5px;
+}

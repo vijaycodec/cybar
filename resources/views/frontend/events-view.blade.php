@@ -37,7 +37,7 @@
                     <div class="col-md-3">
                         <div class="event-box">
                             <div data-videourl="{{ $event->video_url }}" class="ceh-video button">
-                                <img src="{{ asset('uploads/backend/events/' . $event->images) }}">
+                                <img src="{{ asset('storage/uploads/backend/event/' . $event->images) }}">
                             </div>
                         </div>
                     </div>

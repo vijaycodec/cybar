@@ -1,47 +1,48 @@
 @extends('backend.layouts.app')
 
 @section('content')
-<style>
-    .color-picker-container {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
+    <style>
+        .color-picker-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
 
-    .color-options {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 10px;
-    }
+        .color-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
 
-    .color-btn {
-        width: 40px;
-        height: 40px;
-        border: 2px solid #ddd;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: transform 0.2s ease-in-out;
-    }
+        .color-btn {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #ddd;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
 
-    .color-btn:hover, .color-btn.selected {
-        transform: scale(1.2);
-        border: 2px solid black;
-    }
+        .color-btn:hover,
+        .color-btn.selected {
+            transform: scale(1.2);
+            border: 2px solid black;
+        }
 
-    .color-picker-label {
-        font-size: 16px;
-        font-weight: bold;
-        margin-bottom: 5px;
-    }
+        .color-picker-label {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
 
-    .color-picker-input {
-        width: 100px;
-        height: 40px;
-        border: 1px solid #ccc;
-        cursor: pointer;
-    }
-</style>
+        .color-picker-input {
+            width: 100px;
+            height: 40px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+    </style>
     <div class="main-content-inner">
         <div class="main-content-wrap">
             <div class="flex items-center flex-wrap justify-between gap20 mb-27">
@@ -104,19 +105,19 @@
                             <option value="" disabled selected>Select L3 Category</option>
                         </select>
                     </fieldset>
-                    
+
                     <hr id="hr" style="border: 0; height: 4px; background-color: #f40a0a; ">
                     <!-- Forms based on L3 Category selection -->
 
                     <h5 class="form-heading"style="align-items:center">Add L3 Content Data </h5>
                     <!-- Overview Form start-->
-                   
+
                     <div class="l3-form form-group overview_title">
                         <div class="body-title">Overview Title(H) :<span class="tf-color-1">*</span></div>
                         <input type="text" class="" name="overview_title">{{ old('overview_title') }}</input>
                     </div>
                     <div class="form-group l3-form overview_form " id="overview_form">
-                         
+
                         <div class="body-title">Overview Description :<span class="tf-color-1">*</span></div>
                         <textarea class="summernote" name="overview_description">{{ old('overview_description') }}</textarea>
                     </div>
@@ -129,12 +130,12 @@
                                 <option value="{{ $i }}">{{ $i }}</option>
                             @endfor
                         </select>
-                   </div>
+                    </div>
 
-                  
-                   <div class="form-group" id="dynamic_overview_sections"></div>
- 
-                  
+
+                    <div class="form-group" id="dynamic_overview_sections"></div>
+
+
                     <!-- Overview Form ends-->
 
                     <!-- Significance Form Start -->
@@ -157,7 +158,7 @@
                         <div class="body-title">Significance Description :<span class="tf-color-1">*</span></div>
                         <textarea class="summernote" name="significance_description">{{ old('significance_description') }}</textarea>
                     </div>
-                   
+
 
                     <div class="l3-form form-group significance_title">
                         <div class="body-title">Significance Title :<span class="tf-color-1">*</span></div>
@@ -167,7 +168,7 @@
                     <!-- Significance Form ends-->
 
                     <!-- course Feature Form Start -->
-                    <div  class="l3-form" id="courseFeature_form" style="display: none;">
+                    <div class="l3-form" id="courseFeature_form" style="display: none;">
 
                         <div class="body-title">Select Course Feature Type <span class="tf-color-1">*</span></div>
                         <select class="flex-grow" name="coursefeature_type">
@@ -185,17 +186,17 @@
                     </div>
 
                     <div class="l3-form form-group course_feature_short_description">
-                        
+
                         <div class="body-title">Course Feature Short Description :<span class="tf-color-1">*</span></div>
                         <textarea class="summernote" name="course_feature_short_description">{{ old('course_feature_short_description') }}</textarea>
                     </div>
                     <div class="l3-form form-group coursefeature_desc">
-                        
+
                         <div class="body-title">Course Feature Description :<span class="tf-color-1">*</span></div>
                         <textarea class="summernote" name="course_feature_description">{{ old('course_feature_description') }}</textarea>
                     </div>
 
-                   
+
                     <!-- Course Feature Form end -->
 
                     <!-- cyberwind Form Start -->
@@ -223,7 +224,7 @@
                         <div class="body-title">Cyberwind Description :<span class="tf-color-1">*</span></div>
                         <textarea class="summernote" name="cyberwind_description">{{ old('cyberwind_description') }}</textarea>
                     </div>
-                   
+
 
                     <!-- Cyberwind Form end -->
 
@@ -249,7 +250,7 @@
                         <label><strong></strong></label>
                         <textarea class="" name="industries_description">{{ old('industries_description') }}</textarea>
                     </div>
-                   
+
                     <!-- industries Form End -->
 
                     <!-- FAQ'S Form Start -->
@@ -265,21 +266,22 @@
                     <div class="l3-form form-group sub_category">
                         <div class="body-title">Faqs Title :<span class="tf-color-1">*</span></div>
                         <textarea class="summernote" name="faq_title">{{ old('title') }}</textarea>
-                     </div>
+                        
+                    </div>
                     <div class="name l3-form sub_category" id="">
                         <div class="body-title">Sub Category Name <span class="tf-color-1">*</span></div>
-                        <input class="flex-grow" type="text" placeholder="Sub Category Name" name="subcategory" tabindex="0"
-                            value="{{ old('subcategory') }}">
-                            
+                        <input class="flex-grow" type="text" placeholder="Sub Category Name" name="subcategory"
+                            tabindex="0" value="{{ old('subcategory') }}">
+
                     </div>
                     <div class="l3-form form-group faqs_desc">
                         <div class="body-title">SubCategory Description : <span class="tf-color-1">*</span></div>
                         <textarea class="" name="subcategory_description">{{ old('subcategory_description') }}</textarea>
                     </div>
-                     <!-- FAQ'S Form End -->
+                    <!-- FAQ'S Form End -->
 
-                     {{-- Blog Form Start --}}
-                     
+                    {{-- Blog Form Start --}}
+
                     <div class="l3-form" id="blog_form" style="display: none;">
                         <div class="body-title">Select Blog Type <span class="tf-color-1">*</span></div>
                         <select class="flex-grow" name="blog_category_type">
@@ -297,102 +299,106 @@
                     </div>
                     <div class="l3-form form-group blog_title">
                         <div class="body-title">Blog Title : <span class="tf-color-1">*</span></div>
-                        <input type="text"  name="blog_description" {{ old('blog_description') }}></input>
+                        <input type="text" name="blog_description" {{ old('blog_description') }}></input>
                     </div>
-                      {{-- Blog Form End --}}
-                    
-                    {{-- testimonials form start --}}
-                         <div class="name l3-form" id="testimonial_form" style="display: none;">
-                            
-                                <div class="body-title">Testimonial Title : </div>
-                                <input type="text" name="testimonials_title" {{ old('testimonial_title') }}></input>
-                         </div>
-                            <div class="l3-form form-group testimonial_name">
-                                <div class="body-title">Client Name : <span class="tf-color-1">*</span></div>
-                                <input type="text" name="testimonials_name" value="{{ old('testimonial_name') }}"></input>
-                            </div>
-                            <div class="l3-form testimonial_designation">
-                                <div class="body-title">Client Designation: <span class="tf-color-1">*</span></div>
-                                <input type="text" name="designation" value="{{ old('designation') }}"></input>
-                            </div>
-                            <div class="l3-form  testimonials_short_description">
-                                <div class="body-title">Testimonial Short Description :<span class="tf-color-1">*</span></div>
-                                <textarea class="" name="testimonials_short_description">{{ old('testimonials_short_description') }}</textarea>
-                            </div>
-                            <div class="l3-form  testimonial_description">
-                                <div class="body-title">Testimonial Description :<span class="tf-color-1">*</span></div>
-                                <textarea class="" name="testimonials_description">{{ old('testimonial_description') }}</textarea>
-                            </div>
-                        
-                     <!-- Testimonials form ends -->
+                    {{-- Blog Form End --}}
 
-                     {{-- Incident form start --}}
-                     <div class="name l3-form" id="incident_form" style="display: none;">
-                            
+                    {{-- testimonials form start --}}
+                    <div class="name l3-form" id="testimonial_form" style="display: none;">
+
+                        <div class="body-title">Testimonial Title : </div>
+                        <input type="text" name="testimonials_title" {{ old('testimonial_title') }}></input>
+                    </div>
+                    <div class="l3-form form-group testimonial_name">
+                        <div class="body-title">Client Name : <span class="tf-color-1">*</span></div>
+                        <input type="text" name="testimonials_name" value="{{ old('testimonial_name') }}"></input>
+                    </div>
+                    <div class="l3-form testimonial_designation">
+                        <div class="body-title">Client Designation: <span class="tf-color-1">*</span></div>
+                        <input type="text" name="designation" value="{{ old('designation') }}"></input>
+                    </div>
+                    <div class="l3-form  testimonials_short_description">
+                        <div class="body-title">Testimonial Short Description :<span class="tf-color-1">*</span></div>
+                        <textarea class="" name="testimonials_short_description">{{ old('testimonials_short_description') }}</textarea>
+                    </div>
+                    <div class="l3-form  testimonial_description">
+                        <div class="body-title">Testimonial Description :<span class="tf-color-1">*</span></div>
+                        <textarea class="" name="testimonials_description">{{ old('testimonial_description') }}</textarea>
+                    </div>
+
+                    <!-- Testimonials form ends -->
+
+                    {{-- Incident form start --}}
+                    <div class="name l3-form" id="incident_form" style="display: none;">
+
                         <div class="body-title">Incident Title :<span class="tf-color-1">*</span></div>
                         <textarea class="summernote" name="incident_title">{{ old('incident_title') }}</textarea>
-                     </div>
+                    </div>
                     <div class="l3-form form-group Video_link">
                         <div class="body-title">Video Link : <span class="tf-color-1">*</span></div>
                         <input type="text" name="Video_link" value="{{ old('Video_link') }}"> </input>
                     </div>
-                   
+
                     <div class="l3-form  incident_description">
                         <div class="body-title">Incident Description :<span class="tf-color-1">*</span></div>
                         <textarea class="summernote" name="incident_description">{{ old('incident_description') }}</textarea>
                     </div>
-                   
-                
-             <!-- Incident form ends -->
 
 
-             {{-- CEH kit form start --}}
-             <div class="l3-form form-group cehkit_form" id="cehkit_form">
-                <div class="body-title">CEH KIT Title (Top) : <span class="tf-color-1"></span></div>
-                <textarea class="summernote" name="main_title">{{ old('main_title') }}</textarea>
-            </div>
-            <div class="form-group l3-form  kit_title" >
-                <div class="body-title">Sub Title :<span class="tf-color-1">*</span></div>
-                <input type="text" name="kit_title" id="">{{ old('kit_title') }}</input>
-            </div>
-            <div class="l3-form  ceh_description">
-            <div class="body-title">CEH KIT  Description :<span class="tf-color-1">*</span></div>
-            <textarea class="summernote" name="ceh_description">{{ old('ceh_description') }}</textarea>
-            </div>
-       
+                    <!-- Incident form ends -->
 
-             {{-- CEH kit form End --}}
 
-               <!-- Program Form Start -->
-               <div class="l3-form" id="program_form" style="display: none;">
-                <div class="body-title">Select Program Category <span class="tf-color-1">*</span></div>
-                <select class="flex-grow" style="" name="program_category_id">
-                    <option value="" disabled selected>Select Program Category</option>
-                    @foreach ($programCategories as $category)
-                        <option value="{{ $category->id }}">{{ $category->name }}</option>
-                    @endforeach
-                </select>
-            </div>
-            <div class="l3-form form-group program_title">
-                <div class="body-title">Program Top Title(H) :<span class="tf-color-1">*</span></div>
-                <input type="text" class="" name="program_title">{{ old('program_title') }}</input>
-            </div>
-            <div class="name l3-form program_subcategory" id="">
-                <div class="body-title">Program Sub-Category Name </div>
-                <input class="flex-grow" type="text" placeholder="Sub Category Name" name="program_subcategory" tabindex="0"
-                    value="{{ old('program_subcategory') }}">
-            </div>
-            <div class="l3-form form-group program_sub_title">
-                <div class="body-title">Program Sub Title(H) :<span class="tf-color-1">*</span></div>
-                <textarea class="summernote" name="program_sub_title">{{ old('program_sub_title') }}</textarea>
-            </div>
-            <div class="l3-form form-group program_description">
-                <div class="body-title"> Description : <span class="tf-color-1">*</span></div>
-                <textarea class="summernote" name="program_description">{{ old('program_description') }}</textarea>
-            </div>
-             <!-- Program Form End -->
+                    {{-- CEH kit form start --}}
+                    <div class="l3-form form-group cehkit_form" id="cehkit_form">
+                        <div class="body-title">CEH KIT Title (Top) : <span class="tf-color-1"></span></div>
+                        <textarea class="summernote" name="main_title">{{ old('main_title') }}</textarea>
+                    </div>
+                    <div class="form-group l3-form  kit_title">
+                        <div class="body-title">Sub Title :<span class="tf-color-1">*</span></div>
+                        <input type="text" name="kit_title" id="">{{ old('kit_title') }}</input>
+                    </div>
+                    <div class="l3-form  ceh_description">
+                        <div class="body-title">CEH KIT Description :<span class="tf-color-1">*</span></div>
+                        <textarea class="summernote" name="ceh_description">{{ old('ceh_description') }}</textarea>
+                    </div>
 
-                     {{-- comman Image for required form start --}}
+
+                    {{-- CEH kit form End --}}
+
+                    <!-- Program Form Start -->
+                    <div class="l3-form" id="program_form" style="display: none;">
+                        <div class="body-title">Select Program Category <span class="tf-color-1">*</span></div>
+                        <select class="flex-grow" style="" name="program_category_id">
+                            <option value="" disabled selected>Select Program Category</option>
+                            @foreach ($programCategories as $category)
+                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="l3-form form-group program_title">
+                        <div class="body-title">Program Top Title(H) :<span class="tf-color-1">*</span></div>
+                        <input type="text" class="" name="program_title">{{ old('program_title') }}</input>
+                    </div>
+                    <div class="name l3-form program_subcategory" id="">
+                        <div class="body-title">Program Sub-Category Name </div>
+                        <input class="flex-grow" type="text" placeholder="Sub Category Name"
+                            name="program_subcategory" tabindex="0" value="{{ old('program_subcategory') }}">
+                    </div>
+                    <div class="l3-form form-group program_sub_title">
+                        <div class="body-title">Program Sub Title(H) :<span class="tf-color-1">*</span></div>
+                        <textarea class="summernote" name="program_sub_title">{{ old('program_sub_title') }}</textarea>
+                    </div>
+                    <div class="l3-form form-group program_description">
+                        <div class="body-title"> Description : <span class="tf-color-1">*</span></div>
+                        <textarea class="summernote" name="program_description">{{ old('program_description') }}</textarea>
+                    </div>
+                    <div class="l3-form form-group brochure_pdf">
+                        <div class="body-title">Upload Brochure (PDF) :<span class="tf-color-1"></span></div>
+                        <input type="file" name="brochure_pdf" class="form-control" accept="application/pdf">
+                    </div>                    
+                    <!-- Program Form End -->
+
+                    {{-- comman Image for required form start --}}
                     <fieldset class="l3-form comman_images">
                         <div class="body-title">Upload images <span class="tf-color-1">*</span></div>
                         <div class="upload-image flex-grow">
@@ -413,20 +419,20 @@
                         </div>
                     </fieldset>
                     {{-- comman Image for required form End --}}
-                </div>
-                    
-                    <input type="hidden" id="l3_category_type" name="l3_category_type" value="">
-
-                    <div class="bot">
-                        <div></div>
-                        <button class="tf-button w208" type="submit">Save</button>
-                    </div>
-                </form>
             </div>
 
-            <!-- Hidden input to store L3 category type -->
+            <input type="hidden" id="l3_category_type" name="l3_category_type" value="">
 
+            <div class="bot">
+                <div></div>
+                <button class="tf-button w208" type="submit">Save</button>
+            </div>
+            </form>
         </div>
+
+        <!-- Hidden input to store L3 category type -->
+
+    </div>
     </div>
     </div>
 @endsection
@@ -443,7 +449,7 @@
                 var selectedL3Category = $(this).find("option:selected").text().trim().toLowerCase();
 
                 // Remove special characters and spaces
-                 selectedL3Category = selectedL3Category.replace(/[^a-zA-Z0-9]/g, '');
+                selectedL3Category = selectedL3Category.replace(/[^a-zA-Z0-9]/g, '');
 
                 console.log("Selected L3 Category:", selectedL3Category); // Debugging
 
@@ -452,10 +458,10 @@
                 $('#hr').hide();
                 $('.form-heading').hide();
 
-                if(selectedL3Category){
+                if (selectedL3Category) {
                     $('#hr').show();
                     $('.form-heading').show();
-                    
+
                 }
                 // Show the form based on selected value
                 if (selectedL3Category === "overview") {
@@ -505,35 +511,39 @@
                 } else if (selectedL3Category === "testimonials") {
                     $('#testimonial_form').show();
                     // $('.testimonials_title').show(); 
-                    $('.testimonial_name').show(); $('.testimonial_designation').show(); $('.testimonial_description').show();  $('.testimonials_short_description').show();
+                    $('.testimonial_name').show();
+                    $('.testimonial_designation').show();
+                    $('.testimonial_description').show();
+                    $('.testimonials_short_description').show();
                     $('.comman_images').show();
                     $('#l3_category_type').val('testimonials'); // Set hidden input to 'testimonials'
                 } else if (selectedL3Category === "incidents") {
                     $('#incident_form').show();
-                    $('.Video_link').show(); 
-                    $('.incident_description').show(); 
-                    $('.comman_images').show(); 
+                    $('.Video_link').show();
+                    $('.incident_description').show();
+                    $('.comman_images').show();
                     $('#l3_category_type').val('incidents'); // Set hidden input to 'testimonials'
 
                 } else if (selectedL3Category === "cehkit") {
                     $('.cehkit_form').show();
-                    $('.kit_title').show(); 
-                    $('.ceh_description').show(); 
+                    $('.kit_title').show();
+                    $('.ceh_description').show();
                     $('.comman_images').show();
                     $('#l3_category_type').val('cehkit'); // Set hidden input to 'cehkit'
                 } else if (selectedL3Category === "program") {
                     $('#program_form').show();
-                    $('.program_subcategory').show(); 
-                    $('.program_description').show(); 
+                    $('.program_subcategory').show();
+                    $('.program_description').show();
                     $('.program_title').show();
-                    $('.program_sub_title').show();
-                    $('.comman_images').show();
+                    $('.program_sub_title').show();  
+                    $('.brochure_pdf').show();  
+                    $('.comman_images').show(); 
                     $('#l3_category_type').val('program'); // Set hidden input to 'cehkit'
-                } else if (selectedL3Category === "history") {  
+                } else if (selectedL3Category === "history") {
                     // $('#history_form').show();
                 }
             });
-           
+
             // Load Categories when Page Category changes
             $('#page_category').change(function() {
                 var pageCategoryId = $(this).val();
@@ -615,35 +625,34 @@
     </script>
 
 
-<script>
-$(document).ready(function() {
-    $('#overview_count').change(function() {
-        let count = $(this).val();
-        let container = $('#dynamic_overview_sections');
+    <script>
+        $(document).ready(function() {
+            $('#overview_count').change(function() {
+                let count = $(this).val();
+                let container = $('#dynamic_overview_sections');
 
-        container.empty(); // Clear previous forms
+                container.empty(); // Clear previous forms
 
-        for (let i = 1; i <= count; i++) {
-            let subForm = `
+                for (let i = 1; i <= count; i++) {
+                    let subForm = `
                    
                         <div class="body-title">Overview Sub Description ${i} :<span class="tf-color-1">*</span></div>
                         <textarea class="mr-5 summernote" name="overview_sub_descriptions[]"></textarea>
                    
             `;
-            container.append(subForm);
-        }
+                    container.append(subForm);
+                }
 
-        // Re-initialize Summernote for new textareas
-        $('.summernote').summernote({
-            height: 150,
-            toolbar: [
-                ['style', ['bold', 'italic', 'underline', 'clear']],
-                ['para', ['ul', 'ol', 'paragraph']],
-                ['insert', ['link', 'picture', 'video']],
-            ]
+                // Re-initialize Summernote for new textareas
+                $('.summernote').summernote({
+                    height: 150,
+                    toolbar: [
+                        ['style', ['bold', 'italic', 'underline', 'clear']],
+                        ['para', ['ul', 'ol', 'paragraph']],
+                        ['insert', ['link', 'picture', 'video']],
+                    ]
+                });
+            });
         });
-    });
-});
-</script>
-
+    </script>
 @endpush

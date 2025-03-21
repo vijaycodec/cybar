@@ -71,7 +71,7 @@
                                                             <div class="card_img">
                                                                 <div class="cn-hover-box">
                                                                     <div class="cn-hover-img"> 
-                                                                        <img src="{{ asset('uploads/backend/resources/' . $resource->images) }}" 
+                                                                        <img src="{{ asset('storage/uploads/backend/resources/' . $resource->images) }}" 
                                                                              class="img-fluid" alt="{{ $resource->title }}">
                                                                     </div>
                                                                     <div class="cn-content">
@@ -107,21 +107,16 @@
                         <div class="clearfix mb-4 quick-form1">
                             <div class="form quick-form bg-scheme mb-4 text-center custom-margin">
                                 <p>Search For Your Resources</p>
-                                <form name="form_pages" id="form_pages"
-                                    action="http://codecnetworks.in/codec/course_resources">
+                                <form id="form_pages" action="" onsubmit="return false;">
                                     <div id="prefetch-resource">
-                                        <!--<input type="text" name="q" id="filter" value="" class="form-control input-lg mr-sm-2 typeahead form-control mb-3" placeholder="Search Resources..." />-->
-
-                                        <input type="text" name="q" id="filter" value=""
-                                            class="form-control input-lg mr-sm-2 typeahead form-control mb-3"
-                                            placeholder="Search Resources..." />
+                                        <input type="text" name="q" id="filter" class="form-control input-lg typeahead form-control mb-3" 
+                                               placeholder="Search Resources..." autocomplete="off" />
                                     </div>
-                                    <button class="btn btn-success btn-lg btn_save btn_action" data-stype="back"
-                                        title="Click to Submit">
-                                        <!--<button class="btn btn-success btn-lg btn_save btn_action" type="button"  title="Click to Submit">-->
-                                        Search
-                                    </button>
+                                    <button class="btn btn-success btn-lg" id="search-btn" title="Click to Submit">Search</button>
                                 </form>
+                                
+                                <!-- Results Container -->
+                                <ul id="search-results" class="list-group"></ul>
                             </div>
 
                         </div>
@@ -566,5 +561,52 @@
         })();
     });
 </script> --}}
+
+
+<script>
+    $(document).ready(function () {
+    $('#filter').on('keyup', function () {
+        let query = $(this).val();
+
+        if (query.length > 2) { // Start searching after 3 characters
+            $.ajax({
+                url: "/search-resources", // Laravel route
+                method: "GET",
+                data: { query: query },
+                success: function (response) {
+                    let resultHtml = '';
+
+                    if (response.length > 0) {
+                        response.forEach(resource => {
+                            resultHtml += `<li class="list-group-item">${resource.name}</li>`;
+                        });
+                    } else {
+                        resultHtml = '<li class="list-group-item text-muted">No results found</li>';
+                    }
+
+                    $('#search-results').html(resultHtml).show();
+                }
+            });
+        } else {
+            $('#search-results').hide();
+        }
+    });
+
+    // Hide results when clicking outside
+    $(document).on('click', function (e) {
+        if (!$(e.target).closest('#filter, #search-results').length) {
+            $('#search-results').hide();
+        }
+    });
+});
+
+
+</script>
     
+<script>
+    $(document).on('click', '#search-results li', function () {
+    $('#filter').val($(this).text()); // Fill input with selected result
+    $('#search-results').hide(); // Hide results
+});
+</script>
 @endpush

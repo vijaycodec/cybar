@@ -17,34 +17,34 @@ class subcategoryController extends Controller
         $subCategories = SubCategory::with(['pageCategory', 'category'])
             ->orderBy('id', 'ASC')
             ->paginate(10); // Paginate results for better performance
-        
+
         return view('backend.sub_category.index', compact('subCategories'));
     }
 
     public function create()
     {
         $page_categories = PageDetail::all();
- 
-        return view('backend.sub_category.create',compact('page_categories'));
+
+        return view('backend.sub_category.create', compact('page_categories'));
     }
 
-        // Fetch Categories based on Page Category ID
-        public function getCategories(Request $request)
-        {
-            $categories = CourseCategory::where('page_category', $request->page_category_id)->get();
-            return response()->json($categories);
-        }
-    
-        // Fetch Sub-Categories based on Category ID
-        // public function getSubCategories(Request $request)
-        // {
-        // //dd($request->all());
-        //     $subCategories = SubCategory::where('category_id', $request->category_id)->get();
-        //     // dd($subCategories);
-        //     return response()->json($subCategories);
-        // }
+    // Fetch Categories based on Page Category ID
+    public function getCategories(Request $request)
+    {
+        $categories = CourseCategory::where('page_category', $request->page_category_id)->get();
+        return response()->json($categories);
+    }
 
-        public function store(Request $request)
+    // Fetch Sub-Categories based on Category ID
+    // public function getSubCategories(Request $request)
+    // {
+    // //dd($request->all());
+    //     $subCategories = SubCategory::where('category_id', $request->category_id)->get();
+    //     // dd($subCategories);
+    //     return response()->json($subCategories);
+    // }
+
+    public function store(Request $request)
     {
 
         // Using Validator::make to validate the request data
@@ -52,6 +52,7 @@ class subcategoryController extends Controller
             'page_category_id' => 'required',
             'category_id' => 'required',
             'sub_category' => 'required',
+            'slug' => 'required',
         ]);
 
         // Check if validation fails
@@ -65,17 +66,16 @@ class subcategoryController extends Controller
             $subCategories->page_category_id = $request->page_category_id;
             $subCategories->category_id = $request->category_id;
             $subCategories->sub_category = $request->sub_category;
-            
+            $subCategories->slug = $request->slug;
 
-                $subCategories->save();
-                return redirect()->route('sub-category.list')->with('success', 'Record has been added successfully !');
-            
+            $subCategories->save();
+            return redirect()->route('sub-category.list')->with('success', 'Record has been added successfully !');
         } catch (\Exception $e) {
             // Catch any exceptions and log the error
             return redirect()->back()->with('error', 'An error occurred while adding the resource: ' . $e->getMessage());
         }
     }
-   
+
     public function edit($id)
     {
         $subCategory = SubCategory::findOrFail($id);
@@ -88,24 +88,26 @@ class subcategoryController extends Controller
 
     public function update(Request $request, $id)
     {
-    // Validate input data
+        // Validate input data
         $request->validate([
             'page_category_id' => 'required',
             'category_id' => 'required',
             'sub_category' => 'required',
+            'slug' => 'required',
         ]);
 
-    // Find the service or return 404
-    $subCategories = SubCategory::findOrFail($id);
+        // Find the service or return 404
+        $subCategories = SubCategory::findOrFail($id);
 
-    // Update fields
-    $subCategories->page_category_id = $request->page_category_id;
-    $subCategories->category_id = $request->category_id;
-    $subCategories->sub_category = $request->sub_category;
-    // Save changes
-    $subCategories->save();
+        // Update fields
+        $subCategories->page_category_id = $request->page_category_id;
+        $subCategories->category_id = $request->category_id;
+        $subCategories->sub_category = $request->sub_category;
+        $subCategories->slug = $request->slug;
+        // Save changes
+        $subCategories->save();
 
-    return redirect()->route('sub-category.list')->with('success', 'Record has been updated successfully!');
+        return redirect()->route('sub-category.list')->with('success', 'Record has been updated successfully!');
     }
 
     public function destroy($id)

@@ -46,9 +46,16 @@
                         </fieldset>
                     <fieldset class="name">
                         <div class="body-title">Category Name <span class="tf-color-1">*</span></div>
-                        <input class="flex-grow" type="text" placeholder="Category Name" name="name" tabindex="0"
+                        <input class="flex-grow" type="text" placeholder="Category Name" id="categorySelect" name="name" tabindex="0"
                             value="{{ old('name') }}" aria-required="true" required="">
                     </fieldset>
+
+                    <fieldset class="name">
+                        <div class="body-title"> Category Slug <span class="tf-color-1">*</span></div>
+                        <input class="flex-grow" id="categorySlug" type="text" placeholder="Category Name" name="slug"
+                            tabindex="0" value="{{ old('slug') }}" aria-required="true" required readonly>
+                    </fieldset>
+
                     <fieldset class="name">
                         <div class="body-title">Category Title <span class="tf-color-1">*</span></div>
                         <input class="flex-grow" type="text" placeholder="Category Name" name="title" tabindex="0"
@@ -66,4 +73,21 @@
 @endsection
 
 @push('scripts')
+<script>
+    $(document).ready(function() {
+        function slugify(text) {
+            return text.toString().toLowerCase()
+                .trim()
+                .replace(/\s+/g, '-') // Replace spaces with hyphens
+                .replace(/[^\w\-]+/g, '') // Remove all non-word characters
+                .replace(/\-\-+/g, '-'); // Replace multiple hyphens with single hyphen
+        }
+
+        $('#categorySelect').on('input', function() {
+            var title = $(this).val();
+            var slug = slugify(title);
+            $('#categorySlug').val(slug); // Set generated slug in the input field
+        });
+    });
+</script>
 @endpush

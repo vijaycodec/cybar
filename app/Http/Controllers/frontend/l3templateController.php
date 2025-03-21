@@ -19,9 +19,10 @@ class l3templateController extends Controller
         $this->l3CategoryRepository = $l3CategoryRepository;
     }
 
-    // public function getl3($page_name, $category_name, $sub_category_name)
+    // public function getl3 ($category_name=null, $sub_category_name=null)
     // {
 
+    //         $page_name = 'services';
     //         $l3Categories = $this->l3CategoryRepository->getL3Categories($page_name, $category_name, $sub_category_name);
 
     //         if ($l3Categories->isEmpty()) {

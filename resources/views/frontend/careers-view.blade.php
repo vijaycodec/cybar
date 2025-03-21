@@ -49,7 +49,8 @@
                                     <!--  -->
                                     <div class="job-detail">
                                         <p class="career-detail"><strong>Location :</strong> {{ $careers->location }}</p>
-                                        <p class="career-detail"><strong>Educational Background :</strong> {{ $careers->educational_background }}</p>
+                                        <p class="career-detail"><strong>Educational Background :</strong>
+                                            {{ $careers->educational_background }}</p>
                                         <p>{!! $careers->description !!}</p>
 
 
@@ -69,15 +70,13 @@
                         <div class="form quick-form bg-scheme cv-space2 bg-scheme1" id="cvd2">
                             <h4>Apply Now</h4>
                             <p>Just submit your details and we’ll be in touch shortly.</p>
-                            <form method="post" action="http://codecnetworks.in/codec/careers/sendapplymail">
-                                <input type="text" class="form-control mb-3" placeholder="Name" name="name"
-                                    required="">
-                                <input type="email" class="form-control mb-3" placeholder="Email" name="email"
-                                    required="">
-                                <input type="text" class="form-control mb-3" placeholder="mobile" name="number"
-                                    required="">
+                            <form method="post" action="{{ route('job.career.store') }}">
+                                @csrf
+                                <input type="text" class="form-control mb-3" placeholder="Name" name="name">
+                                <input type="email" class="form-control mb-3" placeholder="Email" name="email">
+                                <input type="text" class="form-control mb-3" placeholder="mobile" name="phone_no">
                                 <textarea type="text" class="form-control mb-3" placeholder="Message" name="message" row="3"></textarea>
-                                <div class="g-recaptcha mb-3" data-sitekey="6Lc8JLcqAAAAAKTbtJ5U4xzVGiOfKEJr_xst8Cep"></div>
+                                {{-- <div class="g-recaptcha mb-3" data-sitekey="6Lc8JLcqAAAAAKTbtJ5U4xzVGiOfKEJr_xst8Cep"></div> --}}
                                 <button class="btn btn-success btn-lg btn_save btn_action" id="btn_save" data-stype="back"
                                     title="Click to Submit">
                                     Submit
@@ -120,41 +119,111 @@
         });
     </script>
 
-    <!-- Include the reCAPTCHA API -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- Include the reCAPTCHA API -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lcw_bYqAAAAABzx4sk7F5JhTHrLPGrNyDV8lGpj"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-        function onSubmit(event) {
-            event.preventDefault(); // Prevent the form from submitting immediately
+        $(document).ready(function() {
+            $("#btn_save").click(function(event) {
+                event.preventDefault(); // Prevent default form submission
 
-            grecaptcha.enterprise.ready(async () => {
-                const token = await grecaptcha.enterprise.execute('6Lcw_bYqAAAAABzx4sk7F5JhTHrLPGrNyDV8lGpj', {
-                    action: 'submit_form'
-                });
+                let isValid = true;
 
-                // Now you can send the token along with the form data to the backend.
-                const form = event.target;
-                const hiddenTokenInput = document.createElement("input");
-                hiddenTokenInput.type = "hidden";
-                hiddenTokenInput.name = "g-recaptcha-response";
-                hiddenTokenInput.value = token;
-                form.appendChild(hiddenTokenInput);
+                // Name Validation: At least 3 characters, only letters & spaces
+                let name = $("input[name='name']").val().trim();
+                if (!/^[A-Za-z\s]{3,}$/.test(name)) {
+                    showError("name", "Name must be at least 3 characters.");
+                    isValid = false;
+                } else {
+                    hideError("name");
+                }
 
-                form.submit(); // Submit the form with the token
+                // Email Validation
+                let email = $("input[name='email']").val().trim();
+                let emailPattern = /^[a-zA-Z][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                if (!emailPattern.test(email)) {
+                    showError("email", "Please enter a valid email address.");
+                    isValid = false;
+                } else {
+                    hideError("email");
+                }
+
+                // Mobile Validation: Exactly 10 digits
+                let mobile = $("input[name='phone_no']").val().trim();
+                if (!/^\d{10}$/.test(mobile)) {
+                    showError("phone_no", "Mobile number must be exactly 10 digits.");
+                    isValid = false;
+                } else {
+                    hideError("phone_no");
+                }
+
+                // Message Validation: Min 5 characters, Max 500 characters
+                let message = $("textarea[name='message']").val().trim();
+                if (message.length < 5 || message.length > 500) {
+                    showError("message", "Message must be between 5 and 500 characters.");
+                    isValid = false;
+                } else {
+                    hideError("message");
+                }
+
+                // Google reCAPTCHA validation
+                // let recaptchaResponse = grecaptcha.getResponse();
+                // if (recaptchaResponse.length === 0) {
+                //     showError("recaptcha", "Please verify the reCAPTCHA.");
+                //     isValid = false;
+                // } else {
+                //     hideError("recaptcha");
+                // }
+
+                // If all validations pass, submit form via AJAX
+                if (isValid) {
+                    $.ajax({
+                        url: "{{ route('job.career.store') }}",
+                        type: "POST",
+                        data: $("form").serialize(),
+                        success: function(response) {
+                            Swal.fire({
+                                title: "Success!",
+                                text: "Form submitted successfully!",
+                                icon: "success",
+                                confirmButtonText: "OK"
+                            }).then(() => {
+                                $("form")[0].reset();
+                                grecaptcha.reset();
+                            });
+                        },
+                        error: function(xhr) {
+                            Swal.fire({
+                                title: "Error!",
+                                text: "An error occurred: " + xhr.responseText,
+                                icon: "error",
+                                confirmButtonText: "OK"
+                            });
+                        }
+                    });
+                }
             });
-        }
-    </script>
-    <script>
-        function onSubmit(event) {
-            event.preventDefault(); // Prevent the form from submitting immediately
 
-            // Trigger reCAPTCHA validation before submission
-            grecaptcha.execute();
-        }
+            // Function to show error message
+            function showError(fieldName, message) {
+                if (!$(`.${fieldName}-error`).length) {
+                    $(`input[name='${fieldName}'], textarea[name='${fieldName}']`).after(
+                        `<p class="${fieldName}-error" style="color: red; font-size: 14px; margin-top: 5px;">${message}</p>`
+                        );
+                } else {
+                    $(`.${fieldName}-error`).text(message).show();
+                }
+            }
+
+            // Function to hide error message
+            function hideError(fieldName) {
+                $(`.${fieldName}-error`).remove();
+            }
+        });
     </script>
 
-    <!-- End of recaptcha -->
 
 
     @include('frontend.layouts.right-menu-js')

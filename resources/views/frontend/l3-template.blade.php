@@ -282,12 +282,8 @@
                         @foreach ($l3Categories as $category)
                             @foreach ($category->contentInfos as $contentInfo)
                                 @if ($contentInfo->significance_title)
-                                    <p>{!! $contentInfo->significance_title->title !!}</p>
-                                    {{-- <h2>SIGNIFICANCE OF CEH IN DIFFERENT INDUSTRY
-                                    </h2>
-                                    <p>CEH training and certification hold significant importance in the cybersecurity
-                                        industry as they validate an individual's proficiency in ethical hacking
-                                        techniques and practices.</p> --}}
+                                    <h2>{!! $contentInfo->significance_title->title !!}</h2>
+                               
                                 @endif
                             @endforeach
                         @endforeach
@@ -503,7 +499,7 @@
                                                 <div class="row">
                                                     <div class="pro-title">
                                                         @if($contentInfo->program_sub_title)
-                                                             <h3>{!!$contentInfo->program_sub_title  !!}</h3> 
+                                                             <h2>{!!$contentInfo->program_sub_title  !!}</h2> 
                                                         @endif
                                                     </div>
 
@@ -667,7 +663,7 @@
                                                     <div class="pro-title">
                                                         
                                                         @if($contentInfo->program_sub_title)
-                                                            <h3>{!!$contentInfo->program_sub_title  !!}</h3> 
+                                                            {!!$contentInfo->program_sub_title  !!}
                                                         @endif
 
                                                     </div>
@@ -694,7 +690,7 @@
                                                             <div class="brochure-box">
                                                                 {!! $contentInfo->program_description !!}
 
-                                                                <a href="#">Download Brochure</a>
+                                                           <a href="#" onclick="alert('Brochure not available')">Download Brochure</a>
                                                             </div>
                                                             <!--  -->
                                                         </div>
@@ -780,7 +776,7 @@
                                                 <div class="row">
                                                     <div class="pro-title">
                                                         @if($contentInfo->program_sub_title)
-                                                            <h3>{!!$contentInfo->program_sub_title  !!}</h3> 
+                                                            <h1>{!!$contentInfo->program_sub_title  !!}</h1> 
                                                         @endif
                                                         
                                                     </div>
@@ -904,7 +900,7 @@
                                                         <div class="pro-title">
                                                             {{-- add dynamic title from backend  --}}
                                                             @if($contentInfo->program_sub_title)
-                                                                <h3>{!!$contentInfo->program_sub_title  !!}</h3> 
+                                                                {!!$contentInfo->program_sub_title  !!} 
                                                              @endif
                                                         </div>
                                                         <div class="pro-ul-box">
@@ -1081,8 +1077,14 @@
                                         data-image="{{ asset('storage/uploads/frontend/l3_template/coursefeature/' . $contentInfo->images) }}">
 
                                         <div class="mobile-cf-content">
-                                            <img src="{{ asset('storage/uploads/frontend/l3_template/coursefeature/' . $contentInfo->images) }}"
+                                             @if ($contentInfo->images)
+                                                    <img src="{{ asset('storage/uploads/frontend/l3_template/coursefeature/' . $contentInfo->images) }}"
                                                 alt="">
+                                             @else
+                                                                    <img src="https://www.eccouncil.org/wp-content/uploads/2023/01/CEH-cover-broucher-scaled.jpg.webp"
+                                                                        alt="Default Brochure Image">
+                                                                @endif
+
                                             <h3>{{ $contentInfo->coursefeatureCategory->name }}</h3>
                                             <p>{!! $contentInfo->course_feature_short_description !!}</p>
                                             <a href="javascript:void(0)" class="popup-btn">
@@ -1184,7 +1186,7 @@
                     @foreach ($l3Categories as $category)
                         @foreach ($category->contentInfos as $contentInfo)
                             @if ($contentInfo->incident_title)
-                                <h2>{!! $contentInfo->incident_title !!}</h2>
+                                {!! $contentInfo->incident_title !!}
                             @endif
                         @endforeach
                     @endforeach
@@ -1247,7 +1249,7 @@
                         {{-- <li class="active"><a data-toggle="tab" href="#ic">BANKING & FINANCE</a></li> --}}
                             @foreach ($category->contentInfos as $contentInfo)
                                 @if ($contentInfo->industry_title)
-                                    <h2>{!! $contentInfo->industry_title->title !!}</h2>
+                                    <h1>{!! $contentInfo->industry_title->title !!}</h1>
                                 @endif
                             @endforeach
                         @endforeach
@@ -1595,7 +1597,7 @@
                                 @if ($contentInfo->faqCategory)
                                     @foreach ($contentInfo->faqCategory->faqSubCategory as $faqSubCategory)
                                         @if ($faqSubCategory->title)
-                                            <h2>{!! $faqSubCategory->title !!}</h2>
+                                            {!! $faqSubCategory->title !!}
                                             @php break 2; @endphp
                                         @endif
                                     @endforeach

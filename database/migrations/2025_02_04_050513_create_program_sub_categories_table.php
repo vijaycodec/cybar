@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('program_sub_categories', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('l3_content_info_id'); 
             $table->unsignedBigInteger('program_category_id'); // Links to program_categories
             $table->unsignedBigInteger('page_id'); // This ensures a proper link with l3_content_infos
             $table->unsignedBigInteger('sub_category_id'); // This ensures a proper link with l3_content_infos

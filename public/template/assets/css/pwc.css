@@ -1,0 +1,603 @@
+.page-primary-col--orange .page-section.page-section--col-primary {
+    background: #d04a02;
+}
+.page-section.page-section--col-primary {
+    background: #d04a02;
+}
+section, .page-section {
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+#wrapper section:before, #wrapper section:after {
+    content: " ";
+    display: table;
+}
+section.fullwidth .parsys.sectionpar {
+    width: 100%;
+    padding: 0;
+}
+/*@media (min-width: 768px)*/
+body .hero-title-component .hero-title {
+    background: transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 500px;
+    max-height: 1000px;
+}
+/*@media (min-width: 768px)*/
+.hero-title-component .hero-title>.container>.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+}
+/*@media (min-width: 768px)*/
+.hero-title-component .hero-title .textColumn {
+    top: 300px;
+    background: #2d2d2d;
+    position: relative;
+    z-index: 100;
+    width: 66.66%;
+}
+
+.page-section.page-section--col-white {
+    background: #d04a02;
+}
+section, .page-section {
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+#wrapper section:before, #wrapper section:after {
+    content: " ";
+    display: table;
+}
+.stat-bar .stat-bar__listing {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+/*@media (min-width: 768px)*/
+.stat-bar .stat-bar__listing {
+    display: table;
+}
+.stat-bar .stat-bar__listing {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.hero-title-textpanel--compaign .textColumn, .hero-title-textpanel--compaign .hero-title-textpanel {
+    background: transparent !important;
+}
+
+.hero-title-textpanel--compaign .textColumn, .hero-title-textpanel--compaign .hero-title-textpanel {
+    background: transparent !important;
+}
+
+/*@media (min-width: 768px)*/
+.hero-title-textpanel {
+    background: #2d2d2d;
+    margin: 0;
+    padding: 40px 30px 50px 0;
+}
+.hero-title-textpanel--compaign h1 {
+    line-height: 1.3em !important;
+    font-size: 2.5rem !important;
+    font-family: "PwC ITC Charter",Georgia,Serif;
+    margin: 0 !important;
+}
+.hero-title-textpanel--compaign .compaign-hlight__inner {
+    background: #2d2d2d;
+    box-shadow: 15px 0 0 #2d2d2d, -15px 0 0 #2d2d2d;
+    line-height: 1.3em;
+    padding-top: 4px;
+    padding-bottom: 12px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+.hero-title-textpanel p.sub-heading {
+    font-size: 1.429rem;
+    line-height: 1.5;
+}
+.hero-title-textpanel p.sub-heading {
+    font-weight: 700;
+}
+.hero-title-textpanel--compaign p.sub-heading {
+    line-height: 1.5em !important;
+    font-size: 1.25rem !important;
+    font-weight: bold !important;
+    margin: 0 !important;
+}
+.hero-title-textpanel p {
+    color: #fff;
+}
+.hero-title-textpanel--compaign p {
+    font-family: "PwC Helvetica Neue",Arial,Sans-Serif;
+}
+
+
+element.style {
+}
+@media (min-width: 768px)
+.hero-title-component--lg-h1 .hero-title-textpanel h1 {
+    font-size: 3.214rem;
+}
+.container h1:first-of-type, .container h2:first-of-type, .container h3:first-of-type {
+    margin-top: 0;
+}
+.hero-title-textpanel--compaign h1 {
+    line-height: 1.3em !important;
+    font-size: 2.5rem !important;
+    font-family: "PwC ITC Charter",Georgia,Serif;
+    margin: 0 !important;
+}
+.hero-title-textpanel h1, .hero-title-textpanel p {
+    font-style: normal;
+}
+.hero-title-textpanel h1 {
+    color: #fff;
+    margin: 0 0 10px;
+    font-weight: bold;
+    font-size: 2.714rem;
+    line-height: 1.3;
+    font-weight: 400;
+}
+@media (min-width: 768px){
+.stat-bar.stat-bar--3-items .stat-bar__item {
+    width: 33%;
+}
+.stat-bar .stat-bar__item::before {
+    content: '';
+    width: 60px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+}
+.stat-bar .stat-bar__listing .stat-bar__item .stat-bar__item-content {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    flex: 1 0 auto;
+    margin-top: 17px;
+}
+.stat-bar .stat-bar__item .stat-bar__stat {
+    margin: 0 0 6px;
+}
+.stat-bar .stat-bar__item p {
+    color: #fff;
+    margin: 0;
+}
+.stat-bar .stat-bar__stat {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    margin-bottom: 6px;
+    padding: 0;
+    font-family: "PwC Helvetica Neue",Arial,Sans-Serif;
+}
+.stat-bar .stat-bar__stat .stat-bar__stat-primary {
+    font-size: 36px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    flex: 0 0 auto;
+    margin-right: .714rem;
+}
+.stat-bar .stat-bar__stat .stat-bar__stat-small {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    flex: 1 1 auto;
+    margin: 0;
+}
+/*
+@media (min-width: 768px)*/
+.stat-bar .stat-bar__item .stat-bar__stat-small {
+    display: block;
+    margin-bottom: 0;
+    word-break: break-word;
+}
+.stat-bar .stat-bar__item .stat-bar__stat-small {
+    font-weight: normal;
+    line-height: 1.3em;
+    margin: 0;
+    color: #fff;
+}
+/*@media (min-width: 992px)*/
+.stat-bar .stat-bar__item .stat-bar__label {
+    margin: 0;
+}
+.stat-bar .stat-bar__item .stat-bar__label {
+    font-family: "PwC Helvetica Neue",Arial,Sans-Serif;
+    font-size: 1.125rem;
+    margin: 0 0 10px;
+    padding: 0;
+    font-weight: normal;
+}
+.stat-bar .stat-bar__item p {
+    color: #fff;
+    margin: 0;
+}
+.page-secondary-col--orange .stat-bar {
+    background: #d04a02;
+}
+.stat-bar .stat-bar__item .stat-bar__label {
+    margin: 0;
+}
+
+.stat-bar .stat-bar__item .stat-bar__label {
+    font-family: "PwC Helvetica Neue",Arial,Sans-Serif;
+    font-size: 1.25rem;
+    margin: 0 0 10px;
+    padding: 0;
+    font-weight: normal;
+}
+.stat-bar--3-items{
+    height: 180px;
+}
+.stat-bar__item{
+    position: relative;
+    top: 38px;
+}
+
+
+/*full report start*/
+.page-section.page-section--col-light-grey {
+    background: #f2f2f2;
+}
+
+section, .page-section {
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+.pwcscrolling .sectionpar, .pwcscrolling #footer-wrapper {
+    padding: 0 15px;
+}
+
+/*@media (min-width: 1200px)*/
+.sectionpar {
+    width: 1170px;
+}
+/*@media (min-width: 768px)*/
+.parsys_column.pwccol1-longform, .parsys_column.pwccol1-longform-left, .parsys_column.pwccol2-longform, .parsys_column.pwccol2-longformb, .parsys_column.pwccol2-longformc, .parsys_column.pwccol3-longform {
+    margin-left: -15px;
+    width: calc(100% + 30px);
+}
+
+.pwccol1-longform {
+    width: 66%;
+    margin: 0 auto;
+}
+.pwccol3-home, .pwccol4-home, .pwccol4-home-c, .pwccol2-landing, .pwccol2-landing, .pwccol2-landinga, .pwccol2-landingb, .pwccol3-landing, .pwccol3-landing-c, .pwccol2-content, .pwccol2-contenta, .pwccol2-contentb, .pwccol2-contentc, .pwccol3-content, .pwccol1-longform, .pwccol2-longform {
+    display: table;
+    position: relative;
+    width: 100%;
+    table-layout: fixed;
+}
+.standard-spacing .pwccol1-longform .parsys_column, .standard-spacing .pwccol2-longform .parsys_column, .standard-spacing .pwccol2-longformb .parsys_column, .standard-spacing .pwccol2-longformc .parsys_column, .standard-spacing .pwccol3-longform .parsys_column {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/*@media (min-width: 768px)*/
+.parsys_column.pwccol1-longform .parsys_column, .parsys_column.pwccol1-longform-left .parsys_column, .parsys_column.pwccol2-longform .parsys_column, .parsys_column.pwccol2-longformb .parsys_column, .parsys_column.pwccol2-longformc .parsys_column, .parsys_column.pwccol3-longform .parsys_column {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+/*@media (min-width: 768px)*/
+.pwccol1-longform .pwccol1-longform-c0 {
+    width: calc((100% / 12) * 8);
+    display: block;
+}
+.pwccol1-longform .pwccol1-longform-c0 {
+    width: 100%;
+}
+.pwccol1-longform .parsys_column, .pwccol2-longform .parsys_column, .pwccol2-longformb .parsys_column, .pwccol2-longformc .parsys_column, .pwccol3-longform .parsys_column {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.pwccol3-home .parsys_column, .pwccol4-home .parsys_column, .pwccol4-home-c .parsys_column, .pwccol2-landing .parsys_column, .pwccol2-landinga .parsys_column, .pwccol2-landingb .parsys_column, .pwccol3-landing .parsys_column, .pwccol3-landing-c .parsys_column, .pwccol2-content .parsys_column, .pwccol2-contenta .parsys_column, .pwccol2-contentb .parsys_column, .pwccol2-contentc .parsys_column, .pwccol3-content .parsys_column, .pwccol1-longform .parsys_column, .pwccol2-longform .parsys_column {
+    display: table-cell;
+}
+.pwccol1-longform-c0 {
+    width: 66%;
+    margin: 0 auto;
+}
+.standard-spacing .image, .standard-spacing .text, .standard-spacing .twittersearch, .standard-spacing .contactscollection, .standard-spacing .indexlist, .standard-spacing .videoplayer.section, .standard-spacing .rightrailcontact-component, .standard-spacing .facetednavigation, .standard-spacing .highlights, .standard-spacing .separator, .standard-spacing .table, .standard-spacing .chart, .standard-spacing .chart-v2, .standard-spacing .list, .standard-spacing .typepadblog, .standard-spacing .summaryexplorer, .standard-spacing .awards, .standard-spacing .reference, .standard-spacing .tabsnew.section, .standard-spacing .inlinequote {
+    margin-top: 40px;
+}
+.standard-reading .page-section .parsys_column.pwccol1-longform .parsys_column.pwccol1-longform-c0 .text.parbase.section .text-component, .standard-reading .page-section .parsys_column.pwccol1-longform .parsys_column.pwccol1-longform-c0 .quote-component blockquote {
+    padding-right: calc(48.75px * 2);
+}
+.pwccol1-longform h2:first-child, .pwccol1-longform h3:first-child, .pwccol1-longform h4:first-child, .pwccol1-longform h5:first-child, .pwccol2-longform h2:first-child, .pwccol2-longform h3:first-child, .pwccol2-longform h4:first-child, .pwccol2-longform h5:first-child, .pwccol2-longformb h2:first-child, .pwccol2-longformb h3:first-child, .pwccol2-longformb h4:first-child, .pwccol2-longformb h5:first-child, .pwccol2-longformc h2:first-child, .pwccol2-longformc h3:first-child, .pwccol2-longformc h4:first-child, .pwccol2-longformc h5:first-child, .pwccol3-longform h2:first-child, .pwccol3-longform h3:first-child, .pwccol3-longform h4:first-child, .pwccol3-longform h5:first-child {
+    margin-top: 0;
+}
+
+.text-component h2:first-child, .text-component h3:first-child {
+    margin-top: 0;
+}
+.text-component>h2 {
+    margin-bottom: 40px;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+h2, .h2 {
+    font-size: 2.375rem;
+    line-height: 1.3em;
+}
+h1, h2, .h1, .h2 {
+    font-family: "PwC ITC Charter",Georgia,Serif;
+    font-style: normal;
+    font-weight: normal;
+    color: #2d2d2d;
+}
+.text-component h2+p {
+    margin-top: -10px;
+}
+/*@media (min-width: 1200px)*/
+.text-component p, .text-component ol li, .text-component ul li {
+    font-size: 1.125rem;
+}
+.text-component p, .text-component ol li, .text-component ul li {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+.text-component p {
+    margin: 0 0 35px;
+}
+.text-component h3, .text-component h4, .text-component h5 {
+    margin-bottom: 20px;
+}
+
+.text-component h2, .text-component h3, .text-component h4, .text-component h5, .text-component h6 {
+    margin-top: 40px;
+}
+.text-component h3 {
+    font-size: 1.75rem;
+}
+/*@media (min-width: 1200px)*/
+.text-component p, .text-component ol li, .text-component ul li {
+    font-size: 1.125rem;
+}
+
+.text-component p, .text-component ol li, .text-component ul li {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+.text-component p {
+    margin: 0 0 35px;
+}
+.pwccol1-longform .pwccol1-longform-c0 {
+    width: calc((100% / 12) * 8);
+    display: block;
+}
+.ai-container {
+    position: relative;
+    line-height: 12px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 940px;
+    height: 560px;
+    overflow: hidden;
+    font-size: 11px;
+    font-family: Arial;
+}
+.ai-sectors {
+    top: 0;
+    width: 141px;
+    line-height: 16px;
+    text-align: right;
+    z-index: 3;
+}
+
+.ai-container * {
+    margin: 0;
+    vertical-align: baseline;
+}
+.ai-sectors, .ai-source {
+    left: 0;
+    position: absolute;
+}
+.ai-container, .ai-container * {
+    padding: 0;
+    box-sizing: border-box;
+}
+.html{
+    margin-left: 100px;
+}
+
+/*health care start*/
+section.fullwidth .parsys.sectionpar {
+    width: 100%;
+    padding: 0;
+}
+.webtile {
+    border-bottom: 1px solid #fff;
+}
+.page-primary-col--orange .page-section.page-section--col-primary {
+    background: #d04a02;
+}
+
+.page-section.page-section--col-primary {
+    background: ##d04a02;
+}
+section, .page-section {
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+.cta-webtile .cta-webtile__link {
+    min-height: 170px;
+    padding: 40px 0;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+.cta-webtile .cta-webtile__link .cta-webtile__icon {
+    z-index: 3;
+}
+/*@media (min-width: 992px)*/
+.col-md-push-2 {
+    left: 16.66666667%;
+}
+/*@media (min-width: 992px)*/
+.col-md-1 {
+    width: 8.33333333%;
+}
+.cta-webtile .cta-webtile__link .cta-webtile__content .cta-webtile__title {
+    margin: 0;
+    color: #fff;
+    font-size: 1rem;
+    font-family: "PwC Helvetica Neue",Arial,Sans-Serif;
+}
+.cta-webtile .cta-webtile__link .cta-webtile__content .cta-webtile__heading {
+    font-weight: bold;
+    margin: 0;
+    color: #fff;
+    font-family: "PwC Helvetica Neue",Arial,Sans-Serif;
+}
+.cta-webtile .cta-webtile__link .cta-webtile__content .cta-webtile__heading:after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-image: url('https://www.pwc.com/etc.clientlibs/pwc/clientlibs/…-colors/resources/images/common/Right_Chevron.svg');
+    position: relative;
+    top: 1;
+    left: 10px;
+    transform: translateX(0);
+    transition: transform .2s ease;
+}
+.page-section.page-section--col-light-grey {
+    background: #f2f2f2;
+}
+
+section, .page-section {
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+section.fullwidth .parsys.sectionpar {
+    width: 100%;
+    padding: 0;
+}
+.standard-spacing .relatedcontent:first-child {
+    margin-bottom: 40px;
+}
+
+.standard-spacing .relatedcontent {
+    padding: 0;
+}
+
+element.style {
+}
+.standard-spacing .sectionpar .section .related-content {
+    padding: 0;
+}
+.container h1:first-of-type, .container h2:first-of-type, .container h3:first-of-type {
+    margin-top: 0;
+}
+
+.related-content .related-content__title {
+    margin: 0 0 20px;
+    color: #7d7d7d;
+    font-family: "PwC Helvetica Neue",Arial,Sans-Serif;
+    font-weight: bold;
+}
+/*@media (min-width: 768px)*/
+.related-content .related-content__item {
+    margin-bottom: 0;
+}
+.related-content .related-content__item {
+    margin-bottom: 40px;
+}
+@media (min-width: 768px){
+.col-sm-3 {
+    width: 25%;
+}
+}
+.related-content a.related-content__item-link {
+    display: block;
+    text-decoration: none;
+}
+a, a:hover, a:focus {
+    color: inherit;
+}
+.related-content a.related-content__item-link img {
+    margin-bottom: 20px;
+}
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.related-content a.related-content__item-link .related-content__item-heading {
+    border-bottom: 2px solid transparent;
+    color: #2d2d2d;
+    display: inline;
+    line-height: 1.3em;
+    padding-bottom: 2px;
+    transition: all 250ms ease-in-out;
+    word-break: break-word;
+    font-family: "PwC ITC Charter",Georgia,Serif;
+}
+
+.container h1:first-of-type, .container h2:first-of-type, .container h3:first-of-type {
+    margin-top: 0;
+}
+.regular {
+    font-style: normal;
+    font-weight: normal;
+}
+.related-content .related-content__item-abstract {
+    color: #6d6e71;
+    letter-spacing: 0;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
