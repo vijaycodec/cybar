@@ -48,7 +48,7 @@
                             <!-- Image preview container -->
                             <div class="item" id="imgpreview" style="text-align: center;">
                                 @if ($service->images)
-                                    <img src="{{ asset('uploads/backend/services/' . $service->images) }}"
+                                    <img src="{{ asset('storage/uploads/backend/services/' . $service->images) }}"
                                         id="preview-img" class="effect8" alt="Preview Image"
                                         style="max-width: 50%; height: auto;">
                                     <!-- Adjusted image width -->

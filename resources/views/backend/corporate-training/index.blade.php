@@ -45,7 +45,7 @@
                                 <th>Category</th>
                                 <th>Sub-category</th>
                                 <th>Description</th>
-                                <th>Image</th>
+                                {{-- <th>Image</th> --}}
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -58,14 +58,14 @@
                                         <td>{{ $training->course_category->name }}</td>
                                         <td>{{ $training->subcategory->sub_category }}</td>
                                         <td>{{ $training->description }}</td>
-                                        <td>
+                                        {{-- <td>
                                             @if ($training->images)
                                                 <img src="{{ asset('uploads/backend/corporate_training/' . $training->images) }}"
                                                     alt="training Image" width="100">
                                             @else
                                                 <span>No image available</span>
                                             @endif
-                                        </td>
+                                        </td> --}}
                                         <td style="padding: 10px;">
                                             <div class="list-icon-function">
                                                 <button type="button" class="show" data-id="{{ $training->id }}">
