@@ -1,6 +1,24 @@
 @extends('backend.layouts.app')
 
+{{-- <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css"> --}}
+
+
+
 @section('content')
+<style>
+    /* Force table layout to be fixed */
+   
+
+    /* Set a fixed width for each column */
+    #myTable th, #myTable td {
+        width: 160px; /* Adjust width as needed */
+        padding: 8px; /* Adjust spacing */
+        text-align: left;
+    }
+
+    /* Ensure table is scrollable on small screens */
+    
+</style>
     <div class="main-content-inner">
         <div class="main-content-wrap">
             <div class="flex items-center flex-wrap justify-between gap20 mb-27">
@@ -19,7 +37,7 @@
             </div>
             <div class="wg-box">
                 <div class="flex items-center justify-between gap10 flex-wrap">
-                    <div class="wg-filter flex-grow">
+                    {{-- <div class="wg-filter flex-grow">
                         <form class="form-search" method="GET" action="{{ route('l3-content.list') }}">
                             <fieldset class="name">
                                 <input type="text" placeholder="Search here..." name="search" tabindex="2"
@@ -29,7 +47,7 @@
                                 <button class="" type="submit"><i class="icon-search"></i></button>
                             </div>
                         </form>
-                    </div>
+                    </div> --}}
                     <a class="tf-button style-1 w208" href="{{ route('l3-content.create') }}">
                         <i class="icon-plus"></i>Add New
                     </a>
@@ -37,13 +55,13 @@
 
 
                 <div class="wg-box">
-                    <div class="table-responsive">
-                        <table class="table table-bordered table-striped">
+                    <div  class="table-responsive">
+                        <table id="myTable" class="table table-bordered table-striped">
                             <thead class="table-light">
                                 <tr>
                                     <th>#</th>
                                     <th>Page Category</th>
-                                    <th>Category</th>
+                                    <th>Course Category</th>
                                     <th>Sub Category</th>
                                     <th>L3 Category</th>
                                     <th>Title</th>
@@ -52,11 +70,11 @@
                                     <th>Course Feature Type</th>
                                     <th>Cyberwind Type</th>
                                     <th>Industry Type</th>
-                                    {{-- <th>Testimonials Type</th> --}}
+                                    <th>Testimonials Type</th>
                                     <th>Blog Category Type</th>
                                     <th>Faqs Type</th>
                                     <th>Actions</th>
-                                    
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -73,7 +91,7 @@
                                         <td>{{ optional($content->coursefeatureCategory)->name ?? 'N/A' }}</td>
                                         <td>{{ optional($content->cyberwindCategory)->name ?? 'N/A' }}</td>
                                         <td>{{ optional($content->industryCategory)->name ?? 'N/A' }}</td>
-                                        {{-- <td>{{ optional($content->testimonials)->name ?? 'N/A' }}</td> --}}
+                                        <td>{{ optional($content->testimonials)->name ?? 'N/A' }}</td>
                                         <td>{{ optional($content->blogCategory)->name ?? 'N/A' }}</td>
                                         <td>{{ optional($content->faqCategory)->name ?? 'N/A' }}</td>
                                         <td>
@@ -113,8 +131,13 @@
             </div>
         </div>
     </div>
-    @endsection
-    @push('scripts')
+@endsection
+@push('scripts')
+    {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
+
+    <!-- DataTables JS -->
+    {{-- <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script> --}}
+
     <script>
         $(document).ready(function() {
             // Handle delete button click
@@ -134,7 +157,7 @@
                         $.ajax({
                             url: "{{ route('l3-content.destroy', ':id') }}"
                                 .replace(':id',
-                                l3ContentId),
+                                    l3ContentId),
                             method: "DELETE",
                             data: {
                                 _token: "{{ csrf_token() }}" // CSRF Token
@@ -162,4 +185,21 @@
             });
         });
     </script>
+   <script>
+    $(document).ready(function() {
+        // Ensure that the table exists before initializing
+        if ($('#myTable').length) {
+            $('#myTable').DataTable({
+                "paging": true,        // Enables pagination
+                "searching": true,     // Enables search box
+                "ordering": false,     // Disables column sorting
+                "info": true,          // Shows table info
+                "processing": true,    // Displays a loading indicator
+                "deferRender": true    // Optimizes rendering for large datasets
+            });
+        } else {
+            console.error("Error: Table with ID 'myTable' not found!");
+        }
+    });
+</script>
 @endpush

@@ -16,10 +16,10 @@ class PageDetail extends Model
         return $this->hasMany(L3Category::class, 'page_category_id');
     }
     
-    // public function l3Contant()
-    // {
-    //     return $this->hasMany(L3ContentInfo::class, 'page_category_id');
-    // }
+    public function l3Contant()
+    {
+        return $this->hasMany(L3ContentInfo::class, 'page_category_id');
+    }
     
     public function seopageCategory()
     {
