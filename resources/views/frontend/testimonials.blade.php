@@ -257,7 +257,7 @@
     
                     // Initialize Owl Carousel
                     $carousel.owlCarousel({
-                        loop: false, // Disable loop if only 1 slide
+                        loop: true, // Disable loop if only 1 slide
                         margin: 20,
                         dots: isMobileView, // Show dots only on mobile
                         nav: totalSlides > 1, // Hide navigation if only 1 slide

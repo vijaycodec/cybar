@@ -130,3 +130,49 @@ ul#tabs-nav1 li {
 #template15 #tabs-nav1 li.active a, #template15 #tabs-nav1 li:hover a {
     color: #fff;
 }
+
+.vertical-text {
+    left: 30px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: center;
+    padding-bottom: 11%;
+    padding-top: 11%;
+    font-size: 30px;
+    color: #fff;
+    float: left;
+    margin-right: 0px;
+    margin-left: -120px;
+    background-color: #ccc;
+    font-style: italic;
+    font-weight: 550;
+}
+
+
+.newsletters .vertical-text {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background-color: lightblue;
+}
+.podcast .vertical-text {
+    padding-top: 8%;
+    padding-bottom: 8%;
+    background-color: lightgreen;
+}
+.events .vertical-text {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background-color: lightcoral;
+}
+
+.code-pagination{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.code-pagination li{
+    flex: 1 0 21%; /* Ensure consistent size */
+    box-sizing: border-box;
+    margin: 10px;
+    max-width: 21%; /* Prevent stretching */
+}
