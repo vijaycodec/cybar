@@ -36,6 +36,8 @@ use App\Http\Controllers\backend\SearchController;
 use App\Http\Controllers\backend\seoController;
 use App\Http\Controllers\frontend\careerViewController;
 use App\Http\Controllers\frontend\templateController;
+use App\Http\Controllers\frontend\NewsLetteViewsController;
+use App\Http\Controllers\frontend\PodcastController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -75,6 +77,9 @@ Route::middleware(['FrameGuard'])->group(function () {
     Route::post('/career/jobs', [jobCarrerController::class, 'store'])->name('job.career.store');
 
     Route::get('/search-resources', [SearchController::class, 'search']);
+
+    Route::get('/news-letter', [NewsLetteViewsController ::class, 'newLetterView'])->name('newLetter.View');
+    Route::get('/podcast', [PodcastController ::class, 'podcast'])->name('podcast.View')
 
 });
 
