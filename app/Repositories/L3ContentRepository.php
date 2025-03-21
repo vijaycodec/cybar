@@ -188,6 +188,11 @@ class L3ContentRepository implements L3ContentRepositoryInterface
                     if ($request->image) {
                         $l3ContentInfo->images = $this->uploadImage($request, 'program');
                     }
+                    if ($request->hasFile('brochure_pdf')) {
+                        // Validate PDF
+                        $l3ContentInfo->brochure_pdf = $this->uploadPDF($request, 'program');
+                    }
+
 
                     $l3ContentInfo->save(); //  Save modifications in `l3ContentInfo`
                 }
@@ -706,4 +711,54 @@ class L3ContentRepository implements L3ContentRepositoryInterface
 
         return $l3ContentInfo->delete(); // Return true if deletion succeeds
     }
+
+
+    private function uploadPDF(Request $request, $folder)
+{
+    // dd('ok');
+    if ($request->hasFile('brochure_pdf')) {
+        // Validate PDF file
+        $request->validate([
+            'brochure_pdf' => 'mimes:pdf|max:5120', // Only allow PDF files up to 5MB
+        ]);
+
+        $pdf = $request->file('brochure_pdf');
+
+        // Validate MIME type
+        $mimeType = mime_content_type($pdf->getPathname());
+        $allowedTypes = ['application/pdf'];
+
+        if (!in_array($mimeType, $allowedTypes, true)) {
+            throw new \Exception('Invalid file type detected');
+        }
+
+        // Prevent directory traversal
+        $folder = basename($folder);
+
+        // Validate file name
+        $originalName = preg_replace('/[^a-zA-Z0-9._-]/', '', $pdf->getClientOriginalName());
+        if (preg_match('/\.(php|exe|sh|bat|phtml|jsp|asp|aspx|cgi|pl)$/i', $originalName)) {
+            throw new \Exception('Disallowed file type');
+        }
+
+        // Limit file name length
+        if (strlen($originalName) > 255) {
+            throw new \Exception('File name too long');
+        }
+
+        // Enforce safe naming convention
+        $originalName = str_replace(" ", "_", $originalName);
+
+        // Generate a unique filename
+        $file_name = md5(uniqid()) . '.pdf';
+
+        // Store file securely
+        $path = $pdf->storeAs("uploads/frontend/l3_template/{$folder}", $file_name, 'public');
+
+        return $file_name;
+    }
+
+    return null;
+}
+
 }

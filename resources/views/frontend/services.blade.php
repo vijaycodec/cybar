@@ -90,7 +90,7 @@
                                                                     <div class="cn-hover-box">
                                                                         <div class="cn-hover-img">
                                                                             <img
-                                                                                src="{{ asset('uploads/backend/services/' . $service->images) }}">
+                                                                                src="{{ asset('storage/uploads/backend/services/' . $service->images) }}">
                                                                         </div>
                                                                         <div class="cn-content">
                                                                             <p>{{ $service->description }}</p>
@@ -143,7 +143,7 @@
                                         <div class="empower-industry-box">
                                             <div class="cn-hover-box">
                                                 <div class="cn-hover-img">
-                                                    <img src="{{ asset('uploads/backend/services/' . $service->images) }}"
+                                                    <img src="{{ asset('/storage/uploads/backend/services/' . $service->images) }}"
                                                         alt="{{ $service->subcategory->sub_category }}">
                                                 </div>
                                                 <div class="cn-content">
@@ -161,7 +161,7 @@
                                 @endforeach
                             </div>
         
-                            <!-- ✅ Counter for this slider -->
+                            <!-- âœ… Counter for this slider -->
                             <div id="navigation-count{{ $index + 1 }}-{{ $chunkIndex + 1 }}" class="count-nav-box counter-space">
                                 1/{{ count($serviceChunk) }}
                             </div>
@@ -340,7 +340,7 @@
                 );
             }
 
-            // 🚀 **Automatically Initialize All Carousels**
+            // ðŸš€ **Automatically Initialize All Carousels**
             $("[id^=ser-demo]").each(function() {
                 let sliderId = $(this).attr("id");
                 let countId = sliderId.replace("ser-demo",
@@ -388,12 +388,12 @@
 
             console.log("Slider: " + navigationCountId + " | Current: " + currentIndex + " / " + totalItems);
 
-            // ✅ Update counter dynamically
+            // âœ… Update counter dynamically
             $countDisplay.text(currentIndex + "/" + totalItems);
         }
     }
 
-    // ✅ Automatically initialize all carousels
+    // âœ… Automatically initialize all carousels
     $("[id^='ser-demo']").each(function () {
         let carouselId = $(this).attr("id");
         let counterId = carouselId.replace("ser-demo", "navigation-count");

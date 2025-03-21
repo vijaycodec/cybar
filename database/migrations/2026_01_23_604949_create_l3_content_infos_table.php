@@ -18,6 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('sub_category_id');
             $table->string('images')->nullable(); 
+            $table->string('brochure_pdf')->nullable();
             //overview section columns
             $table->text('overview_title')->nullable();
             $table->text('overview_description')->nullable();  //   Overview description
