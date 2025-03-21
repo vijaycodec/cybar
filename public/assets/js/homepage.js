@@ -48,7 +48,7 @@ $("#home-slider1, #home-slider2, #home-slider3, #home-slider4, #home-slider5, #h
 
  // review
  $("#client-testimonials").owlCarousel({
-    loop: false,
+    loop: true,
     margin: 10,
     nav: true,
     dots: true,
