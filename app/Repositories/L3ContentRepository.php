@@ -38,7 +38,7 @@ class L3ContentRepository implements L3ContentRepositoryInterface
 
     public function getAllL3Contents()
     {
-        return L3ContentInfo::all();
+        return L3ContentInfo::with('pageCategory', 'category', 'subCategory')->get();
     }
 
     public function getCreateData()

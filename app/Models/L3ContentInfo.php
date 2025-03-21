@@ -15,7 +15,7 @@ class L3ContentInfo extends Model
         'sub_category_id',
         'l3_category_id',
     ];
-    
+
     public function l3Category()
     {
         return $this->belongsTo(L3Category::class, 'l3_category_id', 'id');
@@ -78,18 +78,32 @@ class L3ContentInfo extends Model
 
     public function testimonials()
     {
-        return $this->hasMany(TestimonialDetails::class, 'l3_content_info_id','id');
+        return $this->hasMany(TestimonialDetails::class, 'l3_content_info_id', 'id');
     }
 
-        // Relationship: L3ContentInfo belongs to a Program Category
-        public function programCategory()
-        {
-            return $this->belongsTo(ProgramCategory::class, 'program_category_id');
-        }
+    // Relationship: L3ContentInfo belongs to a Program Category
+    public function programCategory()
+    {
+        return $this->belongsTo(ProgramCategory::class, 'program_category_id');
+    }
 
-        public function programSubCategory()
-        {
-            return $this->hasOne(ProgramSubCategory::class, 'sub_category_id', 'sub_category_id');
-        }
-    
+    public function programSubCategory()
+    {
+        return $this->hasOne(ProgramSubCategory::class, 'sub_category_id', 'sub_category_id');
+    }
+
+    public function pageCategory()
+    {
+        return $this->belongsTo(PageDetail::class, 'page_category_id');
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(CourseCategory::class, 'category_id');
+    }
+
+    public function subcategory()
+    {
+        return $this->belongsTo(SubCategory::class, 'sub_category_id');
+    }
 }
