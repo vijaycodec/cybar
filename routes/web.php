@@ -79,7 +79,7 @@ Route::middleware(['FrameGuard'])->group(function () {
     Route::get('/search-resources', [SearchController::class, 'search']);
 
     Route::get('/news-letter', [NewsLetteViewsController ::class, 'newLetterView'])->name('newLetter.View');
-    Route::get('/podcast', [PodcastController ::class, 'podcast'])->name('podcast.View')
+    Route::get('/podcast', [PodcastController ::class, 'podcast'])->name('podcast.View');
 
 });
 
