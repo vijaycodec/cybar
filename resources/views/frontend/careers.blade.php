@@ -554,7 +554,7 @@
                 $carousel.owlCarousel({
                     loop: false, // Loop only if more than 1 slide
                     margin: 20,
-                    dots: true,
+                    dots: false,
                     nav: totalSlides > 1, // Show nav only if more than 1 slide
                     navText: [
                         "<i class='fa fa-angle-left'></i>",
