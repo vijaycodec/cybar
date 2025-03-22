@@ -91,13 +91,14 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <h3>Vulnerability Assesement &amp; Penetration Testing</h3>
-                                <p>Services to ensure the Integrity of Information Systems, Softwares & Applications, block
-                                    illegal
-                                    access and protect organizations against data theft, productivity loss and fraud.
-                                </p>
-                                <a href="https://www.cybarwind.com/new-demo/asaraf/codec/second-level.php">Know more <i
-                                        class="fa fa-chevron-right"></i></a>
+                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                    <h3>Vulnerability Assesement &amp; Penetration Testing</h3>
+                                    <p>Services to ensure the Integrity of Information Systems, Softwares & Applications, block
+                                        illegal
+                                        access and protect organizations against data theft, productivity loss and fraud.
+                                    </p>
+                                    Know more <i class="fa fa-chevron-right"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -114,6 +115,7 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
+                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                 <h3>Digital Forensic &amp; Cyber Fraud Management</h3>
                                 <p>Identify and resolve Ecrime incidents that adversely impact organizations with cybercrime
                                     /
@@ -121,6 +123,7 @@
                                 </p>
                                 <a href="https://www.cybarwind.com/new-demo/asaraf/codec/AIML.php">Know more <i
                                         class="fa">&#xf054;</i></a>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -136,6 +139,7 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
+                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                 <h3>SOC (Security Operation Center) as a Service</h3>
                                 <p>Provides round-the-clock proactive event monitoring with prioritized alert notification &
                                     threat
@@ -143,6 +147,7 @@
                                 </p>
                                 <a href="https://www.cybarwind.com/new-demo/cns/sample1.php">Know more <i
                                         class="fa">&#xf054;</i></a>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -985,8 +990,10 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <h3>Vulnerability Assesement &amp; Penetration Testing</h3>
-                                <a href="#">Know more <i class="fa">&#xf054;</i></a>
+                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                    <h3>Vulnerability Assesement &amp; Penetration Testing</h3>
+                                    Know more <i class="fa">&#xf054;</i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1003,8 +1010,10 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <h3>IT Security Audit, Risk & Compliance</h3>
-                                <a href="#">Know more <i class="fa">&#xf054;</i></a>
+                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                    <h3>IT Security Audit, Risk & Compliance</h3>
+                                    Know more <i class="fa">&#xf054;</i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1021,8 +1030,10 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <h3>Managed IT Security Solutions</h3>
-                                <a href="#">Know more <i class="fa">&#xf054;</i></a>
+                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                    <h3>Managed IT Security Solutions</h3>
+                                    Know more <i class="fa">&#xf054;</i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1039,8 +1050,10 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <h3>Digital Forensic &amp; Cyber Fraud Management</h3>
-                                <a href="#">Know more <i class="fa">&#xf054;</i></a>
+                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                    <h3>Digital Forensic &amp; Cyber Fraud Management</h3>
+                                    Know more <i class="fa">&#xf054;</i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1056,8 +1069,10 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <h3>SOC (Security Operation Center) as a Service</h3>
-                                <a href="#">Know more <i class="fa">&#xf054;</i></a>
+                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                    <h3>SOC (Security Operation Center) as a Service</h3>
+                                    Know more <i class="fa">&#xf054;</i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1080,8 +1095,10 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <h3>IT Security Audit, Risk & Compliance</h3>
-                                <a href="#">Know more <i class="fa">&#xf054;</i></a>
+                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                    <h3>IT Security Audit, Risk & Compliance</h3>
+                                    Know more <i class="fa">&#xf054;</i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1098,8 +1115,10 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <h3>Vulnerability Assesement &amp; Penetration Testing</h3>
-                                <a href="#">Know more <i class="fa">&#xf054;</i></a>
+                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                    <h3>Vulnerability Assesement &amp; Penetration Testing</h3>
+                                    Know more <i class="fa">&#xf054;</i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1116,8 +1135,10 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <h3>Managed IT Security Solutions</h3>
-                                <a href="#">Know more <i class="fa">&#xf054;</i></a>
+                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                    <h3>Managed IT Security Solutions</h3>
+                                    Know more <i class="fa">&#xf054;</i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1134,8 +1155,10 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <h3>Digital Forensic &amp; Cyber Fraud Management</h3>
-                                <a href="#">Know more <i class="fa">&#xf054;</i></a>
+                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                    <h3>Digital Forensic &amp; Cyber Fraud Management</h3>
+                                    Know more <i class="fa">&#xf054;</i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1151,8 +1174,10 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <h3>SOC (Security Operation Center) as a Service</h3>
-                                <a href="#">Know more <i class="fa">&#xf054;</i></a>
+                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                    <h3>SOC (Security Operation Center) as a Service</h3>
+                                    Know more <i class="fa">&#xf054;</i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -2619,8 +2644,10 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <h3>Vulnerability Assesement &amp; Penetration Testing</h3>
-                                <a href="#">Know more <i class="fa">&#xf054;</i></a>
+                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                    <h3>Vulnerability Assesement &amp; Penetration Testing</h3>
+                                    Know more <i class="fa">&#xf054;</i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -2637,8 +2664,10 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <h3>IT Security Audit, Risk & Compliance</h3>
-                                <a href="#">Know more <i class="fa">&#xf054;</i></a>
+                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                    <h3>IT Security Audit, Risk & Compliance</h3>
+                                    Know more <i class="fa">&#xf054;</i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -2655,8 +2684,10 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <h3>Managed IT Security Solutions</h3>
-                                <a href="#">Know more <i class="fa">&#xf054;</i></a>
+                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                    <h3>Managed IT Security Solutions</h3>
+                                    Know more <i class="fa">&#xf054;</i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -2673,8 +2704,10 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <h3>Digital Forensic &amp; Cyber Fraud Management</h3>
-                                <a href="#">Know more <i class="fa">&#xf054;</i></a>
+                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                    <h3>Digital Forensic &amp; Cyber Fraud Management</h3>
+                                    Know more <i class="fa">&#xf054;</i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -2690,8 +2723,10 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <h3>SOC (Security Operation Center) as a Service</h3>
-                                <a href="#">Know more <i class="fa">&#xf054;</i></a>
+                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                    <h3>SOC (Security Operation Center) as a Service</h3>
+                                    Know more <i class="fa">&#xf054;</i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -2714,8 +2749,10 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <h3>Digital Forensic &amp; Cyber Fraud Management</h3>
-                                <a href="#">Know more <i class="fa">&#xf054;</i></a>
+                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                    <h3>Digital Forensic &amp; Cyber Fraud Management</h3>
+                                    Know more <i class="fa">&#xf054;</i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -2732,8 +2769,10 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <h3>IT Security Audit, Risk & Compliance</h3>
-                                <a href="#">Know more <i class="fa">&#xf054;</i></a>
+                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                    <h3>IT Security Audit, Risk & Compliance</h3>
+                                    Know more <i class="fa">&#xf054;</i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -2750,8 +2789,10 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <h3>Vulnerability Assesement &amp; Penetration Testing</h3>
-                                <a href="#">Know more <i class="fa">&#xf054;</i></a>
+                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                    <h3>Vulnerability Assesement &amp; Penetration Testing</h3>
+                                    Know more <i class="fa">&#xf054;</i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -2768,8 +2809,10 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <h3>Managed IT Security Solutions</h3>
-                                <a href="#">Know more <i class="fa">&#xf054;</i></a>
+                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                    <h3>Managed IT Security Solutions</h3>
+                                    Know more <i class="fa">&#xf054;</i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -2785,8 +2828,10 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <h3>SOC (Security Operation Center) as a Service</h3>
-                                <a href="#">Know more <i class="fa">&#xf054;</i></a>
+                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                    <h3>SOC (Security Operation Center) as a Service</h3>
+                                    Know more <i class="fa">&#xf054;</i>
+                                </a>
                             </div>
                         </div>
                     </div>
