@@ -125,8 +125,7 @@
                                         /
                                         online fraud and proactively manage 24x7 hours security risks.
                                     </p>
-                                    <a href="https://www.cybarwind.com/new-demo/asaraf/codec/AIML.php">Know more <i
-                                            class="fa">&#xf054;</i></a>
+                                    Know more <i class="fa">&#xf054;</i>
                                 </a>
                             </div>
                         </div>
@@ -150,8 +149,7 @@
                                         threat
                                         mitigation.
                                     </p>
-                                    <a href="https://www.cybarwind.com/new-demo/cns/sample1.php">Know more <i
-                                            class="fa">&#xf054;</i></a>
+                                    Know more <i class="fa">&#xf054;</i>
                                 </a>
                             </div>
                         </div>
