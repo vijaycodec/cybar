@@ -60,7 +60,7 @@
                             <!-- Image preview container -->
                             <div class="item" id="imgpreview" style="text-align: center;">
                                 @if ($blogs->images)
-                                    <img src="{{ asset('uploads/backend/blog/' . $blogs->images) }}" id="preview-img"
+                                    <img src="{{ asset('storage/uploads/backend/blog/' . $blogs->images) }}" id="preview-img"
                                         class="effect8" alt="Preview Image" style="max-width: 50%; height: auto;">
                                     <!-- Adjusted image width -->
                                     <button type="button" id="deleteImage" class="delete-btn">Delete</button>

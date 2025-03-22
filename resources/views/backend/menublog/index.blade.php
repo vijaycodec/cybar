@@ -57,7 +57,7 @@
                                         <td>{{ $blog->slug ?? 'N/A' }}</td>    
                                         <td>
                                             @if ($blog->images)
-                                                <img src="{{ asset('uploads/backend/blog/' . $blog->images) }}"
+                                                <img src="{{ asset('storage/uploads/backend/blog/' . $blog->images) }}"
                                                     alt="blog Image" width="100">
                                             @else
                                                 <span>No image available</span>
