@@ -226,6 +226,54 @@
                                     <a href="javascript:void(0);" class="menu-item-button">
                                         <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
                                                 style="height:18px"></div>
+                                        <div class="text">News Latters</div>
+                                    </a>
+            
+                                    <ul class="sub-menu">
+                                        <li class="sub-menu-item">
+                                            <a href="{{ route('newsletter.list') }}" class="">
+                                                <div class="text"> News Latters List</div>
+                                            </a>
+                                        </li>
+            
+            
+                                        <li class="sub-menu-item">
+                                            <a href="{{ route('newsletter.create') }}" class="">
+                                                <div class="text">Add News Latters</div>
+                                            </a>
+                                        </li>
+            
+                                    </ul>
+                                </li>
+
+                                <li class="menu-item has-children">
+                                    <a href="javascript:void(0);" class="menu-item-button">
+                                        <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
+                                                style="height:18px"></div>
+                                        <div class="text">Podcasts</div>
+                                    </a>
+            
+                                    <ul class="sub-menu">
+                                        <li class="sub-menu-item">
+                                            <a href="{{ route('podcast.list') }}" class="">
+                                                <div class="text"> News Podcasts List</div>
+                                            </a>
+                                        </li>
+            
+            
+                                        <li class="sub-menu-item">
+                                            <a href="{{ route('podcast.create') }}" class="">
+                                                <div class="text">Add Podcasts</div>
+                                            </a>
+                                        </li>
+            
+                                    </ul>
+                                </li>
+
+                                <li class="menu-item has-children">
+                                    <a href="javascript:void(0);" class="menu-item-button">
+                                        <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
+                                                style="height:18px"></div>
                                         <div class="text">Course Categories</div>
                                     </a>
             

@@ -69,7 +69,7 @@
                                                     <a href="{{ route('blog-view', $blog->id) }}">
                                                         <div class="template15-wrap-main">
                                                             <div class="template15-wrap-main-img">
-                                                                <img src="{{ asset('uploads/backend/blog/' . $blog->images) }}" />
+                                                                <img src="{{ asset('storage/uploads/backend/blog/' . $blog->images) }}" />
                                                             </div>
                                                             <div class="template15-wrap-main-content">
                                                                 <span><i>{{ $blog->created_at->format('d M Y') }}</i></span>

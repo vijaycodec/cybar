@@ -39,6 +39,7 @@ class MenuEventRepository implements MenuEventRepositoryInterface
     {
         $event = new MenuEvent();
         $event->category_id = $data['category_id'];
+        $event->sub_category = $data['sub_category'];
         $event->short_desc = $data['short_desc'];
         $event->description = $data['description'];
         $event->video_url = $data ['video_url'];
@@ -56,6 +57,7 @@ class MenuEventRepository implements MenuEventRepositoryInterface
     {
         $event = MenuEvent::findOrFail($id);
         $event->category_id = $data['category_id'];
+        $event->sub_category = $data['sub_category'];
         $event->short_desc = $data['short_desc'];
         $event->description = $data['description'];
         $event->video_url = $data ['video_url'];

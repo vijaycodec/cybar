@@ -39,8 +39,8 @@
                             <tr>
                                 <th>#</th>
                                 <th>Category Name</th>
+                                <th> Sub Category Name</th>
                                 <th>Image</th>
-                                <th>Video Url</th>
                                 <th>Short Description</th>
                                 <th>Description</th>
                                 <th>Action</th>
@@ -52,6 +52,7 @@
                                 <tr>
                                     <td>{{ $event->id }}</td>
                                     <td>{{ $event->category->name ?? 'N/A' }}</td> <!-- Using the relationship -->
+                                    <td>{{ $event->sub_category ?? 'N/A' }}</td>
                                     <td>
                                         @if ($event->images)
                                             <img src="{{ asset('storage/uploads/backend/event/' . $event->images) }}"
@@ -60,7 +61,6 @@
                                             <span>No image available</span>
                                         @endif
                                     </td>
-                                    <td>{{ $event->video_url ?? 'N/A' }}</td> 
                                     <td style="max-width: 400px;"> <!-- Increase width here -->
                                         <!-- Short description (up to 10 words) -->
                                         <span>{{ $event->short_desc }}</span>

@@ -21,12 +21,16 @@ use App\Repositories\Interfaces\ResourceRepositoryInterface;
 use App\Repositories\Interfaces\ServicesRepositoryInterface;
 use App\Repositories\Interfaces\TestimonialRepositoryInterface;
 use App\Repositories\Interfaces\UploadServiceInterface;
+use App\Repositories\Interfaces\NewsLetterRepositoryInterface;
+use App\Repositories\Interfaces\PodcastRepositoryInterface;
 use App\Repositories\L3CategoryRepository;
 use App\Repositories\MenuBlogRepository;
 use App\Repositories\MenuEventRepository;
+use App\Repositories\NewsLetterRepository;
 use App\Repositories\ResourceRepository;
 use App\Repositories\ServicesRepository;
 use App\Repositories\TestimonialRepository;
+use App\Repositories\PodcastRepository;
 use App\Services\ImageService;
 
 class AppServiceProvider extends ServiceProvider
@@ -45,6 +49,8 @@ class AppServiceProvider extends ServiceProvider
     $this->app->bind(MenuEventRepositoryInterface::class,MenuEventRepository::class);
     $this->app->bind(TestimonialRepositoryInterface::class,TestimonialRepository::class);
     $this->app->bind(CareerRepositoryInterface::class,CareerRepository::class);
+    $this->app->bind(NewsLetterRepositoryInterface::class, NewsLetterRepository::class);
+    $this->app->bind(PodcastRepositoryInterface::class, PodcastRepository::class);
     $this->app->bind(ResourceRepositoryInterface::class,ResourceRepository::class);
       // Bind the upload service interface to its implementation category Repository
     $this->app->bind(UploadServiceInterface::class,ImageService::class);  // comman for image upload ,delete service

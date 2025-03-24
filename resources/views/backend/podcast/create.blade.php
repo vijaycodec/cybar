@@ -3,10 +3,11 @@
 @section('content')
     <!-- Include Summernote CSS and JS -->
 
+
     <div class="main-content-inner">
         <div class="main-content-wrap">
             <div class="flex items-center flex-wrap justify-between gap20 mb-27">
-                <h3>Event Information</h3>
+                <h3>Podcats Information</h3>
                 <ul class="breadcrumbs flex items-center flex-wrap justify-start gap10">
                     <li>
                         <a href="#">
@@ -14,16 +15,16 @@
                         </a>
                     </li>
                     <li><i class="icon-chevron-right"></i></li>
-                    <li><a href="#"><div class="text-tiny">Event</div></a></li>
+                    <li><a href="#"><div class="text-tiny">Podcats</div></a></li>
                     <li><i class="icon-chevron-right"></i></li>
-                    <li><div class="text-tiny">New Event</div></li>
+                    <li><div class="text-tiny">New Podcats</div></li>
                 </ul>
             </div>
 
             <div class="wg-box">
-                <form class="form-new-brand form-style-1" action="{{ route('menuevent.store') }}" method="POST" enctype="multipart/form-data">
+                <form class="form-new-brand form-style-1" action="{{ route('podcast.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
-                    <a class="tf-button style-1 w208" style="padding-left: 75px;" href=" {{ route('menuevent.list') }}">
+                    <a class="tf-button style-1 w208" style="padding-left: 75px;" href=" {{ route('podcast.list') }}">
                         Back</a>
                     <fieldset class="name">
                         <div class="body-title">Select Category <span class="tf-color-1">*</span></div>
@@ -34,20 +35,26 @@
                             @endforeach
                         </select>
                     </fieldset>
-
                     <fieldset class="name">
                         <div class="body-title"> sub Category Name <span class="tf-color-1">*</span></div>
                         <input class="flex-grow" id="categorySelect" type="text" placeholder="Category Name" name="sub_category" tabindex="0"
                             value="{{ old('sub_category') }}" aria-required="true" required="">
                     </fieldset>
-                    
+
+                    <fieldset class="name">
+                        <div class="body-title">Category Slug <span class="tf-color-1">*</span></div>
+                        <input class="flex-grow" id="categorySlug" type="text" placeholder="Category Name" name="slug"
+                            tabindex="0" value="{{ old('slug') }}" aria-required="true" required readonly>
+                    </fieldset>
+
                     <fieldset class="name">
                         <div class="body-title"> Video URL  <span class="tf-color-1">*</span></div>
                         <input class="flex-grow" type="text" placeholder="Video URL" name="video_url" tabindex="0"
                             value="{{ old('video_url') }}" aria-required="true" >
                     </fieldset>
+
                     <fieldset>
-                        <div class="body-title">Upload thumbnails images <span class="tf-color-1">*</span></div>
+                        <div class="body-title">Upload images <span class="tf-color-1">*</span></div>
                         <div class="upload-image flex-grow">
                             <!-- Image preview container -->
                             <div class="item" id="imgpreview" style="display:none; text-align: center;">
@@ -65,7 +72,7 @@
                     </fieldset>
                     <fieldset class="name">
                         <div class="body-title">Short Description <span class="tf-color-1">*</span></div>
-                        <textarea class="flex-grow" style="height:90px;" placeholder="Short Description" name="short_desc" tabindex="0"
+                        <textarea class="flex-grow"  style="height:90px;" placeholder="Short Description" name="short_desc" tabindex="0"
                             value="" aria-required="true" required="">{{ old('short_desc') }}
                         </textarea>
                     </fieldset>
@@ -84,4 +91,25 @@
         </div>
     </div>
 @endsection
+
+@push('scripts')
+    <!-- jQuery script to generate slug on change -->
+    <script>
+        $(document).ready(function() {
+            function slugify(text) {
+                return text.toString().toLowerCase()
+                    .trim()
+                    .replace(/\s+/g, '-') // Replace spaces with hyphens
+                    .replace(/[^\w\-]+/g, '') // Remove all non-word characters
+                    .replace(/\-\-+/g, '-'); // Replace multiple hyphens with single hyphen
+            }
+
+            $('#categorySelect').on('input', function() {
+                var title = $(this).val();
+                var slug = slugify(title);
+                $('#categorySlug').val(slug); // Set generated slug in the input field
+            });
+        });
+    </script>
+@endpush
 

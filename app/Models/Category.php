@@ -5,7 +5,6 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-
 class Category extends Model
 {
 
@@ -37,5 +36,15 @@ class Category extends Model
     {
         return $this->hasMany(Career::class);
 
+    }
+
+    public function newsletters()
+    {
+        return $this->hasMany(NewsLetter::class);
+    }
+
+    public function prodcasts()
+    {
+        return $this->hasMany(Podcast::class);
     }
 }

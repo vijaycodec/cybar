@@ -32,6 +32,7 @@ use App\Http\Controllers\backend\menutestimonialController;
 use App\Http\Controllers\backend\careerController  as BackendCareerController;
 use App\Http\Controllers\backend\EnquiryController;
 use App\Http\Controllers\backend\jobCarrerController;
+use App\Http\Controllers\Backend\NewsLetterController;
 use App\Http\Controllers\backend\SearchController;
 use App\Http\Controllers\backend\seoController;
 use App\Http\Controllers\frontend\BrochurePdfController;
@@ -39,8 +40,7 @@ use App\Http\Controllers\frontend\careerViewController;
 use App\Http\Controllers\frontend\templateController;
 use App\Http\Controllers\frontend\NewsLetteViewsController;
 use App\Http\Controllers\frontend\PodcastController;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\Response;
+use App\Http\Controllers\backend\podcastController as BackendPodcastController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -81,7 +81,8 @@ Route::middleware(['FrameGuard'])->group(function () {
 
     Route::get('/search-resources', [SearchController::class, 'search']);
 
-    Route::get('/news-letter', [NewsLetteViewsController ::class, 'newLetterView'])->name('newLetter.View');
+    Route::get('/news-letter/{id?}', [NewsLetteViewsController ::class, 'newLetterView'])->name('newLetter.View'); //trendingNewsLetterView
+    Route::get('/newsletter/view-trending/{id?}', [NewsLetteViewsController::class, 'trendingNewsLetterView'])->name('newsletter-view-trending');
     Route::get('/podcast', [PodcastController ::class, 'podcast'])->name('podcast.View');
 
     Route::get('/download-brochure/{file}', [BrochurePdfController::class, 'download'])
@@ -229,6 +230,24 @@ Route::middleware(['auth','admin','prevent_history'])->group(function () {
      // L3 category and sub-category Dependent Routes 
      Route::get('/seo-get-categories', [seoController::class, 'SeoGetCategories'])->name('seo-get-categories');
      Route::get('/seo-get-subcategories', [seoController::class, 'SeoGetSubCategories'])->name('seo-get-subcategories');
+
+     // newsletter Routes
+    route::get('/newsletter/list', [NewsLetterController::class, 'index'])->name('newsletter.list');
+    route::get('/newsletter/create', [newsLetterController::class, 'create'])->name('newsletter.create');
+    route::post('/newsletter/store', [newsLetterController::class, 'store'])->name('newsletter.store');
+    Route::get('/newsletter/show/{id}', [newsLetterController::class, 'show'])->name('newsletter.show');
+    route::get('/newsletter/edit/{id}', [newsLetterController::class, 'edit'])->name('newsletter.edit');
+    Route::put('newsletter/update/{id}', [newsLetterController::class, 'update'])->name('newsletter.update');
+    Route::delete('newsletter/delete/{id}', [newsLetterController::class, 'destroy'])->name('newsletter.destroy');
+
+    // prodcast Routes
+    route::get('/podcast/list', [BackendPodcastController::class, 'index'])->name('podcast.list');
+    route::get('/podcast/create', [BackendPodcastController::class, 'create'])->name('podcast.create');
+    route::post('/podcast/store', [BackendPodcastController::class, 'store'])->name('podcast.store');
+    Route::get('/podcast/show/{id}', [BackendPodcastController::class, 'show'])->name('podcast.show');
+    route::get('/podcast/edit/{id}', [BackendPodcastController::class, 'edit'])->name('podcast.edit');
+    Route::put('podcast/update/{id}', [BackendPodcastController::class, 'update'])->name('podcast.update');
+    Route::delete('podcast/delete/{id}', [BackendPodcastController::class, 'destroy'])->name('podcast.destroy');
 
 });
 
