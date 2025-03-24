@@ -3,7 +3,7 @@
 namespace App\Repositories;
 
 use App\Models\Category;
-use App\Models\Newsletter;
+use App\Models\NewsLetter;
 use App\Repositories\Interfaces\NewsLetterRepositoryInterface;
 use App\Repositories\Interfaces\UploadServiceInterface;
 use Illuminate\Http\Request;
@@ -20,13 +20,13 @@ class NewsLetterRepository implements NewsLetterRepositoryInterface
     public function getAllNewsletters()
     {
         // return Newsletter::all();
-        return Newsletter::with('category')->orderBy('id', 'ASC')->paginate(10);
+        return NewsLetter::with('category')->orderBy('id', 'ASC')->paginate(10);
     }
 
     public function getNewsletterById($id)
     {
         //return Newsletter::findOrFail($id);
-        return Newsletter::with('category')->findOrFail($id);
+        return NewsLetter::with('category')->findOrFail($id);
     }
 
     public function getCategoriesByType(string $type)
@@ -37,7 +37,7 @@ class NewsLetterRepository implements NewsLetterRepositoryInterface
     public function createNewsletter(array $data, Request $request)
     {
         // return Newsletter::create($data);
-        $newsletter = new Newsletter();
+        $newsletter = new NewsLetter();
         $newsletter->category_id = $data['category_id'];
         $newsletter->sub_category = $data['sub_category'];
         $newsletter->slug = $data['slug'];
@@ -57,7 +57,7 @@ class NewsLetterRepository implements NewsLetterRepositoryInterface
     {
         // $newsletter = Newsletter::findOrFail($id);
         // return $newsletter->update($data);
-        $newsletter = Newsletter::findOrFail($id);
+        $newsletter = NewsLetter::findOrFail($id);
         $newsletter->category_id = $data['category_id'];
         $newsletter->sub_category = $data['sub_category'];
         $newsletter->slug = $data['slug'];
@@ -78,7 +78,7 @@ class NewsLetterRepository implements NewsLetterRepositoryInterface
 
     public function deleteNewsletter($id)
     {
-        $newsletter = Newsletter::findOrFail($id);
+        $newsletter = NewsLetter::findOrFail($id);
         // Delete the existing image from storage (pass folder first, then file name)
         if ($newsletter->images) {
             $this->uploadService->deleteImage($newsletter->images,'newsletter' );
