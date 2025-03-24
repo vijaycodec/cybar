@@ -32,7 +32,7 @@ use App\Http\Controllers\backend\menutestimonialController;
 use App\Http\Controllers\backend\careerController  as BackendCareerController;
 use App\Http\Controllers\backend\EnquiryController;
 use App\Http\Controllers\backend\jobCarrerController;
-use App\Http\Controllers\Backend\NewsLetterController;
+use App\Http\Controllers\backend\NewsLetterController;
 use App\Http\Controllers\backend\SearchController;
 use App\Http\Controllers\backend\seoController;
 use App\Http\Controllers\frontend\BrochurePdfController;
@@ -233,12 +233,12 @@ Route::middleware(['auth','admin','prevent_history'])->group(function () {
 
      // newsletter Routes
     route::get('/newsletter/list', [NewsLetterController::class, 'index'])->name('newsletter.list');
-    route::get('/newsletter/create', [newsLetterController::class, 'create'])->name('newsletter.create');
-    route::post('/newsletter/store', [newsLetterController::class, 'store'])->name('newsletter.store');
-    Route::get('/newsletter/show/{id}', [newsLetterController::class, 'show'])->name('newsletter.show');
-    route::get('/newsletter/edit/{id}', [newsLetterController::class, 'edit'])->name('newsletter.edit');
-    Route::put('newsletter/update/{id}', [newsLetterController::class, 'update'])->name('newsletter.update');
-    Route::delete('newsletter/delete/{id}', [newsLetterController::class, 'destroy'])->name('newsletter.destroy');
+    route::get('/newsletter/create', [NewsLetterController::class, 'create'])->name('newsletter.create');
+    route::post('/newsletter/store', [NewsLetterController::class, 'store'])->name('newsletter.store');
+    Route::get('/newsletter/show/{id}', [NewsLetterController::class, 'show'])->name('newsletter.show');
+    route::get('/newsletter/edit/{id}', [NewsLetterController::class, 'edit'])->name('newsletter.edit');
+    Route::put('newsletter/update/{id}', [NewsLetterController::class, 'update'])->name('newsletter.update');
+    Route::delete('newsletter/delete/{id}', [NewsLetterController::class, 'destroy'])->name('newsletter.destroy');
 
     // prodcast Routes
     route::get('/podcast/list', [BackendPodcastController::class, 'index'])->name('podcast.list');

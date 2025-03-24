@@ -42,6 +42,7 @@
                         <thead class="table-light">
                             <tr>
                                 <th>#</th>
+                                <th>Image</th>
                                 <th>Category</th>
                                 <th>Sub-category</th>
                                 <th>Description</th>
@@ -55,6 +56,14 @@
                                     <tr>
                                         {{-- <td>{{ $loop->iteration }}</td> --}}
                                         <td>{{ $training->id }}</td>
+                                        <td>
+                                            @if ($training->images)
+                                                <img src="{{ asset('storage/uploads/backend/trainings/' . $training->images) }}"
+                                                    alt="service Image" width="100">
+                                            @else
+                                                <span>No image available</span>
+                                            @endif
+                                        </td>
                                         <td>{{ $training->course_category->name }}</td>
                                         <td>{{ $training->subcategory->sub_category }}</td>
                                         <td>{{ $training->description }}</td>
