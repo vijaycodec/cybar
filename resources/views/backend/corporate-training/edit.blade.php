@@ -53,7 +53,7 @@
                             <!-- Image preview container -->
                             <div class="item" id="imgpreview" style="text-align: center;">
                                 @if ($corporateTraining->images)
-                                    <img src="{{ asset('uploads/backend/corporate_training/' . $corporateTraining->images) }}"
+                                    <img src="{{ asset('storage/uploads/backend/trainings/' . $corporateTraining->images) }}"
                                         id="preview-img" class="effect8" alt="Preview Image"
                                         style="max-width: 50%; height: auto;">
                                     <!-- Adjusted image width -->

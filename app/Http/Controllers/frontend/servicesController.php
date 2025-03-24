@@ -22,7 +22,7 @@ class servicesController extends Controller
         $page_id = 1;
         $page_name ='services';
 
-        $services = $this->servicesRepository->getAllServices();
+        $trainings = $this->servicesRepository->getAllServices();
         $groupedServices = $this->servicesRepository->getGroupedServices();
         $categories = $this->servicesRepository->getCategoriesByPage($page_id);
 
@@ -47,7 +47,7 @@ class servicesController extends Controller
             $seoData['google_analytics'] = $seoDetails->google_analytics;
         }
 
-        return view('frontend.services', compact('categories', 'services', 'page_id', 'groupedServices','seoData'));
+        return view('frontend.training', compact('categories', 'trainings', 'page_id', 'groupedServices','seoData'));
     }
 
 //     public function getServices(Request $request , $category = null)

@@ -6,9 +6,18 @@ use App\Models\CorporateTraining;
 use App\Models\CourseCategory;
 use App\Models\SubCategory;
 use App\Repositories\Interfaces\CorporateTrainingRepositoryInterface;
+use App\Repositories\Interfaces\UploadServiceInterface;
+
 
 class CorporateTrainingRepository implements CorporateTrainingRepositoryInterface
 {
+    protected $uploadService;
+
+    public function __construct(UploadServiceInterface $uploadService)
+    {
+        $this->uploadService = $uploadService;
+    }
+
     public function getAll()
     {
         return CorporateTraining::with('course_category', 'subcategory')
@@ -33,10 +42,16 @@ class CorporateTrainingRepository implements CorporateTrainingRepositoryInterfac
 
     public function create(array $data, $request)
     {
+ 
         $corporateTraining = new CorporateTraining();
         $corporateTraining->category_id = $data['category_id'];
         $corporateTraining->sub_category_id = $data['sub_category_id'];
         $corporateTraining->description = $data['description'];
+
+         // Upload and store image securely
+         if ($request->hasFile('image')) {
+            $corporateTraining->images = $this->uploadService->uploadImage($request, 'trainings');
+        }
 
         $corporateTraining->save();
         return $corporateTraining;
@@ -56,6 +71,14 @@ class CorporateTrainingRepository implements CorporateTrainingRepositoryInterfac
         $corporateTraining->category_id = $data['category_id'];
         $corporateTraining->sub_category_id = $data['sub_category_id'];
         $corporateTraining->description = $data['description'];
+
+          // Handle image update
+          if ($request->hasFile('image')) {
+            if ($corporateTraining->images) {
+                $this->uploadService->deleteImage($corporateTraining->images,'trainings');
+            }
+            $corporateTraining->images = $this->uploadService->uploadImage($request, 'trainings');
+        }
 
         $corporateTraining->save();
         return $corporateTraining;
