@@ -1089,6 +1089,10 @@ right: inherit !important;}
 .cn-main-content h3{
   color: #222;
 }
+.cn-main-content p{
+    color: #222;
+    font-weight: 400;
+  }
 .ser-h{
     height: 100px;
     display: block;

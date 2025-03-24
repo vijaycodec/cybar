@@ -56,6 +56,7 @@ class menueventController extends Controller
         $validated = $request->validate([
            
             'category_id' => 'required',
+            'sub_category'  => 'required',
             'short_desc' => 'required',
             'description' => 'required',
             'video_url' => 'nullable',
@@ -94,6 +95,7 @@ class menueventController extends Controller
             $validated = $request->validate([
                
             'category_id' => 'required',
+            'sub_category'  => 'required',
             'short_desc' => 'required',
             'description' => 'required',
             'video_url' => 'nullable',

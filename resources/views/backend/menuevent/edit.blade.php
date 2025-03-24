@@ -47,6 +47,12 @@
                     </fieldset>
 
                     <fieldset class="name">
+                        <div class="body-title">Sub Category Name <span class="tf-color-1">*</span></div>
+                        <input class="flex-grow" id="sub_category" type="text" placeholder="Enter Sub Category Name" name="sub_category"
+                            value="{{ $events->sub_category }}" required>
+                    </fieldset>
+
+                    <fieldset class="name">
                         <div class="body-title"> Video URL <span class="tf-color-1">*</span></div>
                         <input class="flex-grow" type="text" placeholder="Video URL" name="video_url" tabindex="0"
                             value="{{ old('video_url', $events->video_url) }}" aria-required="true">

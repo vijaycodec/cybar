@@ -5,7 +5,15 @@
 @section('meta_keywords', $seoData['seo_keywords'])
 
 @section('content')
+<style>
+    .cn-hover-img img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensures the full image is visible */
+    display: block;
+}
 
+</style>
     <body class="with-zoom1 case2-header" id="services-page">
         <!-- Header start -->
 
