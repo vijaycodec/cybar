@@ -5,16 +5,24 @@ namespace App\Http\Controllers\frontend;
 use App\Http\Controllers\Controller;
 use App\Models\CourseCategory;
 use App\Models\CorporateTraining;
+use App\Repositories\Interfaces\ServicesRepositoryInterface;
 use App\Models\Seo;
 
 class trainingController extends Controller
 {
+    protected $servicesRepository;
+
+    public function __construct(ServicesRepositoryInterface $servicesRepository)
+    {
+        $this->servicesRepository = $servicesRepository;
+    }
+
     public function get_training($category = null, $sub_category = null)
     {
         $page_id=2;
         $page_name = 'training';
 
-        $trainings = CorporateTraining::with('course_category','subcategory')->get();
+        $services = CorporateTraining::with('course_category','subcategory')->get();
         //dd($services);
         $categories = CourseCategory::with('training')
         
@@ -42,6 +50,6 @@ class trainingController extends Controller
             $seoData['google_analytics'] = $seoDetails->google_analytics;
         }
 
-        return view('frontend.training', compact('categories','trainings','page_id', 'seoData'));
+        return view('frontend.services', compact('categories','services','page_id', 'seoData'));
     }
 }

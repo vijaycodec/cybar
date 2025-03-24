@@ -5,7 +5,7 @@
 @section('meta_keywords', $seoData['seo_keywords'])
 
 @section('content')
-<style>
+{{-- <style>
     .cn-hover-img img {
     width: 100%;
     height: auto;
@@ -13,7 +13,7 @@
     display: block;
 }
 
-</style>
+</style> --}}
     <body class="with-zoom1 case2-header" id="services-page">
         <!-- Header start -->
 
@@ -70,7 +70,7 @@
                                                         <div class="cn-hover-box">
                                                             <div class="cn-hover-img">
                                                                 <img
-                                                                    src="{{ asset('storage/uploads/backend/services/' . $service->images) }}">
+                                                                    src="{{ asset('storage/uploads/backend/trainings/' . $service->images) }}">
                                                             </div>
                                                             <div class="cn-content">
                                                                 <p>{{ $service->description }}</p>
@@ -98,7 +98,7 @@
                                                                     <div class="cn-hover-box">
                                                                         <div class="cn-hover-img">
                                                                             <img
-                                                                                src="{{ asset('storage/uploads/backend/services/' . $service->images) }}">
+                                                                                src="{{ asset('storage/uploads/backend/trainings/' . $service->images) }}">
                                                                         </div>
                                                                         <div class="cn-content">
                                                                             <p>{{ $service->description }}</p>
@@ -151,7 +151,7 @@
                                         <div class="empower-industry-box">
                                             <div class="cn-hover-box">
                                                 <div class="cn-hover-img">
-                                                    <img src="{{ asset('/storage/uploads/backend/services/' . $service->images) }}"
+                                                    <img src="{{ asset('/storage/uploads/backend/trainings/' . $service->images) }}"
                                                         alt="{{ $service->subcategory->sub_category }}">
                                                 </div>
                                                 <div class="cn-content">
@@ -169,7 +169,7 @@
                                 @endforeach
                             </div>
         
-                            <!-- âœ… Counter for this slider -->
+                            <!-- Counter for this slider -->
                             <div id="navigation-count{{ $index + 1 }}-{{ $chunkIndex + 1 }}" class="count-nav-box counter-space">
                                 1/{{ count($serviceChunk) }}
                             </div>
