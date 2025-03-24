@@ -176,3 +176,11 @@ ul#tabs-nav1 li {
     margin: 10px;
     max-width: 21%; /* Prevent stretching */
 }
+
+@media only screen and (max-width: 1366px){
+    .vertical-text {
+        left: 0px;
+        margin-left: -40px;
+        margin-right: 5px;
+    }
+}
