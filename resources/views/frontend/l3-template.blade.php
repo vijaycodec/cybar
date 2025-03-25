@@ -14,7 +14,7 @@
 <body class="sample-body" id="main-content-body">
     <!-- Header start -->
 
-    @include ('frontend.layouts.l3-header')
+    @include ('frontend.layouts.l3-header',['l3Categories' => $l3Categories])
 
     <!--  -->
     <section class="cn-bg" id="banner">
@@ -38,6 +38,18 @@
         </div>
     </section>
     <!-- tab menu start -->
+    @php
+    $categories = [];
+
+    foreach ($l3Categories as $category) {
+        $categories[] = [
+            'id' => $category->id,
+            'name' => $category->l3_category,
+            'slug' => strtolower(preg_replace('/[^a-zA-Z0-9\s-]/', '', str_replace([' ', '&', ','], '-', $category->l3_category)))
+        ];
+    }
+@endphp
+
     <section class="services-menu menu-fixed-cn"
         style="background: url({{ asset('assets/images/image-bg-top.jpg') }}) repeat fixed;">
         <div class="container-fluid">
@@ -58,12 +70,12 @@
 
     <!-- Overview start 1-->
     @if ($contentInfos->contains(fn($info) => $info->overview_description))
-        <section class="light-grey sample7-line anchor-link space7_1" id="overview">
+        <section class="light-grey sample7-line anchor-link space7_1" id="{{ $categories[0]['slug'] }}">
             <!--  -->
             <div class="container desktop-view">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="third-content" id="overview2">
+                        <div class="third-content" id="{{ $categories[0]['slug'] }}2">
                             @foreach ($l3Categories as $category)
                                 @foreach ($category->contentInfos as $contentInfo)
                                     <!-- Overview Section -->
@@ -80,15 +92,8 @@
                                 <div class="row overview-content">
                                     <!--  -->
                                     <div class="col-md-12">
-
-
                                         <div class="third-content smple-box1">
                                             <h4>What Technical Skills you Learn</h4>
-                                            <p>In the process of becoming a Certified Ethical Hacker (CEH), individuals
-                                                acquire a diverse
-                                                set of technical skills essential for effectively identifying and
-                                                mitigating cybersecurity
-                                                risks. These skills include:</p>
                                         </div>
                                         <!--  -->
                                         <div class="info-graphic">
@@ -274,7 +279,7 @@
 
     <!-- Significance start  2-->
     @if ($contentInfos->contains(fn($info) => $info->significanceCategory))
-        <section class="anchor-link sample7-line space7" id="significance">
+        <section class="anchor-link sample7-line space7" id="{{ $categories[1]['slug'] }}">
             <!-- title  -->
             <div class="container">
                 <div class="row">
@@ -375,7 +380,7 @@
             </div>
 
             <!-- mobile content start  -->
-            <div class="container mobile-view significance-space" id="significance_mob">
+            <div class="container mobile-view significance-space" id="{{ $categories[1]['slug'] }}_mob">
                 <!--  -->
                 <div class="acc">
 
@@ -431,7 +436,7 @@
 
     <!-- program info 3-->
     @if ($contentInfos->contains(fn($info) => $info->programCategory))
-        <section class="anchor-link sample7-line space7 ceh-pro" id="program">
+        <section class="anchor-link sample7-line space7 ceh-pro" id="{{ $categories[2]['slug'] }}">
             <!-- title  -->
             <div class="container ">
                 <div class="row">
@@ -607,7 +612,6 @@
                                             </div>
                                         </div>
 
-
                                         <!--  Second Program Category (Vertical Tabs Based) -->
                                     @elseif ($programCategorySlug == 'whatsnewinceh')
                                         <div id="{{ $programCategorySlug }}" class="tab-pane fade">
@@ -732,7 +736,7 @@
             </div>
             <!-- body end -->
             <!-- mobile end -->
-            <div class="container mobile-view" id="program_mob">
+            <div class="container mobile-view" id="{{ $categories[2]['slug'] }}_mob">
                 <!--  -->
                 <div class="acc">
                     @php
@@ -966,7 +970,7 @@
 
     <!-- course Feature start -->
     @if ($contentInfos->contains(fn($info) => $info->coursefeatureCategory))
-        <section class="anchor-link sample7-line cf-desktop space7" id="course-features">
+        <section class="anchor-link sample7-line cf-desktop space7" id="{{ $categories[3]['slug'] }}">
             <!-- title  -->
             <div class="container">
                 <div class="row">
@@ -1121,7 +1125,7 @@
     <!--<section class="empower-industry-bg codec-page-section anchor-link" id="industry" style="padding-bottom: 20px !important;">-->
     <!--</section>-->
     <!--ceh kit section>-->
-    <section class="anchor-link space7 sample7-line" id="ceh-kit">
+    <section class="anchor-link space7 sample7-line" id="{{ $categories[4]['slug'] }}">
         <!--  -->
         <!-- title  -->
         <div class="container">
@@ -1186,7 +1190,7 @@
     <!-- Incident info Start -->
     {{-- @if ($contentInfos->contains(fn($info) => $info->coursefeatureCategory)) --}}
 
-    <section class="anchor-link sample7-line space7 light-grey ceh-video-sec" id="incidents">
+    <section class="anchor-link sample7-line space7 light-grey ceh-video-sec" id="{{ $categories[5]['slug'] }}">
         <!-- title  -->
 
         <div class="container">
@@ -1248,7 +1252,7 @@
             <!--  -->
             <!-- industries section start-->
     @if ($contentInfos->contains(fn($info) => $info->industryCategory))
-        <section class="anchor-link sample7-line space7 inud-nav-sec " id="industries">
+        <section class="anchor-link sample7-line space7 inud-nav-sec " id="{{ $categories[6]['slug'] }}">
             <!--  -->
             <div class="container">
                 <div class="row">
@@ -1321,7 +1325,7 @@
 
     <!-- Why Codec Network start  -->
     @if ($contentInfos->contains(fn($info) => $info->cyberwindCategory))
-        <section class="anchor-link space7 light-grey sample7-line" id="why-cyberwind">
+        <section class="anchor-link space7 light-grey sample7-line" id="{{ $categories[7]['slug'] }}">
             <!--  -->
             <div class="container">
                 <div class="row">
@@ -1338,7 +1342,7 @@
                 </div>
             </div>
             <!--  -->
-            <div class="container desktop-view why-chossetab" id="industry_challenges">
+            <div class="container desktop-view why-chossetab" id="{{ $categories[8]['slug'] }}">
                 <div class="row">
                     <div class="col-md-3 tab3-tab1">
                         <!--  -->
@@ -1490,7 +1494,7 @@
     <!-- Why Codec Network end--->
     <!-- testimonials start -->
     @if ($contentInfos->contains(fn($info) => $info->testimonials))
-        <section class="anchor-link space7 sample7-line" id="testimonials">
+        <section class="anchor-link space7 sample7-line" id="{{ $categories[8]['slug'] }}">
             <!--  -->
             <div class="container">
                 <div class="row">
@@ -1566,7 +1570,7 @@
     <!-- end -->
     {{-- blog Section Start --}}
     @if ($contentInfos->contains(fn($info) => $info->blogCategory))
-        <section class="anchor-link space7 light-grey " id="blog">
+        <section class="anchor-link space7 light-grey " id="{{ $categories[9]['slug'] }}">
             <div class="container">
                 <div class="row">
                     @foreach ($l3Categories as $category)
@@ -1596,7 +1600,7 @@
     <!--  -->
     <!-- FAQ info start -->
     @if ($contentInfos->contains(fn($info) => $info->faqCategory))
-        <section class="anchor-link sample7-line space7 ceh-pro ceh-pro1" id="faqs">
+        <section class="anchor-link sample7-line space7 ceh-pro ceh-pro1" id="{{ $categories[10]['slug'] }}">
             <!-- title  -->
             <div class="container">
                 <div class="row">
