@@ -8,6 +8,8 @@
         <a id="button">
         </a>
         <!-- Header start -->
+        @include('frontend.layouts.header')
+        <!-- Header end -->
         <!-- banner start -->
         <section class="sec_ban" id="resources-banner">
             <div class="home-ban">
