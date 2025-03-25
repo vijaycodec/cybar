@@ -9,21 +9,14 @@
       <span class="ser-icon-right"><i class="fa fa-bars"></i></span>
       </div>
    </header>
+
    <!--  -->
    @include('frontend.layouts.menu-data')
    <div class="mobile-ser-tab">
       <ul class="mobile-ser-menu">
-            <li><a href="#overview">Overview</a></li>
-            <li><a href="#significance">Significance</a></li>
-            <li><a href="#program">Program</a></li>
-            <li><a href="#course-features">Course Features</a></li>
-            <li><a href="#ceh-kit">CEH Kit</a></li>
-            <li><a href="#incidents">Incidents</a></li>
-            <li><a href="#industries">Industries</a></li>
-            <li><a href="#why-cyberwind">Why Codec</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#faqs">FAQ's</a></li>
+         @foreach ($l3Categories as $categories)
+           <li><a href="#{{ Str::slug($categories->l3_category) }}">{{ $categories->l3_category }}</a></li>
+         @endforeach
       </ul>
       <div class="bottom-btn">
          <a href="javascript:void(0)" class="right-back">Back</a>
