@@ -75,9 +75,11 @@ class l3_contentController extends Controller
             'category_id'      => 'required',
             'sub_category_id'  => 'required',
             'l3_category_id'   => 'required',
+            'l3_layout_type'   => 'required',
+            'l3_layout_program'   => 'nullable',
         ];
 
-        switch ($request->l3_category_type) {
+        switch ($request->l3_layout_type) {
             case 'overview':
                 $rules['overview_title'] = 'required|String';
                 $rules['overview_description'] = 'required|string';
@@ -152,9 +154,11 @@ class l3_contentController extends Controller
             'category_id'      => 'required',
             'sub_category_id'  => 'required',
             'l3_category_id'   => 'required',
+            'l3_layout_type'   => 'required',
+            'l3_layout_program'   => 'nullable',
         ];
 
-        switch ($request->l3_category_type) {
+        switch ($request->l3_layout_type) {
             case 'overview':
                 $rules['overview_title'] = 'required|string';
                 $rules['overview_description'] = 'required|string';
