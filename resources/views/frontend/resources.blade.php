@@ -290,7 +290,7 @@
     
                 // Initialize Owl Carousel if slides exist
                 $carousel.owlCarousel({
-                    loop: false,
+                    loop: true,
                     margin: 20,
                     dots: isMobile(),
                     nav: true,

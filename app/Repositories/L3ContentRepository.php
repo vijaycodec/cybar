@@ -82,9 +82,11 @@ class L3ContentRepository implements L3ContentRepositoryInterface
         $l3ContentInfo->category_id = $request->category_id;
         $l3ContentInfo->sub_category_id = $request->sub_category_id;
         $l3ContentInfo->l3_category_id = $request->l3_category_id;
+        $l3ContentInfo->l3_layout_type = $request->l3_layout_type;
+        $l3ContentInfo->l3_layout_program = $request->l3_layout_program;
 
         // Assign Section-Specific Data
-        switch ($request->l3_category_type) {
+        switch ($request->l3_layout_type) {
 
             case 'overview':
                 $l3ContentInfo->overview_title = $request->overview_title;
@@ -202,7 +204,7 @@ class L3ContentRepository implements L3ContentRepositoryInterface
 
         $l3ContentInfo->save();
 
-        if ($request->l3_category_type == 'overview') {
+        if ($request->l3_layout_type == 'overview') {
 
             if ($request->has('overview_sub_descriptions')) {
                 foreach ($request->overview_sub_descriptions as $subDesc) {
@@ -215,7 +217,7 @@ class L3ContentRepository implements L3ContentRepositoryInterface
         }
 
         // Optional: If you're using a separate table for significance titles
-        if ($request->l3_category_type == 'significance') {
+        if ($request->l3_layout_type == 'significance') {
             SignificanceTitle::updateOrCreate(
                 ['l3_content_info_id' => $l3ContentInfo->id], // Condition
                 ['title' => $request->input('Significance_title', 'Default Title')] // Use default if null
@@ -224,13 +226,13 @@ class L3ContentRepository implements L3ContentRepositoryInterface
 
         // Optional: If you're using a separate table for coursefeature titles 
 
-        if ($request->l3_category_type == 'coursefeatures') {
+        if ($request->l3_layout_type == 'coursefeatures') {
             CourseFeatureTitle::updateOrCreate(
                 ['l3_content_info_id' => $l3ContentInfo->id], // Condition
                 ['title' => $request->input('coursefeature_title', 'Default Title')] // Use default if null
             );
         }
-        //    if ($request->l3_category_type == 'coursefeatures') {
+        //    if ($request->l3_layout_type == 'coursefeatures') {
         //        // Fetch the first record from the CourseFeatureTitle table
         //        $coursefeature = CourseFeatureTitle::first();
 
@@ -248,7 +250,7 @@ class L3ContentRepository implements L3ContentRepositoryInterface
         //        }
         //    }
 
-        if ($request->l3_category_type == 'faqs') {
+        if ($request->l3_layout_type == 'faqs') {
             $faqSubCategory = new FaqSubCategory();
             $faqSubCategory->l3_content_info_id = $l3ContentInfo->id;
             $faqSubCategory->faq_category_id  = $request->faq_category_id;  // Linking the significance with the l3_content_info
@@ -261,7 +263,7 @@ class L3ContentRepository implements L3ContentRepositoryInterface
         }
 
         //data stored in testimonials table
-        if ($request->l3_category_type == 'testimonials') {
+        if ($request->l3_layout_type == 'testimonials') {
             $testimonials = new TestimonialDetails();
             $testimonials->l3_content_info_id = $l3ContentInfo->id;
             $testimonials->testimonial_name  = $request->testimonials_name;
@@ -274,13 +276,13 @@ class L3ContentRepository implements L3ContentRepositoryInterface
         }
 
 
-        if ($request->l3_category_type == 'industries') {
+        if ($request->l3_layout_type == 'industries') {
             IndustryTitle::updateOrCreate(
                 ['l3_content_info_id' => $l3ContentInfo->id], // Condition
                 ['title' => $request->input('industries_title', 'Default Title')] // Use default if null
             );
         }
-        //    if ($request->l3_category_type == 'industries') {
+        //    if ($request->l3_layout_type == 'industries') {
         //     // dd('ok');
         //     // Fetch the first record from the SignificanceTitle table
         //     $significance = IndustryTitle::first();
@@ -300,14 +302,14 @@ class L3ContentRepository implements L3ContentRepositoryInterface
         // }
 
 
-        if ($request->l3_category_type == 'cyberwind') {
+        if ($request->l3_layout_type == 'cyberwind') {
             CyberwindTitle::updateOrCreate(
                 ['l3_content_info_id' => $l3ContentInfo->id], // Condition
                 ['title' => $request->input('cyberwind_title', 'Default Title')] // Use default if null
             );
         }
 
-        // if ($request->l3_category_type == 'cyberwind') {
+        // if ($request->l3_layout_type == 'cyberwind') {
         //     // dd('ok');
         //     // Fetch the first record from the SignificanceTitle table
         //     $significance = CyberwindTitle::first();
@@ -411,9 +413,11 @@ class L3ContentRepository implements L3ContentRepositoryInterface
         $l3ContentInfo->category_id = $request->category_id;
         $l3ContentInfo->sub_category_id = $request->sub_category_id;
         $l3ContentInfo->l3_category_id = $request->l3_category_id;
+        $l3ContentInfo->l3_layout_type = $request->l3_layout_type;
+        $l3ContentInfo->l3_layout_program = $request->l3_layout_program;
 
         // Assign section-specific data
-        switch ($request->l3_category_type) {
+        switch ($request->l3_layout_type) {
             case 'overview':
                 $l3ContentInfo->overview_title = $request->overview_title;
                 $l3ContentInfo->overview_description = $request->overview_description;
@@ -503,7 +507,7 @@ class L3ContentRepository implements L3ContentRepositoryInterface
         $l3ContentInfo->save();
 
         // Update overview sub-descriptions
-        if ($request->l3_category_type == 'overview' && $request->has('overview_sub_descriptions')) {
+        if ($request->l3_layout_type == 'overview' && $request->has('overview_sub_descriptions')) {
             L3OverviewSubDescription::where('l3_content_info_id', $id)->delete();
             foreach ($request->overview_sub_descriptions as $subDesc) {
                 L3OverviewSubDescription::create([
@@ -514,7 +518,7 @@ class L3ContentRepository implements L3ContentRepositoryInterface
         }
 
         // Update significance title
-        if ($request->l3_category_type == 'significance') {
+        if ($request->l3_layout_type == 'significance') {
             SignificanceTitle::updateOrCreate(
                 ['l3_content_info_id' => $id],
                 ['title' => $request->input('Significance_title', 'Default Title')]
@@ -522,7 +526,7 @@ class L3ContentRepository implements L3ContentRepositoryInterface
         }
 
         // Update course feature title
-        if ($request->l3_category_type == 'coursefeatures') {
+        if ($request->l3_layout_type == 'coursefeatures') {
             CourseFeatureTitle::updateOrCreate(
                 ['l3_content_info_id' => $id],
                 ['title' => $request->input('coursefeature_title', 'Default Title')]
@@ -530,7 +534,7 @@ class L3ContentRepository implements L3ContentRepositoryInterface
         }
 
         // Update industry title
-        if ($request->l3_category_type == 'industries') {
+        if ($request->l3_layout_type == 'industries') {
             IndustryTitle::updateOrCreate(
                 ['l3_content_info_id' => $id],
                 ['title' => $request->input('industries_title', 'Default Title')]
@@ -538,7 +542,7 @@ class L3ContentRepository implements L3ContentRepositoryInterface
         }
 
         // Update cyberwind title
-        if ($request->l3_category_type == 'cyberwind') {
+        if ($request->l3_layout_type == 'cyberwind') {
             CyberwindTitle::updateOrCreate(
                 ['l3_content_info_id' => $id],
                 ['title' => $request->input('cyberwind_title', 'Default Title')]
@@ -546,7 +550,7 @@ class L3ContentRepository implements L3ContentRepositoryInterface
         }
 
         //data update in testimonials table
-        if ($request->l3_category_type == 'testimonials') {
+        if ($request->l3_layout_type == 'testimonials') {
             $testimonial = TestimonialDetails::updateOrCreate(
                 ['l3_content_info_id' => $l3ContentInfo->id], // Unique identifier(s)
                 [
@@ -568,7 +572,7 @@ class L3ContentRepository implements L3ContentRepositoryInterface
             }
         }
         //data update in faqs table
-        if ($request->l3_category_type == 'faqs') {
+        if ($request->l3_layout_type == 'faqs') {
 
             FaqSubCategory::updateOrCreate(
                 [
@@ -586,7 +590,7 @@ class L3ContentRepository implements L3ContentRepositoryInterface
         }
 
         //data update in program table
-        if ($request->l3_category_type == 'program') {
+        if ($request->l3_layout_type == 'program') {
             $shouldSave = false; // Flag to track if we need to save updates
 
             if ($request->filled('program_category_id')) {

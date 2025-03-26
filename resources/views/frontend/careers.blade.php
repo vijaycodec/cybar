@@ -552,7 +552,7 @@
 
                 // Initialize Owl Carousel only if there are slides
                 $carousel.owlCarousel({
-                    loop: false, // Loop only if more than 1 slide
+                    loop: true, // Loop only if more than 1 slide
                     margin: 20,
                     dots: false,
                     nav: totalSlides > 1, // Show nav only if more than 1 slide

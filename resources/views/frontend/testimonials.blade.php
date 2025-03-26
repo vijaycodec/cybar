@@ -364,12 +364,12 @@
     </script>
     <script>
         function openPopup(target) {
-            $('#' + target).fadeIn();
+            $(target).fadeIn();
             $('body').addClass('popup-open');
         }
 
         function closePopup(target) {
-            $('#' + target).fadeOut();
+            $(target).fadeOut();
             $('body').removeClass('popup-open');
         }
 

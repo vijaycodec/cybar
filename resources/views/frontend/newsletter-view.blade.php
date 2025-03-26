@@ -7,8 +7,8 @@
     <body>
         <a id="body-main"></a>
         <!-- Header start -->
-        @include('frontend.layouts.blogv-header')
-
+        @include('frontend.layouts.header')
+        <!-- Header end -->
         <!-- banner start -->
         <section class="sec_ban resource-detail-banner" id="resources-banner">
             <div class="home-ban">

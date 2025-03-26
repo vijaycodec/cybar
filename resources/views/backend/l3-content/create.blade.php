@@ -106,6 +106,25 @@
                         </select>
                     </fieldset>
 
+                    <fieldset class="name">
+                        <div class="body-title">Select L3 Layouts <span class="tf-color-1">*</span></div>
+                        <select class="flex-grow l3_content" name="l3_layout_type" id="l3_layout_id" required>
+                            <option value="" disabled selected>Select L3 Category</option>
+                            <option value="overview">overview</option>
+                            <option value="significance">significance</option>
+                            <option value="coursefeatures">coursefeatures</option>
+                            <option value="cyberwind">whycyberwind</option>
+                            <option value="industries">industries</option>
+                            <option value="faqs">faqs</option>
+                            <option value="blog">blog</option>
+                            <option value="incidents">incidents</option>
+                            <option value="cehkit">cehkit</option>
+                            <option value="program">program</option>
+                            <option value="testimonials">testimonials</option>
+                        </select>
+                    </fieldset>
+
+
                     <hr id="hr" style="border: 0; height: 4px; background-color: #f40a0a; ">
                     <!-- Forms based on L3 Category selection -->
 
@@ -243,7 +262,7 @@
                     <!-- Industries Title Form -->
                     <div class="l3-form form-group industries_title">
                         <div class="body-title">Industries Title : <span class="tf-color-1">*</span></div>
-                        <textarea class="" name="industries_title">{{ old('industries_title') }}</textarea>
+                        <textarea class="summernote" name="industries_title">{{ old('industries_title') }}</textarea>
                     </div>
                     <div class="l3-form form-group industries_desc">
                         <div class="body-title">Industries Description :<span class="tf-color-1">*</span></div>
@@ -266,7 +285,7 @@
                     <div class="l3-form form-group sub_category">
                         <div class="body-title">Faqs Title :<span class="tf-color-1">*</span></div>
                         <textarea class="summernote" name="faq_title">{{ old('title') }}</textarea>
-                        
+
                     </div>
                     <div class="name l3-form sub_category" id="">
                         <div class="body-title">Sub Category Name <span class="tf-color-1">*</span></div>
@@ -375,6 +394,19 @@
                             @endforeach
                         </select>
                     </div>
+
+                    <div class="l3-form" id="layout_program_form" style="display: none;">
+                        <div class="body-title">Select L3 Layouts Program <span class="tf-color-1">*</span></div>
+                        <select class="flex-grow l3_content" name="l3_layout_program">
+                            <option value="" disabled selected>Select L3 Category</option>
+                            <option value="courseoutline">courseoutline</option>
+                            <option value="whatsnewinceh">whatsnewinceh</option>
+                            <option value="whoisitfor">whoisitfor</option>
+                            <option value="brochure">brochure</option>
+
+                        </select>
+                    </div>
+
                     <div class="l3-form form-group program_title">
                         <div class="body-title">Program Top Title(H) :<span class="tf-color-1">*</span></div>
                         <input type="text" class="" name="program_title">{{ old('program_title') }}</input>
@@ -395,7 +427,7 @@
                     <div class="l3-form form-group brochure_pdf">
                         <div class="body-title">Upload Brochure (PDF) :<span class="tf-color-1"></span></div>
                         <input type="file" name="brochure_pdf" class="form-control" accept="application/pdf">
-                    </div>                    
+                    </div>
                     <!-- Program Form End -->
 
                     {{-- comman Image for required form start --}}
@@ -421,7 +453,7 @@
                     {{-- comman Image for required form End --}}
             </div>
 
-            <input type="hidden" id="l3_category_type" name="l3_category_type" value="">
+            <input type="hidden" id="l3_layout_type" name="l3_category_type" value="">
 
             <div class="bot">
                 <div></div>
@@ -444,7 +476,7 @@
             $('#hr').hide();
             $('.form-heading').hide();
 
-            $('#l3_category').change(function() {
+            $('#l3_layout_id').change(function() {
 
                 var selectedL3Category = $(this).find("option:selected").text().trim().toLowerCase();
 
@@ -468,46 +500,46 @@
                     $('#overview_form').show();
                     $('#overview_sub_desc').show();
                     $('.overview_title').show();
-                    $('#l3_category_type').val('overview'); // Set hidden input to 'overview'
+                    $('#l3_layout_type').val('overview'); // Set hidden input to 'overview'
                 } else if (selectedL3Category === "significance") {
                     $('#significance_form').show();
                     $('.significance_desc').show();
                     $('.significance_short_description').show();
                     $('.significance_title').show();
                     $('.comman_images').show();
-                    $('#l3_category_type').val('significance'); // Set hidden input to 'significance'
+                    $('#l3_layout_type').val('significance'); // Set hidden input to 'significance'
                 } else if (selectedL3Category === "coursefeatures") {
                     $('#courseFeature_form').show();
                     $('.coursefeature_title').show();
                     $('.coursefeature_desc').show();
                     $('.course_feature_short_description').show();
                     $('.comman_images').show();
-                    $('#l3_category_type').val('coursefeatures'); // Set hidden input to 'courseFeature'
+                    $('#l3_layout_type').val('coursefeatures'); // Set hidden input to 'courseFeature'
                 } else if (selectedL3Category === "whycyberwind") {
                     $('#cyberwind_form').show();
                     $('.cyberwind_title').show();
                     $('.cyberwind_desc').show();
                     $('.cyberwind_short_description').show();
                     $('.comman_images').show();
-                    $('#l3_category_type').val('cyberwind'); // Set hidden input to 'cyberwind'
+                    $('#l3_layout_type').val('cyberwind'); // Set hidden input to 'cyberwind'
                 } else if (selectedL3Category === "industries") {
                     $('#industries_form').show();
                     $('.industries_title').show();
                     $('.industries_desc').show();
                     $('.comman_images').show();
-                    $('#l3_category_type').val('industries'); // Set hidden input to 'industries'
+                    $('#l3_layout_type').val('industries'); // Set hidden input to 'industries'
                 } else if (selectedL3Category === "faqs") {
                     $('#faqs_form').show();
                     // $('.faqs_category').show();
                     $('.sub_category').show();
                     $('.faq_title').show();
                     $('.faqs_desc').show();
-                    $('#l3_category_type').val('faqs'); // Set hidden input to 'faqs
+                    $('#l3_layout_type').val('faqs'); // Set hidden input to 'faqs
                 } else if (selectedL3Category === "blog") {
                     $('#blog_form').show();
                     $('.blog_title').show();
                     $('#style_form').show();
-                    $('#l3_category_type').val('blog'); // Set hidden input to 'blog'
+                    $('#l3_layout_type').val('blog'); // Set hidden input to 'blog'
                 } else if (selectedL3Category === "testimonials") {
                     $('#testimonial_form').show();
                     // $('.testimonials_title').show(); 
@@ -516,29 +548,30 @@
                     $('.testimonial_description').show();
                     $('.testimonials_short_description').show();
                     $('.comman_images').show();
-                    $('#l3_category_type').val('testimonials'); // Set hidden input to 'testimonials'
+                    $('#l3_layout_type').val('testimonials'); // Set hidden input to 'testimonials'
                 } else if (selectedL3Category === "incidents") {
                     $('#incident_form').show();
                     $('.Video_link').show();
                     $('.incident_description').show();
                     $('.comman_images').show();
-                    $('#l3_category_type').val('incidents'); // Set hidden input to 'testimonials'
+                    $('#l3_layout_type').val('incidents'); // Set hidden input to 'testimonials'
 
                 } else if (selectedL3Category === "cehkit") {
                     $('.cehkit_form').show();
                     $('.kit_title').show();
                     $('.ceh_description').show();
                     $('.comman_images').show();
-                    $('#l3_category_type').val('cehkit'); // Set hidden input to 'cehkit'
+                    $('#l3_layout_type').val('cehkit'); // Set hidden input to 'cehkit'
                 } else if (selectedL3Category === "program") {
                     $('#program_form').show();
+                    $('#layout_program_form').show();
                     $('.program_subcategory').show();
                     $('.program_description').show();
                     $('.program_title').show();
-                    $('.program_sub_title').show();  
-                    $('.brochure_pdf').show();  
-                    $('.comman_images').show(); 
-                    $('#l3_category_type').val('program'); // Set hidden input to 'cehkit'
+                    $('.program_sub_title').show();
+                    $('.brochure_pdf').show();
+                    $('.comman_images').show();
+                    $('#l3_layout_type').val('program'); // Set hidden input to 'cehkit'
                 } else if (selectedL3Category === "history") {
                     // $('#history_form').show();
                 }

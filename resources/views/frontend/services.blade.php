@@ -365,7 +365,7 @@
         let $countDisplay = $("#" + navigationCountId);
 
         $carousel.owlCarousel({
-            loop: false,
+            loop: true,
             margin: 10,
             nav: true,
             dots: true,
