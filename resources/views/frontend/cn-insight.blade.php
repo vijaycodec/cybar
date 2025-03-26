@@ -66,10 +66,6 @@
                 <p>The most effective learning system. World's highest course completion rate.</p>
 
             </div>
-
-
-
-
         </section>
 
         <!-- banner end-->
@@ -80,8 +76,6 @@
 
             <div class=" sticky_nav_container_wrapper">
                 <div class="container-fluid sticky_nav_container ">
-
-
                     <div class="row body_container">
                         <div class="col-md-12 text-center">
                             <ul id="sticky-control" class="anchor-nav">
@@ -90,13 +84,11 @@
                                 <li><a href="#cr" class="sticky_link">Podcasts</a></li>
                                 <li><a href="#mf" class="sticky_link">Events and Webinars</a></li>
 
-
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-
         </section>
         <!-- tab menu end -->
 
@@ -109,141 +101,27 @@
                     <div class="vertical-text">TRENDING BLOGS</div>
                     <div class="row">
                         <!-- blog box1 -->
-                        <div class="col-md-4">
-                            <div class="template15-wrap-main">
-                                <a href="blog-view.php">
-                                    <div class="template15-wrap-main-img">
-                                        <img src="{{asset('assets/images/networks-8.jpg')}}">
+                        @foreach ($TrendingBlogs as $trendingblog)
+                            <div class="col-md-4">
+                                <div class="template15-wrap-main">
+                                    <a href="blog-view.php">
+                                        <div class="template15-wrap-main-img">
+                                            <img src="{{ asset('storage/uploads/backend/blog/' . $trendingblog->images) }}" />
+                                        </div>
+                                    </a>
+                                    <div class="template15-wrap-main-content">
+                                        <span><i>{{ \Carbon\Carbon::parse($trendingblog->created_at)->format('d M Y') }}</i></span>
+                                            <h4><a href="{{ route('blog-view', $trendingblog->id) }}">{{ $trendingblog->sub_category	 }}</a>
+                                        </h4>
+                                        <p>
+                                            {{ $trendingblog->short_desc}}
+                                            <a href="{{ route('blog-view', $trendingblog->id) }}"> Read More[...]</a>
+                                        </p>
                                     </div>
-                                </a>
-                                <div class="template15-wrap-main-content">
-                                    <span><i>19 Oct 2020</i></span>
-                                    <h4><a href="blog-view.php">Network Administration and Security</a>
-                                    </h4>
-
-                                    <p>
-                                        Offers buffey of security programs, tools and techniques that are
-                                        globally
-                                        accepted in Information and Cyber Security Assurance.
-                                        <a href="blog-view.php"> Read More[...]</a>
-                                    </p>
                                 </div>
                             </div>
-                        </div>
+                        @endforeach
                         <!-- blog box1 end -->
-                        <!-- blog box2 -->
-                        <div class="col-md-4">
-                            <div class="template15-wrap-main">
-                                <a href="blog-view.php">
-                                    <div class="template15-wrap-main-img">
-                                        <img src="{{asset('assets/images/ec-council-1.jpg')}}">
-                                    </div>
-                                </a>
-                                <div class="template15-wrap-main-content">
-                                    <span><i>19 Oct 2020</i></span>
-                                    <h4><a href="blog-view.php">Network Administration and Security</a>
-                                    </h4>
-                                    <p>
-                                        Offers buffey of security programs, tools and techniques that are
-                                        globally
-                                        accepted in Information and Cyber Security Assurance.
-                                        <a href="blog-view.php"> Read More[...]</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- blog box2 end -->
-                        <!-- blog box3 -->
-                        <div class="col-md-4">
-                            <div class="template15-wrap-main">
-                                <a href="blog-view.php">
-                                    <div class="template15-wrap-main-img">
-                                        <img src="{{asset('assets/images/PECB-Acc-Certification.jpg')}}">
-                                    </div>
-                                </a>
-                                <div class="template15-wrap-main-content">
-                                    <span><i>19 Oct 2020</i></span>
-                                    <h4><a href="blog-view.php">Network Administration and Security</a>
-                                    </h4>
-                                    <p>
-                                        Offers buffey of security programs, tools and techniques that are
-                                        globally
-                                        accepted in Information and Cyber Security Assurance.
-                                        <a href="blog-view.php"> Read More[...]</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- blog box3 end -->
-                    </div>
-                    <div class="row">
-                        <!-- blog box1 -->
-                        <div class="col-md-4">
-                            <div class="template15-wrap-main">
-                                <a href="blog-view.php">
-                                    <div class="template15-wrap-main-img">
-                                        <img src="{{asset('assets/images/networks-8.jpg')}}">
-                                    </div>
-                                </a>
-                                <div class="template15-wrap-main-content">
-                                    <span><i>19 Oct 2020</i></span>
-                                    <h4><a href="blog-view.php">Network Administration and Security</a>
-                                    </h4>
-
-                                    <p>
-                                        Offers buffey of security programs, tools and techniques that are
-                                        globally
-                                        accepted in Information and Cyber Security Assurance.
-                                        <a href="blog-view.php"> Read More[...]</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- blog box1 end -->
-                        <!-- blog box2 -->
-                        <div class="col-md-4">
-                            <div class="template15-wrap-main">
-                                <a href="blog-view.php">
-                                    <div class="template15-wrap-main-img">
-                                        <img src="{{asset('assets/images/ec-council-1.jpg')}}">
-                                    </div>
-                                </a>
-                                <div class="template15-wrap-main-content">
-                                    <span><i>19 Oct 2020</i></span>
-                                    <h4><a href="blog-view.php">Network Administration and Security</a>
-                                    </h4>
-                                    <p>
-                                        Offers buffey of security programs, tools and techniques that are
-                                        globally
-                                        accepted in Information and Cyber Security Assurance.
-                                        <a href="blog-view.php"> Read More[...]</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- blog box2 end -->
-                        <!-- blog box3 -->
-                        <div class="col-md-4">
-                            <div class="template15-wrap-main">
-                                <a href="blog-view.php">
-                                    <div class="template15-wrap-main-img">
-                                        <img src="{{asset('assets/images/PECB-Acc-Certification.jpg')}}">
-                                    </div>
-                                </a>
-                                <div class="template15-wrap-main-content">
-                                    <span><i>19 Oct 2020</i></span>
-                                    <h4><a href="blog-view.php">Network Administration and Security</a>
-                                    </h4>
-                                    <p>
-                                        Offers buffey of security programs, tools and techniques that are
-                                        globally
-                                        accepted in Information and Cyber Security Assurance.
-                                        <a href="blog-view.php"> Read More[...]</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- blog box3 end -->
                     </div>
                     <div class="blog-view">
                         <a href="{{ route('blogs') }}">View all</a>
@@ -259,133 +137,57 @@
                     </div>
                     <div id="cninsight-slider11" class="owl-carousel owl-theme">
                         <!-- blog box1 -->
+                        @foreach ($TrendingBlogs->take(3) as $trendingblog)
                         <div class="item">
                             <div class="template15-wrap-main">
                                 <div class="template15-wrap-main-img">
-                                    <img src="{{ asset('assets/images/networks-8.jpg') }}">
+                                    {{-- <img src="{{ asset('assets/images/networks-8.jpg') }}"> --}}
+                                    <img src="{{ asset('storage/uploads/backend/blog/' . $trendingblog->images) }}" />
                                 </div>
                                 <div class="template15-wrap-main-content">
-                                    <span><i>19 Oct 2020</i></span>
-                                    <h4><a href="blog-view.php">Network Administration and Security</a></h4>
+                                    {{-- <span><i>19 Oct 2020</i></span> --}}
+                                    <span><i>{{ \Carbon\Carbon::parse($trendingblog->created_at)->format('d M Y') }}</i></span>
+                                    <h4><a href="{{ route('blog-view', $trendingblog->id) }}">{{ $trendingblog->sub_category	 }}</a>
                                     <p>
-                                        Offers buffey of security programs, tools and techniques that are
-                                        globally
-                                        accepted in Information and Cyber Security Assurance.
-                                        <a href="blog-view.php"> Read More[...]</a>
+                                        {{ $trendingblog->short_desc}}
+                                        <a href="{{ route('blog-view', $trendingblog->id) }}"> Read More[...]</a>
                                     </p>
                                 </div>
                             </div>
                         </div>
+                        @endforeach
                         <!-- blog box1 end -->
-                        <!-- blog box2 -->
-                        <div class="item">
-                            <div class="template15-wrap-main">
-                                <div class="template15-wrap-main-img">
-                                    <img src="{{ asset('assets/images/ec-council-1.jpg') }}">
-                                </div>
-                                <div class="template15-wrap-main-content">
-                                    <span><i>19 Oct 2020</i></span>
-                                    <h4><a href="blog-view.php">Network Administration and Security</a></h4>
-                                    <p>
-                                        Offers buffey of security programs, tools and techniques that are
-                                        globally
-                                        accepted in Information and Cyber Security Assurance.
-                                        <a href="blog-view.php"> Read More[...]</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- blog box2 end -->
-                        <!-- blog box3 -->
-                        <div class="item">
-                            <div class="template15-wrap-main">
-                                <div class="template15-wrap-main-img">
-                                    <img src="{{ asset('assets/images/PECB-Acc-Certification.jpg') }}">
-                                </div>
-                                <div class="template15-wrap-main-content">
-                                    <span><i>19 Oct 2020</i></span>
-                                    <h4><a href="blog-view.php">Network Administration and Security</a></h4>
-                                    <p>
-                                        Offers buffey of security programs, tools and techniques that are
-                                        globally
-                                        accepted in Information and Cyber Security Assurance.
-                                        <a href="blog-view.php"> Read More[...]</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- blog box3 end -->
-                        <!--  -->
+
                     </div>
                     <div id="cninsight-nav-count11" class="count-nav-box"></div>
 
                     <div id="cninsight-slider12" class="owl-carousel owl-theme">
                         <!-- + -->
                         <!-- blog box1 -->
+                        @foreach ($TrendingBlogs->skip(3) as $trendingblog)
                         <div class="item">
                             <div class="template15-wrap-main">
                                 <div class="template15-wrap-main-img">
-                                    <img src="{{ asset('assets/images/networks-8.jpg') }}">
+                                    <img src="{{ asset('storage/uploads/backend/blog/' . $trendingblog->images) }}" />
                                 </div>
                                 <div class="template15-wrap-main-content">
-                                    <span><i>19 Oct 2020</i></span>
-                                    <h4><a href="blog-view.php">Network Administration and Security</a></h4>
-                                    <p>
-                                        Offers buffey of security programs, tools and techniques that are
-                                        globally
-                                        accepted in Information and Cyber Security Assurance.
-                                        <a href="blog-view.php"> Read More[...]</a>
-                                    </p>
+                                    <span><i>{{ \Carbon\Carbon::parse($trendingblog->created_at)->format('d M Y') }}</i></span>
+                                    <h4><a href="{{ route('blog-view', $trendingblog->id) }}">{{ $trendingblog->sub_category	 }}</a>
+                                        <p>
+                                            {{ $trendingblog->short_desc}}
+                                            <a href="{{ route('blog-view', $trendingblog->id) }}"> Read More[...]</a>
+                                        </p>
                                 </div>
                             </div>
                         </div>
+                        @endforeach
                         <!-- blog box1 end -->
-                        <!-- blog box2 -->
-                        <div class="item">
-                            <div class="template15-wrap-main">
-                                <div class="template15-wrap-main-img">
-                                    <img src="{{ asset('assets/images/ec-council-1.jpg') }}">
-                                </div>
-                                <div class="template15-wrap-main-content">
-                                    <span><i>19 Oct 2020</i></span>
-                                    <h4><a href="blog-view.php">Network Administration and Security</a></h4>
-                                    <p>
-                                        Offers buffey of security programs, tools and techniques that are
-                                        globally
-                                        accepted in Information and Cyber Security Assurance.
-                                        <a href="blog-view.php"> Read More[...]</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- blog box2 end -->
-                        <!-- blog box3 -->
-                        <div class="item">
-                            <div class="template15-wrap-main">
-                                <div class="template15-wrap-main-img">
-                                    <img src="{{ asset('assets/images/PECB-Acc-Certification.jpg') }}">
-                                </div>
-                                <div class="template15-wrap-main-content">
-                                    <span><i>19 Oct 2020</i></span>
-                                    <h4><a href="blog-view.php">Network Administration and Security</a></h4>
-                                    <p>
-                                        Offers buffey of security programs, tools and techniques that are
-                                        globally
-                                        accepted in Information and Cyber Security Assurance.
-                                        <a href="blog-view.php"> Read More[...]</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- blog box3 end -->
-                        <!--  -->
                     </div>
                     <div id="cninsight-nav-count12" class="count-nav-box"></div>
                     <div class="blog-view" style="margin-top: -10px;">
                         <a href="{{ route('blogs') }}">View all Blogs</a>
                     </div>
                 </div>
-
             </div>
 
         </section>
@@ -398,325 +200,45 @@
                     <div class="vertical-text">TRENDING NEWSLETTERS</div>
                     <div class="row">
                         <div class="cn-tabs1">
-
                             <ul id="tabs-nav1" class="mobile">
                                 <div id="owl-demo7">
-
-                                    <li class="item"><a href="#tab11">Automating trust</a></li>
-                                    <li class="item"><a href="#tab12">Immersive interfaces</a></li>
-                                    <li class="item"><a href="#tab13">Extended reality </a></li>
-
-
+                                    @foreach ($NewsLetters as $newsletter)
+                                    {{-- <li class="item"><a href="#tab11">Automating trust</a></li> --}}
+                                    <li class="item"><a href="#tab11{{ $newsletter->slug}}">{{ $newsletter->name}}</a></li>
+                                    @endforeach
                                 </div>
-
                             </ul>
 
                             <ul id="tabs-nav1" class="desktop">
-                                <li class="active"><a href="#tab11">Automating trust</a></li>
-                                <li><a href="#tab12">Immersive interfaces</a></li>
-                                <li><a href="#tab13">Extended reality </a></li>
-
+                                @foreach ($NewsLetters as $index=>$newsletter)
+                                    <li class="{{ $loop->first ? 'active' : ' ' }}"><a href="#tab11{{ $newsletter->slug}}">{{ $newsletter->name}}</a></li>
+                                @endforeach
                             </ul> <!-- END tabs-nav -->
                             <div id="tabs-content">
-                                <div id="tab11" class="tab-content1" style="display: block;">
-
-                                    <div class="container ppp20">
-                                        <ul id="codec-items2" class="code-pagination">
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="{{ route('newLetter.View') }}">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
+                                @foreach ($NewsLetters as $newsletter)
+                                    <div id="tab11{{ $newsletter->slug}}" class="tab-content1" style="display: block;">
+                                        <div class="container ppp20">
+                                            <ul id="codec-items2" class="code-pagination">
+                                                @foreach ($newsletter->newsletters as $letter)
+                                                <li class="col-md-3">
+                                                    <div class="codec-wrap-main">
+                                                        <a href="{{ route('newLetter.View',$letter->id) }}">
+                                                            <div class="codec-wrap-main-img">
+                                                                <img src="{{ asset('storage/uploads/backend/newsletter/' . $letter->images) }}" />
+                                                            </div>
+                                                        </a>
+                                                        <div class="codec-wrap-main-content">
+                                                            <h4><a href="{{ route('newLetter.View',$letter->id) }}">{{ $letter->sub_category }}</a></h4>
+                                                            <p>{{ $letter->short_desc }}
+                                                            </p>
                                                         </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="{{ route('newLetter.View') }}">Network Administration
-                                                                and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
                                                     </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-
+                                                </li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
                                     </div>
-
-
-                                </div>
-                                <div id="tab12" class="tab-content1" style="display: none;">
-                                    <div class="container ppp20">
-                                        <ul id="codec-items1" class="code-pagination">
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-
-                                    </div>
-
-                                </div>
-                                <div id="tab13" class="tab-content1" style="display: none;">
-                                    <div class="container ppp20">
-                                        <ul id="codec-items3" class="code-pagination">
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-
-                                    </div>
-
-
-                                    <!-- END tabs-content -->
-                                </div> <!-- END tabs -->
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -728,321 +250,43 @@
                 </div>
                 <div class="acc">
                     <!-- box first start -->
+                    @foreach ($NewsLetters as $index=>$newsletter)
+                    
                     <div class="acc__card">
-                        <a href="#news1" class="acc__title active">Newsletter 1</a>
-                        <div class="acc__panel" style="display:block" id="news1">
+                        <a href="#news1{{ $newsletter->slug}}" class="acc__title {{ $loop->first ? 'active' : ' ' }}">{{ $newsletter->name}}</a>
+                        <div class="acc__panel" style="{{ $loop->first ? 'display:block' : ' ' }} " id="news1{{ $newsletter->slug}}">
                             <!--  -->
-                            <div id="cninsight-slider21" class="owl-carousel owl-theme">
+                            <div id="cninsight-slider2{{ $index+1 }}" class="owl-carousel owl-theme">
                                 <!-- + -->
                                 <!-- blog box1 -->
+                                @foreach ($newsletter->newsletters as $letter)
                                 <div class="item">
                                     <div class="col-md-3">
                                         <div class="codec-wrap-main">
-                                            <a href="{{ route('newLetter.View') }}">
+                                                <a href="{{ route('newLetter.View',$letter->id) }}">
                                                 <div class="codec-wrap-main-img">
-                                                    <img src="assets/images/networks-8.jpg">
+                                                    <img src="{{ asset('storage/uploads/backend/newsletter/' . $letter->images) }}" />
                                                 </div>
                                             </a>
                                             <div class="codec-wrap-main-content">
-                                                <h4><a href="{{ route('newLetter.View') }}">Network Administration
-                                                        and Security</a></h4>
-                                                <p>Offers buffey of security programs, tools and techniques that are
-                                                    globally accepted in Information and Cyber Security Assurance.
+                                                <h4><a href="{{ route('newLetter.View',$letter->id) }}">{{ $letter->sub_category }}</a></h4>
+                                                <p>{{ $letter->short_desc }}
                                                 </p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="item">
-                                    <div class="col-md-3">
-                                        <div class="codec-wrap-main">
-                                            <a href="{{ route('newLetter.View') }}">
-                                                <div class="codec-wrap-main-img">
-                                                    <img src="assets/images/networks-8.jpg">
-                                                </div>
-                                            </a>
-                                            <div class="codec-wrap-main-content">
-                                                <h4><a href="{{ route('newLetter.View') }}">Network Administration
-                                                        and Security</a></h4>
-                                                <p>Offers buffey of security programs, tools and techniques that are
-                                                    globally accepted in Information and Cyber Security Assurance.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="col-md-3">
-                                        <div class="codec-wrap-main">
-                                            <a href="{{ route('newLetter.View') }}">
-                                                <div class="codec-wrap-main-img">
-                                                    <img src="assets/images/networks-8.jpg">
-                                                </div>
-                                            </a>
-                                            <div class="codec-wrap-main-content">
-                                                <h4><a href="{{ route('newLetter.View') }}">Network Administration
-                                                        and Security</a></h4>
-                                                <p>Offers buffey of security programs, tools and techniques that are
-                                                    globally accepted in Information and Cyber Security Assurance.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="col-md-3">
-                                        <div class="codec-wrap-main">
-                                            <a href="{{ route('newLetter.View') }}">
-                                                <div class="codec-wrap-main-img">
-                                                    <img src="assets/images/networks-8.jpg">
-                                                </div>
-                                            </a>
-                                            <div class="codec-wrap-main-content">
-                                                <h4><a href="{{ route('newLetter.View') }}">Network Administration
-                                                        and Security</a></h4>
-                                                <p>Offers buffey of security programs, tools and techniques that are
-                                                    globally accepted in Information and Cyber Security Assurance.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="col-md-3">
-                                        <div class="codec-wrap-main">
-                                            <a href="{{ route('newLetter.View') }}">
-                                                <div class="codec-wrap-main-img">
-                                                    <img src="assets/images/networks-8.jpg">
-                                                </div>
-                                            </a>
-                                            <div class="codec-wrap-main-content">
-                                                <h4><a href="{{ route('newLetter.View') }}">Network Administration
-                                                        and Security</a></h4>
-                                                <p>Offers buffey of security programs, tools and techniques that are
-                                                    globally accepted in Information and Cyber Security Assurance.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
-                            <div id="cninsight-nav-count21" class="count-nav-box"></div>
+                            <div id="cninsight-nav-count2{{ $index+1 }}" class="count-nav-box"></div>
                             <!--  -->
                             <a href="javascript:void(0)" class="close-acrodin"> Close</a>
                             <!--  -->
                         </div>
+
                     </div>
-                    <!-- box first end -->
-                    <!-- box two end -->
-                    <div class="acc__card">
-                        <a href="#news2" class="acc__title">Newsletter 2</a>
-                        <div class="acc__panel" id="news2">
-                            <!--  -->
-                            <div id="cninsight-slider22" class="owl-carousel owl-theme">
-                                <!-- + -->
-                                <!-- blog box1 -->
-                                <div class="item">
-                                    <div class="col-md-3">
-                                        <div class="codec-wrap-main">
-                                            <a href="{{ route('newLetter.View') }}">
-                                                <div class="codec-wrap-main-img">
-                                                    <img src="assets/images/networks-8.jpg">
-                                                </div>
-                                            </a>
-                                            <div class="codec-wrap-main-content">
-                                                <h4><a href="{{ route('newLetter.View') }}">Network Administration
-                                                        and Security</a></h4>
-                                                <p>Offers buffey of security programs, tools and techniques that are
-                                                    globally accepted in Information and Cyber Security Assurance.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="col-md-3">
-                                        <div class="codec-wrap-main">
-                                            <a href="{{ route('newLetter.View') }}">
-                                                <div class="codec-wrap-main-img">
-                                                    <img src="assets/images/networks-8.jpg">
-                                                </div>
-                                            </a>
-                                            <div class="codec-wrap-main-content">
-                                                <h4><a href="{{ route('newLetter.View') }}">Network Administration
-                                                        and Security</a></h4>
-                                                <p>Offers buffey of security programs, tools and techniques that are
-                                                    globally accepted in Information and Cyber Security Assurance.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="col-md-3">
-                                        <div class="codec-wrap-main">
-                                            <a href="{{ route('newLetter.View') }}">
-                                                <div class="codec-wrap-main-img">
-                                                    <img src="assets/images/networks-8.jpg">
-                                                </div>
-                                            </a>
-                                            <div class="codec-wrap-main-content">
-                                                <h4><a href="{{ route('newLetter.View') }}">Network Administration
-                                                        and Security</a></h4>
-                                                <p>Offers buffey of security programs, tools and techniques that are
-                                                    globally accepted in Information and Cyber Security Assurance.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="col-md-3">
-                                        <div class="codec-wrap-main">
-                                            <a href="{{ route('newLetter.View') }}">
-                                                <div class="codec-wrap-main-img">
-                                                    <img src="assets/images/networks-8.jpg">
-                                                </div>
-                                            </a>
-                                            <div class="codec-wrap-main-content">
-                                                <h4><a href="{{ route('newLetter.View') }}">Network Administration
-                                                        and Security</a></h4>
-                                                <p>Offers buffey of security programs, tools and techniques that are
-                                                    globally accepted in Information and Cyber Security Assurance.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="col-md-3">
-                                        <div class="codec-wrap-main">
-                                            <a href="{{ route('newLetter.View') }}">
-                                                <div class="codec-wrap-main-img">
-                                                    <img src="assets/images/networks-8.jpg">
-                                                </div>
-                                            </a>
-                                            <div class="codec-wrap-main-content">
-                                                <h4><a href="{{ route('newLetter.View') }}">Network Administration
-                                                        and Security</a></h4>
-                                                <p>Offers buffey of security programs, tools and techniques that are
-                                                    globally accepted in Information and Cyber Security Assurance.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="cninsight-nav-count22" class="count-nav-box"></div>
-                            <!--  -->
-                            <a href="javascript:void(0)" class="close-acrodin"> Close</a>
-                        </div>
-                    </div>
-                    <!-- box two end -->
-                    <!-- box three end -->
-                    <div class="acc__card">
-                        <a href="#news3" class="acc__title">Newsletter 3</a>
-                        <div class="acc__panel" id="news3">
-                            <!--  -->
-                            <div id="cninsight-slider23" class="owl-carousel owl-theme">
-                                <!-- + -->
-                                <!-- blog box1 -->
-                                <div class="item">
-                                    <div class="col-md-3">
-                                        <div class="codec-wrap-main">
-                                            <a href="{{ route('newLetter.View') }}">
-                                                <div class="codec-wrap-main-img">
-                                                    <img src="assets/images/networks-8.jpg">
-                                                </div>
-                                            </a>
-                                            <div class="codec-wrap-main-content">
-                                                <h4><a href="{{ route('newLetter.View') }}">Network Administration
-                                                        and Security</a></h4>
-                                                <p>Offers buffey of security programs, tools and techniques that are
-                                                    globally accepted in Information and Cyber Security Assurance.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="col-md-3">
-                                        <div class="codec-wrap-main">
-                                            <a href="{{ route('newLetter.View') }}">
-                                                <div class="codec-wrap-main-img">
-                                                    <img src="assets/images/networks-8.jpg">
-                                                </div>
-                                            </a>
-                                            <div class="codec-wrap-main-content">
-                                                <h4><a href="{{ route('newLetter.View') }}">Network Administration
-                                                        and Security</a></h4>
-                                                <p>Offers buffey of security programs, tools and techniques that are
-                                                    globally accepted in Information and Cyber Security Assurance.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="col-md-3">
-                                        <div class="codec-wrap-main">
-                                            <a href="{{ route('newLetter.View') }}">
-                                                <div class="codec-wrap-main-img">
-                                                    <img src="assets/images/networks-8.jpg">
-                                                </div>
-                                            </a>
-                                            <div class="codec-wrap-main-content">
-                                                <h4><a href="{{ route('newLetter.View') }}">Network Administration
-                                                        and Security</a></h4>
-                                                <p>Offers buffey of security programs, tools and techniques that are
-                                                    globally accepted in Information and Cyber Security Assurance.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="col-md-3">
-                                        <div class="codec-wrap-main">
-                                            <a href="{{ route('newLetter.View') }}">
-                                                <div class="codec-wrap-main-img">
-                                                    <img src="assets/images/networks-8.jpg">
-                                                </div>
-                                            </a>
-                                            <div class="codec-wrap-main-content">
-                                                <h4><a href="{{ route('newLetter.View') }}">Network Administration
-                                                        and Security</a></h4>
-                                                <p>Offers buffey of security programs, tools and techniques that are
-                                                    globally accepted in Information and Cyber Security Assurance.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="col-md-3">
-                                        <div class="codec-wrap-main">
-                                            <a href="{{ route('newLetter.View') }}">
-                                                <div class="codec-wrap-main-img">
-                                                    <img src="assets/images/networks-8.jpg">
-                                                </div>
-                                            </a>
-                                            <div class="codec-wrap-main-content">
-                                                <h4><a href="{{ route('newLetter.View') }}">Network Administration
-                                                        and Security</a></h4>
-                                                <p>Offers buffey of security programs, tools and techniques that are
-                                                    globally accepted in Information and Cyber Security Assurance.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="cninsight-nav-count23" class="count-nav-box"></div>
-                            <!--  -->
-                            <a href="javascript:void(0)" class="close-acrodin"> Close</a>
-                            <!--  -->
-                        </div>
-                    </div>
+                    @endforeach 
+
                     <!-- box three end -->
                 </div>
                 <div class="blog-view">
@@ -1057,39 +301,17 @@
                 <div class="podcast">
                     <div class="vertical-text">TRENDING PODCASTS</div>
                     <div class="row">
+                        @foreach ($Trendingpodcast as $podcast)
                         <div class="col-md-4">
-                            <div data-videourl="https://www.youtube.com/watch?v=GFHlGYB6Cio" class="podcast-video">
-                                <img src="{{asset('assets/images/video-thumb.jpg')}}">
+                            <div data-videourl="{{ $podcast->video_url }}" class="podcast-video">
+                                {{-- <img src="{{asset('assets/images/video-thumb.jpg')}}"> --}}
+                                <img src="{{ asset('storage/uploads/backend/podcast/' . $podcast->images) }}" />
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div data-videourl="https://www.youtube.com/watch?v=GFHlGYB6Cio" class="podcast-video">
-                                <img src="{{asset('assets/images/video-thumb.jpg')}}">
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div data-videourl="https://www.youtube.com/watch?v=GFHlGYB6Cio" class="podcast-video">
-                                <img src="{{asset('assets/images/video-thumb.jpg')}}">
-                            </div>
-                        </div>
+                        @endforeach
+                       
                     </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div data-videourl="https://www.youtube.com/watch?v=GFHlGYB6Cio" class="podcast-video">
-                                <img src="{{asset('assets/images/video-thumb.jpg')}}">
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div data-videourl="https://www.youtube.com/watch?v=GFHlGYB6Cio" class="podcast-video">
-                                <img src="{{asset('assets/images/video-thumb.jpg')}}">
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div data-videourl="https://www.youtube.com/watch?v=GFHlGYB6Cio" class="podcast-video">
-                                <img src="{{asset('assets/images/video-thumb.jpg')}}">
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="blog-view">
                         <a href="{{ route('podcast.View') }}">View all</a>
                     </div>
@@ -1101,21 +323,13 @@
                 </div>
                 <div id="cninsight-slider3" class="owl-carousel owl-theme">
                     <!-- + -->
+                    @foreach ($Trendingpodcast as $podcast)
                     <div class="item">
-                        <div data-videourl="https://www.youtube.com/watch?v=GFHlGYB6Cio" class="podcast-video">
-                            <img src="{{ asset('assets/images/video-thumb.jpg') }}">
+                        <div data-videourl="{{ $podcast->video_url }}" class="podcast-video">
+                            <img src="{{ asset('storage/uploads/backend/podcast/' . $podcast->images) }}" />
                         </div>
                     </div>
-                    <div class="item">
-                        <div data-videourl="https://www.youtube.com/watch?v=GFHlGYB6Cio" class="podcast-video">
-                            <img src="{{asset('assets/images/video-thumb.jpg')}}">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div data-videourl="https://www.youtube.com/watch?v=GFHlGYB6Cio" class="podcast-video">
-                            <img src="{{ asset('assets/images/video-thumb.jpg') }}">
-                        </div>
-                    </div>
+                    @endforeach
                     <!--  -->
                 </div>
                 <div id="cninsight-nav-count3" class="count-nav-box"></div>
@@ -1135,42 +349,15 @@
 
                             <ul id="tabs-nav" class="mobile">
                                 <div id="owl-demo6" class="owl-carousel owl-theme" style="display: block; opacity: 0;">
-
                                     <div class="owl-wrapper-outer">
                                         <div class="owl-wrapper" style="width: 1000px; left: 0px; display: block;">
                                             <div class="owl-item" style="width: 100px;">
-                                                <li class="active"><a href="#tab1">Case</a></li>
+                                                @foreach ($Events as $event)
+                                                <li class="{{ $loop->first ? 'active' : ' '}}"><a href="#{{ $event->slug }}">{{ $event->name }}</a></li>
+                                                @endforeach
                                             </div>
-                                            <div class="owl-item" style="width: 100px;">
-                                                <li><a href="#tab2">Cciso</a></li>
-                                            </div>
-                                            <div class="owl-item" style="width: 100px;">
-                                                <li><a href="#tab3">Ceh </a></li>
-                                            </div>
-                                            <div class="owl-item" style="width: 100px;">
-                                                <li><a href="#tab4">CHFI </a></li>
-                                            </div>
-                                            <div class="owl-item" style="width: 100px;">
-                                                <li><a href="#tab5">CND</a></li>
-                                            </div>
-                                            <div class="owl-item" style="width: 100px;">
-                                                <li><a href="#tab6">CSCU</a></li>
-                                            </div>
-                                            <div class="owl-item" style="width: 100px;">
-                                                <li><a href="#tab7">ECSS</a></li>
-                                            </div>
-                                            <div class="owl-item" style="width: 100px;">
-                                                <li><a href="#tab8">ECIH</a></li>
-                                            </div>
-
-
                                         </div>
                                     </div>
-
-
-
-
-
                                     <div class="owl-controls clickable">
                                         <div class="owl-pagination">
                                             <div class="owl-page active"><span class=""></span></div>
@@ -1190,841 +377,37 @@
 
                             </ul>
                             <ul id="tabs-nav" class="desktop">
-                                <li class="active"><a href="#tab1">Case</a></li>
-                                <li><a href="#tab2">Cciso</a></li>
-                                <li><a href="#tab3">Ceh </a></li>
-                                <li><a href="#tab4">CHFI</a></li>
-                                <li><a href="#tab5">CND </a></li>
-                                <li><a href="#tab6">CSCU</a></li>
-                                <li><a href="#tab7">ECSS</a></li>
-                                <li><a href="#tab8">ECIH</a></li>
+                                @foreach ($Events as $event)
+                                <li class="{{ $loop->first ? 'active' : ' '}}"><a href="#{{ $event->slug}}">{{ $event->name }}</a></li>
+                                 @endforeach
                             </ul> <!-- END tabs-nav -->
 
                             <div id="tabs-content">
                                 <!-- 1-->
-                                <div id="tab1" class="tab-content" style="display: block;">
+                                @foreach ($Events as $event)
+                                <div id="{{ $event->slug}}" class="tab-content" style="display: block;">
                                     <div class="container">
                                         <ul id="codec-items5" class="code-pagination">
+                                            @foreach ($event->events as $eventItem)
                                             <li class="col-md-3">
                                                 <div class="codec-wrap-main">
-                                                    <a href="#">
+                                                    <a href="{{ route('events-view', $event->id) }}">
                                                         <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
+                                                            <img src="{{ asset('storage/uploads/backend/event/' . $eventItem->images) }}" />
                                                         </div>
                                                     </a>
                                                     <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
+                                                        <h4><a href="{{ route('events-view', $event->id) }}">{{ $eventItem->sub_category }}</a></h4>
+                                                        <p>{{ $eventItem->short_desc }}
                                                         </p>
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-
-                                    </div>
-                                </div>
-                                <!-- 1 /-->
-                                <!-- 2-->
-                                <div id="tab2" class="tab-content" style="display: none;">
-                                    <div class="container">
-                                        <ul id="codec-items6" class="code-pagination">
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-
-                                    </div>
-                                </div>
-                                <!-- 2/-->
-                                <!-- 3-->
-                                <div id="tab3" class="tab-content" style="display: none;">
-                                    <div class="container">
-                                        <ul id="codec-items7" class="code-pagination">
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-
-                                    </div>
-                                </div>
-                                <!-- 3/-->
-                                <!-- 4-->
-                                <div id="tab4" class="tab-content" style="display: none;">
-                                    <div class="container">
-                                        <ul id="codec-items8" class="code-pagination">
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-
-                                    </div>
-                                </div>
-                                <!-- 4/-->
-                                <!-- 5-->
-
-                                <div id="tab5" class="tab-content" style="display: none;">
-                                    <div class="container">
-                                        <ul id="codec-items9" class="code-pagination">
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-
-                                    </div>
-                                </div>
-                                <!-- 5/-->
-                                <!-- 5-->
-
-                                <div id="tab6" class="tab-content" style="display: none;">
-                                    <div class="container">
-                                        <ul id="codec-items10" class="code-pagination">
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
+                                            @endforeach
                                         </ul>
                                     </div>
                                 </div>
-                                <!-- 5/-->
-                                <!-- 5-->
-
-                                <div id="tab7" class="tab-content" style="display: none;">
-                                    <div class="container">
-                                        <ul id="codec-items11" class="code-pagination">
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-
-                                    </div>
-                                </div>
-                                <!-- 5/-->
-                                <!-- 5-->
-
-                                <div id="tab8" class="tab-content" style="display: none;">
-                                    <div class="container">
-                                        <ul id="codec-items12" class="code-pagination">
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="codec-wrap-main">
-                                                    <a href="#">
-                                                        <div class="codec-wrap-main-img">
-                                                            <img src="assets/images/networks-8.jpg">
-                                                        </div>
-                                                    </a>
-                                                    <div class="codec-wrap-main-content">
-                                                        <h4><a href="#">Network Administration and Security</a></h4>
-                                                        <p>Offers buffey of security programs, tools and techniques that are
-                                                            globally accepted in Information and Cyber Security Assurance.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-
-                                    </div>
-                                </div>
+                                @endforeach
                                 <!-- 5/-->
 
                             </div>
@@ -2042,96 +425,25 @@
                     <h3>Trending Events and Webinars</h3>
                 </div>
                 <div id="cninsight-slider4" class="owl-carousel owl-theme">
-                    <div class="item">
-                        <div class="col-md-3">
-                            <div class="codec-wrap-main">
-                                <a href="{{ route('newLetter.View') }}">
-                                    <div class="codec-wrap-main-img">
-                                        <img src="assets/images/networks-8.jpg">
+                    @foreach ($TrendingEvents as $trendingEvent)
+                        <div class="item">
+                            <div class="col-md-3">
+                                <div class="codec-wrap-main">
+                                    <a href="{{ route('events-view', $trendingEvent->id) }}">
+                                        <div class="codec-wrap-main-img">
+                                            <img src="{{ asset('storage/uploads/backend/event/' . $trendingEvent->images) }}" />
+                                        </div>
+                                    </a>
+                                    <div class="codec-wrap-main-content">
+                                        <h4><a href="{{ route('events-view', $trendingEvent->id) }}">{{ $trendingEvent->sub_category }}</a></h4>
+                                        <p>{{ $trendingEvent->short_desc }}
+                                        </p>
                                     </div>
-                                </a>
-                                <div class="codec-wrap-main-content">
-                                    <h4><a href="{{ route('newLetter.View') }}">Network Administration
-                                            and Security</a></h4>
-                                    <p>Offers buffey of security programs, tools and techniques that are
-                                        globally accepted in Information and Cyber Security Assurance.
-                                    </p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="item">
-                        <div class="col-md-3">
-                            <div class="codec-wrap-main">
-                                <a href="{{ route('newLetter.View') }}">
-                                    <div class="codec-wrap-main-img">
-                                        <img src="assets/images/networks-8.jpg">
-                                    </div>
-                                </a>
-                                <div class="codec-wrap-main-content">
-                                    <h4><a href="{{ route('newLetter.View') }}">Network Administration
-                                            and Security</a></h4>
-                                    <p>Offers buffey of security programs, tools and techniques that are
-                                        globally accepted in Information and Cyber Security Assurance.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="col-md-3">
-                            <div class="codec-wrap-main">
-                                <a href="{{ route('newLetter.View') }}">
-                                    <div class="codec-wrap-main-img">
-                                        <img src="assets/images/networks-8.jpg">
-                                    </div>
-                                </a>
-                                <div class="codec-wrap-main-content">
-                                    <h4><a href="{{ route('newLetter.View') }}">Network Administration
-                                            and Security</a></h4>
-                                    <p>Offers buffey of security programs, tools and techniques that are
-                                        globally accepted in Information and Cyber Security Assurance.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="col-md-3">
-                            <div class="codec-wrap-main">
-                                <a href="{{ route('newLetter.View') }}">
-                                    <div class="codec-wrap-main-img">
-                                        <img src="assets/images/networks-8.jpg">
-                                    </div>
-                                </a>
-                                <div class="codec-wrap-main-content">
-                                    <h4><a href="{{ route('newLetter.View') }}">Network Administration
-                                            and Security</a></h4>
-                                    <p>Offers buffey of security programs, tools and techniques that are
-                                        globally accepted in Information and Cyber Security Assurance.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="col-md-3">
-                            <div class="codec-wrap-main">
-                                <a href="{{ route('newLetter.View') }}">
-                                    <div class="codec-wrap-main-img">
-                                        <img src="assets/images/networks-8.jpg">
-                                    </div>
-                                </a>
-                                <div class="codec-wrap-main-content">
-                                    <h4><a href="{{ route('newLetter.View') }}">Network Administration
-                                            and Security</a></h4>
-                                    <p>Offers buffey of security programs, tools and techniques that are
-                                        globally accepted in Information and Cyber Security Assurance.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
+                    
                 </div>
                 <div id="cninsight-nav-count4" class="count-nav-box"></div>
 

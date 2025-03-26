@@ -53,14 +53,14 @@ class menueventController extends Controller
 
     public function store(Request $request)
     {
+        // dd($request->all());
         $validated = $request->validate([
-           
             'category_id' => 'required',
             'sub_category'  => 'required',
             'short_desc' => 'required',
+            'slug' => 'required',
             'description' => 'required',
             'video_url' => 'nullable',
-
         ]);
 
         try {
@@ -90,12 +90,14 @@ class menueventController extends Controller
 
     public function update(Request $request, $id)
     {
-       
+        // dd($request->all());
+
         try {
             $validated = $request->validate([
                
             'category_id' => 'required',
             'sub_category'  => 'required',
+            'slug' => 'required',
             'short_desc' => 'required',
             'description' => 'required',
             'video_url' => 'nullable',

@@ -53,6 +53,12 @@
                     </fieldset>
 
                     <fieldset class="name">
+                        <div class="body-title">Category Slug <span class="tf-color-1">*</span></div>
+                        <input class="flex-grow" id="categorySlug" type="text" placeholder="Category Name" name="slug"
+                            tabindex="0" value="{{ $events->slug }}" aria-required="true" required readonly>
+                    </fieldset>
+
+                    <fieldset class="name">
                         <div class="body-title"> Video URL <span class="tf-color-1">*</span></div>
                         <input class="flex-grow" type="text" placeholder="Video URL" name="video_url" tabindex="0"
                             value="{{ old('video_url', $events->video_url) }}" aria-required="true">
@@ -111,3 +117,25 @@
         </div>
     </div>
 @endsection
+
+@push('scripts')
+<script>
+    $(document).ready(function() {
+        function slugify(text) {
+            if (typeof text !== 'string') text = ''; // Ensure text is always a string
+            return text.toLowerCase()
+                .trim()
+                .replace(/\s+/g, '-') // Replace spaces with hyphens
+                .replace(/[^\w\-]+/g, '') // Remove all non-word characters
+                .replace(/\-\-+/g, '-'); // Replace multiple hyphens with a single hyphen
+        }
+
+        $('#sub_category').on('input', function() {
+            var title = $(this).val() || ''; // Ensure title is never undefined
+            title = String(title); // Explicitly convert title to a string
+            var slug = slugify(title);
+            $('#categorySlug').val(slug); // Update slug field dynamically
+        });
+    });
+</script>
+@endpush

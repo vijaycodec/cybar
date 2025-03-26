@@ -17,6 +17,8 @@ return new class extends Migration
             $table->unsignedBigInteger('page_category_id');
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('sub_category_id');
+            $table->text('l3_layout_type')->nullable();
+            $table->text('l3_layout_program')->nullable();
             $table->string('images')->nullable(); 
             $table->string('brochure_pdf')->nullable();
             //overview section columns

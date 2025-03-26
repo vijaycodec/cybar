@@ -75,8 +75,8 @@ class l3_contentController extends Controller
             'category_id'      => 'required',
             'sub_category_id'  => 'required',
             'l3_category_id'   => 'required',
-            'l3_layout_type'   => 'required',
-            'l3_layout_program'   => 'nullable',
+            'l3_layout_type'   => 'nullable',
+            
         ];
 
         switch ($request->l3_layout_type) {
@@ -126,6 +126,7 @@ class l3_contentController extends Controller
                 break;
             case 'program':
                 $rules['program_category_id'] = 'required|exists:program_categories,id';
+                $rules ['l3_layout_program']   = 'nullable';
                 break;
         }
 
@@ -154,8 +155,7 @@ class l3_contentController extends Controller
             'category_id'      => 'required',
             'sub_category_id'  => 'required',
             'l3_category_id'   => 'required',
-            'l3_layout_type'   => 'required',
-            'l3_layout_program'   => 'nullable',
+            'l3_layout_type'   => 'nullable',
         ];
 
         switch ($request->l3_layout_type) {
@@ -197,6 +197,7 @@ class l3_contentController extends Controller
                 break;
             case 'program':
                 $rules['program_category_id'] = 'required|exists:program_categories,id';
+                $rules ['l3_layout_program']   = 'nullable';
                 break;
         }
 
@@ -221,12 +222,12 @@ class l3_contentController extends Controller
                     'error' => 'L3Content not found or already deleted.'
                 ], 404);
             }
-            
+
             // Delete associated images if they exist
             if ($l3ContentInfo->images) {
                 $this->deleteImage($l3ContentInfo->images, 'significance');
             }
-          
+
             if (isset($l3ContentInfo) && !empty($l3ContentInfo->overview_title)) {
                 L3OverviewSubDescription::where('l3_content_info_id', $id)->delete();
             }

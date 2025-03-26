@@ -41,6 +41,7 @@ class MenuEventRepository implements MenuEventRepositoryInterface
         $event->category_id = $data['category_id'];
         $event->sub_category = $data['sub_category'];
         $event->short_desc = $data['short_desc'];
+        $event->slug = $data['slug'];
         $event->description = $data['description'];
         $event->video_url = $data ['video_url'];
 
@@ -59,6 +60,7 @@ class MenuEventRepository implements MenuEventRepositoryInterface
         $event->category_id = $data['category_id'];
         $event->sub_category = $data['sub_category'];
         $event->short_desc = $data['short_desc'];
+        $event->slug = $data['slug'];
         $event->description = $data['description'];
         $event->video_url = $data ['video_url'];
 

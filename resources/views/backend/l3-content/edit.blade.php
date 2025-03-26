@@ -63,7 +63,7 @@
                     </li>
                 </ul>
             </div>
-
+ 
             <div class="wg-box">
                 <form class="form-new-brand form-style-1" action="{{ route('l3-content.update', $l3Content->id) }}"
                     method="POST" enctype="multipart/form-data">
@@ -126,40 +126,38 @@
 
                     <fieldset class="name">
                         <div class="body-title">Select L3 Layouts <span class="tf-color-1">*</span></div>
-                        <select class="flex-grow l3_content" name="l3_layout_type" id="l3_layout_id" required>
-                            <option value="" disabled selected>Select L3 Category</option>
-                            <option value="overview">overview</option>
-                            <option value="significance">significance</option>
-                            <option value="coursefeatures">coursefeatures</option>
-                            <option value="cyberwind">whycyberwind</option>
-                            <option value="industries">industries</option>
-                            <option value="faqs">faqs</option>
-                            <option value="blog">blog</option>
-                            <option value="incidents">incidents</option>
-                            <option value="cehkit">cehkit</option>
-                            <option value="program">program</option>
-                            <option value="testimonials">testimonials</option>
-                        </select>
-                    </fieldset>
-
-
-
-
-                    {{-- <fieldset class="name">
-                        <div class="body-title">Select L3 Layouts <span class="tf-color-1">*</span></div>
-                        <select class="flex-grow l3_content" name="l3_layout_type" id="l3_layout_id" required>
-                            <option value="" disabled selected>Select L3 Layouts</option>
-
-                            @foreach ($l3Content as $l3Category)
-                                    <option value="{{ $l3Content->l3_layout_type }}">
-                                    </option>
+                        <select class="flex-grow l3_content" name="" id="l3_layout_id">
+                            {{-- <option value="{{ $l3Content->l3_layout_type }}">{{ $l3Content->l3_layout_type }}</option> --}}
+                            <option value="" disabled>Select L3 Layout</option>
+                            @php
+                                $layoutTypes = [
+                                    'overview' => 'Overview',
+                                    'significance' => 'Significance',
+                                    'coursefeatures' => 'Course Features',
+                                    'cyberwind' => 'Why Cyberwind',
+                                    'industries' => 'Industries',
+                                    'faqs' => 'FAQs',
+                                    'blog' => 'Blog',
+                                    'incidents' => 'Incidents',
+                                    'cehkit' => 'CEH Kit',
+                                    'program' => 'Program',
+                                    'testimonials' => 'Testimonials'
+                                ];
+                            @endphp
+                    
+                            @foreach ($layoutTypes as $key => $value)
+                                {{-- <option value="{{ $key }}" {{ ($l3Content->l3_layout_type == $key) ? 'selected' : '' }}>
+                                    {{ $value }}
+                                </option> --}}
+                                <option value="{{ $key }}" {{ (isset($l3Content->l3_layout_type) && $l3Content->l3_layout_type == $key) ? 'selected' : '' }}>
+                                    {{ $value }}
+                                </option>
                             @endforeach
                         </select>
-                    </fieldset> --}}
-
-
-
-
+                    
+                       
+                    </fieldset>
+                    
 
                     <hr id="hr" style="border: 0; height: 4px; background-color: #f40a0a; ">
                     <!-- Forms based on L3 Category selection -->
@@ -178,7 +176,7 @@
                     </div>
 
                     <div class="l3-form" id="overview_sub_desc" style="display: none;">
-                        <div class="body-title">SelectS ub Descriptions: <span class="tf-color-1"></span></div>
+                        <div class="body-title">Select Sub Descriptions: <span class="tf-color-1"></span></div>
                         <select id="overview_count" class="flex-grow l3_content">
                             <option value="">Select</option>
 
@@ -454,17 +452,55 @@
                         </select>
                     </div>
 
-                    <div class="l3-form" id="layout_program_form" style="display: none;">
+                    {{-- <div class="l3-form" id="layout_program_form" style="display: none;">
                         <div class="body-title">Select L3 Layouts Program <span class="tf-color-1">*</span></div>
                         <select class="flex-grow l3_content" name="l3_layout_program">
-                            <option value="" disabled selected>Select L3 Category</option>
-                            <option value="courseoutline">courseoutline</option>
-                            <option value="whatsnewinceh">whatsnewinceh</option>
-                            <option value="whoisitfor">whoisitfor</option>
-                            <option value="brochure">brochure</option>
-
+                            <option value="" disabled>Select L3 Layout Program</option>
+                    
+                            @php
+                                $layoutPrograms = [
+                                    'courseoutline' => 'Course Outline',
+                                    'whatsnewinceh' => "What's New in CEH",
+                                    'whoisitfor' => 'Who is it for?',
+                                    'brochure' => 'Brochure'
+                                ];
+                            @endphp
+                    
+                            @foreach ($layoutPrograms as $key => $value)
+                                <option value="{{ $key }}" {{ (isset($l3Content->l3_layout_program) && $l3Content->l3_layout_program == $key) ? 'selected' : '' }}>
+                                    {{ $value }}
+                                </option>
+                            @endforeach
                         </select>
+                    </div> --}}
+
+                    <div class="l3-form" id="layout_program_form" style="display: none;">
+                        <div class="body-title">Select L3 Layouts Program <span class="tf-color-1">*</span></div>
+                        <select class="flex-grow l3_content" name="l3_layout_program" required>
+                            <option value="" disabled {{  $l3Content->l3_layout_program  ? 'selected' : '' }}>Select L3 Layout Program</option>
+                    
+                            @php
+                                $layoutPrograms = [
+                                    'courseoutline' => 'Course Outline',
+                                    'whatsnewinceh' => "What's New in CEH",
+                                    'whoisitfor' => 'Who is it for?',
+                                    'brochure' => 'Brochure'
+                                ];
+                            @endphp
+                    
+                            @foreach ($layoutPrograms as $key => $value)
+                                <option value="{{ $key }}" {{ old('l3_layout_program', $l3Content->l3_layout_program ?? '') == $key ? 'selected' : '' }}>
+                                    {{ $value }}
+                                </option>
+                            @endforeach
+                        </select>
+                    
+                        @error('l3_layout_program')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
                     </div>
+                    
+                    
 
                     <div class="l3-form form-group program_title">
                         <div class="body-title">Program Top Title(H) :<span class="tf-color-1">*</span></div>
@@ -632,7 +668,7 @@
     <script>
         $(document).ready(function() {
             function toggleForms() {
-                var selectedL3Category = $("#l3_category option:selected").text().trim().toLowerCase();
+                var selectedL3Category = $("#l3_layout_id option:selected").text().trim().toLowerCase();
                 selectedL3Category = selectedL3Category.replace(/[^a-zA-Z0-9]/g, ''); // Remove special characters
 
                 console.log("Selected L3 Category:", selectedL3Category); // Debugging

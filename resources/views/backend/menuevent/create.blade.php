@@ -40,6 +40,11 @@
                         <input class="flex-grow" id="categorySelect" type="text" placeholder="Category Name" name="sub_category" tabindex="0"
                             value="{{ old('sub_category') }}" aria-required="true" required="">
                     </fieldset>
+                    <fieldset class="name">
+                        <div class="body-title">Category Slug <span class="tf-color-1">*</span></div>
+                        <input class="flex-grow" id="categorySlug" type="text" placeholder="Category Name" name="slug"
+                            tabindex="0" value="{{ old('slug') }}" aria-required="true" required readonly>
+                    </fieldset>
                     
                     <fieldset class="name">
                         <div class="body-title"> Video URL  <span class="tf-color-1">*</span></div>
@@ -84,4 +89,25 @@
         </div>
     </div>
 @endsection
+
+@push('scripts')
+    <!-- jQuery script to generate slug on change -->
+    <script>
+        $(document).ready(function() {
+            function slugify(text) {
+                return text.toString().toLowerCase()
+                    .trim()
+                    .replace(/\s+/g, '-') // Replace spaces with hyphens
+                    .replace(/[^\w\-]+/g, '') // Remove all non-word characters
+                    .replace(/\-\-+/g, '-'); // Replace multiple hyphens with single hyphen
+            }
+
+            $('#categorySelect').on('input', function() {
+                var title = $(this).val();
+                var slug = slugify(title);
+                $('#categorySlug').val(slug); // Set generated slug in the input field
+            });
+        });
+    </script>
+@endpush
 

@@ -36,6 +36,7 @@ class PodcastController extends Controller
 
     public function store(Request $request)
     {
+        // dd($request->all());
         $validated = $request->validate([
             'category_id'   => 'required',
             'sub_category'  => 'required',
