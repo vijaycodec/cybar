@@ -590,19 +590,17 @@
 
             // Dynamically initialize each carousel inside .carousel-wrap
             $(".carousel-wrap").each(function(index) {
+                let $ind = index - 7;
                 let $carousel = $(this).find(".owl-carousel");
-                let carouselId = "owl-carousel-" + index;
-                let counterId = "navigation-count-" + index;
+                let carouselId = "owl-carousel-" + $ind;
+                let counterId = "navigation-count-" + $ind;
 
                 // Assign unique IDs if not already set
                 if (!$carousel.attr("id")) {
                     $carousel.attr("id", carouselId);
                 }
 
-                if (!$("#" + counterId).length) {
-                    $(this).append(`<div id="${counterId}" class="count-nav-box"></div>`);
-                }
-
+        
                 initializeCarousel(carouselId, counterId);
             });
         });
