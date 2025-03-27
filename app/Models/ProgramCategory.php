@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class ProgramCategory extends Model
 {
+
+    protected $fillable = ['name', 'slug'];
     // Relationship: A program category may have subcategories
     public function programSubCategories()
     {

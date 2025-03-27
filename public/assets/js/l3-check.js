@@ -1242,36 +1242,35 @@ if (isMobile()) {
         });
 
 
+        // // Reset "Why Choose" menu
+        // function resetTabs3() {
+        //     var i, tabcontent3, tablinks3;
+        //     tabcontent3 = document.getElementsByClassName("tab3-tabcontent");
 
-        // Reset "Why Choose" menu
-        function resetTabs3() {
-            var i, tabcontent3, tablinks3;
-            tabcontent3 = document.getElementsByClassName("tab3-tabcontent");
+        //     // Hide all tab contents
+        //     for (i = 0; i < tabcontent3.length; i++) {
+        //         tabcontent3[i].scrollTo({
+        //             top: 0,
+        //             behavior: 'smooth' // Adds smooth scrolling effect
+        //         });
+        //         tabcontent3[i].style.display = "none";
+        //     }
 
-            // Hide all tab contents
-            for (i = 0; i < tabcontent3.length; i++) {
-                tabcontent3[i].scrollTo({
-                    top: 0,
-                    behavior: 'smooth' // Adds smooth scrolling effect
-                });
-                tabcontent3[i].style.display = "none";
-            }
+        //     // Remove 'active' class from all tabs
+        //     tablinks3 = document.getElementsByClassName("tab3-tablinks");
+        //     for (i = 0; i < tablinks3.length; i++) {
+        //         tablinks3[i].classList.remove("tab3-active"); // Use classList.remove for better compatibility
+        //     }
 
-            // Remove 'active' class from all tabs
-            tablinks3 = document.getElementsByClassName("tab3-tablinks");
-            for (i = 0; i < tablinks3.length; i++) {
-                tablinks3[i].classList.remove("tab3-active"); // Use classList.remove for better compatibility
-            }
-
-            // Show the first tab content and set the first tab as active
-            document.getElementById('industry_challenges').style.display = "block"; // Show the first tab content
-            openCity(event, '-industry-challenges');
-            tablinks3[0].classList.add("tab3-active"); // Use classList.add to add the active class
-            const elements_click3 = document.querySelectorAll('.hide-btn_tab3'); // Replace with your class name
-            elements_click3.forEach(element => {
-                element.click(); // Triggers click even if the element is hidden
-            });
-        }
+        //     // Show the first tab content and set the first tab as active
+        //     document.getElementById('industry_challenges').style.display = "block"; // Show the first tab content
+        //     openCity(event, '-industry-challenges');
+        //     tablinks3[0].classList.add("tab3-active"); // Use classList.add to add the active class
+        //     const elements_click3 = document.querySelectorAll('.hide-btn_tab3'); // Replace with your class name
+        //     elements_click3.forEach(element => {
+        //         element.click(); // Triggers click even if the element is hidden
+        //     });
+        // }
 
         // Create an Intersection Observer for the "Why Choose" menu
         const observer3 = new IntersectionObserver((entries) => {
@@ -1294,4 +1293,38 @@ if (isMobile()) {
     // l3-desktop.js?v-1 End script 
 
 
+      // //this script add by vijay instead of above static script
+        // function resetTabs3() {
+        //     var i, tabcontent3, tablinks3;
+        //     tabcontent3 = document.getElementsByClassName("tab3-tabcontent");
+        
+        //     // Hide all tab contents
+        //     for (i = 0; i < tabcontent3.length; i++) {
+        //         tabcontent3[i].scrollTo({
+        //             top: 0,
+        //             behavior: 'smooth' // Adds smooth scrolling effect
+        //         });
+        //         tabcontent3[i].style.display = "none";
+        //     }
+        
+        //     // Remove 'active' class from all tabs
+        //     tablinks3 = document.getElementsByClassName("tab3-tablinks");
+        //     for (i = 0; i < tablinks3.length; i++) {
+        //         tablinks3[i].classList.remove("tab3-active");
+        //     }
+        
+        //     // Dynamically find the first tab and make it active
+        //     let firstTab = document.querySelector('.tab3-tablinks'); // Select first tab button
+        //     if (firstTab) {
+        //         let firstTabId = firstTab.getAttribute('onclick').match(/'([^']+)'/)[1]; // Extract ID
+        //         document.getElementById(firstTabId).style.display = "block"; // Show the first tab content
+        //         openCity(event, firstTabId); // Open the first tab dynamically
+        //         firstTab.classList.add("tab3-active"); // Add active class to first tab
+        //     }
+        
+        //     const elements_click3 = document.querySelectorAll('.hide-btn_tab3'); // Replace with your class name
+        //     elements_click3.forEach(element => {
+        //         element.click(); // Triggers click even if the element is hidden
+        //     });
+        // }
 }

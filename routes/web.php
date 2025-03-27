@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\backend\authController;
+use App\Http\Controllers\backend\blogsubCategoryController;
 use App\Http\Controllers\frontend\blogController;
 use App\Http\Controllers\frontend\blogViewController;
 use App\Http\Controllers\frontend\careerController;
@@ -30,7 +31,11 @@ use App\Http\Controllers\backend\menublogController;
 use App\Http\Controllers\backend\menueventController;
 use App\Http\Controllers\backend\menutestimonialController;
 use App\Http\Controllers\backend\careerController  as BackendCareerController;
+use App\Http\Controllers\backend\coursrfeaturesController;
+use App\Http\Controllers\backend\cyberwimdController;
 use App\Http\Controllers\backend\EnquiryController;
+use App\Http\Controllers\backend\faqController;
+use App\Http\Controllers\backend\industriesController;
 use App\Http\Controllers\backend\jobCarrerController;
 use App\Http\Controllers\backend\NewsLetterController;
 use App\Http\Controllers\backend\SearchController;
@@ -41,6 +46,8 @@ use App\Http\Controllers\frontend\templateController;
 use App\Http\Controllers\frontend\NewsLetteViewsController;
 use App\Http\Controllers\frontend\PodcastController;
 use App\Http\Controllers\backend\podcastController as BackendPodcastController;
+use App\Http\Controllers\backend\programController;
+use App\Http\Controllers\backend\significanceController;
 use App\Http\Controllers\frontend\NewsLetterMainController;
 use Illuminate\Support\Facades\Route;
 
@@ -250,6 +257,71 @@ Route::middleware(['auth','admin','prevent_history'])->group(function () {
     route::get('/podcast/edit/{id}', [BackendPodcastController::class, 'edit'])->name('podcast.edit');
     Route::put('podcast/update/{id}', [BackendPodcastController::class, 'update'])->name('podcast.update');
     Route::delete('podcast/delete/{id}', [BackendPodcastController::class, 'destroy'])->name('podcast.destroy');
+
+    //Significance-sub category Routes
+    route::get('/significance/list', [significanceController::class, 'index'])->name('significance.list');
+    route::get('/significance/create', [significanceController::class, 'create'])->name('significance.create');
+    route::post('/significance/store', [significanceController::class, 'store'])->name('significance.store');
+    Route::get('/significance/show/{id}', [significanceController::class, 'show'])->name('significance.show');
+    route::get('/significance/edit/{id}', [significanceController::class, 'edit'])->name('significance.edit');
+    Route::put('significance/update/{id}', [significanceController::class, 'update'])->name('significance.update');
+    Route::delete('significance/delete/{id}', [significanceController::class, 'destroy'])->name('significance.destroy');
+
+
+    //Program-sub category Routes
+    route::get('/program/list', [programController::class, 'index'])->name('program.list');
+    route::get('/program/create', [programController::class, 'create'])->name('program.create');
+    route::post('/program/store', [programController::class, 'store'])->name('program.store');
+    Route::get('/program/show/{id}', [programController::class, 'show'])->name('program.show');
+    route::get('/program/edit/{id}', [programController::class, 'edit'])->name('program.edit');
+    Route::put('program/update/{id}', [programController::class, 'update'])->name('program.update');
+    Route::delete('program/delete/{id}', [programController::class, 'destroy'])->name('program.destroy');
+
+
+    //coursefeature-sub category Routes
+    route::get('/coursefeature/list', [coursrfeaturesController::class, 'index'])->name('coursefeature.list');
+    route::get('/coursefeature/create', [coursrfeaturesController::class, 'create'])->name('coursefeature.create');
+    route::post('/coursefeature/store', [coursrfeaturesController::class, 'store'])->name('coursefeature.store');
+    Route::get('/coursefeature/show/{id}', [coursrfeaturesController::class, 'show'])->name('coursefeature.show');
+    route::get('/coursefeature/edit/{id}', [coursrfeaturesController::class, 'edit'])->name('coursefeature.edit');
+    Route::put('coursefeature/update/{id}', [coursrfeaturesController::class, 'update'])->name('coursefeature.update');
+    Route::delete('coursefeature/delete/{id}', [coursrfeaturesController::class, 'destroy'])->name('coursefeature.destroy');
+
+    //industry-sub category Routes
+    route::get('/industry/list', [industriesController::class, 'index'])->name('industry.list');
+    route::get('/industry/create', [industriesController::class, 'create'])->name('industry.create');
+    route::post('/industry/store', [industriesController::class, 'store'])->name('industry.store');
+    Route::get('/industry/show/{id}', [industriesController::class, 'show'])->name('industry.show');
+    route::get('/industry/edit/{id}', [industriesController::class, 'edit'])->name('industry.edit');
+    Route::put('industry/update/{id}', [industriesController::class, 'update'])->name('industry.update');
+    Route::delete('industry/delete/{id}', [industriesController::class, 'destroy'])->name('industry.destroy');
+
+        //cyberwind-sub category Routes
+        route::get('/cyberwind/list', [cyberwimdController::class, 'index'])->name('cyberwind.list');
+        route::get('/cyberwind/create', [cyberwimdController::class, 'create'])->name('cyberwind.create');
+        route::post('/cyberwind/store', [cyberwimdController::class, 'store'])->name('cyberwind.store');
+        Route::get('/cyberwind/show/{id}', [cyberwimdController::class, 'show'])->name('cyberwind.show');
+        route::get('/cyberwind/edit/{id}', [cyberwimdController::class, 'edit'])->name('cyberwind.edit');
+        Route::put('cyberwind/update/{id}', [cyberwimdController::class, 'update'])->name('cyberwind.update');
+        Route::delete('cyberwind/delete/{id}', [cyberwimdController::class, 'destroy'])->name('cyberwind.destroy');
+    
+        //blog-sub category Routes
+        route::get('/blog/list', [blogsubCategoryController::class, 'index'])->name('blog.list');
+        route::get('/blog/create', [blogsubCategoryController::class, 'create'])->name('blog.create');
+        route::post('/blog/store', [blogsubCategoryController::class, 'store'])->name('blog.store');
+        Route::get('/blog/show/{id}', [blogsubCategoryController::class, 'show'])->name('blog.show');
+        route::get('/blog/edit/{id}', [blogsubCategoryController::class, 'edit'])->name('blog.edit');
+        Route::put('blog/update/{id}', [blogsubCategoryController::class, 'update'])->name('blog.update');
+        Route::delete('blog/delete/{id}', [blogsubCategoryController::class, 'destroy'])->name('blog.destroy');
+    
+        //faq-sub category Routes
+        route::get('/faq/list', [faqController::class, 'index'])->name('faq.list');
+        route::get('/faq/create', [faqController::class, 'create'])->name('faq.create');
+        route::post('/faq/store', [faqController::class, 'store'])->name('faq.store');
+        Route::get('/faq/show/{id}', [faqController::class, 'show'])->name('faq.show');
+        route::get('/faq/edit/{id}', [faqController::class, 'edit'])->name('faq.edit');
+        Route::put('faq/update/{id}', [faqController::class, 'update'])->name('faq.update');
+        Route::delete('faq/delete/{id}', [faqController::class, 'destroy'])->name('faq.destroy');
 
 });
 
