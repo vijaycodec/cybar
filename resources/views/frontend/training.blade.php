@@ -6,7 +6,7 @@
 
 @section('content')
 
-    <body class="with-zoom1" id="training-page">
+    <body class="" id="training-page">
         <!-- Header start -->
         @include('frontend.layouts.training-header',['categories' => $categories])
         <!-- main section-->
