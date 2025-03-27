@@ -306,7 +306,7 @@
                     <!-- Industries Title Form -->
                     <div class="l3-form form-group industries_title">
                         <div class="body-title">Industries Title : <span class="tf-color-1">*</span></div>
-                        <textarea class="" name="industries_title">{{ $industryTitle ? $industryTitle->title : '' }}</textarea>
+                        <textarea class="summernote" name="industries_title">{{ $industryTitle ? $industryTitle->title : '' }}</textarea>
                     </div>
                     <div class="l3-form form-group industries_desc">
                         <div class="body-title">Industries Description :<span class="tf-color-1">*</span></div>

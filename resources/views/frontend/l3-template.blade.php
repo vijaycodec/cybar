@@ -1602,7 +1602,8 @@
     {{-- blog section end --}}
     <!--  -->
     <!-- FAQ info start -->
-    @if ($contentInfos->contains(fn($info) => $info->faqCategory))
+    {{-- @if ($contentInfos->contains(fn($info) => $info->faqCategory)) --}}
+        @if (isset($categories[10]) && isset($categories[10]['slug']))
         <section class="anchor-link sample7-line space7 ceh-pro ceh-pro1" id="{{ $categories[10]['slug'] }}">
             <!-- title  -->
             <div class="container">
