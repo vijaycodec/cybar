@@ -445,6 +445,96 @@
                                     </a>
             
                                 </li>
+
+                                <li class="menu-item has-children">
+                                    <a href="javascript:void(0);" class="menu-item-button">
+                                        <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
+                                                style="height:18px"></div>
+                                        <div class="text">L3 Sub Category</div>
+                                    </a>
+            
+                                    <ul class="sub-menu">
+                                        <li class="sub-menu-item">
+                                            <a href="{{ route('significance.list') }}" class="">
+                                                <div class="text">Significance List</div>
+                                            </a>
+                                        </li>
+            
+            
+                                      
+            
+                                    </ul>
+
+                                    <ul class="sub-menu">
+                                        <li class="sub-menu-item">
+                                            <a href="{{ route('program.list') }}" class="">
+                                                <div class="text">Program List</div>
+                                            </a>
+                                        </li>
+            
+            
+                                        
+            
+                                    </ul>
+
+                                    <ul class="sub-menu">
+                                        <li class="sub-menu-item">
+                                            <a href="{{ route('coursefeature.list') }}" class="">
+                                                <div class="text">CourseFeature List</div>
+                                            </a>
+                                        </li>
+            
+            
+                                       
+            
+                                    </ul>
+
+                                    <ul class="sub-menu">
+                                        <li class="sub-menu-item">
+                                            <a href="{{ route('industry.list') }}" class="">
+                                                <div class="text">Industry List</div>
+                                            </a>
+                                        </li>
+            
+            
+                                       
+            
+                                    </ul>
+
+                                    <ul class="sub-menu">
+                                        <li class="sub-menu-item">
+                                            <a href="{{ route('cyberwind.list') }}" class="">
+                                                <div class="text">Cyberwind List</div>
+                                            </a>
+                                        </li>
+            
+                                        
+            
+                                    </ul>
+
+                                    <ul class="sub-menu">
+                                        <li class="sub-menu-item">
+                                            <a href="{{ route('blog.list') }}" class="">
+                                                <div class="text">Blog List</div>
+                                            </a>
+                                        </li>
+            
+                                       
+            
+                                    </ul>
+
+                                    <ul class="sub-menu">
+                                        <li class="sub-menu-item">
+                                            <a href="{{ route('faq.list') }}" class="">
+                                                <div class="text">Faq List</div>
+                                            </a>
+                                        </li>
+            
+                                       
+            
+                                    </ul>
+
+                                </li>
             
                                 {{-- <li class="menu-item">
                                 <a href="users.html" class="">

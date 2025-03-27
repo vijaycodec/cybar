@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class SignificanceCategory extends Model
 {
-    
+    protected $fillable = ['name', 'slug'];
 }
