@@ -1,7 +1,5 @@
 @extends('frontend.layouts.app')
 
-
-
 @section('content')
 
     <body id="main-body">
@@ -32,7 +30,7 @@
         <!-- tab menu end -->
 
         <!--  -->
-        {{-- @foreach ($categories as $index=>$category) --}}
+        @foreach ($categories as $index=>$category)
         <section class="testimonials testimonials-page event-space testimonials-bg resc-sec" id="#">
             <div class="container">
                 <div class="row">
@@ -40,23 +38,23 @@
                         <div class="wpb_text_column wpb_content_element">
                             <div class="wpb_wrapper">
                                 <div class="title-button">
-                                    <h3 class="style1 tbg1">
-                                        <i class="fa fa-2x fa-file"></i> Test Category
+                                    <h3 class="style1 tbg{{ $index+1 }}">
+                                        <i class="fa fa-2x fa-file"></i> {{ $category->name }}
                                     </h3>
                                 </div>
                                 <div class="carousel-wrap">
-                                    <div class="owl-carousel owl-theme" id="carousel-1" data-index="1">
-                                        {{-- @foreach ($category->events as $event) --}}
-                                        <div class="item">
-                                            <div class="event-box">
-                                                <img src="{{ asset('uploads/backend/events/' . 'test.jpg') }}" class="img-fluid" alt="t1">
+                                    <div class="owl-carousel owl-theme" id="carousel-{{ $index }}" data-index="{{ $index }}">
+                                        @foreach ($category->prodcasts as $podcast)
+                                            <div class="item">
+                                                <div class="event-box">
+                                                    <img src="{{ asset('storage/uploads/backend/podcast/' . $podcast->images) }}" class="img-fluid" alt="t1">
+                                                </div>
                                             </div>
-                                        </div>
-                                        {{-- @endforeach --}}
+                                        @endforeach
                                     </div>
         
                                     <!-- Navigation Counter (Fixed) -->
-                                    <div id="navigation-count-1" class="count-nav-box"></div>
+                                    <div id="navigation-count-{{ $index }}" class="count-nav-box"></div>
                                 </div>
                             </div>
                         </div>
@@ -65,7 +63,7 @@
             </div>
         </section>
         
-        {{-- @endforeach --}}
+        @endforeach
         <!--  -->
         <!-- tab menu end -->
         <!--  -->
