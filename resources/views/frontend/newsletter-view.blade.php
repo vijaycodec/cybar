@@ -45,7 +45,7 @@
                                 </div>
                                 @endif
                                 <div class="blog-view">
-                                    <a href="{{ route('cn-insight') }}">Go Back</a>
+                                    <a href="javascript:history.back()">Go Back</a>
                                 </div>
                             </div>
                         </div>

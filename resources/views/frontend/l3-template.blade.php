@@ -497,7 +497,7 @@
                                         );
                                     @endphp
 
-                                    @if ($programCategorySlug == 'courseoutline')
+                                    @if ($contentInfo->l3_layout_program == 'courseoutline')
                                         <div id="{{ $programCategorySlug }}"
                                             class="tab-pane fade in {{ $loop->first ? 'active' : '' }}">
                                             <div class="container module-tab">
@@ -613,7 +613,7 @@
                                         </div>
 
                                         <!--  Second Program Category (Vertical Tabs Based) -->
-                                    @elseif ($programCategorySlug == 'whatsnewinceh')
+                                    @elseif ($contentInfo->l3_layout_program == 'whatsnewinceh')
                                         <div id="{{ $programCategorySlug }}" class="tab-pane fade">
                                             <div class="container">
                                                 <div class="row">
@@ -659,7 +659,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    @elseif ($programCategorySlug == 'whoisitfor')
+                                    @elseif ($contentInfo->l3_layout_program == 'whoisitfor')
                                         <div id="{{ $programCategorySlug }}" class="tab-pane fade">
                                             <!--  -->
                                             <div class="container">
@@ -682,7 +682,7 @@
                                             </div>
                                             <!--  -->
                                         </div>
-                                    @elseif ($programCategorySlug == 'brochure')
+                                    @elseif ($contentInfo->l3_layout_program == 'brochure')
                                         <div id="brochure" class="tab-pane brochure-row fade">
                                             <!--  -->
                                             <div class="container">
@@ -736,7 +736,7 @@
             </div>
             <!-- body end -->
             <!-- mobile end -->
-            <div class="container mobile-view" id="{{ $categories[2]['slug'] }}_mob">
+            <div class="container mobile-view" id="program_mob">
                 <!--  -->
                 <div class="acc">
                     @php
@@ -782,7 +782,7 @@
                                     </a>
 
                                     {{-- Course Outline Category --}}
-                                    @if ($programCategorySlug == 'courseoutline')
+                                    @if ($contentInfo->l3_layout_program == 'courseoutline')
                                         <div id="{{ $programCategorySlug }}mob"
                                             style="{{ $loop->first ? 'display:block;' : '' }}" class="acc__panel">
                                             <div class="container">
@@ -853,7 +853,7 @@
                                         </div>
 
                                         {{-- What's New in CEH Category --}}
-                                    @elseif ($programCategorySlug == 'whatsnewinceh')
+                                    @elseif ($contentInfo->l3_layout_program == 'whatsnewinceh')
                                         <div id="{{ $programCategorySlug }}mob" class="acc__panel">
                                             <div class="pro-mbile pro-mbile1">
                                                 <div class="acc acc-m">
@@ -905,7 +905,7 @@
                                         </div>
 
                                         {{-- Who Is It For? Category --}}
-                                    @elseif ($programCategorySlug == 'whoisitfor')
+                                    @elseif ($contentInfo->l3_layout_program == 'whoisitfor')
                                         <div id="{{ $programCategorySlug }}mob" class="acc__panel show">
                                             <div class="box-height">
                                                 <div class="container">
@@ -926,7 +926,7 @@
                                         </div>
 
                                         {{-- Brochure Category --}}
-                                    @elseif ($programCategorySlug == 'brochure')
+                                    @elseif ($contentInfo->l3_layout_program == 'brochure')
                                         <div id="{{ $programCategorySlug }}mob" class="acc__panel">
                                             <div class="container">
                                                 <div class="pro-ul-box">
@@ -1125,6 +1125,8 @@
     <!--<section class="empower-industry-bg codec-page-section anchor-link" id="industry" style="padding-bottom: 20px !important;">-->
     <!--</section>-->
     <!--ceh kit section>-->
+    {{-- @if ($contentInfos->contains(fn($info) => $info->cehkit)) --}}
+    @if (isset($categories[4]) && isset($categories[4]['slug']))
     <section class="anchor-link space7 sample7-line" id="{{ $categories[4]['slug'] }}">
         <!--  -->
         <!-- title  -->
@@ -1184,12 +1186,12 @@
         </div>
         
     </section>
+    @endif
     <!--  end -->
 
    
     <!-- Incident info Start -->
-    {{-- @if ($contentInfos->contains(fn($info) => $info->coursefeatureCategory)) --}}
-
+    @if (isset($categories[5]) && isset($categories[5]['slug']))
     <section class="anchor-link sample7-line space7 light-grey ceh-video-sec" id="{{ $categories[5]['slug'] }}">
         <!-- title  -->
 
@@ -1245,7 +1247,7 @@
         <!-- body end -->
     </section>
 
-    {{-- @endif --}}
+    @endif
             <!-- Incident info End -->
 
             <!-- Incident info End -->
@@ -1342,7 +1344,7 @@
                 </div>
             </div>
             <!--  -->
-            <div class="container desktop-view why-chossetab" id="{{ $categories[8]['slug'] }}">
+            <div class="container desktop-view why-chossetab" id="industry_challenges">
                 <div class="row">
                     <div class="col-md-3 tab3-tab1">
                         <!--  -->
@@ -1493,7 +1495,8 @@
     @endif
     <!-- Why Codec Network end--->
     <!-- testimonials start -->
-    @if ($contentInfos->contains(fn($info) => $info->testimonials))
+    {{-- @if ($contentInfos->contains(fn($info) => $info->testimonials)) --}}
+    @if (isset($categories[8]) && isset($categories[8]['slug']))
         <section class="anchor-link space7 sample7-line" id="{{ $categories[8]['slug'] }}">
             <!--  -->
             <div class="container">

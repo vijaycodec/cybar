@@ -41,6 +41,7 @@ use App\Http\Controllers\frontend\templateController;
 use App\Http\Controllers\frontend\NewsLetteViewsController;
 use App\Http\Controllers\frontend\PodcastController;
 use App\Http\Controllers\backend\podcastController as BackendPodcastController;
+use App\Http\Controllers\frontend\NewsLetterMainController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -80,6 +81,7 @@ Route::middleware(['FrameGuard'])->group(function () {
     Route::post('/career/jobs', [jobCarrerController::class, 'store'])->name('job.career.store');
 
     Route::get('/search-resources', [SearchController::class, 'search']);
+    Route::get('/newsletter', [NewsLetterMainController::class, 'index'])->name('newsletter.main');
 
     Route::get('/news-letter/{id?}', [NewsLetteViewsController ::class, 'newLetterView'])->name('newLetter.View'); //trendingNewsLetterView
     Route::get('/newsletter/view-trending/{id?}', [NewsLetteViewsController::class, 'trendingNewsLetterView'])->name('newsletter-view-trending');

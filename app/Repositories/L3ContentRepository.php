@@ -83,7 +83,6 @@ class L3ContentRepository implements L3ContentRepositoryInterface
         $l3ContentInfo->sub_category_id = $request->sub_category_id;
         $l3ContentInfo->l3_category_id = $request->l3_category_id;
         $l3ContentInfo->l3_layout_type = $request->l3_layout_type;
-        $l3ContentInfo->l3_layout_program = $request->l3_layout_program;
 
         // Assign Section-Specific Data
         switch ($request->l3_layout_type) {
@@ -150,6 +149,7 @@ class L3ContentRepository implements L3ContentRepositoryInterface
                 // Assign primary data to l3ContentInfo
                 if ($request->program_category_id) {
                     $l3ContentInfo->program_category_id = $request->program_category_id;
+                    $l3ContentInfo->l3_layout_program = $request->l3_layout_program;
                     $shouldSave = true;
                 }
                 if ($request->program_title) {
@@ -381,7 +381,7 @@ class L3ContentRepository implements L3ContentRepositoryInterface
             'page_categories'        => PageDetail::all(),
             'coursecategories'       => CourseCategory::all(),
             'subCategories'          => SubCategory::all(),
-            'l3Categories'           => L3Category::all(),
+            'l3Categories'           => L3Category::where('sub_category_id', $l3Content->sub_category_id)->get(),
             'significanceCategories' => SignificanceCategory::all(),
             'courseFeatureCategories' => CourseFeatureCategory::all(),
             'cyberwindCategories'    => CyberwindCategory::all(),
@@ -414,7 +414,7 @@ class L3ContentRepository implements L3ContentRepositoryInterface
         $l3ContentInfo->sub_category_id = $request->sub_category_id;
         $l3ContentInfo->l3_category_id = $request->l3_category_id;
         $l3ContentInfo->l3_layout_type = $request->l3_layout_type;
-        $l3ContentInfo->l3_layout_program = $request->l3_layout_program;
+        
 
         // Assign section-specific data
         switch ($request->l3_layout_type) {
@@ -595,6 +595,7 @@ class L3ContentRepository implements L3ContentRepositoryInterface
 
             if ($request->filled('program_category_id')) {
                 $l3ContentInfo->program_category_id = $request->program_category_id;
+                $l3ContentInfo->l3_layout_program = $request->l3_layout_program;
                 $shouldSave = true;
             }
             if ($request->filled('program_title')) {
