@@ -5,19 +5,20 @@
 @section('meta_keywords', $seoData['seo_keywords'])
 
 @section('content')
-{{-- <style>
-    .cn-hover-img img {
-    width: 100%;
-    height: auto;
-    object-fit: contain; /* Ensures the full image is visible */
-    display: block;
-}
+    {{-- <style>
+        .cn-hover-img img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            /* Ensures the full image is visible */
+            display: block;
+        }
+    </style> --}}
 
-</style> --}}
-    <body class="with-zoom1 case2-header" id="services-page">
+    <body class="case2-header" id="services-page">
         <!-- Header start -->
 
-        @include('frontend.layouts.ser-header',['categories' => $categories])
+        @include('frontend.layouts.ser-header', ['categories' => $categories])
 
         <!-- Header end -->
         <!-- breadcrumbs -->
@@ -79,10 +80,10 @@
                                                         <div class="cn-main-content">
                                                             <h3>{{ $service->subcategory->sub_category }}</h3>
                                                             <a
-                                                            href="{{ route('l3-template', ['sb' => $service->subcategory->id, 'pg' => $page_id, 'ct' => $category->id]) }}">
-                                                            Know more <i class="fa fa-chevron-right"></i>
-                                                        </a>
-                                                         
+                                                                href="{{ route('l3-template', ['sb' => $service->subcategory->id, 'pg' => $page_id, 'ct' => $category->id]) }}">
+                                                                Know more <i class="fa fa-chevron-right"></i>
+                                                            </a>
+
                                                         </div>
                                                     </div>
                                                 </div>
@@ -110,7 +111,7 @@
                                                                             href="{{ route('l3-template', ['sb' => $service->subcategory->id, 'pg' => $page_id, 'ct' => $category->id]) }}">
                                                                             Know more <i class="fa fa-chevron-right"></i>
                                                                         </a>
-                                                                        
+
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -136,54 +137,55 @@
         </section>
         <section class="training-page training-page-m mobile-view">
             @foreach ($categories as $index => $category)
-                <div class="m-container" id="m-{{ Str::slug($category->name) }}">
-                    <div class="m-title m-bg{{ $index + 1 }}">
-                        <h3>{{ $category->name }}</h3> <!-- Parent Category Name -->
-                    </div> 
-                    @php
-                        $categoryServices = $services->where('category_id', $category->id)->values(); // Get services for this category
-                    @endphp
-                    @foreach ($categoryServices->chunk(5) as $chunkIndex => $serviceChunk)
-                        <div class="ser-slider1">
-                            <div id="ser-demo{{ $index + 1 }}-{{ $chunkIndex + 1 }}" class="owl-carousel owl-theme indu-moblie">
-                                @foreach ($serviceChunk as $service)
-                                    <div class="item">
-                                        <div class="empower-industry-box">
-                                            <div class="cn-hover-box">
-                                                <div class="cn-hover-img">
-                                                    <img src="{{ asset('/storage/uploads/backend/trainings/' . $service->images) }}"
-                                                        alt="{{ $service->subcategory->sub_category }}">
+                    <div class="m-container" id="m-{{ Str::slug($category->name) }}">
+                        <div class="m-title m-bg{{ $index + 1 }}">
+                            <h3>{{ $category->name }}</h3> <!-- Parent Category Name -->
+                        </div>
+                        @php
+                            $categoryServices = $services->where('category_id', $category->id)->values(); // Get services for this category
+                        @endphp
+                        @foreach ($categoryServices->chunk(5) as $chunkIndex => $serviceChunk)
+                            <div class="ser-slider1">
+                                <div id="ser-demo{{ $index + 1 }}-{{ $chunkIndex + 1 }}" class="owl-carousel owl-theme indu-moblie">
+                                    @foreach ($serviceChunk as $service)
+                                        <div class="item">
+                                            <div class="empower-industry-box">
+                                                <div class="cn-hover-box">
+                                                    <div class="cn-hover-img">
+                                                        <img src="{{ asset('/storage/uploads/backend/trainings/' . $service->images) }}"
+                                                            alt="{{ $service->subcategory->sub_category }}">
+                                                    </div>
+                                                    <div class="cn-content">
+                                                        <p>{{ $service->description }}</p>
+                                                    </div>
                                                 </div>
-                                                <div class="cn-content">
-                                                    <p>{{ $service->description }}</p>
+                                                <div class="cn-main-content">
+                                                    <h3>{{ $service->subcategory->sub_category }}</h3>
+                                                    <a
+                                                        href="{{ route('l3-template', ['sb' => $service->subcategory->id, 'pg' => $page_id, 'ct' => $category->id]) }}">
+                                                        Know more <i class="fa fa-chevron-right"></i>
+                                                    </a>
                                                 </div>
-                                            </div>
-                                            <div class="cn-main-content">
-                                                <h3>{{ $service->subcategory->sub_category }}</h3>
-                                                <a href="{{ route('l3-template', ['sb' => $service->subcategory->id, 'pg' => $page_id, 'ct' => $category->id]) }}">
-                                                    Know more <i class="fa fa-chevron-right"></i>
-                                                </a>
                                             </div>
                                         </div>
-                                    </div>
-                                @endforeach
+                                    @endforeach
+                                </div>
+
+                                <!-- Counter for this slider -->
+                                <div id="navigation-count{{ $index + 1 }}-{{ $chunkIndex + 1 }}" class="count-nav-box counter-space">
+                                    1/{{ count($serviceChunk) }}
+                                </div>
                             </div>
-        
-                            <!-- Counter for this slider -->
-                            <div id="navigation-count{{ $index + 1 }}-{{ $chunkIndex + 1 }}" class="count-nav-box counter-space">
-                                1/{{ count($serviceChunk) }}
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
+                        @endforeach
+                    </div>
             @endforeach
         </section>
-        
-                 <!-- main section end -->
- <div class="ser-h"></div>
-                
+
+        <!-- main section end -->
+        <div class="ser-h"></div>
+
         {{-- @include('frontend.layouts.footer') --}}
-        <a href="#services-page" class="scrollToTop scrrttop" ><i class="fa fa-arrow-up"></i></a> 
+        <a href="#services-page" class="scrollToTop scrrttop"><i class="fa fa-arrow-up"></i></a>
 
     </body>
 
@@ -200,13 +202,13 @@
     <!-- Jquery code -->
 
     <script type="text/javascript">
-        $(document).ready(function() {
-            $('#cd-sidebar-nav a').bind('click', function(e) {
+        $(document).ready(function () {
+            $('#cd-sidebar-nav a').bind('click', function (e) {
                 e.preventDefault();
                 var target = $(this).attr("href");
                 $('html, body').stop().animate({
                     scrollTop: $(target).offset().top - 80
-                }, 600, function() {
+                }, 600, function () {
                     // location.hash = target;
                 });
                 return false;
@@ -214,10 +216,10 @@
 
         });
 
-        $(window).scroll(function() {
+        $(window).scroll(function () {
             var scrollDistance = $(window).scrollTop();
 
-            $('.code-div-box').each(function(i) {
+            $('.code-div-box').each(function (i) {
                 if ($(this).position().top - 100 <= scrollDistance) { // Adjust for header height
                     $('#cd-sidebar-nav a.active').removeClass('active');
                     $('#cd-sidebar-nav a').eq(i).addClass('active');
@@ -226,16 +228,16 @@
         }).scroll();
 
 
-        $(document).ready(function() {
+        $(document).ready(function () {
 
-            $(".show-btn").click(function() {
+            $(".show-btn").click(function () {
                 var $container = $(this).closest(".tabcontent1");
                 $container.find(".content-hide").show();
                 $container.find(".show-btn").hide();
                 $container.find(".hide-btn").show();
             });
 
-            $(".hide-btn").click(function() {
+            $(".hide-btn").click(function () {
                 var $container = $(this).closest(".tabcontent1");
                 $container.find(".content-hide").hide();
                 $container.find(".hide-btn").hide();
@@ -243,8 +245,9 @@
             });
         });
     </script>
-    {{-- <script type="text/javascript">
-        $(function() {
+    {{--
+    <script type="text/javascript">
+        $(function () {
             function initializeCarousel(carouselId, navigationCountId) {
                 $("#" + carouselId).owlCarousel({
                     loop: true,
@@ -268,10 +271,10 @@
                             items: 3
                         }
                     },
-                    onInitialized: function(event) {
+                    onInitialized: function (event) {
                         updateNavigationCount(event, navigationCountId);
                     },
-                    onChanged: function(event) {
+                    onChanged: function (event) {
                         updateNavigationCount(event, navigationCountId);
                     }
                 });
@@ -305,8 +308,9 @@
         });
     </script> --}}
 
-    {{-- <script>
-        $(document).ready(function() {
+    {{--
+    <script>
+        $(document).ready(function () {
             function initializeCarousel(carouselId, navigationCountId) {
                 $("#" + carouselId).owlCarousel({
                     loop: true,
@@ -331,10 +335,10 @@
                             items: 3
                         }
                     },
-                    onInitialized: function(event) {
+                    onInitialized: function (event) {
                         updateNavigationCount(event, navigationCountId);
                     },
-                    onChanged: function(event) {
+                    onChanged: function (event) {
                         updateNavigationCount(event, navigationCountId);
                     }
                 });
@@ -349,10 +353,10 @@
             }
 
             // ðŸš€ **Automatically Initialize All Carousels**
-            $("[id^=ser-demo]").each(function() {
+            $("[id^=ser-demo]").each(function () {
                 let sliderId = $(this).attr("id");
                 let countId = sliderId.replace("ser-demo",
-                "navigation-count"); // Generate corresponding count ID
+                    "navigation-count"); // Generate corresponding count ID
                 initializeCarousel(sliderId, countId);
             });
         });
@@ -360,58 +364,58 @@
 
     <script>
         $(function () {
-    function initializeCarousel(carouselId, navigationCountId) {
-        let $carousel = $("#" + carouselId);
-        let $countDisplay = $("#" + navigationCountId);
+            function initializeCarousel(carouselId, navigationCountId) {
+                let $carousel = $("#" + carouselId);
+                let $countDisplay = $("#" + navigationCountId);
 
-        $carousel.owlCarousel({
-            loop: true,
-            margin: 10,
-            nav: true,
-            dots: true,
-            navText: [
-                '<i class="fa fa-long-arrow-left" aria-hidden="true"></i>',
-                '<i class="fa fa-long-arrow-right" aria-hidden="true"></i>'
-            ],
-            responsive: {
-                0: { items: 1 },
-                600: { items: 1 },
-                900: { items: 1 },
-                1200: { items: 3 }
-            },
-            onInitialized: function (event) {
-                updateNavigationCount(event, $countDisplay);
-            },
-            onTranslated: function (event) {
-                updateNavigationCount(event, $countDisplay);
+                $carousel.owlCarousel({
+                    loop: true,
+                    margin: 10,
+                    nav: true,
+                    dots: true,
+                    navText: [
+                        '<i class="fa fa-long-arrow-left" aria-hidden="true"></i>',
+                        '<i class="fa fa-long-arrow-right" aria-hidden="true"></i>'
+                    ],
+                    responsive: {
+                        0: { items: 1 },
+                        600: { items: 1 },
+                        900: { items: 1 },
+                        1200: { items: 3 }
+                    },
+                    onInitialized: function (event) {
+                        updateNavigationCount(event, $countDisplay);
+                    },
+                    onTranslated: function (event) {
+                        updateNavigationCount(event, $countDisplay);
+                    }
+                });
+
+                function updateNavigationCount(event, $countDisplay) {
+                    if (!event.namespace) return;
+
+                    let carousel = event.relatedTarget;
+                    let currentIndex = carousel.relative(carousel.current()) + 1;
+                    let totalItems = carousel.items().length;
+
+                    console.log("Slider: " + navigationCountId + " | Current: " + currentIndex + " / " + totalItems);
+
+                    // âœ… Update counter dynamically
+                    $countDisplay.text(currentIndex + "/" + totalItems);
+                }
             }
+
+            // âœ… Automatically initialize all carousels
+            $("[id^='ser-demo']").each(function () {
+                let carouselId = $(this).attr("id");
+                let counterId = carouselId.replace("ser-demo", "navigation-count");
+                initializeCarousel(carouselId, counterId);
+            });
         });
-
-        function updateNavigationCount(event, $countDisplay) {
-            if (!event.namespace) return;
-
-            let carousel = event.relatedTarget;
-            let currentIndex = carousel.relative(carousel.current()) + 1;
-            let totalItems = carousel.items().length;
-
-            console.log("Slider: " + navigationCountId + " | Current: " + currentIndex + " / " + totalItems);
-
-            // âœ… Update counter dynamically
-            $countDisplay.text(currentIndex + "/" + totalItems);
-        }
-    }
-
-    // âœ… Automatically initialize all carousels
-    $("[id^='ser-demo']").each(function () {
-        let carouselId = $(this).attr("id");
-        let counterId = carouselId.replace("ser-demo", "navigation-count");
-        initializeCarousel(carouselId, counterId);
-    });
-});
 
     </script>
     <script>
-        $('.cn-content').click(function() {
+        $('.cn-content').click(function () {
             $(this).css({
                 "height": "0%"
             }).find('p').css({
@@ -419,7 +423,7 @@
             });
         });
 
-        $('.cn-hover-img').click(function() {
+        $('.cn-hover-img').click(function () {
             $(this).siblings('.cn-content').css({
                 "height": "100%"
             }).find('p').css({
@@ -428,13 +432,13 @@
             });
         });
     </script>
-<script>
-    // Handle scroll to top button click
-    $('.scrrttop').on('click', function() {
-        // Remove active class from all items in case1-tab
-        $('.case1-tab li a').removeClass('active');
-        // Add active class to first li item
-        $('.case1-tab li:first-child a').addClass('active');
-    });
-</script>
+    <script>
+        // Handle scroll to top button click
+        $('.scrrttop').on('click', function () {
+            // Remove active class from all items in case1-tab
+            $('.case1-tab li a').removeClass('active');
+            // Add active class to first li item
+            $('.case1-tab li:first-child a').addClass('active');
+        });
+    </script>
 @endpush
