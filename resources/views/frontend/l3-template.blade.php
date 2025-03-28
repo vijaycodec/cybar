@@ -694,16 +694,11 @@
                                                             <div class="brochure-box">
                                                                 {!! $contentInfo->program_description !!}
 
-                                                               @if (!empty($contentInfo->brochure_pdf))
-                                                                    <a href="{{ route('download.brochure', ['file' => $contentInfo->brochure_pdf]) }}"
-                                                                        class="btn btn-primary">
-                                                                        Download Brochure
-                                                                    </a>
+                                                                @if (!empty($contentInfo->brochure_pdf) && $contentInfo->brochure_pdf !== null)
+                                                                <a href="{{ asset('storage/uploads/frontend/l3_template/program/' . $contentInfo->brochure_pdf) }}" download>Download Brochure</a>
                                                                 @else
-                                                                    <a href="javascript:void(0)"
-                                                                        onclick="alert('Brochure not available')">Download
-                                                                        Brochure</a>
-                                                                @endif  
+                                                                <a href="javascript:void(0);" onclick="alert('Brochure not available')">Download Brochure</a>
+                                                            @endif
                                                             </div>
                                                             <!--  -->
                                                         </div>
@@ -934,11 +929,11 @@
                                                         <div class="col-md-8">
                                                             <div class="brochure-box">
                                                                 {!! $contentInfo->program_description !!}
-                                                                @if (!empty($contentInfo->brochure_pdf))
-                                                                   <a href="{{ route('download.brochure', ['file' => $contentInfo->brochure_pdf]) }}">Download Brochure</a>
-                                                                @else
-                                                                   <a href="javascript:void(0" onclick="alert('Brochure not available')">Download Brochure</a>
-                                                                @endif 
+                                                                @if (!empty($contentInfo->brochure_pdf) && $contentInfo->brochure_pdf !== null)
+                                                                <a href="{{ asset('storage/uploads/frontend/l3_template/program/' . $contentInfo->brochure_pdf) }}" download>Download Brochure</a>
+                                                            @else
+                                                                <a href="javascript:void(0);" onclick="alert('Brochure not available')">Download Brochure</a>
+                                                            @endif
                                                             </div>
                                                         </div>
                                                         <div class="col-md-4">
