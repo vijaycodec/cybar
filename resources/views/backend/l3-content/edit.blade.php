@@ -452,27 +452,7 @@
                         </select>
                     </div>
 
-                    {{-- <div class="l3-form" id="layout_program_form" style="display: none;">
-                        <div class="body-title">Select L3 Layouts Program <span class="tf-color-1">*</span></div>
-                        <select class="flex-grow l3_content" name="l3_layout_program">
-                            <option value="" disabled>Select L3 Layout Program</option>
                     
-                            @php
-                                $layoutPrograms = [
-                                    'courseoutline' => 'Course Outline',
-                                    'whatsnewinceh' => "What's New in CEH",
-                                    'whoisitfor' => 'Who is it for?',
-                                    'brochure' => 'Brochure'
-                                ];
-                            @endphp
-                    
-                            @foreach ($layoutPrograms as $key => $value)
-                                <option value="{{ $key }}" {{ (isset($l3Content->l3_layout_program) && $l3Content->l3_layout_program == $key) ? 'selected' : '' }}>
-                                    {{ $value }}
-                                </option>
-                            @endforeach
-                        </select>
-                    </div> --}}
 
                     <div class="l3-form" id="layout_program_form" style="display: none;">
                         <div class="body-title">Select L3 Layouts Program <span class="tf-color-1">*</span></div>
@@ -546,6 +526,11 @@
                             {{ $l3Content->program_description }}
                             @endif
                         </textarea>
+                    </div>
+
+                    <div class="l3-form form-group brochure_pdf">
+                        <div class="body-title">Upload Brochure (PDF) :<span class="tf-color-1"></span></div>
+                        <input type="file" name="brochure_pdf" class="form-control" accept="application/pdf">
                     </div>
 
                     <!-- Program Form End -->
@@ -722,6 +707,7 @@
                         $('.program_title').show();
                         $('.program_sub_title').show();
                         $('.program_description').show();
+                        $('.brochure_pdf').show();
                         $('.comman_images').show();
                         $('#l3_layout_type').val('program'); // Set hidden input to 'cehkit'
                     } else if (selectedL3Category === "coursefeatures") {

@@ -606,6 +606,11 @@ class L3ContentRepository implements L3ContentRepositoryInterface
                 $l3ContentInfo->program_sub_title = $request->program_sub_title;
                 $shouldSave = true;
             }
+            if ($request->hasFile('brochure_pdf')) {
+                // Validate PDF
+                $l3ContentInfo->brochure_pdf = $this->uploadPDF($request, 'program');
+                $shouldSave = true;
+            }
 
             //  Save `l3ContentInfo` if any field was updated
             if ($shouldSave) {
