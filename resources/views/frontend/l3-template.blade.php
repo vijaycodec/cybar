@@ -934,7 +934,7 @@
                                                         <div class="col-md-8">
                                                             <div class="brochure-box">
                                                                 {!! $contentInfo->program_description !!}
-                                                                <a href="#">Download Brochure</a>
+                                                                <a href="{{ route('download.brochure', ['file' => $contentInfo->brochure_pdf]) }}">Download Brochure</a>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-4">

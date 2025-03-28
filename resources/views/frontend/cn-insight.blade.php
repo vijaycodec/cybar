@@ -104,7 +104,7 @@
                         @foreach ($TrendingBlogs as $trendingblog)
                             <div class="col-md-4">
                                 <div class="template15-wrap-main">
-                                    <a href="blog-view.php">
+                                    <a href="{{ route('blog-view', $trendingblog->id) }}">
                                         <div class="template15-wrap-main-img">
                                             <img src="{{ asset('storage/uploads/backend/blog/' . $trendingblog->images) }}" />
                                         </div>
@@ -239,6 +239,10 @@
                                         </div>
                                     </div>
                                 @endforeach
+                            </div>
+                            <div class="blog-view">
+                                <a href="{{ route('newsletter.main') }}">View all</a>
+                                                 
                             </div>
                         </div>
                     </div>
