@@ -43,6 +43,9 @@
                     </div>
                     @endforeach
                 </div>
+                <div class="blog-view">
+                    <a href="javascript:history.back()">Go Back</a>
+                </div>
             </div>
         </section>
 

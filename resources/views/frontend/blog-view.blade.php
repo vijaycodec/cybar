@@ -44,78 +44,7 @@
                                     </div>
                                 @else
                                     <div class="resources-conetent rv-space custom-margin-leftabove" id="rv1">
-                                        <h2>What is Python ?</h2>
-                                        <p>Python is a programming language. Which can be used in any operating system,
-                                            Python is having wide range of application from web development,
-                                            scientific and mathematical computing to graphical
-                                            interface.</p>
-                                        <p>Python was discovered by Guido Van Rossum
-                                            in 1980s and it was first announced in
-                                            1994it was named Python from the series of comedy
-                                            Monty Python’s Flying Circus.</p>
-                                        <h2>There are many features of Python such as:</h2>
-                                        <ul>
-                                            <li>Easy to learn</li>
-                                            <li>Free and open source</li>
-                                            <li>Portable</li>
-                                            <li>High level Interpreted language</li>
-                                            <li>Large standard library to solve common task</li>
-                                            <li>Structured language</li>
-                                            <li>Object oriented</li>
-                                        </ul>
-                                        <h2>Easy to learn :</h2>
-                                        <p>Python is easy to learn as compared to other language like Java, C, C++,
-                                            Javascript it is very easy to code in Python.
-                                        </p>
-                                        <h2>Free and open source :</h2>
-                                        <p>Python is
-                                            open source language, which means its source code is available to
-                                            everyone, anyone can download it, change it, or use it. Python is
-                                            free to download from its official website
-                                            www.python.org</p>
-                                        <h2>Portable :</h2>
-                                        <p>There is no need to
-                                            write one code to different machine, you can write code in Linux,
-                                            Windows or Mac and you can easily run your written code in Linux,
-                                            Windows or Mac.</p>
-                                        <h2>High level Interpreted language
-                                            :</h2>
-                                        <p>High level languages
-                                            are easy to understandable and user friendly, it is portable across
-                                            various platform.</p>
-                                        <h2>Large standard library to solve common task
-                                            :</h2>
-                                        <p>In Python libraries
-                                            are use for solve common task so you don’t need to write code for
-                                            every single thing.</p>
-                                        <h2>Structured language :</h2>
-                                        <p>This makes python
-                                            more easy it comes with structured language so there is no need to
-                                            make any structured language.</p>
-                                        <h2>Object oriented :</h2>
-                                        <p>
-                                            In object oriented,
-                                            structured language is fully supported. There is no need to define
-                                            class variable.</p>
-                                        <p>
-                                            Programmers love
-                                            Python Training&nbsp; because of how fast and easy
-                                            it is to use. Python cuts development time in half with its simple
-                                            to read syntax and easy compilation feature. Debugging your programs
-                                            is a breeze in Python with its built in debugger. Using Python makes
-                                            programmers more productive and their programs ultimately
-                                            better.</p>
-                                        <p>
-                                            We are Best Institute
-                                            for Python Training in Delhi NCR . CYBARWIND
-                                            provides<a
-                                                href="https://www.codecnetworks.com/Trainings/Application-Development/Python-Programming-Training-Course.php">
-                                            </a>
-                                            Python Training in Delhi,
-                                            with Lab Facility. Python Training must be focused on providing
-                                            practical knowledge about the development and programming tools and
-                                            their implementation on a real time basis along with the theoretical
-                                            awareness.</p>
+                                        <h2>Data Not Found</h2>
                                         <p></p>
                                     </div>
                                 @endif
@@ -207,7 +136,9 @@
                                         <div class="clearfix"></div>
                                     </div>
                                 </div>
-
+                                <div class="blog-view">
+                                    <a href="javascript:history.back()">Go Back</a>
+                                </div>
                             </div>
                         </div>
                     </div>
