@@ -8,15 +8,19 @@ use App\Models\NewsLetter;
 
 class NewsLetteViewsController extends Controller
 {
-   public function newLetterView($id = null)
+   public function newLetterView($slug)
    {
 
-      $resource = NewsLetter::with('category')->find($id);
+      // $resource = NewsLetter::with('category')->find($id);
+      $resource = NewsLetter::with('category')->where('slug', $slug)->first();
+
       // dd($resource);
-      $trendings = Category::where('category_type', 'newsletter')->latest()->take(5)->get();
+      // $trendings = Category::where('category_type', 'newsletter')->latest()->take(5)->get();
+      $trendings = NewsLetter::with('category')->latest()->take(5)->get();
+
 
       if ($resource) {
-         return view('frontend.newsletter-view', compact('resource', 'trendings'));
+         return view('frontend.newsletter-view', compact('resource', 'trendings','slug'));
       }
    }
 

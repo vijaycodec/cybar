@@ -60,7 +60,7 @@
                                     <div id="navigation-count-{{ $index }}" class="count-nav-box"></div>
         
                                     <div class="event-all">
-                                        <a href="{{ route('events-view', $category->id) }}">View All</a>
+                                        <a href="{{ route('events-view', $category->slug) }}">View All</a>
                                     </div>
                                 </div>
                             </div>

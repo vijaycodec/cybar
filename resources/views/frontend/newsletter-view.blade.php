@@ -31,6 +31,19 @@
             </div>
         </section>
         <!-- banner end -->
+        <section class="breadcromb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="breadcromb-ul">
+                            <li><a href="{{ route('home') }}">Codec Networks</a></li>
+                            <li><a href="{{ route('newsletter.main') }}">News Letter </a></li>
+                            <li><a href="javascript:void(0)">{{ $slug }}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- resouces details start -->
         <section class="sec_2 resources-sec resources-view">
             <div class="container">
@@ -44,9 +57,9 @@
                                     {!! $resource->description !!}
                                 </div>
                                 @endif
-                                <div class="blog-view">
+                                {{-- <div class="blog-view">
                                     <a href="javascript:history.back()">Go Back</a>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -61,9 +74,9 @@
                         @foreach ($trendings as $index =>$resource)
                         <div class="test_mob_app custom-box" style="height: {{ $heights[$index % $totalHeights] }}">
                             <h2 class="custom-heading">
-                              {{ $resource->name }}
+                              {{ $resource->sub_category }}
                             </h2>
-                            <a href="{{ route('newsletter-view-trending', $resource->id) }}" class="test_mob_app_btn">
+                            <a href="{{ route('newLetter.View', $resource->slug) }}" class="test_mob_app_btn">
                                 Know more
                             </a>
                             <img src="{{ asset('assets/images/vapt-services.jpg') }}" class="custom-image">

@@ -9,18 +9,20 @@ use Illuminate\Http\Request;
 
 class eventViewController extends Controller
 {
-    public function view($id = null)
+    public function view($slug)
     {
         // dd($id);
         // Fetch resource with its category
-        $events = MenuEvent::where('category_id',$id)->get();
-
-        $categories=Category::findOrFail($id);
+        $category = Category::where('slug', $slug)->firstOrFail(); // Fetch category using slug
+        $events = MenuEvent::where('category_id', $category->id)->get(); // Fetch events related to this category
+ 
+        // $categories=Category::findOrFail($id);
+        $categories = Category::where('slug', $slug)->firstOrFail(); // Fetch category using slug
 
         // Check if resource exists or not
         if ($events) {
             // Resource found, pass resource data to view
-            return view('frontend.events-view', ['events' => $events,'categories'=>$categories]);
+            return view('frontend.events-view', ['events' => $events,'categories'=>$categories,'slug' => $slug]);
         } 
        
     }

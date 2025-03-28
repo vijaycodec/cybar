@@ -66,7 +66,7 @@
                                             data-index="{{ $index }}">
                                             @foreach ($category->newsletters as $newsletter)
                                                 <div class="item">
-                                                    <a href="{{ route('blog-view', $newsletter->id) }}">
+                                                    <a href="{{ route('newLetter.View', $newsletter->slug) }}">
                                                         <div class="template15-wrap-main">
                                                             <div class="template15-wrap-main-img">
                                                                 <img src="{{ asset('storage/uploads/backend/newsletter/' . $newsletter->images) }}" />
@@ -74,11 +74,11 @@
                                                             <div class="template15-wrap-main-content">
                                                                 <span><i>{{ $newsletter->created_at->format('d M Y') }}</i></span>
                                                                 <h4><a
-                                                                        href="{{ route('blog-view', $newsletter->id) }}">{{ $newsletter->sub_category }}</a>
+                                                                        href="{{ route('newLetter.View', $newsletter->slug) }}">{{ $newsletter->sub_category }}</a>
                                                                 </h4>
                                                                 <p>
                                                                     {{ $newsletter->short_desc }}
-                                                                    <a href="{{ route('newLetter.View', $newsletter->id) }}">
+                                                                    <a href="{{ route('newLetter.View', $newsletter->slug) }}">
                                                                         Read More[...]
                                                                     </a>
                                                                 </p>
@@ -88,7 +88,6 @@
                                                 </div>
                                             @endforeach
                                         </div>
-
                                         <!-- Navigation Counter (Now Outside the Carousel) -->
                                         <div id="navigation-count-{{ $index }}" class="count-nav-box"></div>
                                     </div>

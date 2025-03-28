@@ -8,18 +8,22 @@ use App\Models\Resource;
 
 class resourcesViewController extends Controller
 {
-    public function view($id = null)
+    public function view($slug)
     {
         // Fetch resource with its category
-        $resource = Resource::with('category')->find($id);
+        // $resource = Resource::with('category')->find($id);
+        $resource = Resource::with('category')->where('slug', $slug)->first();
+
 
         // Fetch all categories for trendings Resources
-        $trendings = Category::where('category_type','resources')->latest()->take(5)->get();
+        // $trendings = Category::where('category_type','resources')->latest()->take(5)->get();
+        $trendings = Resource::with('category')->latest()->take(5)->get();
+
 
         // Check if resource exists or not
         if ($resource) {
             // Resource found, pass resource data to view
-            return view('frontend.resources-view', ['resource' => $resource, 'trendings' => $trendings]);
+            return view('frontend.resources-view', ['resource' => $resource, 'trendings' => $trendings,'slug' => $slug]);
         } 
        
     }

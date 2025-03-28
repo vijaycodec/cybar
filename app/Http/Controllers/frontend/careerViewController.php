@@ -9,18 +9,18 @@ use Illuminate\Http\Request;
 
 class careerViewController extends Controller
 {
-    public function view($id = null)
+    public function view($slug)
     {
         // Fetch career with its category
-        $careers = Career::with('category')->find($id);
+        // $careers = Career::with('category')->find($id);
+        $careers = Career::with('category')->where('slug', $slug)->first();
 
         // Fetch all categories for trendings Resources
-
 
         // Check if career exists or not
         if ($careers) {
             // Resource found, pass career data to view
-            return view('frontend.careers-view', ['careers' => $careers]);
+            return view('frontend.careers-view', ['careers' => $careers, 'slug' => $slug]);
         } 
        
     }

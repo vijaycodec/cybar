@@ -66,7 +66,7 @@
                                             data-index="{{ $index }}">
                                             @foreach ($category->blogs as $blog)
                                                 <div class="item">
-                                                    <a href="{{ route('blog-view', $blog->id) }}">
+                                                    <a href="{{ route('blog-view', $blog->slug) }}">
                                                         <div class="template15-wrap-main">
                                                             <div class="template15-wrap-main-img">
                                                                 <img src="{{ asset('storage/uploads/backend/blog/' . $blog->images) }}" />
@@ -74,11 +74,11 @@
                                                             <div class="template15-wrap-main-content">
                                                                 <span><i>{{ $blog->created_at->format('d M Y') }}</i></span>
                                                                 <h4><a
-                                                                        href="{{ route('blog-view', $blog->id) }}">{{ $blog->sub_category }}</a>
+                                                                        href="{{ route('blog-view', $blog->slug) }}">{{ $blog->sub_category }}</a>
                                                                 </h4>
                                                                 <p>
                                                                     {{ $blog->short_desc }}
-                                                                    <a href="{{ route('blog-view', $blog->id) }}">
+                                                                    <a href="{{ route('blog-view', $blog->slug) }}">
                                                                         Read More[...]
                                                                     </a>
                                                                 </p>

@@ -104,18 +104,18 @@
                         @foreach ($TrendingBlogs as $trendingblog)
                             <div class="col-md-4">
                                 <div class="template15-wrap-main">
-                                    <a href="{{ route('blog-view', $trendingblog->id) }}">
+                                    <a href="{{ route('blog-view', $trendingblog->slug) }}">
                                         <div class="template15-wrap-main-img">
                                             <img src="{{ asset('storage/uploads/backend/blog/' . $trendingblog->images) }}" />
                                         </div>
                                     </a>
                                     <div class="template15-wrap-main-content">
                                         <span><i>{{ \Carbon\Carbon::parse($trendingblog->created_at)->format('d M Y') }}</i></span>
-                                            <h4><a href="{{ route('blog-view', $trendingblog->id) }}">{{ $trendingblog->sub_category	 }}</a>
+                                            <h4><a href="{{ route('blog-view', $trendingblog->slug) }}">{{ $trendingblog->sub_category	 }}</a>
                                         </h4>
                                         <p>
                                             {{ $trendingblog->short_desc}}
-                                            <a href="{{ route('blog-view', $trendingblog->id) }}"> Read More[...]</a>
+                                            <a href="{{ route('blog-view', $trendingblog->slug) }}"> Read More[...]</a>
                                         </p>
                                     </div>
                                 </div>
@@ -147,10 +147,10 @@
                                 <div class="template15-wrap-main-content">
                                     {{-- <span><i>19 Oct 2020</i></span> --}}
                                     <span><i>{{ \Carbon\Carbon::parse($trendingblog->created_at)->format('d M Y') }}</i></span>
-                                    <h4><a href="{{ route('blog-view', $trendingblog->id) }}">{{ $trendingblog->sub_category	 }}</a>
+                                    <h4><a href="{{ route('blog-view', $trendingblog->slug) }}">{{ $trendingblog->sub_category	 }}</a>
                                     <p>
                                         {{ $trendingblog->short_desc}}
-                                        <a href="{{ route('blog-view', $trendingblog->id) }}"> Read More[...]</a>
+                                        <a href="{{ route('blog-view', $trendingblog->slug) }}"> Read More[...]</a>
                                     </p>
                                 </div>
                             </div>
@@ -172,10 +172,10 @@
                                 </div>
                                 <div class="template15-wrap-main-content">
                                     <span><i>{{ \Carbon\Carbon::parse($trendingblog->created_at)->format('d M Y') }}</i></span>
-                                    <h4><a href="{{ route('blog-view', $trendingblog->id) }}">{{ $trendingblog->sub_category	 }}</a>
+                                    <h4><a href="{{ route('blog-view', $trendingblog->slug) }}">{{ $trendingblog->sub_category	 }}</a>
                                         <p>
                                             {{ $trendingblog->short_desc}}
-                                            <a href="{{ route('blog-view', $trendingblog->id) }}"> Read More[...]</a>
+                                            <a href="{{ route('blog-view', $trendingblog->slug) }}"> Read More[...]</a>
                                         </p>
                                 </div>
                             </div>
@@ -189,7 +189,6 @@
                     </div>
                 </div>
             </div>
-
         </section>
         <!-- objective end -->
         <!-- Why Codec Network start  -->
@@ -222,13 +221,13 @@
                                                 @foreach ($newsletter->newsletters as $letter)
                                                 <li class="col-md-3">
                                                     <div class="codec-wrap-main">
-                                                        <a href="{{ route('newLetter.View',$letter->id) }}">
+                                                        <a href="{{ route('newLetter.View',$letter->slug) }}">
                                                             <div class="codec-wrap-main-img">
                                                                 <img src="{{ asset('storage/uploads/backend/newsletter/' . $letter->images) }}" />
                                                             </div>
                                                         </a>
                                                         <div class="codec-wrap-main-content">
-                                                            <h4><a href="{{ route('newLetter.View',$letter->id) }}">{{ $letter->sub_category }}</a></h4>
+                                                            <h4><a href="{{ route('newLetter.View',$letter->slug) }}">{{ $letter->sub_category }}</a></h4>
                                                             <p>{{ $letter->short_desc }}
                                                             </p>
                                                         </div>
@@ -267,13 +266,13 @@
                                 <div class="item">
                                     <div class="col-md-3">
                                         <div class="codec-wrap-main">
-                                                <a href="{{ route('newLetter.View',$letter->id) }}">
+                                                <a href="{{ route('newLetter.View',$letter->slug) }}">
                                                 <div class="codec-wrap-main-img">
                                                     <img src="{{ asset('storage/uploads/backend/newsletter/' . $letter->images) }}" />
                                                 </div>
                                             </a>
                                             <div class="codec-wrap-main-content">
-                                                <h4><a href="{{ route('newLetter.View',$letter->id) }}">{{ $letter->sub_category }}</a></h4>
+                                                <h4><a href="{{ route('newLetter.View',$letter->slug) }}">{{ $letter->sub_category }}</a></h4>
                                                 <p>{{ $letter->short_desc }}
                                                 </p>
                                             </div>
@@ -395,13 +394,13 @@
                                             @foreach ($event->events as $eventItem)
                                             <li class="col-md-3">
                                                 <div class="codec-wrap-main">
-                                                    <a href="{{ route('events-view', $event->id) }}">
+                                                    <a href="{{ route('events-view', $event->slug) }}">
                                                         <div class="codec-wrap-main-img">
                                                             <img src="{{ asset('storage/uploads/backend/event/' . $eventItem->images) }}" />
                                                         </div>
                                                     </a>
                                                     <div class="codec-wrap-main-content">
-                                                        <h4><a href="{{ route('events-view', $event->id) }}">{{ $eventItem->sub_category }}</a></h4>
+                                                        <h4><a href="{{ route('events-view', $event->slug) }}">{{ $eventItem->sub_category }}</a></h4>
                                                         <p>{{ $eventItem->short_desc }}
                                                         </p>
                                                     </div>
@@ -433,13 +432,13 @@
                         <div class="item">
                             <div class="col-md-3">
                                 <div class="codec-wrap-main">
-                                    <a href="{{ route('events-view', $trendingEvent->id) }}">
+                                    <a href="{{ route('events-view', $trendingEvent->slug) }}">
                                         <div class="codec-wrap-main-img">
                                             <img src="{{ asset('storage/uploads/backend/event/' . $trendingEvent->images) }}" />
                                         </div>
                                     </a>
                                     <div class="codec-wrap-main-content">
-                                        <h4><a href="{{ route('events-view', $trendingEvent->id) }}">{{ $trendingEvent->sub_category }}</a></h4>
+                                        <h4><a href="{{ route('events-view', $trendingEvent->slug) }}">{{ $trendingEvent->sub_category }}</a></h4>
                                         <p>{{ $trendingEvent->short_desc }}
                                         </p>
                                     </div>

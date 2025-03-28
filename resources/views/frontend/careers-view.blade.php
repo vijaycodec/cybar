@@ -29,6 +29,21 @@
             </div>
         </section>
         <!-- banner end -->
+         <!-- Brecumb -->
+         <section class="breadcromb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="breadcromb-ul">
+                            <li><a href="{{ route('home') }}">Codec Networks</a></li>
+                            <li><a href="{{ route('careers') }}">Career</a></li>
+                            <li><a href="javascript:void(0)">{{ $slug }}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- breadcromb end -->
         <!-- resouces details start -->
         <section class="sec_2 career-view">
             <div class="container">

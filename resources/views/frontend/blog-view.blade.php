@@ -37,10 +37,9 @@
                 <div class="row">
                     <div class="col-md-12">
                         <ul class="breadcromb-ul">
-                            <li><a href="#">Codec Networks</a></li>
-                            <li><a href="#">Training</a></li>
-                            <li><a href="#">EC-Council</a></li>
-                            <li>Certified Ethical Hacker</li>
+                            <li><a href="{{ route('home') }}">Codec Networks</a></li>
+                            <li><a href="{{ route('blogs') }}">Blog</a></li>
+                            <li><a href="javascript:void(0)">{{ $slug }}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -157,9 +156,9 @@
                                         <div class="clearfix"></div>
                                     </div>
                                 </div>
-                                <div class="blog-view">
+                                {{-- <div class="blog-view">
                                     <a href="javascript:history.back()">Go Back</a>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -174,9 +173,9 @@
                         @foreach ($trendings as $index => $resource)
                             <div class="test_mob_app custom-box" style="height: {{ $heights[$index % $totalHeights] }}">
                                 <h2 class="custom-heading">
-                                    {{ $resource->name }}
+                                    {{ $resource->sub_category }}
                                 </h2>
-                                <a href="{{ route('blog-view-trending', $resource->id) }}{{ $resource->name }}"
+                                <a href="{{ route('blog-view', $resource->slug) }}"
                                     class="test_mob_app_btn">
                                     Know more
                                 </a>
@@ -194,7 +193,6 @@
         {{-- @include('frontend.layouts.footer') --}}
         </div>
         <a href="#body-main" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
-
     </body>
 @endsection
 
