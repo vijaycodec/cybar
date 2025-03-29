@@ -290,8 +290,6 @@ Route::middleware(['auth','admin','prevent_history'])->group(function () {
 });
 
 
-
-
 Route::middleware(['FrameGuard'])->group(function () {
     Route::get('/', [homeController::class, 'index'])->name('home');
     Route::get('/services', [servicesController::class, 'getServices'])->name('services');
