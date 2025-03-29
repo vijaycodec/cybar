@@ -68,7 +68,7 @@
                                         <div class="owl-carousel1 owl-carousel owl-theme">
                                             @foreach ($category->careers as $career)
                                                 <div class="item">
-                                                    <a href="{{ route('careers-view', $career->id) }}" class="career-link">
+                                                    <a href="{{ route('careers-view', $career->slug) }}" class="career-link">
                                                         <h4 class="career-heading">{{ $career->subcategory }}</h4>
                                                         <p class="career-detail"><strong>Location :</strong>
                                                             {{ $career->location }}</p>
@@ -122,7 +122,7 @@
                                 <ul class="career-bg-top">
                                     @foreach ($trendings as $career)
                                         <li><i class="fa fa-caret-right" aria-hidden="true"></i> <a
-                                                href="{{ route('careers-view', $career->id) }}">{{ $career->subcategory }}</a>
+                                                href="{{ route('careers-view', $career->slug) }}">{{ $career->subcategory }}</a>
                                         </li>
                                     @endforeach
                                 </ul>
@@ -149,7 +149,7 @@
                                 <div class="item">
                                     <div class="blog-cat-inn">
                                         <div class="blog-cat">
-                                            <a href="{{ route('careers-view', $career->id) }}">
+                                            <a href="{{ route('careers-view', $career->slug) }}">
                                                 <h4>{{ $career->subcategory }}</h4>
                                                 <p>Location : {{ $career->location }} Educational Background :
                                                     {{ $career->educational_background }}</p>
@@ -185,7 +185,7 @@
                 <ul>
                     @foreach ($trendings as $career)
                         <li><i class="fa fa-caret-right" aria-hidden="true"></i> <a
-                                href="{{ route('careers-view', $career->id) }}">{{ $career->subcategory }}</a>
+                                href="{{ route('careers-view', $career->slug) }}">{{ $career->subcategory }}</a>
                         </li>
                     @endforeach
                 </ul>

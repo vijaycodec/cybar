@@ -8,20 +8,24 @@ use App\Models\MenuBlog;
 
 class blogViewController extends Controller
 {
-    public function view($id = null)
-    {
-        // Fetch resource with its category
-        $resource = MenuBlog::with('category')->find($id);
-
-        // Fetch all categories for trendings Blogs
-        $trendings = Category::where('category_type','blog')->latest()->take(5)->get();
-
-        // Check if resource exists or not
+    public function view($slug)
+    {   
+        // dd($slug);
+        // Fetch resource using the slug instead of the ID
+        $resource = MenuBlog::with('category')->where('slug', $slug)->first();
+    
+        // Fetch all categories for trending blogs
+        // $trendings = Category::where('category_type', 'blog')->latest()->take(5)->get();
+        $trendings = MenuBlog::with('category')->latest()->take(5)->get();
+// dd($trendings);
+    // dd( $trendings);
+        // Check if resource exists
         if ($resource) {
-            // Resource found, pass resource data to view
-            return view('frontend.blog-view', ['resource' => $resource, 'trendings' => $trendings]);
-        } 
-       
+            return view('frontend.blog-view', ['resource' => $resource, 'trendings' => $trendings,'slug'=>$slug]);
+        }
+    
+        // If not found, show a 404 page
+  
     }
 
     public function trendingResourceView($id = null)

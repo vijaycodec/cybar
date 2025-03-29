@@ -66,7 +66,7 @@
                                         <div class="owl-carousel1 owl-carousel owl-theme" id="carousel-{{ $index }}">
                                             @foreach ($category->resources as $resource)
                                                 <div class="item">
-                                                    <a href="{{ route('resources-view', $resource->id) }}" tabindex="-1">
+                                                    <a href="{{ route('resources-view', $resource->slug) }}" tabindex="-1">
                                                         <div class="card_wrapper">
                                                             <div class="card_img">
                                                                 <div class="cn-hover-box">
@@ -133,9 +133,9 @@
                             @foreach ($trendings as $index => $resource)
                                 <div class="test_mob_app custom-box" style="height: {{ $heights[$index % $totalHeights] }}">
                                     <h2 class="custom-heading">
-                                        {{ $resource->name }}
+                                        {{ $resource->sub_category }}
                                     </h2>
-                                    <a href="{{ route('resources-view-trending', $resource->id) }}{{ $resource->name }}"
+                                    <a href="{{ route('resources-view', $resource->slug) }}"
                                         class="test_mob_app_btn">
                                         Know more
                                     </a>

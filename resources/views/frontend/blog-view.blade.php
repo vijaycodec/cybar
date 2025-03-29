@@ -13,7 +13,8 @@
         <section class="sec_ban resource-detail-banner" id="resources-banner">
             <div class="home-ban">
                 <div class="rs-img">
-                    <img src="{{ asset('assets/images/resouces-bg-img.jpg') }}" class="img-fluid rs-banner" alt="home banner">
+                    <img src="{{ asset('assets/images/resouces-bg-img.jpg') }}" class="img-fluid rs-banner"
+                        alt="home banner">
                 </div>
                 @if (isset($resource) && $resource)
                     <div class="over-h2">
@@ -30,6 +31,21 @@
             </div>
         </section>
         <!-- banner end -->
+        <!-- Brecumb -->
+        <section class="breadcromb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="breadcromb-ul">
+                            <li><a href="{{ route('home') }}">Codec Networks</a></li>
+                            <li><a href="{{ route('blogs') }}">Blog</a></li>
+                            <li><a href="javascript:void(0)">{{ $slug }}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- breadcromb end -->
         <!-- resouces details start -->
         <section class="sec_2 resources-sec resources-view">
             <div class="container">
@@ -88,14 +104,15 @@
                                         <h3>
                                             <!-- Your choice of data platform is critical. It will serve as the foundation
 
-                                                                                for your digital transformation, enabling you to gain actionable insight and
-                                                                                drive immense and measurable value back to the business. This white paper
-                                                                                highlights why Cloudera Enterprise is uniquely suited to the task. -->
+                                                                                    for your digital transformation, enabling you to gain actionable insight and
+                                                                                    drive immense and measurable value back to the business. This white paper
+                                                                                    highlights why Cloudera Enterprise is uniquely suited to the task. -->
 
                                             Comments
                                         </h3>
                                         <div class="comment-form">
-                                            <form id="comments-form" method="POST" action="{{ route('resources-comment.store') }}">
+                                            <form id="comments-form" method="POST"
+                                                action="{{ route('resources-comment.store') }}">
                                                 @csrf <!-- Add CSRF token for security -->
                                                 <div class="comment-input">
                                                     <input type="text" class="form-control" name="name"
@@ -103,7 +120,7 @@
                                                 </div>
                                                 <span id="name-error" style="color: red; font-size: 14px; margin-top: 5px;">
                                                 </span>
-                                              
+
                                                 @if (isset($resource) && $resource)
                                                     <input type="hidden" class="form-control" name="resource_id"
                                                         value="{{ $resource->category->id }}">
@@ -116,16 +133,19 @@
                                                     <input type="email" class="form-control" name="email"
                                                         placeholder="Email" id="email">
                                                 </div>
-                                                <span id="email-error" style="color: red; font-size: 14px; margin-top: 5px;">
+                                                <span id="email-error"
+                                                    style="color: red; font-size: 14px; margin-top: 5px;">
                                                 </span>
                                                 <div class="comment-input">
                                                     <textarea placeholder="Message" name="message" id="comment"></textarea>
                                                 </div>
-                                                <span id="comment-error" style="color: red; font-size: 14px; margin-top: 5px;">
+                                                <span id="comment-error"
+                                                    style="color: red; font-size: 14px; margin-top: 5px;">
                                                 </span>
                                                 {{-- <div class="g-recaptcha" data-sitekey="{{ env('NOCAPTCHA_SITEKEY') }}">
                                                 </div>
-                                                <span id="recaptcha-error" style="color: red; font-size: 14px; margin-top: 5px;">
+                                                <span id="recaptcha-error"
+                                                    style="color: red; font-size: 14px; margin-top: 5px;">
                                                 </span> --}}
 
                                                 <div class="comment-submit  custom-submit-style">
@@ -136,32 +156,33 @@
                                         <div class="clearfix"></div>
                                     </div>
                                 </div>
-                                <div class="blog-view">
+                                {{-- <div class="blog-view">
                                     <a href="javascript:history.back()">Go Back</a>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-4" id="rv4">
-                            <div class="mb-4">
-                                <h4>Trending Blogs</h4>
-                            </div>
-                            @php
+                        <div class="mb-4">
+                            <h4>Trending Blogs</h4>
+                        </div>
+                        @php
                             $heights = ['400px', '300px', '200px', '300px'];
                             $totalHeights = count($heights);
-                             @endphp
-                            @foreach ($trendings as  $index =>$resource)
+                         @endphp
+                        @foreach ($trendings as $index => $resource)
                             <div class="test_mob_app custom-box" style="height: {{ $heights[$index % $totalHeights] }}">
                                 <h2 class="custom-heading">
-                                    {{ $resource->name }}
+                                    {{ $resource->sub_category }}
                                 </h2>
-                                <a href="{{ route('blog-view-trending', $resource->id) }}{{ $resource->name }}" class="test_mob_app_btn">
+                                <a href="{{ route('blog-view', $resource->slug) }}"
+                                    class="test_mob_app_btn">
                                     Know more
                                 </a>
                                 <img src="{{ asset('assets/images/vapt-services.jpg') }}" class="custom-image">
-    
+
                             </div>
-                            @endforeach
+                        @endforeach
 
                     </div>
                     <div class="clearfix"></div>
@@ -172,20 +193,19 @@
         {{-- @include('frontend.layouts.footer') --}}
         </div>
         <a href="#body-main" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
-
     </body>
 @endsection
 
 @push('scripts')
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Jquery code -->
     <script type="text/javascript">
-        $(document).ready(function() {
+        $(document).ready(function () {
             "use strict";
             var offSetTop = 100;
             var $scrollToTopButton = $('.scrollToTop');
             //Check to see if the window is top if not then display button
-            $(window).scroll(function() {
+            $(window).scroll(function () {
                 if ($(this).scrollTop() > offSetTop) {
                     $scrollToTopButton.fadeIn();
                 } else {
@@ -195,95 +215,95 @@
         });
     </script>
 
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<script>
-    $(document).ready(function() {
-        $("#comments-form").submit(function(event) {
-            event.preventDefault(); // Prevent default form submission
+    <script>
+        $(document).ready(function () {
+            $("#comments-form").submit(function (event) {
+                event.preventDefault(); // Prevent default form submission
 
-            let isValid = true;
+                let isValid = true;
 
-            // Name validation (Only letters, at least 3 chars)
-            let name = $("#name").val().trim();
-            if (!/^[A-Za-z\s]{3,}$/.test(name)) {
-                $("#name-error").text("Full Name must be at least 3 characters.").show();
-                isValid = false;
-            } else {
-                $("#name-error").hide();
-            }
+                // Name validation (Only letters, at least 3 chars)
+                let name = $("#name").val().trim();
+                if (!/^[A-Za-z\s]{3,}$/.test(name)) {
+                    $("#name-error").text("Full Name must be at least 3 characters.").show();
+                    isValid = false;
+                } else {
+                    $("#name-error").hide();
+                }
 
-            // Email validation
-            let email = $("#email").val().trim();
-            let emailPattern = /^[a-zA-Z][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            if (!emailPattern.test(email)) {
-                $("#email-error").text("Please enter a valid email address.").show();
-                isValid = false;
-            } else {
-                $("#email-error").hide();
-            }
+                // Email validation
+                let email = $("#email").val().trim();
+                let emailPattern = /^[a-zA-Z][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                if (!emailPattern.test(email)) {
+                    $("#email-error").text("Please enter a valid email address.").show();
+                    isValid = false;
+                } else {
+                    $("#email-error").hide();
+                }
 
-            // Message validation
-            let message = $("#comment").val().trim();
-            if (message.length < 50  || message.length > 500) {
-                $("#comment-error").text("Message must be at least 50 characters.").show();
-                isValid = false;
-            } else {
-                $("#comment-error").hide();
-            }
+                // Message validation
+                let message = $("#comment").val().trim();
+                if (message.length < 50 || message.length > 500) {
+                    $("#comment-error").text("Message must be at least 50 characters.").show();
+                    isValid = false;
+                } else {
+                    $("#comment-error").hide();
+                }
 
-            // Google reCAPTCHA validation
-            // let recaptchaResponse = grecaptcha.getResponse();
-            // if (recaptchaResponse.length === 0) {
-            //     $("#recaptcha-error").text("Please verify the captcha.").show();
-            //     isValid = false;
-            // } else {
-            //     $("#recaptcha-error").hide();
-            // }
+                // Google reCAPTCHA validation
+                // let recaptchaResponse = grecaptcha.getResponse();
+                // if (recaptchaResponse.length === 0) {
+                //     $("#recaptcha-error").text("Please verify the captcha.").show();
+                //     isValid = false;
+                // } else {
+                //     $("#recaptcha-error").hide();
+                // }
 
-            // If all validations pass, submit form via AJAX
-            if (isValid) {
-                $.ajax({
-                    url: "{{ route('resources-comment.store') }}",
-                    type: "POST",
-                    data: $("#comments-form").serialize(),
-                    dataType: "json",
-                    success: function(response) {
-                        if (response.success) {
-                            Swal.fire({
-                                title: "Success!",
-                                text: response.message,
-                                icon: "success",
-                                confirmButtonText: "OK"
-                            }).then(() => {
-                                $("#comments-form")[0].reset();
-                                grecaptcha.reset();
-                            });
-                        } else {
+                // If all validations pass, submit form via AJAX
+                if (isValid) {
+                    $.ajax({
+                        url: "{{ route('resources-comment.store') }}",
+                        type: "POST",
+                        data: $("#comments-form").serialize(),
+                        dataType: "json",
+                        success: function (response) {
+                            if (response.success) {
+                                Swal.fire({
+                                    title: "Success!",
+                                    text: response.message,
+                                    icon: "success",
+                                    confirmButtonText: "OK"
+                                }).then(() => {
+                                    $("#comments-form")[0].reset();
+                                    grecaptcha.reset();
+                                });
+                            } else {
+                                Swal.fire({
+                                    title: "Error!",
+                                    text: "Something went wrong. Please try again.",
+                                    icon: "error",
+                                    confirmButtonText: "OK"
+                                });
+                            }
+                        },
+                        error: function (xhr) {
                             Swal.fire({
                                 title: "Error!",
-                                text: "Something went wrong. Please try again.",
+                                text: "An error occurred: " + xhr.responseText,
                                 icon: "error",
                                 confirmButtonText: "OK"
                             });
                         }
-                    },
-                    error: function(xhr) {
-                        Swal.fire({
-                            title: "Error!",
-                            text: "An error occurred: " + xhr.responseText,
-                            icon: "error",
-                            confirmButtonText: "OK"
-                        });
-                    }
-                });
-            }
+                    });
+                }
+            });
         });
-    });
-</script>
+    </script>
 
-        @include('frontend.layouts.right-menu-js')
+    @include('frontend.layouts.right-menu-js')
 
 
 @endpush

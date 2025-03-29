@@ -22,6 +22,21 @@
             </div>
         </section>
         <!-- banner end -->
+         <!-- Brecumb -->
+         <section class="breadcromb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="breadcromb-ul">
+                            <li><a href="{{ route('home') }}">Codec Networks</a></li>
+                            <li><a href="{{ route('events') }}">Events</a></li>
+                            <li><a href="javascript:void(0)">{{ $slug }}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- breadcromb end -->
         <!-- tab menu start -->
         <!-- tab menu end -->
         <section class="testimonials event-detail">

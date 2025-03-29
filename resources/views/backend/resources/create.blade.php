@@ -41,23 +41,22 @@
                         </select>
                     </fieldset>
 
-                    {{-- <fieldset class="name">
-                            <div class="body-title">Short title <span class="tf-color-1">*</span></div>
-                            <textarea class="flex-grow" style="height:90px;" placeholder="Short Description" name="short_desc" tabindex="0" id="categorySelect"
-                                value="" aria-required="true" required="">{{ old('short_desc') }}
-                            </textarea>
-                        </fieldset> --}}
-
                     <fieldset class="name">
-                        <div class="body-title">Short title <span class="tf-color-1">*</span></div>
-                        <input class="flex-grow" id="categorySelect" type="text" placeholder="Short Description"
-                            name="short_desc" tabindex="0" value="{{ old('short_desc') }}" aria-required="true" required>
+                        <div class="body-title">Sub Category <span class="tf-color-1">*</span></div>
+                        <input class="flex-grow" id="categorySelect" type="text" placeholder="Sub Category"
+                            name="sub_category" tabindex="0" value="{{ old('sub_category') }}" aria-required="true" required>
                     </fieldset>
 
                     <fieldset class="name">
-                        <div class="body-title">Category Slug <span class="tf-color-1">*</span></div>
+                        <div class="body-title">Sub Category Slug <span class="tf-color-1">*</span></div>
                         <input class="flex-grow" id="categorySlug" type="text" placeholder="Category Name" name="slug"
                             tabindex="0" value="{{ old('slug') }}" aria-required="true" required readonly>
+                    </fieldset>
+
+                    <fieldset class="name">
+                        <div class="body-title">Short title <span class="tf-color-1">*</span></div>
+                        <input class="flex-grow" type="text" placeholder="Short Description"
+                            name="short_desc" tabindex="0" value="{{ old('short_desc') }}" aria-required="true" required>
                     </fieldset>
 
                     <fieldset>

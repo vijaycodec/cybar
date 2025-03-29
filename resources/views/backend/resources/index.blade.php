@@ -39,6 +39,7 @@
                             <tr>
                                 <th>#</th>
                                 <th>Category Name</th>
+                                <th>Sub Category </th>
                                 <th>Image</th>
                                 <th>Short Title</th>
                                 <th>Slug</th>
@@ -52,6 +53,7 @@
                                     <tr>
                                         <td>{{ $resource->id }}</td>
                                         <td>{{ $resource->category->name ?? 'N/A' }}</td> <!-- Using the relationship -->
+                                        <td>{{ $resource->sub_category }}</td>
                                         <td>
                                             @if ($resource->images)
                                                 <img src="{{ asset('storage/uploads/backend/resources/' . $resource->images) }}"

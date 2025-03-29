@@ -20,7 +20,8 @@ class resourcesController extends Controller
 
         $categories = Category::with('resources')->where('category_type','resources')->get();
 
-        $trendings = Category::where('category_type','resources')->latest()->take(5)->get();
+        // $trendings = Category::where('category_type','resources')->latest()->take(5)->get();
+        $trendings = Resource::with('category')->latest()->take(5)->get();
 
         $seoDetails = Seo::where('page_name', $page_name)
         ->where('category_name', $category)
