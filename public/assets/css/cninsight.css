@@ -127,20 +127,32 @@ ul#tabs-nav1 li {
 }
 
 
+.home-blog .vertical-text {
+    padding-top: 15%;
+    padding-bottom: 15%;
+    background-color: #ccc;
+}
+
+.home-blog .vertical-text-single{
+    padding-top: 8%;
+    padding-bottom: 8%;
+    background-color: #ccc;
+}
+
 .newsletters .vertical-text {
-    padding-top: 10%;
-    padding-bottom: 10%;
-    background-color: lightblue;
+    padding-top: 8%;
+    padding-bottom: 8%;
+    background-color: #ADD8E6;
 }
 .podcast .vertical-text {
     padding-top: 8%;
     padding-bottom: 8%;
-    background-color: lightgreen;
+    background-color: #90EE90;
 }
 .events .vertical-text {
-    padding-top: 10%;
-    padding-bottom: 10%;
-    background-color: lightcoral;
+    padding-top: 8%;
+    padding-bottom: 8%;
+    background-color: #F08080;
 }
 
 .code-pagination{

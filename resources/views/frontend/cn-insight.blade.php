@@ -98,7 +98,7 @@
 
             <div class="container desktop-view">
                 <div class="home-blog">
-                    <div class="vertical-text">TRENDING BLOGS</div>
+                    <div class="vertical-text vertical-text-single">TRENDING BLOGS</div>
                     <div class="row">
                         <!-- blog box1 -->
                         @foreach ($TrendingBlogs as $trendingblog)
