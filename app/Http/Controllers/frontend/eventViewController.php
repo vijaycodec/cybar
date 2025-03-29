@@ -15,7 +15,7 @@ class eventViewController extends Controller
         // Fetch resource with its category
         $category = Category::where('slug', $slug)->firstOrFail(); // Fetch category using slug
         $events = MenuEvent::where('category_id', $category->id)->get(); // Fetch events related to this category
- 
+        $slug=$category->slug;
         // $categories=Category::findOrFail($id);
         $categories = Category::where('slug', $slug)->firstOrFail(); // Fetch category using slug
 

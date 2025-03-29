@@ -13,7 +13,7 @@ class resourcesViewController extends Controller
         // Fetch resource with its category
         // $resource = Resource::with('category')->find($id);
         $resource = Resource::with('category')->where('slug', $slug)->first();
-
+        $slug=$resource->sub_category;
 
         // Fetch all categories for trendings Resources
         // $trendings = Category::where('category_type','resources')->latest()->take(5)->get();

@@ -37,6 +37,27 @@
             </div>
         </div>
     </section>
+
+     <!-- Brecumb -->
+     <section class="breadcromb">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="breadcromb-ul">
+                        <li><a href="{{ route('home') }}">Cybarwind </a></li>
+                        <li>
+                            <a href="{{ $pageName == 'Services' ? route('services') : route('training') }}">
+                                {{ $pageName == 'Services' ? 'Services' : 'Trainings' }}
+                            </a>
+                        </li>
+                        <li><a href="javascript:void(0)">{{ $categoryName }}</a></li>
+                        <li><a href="javascript:void(0)">{{ $subcategoryname }}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- breadcromb end -->
     <!-- tab menu start -->
         @php
             $categories = [];
@@ -683,7 +704,7 @@
                                             <!--  -->
                                         </div>
                                     @elseif ($contentInfo->l3_layout_program == 'brochure')
-                                        <div id="brochure" class="tab-pane brochure-row fade">
+                                        <div id="{{ $programCategorySlug }}" class="tab-pane brochure-row fade">
                                             <!--  -->
                                             <div class="container">
                                                 <div class="pro-ul-box">

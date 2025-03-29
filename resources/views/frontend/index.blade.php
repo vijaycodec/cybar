@@ -2849,13 +2849,13 @@
         <section class="mhspace mhspace00" id="mhome-div6">
             <div class="traing-banner desktop-view">
                 <img src="{{asset('assets/images/training-domain-bg.jpg')}}">
-                <div class="cn-btn"> <a href="training.php">KNOW MORE</a> </div>
+                <div class="cn-btn"> <a href="#">KNOW MORE</a> </div>
             </div>
             <!-- bg banner end -->
             <!-- bg banner start -->
             <div class="traing-banner mobile-view">
                 <img src="{{ asset('assets/images/mimg3.jpeg') }}">
-                <div class="cn-btn"> <a href="training.php">KNOW MORE</a> </div>
+                <div class="cn-btn"> <a href="#">KNOW MORE</a> </div>
             </div>
         </section>
         <!-- bg banner end -->
@@ -5221,13 +5221,13 @@
                                                 </div>
                                                 <div class="template15-wrap-main-content">
                                                     <span><i>19 Oct 2020</i></span>
-                                                    <h4><a href="blog-view.php">Network Administration and Security</a>
+                                                    <h4><a href="#">Network Administration and Security</a>
                                                     </h4>
                                                     <p>
                                                         Offers buffey of security programs, tools and techniques that are
                                                         globally
                                                         accepted in Information and Cyber Security Assurance.
-                                                        <a href="blog-view.php"> Read More[...]</a>
+                                                        <a href="#"> Read More[...]</a>
                                                     </p>
                                                 </div>
                                             </div>
@@ -5241,13 +5241,13 @@
                                                 </div>
                                                 <div class="template15-wrap-main-content">
                                                     <span><i>19 Oct 2020</i></span>
-                                                    <h4><a href="blog-view.php">Network Administration and Security</a>
+                                                    <h4><a href="#">Network Administration and Security</a>
                                                     </h4>
                                                     <p>
                                                         Offers buffey of security programs, tools and techniques that are
                                                         globally
                                                         accepted in Information and Cyber Security Assurance.
-                                                        <a href="blog-view.php"> Read More[...]</a>
+                                                        <a href="#"> Read More[...]</a>
                                                     </p>
                                                 </div>
                                             </div>
@@ -5261,13 +5261,13 @@
                                                 </div>
                                                 <div class="template15-wrap-main-content">
                                                     <span><i>19 Oct 2020</i></span>
-                                                    <h4><a href="blog-view.php">Network Administration and Security</a>
+                                                    <h4><a href="#">Network Administration and Security</a>
                                                     </h4>
                                                     <p>
                                                         Offers buffey of security programs, tools and techniques that are
                                                         globally
                                                         accepted in Information and Cyber Security Assurance.
-                                                        <a href="blog-view.php"> Read More[...]</a>
+                                                        <a href="#"> Read More[...]</a>
                                                     </p>
                                                 </div>
                                             </div>
@@ -5275,7 +5275,7 @@
                                         <!-- blog box3 end -->
                                     </div>
                                     <div class="blog-view">
-                                        <a href="blog.php">View all</a>
+                                        <a href="#">View all</a>
                                     </div>
                                 </div>
                                 <!--  -->
@@ -5322,13 +5322,13 @@
                                                 </div>
                                                 <div class="template15-wrap-main-content">
                                                     <span><i>19 Oct 2020</i></span>
-                                                    <h4><a href="blog-view.php">Network Administration and Security</a>
+                                                    <h4><a href="#">Network Administration and Security</a>
                                                     </h4>
                                                     <p>
                                                         Offers buffey of security programs, tools and techniques that are
                                                         globally
                                                         accepted in Information and Cyber Security Assurance.
-                                                        <a href="blog-view.php"> Read More[...]</a>
+                                                        <a href="#"> Read More[...]</a>
                                                     </p>
                                                 </div>
                                             </div>
@@ -5342,13 +5342,13 @@
                                                 </div>
                                                 <div class="template15-wrap-main-content">
                                                     <span><i>19 Oct 2020</i></span>
-                                                    <h4><a href="blog-view.php">Network Administration and Security</a>
+                                                    <h4><a href="#">Network Administration and Security</a>
                                                     </h4>
                                                     <p>
                                                         Offers buffey of security programs, tools and techniques that are
                                                         globally
                                                         accepted in Information and Cyber Security Assurance.
-                                                        <a href="blog-view.php"> Read More[...]</a>
+                                                        <a href="#"> Read More[...]</a>
                                                     </p>
                                                 </div>
                                             </div>
@@ -5362,13 +5362,13 @@
                                                 </div>
                                                 <div class="template15-wrap-main-content">
                                                     <span><i>19 Oct 2020</i></span>
-                                                    <h4><a href="blog-view.php">Network Administration and Security</a>
+                                                    <h4><a href="#">Network Administration and Security</a>
                                                     </h4>
                                                     <p>
                                                         Offers buffey of security programs, tools and techniques that are
                                                         globally
                                                         accepted in Information and Cyber Security Assurance.
-                                                        <a href="blog-view.php"> Read More[...]</a>
+                                                        <a href="#"> Read More[...]</a>
                                                     </p>
                                                 </div>
                                             </div>
@@ -5395,13 +5395,13 @@
                                                 </div>
                                                 <div class="template15-wrap-main-content">
                                                     <span><i>19 Oct 2020</i></span>
-                                                    <h4><a href="blog-view.php">Network Administration and Security</a>
+                                                    <h4><a href="#">Network Administration and Security</a>
                                                     </h4>
                                                     <p>
                                                         Offers buffey of security programs, tools and techniques that are
                                                         globally
                                                         accepted in Information and Cyber Security Assurance.
-                                                        <a href="blog-view.php"> Read More[...]</a>
+                                                        <a href="#"> Read More[...]</a>
                                                     </p>
                                                 </div>
                                             </div>
@@ -5415,13 +5415,13 @@
                                                 </div>
                                                 <div class="template15-wrap-main-content">
                                                     <span><i>19 Oct 2020</i></span>
-                                                    <h4><a href="blog-view.php">Network Administration and Security</a>
+                                                    <h4><a href="#">Network Administration and Security</a>
                                                     </h4>
                                                     <p>
                                                         Offers buffey of security programs, tools and techniques that are
                                                         globally
                                                         accepted in Information and Cyber Security Assurance.
-                                                        <a href="blog-view.php"> Read More[...]</a>
+                                                        <a href="#"> Read More[...]</a>
                                                     </p>
                                                 </div>
                                             </div>
@@ -5435,13 +5435,13 @@
                                                 </div>
                                                 <div class="template15-wrap-main-content">
                                                     <span><i>19 Oct 2020</i></span>
-                                                    <h4><a href="blog-view.php">Network Administration and Security</a>
+                                                    <h4><a href="#">Network Administration and Security</a>
                                                     </h4>
                                                     <p>
                                                         Offers buffey of security programs, tools and techniques that are
                                                         globally
                                                         accepted in Information and Cyber Security Assurance.
-                                                        <a href="blog-view.php"> Read More[...]</a>
+                                                        <a href="#"> Read More[...]</a>
                                                     </p>
                                                 </div>
                                             </div>
@@ -5449,7 +5449,7 @@
                                         <!-- blog box3 end -->
                                     </div>
                                     <div class="blog-view">
-                                        <a href="blog.php">View all</a>
+                                        <a href="#">View all</a>
                                     </div>
                                 </div>
                                 <!--  -->
@@ -5484,12 +5484,12 @@
                                             </div>
                                             <div class="template15-wrap-main-content">
                                                 <span><i>19 Oct 2020</i></span>
-                                                <h4><a href="blog-view.php">Network Administration and Security</a></h4>
+                                                <h4><a href="#">Network Administration and Security</a></h4>
                                                 <p>
                                                     Offers buffey of security programs, tools and techniques that are
                                                     globally
                                                     accepted in Information and Cyber Security Assurance.
-                                                    <a href="blog-view.php"> Read More[...]</a>
+                                                    <a href="#"> Read More[...]</a>
                                                 </p>
                                             </div>
                                         </div>
@@ -5503,12 +5503,12 @@
                                             </div>
                                             <div class="template15-wrap-main-content">
                                                 <span><i>19 Oct 2020</i></span>
-                                                <h4><a href="blog-view.php">Network Administration and Security</a></h4>
+                                                <h4><a href="#">Network Administration and Security</a></h4>
                                                 <p>
                                                     Offers buffey of security programs, tools and techniques that are
                                                     globally
                                                     accepted in Information and Cyber Security Assurance.
-                                                    <a href="blog-view.php"> Read More[...]</a>
+                                                    <a href="#"> Read More[...]</a>
                                                 </p>
                                             </div>
                                         </div>
@@ -5522,12 +5522,12 @@
                                             </div>
                                             <div class="template15-wrap-main-content">
                                                 <span><i>19 Oct 2020</i></span>
-                                                <h4><a href="blog-view.php">Network Administration and Security</a></h4>
+                                                <h4><a href="#">Network Administration and Security</a></h4>
                                                 <p>
                                                     Offers buffey of security programs, tools and techniques that are
                                                     globally
                                                     accepted in Information and Cyber Security Assurance.
-                                                    <a href="blog-view.php"> Read More[...]</a>
+                                                    <a href="#"> Read More[...]</a>
                                                 </p>
                                             </div>
                                         </div>
@@ -5594,12 +5594,12 @@
                                             </div>
                                             <div class="template15-wrap-main-content">
                                                 <span><i>19 Oct 2020</i></span>
-                                                <h4><a href="blog-view.php">Network Administration and Security</a></h4>
+                                                <h4><a href="#">Network Administration and Security</a></h4>
                                                 <p>
                                                     Offers buffey of security programs, tools and techniques that are
                                                     globally
                                                     accepted in Information and Cyber Security Assurance.
-                                                    <a href="blog-view.php"> Read More[...]</a>
+                                                    <a href="#"> Read More[...]</a>
                                                 </p>
                                             </div>
                                         </div>
@@ -5613,12 +5613,12 @@
                                             </div>
                                             <div class="template15-wrap-main-content">
                                                 <span><i>19 Oct 2020</i></span>
-                                                <h4><a href="blog-view.php">Network Administration and Security</a></h4>
+                                                <h4><a href="#">Network Administration and Security</a></h4>
                                                 <p>
                                                     Offers buffey of security programs, tools and techniques that are
                                                     globally
                                                     accepted in Information and Cyber Security Assurance.
-                                                    <a href="blog-view.php"> Read More[...]</a>
+                                                    <a href="#"> Read More[...]</a>
                                                 </p>
                                             </div>
                                         </div>
@@ -5632,12 +5632,12 @@
                                             </div>
                                             <div class="template15-wrap-main-content">
                                                 <span><i>19 Oct 2020</i></span>
-                                                <h4><a href="blog-view.php">Network Administration and Security</a></h4>
+                                                <h4><a href="#">Network Administration and Security</a></h4>
                                                 <p>
                                                     Offers buffey of security programs, tools and techniques that are
                                                     globally
                                                     accepted in Information and Cyber Security Assurance.
-                                                    <a href="blog-view.php"> Read More[...]</a>
+                                                    <a href="#"> Read More[...]</a>
                                                 </p>
                                             </div>
                                         </div>
@@ -5669,12 +5669,12 @@
                                             </div>
                                             <div class="template15-wrap-main-content">
                                                 <span><i>19 Oct 2020</i></span>
-                                                <h4><a href="blog-view.php">Network Administration and Security</a></h4>
+                                                <h4><a href="#">Network Administration and Security</a></h4>
                                                 <p>
                                                     Offers buffey of security programs, tools and techniques that are
                                                     globally
                                                     accepted in Information and Cyber Security Assurance.
-                                                    <a href="blog-view.php"> Read More[...]</a>
+                                                    <a href="#"> Read More[...]</a>
                                                 </p>
                                             </div>
                                         </div>
@@ -5688,12 +5688,12 @@
                                             </div>
                                             <div class="template15-wrap-main-content">
                                                 <span><i>19 Oct 2020</i></span>
-                                                <h4><a href="blog-view.php">Network Administration and Security</a></h4>
+                                                <h4><a href="#">Network Administration and Security</a></h4>
                                                 <p>
                                                     Offers buffey of security programs, tools and techniques that are
                                                     globally
                                                     accepted in Information and Cyber Security Assurance.
-                                                    <a href="blog-view.php"> Read More[...]</a>
+                                                    <a href="#"> Read More[...]</a>
                                                 </p>
                                             </div>
                                         </div>
@@ -5707,12 +5707,12 @@
                                             </div>
                                             <div class="template15-wrap-main-content">
                                                 <span><i>19 Oct 2020</i></span>
-                                                <h4><a href="blog-view.php">Network Administration and Security</a></h4>
+                                                <h4><a href="#">Network Administration and Security</a></h4>
                                                 <p>
                                                     Offers buffey of security programs, tools and techniques that are
                                                     globally
                                                     accepted in Information and Cyber Security Assurance.
-                                                    <a href="blog-view.php"> Read More[...]</a>
+                                                    <a href="#"> Read More[...]</a>
                                                 </p>
                                             </div>
                                         </div>
