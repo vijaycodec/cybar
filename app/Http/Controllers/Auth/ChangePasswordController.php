@@ -19,7 +19,12 @@ class ChangePasswordController extends Controller
     {
         $request->validate([
             'current_password' => ['required'],
-            'new_password' => ['required', 'min:8', 'regex:/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/'],
+            'new_password' => [
+                'required',
+                'string',
+                'min:8',
+                'regex:/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&#]).{8,}$/'
+            ],
             'confirm_password' => ['required', 'same:new_password'],
         ]);
 
