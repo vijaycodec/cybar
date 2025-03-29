@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\ChangePasswordController;
 use App\Http\Controllers\backend\authController;
 use App\Http\Controllers\backend\blogsubCategoryController;
 use App\Http\Controllers\frontend\blogController;
@@ -279,6 +280,12 @@ Route::middleware(['auth','admin','prevent_history'])->group(function () {
         route::get('/faq/edit/{id}', [faqController::class, 'edit'])->name('faq.edit');
         Route::put('faq/update/{id}', [faqController::class, 'update'])->name('faq.update');
         Route::delete('faq/delete/{id}', [faqController::class, 'destroy'])->name('faq.destroy');
+
+
+        Route::middleware(['auth'])->group(function () {
+            Route::get('/change-password', [ChangePasswordController::class, 'showChangePasswordForm'])->name('password.change');
+            Route::post('/change-password', [ChangePasswordController::class, 'updatePassword'])->name('password.update');
+        });
 
 });
 
