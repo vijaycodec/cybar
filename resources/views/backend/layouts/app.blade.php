@@ -543,11 +543,21 @@
                                 </a>
                             </li> --}}
             
-                                <li class="menu-item">
-                                    <a href="settings.html" class="">
+                                <li class="menu-item has-children">
+                                    <a href="javascript:void(0);" class="">
                                         <div class="icon"><i class="icon-settings"></i></div>
                                         <div class="text">Settings</div>
                                     </a>
+                                    
+
+                                    <ul class="sub-menu">
+                                        <li class="sub-menu-item">
+                                            <a href="{{ route('password.change') }}" class="">
+                                                <div class="text">Reset Password</div>
+                                            </a>
+                                        </li>
+                                    </ul>
+
                                 </li>
                             </ul>
                         </div>

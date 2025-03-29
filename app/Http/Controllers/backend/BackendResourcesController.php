@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Repositories\Interfaces\ResourceRepositoryInterface;
 use Illuminate\Support\Facades\Validator;
 
-class ResourcesController extends Controller
+class BackendResourcesController extends Controller
 {
     protected $resourceRepository;
 
@@ -18,6 +18,7 @@ class ResourcesController extends Controller
 
     public function index()
     {
+        dd('ok');
         $resources = $this->resourceRepository->getAllResources();
 
         foreach ($resources as $resource) {

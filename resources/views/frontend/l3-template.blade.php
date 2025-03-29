@@ -38,17 +38,17 @@
         </div>
     </section>
     <!-- tab menu start -->
-    @php
-    $categories = [];
+        @php
+            $categories = [];
 
-    foreach ($l3Categories as $category) {
-        $categories[] = [
-            'id' => $category->id,
-            'name' => $category->l3_category,
-            'slug' => strtolower(preg_replace('/[^a-zA-Z0-9\s-]/', '', str_replace([' ', '&', ','], '-', $category->l3_category)))
-        ];
-    }
-@endphp
+            foreach ($l3Categories as $category) {
+                $categories[] = [
+                    'id' => $category->id,
+                    'name' => $category->l3_category,
+                    'slug' => strtolower(preg_replace('/[^a-zA-Z0-9\s-]/', '', str_replace([' ', '&', ','], '-', $category->l3_category)))
+                ];
+            }
+    @endphp
 
     <section class="services-menu menu-fixed-cn"
         style="background: url({{ asset('assets/images/image-bg-top.jpg') }}) repeat fixed;">
@@ -1121,10 +1121,10 @@
     @endif
     <!-- course feature  end -->
 
-    <!--<section class="empower-industry-bg codec-page-section anchor-link" id="industry" style="padding-bottom: 20px !important;">-->
-    <!--</section>-->
-    <!--ceh kit section>-->
-    {{-- @if ($contentInfos->contains(fn($info) => $info->cehkit)) --}}
+        <!--<section class="empower-industry-bg codec-page-section anchor-link" id="industry" style="padding-bottom: 20px !important;">-->
+        <!--</section>-->
+        <!--ceh kit section>-->
+        {{-- @if ($contentInfos->contains(fn($info) => $info->cehkit)) --}}
     @if (isset($categories[4]) && isset($categories[4]['slug']))
     <section class="anchor-link space7 sample7-line" id="{{ $categories[4]['slug'] }}">
         <!--  -->
@@ -1190,7 +1190,7 @@
 
    
     <!-- Incident info Start -->
-    @if (isset($categories[5]) && isset($categories[5]['slug']))
+     @if (isset($categories[5]) && isset($categories[5]['slug']))
     <section class="anchor-link sample7-line space7 light-grey ceh-video-sec" id="{{ $categories[5]['slug'] }}">
         <!-- title  -->
 
@@ -1245,7 +1245,6 @@
         </div>
         <!-- body end -->
     </section>
-
     @endif
             <!-- Incident info End -->
 
@@ -1325,7 +1324,7 @@
     <!-- industries section end -->
 
     <!-- Why Codec Network start  -->
-    @if ($contentInfos->contains(fn($info) => $info->cyberwindCategory))
+     @if ($contentInfos->contains(fn($info) => $info->cyberwindCategory))
         <section class="anchor-link space7 light-grey sample7-line" id="{{ $categories[7]['slug'] }}">
             <!--  -->
             <div class="container">
@@ -1492,9 +1491,9 @@
             <!-- mobile start -->
         </section>
     @endif
-    <!-- Why Codec Network end--->
-    <!-- testimonials start -->
-    {{-- @if ($contentInfos->contains(fn($info) => $info->testimonials)) --}}
+        <!-- Why Codec Network end--->
+        <!-- testimonials start -->
+        {{-- @if ($contentInfos->contains(fn($info) => $info->testimonials)) --}}
     @if (isset($categories[8]) && isset($categories[8]['slug']))
         <section class="anchor-link space7 sample7-line" id="{{ $categories[8]['slug'] }}">
             <!--  -->
@@ -1567,10 +1566,10 @@
             <!--  -->
         </section>
     @endif
-    <!-- testimonials End -->
-    {{-- @include ('frontend.mobile-components.m-course-features') --}}
-    <!-- end -->
-    {{-- blog Section Start --}}
+        <!-- testimonials End -->
+        {{-- @include ('frontend.mobile-components.m-course-features') --}}
+        <!-- end -->
+        {{-- blog Section Start --}}
     @if ($contentInfos->contains(fn($info) => $info->blogCategory))
         <section class="anchor-link space7 light-grey " id="{{ $categories[9]['slug'] }}">
             <div class="container">
@@ -1598,10 +1597,10 @@
 
         </section>
     @endif
-    {{-- blog section end --}}
-    <!--  -->
-    <!-- FAQ info start -->
-    {{-- @if ($contentInfos->contains(fn($info) => $info->faqCategory)) --}}
+            {{-- blog section end --}}
+            <!--  -->
+            <!-- FAQ info start -->
+            {{-- @if ($contentInfos->contains(fn($info) => $info->faqCategory)) --}}
         @if (isset($categories[10]) && isset($categories[10]['slug']))
         <section class="anchor-link sample7-line space7 ceh-pro ceh-pro1" id="{{ $categories[10]['slug'] }}">
             <!-- title  -->
@@ -1824,7 +1823,7 @@
     </div>
 
     <!-- Global Popup for mobile course -features read more (Only One in the Page) End-->
-
+    <a href="#main-content-body" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
 </body>
 {{-- @endsection --}}
 <!-- Jquery code -->
