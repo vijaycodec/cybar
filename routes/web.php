@@ -24,7 +24,7 @@ use App\Http\Controllers\backend\l3_categoryController;
 use App\Http\Controllers\backend\l3_contentController;
 use App\Http\Controllers\backend\ourServicesController;
 use App\Http\Controllers\backend\resourcesCategoriesController;
-use App\Http\Controllers\backend\resourcesController as BackendResourcesController;
+use App\Http\Controllers\backend\BackendResourcesController; //as BackendResourcesController;
 use App\Http\Controllers\backend\subcategoryController;
 use App\Http\Controllers\backend\corporateController;
 use App\Http\Controllers\backend\menublogController;
@@ -54,55 +54,6 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::middleware(['FrameGuard'])->group(function () {
-    Route::get('/', [homeController::class, 'index'])->name('home');
-    Route::get('/services', [servicesController::class, 'getServices'])->name('services');
-    Route::get('/training', [trainingController::class, 'get_training'])->name('training');
-    Route::get('/resources', [resourcesController::class, 'index'])->name('resources');
-    Route::get('/resources/{slug}', [resourcesViewController::class, 'view'])
-    ->name('resources-view');
-    Route::get('/resources-view-trending/{id?}', [resourcesViewController::class, 'trendingResourceView'])->name('resources-view-trending');
-
-    Route::get('/blogs', [blogController::class, 'index'])->name('blogs');
-    // Route::get('/blog-view/{id?}', [blogViewController::class, 'view'])->name('blog-view');
-    Route::get('/blogs/{slug}', [blogViewController::class, 'view'])
-    ->where('slug', '[a-zA-Z0-9-]+') // Ensures only valid slugs match
-    ->name('blog-view');
-
-    Route::get('/blog-view-trending/{id?}', [blogViewController::class, 'trendingResourceView'])->name('blog-view-trending');
-    Route::get('/events', [eventController::class, 'index'])->name('events');
-    Route::get('/events/{slug}', [eventViewController::class, 'view'])->name('events-view');
-
-    Route::get('/testimonials', [testimonialsController::class, 'index'])->name('testimonials');
-    Route::get('/career', [careerController::class, 'index'])->name('careers');
-    Route::get('/career/{slug}', [careerViewController::class, 'view'])->name('careers-view');
-    Route::get('/contact', [contactController::class, 'index'])->name('contact');
-    Route::get('/cn-insight', [cnInsightController::class, 'index'])->name('cn-insight');
-    Route::get('/l3-template', [l3templateController::class, 'getl3'])->name('l3-template');
-
-    Route::get('/login', [loginController::class, 'login'])->name('login');
-    // Route::get('/add-blog-data', [Indexcontroller::class, 'add_blog_data'])->name('add_blog_data');
-    Route::post('/login/user', [loginController::class, 'loginsave'])->name('loginsave');
-
-    Route::get('/template1', [templateController::class, 'template1'])->name('template1');
-    Route::get('/template2', [templateController::class, 'template2'])->name('template2');
-    Route::get('/fraud-detection', [templateController::class, 'fraudDetection'])->name('fraud-detection');
-
-    Route::post('/submit-enquiry', [EnquiryController ::class, 'submitEnquiry'])->name('submit.enquiry');
-    Route::post('/comment/user', [commentController::class, 'store'])->name('resources-comment.store');
-    Route::post('/career/jobs', [jobCarrerController::class, 'store'])->name('job.career.store');
-
-    Route::get('/search-resources', [SearchController::class, 'search']);
-    Route::get('/newsletter', [NewsLetterMainController::class, 'index'])->name('newsletter.main');
-
-    Route::get('/newsletter/{slug}', [NewsLetteViewsController ::class, 'newLetterView'])->name('newLetter.View'); //trendingNewsLetterView
-    Route::get('/newsletter/view-trending/{id?}', [NewsLetteViewsController::class, 'trendingNewsLetterView'])->name('newsletter-view-trending');
-    Route::get('/podcast', [PodcastController ::class, 'podcast'])->name('podcast.View');
-
-    Route::get('/download-brochure/{file}', [BrochurePdfController::class, 'download'])
-    ->name('download.brochure');
-
-});
 
 Route::middleware(['auth','admin','prevent_history'])->group(function () {
 
@@ -125,14 +76,15 @@ Route::middleware(['auth','admin','prevent_history'])->group(function () {
     Route::delete('resources-category/delete/{id}', [resourcesCategoriesController::class, 'destroy'])->name('resources-category.destroy');
 
     // Resource Routes
-    route::get('/resources/list', [BackendResourcesController::class, 'index'])->name('resources.list');
-    route::get('/resources/create', [BackendResourcesController::class, 'create'])->name('resources.create');
-    route::post('/resources/store', [BackendResourcesController::class, 'store'])->name('resources.store');
-    Route::get('/resources/show/{id}', [BackendResourcesController::class, 'show'])->name('resources.show');
-    route::get('/resources/edit/{id}', [BackendResourcesController::class, 'edit'])->name('resources.edit');
-    Route::put('resources/update/{id}', [BackendResourcesController::class, 'update'])->name('resources.update');
-    Route::delete('resources/delete/{id}', [BackendResourcesController::class, 'destroy'])->name('resources.destroy');
-
+    Route::prefix('admin/resources')->group(function () {
+        Route::get('/list', [BackendResourcesController::class, 'index'])->name('resources.list');
+        Route::get('/create', [BackendResourcesController::class, 'create'])->name('resources.create');
+        Route::post('/store', [BackendResourcesController::class, 'store'])->name('resources.store');
+        Route::get('/show/{id}', [BackendResourcesController::class, 'show'])->name('resources.show');
+        Route::get('/edit/{id}', [BackendResourcesController::class, 'edit'])->name('resources.edit');
+        Route::put('/update/{id}', [BackendResourcesController::class, 'update'])->name('resources.update');
+        Route::delete('/delete/{id}', [BackendResourcesController::class, 'destroy'])->name('resources.destroy');
+    });
     //Course-category Routes
     route::get('/course-category/list', [courseCategoryController::class, 'index'])->name('course-category.list');
     route::get('/course-category/create', [courseCategoryController::class, 'create'])->name('course-category.create');
@@ -327,6 +279,60 @@ Route::middleware(['auth','admin','prevent_history'])->group(function () {
         route::get('/faq/edit/{id}', [faqController::class, 'edit'])->name('faq.edit');
         Route::put('faq/update/{id}', [faqController::class, 'update'])->name('faq.update');
         Route::delete('faq/delete/{id}', [faqController::class, 'destroy'])->name('faq.destroy');
+
+});
+
+
+
+
+Route::middleware(['FrameGuard'])->group(function () {
+    Route::get('/', [homeController::class, 'index'])->name('home');
+    Route::get('/services', [servicesController::class, 'getServices'])->name('services');
+    Route::get('/training', [trainingController::class, 'get_training'])->name('training');
+    Route::get('/resources', [resourcesController::class, 'index'])->name('resources');
+    Route::get('/resources/{slug}', [resourcesViewController::class, 'view'])
+    ->where('slug', '[a-zA-Z0-9-]+') // Ensures only valid slugs match
+    ->name('resources-view');
+    Route::get('/resources-view-trending/{id?}', [resourcesViewController::class, 'trendingResourceView'])->name('resources-view-trending');
+
+    Route::get('/blogs', [blogController::class, 'index'])->name('blogs');
+    // Route::get('/blog-view/{id?}', [blogViewController::class, 'view'])->name('blog-view');
+    Route::get('/blogs/{slug}', [blogViewController::class, 'view'])
+    ->where('slug', '[a-zA-Z0-9-]+') // Ensures only valid slugs match
+    ->name('blog-view');
+
+    Route::get('/blog-view-trending/{id?}', [blogViewController::class, 'trendingResourceView'])->name('blog-view-trending');
+    Route::get('/events', [eventController::class, 'index'])->name('events');
+    Route::get('/events/{slug}', [eventViewController::class, 'view'])->name('events-view');
+
+    Route::get('/testimonials', [testimonialsController::class, 'index'])->name('testimonials');
+    Route::get('/career', [careerController::class, 'index'])->name('careers');
+    Route::get('/career/{slug}', [careerViewController::class, 'view'])->name('careers-view');
+    Route::get('/contact', [contactController::class, 'index'])->name('contact');
+    Route::get('/cn-insight', [cnInsightController::class, 'index'])->name('cn-insight');
+    Route::get('/l3-template', [l3templateController::class, 'getl3'])->name('l3-template');
+
+    Route::get('/login', [loginController::class, 'login'])->name('login');
+    // Route::get('/add-blog-data', [Indexcontroller::class, 'add_blog_data'])->name('add_blog_data');
+    Route::post('/login/user', [loginController::class, 'loginsave'])->name('loginsave');
+
+    Route::get('/template1', [templateController::class, 'template1'])->name('template1');
+    Route::get('/template2', [templateController::class, 'template2'])->name('template2');
+    Route::get('/fraud-detection', [templateController::class, 'fraudDetection'])->name('fraud-detection');
+
+    Route::post('/submit-enquiry', [EnquiryController ::class, 'submitEnquiry'])->name('submit.enquiry');
+    Route::post('/comment/user', [commentController::class, 'store'])->name('resources-comment.store');
+    Route::post('/career/jobs', [jobCarrerController::class, 'store'])->name('job.career.store');
+
+    Route::get('/search-resources', [SearchController::class, 'search']);
+    Route::get('/newsletter', [NewsLetterMainController::class, 'index'])->name('newsletter.main');
+
+    Route::get('/newsletter/{slug}', [NewsLetteViewsController ::class, 'newLetterView'])->name('newLetter.View'); //trendingNewsLetterView
+    Route::get('/newsletter/view-trending/{id?}', [NewsLetteViewsController::class, 'trendingNewsLetterView'])->name('newsletter-view-trending');
+    Route::get('/podcast', [PodcastController ::class, 'podcast'])->name('podcast.View');
+
+    Route::get('/download-brochure/{file}', [BrochurePdfController::class, 'download'])
+    ->name('download.brochure');
 
 });
 
