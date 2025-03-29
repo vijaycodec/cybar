@@ -14,6 +14,7 @@ class careerViewController extends Controller
         // Fetch career with its category
         // $careers = Career::with('category')->find($id);
         $careers = Career::with('category')->where('slug', $slug)->first();
+        $slug=$careers->subcategory;
 
         // Fetch all categories for trendings Resources
 

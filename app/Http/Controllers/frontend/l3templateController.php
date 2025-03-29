@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\CourseCategory;
+use App\Models\PageDetail;
+use App\Models\SubCategory;
 use App\Repositories\Interfaces\L3CategoryRepositoryInterface;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -41,14 +44,28 @@ class l3templateController extends Controller
             $categoryId = $request->query('ct');
             $subcategoryId = $request->query('sb');
 
+            // Retrieve Page Name
+            $page = PageDetail::where('id', $pageId)->first();
+            $pageName = $page->page_name;
+
+            // Retrieve category Name
+            $category = CourseCategory::where('page_category', $pageId)->where('id', $categoryId)->first();
+            $categoryName=$category->name;
+    
+            // Retrieve subcategory ID
+            $subcategory = SubCategory::where('page_category_id', $pageId)
+            ->where('category_id', $categoryId)
+            ->where('id', $subcategoryId)
+            ->first();
+            $subcategoryname= $subcategory->sub_category;
+
             $l3Categories = $this->l3CategoryRepository->getL3Categories($pageId, $categoryId, $subcategoryId);
 
             if ($l3Categories->isEmpty()) {
                 abort(404, 'No L3 categories found.');
             }
             $contentInfos = $l3Categories->flatMap->contentInfos;
-
-            return view('frontend.l3-template', compact('l3Categories', 'contentInfos'));
+            return view('frontend.l3-template', compact('l3Categories', 'contentInfos','pageName','categoryName','subcategoryname'));
         } catch (Exception $e) {
             Log::error('Error in getL3: ' . $e->getMessage());
             return back()->with('error', 'Something went wrong. Please try again later.');

@@ -13,11 +13,10 @@ class NewsLetteViewsController extends Controller
 
       // $resource = NewsLetter::with('category')->find($id);
       $resource = NewsLetter::with('category')->where('slug', $slug)->first();
-
-      // dd($resource);
+      $slug=$resource->sub_category;
       // $trendings = Category::where('category_type', 'newsletter')->latest()->take(5)->get();
       $trendings = NewsLetter::with('category')->latest()->take(5)->get();
-
+      // $trendings = NewsLetter::with('category')->inRandomOrder()->take(5)->get();
 
       if ($resource) {
          return view('frontend.newsletter-view', compact('resource', 'trendings','slug'));
