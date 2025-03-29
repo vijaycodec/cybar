@@ -18,7 +18,7 @@ class BackendResourcesController extends Controller
 
     public function index()
     {
-        dd('ok');
+
         $resources = $this->resourceRepository->getAllResources();
 
         foreach ($resources as $resource) {

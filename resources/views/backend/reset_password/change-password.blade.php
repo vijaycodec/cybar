@@ -71,7 +71,7 @@
         let passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
         if (!passwordPattern.test(newPassword)) {
             $("#new_password-error").text(
-                "New password must be 8+ chars with a letter, number & special character."
+                "New password must be 8 chars with a letter, number & special character."
             ).show();
             isValid = false;
         }
