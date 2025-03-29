@@ -98,7 +98,12 @@
 
             <div class="container desktop-view">
                 <div class="home-blog">
-                    <div class="vertical-text">TRENDING BLOGS</div>
+                    @if ($TrendingBlogs->count() <= 3)
+                        <div class="vertical-text vertical-text-single">TRENDING BLOGS</div> {{-- for single row --}}
+                    @else
+                        <div class="vertical-text">TRENDING BLOGS</div>       {{-- for two row --}}
+                    @endif
+                    
                     <div class="row">
                         <!-- blog box1 -->
                         @foreach ($TrendingBlogs as $trendingblog)

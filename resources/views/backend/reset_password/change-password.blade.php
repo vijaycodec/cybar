@@ -52,14 +52,14 @@
 
 @push('scripts')
 <script>
-   $(document).ready(function() {
+  $(document).ready(function() {
     $("#change-password-form").submit(function(event) {
         event.preventDefault(); // Prevent default form submission
 
         let isValid = true;
         $(".text-danger").text("").hide(); // Clear previous errors
 
-        // Current Password Validation (Min 6 characters)
+        // Current Password Validation (Min 8 characters)
         let currentPassword = $("#current_password").val().trim();
         if (currentPassword.length < 8) {
             $("#current_password-error").text("Current password must be at least 8 characters.").show();
@@ -68,7 +68,7 @@
 
         // New Password Validation (Min 8 characters, must include letter, number, and special character)
         let newPassword = $("#new_password").val().trim();
-        let passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        let passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&#]).{8,}$/;
         if (!passwordPattern.test(newPassword)) {
             $("#new_password-error").text(
                 "New password must be 8 chars with a letter, number & special character."
@@ -107,8 +107,7 @@
                             icon: "success",
                             confirmButtonText: "OK"
                         }).then(() => {
-                            $("#change-password-form")[0].reset();
-                            window.location.headers.location =
+                            window.location.href = response.redirect;
                         });
                     } else {
                         Swal.fire({
@@ -120,12 +119,19 @@
                     }
                 },
                 error: function(xhr) {
-                    Swal.fire({
-                        title: "Error!",
-                        text: "An error occurred: " + xhr.responseText,
-                        icon: "error",
-                        confirmButtonText: "OK"
-                    });
+                    let errors = xhr.responseJSON.errors;
+                    if (errors) {
+                        $.each(errors, function(key, value) {
+                            $("#" + key + "-error").text(value[0]).show();
+                        });
+                    } else {
+                        Swal.fire({
+                            title: "Error!",
+                            text: "An error occurred: " + xhr.responseText,
+                            icon: "error",
+                            confirmButtonText: "OK"
+                        });
+                    }
                 },
                 complete: function() {
                     $("button[type=submit]").attr("disabled", false).text("Update");
