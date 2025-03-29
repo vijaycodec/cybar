@@ -10,7 +10,7 @@
         <a id="button">
         </a>
         <!-- Header start -->
-        @include('frontend.layouts.event-header',['categories' => $categories])
+        @include('frontend.layouts.event-header', ['categories' => $categories])
         <!-- banner start -->
         <section class="sec_ban" id="resources-banner">
             <div class="home-ban">
@@ -33,43 +33,47 @@
         <!-- tab menu end -->
 
         <!--  -->
-        @foreach ($categories as $index=>$category)
-        <section class="testimonials testimonials-page event-space testimonials-bg resc-sec" id="{{ Str::slug($category->name) }}">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="wpb_text_column wpb_content_element">
-                            <div class="wpb_wrapper">
-                                <div class="title-button">
-                                    <h3 class="style1 tbg{{ $index+1 }}">
-                                        <i class="fa fa-2x fa-file"></i> {{ $category->name }}
-                                    </h3>
-                                </div>
-                                <div class="carousel-wrap">
-                                    <div class="owl-carousel owl-theme" id="carousel-{{ $index }}" data-index="{{ $index }}">
-                                        @foreach ($category->events as $event)
-                                        <div class="item">
-                                            <div class="event-box">
-                                                <img src="{{ asset('storage/uploads/backend/event/' . $event->images) }}" class="img-fluid" alt="t1">
-                                            </div>
-                                        </div>
-                                        @endforeach
+        @foreach ($categories as $index => $category)
+            <section class="testimonials testimonials-page event-space testimonials-bg resc-sec"
+                id="{{ Str::slug($category->name) }}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="wpb_text_column wpb_content_element">
+                                <div class="wpb_wrapper">
+                                    <div class="title-button">
+                                        <h3 class="style1 tbg{{ $index + 1 }}">
+                                            <i class="fa fa-2x fa-file"></i> {{ $category->name }}
+                                        </h3>
                                     </div>
-        
-                                    <!-- Navigation Counter (Fixed) -->
-                                    <div id="navigation-count-{{ $index }}" class="count-nav-box"></div>
-        
-                                    <div class="event-all">
-                                        <a href="{{ route('events-view', $category->slug) }}">View All</a>
+                                    <div class="carousel-wrap">
+                                        <div class="owl-carousel owl-theme" id="carousel-{{ $index }}"
+                                            data-index="{{ $index }}">
+                                            @foreach ($category->events as $event)
+                                                <div class="item">
+                                                    <div class="event-box">
+                                                        <div data-videourl="{{ $event->video_url }}" class="podcast-video">
+                                                            <img src="{{ asset('storage/uploads/backend/event/' . $event->images) }}" class="img-fluid" alt="t1">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            @endforeach
+                                        </div>
+
+                                        <!-- Navigation Counter (Fixed) -->
+                                        <div id="navigation-count-{{ $index }}" class="count-nav-box"></div>
+
+                                        <div class="event-all">
+                                            <a href="{{ route('events-view', $category->slug) }}">View All</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        
+            </section>
+
         @endforeach
         <!--  -->
         <!-- tab menu end -->
@@ -89,27 +93,28 @@
     <script type="text/javascript">
         //
         $('.menu-left-right ul li a').on('click',
-            function(e) {
+            function (e) {
                 var target = this.hash,
                     $target = $(target);
 
                 $('html, body').stop().animate({
-                        'scrollTop': $target.offset().top - 100
-                    },
+                    'scrollTop': $target.offset().top - 100
+                },
                     100, 'swing',
-                    function() {
+                    function () {
                         window.location.hash = target;
                     });
             });
-        $(document).ready(function() {
-            $('.menu-left-right ul li a').click(function() {
+        $(document).ready(function () {
+            $('.menu-left-right ul li a').click(function () {
                 $('li a').removeClass("active");
                 $(this).addClass("active");
             });
         });
     </script>
-    {{-- <script type="text/javascript">
-        $(document).ready(function() {
+    {{--
+    <script type="text/javascript">
+        $(document).ready(function () {
             function initializeCarousel(carouselClass, navigationCountId) {
                 $(carouselClass).owlCarousel({
                     loop: true,
@@ -131,10 +136,10 @@
                             items: 4
                         }
                     },
-                    onInitialized: function(event) {
+                    onInitialized: function (event) {
                         updateNavigationCount(event, navigationCountId);
                     },
-                    onChanged: function(event) {
+                    onChanged: function (event) {
                         updateNavigationCount(event, navigationCountId);
                     }
                 });
@@ -170,7 +175,7 @@
     </script> --}}
 
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             function initializeCarousel(carouselId, navigationCountId) {
                 let $carousel = $("#" + carouselId);
                 let totalSlides = $carousel.find(".item").length; // Count slides
@@ -196,10 +201,10 @@
                         768: { items: 2 },
                         992: { items: 3 }
                     },
-                    onInitialized: function(event) {
+                    onInitialized: function (event) {
                         updateNavigationCount(event, navigationCountId);
                     },
-                    onChanged: function(event) {
+                    onChanged: function (event) {
                         updateNavigationCount(event, navigationCountId);
                     }
                 });
@@ -213,9 +218,9 @@
                 $("#" + navigationCountId).text(currentSlide + " / " + totalSlides);
             }
 
-            $(".carousel-wrap").each(function() {
+            $(".carousel-wrap").each(function () {
                 let carousel = $(this).find(".owl-carousel");
-                let index = carousel.data("index"); 
+                let index = carousel.data("index");
                 let counterId = "navigation-count-" + index;
                 initializeCarousel(carousel.attr("id"), counterId);
             });
@@ -251,12 +256,12 @@
 
     @include('frontend.layouts.right-menu-js')
     <script type="text/javascript">
-        $(document).ready(function() {
+        $(document).ready(function () {
             "use strict";
             var offSetTop = 100;
             var $scrollToTopButton = $('.scrollToTop');
             //Check to see if the window is top if not then display button
-            $(window).scroll(function() {
+            $(window).scroll(function () {
                 if ($(this).scrollTop() > offSetTop) {
                     $scrollToTopButton.fadeIn();
                 } else {
@@ -266,19 +271,19 @@
         });
     </script>
     <script>
+        // video start
         var youtubeVideo = {
             videoBtn: '[data-videourl]',
 
-            model: function() {
+            model: function () {
 
                 function videoinit() {
-                    $('body').on('click', youtubeVideo.videoBtn, function(event) {
+                    $('body').on('click', youtubeVideo.videoBtn, function (event) {
                         event.preventDefault();
                         var videoSrc = $(this).data('videourl');
 
                         var ID = '';
-                        var url = videoSrc.replace(/(>|<)/gi, '').split(
-                            /(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
+                        var url = videoSrc.replace(/(>|<)/gi, '').split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
                         if (url[2] !== undefined) {
                             ID = url[2].split(/[^0-9a-z_\-]/i);
                             ID = ID[0];
@@ -286,17 +291,7 @@
                             ID = url;
                         }
 
-                        var videoElement = $('<div class="video-popup-model">' +
-                            '<div class="video-layer">' + '<div class="video-model-close-layer">' +
-                            '</div>' + '<div class="model-wrapper">' + '<div class="videomodel">' +
-                            '<div class="videoscreen">' +
-                            '<iframe width="100%" height="auto" class="videlement"' +
-                            'src="https://www.youtube.com/embed/' + ID +
-                            '?rel=0&amp;controls=1&amp;showinfo=0&amp;autoplay=1' +
-                            '" frameborder="0"' +
-                            'allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"' +
-                            'allowfullscreen></iframe>' + '</div>' + '<div class="modelCloseBtn">' +
-                            '</div>' + '</div>' + '</div>' + '</div>' + '</div>');
+                        var videoElement = $('<div class="video-popup-model">' + '<div class="video-layer">' + '<div class="video-model-close-layer">' + '</div>' + '<div class="model-wrapper">' + '<div class="videomodel">' + '<div class="videoscreen">' + '<iframe width="100%" height="auto" class="videlement"' + 'src="https://www.youtube.com/embed/' + ID + '?rel=0&amp;controls=1&amp;showinfo=0&amp;autoplay=1' + '" frameborder="0"' + 'allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"' + 'allowfullscreen></iframe>' + '</div>' + '<div class="modelCloseBtn">' + '</div>' + '</div>' + '</div>' + '</div>' + '</div>');
 
                         $('body').prepend(videoElement);
                         var videoWidth = $('.video-popup-model .videlement').width();
@@ -308,10 +303,10 @@
                 videoinit();
 
                 function modelClose() {
-                    $('body').on('click', '.modelCloseBtn', function(event) {
+                    $('body').on('click', '.modelCloseBtn', function (event) {
                         var model = $(this).parents('.video-popup-model')
                         model.removeClass('smooth_show');
-                        setTimeout(function() {
+                        setTimeout(function () {
                             model.remove();
                         }, 500);
                         $('body').removeClass('no-reload');
@@ -320,13 +315,13 @@
                 modelClose();
 
                 function modelLayerClose() {
-                    $('body').on('click', '.video-model-close-layer', function(event) {
+                    $('body').on('click', '.video-model-close-layer', function (event) {
                         $(".modelCloseBtn").trigger('click');
                     });
                 }
                 modelLayerClose();
             },
-            init: function() {
+            init: function () {
                 youtubeVideo.model();
             }
         };
