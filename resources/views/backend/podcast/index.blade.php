@@ -42,7 +42,7 @@
                                 <th>Sub Category Name</th>
                                 <th>Image</th>
                                 <th>Short Description</th>
-                                <th>Description</th>
+                                {{-- <th>Description</th> --}}
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -66,7 +66,7 @@
                                             <!-- Short description (up to 10 words) -->
                                             <span>{{ $podcast->short_desc }}</span>
                                         </td>
-                                        <td style="max-width: 400px;"> <!-- Increase width here -->
+                                        {{-- <td style="max-width: 400px;"> <!-- Increase width here -->
                                             <!-- Short description (up to 10 words) -->
                                             <span class="description-short">
                                                 {!! $podcast->short_description ?? mb_strimwidth(html_entity_decode($podcast->description), 0, 19, '...') !!}
@@ -78,7 +78,7 @@
                                                     data-description="{{ html_entity_decode($podcast->description) }}">Read
                                                     More</button>
                                             @endif
-                                        </td>
+                                        </td> --}}
                                         <td>
                                             <div class="list-icon-function">
                                                 <button type="button" class="show" data-id="{{ $podcast->id }}">

@@ -43,7 +43,6 @@
                                 <th>Sub Category Slug</th>
                                 <th>Image</th>
                                 <th>Short Description</th>
-                                <th>Description</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -67,7 +66,7 @@
                                             <!-- Short description (up to 10 words) -->
                                             <span>{{ $newsletter->short_desc }}</span>
                                         </td>
-                                        <td style="max-width: 400px;"> <!-- Increase width here -->
+                                        {{-- <td style="max-width: 400px;"> <!-- Increase width here -->
                                             <!-- Short description (up to 10 words) -->
                                             <span class="description-short">
                                                 {!! $newsletter->short_description ?? mb_strimwidth(html_entity_decode($newsletter->description), 0, 19, '...') !!}
@@ -79,7 +78,7 @@
                                                     data-description="{{ html_entity_decode($newsletter->description) }}">Read
                                                     More</button>
                                             @endif
-                                        </td>
+                                        </td> --}}
                                         <td>
                                             <div class="list-icon-function">
                                                 <button type="button" class="show" data-id="{{ $newsletter->id }}">
@@ -102,7 +101,7 @@
                                 @endforeach
                             @else
                                 <tr>
-                                    <td colspan="6" class="text-center">No data found</td>
+                                    <td colspan="7" class="text-center">No data found</td>
                                 </tr>
                             @endif
                         </tbody>

@@ -69,11 +69,11 @@
                                         </td>
                                         <td style="max-width: 400px;"> <!-- Increase width here -->
                                             <!-- Short description (up to 10 words) -->
-                                            <span class="description-short">
+                                            {{-- <span class="description-short">
                                                 {!! $blog->short_description ?? mb_strimwidth(html_entity_decode($blog->description), 0, 19, '...') !!}
-                                            </span>
+                                            </span> --}}
                                             <!-- Read More button for longer descriptions -->
-                                            @if (str_word_count(strip_tags($blog->description)) > 19)
+                                            @if (str_word_count(strip_tags($blog->description)) > 5)
                                                 <button class="btn btn-link read-more"
                                                     data-id="{{ $blog->category->name }}"
                                                     data-description="{{ html_entity_decode($blog->description) }}">Read
@@ -102,7 +102,7 @@
                                 @endforeach
                             @else
                                 <tr>
-                                    <td colspan="6" class="text-center">No data found</td>
+                                    <td colspan="7" class="text-center">No data found</td>
                                 </tr>
                             @endif
                         </tbody>
