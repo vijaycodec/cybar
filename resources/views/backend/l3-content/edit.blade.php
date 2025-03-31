@@ -133,15 +133,15 @@
                                 $layoutTypes = [
                                     'overview' => 'Overview',
                                     'significance' => 'Significance',
-                                    'coursefeatures' => 'Course Features',
-                                    'cyberwind' => 'Why Cyberwind',
-                                    'industries' => 'Industries',
-                                    'faqs' => 'FAQs',
-                                    'blog' => 'Blog',
-                                    'incidents' => 'Incidents',
-                                    'cehkit' => 'CEH Kit',
                                     'program' => 'Program',
+                                    'coursefeatures' => 'Course Features',
+                                    'cehkit' => 'CEH Kit',
+                                    'incidents' => 'Incidents',
+                                    'industries' => 'Industries',
+                                    'cyberwind' => 'Why Cyberwind',
                                     'testimonials' => 'Testimonials'
+                                    'blog' => 'Blog',
+                                    'faqs' => 'FAQs',
                                 ];
                             @endphp
                     

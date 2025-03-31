@@ -54,7 +54,7 @@
                         <!-- Button Component Sightly -->
                         <div>
                             <div class="row top  txt-center">
-                                <a href="#">
+                                <a href="javascript:void(0)">
                                     <button class="orange-btn ">
                                         <div class="btn-title"> Watch the webinar</div>
                                     </button>
@@ -91,7 +91,7 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                     <h3>Vulnerability Assesement &amp; Penetration Testing</h3>
                                     <p>Services to ensure the Integrity of Information Systems, Softwares & Applications,
                                         block
@@ -118,7 +118,7 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                     <h3>Digital Forensic &amp; Cyber Fraud Management</h3>
                                     <p>Identify and resolve Ecrime incidents that adversely impact organizations with
                                         cybercrime
@@ -142,7 +142,7 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                     <h3>SOC (Security Operation Center) as a Service</h3>
                                     <p>Provides round-the-clock proactive event monitoring with prioritized alert
                                         notification &
@@ -492,7 +492,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -515,7 +515,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -538,7 +538,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -561,7 +561,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -598,7 +598,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -618,7 +618,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -638,7 +638,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -658,7 +658,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -695,7 +695,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -715,7 +715,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -735,7 +735,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -755,7 +755,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -792,7 +792,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -812,7 +812,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -832,7 +832,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -852,7 +852,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -889,7 +889,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -909,7 +909,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -929,7 +929,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -949,7 +949,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -993,7 +993,7 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                     <h3>Vulnerability Assesement &amp; Penetration Testing</h3>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
@@ -1013,7 +1013,7 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                     <h3>IT Security Audit, Risk & Compliance</h3>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
@@ -1033,7 +1033,7 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                     <h3>Managed IT Security Solutions</h3>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
@@ -1053,7 +1053,7 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                     <h3>Digital Forensic &amp; Cyber Fraud Management</h3>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
@@ -1072,7 +1072,7 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                     <h3>SOC (Security Operation Center) as a Service</h3>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
@@ -1098,7 +1098,7 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                     <h3>IT Security Audit, Risk & Compliance</h3>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
@@ -1118,7 +1118,7 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                     <h3>Vulnerability Assesement &amp; Penetration Testing</h3>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
@@ -1138,7 +1138,7 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                     <h3>Managed IT Security Solutions</h3>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
@@ -1158,7 +1158,7 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                     <h3>Digital Forensic &amp; Cyber Fraud Management</h3>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
@@ -1177,7 +1177,7 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                     <h3>SOC (Security Operation Center) as a Service</h3>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
@@ -1842,7 +1842,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -1859,7 +1859,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -1876,7 +1876,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -1893,7 +1893,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -1916,7 +1916,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -1933,7 +1933,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -1950,7 +1950,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -1967,7 +1967,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2001,7 +2001,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2018,7 +2018,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2035,7 +2035,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2052,7 +2052,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2075,7 +2075,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2092,7 +2092,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2109,7 +2109,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2126,7 +2126,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2160,7 +2160,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2177,7 +2177,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2194,7 +2194,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2211,7 +2211,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2234,7 +2234,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2251,7 +2251,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2268,7 +2268,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2285,7 +2285,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2319,7 +2319,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2336,7 +2336,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2353,7 +2353,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2370,7 +2370,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2393,7 +2393,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2410,7 +2410,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2427,7 +2427,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2444,7 +2444,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2478,7 +2478,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2495,7 +2495,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2512,7 +2512,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2529,7 +2529,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2552,7 +2552,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2569,7 +2569,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2586,7 +2586,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2603,7 +2603,7 @@
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
-                                                <a href="#">Know More</a>
+                                                <a href="javascript:void(0)">Know More</a>
                                             </div>
                                             <!--  -->
                                         </div>
@@ -2647,7 +2647,7 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                     <h3>Vulnerability Assesement &amp; Penetration Testing</h3>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
@@ -2667,7 +2667,7 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                     <h3>IT Security Audit, Risk & Compliance</h3>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
@@ -2687,7 +2687,7 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                     <h3>Managed IT Security Solutions</h3>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
@@ -2707,7 +2707,7 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                     <h3>Digital Forensic &amp; Cyber Fraud Management</h3>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
@@ -2726,7 +2726,7 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                     <h3>SOC (Security Operation Center) as a Service</h3>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
@@ -2752,7 +2752,7 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                     <h3>Digital Forensic &amp; Cyber Fraud Management</h3>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
@@ -2772,7 +2772,7 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                     <h3>IT Security Audit, Risk & Compliance</h3>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
@@ -2792,7 +2792,7 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                     <h3>Vulnerability Assesement &amp; Penetration Testing</h3>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
@@ -2812,7 +2812,7 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                     <h3>Managed IT Security Solutions</h3>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
@@ -2831,7 +2831,7 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="#" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                     <h3>SOC (Security Operation Center) as a Service</h3>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
@@ -2849,13 +2849,13 @@
         <section class="mhspace mhspace00" id="mhome-div6">
             <div class="traing-banner desktop-view">
                 <img src="{{asset('assets/images/training-domain-bg.jpg')}}">
-                <div class="cn-btn"> <a href="#">KNOW MORE</a> </div>
+                <div class="cn-btn"> <a href="javascript:void(0)">KNOW MORE</a> </div>
             </div>
             <!-- bg banner end -->
             <!-- bg banner start -->
             <div class="traing-banner mobile-view">
                 <img src="{{ asset('assets/images/mimg3.jpeg') }}">
-                <div class="cn-btn"> <a href="#">KNOW MORE</a> </div>
+                <div class="cn-btn"> <a href="javascript:void(0)">KNOW MORE</a> </div>
             </div>
         </section>
         <!-- bg banner end -->
@@ -2960,7 +2960,7 @@
                                                     organizations to
                                                     combat cyber threats proactively.
                                                 </p>
-                                                <a href="#" class="homeread-more">Read More</a>
+                                                <a href="javascript:void(0)" class="homeread-more">Read More</a>
                                             </div>
                                         </div>
                                         <div class="col-md-5">
@@ -3134,7 +3134,7 @@
                                         the realm of ethical hacking with our comprehensive courses that empower individuals
                                         and
                                         organizations to combat cyber threats proactively.</p>
-                                    <a href="#">Read more</a>
+                                    <a href="javascript:void(0)">Read more</a>
                                 </div>
                             </div>
                             <!--  -->
@@ -3274,7 +3274,7 @@
                 <div class="row">
 
                     <div class="col-md-4 mb-3 ">
-                        <a href="https://www.cybarwind.com/new-demo/asaraf/codec/thirdlevel.php">
+                        <a href="javascript:void(0)">
                             <div class="tdw-box row">
                                 <div class="col-md-4 pd0">
                                     <div class="tdw-img"> <img src="{{ asset('assets/images/ec-council-1.jpg') }}"> </div>
@@ -3294,7 +3294,7 @@
 
 
                     <div class="col-md-4 mb-3">
-                        <a href="https://www.cybarwind.com/new-demo/codec-demo/training-methodology-1.php">
+                        <a href="">
                             <div class="tdw-box row">
                                 <div class="col-md-4 pd0">
                                     <div class="tdw-img"> <img
@@ -3315,7 +3315,7 @@
 
 
                     <div class="col-md-4 mb-3">
-                        <a href="https://www.cybarwind.com/new-demo/asaraf/codec/case2.php">
+                        <a href="">
                             <div class="tdw-box row">
                                 <div class="col-md-4 pd0">
                                     <div class="tdw-img"> <img src="{{ asset('assets/images/cyber-security-pene.jpg') }}">
@@ -3492,7 +3492,7 @@
                     <div id="mhome-slider40" class="owl-carousel owl-theme">
                         <!--  -->
                         <div class="item">
-                            <a href="https://www.cybarwind.com/new-demo/asaraf/codec/thirdlevel.php">
+                            <a href="javascript:void(0)">
                                 <div class="ftd-box">
                                     <div class="ftd-img"> <img src="{{ asset('assets/images/ec-council-1.jpg') }}"></div>
                                     <div class="ftd-header">
@@ -3506,7 +3506,7 @@
                             </a>
                         </div>
                         <div class="item">
-                            <a href="https://www.cybarwind.com/new-demo/asaraf/codec/thirdlevel.php">
+                            <a href="javascript:void(0)">
                                 <div class="ftd-box">
                                     <div class="ftd-img"> <img src="{{ asset('assets/images/ec-council-1.jpg') }}"></div>
                                     <div class="ftd-header">
@@ -3520,7 +3520,7 @@
                             </a>
                         </div>
                         <div class="item">
-                            <a href="https://www.cybarwind.com/new-demo/asaraf/codec/thirdlevel.php">
+                            <a href="javascript:void(0)">
                                 <div class="ftd-box">
                                     <div class="ftd-img"> <img src="{{ asset('assets/images/ec-council-1.jpg') }}"></div>
                                     <div class="ftd-header">
@@ -3543,7 +3543,7 @@
                     <div id="mhome-slider41" class="owl-carousel owl-theme">
                         <!--  -->
                         <div class="item">
-                            <a href="https://www.cybarwind.com/new-demo/asaraf/codec/thirdlevel.php">
+                            <a href="javascript:void(0)">
                                 <div class="ftd-box">
                                     <div class="ftd-img"> <img
                                             src="{{ asset('assets/images/PECB-Acc-Certification.jpg') }}"></div>
@@ -3558,7 +3558,7 @@
                             </a>
                         </div>
                         <div class="item">
-                            <a href="https://www.cybarwind.com/new-demo/asaraf/codec/thirdlevel.php">
+                            <a href="javascript:void(0)">
                                 <div class="ftd-box">
                                     <div class="ftd-img"> <img
                                             src="{{ asset('assets/images/PECB-Acc-Certification.jpg') }}"></div>
@@ -3573,7 +3573,7 @@
                             </a>
                         </div>
                         <div class="item">
-                            <a href="https://www.cybarwind.com/new-demo/asaraf/codec/thirdlevel.php">
+                            <a href="javascript:void(0)">
                                 <div class="ftd-box">
                                     <div class="ftd-img"> <img
                                             src="{{ asset('assets/images/PECB-Acc-Certification.jpg') }}"></div>
@@ -3597,7 +3597,7 @@
                     <div id="mhome-slider42" class="owl-carousel owl-theme">
                         <!--  -->
                         <div class="item">
-                            <a href="https://www.cybarwind.com/new-demo/asaraf/codec/thirdlevel.php">
+                            <a href="javascript:void(0)">
                                 <div class="ftd-box">
                                     <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-security-pene.jpg') }}">
                                     </div>
@@ -3612,7 +3612,7 @@
                             </a>
                         </div>
                         <div class="item">
-                            <a href="https://www.cybarwind.com/new-demo/asaraf/codec/thirdlevel.php">
+                            <a href="javascript:void(0)">
                                 <div class="ftd-box">
                                     <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-security-pene.jpg') }}">
                                     </div>
@@ -3627,7 +3627,7 @@
                             </a>
                         </div>
                         <div class="item">
-                            <a href="https://www.cybarwind.com/new-demo/asaraf/codec/thirdlevel.php">
+                            <a href="javascript:void(0)">
                                 <div class="ftd-box">
                                     <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-security-pene.jpg') }}">
                                     </div>
@@ -3651,7 +3651,7 @@
                     <div id="mhome-slider43" class="owl-carousel owl-theme">
                         <!--  -->
                         <div class="item">
-                            <a href="https://www.cybarwind.com/new-demo/asaraf/codec/thirdlevel.php">
+                            <a href="javascript:void(0)">
                                 <div class="ftd-box">
                                     <div class="ftd-img"> <img src="{{ asset('assets/images/Security-oprations-4.jpg') }}">
                                     </div>
@@ -3666,7 +3666,7 @@
                             </a>
                         </div>
                         <div class="item">
-                            <a href="https://www.cybarwind.com/new-demo/asaraf/codec/thirdlevel.php">
+                            <a href="javascript:void(0)">
                                 <div class="ftd-box">
                                     <div class="ftd-img"> <img src="{{ asset('assets/images/Security-oprations-4.jpg') }}">
                                     </div>
@@ -3681,7 +3681,7 @@
                             </a>
                         </div>
                         <div class="item">
-                            <a href="https://www.cybarwind.com/new-demo/asaraf/codec/thirdlevel.php">
+                            <a href="javascript:void(0)">
                                 <div class="ftd-box">
                                     <div class="ftd-img"> <img src="{{ asset('assets/images/Security-oprations-4.jpg') }}">
                                     </div>
@@ -3705,7 +3705,7 @@
                     <div id="mhome-slider44" class="owl-carousel owl-theme">
                         <!--  -->
                         <div class="item">
-                            <a href="https://www.cybarwind.com/new-demo/asaraf/codec/thirdlevel.php">
+                            <a href="javascript:void(0)">
                                 <div class="ftd-box">
                                     <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-forensic-5.jpg') }}">
                                     </div>
@@ -3720,7 +3720,7 @@
                             </a>
                         </div>
                         <div class="item">
-                            <a href="https://www.cybarwind.com/new-demo/asaraf/codec/thirdlevel.php">
+                            <a href="javascript:void(0)">
                                 <div class="ftd-box">
                                     <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-forensic-5.jpg') }}">
                                     </div>
@@ -3735,7 +3735,7 @@
                             </a>
                         </div>
                         <div class="item">
-                            <a href="https://www.cybarwind.com/new-demo/asaraf/codec/thirdlevel.php">
+                            <a href="javascript:void(0)">
                                 <div class="ftd-box">
                                     <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-forensic-5.jpg') }}">
                                     </div>
@@ -4023,7 +4023,7 @@
                                                     organizations to
                                                     combat cyber threats proactively.
                                                 </p>
-                                                <a href="#" class="homeread-more">Read More</a>
+                                                <a href="javascript:void(0)" class="homeread-more">Read More</a>
                                             </div>
                                         </div>
                                         <div class="col-md-5">
@@ -4168,7 +4168,7 @@
                                         the realm of ethical hacking with our comprehensive courses that empower individuals
                                         and
                                         organizations to combat cyber threats proactively.</p>
-                                    <a href="#">Read more</a>
+                                    <a href="javascript:void(0)">Read more</a>
                                 </div>
                             </div>
                             <!--  -->
@@ -5179,7 +5179,7 @@
                     <!--  -->
                 </div>
                 <div class="testo-view">
-                    <a href="https://www.cybarwind.com/new-demo/asaraf/codec/testimonials.php">View all</a>
+                    <a href="">View all</a>
                 </div>
             </div>
         </section>
@@ -5221,13 +5221,13 @@
                                                 </div>
                                                 <div class="template15-wrap-main-content">
                                                     <span><i>19 Oct 2020</i></span>
-                                                    <h4><a href="#">Network Administration and Security</a>
+                                                    <h4><a href="javascript:void(0)">Network Administration and Security</a>
                                                     </h4>
                                                     <p>
                                                         Offers buffey of security programs, tools and techniques that are
                                                         globally
                                                         accepted in Information and Cyber Security Assurance.
-                                                        <a href="#"> Read More[...]</a>
+                                                        <a href="javascript:void(0)"> Read More[...]</a>
                                                     </p>
                                                 </div>
                                             </div>
@@ -5241,13 +5241,13 @@
                                                 </div>
                                                 <div class="template15-wrap-main-content">
                                                     <span><i>19 Oct 2020</i></span>
-                                                    <h4><a href="#">Network Administration and Security</a>
+                                                    <h4><a href="javascript:void(0)">Network Administration and Security</a>
                                                     </h4>
                                                     <p>
                                                         Offers buffey of security programs, tools and techniques that are
                                                         globally
                                                         accepted in Information and Cyber Security Assurance.
-                                                        <a href="#"> Read More[...]</a>
+                                                        <a href="javascript:void(0)"> Read More[...]</a>
                                                     </p>
                                                 </div>
                                             </div>
@@ -5261,13 +5261,13 @@
                                                 </div>
                                                 <div class="template15-wrap-main-content">
                                                     <span><i>19 Oct 2020</i></span>
-                                                    <h4><a href="#">Network Administration and Security</a>
+                                                    <h4><a href="javascript:void(0)">Network Administration and Security</a>
                                                     </h4>
                                                     <p>
                                                         Offers buffey of security programs, tools and techniques that are
                                                         globally
                                                         accepted in Information and Cyber Security Assurance.
-                                                        <a href="#"> Read More[...]</a>
+                                                        <a href="javascript:void(0)"> Read More[...]</a>
                                                     </p>
                                                 </div>
                                             </div>
@@ -5275,7 +5275,7 @@
                                         <!-- blog box3 end -->
                                     </div>
                                     <div class="blog-view">
-                                        <a href="#">View all</a>
+                                        <a href="javascript:void(0)">View all</a>
                                     </div>
                                 </div>
                                 <!--  -->
@@ -5304,7 +5304,7 @@
                                         </div>
                                     </div>
                                     <div class="blog-view">
-                                        <a href="#">View all</a>
+                                        <a href="javascript:void(0)">View all</a>
                                     </div>
                                 </div>
                                 <!--  -->
@@ -5322,13 +5322,13 @@
                                                 </div>
                                                 <div class="template15-wrap-main-content">
                                                     <span><i>19 Oct 2020</i></span>
-                                                    <h4><a href="#">Network Administration and Security</a>
+                                                    <h4><a href="javascript:void(0)">Network Administration and Security</a>
                                                     </h4>
                                                     <p>
                                                         Offers buffey of security programs, tools and techniques that are
                                                         globally
                                                         accepted in Information and Cyber Security Assurance.
-                                                        <a href="#"> Read More[...]</a>
+                                                        <a href="javascript:void(0)"> Read More[...]</a>
                                                     </p>
                                                 </div>
                                             </div>
@@ -5342,13 +5342,13 @@
                                                 </div>
                                                 <div class="template15-wrap-main-content">
                                                     <span><i>19 Oct 2020</i></span>
-                                                    <h4><a href="#">Network Administration and Security</a>
+                                                    <h4><a href="javascript:void(0)">Network Administration and Security</a>
                                                     </h4>
                                                     <p>
                                                         Offers buffey of security programs, tools and techniques that are
                                                         globally
                                                         accepted in Information and Cyber Security Assurance.
-                                                        <a href="#"> Read More[...]</a>
+                                                        <a href="javascript:void(0)"> Read More[...]</a>
                                                     </p>
                                                 </div>
                                             </div>
@@ -5362,13 +5362,13 @@
                                                 </div>
                                                 <div class="template15-wrap-main-content">
                                                     <span><i>19 Oct 2020</i></span>
-                                                    <h4><a href="#">Network Administration and Security</a>
+                                                    <h4><a href="javascript:void(0)">Network Administration and Security</a>
                                                     </h4>
                                                     <p>
                                                         Offers buffey of security programs, tools and techniques that are
                                                         globally
                                                         accepted in Information and Cyber Security Assurance.
-                                                        <a href="#"> Read More[...]</a>
+                                                        <a href="javascript:void(0)"> Read More[...]</a>
                                                     </p>
                                                 </div>
                                             </div>
@@ -5376,7 +5376,7 @@
                                         <!-- blog box3 end -->
                                     </div>
                                     <div class="blog-view">
-                                        <a href="#">View all</a>
+                                        <a href="javascript:void(0)">View all</a>
                                     </div>
                                 </div>
                                 <!--  -->
@@ -5395,13 +5395,13 @@
                                                 </div>
                                                 <div class="template15-wrap-main-content">
                                                     <span><i>19 Oct 2020</i></span>
-                                                    <h4><a href="#">Network Administration and Security</a>
+                                                    <h4><a href="javascript:void(0)">Network Administration and Security</a>
                                                     </h4>
                                                     <p>
                                                         Offers buffey of security programs, tools and techniques that are
                                                         globally
                                                         accepted in Information and Cyber Security Assurance.
-                                                        <a href="#"> Read More[...]</a>
+                                                        <a href="javascript:void(0)"> Read More[...]</a>
                                                     </p>
                                                 </div>
                                             </div>
@@ -5415,13 +5415,13 @@
                                                 </div>
                                                 <div class="template15-wrap-main-content">
                                                     <span><i>19 Oct 2020</i></span>
-                                                    <h4><a href="#">Network Administration and Security</a>
+                                                    <h4><a href="javascript:void(0)">Network Administration and Security</a>
                                                     </h4>
                                                     <p>
                                                         Offers buffey of security programs, tools and techniques that are
                                                         globally
                                                         accepted in Information and Cyber Security Assurance.
-                                                        <a href="#"> Read More[...]</a>
+                                                        <a href="javascript:void(0)"> Read More[...]</a>
                                                     </p>
                                                 </div>
                                             </div>
@@ -5435,13 +5435,13 @@
                                                 </div>
                                                 <div class="template15-wrap-main-content">
                                                     <span><i>19 Oct 2020</i></span>
-                                                    <h4><a href="#">Network Administration and Security</a>
+                                                    <h4><a href="javascript:void(0)">Network Administration and Security</a>
                                                     </h4>
                                                     <p>
                                                         Offers buffey of security programs, tools and techniques that are
                                                         globally
                                                         accepted in Information and Cyber Security Assurance.
-                                                        <a href="#"> Read More[...]</a>
+                                                        <a href="javascript:void(0)"> Read More[...]</a>
                                                     </p>
                                                 </div>
                                             </div>
@@ -5449,7 +5449,7 @@
                                         <!-- blog box3 end -->
                                     </div>
                                     <div class="blog-view">
-                                        <a href="#">View all</a>
+                                        <a href="javascript:void(0)">View all</a>
                                     </div>
                                 </div>
                                 <!--  -->
@@ -5484,12 +5484,12 @@
                                             </div>
                                             <div class="template15-wrap-main-content">
                                                 <span><i>19 Oct 2020</i></span>
-                                                <h4><a href="#">Network Administration and Security</a></h4>
+                                                <h4><a href="javascript:void(0)">Network Administration and Security</a></h4>
                                                 <p>
                                                     Offers buffey of security programs, tools and techniques that are
                                                     globally
                                                     accepted in Information and Cyber Security Assurance.
-                                                    <a href="#"> Read More[...]</a>
+                                                    <a href="javascript:void(0)"> Read More[...]</a>
                                                 </p>
                                             </div>
                                         </div>
@@ -5503,12 +5503,12 @@
                                             </div>
                                             <div class="template15-wrap-main-content">
                                                 <span><i>19 Oct 2020</i></span>
-                                                <h4><a href="#">Network Administration and Security</a></h4>
+                                                <h4><a href="javascript:void(0)">Network Administration and Security</a></h4>
                                                 <p>
                                                     Offers buffey of security programs, tools and techniques that are
                                                     globally
                                                     accepted in Information and Cyber Security Assurance.
-                                                    <a href="#"> Read More[...]</a>
+                                                    <a href="javascript:void(0)"> Read More[...]</a>
                                                 </p>
                                             </div>
                                         </div>
@@ -5522,12 +5522,12 @@
                                             </div>
                                             <div class="template15-wrap-main-content">
                                                 <span><i>19 Oct 2020</i></span>
-                                                <h4><a href="#">Network Administration and Security</a></h4>
+                                                <h4><a href="javascript:void(0)">Network Administration and Security</a></h4>
                                                 <p>
                                                     Offers buffey of security programs, tools and techniques that are
                                                     globally
                                                     accepted in Information and Cyber Security Assurance.
-                                                    <a href="#"> Read More[...]</a>
+                                                    <a href="javascript:void(0)"> Read More[...]</a>
                                                 </p>
                                             </div>
                                         </div>
@@ -5594,12 +5594,12 @@
                                             </div>
                                             <div class="template15-wrap-main-content">
                                                 <span><i>19 Oct 2020</i></span>
-                                                <h4><a href="#">Network Administration and Security</a></h4>
+                                                <h4><a href="javascript:void(0)">Network Administration and Security</a></h4>
                                                 <p>
                                                     Offers buffey of security programs, tools and techniques that are
                                                     globally
                                                     accepted in Information and Cyber Security Assurance.
-                                                    <a href="#"> Read More[...]</a>
+                                                    <a href="javascript:void(0)"> Read More[...]</a>
                                                 </p>
                                             </div>
                                         </div>
@@ -5613,12 +5613,12 @@
                                             </div>
                                             <div class="template15-wrap-main-content">
                                                 <span><i>19 Oct 2020</i></span>
-                                                <h4><a href="#">Network Administration and Security</a></h4>
+                                                <h4><a href="javascript:void(0)">Network Administration and Security</a></h4>
                                                 <p>
                                                     Offers buffey of security programs, tools and techniques that are
                                                     globally
                                                     accepted in Information and Cyber Security Assurance.
-                                                    <a href="#"> Read More[...]</a>
+                                                    <a href="javascript:void(0)"> Read More[...]</a>
                                                 </p>
                                             </div>
                                         </div>
@@ -5632,12 +5632,12 @@
                                             </div>
                                             <div class="template15-wrap-main-content">
                                                 <span><i>19 Oct 2020</i></span>
-                                                <h4><a href="#">Network Administration and Security</a></h4>
+                                                <h4><a href="javascript:void(0)">Network Administration and Security</a></h4>
                                                 <p>
                                                     Offers buffey of security programs, tools and techniques that are
                                                     globally
                                                     accepted in Information and Cyber Security Assurance.
-                                                    <a href="#"> Read More[...]</a>
+                                                    <a href="javascript:void(0)"> Read More[...]</a>
                                                 </p>
                                             </div>
                                         </div>
@@ -5669,12 +5669,12 @@
                                             </div>
                                             <div class="template15-wrap-main-content">
                                                 <span><i>19 Oct 2020</i></span>
-                                                <h4><a href="#">Network Administration and Security</a></h4>
+                                                <h4><a href="javascript:void(0)">Network Administration and Security</a></h4>
                                                 <p>
                                                     Offers buffey of security programs, tools and techniques that are
                                                     globally
                                                     accepted in Information and Cyber Security Assurance.
-                                                    <a href="#"> Read More[...]</a>
+                                                    <a href="javascript:void(0)"> Read More[...]</a>
                                                 </p>
                                             </div>
                                         </div>
@@ -5688,12 +5688,12 @@
                                             </div>
                                             <div class="template15-wrap-main-content">
                                                 <span><i>19 Oct 2020</i></span>
-                                                <h4><a href="#">Network Administration and Security</a></h4>
+                                                <h4><a href="javascript:void(0)">Network Administration and Security</a></h4>
                                                 <p>
                                                     Offers buffey of security programs, tools and techniques that are
                                                     globally
                                                     accepted in Information and Cyber Security Assurance.
-                                                    <a href="#"> Read More[...]</a>
+                                                    <a href="javascript:void(0)"> Read More[...]</a>
                                                 </p>
                                             </div>
                                         </div>
@@ -5707,12 +5707,12 @@
                                             </div>
                                             <div class="template15-wrap-main-content">
                                                 <span><i>19 Oct 2020</i></span>
-                                                <h4><a href="#">Network Administration and Security</a></h4>
+                                                <h4><a href="javascript:void(0)">Network Administration and Security</a></h4>
                                                 <p>
                                                     Offers buffey of security programs, tools and techniques that are
                                                     globally
                                                     accepted in Information and Cyber Security Assurance.
-                                                    <a href="#"> Read More[...]</a>
+                                                    <a href="javascript:void(0)"> Read More[...]</a>
                                                 </p>
                                             </div>
                                         </div>
@@ -5792,7 +5792,7 @@
                     </p>
                     <div class="wpb_wrapper bdr-top1 pt-4 mt-4">
                         <p class="text-center"><a class="chevron chevron link-more aos-init aos-animate" style="color:#fff;"
-                                href="#">Browse Cybar Wind Job </a></p>
+                                href="javascript:void(0)">Browse Cybar Wind Job </a></p>
                     </div>
                 </div>
             </div>

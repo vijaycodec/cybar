@@ -112,15 +112,15 @@
                             <option value="" disabled selected>Select L3 Category</option>
                             <option value="overview">overview</option>
                             <option value="significance">significance</option>
-                            <option value="coursefeatures">coursefeatures</option>
-                            <option value="cyberwind">whycyberwind</option>
-                            <option value="industries">industries</option>
-                            <option value="faqs">faqs</option>
-                            <option value="blog">blog</option>
-                            <option value="incidents">incidents</option>
-                            <option value="cehkit">cehkit</option>
                             <option value="program">program</option>
+                            <option value="coursefeatures">coursefeatures</option>
+                            <option value="cehkit">cehkit</option>
+                            <option value="incidents">incidents</option>
+                            <option value="industries">industries</option>
+                            <option value="cyberwind">whycyberwind</option>
                             <option value="testimonials">testimonials</option>
+                            <option value="blog">blog</option>
+                            <option value="faqs">faqs</option>
                         </select>
                     </fieldset>
 
