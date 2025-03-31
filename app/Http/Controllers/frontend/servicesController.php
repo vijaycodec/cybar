@@ -37,9 +37,9 @@ class servicesController extends Controller
             'category_name'   => $seoDetails->category_name ?? 'General Services Category',
             'sub_category_name' => $seoDetails->sub_category_name ?? 'General Subcategory',
             'template_name'   => $seoDetails->template_name ?? 'default-template',
-            'seo_title'       => $seoDetails->seo_title ?? 'Default Service Title',
-            'seo_description' => $seoDetails->seo_description ?? 'Default Services Description',
-            'seo_keywords'    => $seoDetails->seo_keywords ?? 'default,Services keywords',
+            'seo_title'       => $seoDetails->seo_title ?? 'Service',
+            'seo_description' => $seoDetails->seo_description ?? 'Services Description',
+            'seo_keywords'    => $seoDetails->seo_keywords ?? 'Services keywords',
         ];
 
         if (!empty($seoDetails->google_analytics)) {

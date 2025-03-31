@@ -39,7 +39,7 @@
                             <tr>
                                 <th>#</th>
                                 <th>Category Name</th>
-                                <th> Sub Category Name</th>
+                                <th>Sub Category Name</th>
                                 <th>Image</th>
                                 <th>Short Description</th>
                                 <th>Description</th>
@@ -67,11 +67,11 @@
                                     </td>
                                     <td style="max-width: 400px;"> <!-- Increase width here -->
                                         <!-- Short description (up to 10 words) -->
-                                        <span class="description-short">
+                                        {{-- <span class="description-short">
                                             {!! $event->short_description ?? mb_strimwidth(html_entity_decode($event->description), 0, 19, '...') !!}
-                                        </span>
+                                        </span> --}}
                                         <!-- Read More button for longer descriptions -->
-                                        @if (str_word_count(strip_tags($event->description)) > 19)
+                                        @if (str_word_count(strip_tags($event->description)) > 1)
                                             <button class="btn btn-link read-more"
                                                 data-id="{{ $event->category->name }}"
                                                 data-description="{{ html_entity_decode($event->description) }}">Read
@@ -100,7 +100,7 @@
                                 @endforeach
                             @else
                                 <tr>
-                                    <td colspan="6" class="text-center">No events found</td>
+                                    <td colspan="7" class="text-center">No events found</td>
                                 </tr>
                             @endif
                         </tbody>
@@ -112,6 +112,31 @@
             </div>
         </div>
     </div>
+        <!-- Modal Structure for Read more button-->
+        <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="resourceModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-3 shadow-lg">
+                    <div class="modal-header bg-primary text-white">
+                        <h5 class="modal-title text-white" id="resourceModalLabel">Resource Details</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-4" style="max-height: 70vh; overflow-y: auto;">
+                        <div class="row mb-10">
+                            <div class="col-md-4 fw-bold mb-5">Resource Name:</div>
+                            <div class="col-md-8" id="modal-event-name"></div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-4 fw-bold">Full Description:</div>
+                            <div class="col-md-8" id="modal-event-description"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer bg-light">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 @endsection
 
 @push('scripts')

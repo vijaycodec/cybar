@@ -66,13 +66,14 @@
                                        
                                         <td style="max-width: 400px;"> <!-- Increase width here -->
                                             <!-- Short description (up to 10 words) -->
-                                            <span class="description-short">
+                                            {{-- <span class="description-short">
                                                 {!! $testimonial->short_description ?? mb_strimwidth(html_entity_decode($testimonial->description), 0, 19, '...') !!}
-                                            </span>
+                                            </span> --}}
                                             <!-- Read More button for longer descriptions -->
-                                            @if (str_word_count(strip_tags($testimonial->testimonial_description)) > 19)
+                                            @if (str_word_count(strip_tags($testimonial->testimonial_description)) > 5)
                                                 <button class="btn btn-link read-more"
                                                     data-id="{{ $testimonial->category->name }}"
+                                                     data-username="{{ $testimonial->user_name }}"
                                                     data-description="{{ html_entity_decode($testimonial->testimonial_description) }}">Read
                                                     More</button>
                                             @endif
@@ -124,6 +125,10 @@
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-4" style="max-height: 70vh; overflow-y: auto;">
+                    <div class="row mb-10">
+                        <div class="col-md-4 fw-bold mb-5">Category Name:</div>
+                        <div class="col-md-8" id="modal-testimonial-category_name"></div>
+                    </div>
                     <div class="row mb-10">
                         <div class="col-md-4 fw-bold mb-5">testimonial Name:</div>
                         <div class="col-md-8" id="modal-testimonial-user_name"></div>
@@ -183,10 +188,11 @@
             // Handle Read More button click
             $(document).on('click', '.read-more', function() {
                 var testimonial = $(this).data('id');
+                var user_name = $(this).data('username');
                 var fullDescription = $(this).data('description');
-
                 // Set the full description in the modal
-                $('#modal-blog-name').text(testimonialId); // to do category name instead of testimonial Id 
+                $('#modal-testimonial-category_name').text(testimonial); // to do category name instead of testimonial Id =
+                $('#modal-testimonial-user_name').text(user_name); // to do user name instead of testimonial Id 
                 $('#modal-testimonial-description').html(fullDescription);
 
                 // Show the modal
