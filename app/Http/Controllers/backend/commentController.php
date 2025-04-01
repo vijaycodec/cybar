@@ -14,7 +14,7 @@ class commentController extends Controller
 
     public function index()
     {
-        $comments = Comment::with('resource')->orderBy('id', 'DESC')->paginate(10);
+        $comments = Comment::with('resource')->orderBy('id', 'DESC')->get();
 
         $resource_names = [];
         foreach ($comments as $comment) {

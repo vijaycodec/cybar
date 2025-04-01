@@ -10,7 +10,7 @@ class cyberwimdController extends Controller
 {
     public function index()
     {
-        $subcategories = CyberwindCategory::orderBy('id', 'desc')->paginate(10); 
+        $subcategories = CyberwindCategory::orderBy('id', 'desc')->get(); 
         
         return view('backend.cyberwind.index', compact('subcategories'));
     }

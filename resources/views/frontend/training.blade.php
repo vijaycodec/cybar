@@ -20,9 +20,18 @@
                                 <div class="ecsp_div">
                                     <ul class="tab2">
                                         @foreach ($categories as $category)
-                                            <li id="li_border"><a class="tablinks1 {{ $loop->first ? 'active' : ' ' }}"
+                                            {{-- <li id="li_border">
+                                                <a class="tablinks1 {{ $loop->first ? 'active' : ' ' }}"
                                                     href="#{{ Str::slug($category->name) }}"
-                                                    onclick="openCity(event, '{{ Str::slug($category->name) }}')">{{ $category->name }}</a>
+                                                    onclick="openCity(event, '{{ Str::slug($category->name) }}')">
+                                                    {{ $category->name }}
+                                                </a>
+                                            </li> --}}
+                                            <li id="li_border">
+                                                <a class="tablinks1 {{ request()->segment(2) === Str::slug($category->name) ? 'active' : '' }} {{ $loop->first ? 'active' : ' ' }}"
+                                                   href="{{ url('training/' . Str::slug($category->name)) }}">
+                                                   {{ $category->name }}
+                                                </a>
                                             </li>
                                         @endforeach
                                     </ul>
@@ -284,4 +293,5 @@
             });
         });
     </script>
+    
 @endpush

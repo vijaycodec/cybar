@@ -17,7 +17,7 @@ class l3_categoryController extends Controller
     {
         $l3Categories = L3Category::with(['pageCategory', 'category', 'subCategory'])
         ->orderBy('id', 'ASC')
-        ->paginate(10);
+        ->get();
        //dd($l3Categories);
         return view('backend.l3-category.index', compact('l3Categories'));
     }

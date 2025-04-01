@@ -20,7 +20,7 @@ class CategoryRepository implements CategoryRepositoryInterface
 
     public function getAll()
     {
-        return Category::orderBy('id', 'ASC')->paginate(10);
+        return Category::orderBy('id', 'ASC')->get();
     }
 
     public function findById($id)

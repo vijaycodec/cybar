@@ -10,7 +10,7 @@ class faqController extends Controller
 {
     public function index()
     {
-        $subcategories = FaqCategory::orderBy('id', 'desc')->paginate(10); 
+        $subcategories = FaqCategory::orderBy('id', 'desc')->get(); 
         
         return view('backend.faq.index', compact('subcategories'));
     }

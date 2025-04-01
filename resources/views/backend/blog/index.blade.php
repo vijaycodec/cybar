@@ -17,7 +17,7 @@
             </div>
 
             <div class="wg-box">
-                <div class="flex items-center justify-between gap10 flex-wrap">
+                {{-- <div class="flex items-center justify-between gap10 flex-wrap">
                     <div class="wg-filter flex-grow">
                         <form class="form-search">
                             <fieldset class="name">
@@ -31,10 +31,10 @@
                     </div>
                     <a class="tf-button style-1 w208" href=" {{ route('blog.create') }}">
                         <i class="icon-plus"></i>Add New </a>
-                </div>
+                </div> --}}
 
                 <div class="table-responsive">
-                    <table id="blogsTable" class="table table-striped table-bordered " style="table-layout: auto;">
+                    <table id="myTable" class="table table-striped table-bordered " style="table-layout: auto;">
                         <thead>
                             <tr>
                                 <th>ID</th>
@@ -81,9 +81,9 @@
                     </table>
 
                     <!-- Pagination links -->
-                    <div>
-                        {{-- {!! $subcategories->withQueryString()->links('pagination::bootstrap-5') !!} --}}
-                    </div>
+                    {{-- <div>
+                        {!! $subcategories->withQueryString()->links('pagination::bootstrap-5') !!}
+                    </div> --}}
                 </div>
             </div>
         </div>

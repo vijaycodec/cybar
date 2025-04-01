@@ -16,7 +16,7 @@ class subcategoryController extends Controller
         // Use eager loading to fetch related data to minimize queries
         $subCategories = SubCategory::with(['pageCategory', 'category'])
             ->orderBy('id', 'ASC')
-            ->paginate(10); // Paginate results for better performance
+            ->get(); // Paginate results for better performance
 
         return view('backend.sub_category.index', compact('subCategories'));
     }

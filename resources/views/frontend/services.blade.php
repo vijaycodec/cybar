@@ -38,8 +38,16 @@
                                 <ul class="case1-tab">
 
                                     @foreach ($categories as $category)
-                                        <li><a class="{{ $loop->first ? 'active' : ' ' }}"
+                                        {{-- <li><a class="{{ $loop->first ? 'active' : ' ' }}"
                                                 href="#{{ Str::slug($category->name) }}">{{ $category->name }}</a>
+                                        </li> --}}
+                                        <li>
+                                            <a href="javascript:void(0);"
+                                                class="{{ request()->segment(2) === Str::slug($category->name) ? 'active' : '' }} {{ $loop->first ? 'active' : ' ' }}"
+                                                data-category="{{ Str::slug($category->name) }}"
+                                                onclick="updateURL('{{ Str::slug($category->name) }}')">
+                                                {{ $category->name }}
+                                            </a>
                                         </li>
                                     @endforeach
                                 </ul>
@@ -441,4 +449,58 @@
             $('.case1-tab li:first-child a').addClass('active');
         });
     </script>
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let pathSegments = window.location.pathname.split('/');
+        let category = pathSegments[2]; // Extract category name from URL
+
+        if (category) {
+            // Scroll to category section smoothly
+            let targetSection = document.getElementById(category);
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+
+            // Highlight the correct category in the menu
+            document.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
+            let activeLink = document.querySelector(`a[data-category="${category}"]`);
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+        }
+    });
+
+    function updateURL(category) {
+        if (history.pushState) {
+            let newUrl = `/training/${category}`;
+
+            // Prevent duplicate updates
+            if (window.location.pathname !== newUrl) {
+                history.pushState({
+                    path: newUrl
+                }, '', newUrl);
+            }
+
+            // Scroll to category section smoothly
+            let targetSection = document.getElementById(category);
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+
+            // Highlight selected category in the menu
+            document.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
+            let activeLink = document.querySelector(`a[data-category="${category}"]`);
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+        }
+    }
+</script>
 @endpush

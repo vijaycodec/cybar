@@ -22,7 +22,7 @@ class MenuEventRepository implements MenuEventRepositoryInterface
 
     public function getAllEvents()
     {
-        return MenuEvent::with('category')->orderBy('id', 'ASC')->paginate(10);
+        return MenuEvent::with('category')->orderBy('id', 'ASC')->get();
     }
 
     public function getEventById($id)

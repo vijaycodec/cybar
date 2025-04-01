@@ -21,7 +21,7 @@ class MenuBlogRepository implements MenuBlogRepositoryInterface
     
     public function getAllBlogs()
     {
-        return MenuBlog::with('category')->orderBy('id', 'ASC')->paginate(10);
+        return MenuBlog::with('category')->orderBy('id', 'ASC')->get();
     }
 
     public function getBlogById($id): MenuBlog

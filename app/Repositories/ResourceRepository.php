@@ -20,7 +20,7 @@ class ResourceRepository implements ResourceRepositoryInterface
 
     public function getAllResources()
     {
-        return Resource::with('category')->orderBy('id', 'ASC')->paginate(10);
+        return Resource::with('category')->orderBy('id', 'ASC')->get();
     }
 
     public function getResourceById($id)
