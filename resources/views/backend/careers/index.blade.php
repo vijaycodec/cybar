@@ -115,35 +115,39 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content rounded-3 shadow-lg">
                 <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title text-white" id="careerModalLabel">career Details</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+                    <h5 class="modal-title text-white" id="careerModalLabel">Career Details</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-4" style="max-height: 70vh; overflow-y: auto;">
-                    <div class="row mb-10">
-                        <div class="col-md-4 fw-bold mb-5">Category Name:</div>
-                        <div class="col-md-8" id="modal-career-name"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold">Sub Category:</div>
-                        <div class="col-md-8" id="modal-career-subcategory"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold">Location:</div>
-                        <div class="col-md-8" id="modal-career-location"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold">Educational Background:</div>
-                        <div class="col-md-8" id="modal-career-educational_background"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold">Short_desc:</div>
-                        <div class="col-md-8" id="modal-career-short_desc"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold">description:</div>
-                        <div class="col-md-8" id="modal-career-description"></div>
-                    </div>
+                    <!-- Table Layout for Career Details -->
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="fw-bold" style="width: 30%;">Category Name:</td>
+                                <td id="modal-career-name"></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold" style="width: 30%;">Sub Category:</td>
+                                <td id="modal-career-subcategory"></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold" style="width: 30%;">Location:</td>
+                                <td id="modal-career-location"></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold" style="width: 30%;">Educational Background:</td>
+                                <td id="modal-career-educational_background"></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold" style="width: 30%; vertical-align: top;">Short Description:</td>
+                                <td id="modal-career-short_desc"></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold" style="width: 30%; vertical-align: top;">Description:</td>
+                                <td id="modal-career-description"></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="modal-footer bg-light">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -151,6 +155,7 @@
             </div>
         </div>
     </div>
+    
 @endsection
 
 @push('scripts')

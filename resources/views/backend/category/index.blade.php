@@ -117,22 +117,26 @@
             <div class="modal-content rounded-3 shadow-lg">
                 <div class="modal-header bg-primary text-white">
                     <h5 class="modal-title text-white" id="CategoryModalLabel">Category Details</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-4">
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold mb-10">Category Name:</div>
-                        <div class="col-md-8 mb-10" id="category-name"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold mb-10">Category Title:</div>
-                        <div class="col-md-8 mb-10" id="category-title"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold">Created At:</div>
-                        <div class="col-md-8" id="category-created-at"></div>
-                    </div>
+                    <!-- Table Structure with Border -->
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="fw-bold text-start" style="width: 30%;">Category Name:</td>
+                                <td id="category-name" class=""></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold text-start" style="width: 30%;">Category Type:</td>
+                                <td id="category-category_type" class=""></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold text-start" style="width: 30%;">Category Title:</td>
+                                <td id="category-title" class=""></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="modal-footer bg-light">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -140,6 +144,7 @@
             </div>
         </div>
     </div>
+    
 
 @endsection
 
@@ -202,7 +207,7 @@
                     success: function(response) {
                         $('#category-name').text(response.name);
                         $('#category-title').text(response.title);
-                        $('#category-created-at').text(response.created_at);
+                        $('#category-category_type').text(response.category_type);
                         $('#CategoryModal').modal('show');
                     },
                     error: function() {

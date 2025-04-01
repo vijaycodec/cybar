@@ -185,21 +185,4 @@
             });
         });
     </script>
-   <script>
-    $(document).ready(function() {
-        // Ensure that the table exists before initializing
-        if ($('#myTable').length) {
-            $('#myTable').DataTable({
-                "paging": true,        // Enables pagination
-                "searching": true,     // Enables search box
-                "ordering": false,     // Disables column sorting
-                "info": true,          // Shows table info
-                "processing": true,    // Displays a loading indicator
-                "deferRender": true    // Optimizes rendering for large datasets
-            });
-        } else {
-            console.error("Error: Table with ID 'myTable' not found!");
-        }
-    });
-</script>
 @endpush
