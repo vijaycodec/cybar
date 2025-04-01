@@ -19,7 +19,7 @@ class CareerRepository implements CareerRepositoryInterface
 
     public function getAll()
     {
-        return Career::orderBy('id', 'DESC')->paginate(10);
+        return Career::orderBy('id', 'DESC')->get();
     }
 
     public function getById($id)

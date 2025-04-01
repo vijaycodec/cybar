@@ -19,7 +19,7 @@ class PodcastRepository implements PodcastRepositoryInterface
 
     public function getAllPodcasts()
     {
-        return Podcast::with('category')->orderBy('id', 'ASC')->paginate(10);
+        return Podcast::with('category')->orderBy('id', 'ASC')->get();
     }
 
     public function getPodcastById($id)

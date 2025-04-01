@@ -22,7 +22,7 @@ class CorporateTrainingRepository implements CorporateTrainingRepositoryInterfac
     {
         return CorporateTraining::with('course_category', 'subcategory')
             ->orderBy('id', 'ASC')
-            ->paginate(10);
+            ->get();
     }
 
     public function getById($id)

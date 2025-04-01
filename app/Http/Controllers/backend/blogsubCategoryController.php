@@ -10,7 +10,7 @@ class blogsubCategoryController extends Controller
 {
     public function index()
     {
-        $subcategories = BlogCategory::orderBy('id', 'desc')->paginate(10); 
+        $subcategories = BlogCategory::orderBy('id', 'desc')->get(); 
         
         return view('backend.blog.index', compact('subcategories'));
     }

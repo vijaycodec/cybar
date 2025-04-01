@@ -20,7 +20,7 @@ class NewsLetterRepository implements NewsLetterRepositoryInterface
     public function getAllNewsletters()
     {
         // return Newsletter::all();
-        return NewsLetter::with('category')->orderBy('id', 'ASC')->paginate(10);
+        return NewsLetter::with('category')->orderBy('id', 'ASC')->get();
     }
 
     public function getNewsletterById($id)

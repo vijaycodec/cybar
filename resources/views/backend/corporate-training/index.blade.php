@@ -21,7 +21,7 @@
             </div>
             <div class="wg-box">
                 <div class="flex items-center justify-between gap10 flex-wrap">
-                    <div class="wg-filter flex-grow">
+                    {{-- <div class="wg-filter flex-grow">
                         <form class="form-search">
                             <fieldset class="name">
                                 <input type="text" placeholder="Search here..." class="" name="name"
@@ -31,22 +31,20 @@
                                 <button class="" type="submit"><i class="icon-search"></i></button>
                             </div>
                         </form>
-                    </div>
+                    </div> --}}
                     <a class="tf-button style-1 w208" href=" {{ route('corporate-training.create', ['pageId' => 2]) }}">
                         <i class="icon-plus"></i>Add new</a>
                 </div>
 
                 <!-- Corporate Training Table -->
                 <div class="table-responsive">
-                    <table class="table table-bordered table-striped">
+                    <table id="myTable" class="table table-bordered table-striped">
                         <thead class="table-light">
                             <tr>
                                 <th>#</th>
                                 <th>Image</th>
                                 <th>Category</th>
                                 <th>Sub-category</th>
-                                <th>Description</th>
-                                {{-- <th>Image</th> --}}
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -59,42 +57,35 @@
                                         <td>
                                             @if ($training->images)
                                                 <img src="{{ asset('storage/uploads/backend/trainings/' . $training->images) }}"
-                                                    alt="service Image" width="100">
+                                                    alt="training Image" width="100">
                                             @else
                                                 <span>No image available</span>
                                             @endif
                                         </td>
                                         <td>{{ $training->course_category->name }}</td>
                                         <td>{{ $training->subcategory->sub_category }}</td>
-                                        <td>{{ $training->description }}</td>
-                                        {{-- <td>
-                                            @if ($training->images)
-                                                <img src="{{ asset('uploads/backend/corporate_training/' . $training->images) }}"
-                                                    alt="training Image" width="100">
-                                            @else
-                                                <span>No image available</span>
-                                            @endif
-                                        </td> --}}
                                         <td style="padding: 10px;">
                                             <div class="list-icon-function">
-                                                <button type="button" class="show" data-id="{{ $training->id }}">
-                                                    <div class="item eye">
-                                                        <i class="icon-eye"></i>
-                                                    </div>
-                                                </button>
-                                                <a href="{{ route('corporate-training.edit', $training->id) }}">
-                                                    <div class="item edit">
-                                                        <i class="icon-edit-3"></i>
-                                                    </div>
-                                                </a>
-                                                <button type="button" class="delete" data-id="{{ $training->id }}">
-                                                    {{-- <a href="{{ route('resources-category.destroy', $category->id) }}"> --}}
-                                                    <div class="item text-danger">
-                                                        <i class="icon-trash-2"></i>
-                                                    </div>
-                                                    {{-- </a> --}}
-                                                </button>
-                                            </div>
+                                                <div class="list-icon-function">
+                                                    <button type="button" class="show"
+                                                        data-id="{{ $training->course_category->name ?? 'N/A' }}"
+                                                        data-sub_category="{{ $training->subcategory->sub_category ?? 'N/A' }}"
+                                                        data-description="{{ html_entity_decode($training->description) ?? 'N/A' }}">
+                                                        <div class="item eye">
+                                                            <i class="icon-eye"></i>
+                                                        </div>
+                                                    </button>
+                                                    <a href="{{ route('corporate-training.edit', $training->id) }}">
+                                                        <div class="item edit">
+                                                            <i class="icon-edit-3"></i>
+                                                        </div>
+                                                    </a>
+                                                    <button type="button" class="delete" data-id="{{ $training->id }}">
+                                                        <div class="item text-danger">
+                                                            <i class="icon-trash-2"></i>
+                                                        </div>
+                                                    </button>
+                                                </div>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -107,18 +98,68 @@
                     </table>
 
                     <!-- Pagination -->
-                    <div class="mt-4">
+                    {{-- <div class="mt-4">
                         {!! $corporate->withQueryString()->links('pagination::bootstrap-5') !!}
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
     </div>
+     <!-- Modal Structure for Read more button-->
+     <div class="modal fade" id="trainingModal" tabindex="-1" aria-labelledby="trainingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content rounded-3 shadow-lg">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title text-white" id="trainingModalLabel">Training Details</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4" style="max-height: 70vh; overflow-y: auto;">
+                    <!-- Table Structure with Border -->
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="fw-bold text-start" style="width: 30%;">Category Name:</td>
+                                <td id="modal-training-name" class=""></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold text-start" style="width: 30%;">Sub Category:</td>
+                                <td id="modal-training-sub_category" class=""></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold text-start" style="width: 30%;">Description:</td>
+                                <td id="modal-training-description" class=""></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer bg-light">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
 @endsection
 
 @push('scripts')
     <script>
         $(document).ready(function() {
+            // Handle Read More button click
+            $(document).on('click', '.show', function() {
+                var trainingId = $(this).data('id');
+                var sub_category = $(this).data('sub_category');
+                var fullDescription = $(this).data('description');
+
+                // Set the full description in the modal
+                $('#modal-training-name').text(trainingId); // to do category name instead of resource Id 
+                $('#modal-training-sub_category').text(sub_category);
+                $('#modal-training-description').html(fullDescription);
+
+                // Show the modal
+                $('#trainingModal').modal('show');
+            });
             // Delete Corporate Training
             $(document).on('click', '.delete', function() {
                 let trainingId = $(this).data('id');

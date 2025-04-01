@@ -10,7 +10,7 @@ class coursrfeaturesController extends Controller
 {
     public function index()
     {
-        $subcategories = CourseFeatureCategory::orderBy('id', 'desc')->paginate(10); 
+        $subcategories = CourseFeatureCategory::orderBy('id', 'desc')->get(); 
         
         return view('backend.coursefeature.index', compact('subcategories'));
     }

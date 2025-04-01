@@ -15,7 +15,7 @@ class courseCategoryController extends Controller
     {
         $categories = CourseCategory::with('pageCategory')
         ->orderBy('id', 'ASC')
-        ->paginate(10);
+        ->get();
         //dd($categories);
         return view('backend.courseCategory.index', compact('categories'));
     }

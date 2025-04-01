@@ -18,7 +18,7 @@ class TestimonialRepository implements TestimonialRepositoryInterface
 
     public function getAll()
     {
-        return MenuTestimonial::orderBy('id', 'ASC')->paginate(10);
+        return MenuTestimonial::orderBy('id', 'ASC')->get();
     }
 
     public function getById($id)

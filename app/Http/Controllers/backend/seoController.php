@@ -17,7 +17,7 @@ class seoController extends Controller
         $seodetails = Seo::with(['seopageCategory', 'seocategory', 'seosubCategory'])
 
             ->orderBy('id', 'ASC')
-            ->paginate(10);
+            ->get();
         //dd($seodetails->first()->seopageCategory->page_name);
         return view('backend.seo-details.index', compact('seodetails'));
     }

@@ -10,7 +10,7 @@ class industriesController extends Controller
 {
     public function index()
     {
-        $subcategories = IndustryCategory::orderBy('id', 'desc')->paginate(10); 
+        $subcategories = IndustryCategory::orderBy('id', 'desc')->get(); 
         
         return view('backend.industry.index', compact('subcategories'));
     }

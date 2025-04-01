@@ -18,7 +18,7 @@ class ServicesRepository implements ServicesRepositoryInterface
 
     public function getAll()
     {
-        return OurServices::orderBy('id', 'ASC')->paginate(10);
+        return OurServices::orderBy('id', 'ASC')->get();
     }
 
     public function getById($id)

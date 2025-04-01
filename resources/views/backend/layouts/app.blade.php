@@ -37,6 +37,29 @@
             /* Set a max width for the message box */
         }
     </style>
+    <style>
+        .dataTables_filter input {
+        width: 250px !important; /* Adjust width */
+        padding: 8px 12px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        outline: none;
+        font-size: 14px;
+    }
+    
+    .dataTables_filter input:focus {
+        border-color: #007bff; /* Blue outline on focus */
+        box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+    }
+    
+    #myTable_filter span {
+        font-size: 14px;
+        font-weight: 600;
+        margin-right: 8px; /* Adjust as needed */
+    }
+    
+    
+    </style>
 
 </head>
 
@@ -256,7 +279,7 @@
                                     <ul class="sub-menu">
                                         <li class="sub-menu-item">
                                             <a href="{{ route('podcast.list') }}" class="">
-                                                <div class="text"> News Podcasts List</div>
+                                                <div class="text">Podcasts List</div>
                                             </a>
                                         </li>
             
@@ -873,6 +896,37 @@
             });
         });
     </script>
+
+
+<script>
+    $(document).ready(function() {
+    if ($('#myTable').length) {
+        let table = $('#myTable').DataTable({
+            "paging": true,
+            "searching": true,
+            "ordering": false,
+            "info": true,
+            "processing": true,
+            "deferRender": true,
+            "language": {
+                "search": "", // Remove default label
+                "searchPlaceholder": "🔍 Search here..."
+            }
+        });
+
+        // Move the search box inside a custom div
+        $("#myTable_filter input").addClass("form-control").attr("placeholder", "🔍 Type to search...");
+        // Add custom label and use flexbox to align properly
+        $("#myTable_filter")
+            .addClass("d-flex justify-content-end align-items-center")
+            .prepend("<span class='mr-2'>Search:</span>"); // Adjusted margin for better alignment
+
+    } else {
+        console.error("Error: Table with ID 'myTable' not found!");
+    }
+});
+
+</script>
 
 
 </body>
