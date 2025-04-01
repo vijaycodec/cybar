@@ -112,22 +112,26 @@
             <div class="modal-content rounded-3 shadow-lg">
                 <div class="modal-header bg-primary text-white">
                     <h5 class="modal-title text-white" id="CategoryModalLabel">Category Details</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body p-4">
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold mb-10">Page Name:</div>
-                        <div class="col-md-8 mb-10" id="category-page_name"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold mb-10">Category name</div>
-                        <div class="col-md-8 mb-10" id="category-name"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold mb-10">Title</div>
-                        <div class="col-md-8 mb-10" id="category-title"></div>
-                    </div>
+                <div class="modal-body p-4" style="max-height: 70vh; overflow-y: auto;">
+                    <!-- Table Layout for Category Details -->
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="fw-bold" style="width: 30%;">Page Name:</td>
+                                <td id="category-page_name"></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold" style="width: 30%;">Category Name:</td>
+                                <td id="category-name"></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold" style="width: 30%;">Title:</td>
+                                <td id="category-title"></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="modal-footer bg-light">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -135,7 +139,7 @@
             </div>
         </div>
     </div>
-
+    
 @endsection
 
 @push('scripts')

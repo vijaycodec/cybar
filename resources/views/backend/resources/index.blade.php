@@ -115,26 +115,30 @@
             <div class="modal-content rounded-3 shadow-lg">
                 <div class="modal-header bg-primary text-white">
                     <h5 class="modal-title text-white" id="resourceModalLabel">Resource Details</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body p-4" style="max-height: 70vh; overflow-y: auto;">
-                    <div class="row mb-10">
-                        <div class="col-md-4 fw-bold mb-5">Resource Name:</div>
-                        <div class="col-md-8" id="modal-resource-name"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold">Sub category:</div>
-                        <div class="col-md-8" id="modal-resource-sub_category"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold">Short_desc:</div>
-                        <div class="col-md-8" id="modal-resource-short_desc"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold">Full Description:</div>
-                        <div class="col-md-8" id="modal-resource-description"></div>
-                    </div>
+                <div class="modal-body p-4">
+                    <!-- Table Layout for Resource Details -->
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="fw-bold" style="width: 30%;">Resource Name:</td>
+                                <td id="modal-resource-name"></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold" style="width: 30%;">Sub Category:</td>
+                                <td id="modal-resource-sub_category"></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold" style="width: 30%;">Short Description:</td>
+                                <td id="modal-resource-short_desc"></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold" style="width: 30%; vertical-align: top;">Full Description:</td>
+                                <td id="modal-resource-description"></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="modal-footer bg-light">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -142,10 +146,6 @@
             </div>
         </div>
     </div>
-
-
-
-
 @endsection
 
 @push('scripts')

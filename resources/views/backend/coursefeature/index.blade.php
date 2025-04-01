@@ -34,7 +34,7 @@
                 </div>
 
                 <div class="table-responsive">
-                    <table id="blogsTable" class="table table-striped table-bordered " style="table-layout: auto;">
+                    <table id="myTable" class="table table-striped table-bordered " style="table-layout: auto;">
                         <thead>
                             <tr>
                                 <th>ID</th>

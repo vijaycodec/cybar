@@ -109,31 +109,35 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content rounded-3 shadow-lg">
                 <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title text-white" id="testimonialModalLabel">testimonial Details</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+                    <h5 class="modal-title text-white" id="testimonialModalLabel">Testimonial Details</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-4" style="max-height: 70vh; overflow-y: auto;">
-                    <div class="row mb-10">
-                        <div class="col-md-4 fw-bold mb-5">Category Name:</div>
-                        <div class="col-md-8" id="modal-testimonial-category_name"></div>
-                    </div>
-                    <div class="row mb-10">
-                        <div class="col-md-4 fw-bold mb-5">Testimonial Name:</div>
-                        <div class="col-md-8" id="modal-testimonial-user_name"></div>
-                    </div>
-                    <div class="row mb-10">
-                        <div class="col-md-4 fw-bold mb-5">Designation:</div>
-                        <div class="col-md-8" id="modal-testimonial-designation"></div>
-                    </div>
-                    <div class="row mb-10">
-                        <div class="col-md-4 fw-bold mb-5">Short_desc:</div>
-                        <div class="col-md-8" id="modal-testimonial-testimonial_short_description"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold">Full Description:</div>
-                        <div class="col-md-8" id="modal-testimonial-testimonial_description"></div>
-                    </div>
+                    <!-- Table Layout for Testimonial Details -->
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="fw-bold" style="width: 30%;">Category Name:</td>
+                                <td id="modal-testimonial-category_name"></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold" style="width: 30%;">Testimonial Name:</td>
+                                <td id="modal-testimonial-user_name"></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold" style="width: 30%;">Designation:</td>
+                                <td id="modal-testimonial-designation"></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold" style="width: 30%; vertical-align: top;">Short Description:</td>
+                                <td id="modal-testimonial-testimonial_short_description"></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold" style="width: 30%; vertical-align: top;">Full Description:</td>
+                                <td id="modal-testimonial-testimonial_description"></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="modal-footer bg-light">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -141,6 +145,7 @@
             </div>
         </div>
     </div>
+    
 @endsection
 
 @push('scripts')

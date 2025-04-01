@@ -21,7 +21,7 @@
             </div>
             <div class="wg-box">
                 <div class="flex items-center justify-between gap10 flex-wrap">
-                    <div class="wg-filter flex-grow">
+                    {{-- <div class="wg-filter flex-grow">
                         <form class="form-search">
                             <fieldset class="name">
                                 <input type="text" placeholder="Search here..." class="" name="name"
@@ -31,13 +31,13 @@
                                 <button class="" type="submit"><i class="icon-search"></i></button>
                             </div>
                         </form>
-                    </div>
+                    </div> --}}
                     <a class="tf-button style-1 w208" href=" {{ route('sub-category.create') }}">
                         <i class="icon-plus"></i>Add new</a>
                 </div>
 
                 <div class="table-responsive">
-                    <table id="categoryTable" class="table table-striped table-bordered " style="table-layout: auto;">
+                    <table id="myTable" class="table table-striped table-bordered " style="table-layout: auto;">
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -53,7 +53,7 @@
                         <tbody class="text-sm text-gray-700">
                             @forelse ($subCategories as $index => $subCategory)
                                 <tr class="border-t">
-                                    <td>{{ $loop->iteration + ($subCategories->currentPage() - 1) * $subCategories->perPage() }}
+                                    <td>{{$subCategory->id }}
                                     </td>
                                     <td>{{ $subCategory->pageCategory->page_name ?? 'N/A' }}</td>
                                     <td>{{ $subCategory->category->name ?? 'N/A' }}</td>
@@ -94,9 +94,9 @@
                 </div>
 
                 <!-- Pagination Links -->
-                <div>
+                {{-- <div>
                     {!! $subCategories->withQueryString()->links('pagination::bootstrap-5') !!}
-                </div>
+                </div> --}}
 
             </div>
         </div>
@@ -107,22 +107,26 @@
             <div class="modal-content rounded-3 shadow-lg">
                 <div class="modal-header bg-primary text-white">
                     <h5 class="modal-title text-white" id="CategoryModalLabel">Sub Category Details</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body p-4">
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold mb-10">Page Name:</div>
-                        <div class="col-md-8 mb-10" id="category-page_name"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold mb-10">Category Name:</div>
-                        <div class="col-md-8 mb-10" id="category-name"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold mb-10">Sub Category:</div>
-                        <div class="col-md-8 mb-10" id="category-sub_category"></div>
-                    </div>
+                <div class="modal-body p-4" style="max-height: 70vh; overflow-y: auto;">
+                    <!-- Table Layout for Sub Category Details -->
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="fw-bold" style="width: 30%;">Page Name:</td>
+                                <td id="category-page_name"></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold" style="width: 30%;">Category Name:</td>
+                                <td id="category-name"></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold" style="width: 30%;">Sub Category:</td>
+                                <td id="category-sub_category"></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="modal-footer bg-light">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -130,6 +134,7 @@
             </div>
         </div>
     </div>
+    
 @endsection
 
 @push('scripts')

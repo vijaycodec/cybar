@@ -20,7 +20,7 @@
 
             <div class="wg-box">
                 <div class="flex items-center justify-between gap10 flex-wrap">
-                    <div class="wg-filter flex-grow">
+                    {{-- <div class="wg-filter flex-grow">
                         <form class="form-search" method="GET" action="{{ route('l3-category.list') }}">
                             <fieldset class="name">
                                 <input type="text" placeholder="Search here..." name="search" tabindex="2"
@@ -30,7 +30,7 @@
                                 <button class="" type="submit"><i class="icon-search"></i></button>
                             </div>
                         </form>
-                    </div>
+                    </div> --}}
                     <a class="tf-button style-1 w208" href="{{ route('l3-category.create') }}">
                         <i class="icon-plus"></i>Add New
                     </a>
@@ -39,7 +39,7 @@
 
                 <!-- L3 Categories Table -->
                 <div class="table-responsive">
-                    <table class="table table-bordered table-striped">
+                    <table id="myTable" class="table table-bordered table-striped">
                         <thead class="table-light">
                             <tr>
                                 <th>#</th>
@@ -62,11 +62,11 @@
                                         <td>{{ $l3Category->l3_category }}</td>
                                         <td>
                                             <div class="list-icon-function">
-                                                <button type="button" class="show" data-id="{{ $l3Category->id }}">
+                                                {{-- <button type="button" class="show" data-id="{{ $l3Category->id }}">
                                                     <div class="item eye">
                                                         <i class="icon-eye"></i>
                                                     </div>
-                                                </button>
+                                                </button> --}}
                                                 <a href="{{ route('l3-category.edit', $l3Category->id) }}">
                                                     <div class="item edit">
                                                         <i class="icon-edit-3"></i>
@@ -90,9 +90,9 @@
                     </table>
 
                     <!-- Pagination -->
-                    <div class="mt-4">
+                    {{-- <div class="mt-4">
                         {!! $l3Categories->withQueryString()->links('pagination::bootstrap-5') !!}
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

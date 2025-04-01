@@ -113,22 +113,26 @@
             <div class="modal-content rounded-3 shadow-lg">
                 <div class="modal-header bg-primary text-white">
                     <h5 class="modal-title text-white" id="serviceModalLabel">Service Details</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-4" style="max-height: 70vh; overflow-y: auto;">
-                    <div class="row mb-10">
-                        <div class="col-md-4 fw-bold mb-5">Category Name:</div>
-                        <div class="col-md-8" id="modal-service-name"></div>
-                    </div>
-                    <div class="row mb-10">
-                        <div class="col-md-4 fw-bold mb-5">Sub Category:</div>
-                        <div class="col-md-8" id="modal-service-sub_category"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold"> Description:</div>
-                        <div class="col-md-8" id="modal-service-description"></div>
-                    </div>
+                    <!-- Table Structure with Border -->
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="fw-bold text-start" style="width: 30%;">Category Name:</td>
+                                <td id="modal-service-name" class=""></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold text-start" style="width: 30%;">Sub Category:</td>
+                                <td id="modal-service-sub_category" class=""></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold text-start" style="width: 30%; vertical-align: top;">Description:</td>
+                                <td id="modal-service-description" class=""></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="modal-footer bg-light">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

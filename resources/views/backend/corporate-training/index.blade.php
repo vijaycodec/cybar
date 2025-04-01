@@ -126,7 +126,7 @@
                                 <td id="modal-training-sub_category" class=""></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold text-start" style="width: 30%;">Description:</td>
+                                <td class="fw-bold text-start" style="width: 30%; vertical-align: top; ">Description:</td>
                                 <td id="modal-training-description" class=""></td>
                             </tr>
                         </tbody>
