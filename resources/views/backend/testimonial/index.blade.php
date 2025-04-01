@@ -42,7 +42,6 @@
                                 <th>Testimonials Name</th>
                                 <th>Designation</th>
                                 <th>Image</th>
-                                <th>Description</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -58,29 +57,19 @@
                                             @if ($testimonial->images)
                                                 {{-- <img src="{{ asset('uploads/backend/blog/' . $testimonial->images) }}"
                                                     alt="testimonial Image" width="100"> --}}
-                                                    <img src="{{ asset('storage/uploads/backend/testimonial/' . $testimonial->images) }}" alt="blog Image" width="100">
+                                                    <img src="{{ asset('storage/uploads/backend/testimonial/' . $testimonial->images) }}" alt="testimonial Image" width="100">
                                             @else
                                                 <span>No image available</span>
                                             @endif
                                         </td>
-                                       
-                                        <td style="max-width: 400px;"> <!-- Increase width here -->
-                                            <!-- Short description (up to 10 words) -->
-                                            {{-- <span class="description-short">
-                                                {!! $testimonial->short_description ?? mb_strimwidth(html_entity_decode($testimonial->description), 0, 19, '...') !!}
-                                            </span> --}}
-                                            <!-- Read More button for longer descriptions -->
-                                            @if (str_word_count(strip_tags($testimonial->testimonial_description)) > 5)
-                                                <button class="btn btn-link read-more"
-                                                    data-id="{{ $testimonial->category->name }}"
-                                                     data-username="{{ $testimonial->user_name }}"
-                                                    data-description="{{ html_entity_decode($testimonial->testimonial_description) }}">Read
-                                                    More</button>
-                                            @endif
-                                        </td>
                                         <td>
                                             <div class="list-icon-function">
-                                                <button type="button" class="show" data-id="{{ $testimonial->id }}">
+                                                <button type="button" class="show"
+                                                    data-id="{{ $testimonial->category->name ?? 'N/A' }}"
+                                                    data-user_name="{{ $testimonial->user_name?? 'N/A' }}"
+                                                    data-designation="{{ $testimonial->designation?? 'N/A' }}"
+                                                    data-testimonial_short_description="{{ html_entity_decode($testimonial->testimonial_short_description) ?? 'N/A' }}"
+                                                    data-testimonial_description="{{ html_entity_decode($testimonial->testimonial_description) ?? 'No description available' }}">
                                                     <div class="item eye">
                                                         <i class="icon-eye"></i>
                                                     </div>
@@ -130,45 +119,20 @@
                         <div class="col-md-8" id="modal-testimonial-category_name"></div>
                     </div>
                     <div class="row mb-10">
-                        <div class="col-md-4 fw-bold mb-5">testimonial Name:</div>
+                        <div class="col-md-4 fw-bold mb-5">Testimonial Name:</div>
                         <div class="col-md-8" id="modal-testimonial-user_name"></div>
                     </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold">Full Description:</div>
-                        <div class="col-md-8" id="modal-testimonial-description"></div>
-                    </div>
-                </div>
-                <div class="modal-footer bg-light">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="testimonialModalShow" tabindex="-1" aria-labelledby="testimonialModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content rounded-3 shadow-lg">
-                <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title text-white" id="testimonialModalLabel">testimonial Details</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body p-4" style="max-height: 70vh; overflow-y: auto;">
                     <div class="row mb-10">
-                        <div class="col-md-4 fw-bold mb-5">testimonial Name:</div>
-                        <div class="col-md-8" id="testimonial_name"></div>
+                        <div class="col-md-4 fw-bold mb-5">Designation:</div>
+                        <div class="col-md-8" id="modal-testimonial-designation"></div>
                     </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold">short Desc:</div>
-                        <div class="col-md-8" id="short_desc" style="line-height: 30px;"></div>
+                    <div class="row mb-10">
+                        <div class="col-md-4 fw-bold mb-5">Short_desc:</div>
+                        <div class="col-md-8" id="modal-testimonial-testimonial_short_description"></div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-md-4 fw-bold">Full Description:</div>
-                        <div class="col-md-8" id="description"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold">Created At:</div>
-                        <div class="col-md-8" id="testimonials-created-at"></div>
+                        <div class="col-md-8" id="modal-testimonial-testimonial_description"></div>
                     </div>
                 </div>
                 <div class="modal-footer bg-light">
@@ -177,8 +141,6 @@
             </div>
         </div>
     </div>
-
-
 @endsection
 
 @push('scripts')
@@ -186,14 +148,18 @@
     <script>
         $(document).ready(function() {
             // Handle Read More button click
-            $(document).on('click', '.read-more', function() {
+            $(document).on('click', '.show', function() {
                 var testimonial = $(this).data('id');
-                var user_name = $(this).data('username');
-                var fullDescription = $(this).data('description');
+                var name = $(this).data('user_name');
+                var designation = $(this).data('designation');
+                var Short_desc = $(this).data('testimonial_short_description');
+                var fullDescription = $(this).data('testimonial_description');
                 // Set the full description in the modal
                 $('#modal-testimonial-category_name').text(testimonial); // to do category name instead of testimonial Id =
-                $('#modal-testimonial-user_name').text(user_name); // to do user name instead of testimonial Id 
-                $('#modal-testimonial-description').html(fullDescription);
+                $('#modal-testimonial-user_name').text(name);
+                $('#modal-testimonial-designation').text(designation); // to do user name instead of testimonial Id 
+                $('#modal-testimonial-testimonial_short_description').text(Short_desc); 
+                $('#modal-testimonial-testimonial_description').html(fullDescription);
 
                 // Show the modal
                 $('#testimonialModal').modal('show');
@@ -239,33 +205,6 @@
                                 );
                             }
                         });
-                    }
-                });
-            });
-        });
-    </script>
-
-    {{-- script for update  --}}
-    <script>
-        $(document).ready(function() {
-            // Show permission details in modal
-            $(document).on('click', '.show', function() {
-                var testimonialsId = $(this).data('id');
-                $.ajax({
-                    url: "{{ route('menutestimonial.show', ':id') }}".replace(':id', testimonialsId),
-                    method: "GET",
-                    success: function(testimonial) {
-                        // Correctly access properties with a hyphen
-                        $('#testimonial_name').text(testimonial
-                            .testimonial_name); // Use default value if undefined
-                        $('#short_desc').text(response.short_desc); // Handle null or undefined
-                        $('#description').html(response.description);
-                        $('#testimonials-created-at').text(response.created_at);
-                        $('#testimonialModalShow').modal('show');
-
-                    },
-                    error: function() {
-                        Swal.fire('Error!', 'Unable to fetch testimonials details.', 'error');
                     }
                 });
             });

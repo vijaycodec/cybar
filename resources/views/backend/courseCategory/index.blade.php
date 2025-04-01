@@ -58,7 +58,10 @@
                                         <td  style="padding: 10px;">{{ $courseCategory->slug }}</td>
                                         <td style="padding: 10px;">
                                             <div class="list-icon-function">
-                                                <button type="button" class="show" data-id="{{ $courseCategory->id }}">
+                                                <button type="button" class="show"
+                                                    data-id="{{ $courseCategory->pageCategory->page_name  ?? 'N/A' }}"
+                                                    data-name="{{ $courseCategory->name ?? 'N/A' }}"
+                                                    data-title="{{ $courseCategory->title ?? 'N/A' }}">
                                                     <div class="item eye">
                                                         <i class="icon-eye"></i>
                                                     </div>
@@ -114,16 +117,16 @@
                 </div>
                 <div class="modal-body p-4">
                     <div class="row mb-3">
-                        <div class="col-md-4 fw-bold mb-10">Category Name:</div>
+                        <div class="col-md-4 fw-bold mb-10">Page Name:</div>
+                        <div class="col-md-8 mb-10" id="category-page_name"></div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4 fw-bold mb-10">Category name</div>
                         <div class="col-md-8 mb-10" id="category-name"></div>
                     </div>
                     <div class="row mb-3">
-                        <div class="col-md-4 fw-bold mb-10">Category Title:</div>
+                        <div class="col-md-4 fw-bold mb-10">Title</div>
                         <div class="col-md-8 mb-10" id="category-title"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold">Created At:</div>
-                        <div class="col-md-8" id="category-created-at"></div>
                     </div>
                 </div>
                 <div class="modal-footer bg-light">
@@ -138,7 +141,21 @@
 @push('scripts')
     <script>
         $(document).ready(function() {
-            // Handle delete button click
+            // Handle Read More button click
+            $(document).on('click', '.show', function() {
+                var courseCategoryId = $(this).data('id');
+                var name = $(this).data('name');
+                var title = $(this).data('title');
+                // Set the full description in the modal
+                $('#category-page_name').text(courseCategoryId); // to do category name instead of podcast Id 
+                $('#category-name').text(name);
+                $('#category-title').text(title);
+                // Show the modal
+                $('#CategoryModal').modal('show');
+            });
+
+
+            //script for Delete
             $(document).on('click', '.delete', function() {
                 var courseCategoryId = $(this).data('id'); // Get ID from data attribute
                 Swal.fire({
@@ -153,8 +170,7 @@
                     if (result.isConfirmed) {
                         // Perform AJAX request to delete
                         $.ajax({
-                            url: "{{ route('course-category.destroy', ':id') }}"
-                                .replace(':id',
+                            url: "{{ route('course-category.destroy', ':id')}}".replace(':id',
                                 courseCategoryId),
                             method: "DELETE",
                             data: {
@@ -178,29 +194,6 @@
                                 );
                             }
                         });
-                    }
-                });
-            });
-        });
-    </script>
-
-    <script>
-        $(document).ready(function() {
-            // Show permission details in modal
-            $(document).on('click', '.show', function() {
-                var categoryId = $(this).data('id');
-
-                $.ajax({
-                    url: "{{ route('resources-category.show', ':id') }}".replace(':id', categoryId),
-                    method: "GET",
-                    success: function(response) {
-                        $('#category-name').text(response.name);
-                        $('#category-title').text(response.title);
-                        $('#category-created-at').text(response.created_at);
-                        $('#CategoryModal').modal('show');
-                    },
-                    error: function() {
-                        Swal.fire('Error!', 'Unable to fetch category details.', 'error');
                     }
                 });
             });

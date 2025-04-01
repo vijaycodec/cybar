@@ -69,11 +69,14 @@
                                         
                                         <td>
                                             <div class="list-icon-function">
-                                                <button type="button" class="show" data-id="{{ $service->id }}">
-                                                    <div class="item eye">
-                                                        <i class="icon-eye"></i>
-                                                    </div>
-                                                </button>
+                                                <button type="button" class="show"
+                                                data-id="{{ $service->course_category->name ?? 'N/A' }}"
+                                                data-sub_category="{{ $service->subcategory->sub_category ?? 'N/A' }}"
+                                                data-description="{{ html_entity_decode ($service->description) ?? 'N/A' }}">
+                                                <div class="item eye">
+                                                    <i class="icon-eye"></i>
+                                                </div>
+                                            </button>
                                                 <a href="{{ route('our-services.edit', $service->id) }}">
                                                     <div class="item edit">
                                                         <i class="icon-edit-3"></i>
@@ -115,8 +118,12 @@
                 </div>
                 <div class="modal-body p-4" style="max-height: 70vh; overflow-y: auto;">
                     <div class="row mb-10">
-                        <div class="col-md-4 fw-bold mb-5">Service Name:</div>
+                        <div class="col-md-4 fw-bold mb-5">Category Name:</div>
                         <div class="col-md-8" id="modal-service-name"></div>
+                    </div>
+                    <div class="row mb-10">
+                        <div class="col-md-4 fw-bold mb-5">Sub Category:</div>
+                        <div class="col-md-8" id="modal-service-sub_category"></div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-md-4 fw-bold"> Description:</div>
@@ -129,57 +136,24 @@
             </div>
         </div>
     </div>
-
-    <div class="modal fade" id="serviceModalShow" tabindex="-1" aria-labelledby="serviceModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content rounded-3 shadow-lg">
-                <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title text-white" id="serviceModalLabel">Service Details</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body p-4" style="max-height: 70vh; overflow-y: auto;">
-                    <div class="row mb-10">
-                        <div class="col-md-4 fw-bold mb-5">Service Name:</div>
-                        <div class="col-md-8" id="resource_name"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold">short Desc:</div>
-                        <div class="col-md-8" id="short_desc" style="line-height: 30px;"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold">Full Description:</div>
-                        <div class="col-md-8" id="description"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold">Created At:</div>
-                        <div class="col-md-8" id="resources-created-at"></div>
-                    </div>
-                </div>
-                <div class="modal-footer bg-light">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
 @endsection
 
 @push('scripts')
     <script>
         $(document).ready(function() {
             // Handle Read More button click
-            $(document).on('click', '.read-more', function() {
-                var resourceId = $(this).data('id');
+            $(document).on('click', '.show', function() {
+                var serviceId = $(this).data('id');
+                var sub_category = $(this).data('sub_category');
                 var fullDescription = $(this).data('description');
 
                 // Set the full description in the modal
-                $('#modal-resource-name').text(resourceId); // to do category name instead of resource Id 
-                $('#modal-resource-description').html(fullDescription);
+                $('#modal-service-name').text(serviceId); // to do category name instead of resource Id 
+                $('#modal-service-sub_category').text(sub_category);
+                $('#modal-service-description').html(fullDescription);
 
                 // Show the modal
-                $('#resourceModal').modal('show');
+                $('#serviceModal').modal('show');
             });
 
 
@@ -222,33 +196,6 @@
                                 );
                             }
                         });
-                    }
-                });
-            });
-        });
-    </script>
-
-    {{-- script for update  --}}
-    <script>
-        $(document).ready(function() {
-            // Show permission details in modal
-            $(document).on('click', '.show', function() {
-                var resourcesId = $(this).data('id');
-                $.ajax({
-                    url: "{{ route('resources.show', ':id') }}".replace(':id', resourcesId),
-                    method: "GET",
-                    success: function(response) {
-                        // Correctly access properties with a hyphen
-                        $('#resource_name').text(response
-                            .resource_name); // Use default value if undefined
-                        $('#short_desc').text(response.short_desc); // Handle null or undefined
-                        $('#description').html(response.description);
-                        $('#resources-created-at').text(response.created_at);
-                        $('#resourceModalShow').modal('show');
-
-                    },
-                    error: function() {
-                        Swal.fire('Error!', 'Unable to fetch resources details.', 'error');
                     }
                 });
             });

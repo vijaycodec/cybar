@@ -68,11 +68,17 @@
                                        
                                         <td>
                                             <div class="list-icon-function">
-                                                <button type="button" class="show" data-id="{{ $career->id }}">
-                                                    <div class="item eye">
-                                                        <i class="icon-eye"></i>
-                                                    </div>
-                                                </button>
+                                                <button type="button" class="show"
+                                                data-id="{{ $career->category->name ?? 'N/A' }}"
+                                                data-subcategory="{{ $career->subcategory?? 'N/A' }}"
+                                                data-location ="{{ $career->location ?? 'N/A' }}"
+                                                data-educational_background ="{{ $career->educational_background ?? 'N/A' }}"
+                                                data-short_desc="{{ html_entity_decode($career->short_desc) ?? 'N/A' }}"
+                                                data-description="{{ html_entity_decode($career->description) ?? 'No description available' }}">
+                                                <div class="item eye">
+                                                    <i class="icon-eye"></i>
+                                                </div>
+                                            </button>
                                                 <a href="{{ route('career.edit', $career->id) }}">
                                                     <div class="item edit">
                                                         <i class="icon-edit-3"></i>
@@ -114,11 +120,27 @@
                 </div>
                 <div class="modal-body p-4" style="max-height: 70vh; overflow-y: auto;">
                     <div class="row mb-10">
-                        <div class="col-md-4 fw-bold mb-5">career Name:</div>
-                        <div class="col-md-8" id="modal-career-user_name"></div>
+                        <div class="col-md-4 fw-bold mb-5">Category Name:</div>
+                        <div class="col-md-8" id="modal-career-name"></div>
                     </div>
                     <div class="row mb-3">
-                        <div class="col-md-4 fw-bold">Full Description:</div>
+                        <div class="col-md-4 fw-bold">Sub Category:</div>
+                        <div class="col-md-8" id="modal-career-subcategory"></div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4 fw-bold">Location:</div>
+                        <div class="col-md-8" id="modal-career-location"></div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4 fw-bold">Educational Background:</div>
+                        <div class="col-md-8" id="modal-career-educational_background"></div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4 fw-bold">Short_desc:</div>
+                        <div class="col-md-8" id="modal-career-short_desc"></div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4 fw-bold">description:</div>
                         <div class="col-md-8" id="modal-career-description"></div>
                     </div>
                 </div>
@@ -128,53 +150,26 @@
             </div>
         </div>
     </div>
-
-    <div class="modal fade" id="careerModalShow" tabindex="-1" aria-labelledby="careerModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content rounded-3 shadow-lg">
-                <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title text-white" id="careerModalLabel">career Details</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body p-4" style="max-height: 70vh; overflow-y: auto;">
-                    <div class="row mb-10">
-                        <div class="col-md-4 fw-bold mb-5">career Name:</div>
-                        <div class="col-md-8" id="career_name"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold">short Desc:</div>
-                        <div class="col-md-8" id="short_desc" style="line-height: 30px;"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold">Full Description:</div>
-                        <div class="col-md-8" id="description"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold">Created At:</div>
-                        <div class="col-md-8" id="careers-created-at"></div>
-                    </div>
-                </div>
-                <div class="modal-footer bg-light">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
 @endsection
 
 @push('scripts')
     <script>
         $(document).ready(function() {
             // Handle Read More button click
-            $(document).on('click', '.read-more', function() {
+            $(document).on('click', '.show', function() {
                 var careerId = $(this).data('id');
+                var subcategory = $(this).data('subcategory');
+                var location = $(this).data('location');
+                var educational_background = $(this).data('educational_background');
+                var short_desc = $(this).data('short_desc');
                 var fullDescription = $(this).data('description');
 
                 // Set the full description in the modal
-                $('#modal-career-user_name').text(careerId); // to do category name instead of blog Id 
+                $('#modal-career-name').text(careerId); // to do category name instead of blog Id 
+                $('#modal-career-subcategory').html(subcategory);
+                $('#modal-career-location').html(location);
+                $('#modal-career-educational_background').html(educational_background);
+                $('#modal-career-short_desc').html(short_desc);
                 $('#modal-career-description').html(fullDescription);
 
                 // Show the modal
@@ -221,33 +216,6 @@
                                 );
                             }
                         });
-                    }
-                });
-            });
-        });
-    </script>
-
-    {{-- script for update  --}}
-    <script>
-        $(document).ready(function() {
-            // Show permission details in modal
-            $(document).on('click', '.show', function() {
-                var careerId = $(this).data('id');
-                $.ajax({
-                    url: "{{ route('career.show', ':id') }}".replace(':id', careerId),
-                    method: "GET",
-                    success: function(blog) {
-                        // Correctly access properties with a hyphen
-                        $('#blog_name').text(blog
-                            .blog_name); // Use default value if undefined
-                        $('#subcategory').text(response.subcategory); // Handle null or undefined
-                        $('#location').html(response.location);
-                        $('#blogs-created-at').text(response.created_at);
-                        $('#blogModalShow').modal('show');
-
-                    },
-                    error: function() {
-                        Swal.fire('Error!', 'Unable to fetch careers details.', 'error');
                     }
                 });
             });

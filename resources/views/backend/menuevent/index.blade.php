@@ -41,62 +41,47 @@
                                 <th>Category Name</th>
                                 <th>Sub Category Name</th>
                                 <th>Image</th>
-                                <th>Short Description</th>
-                                <th>Description</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             @if ($events->count() > 0)
                                 @foreach ($events as $event)
-                                <tr>
-                                    <td>{{ $event->id }}</td>
-                                    <td>{{ $event->category->name ?? 'N/A' }}</td> <!-- Using the relationship -->
-                                    <td>{{ $event->sub_category ?? 'N/A' }}</td>
-                                    <td>
-                                        @if ($event->images)
-                                            <img src="{{ asset('storage/uploads/backend/event/' . $event->images) }}"
-                                                alt="Event Image" width="100">
-                                        @else
-                                            <span>No image available</span>
-                                        @endif
-                                    </td>
-                                    <td style="max-width: 400px;"> <!-- Increase width here -->
-                                        <!-- Short description (up to 10 words) -->
-                                        <span>{{ $event->short_desc }}</span>
-                                    </td>
-                                    <td style="max-width: 400px;"> <!-- Increase width here -->
-                                        <!-- Short description (up to 10 words) -->
-                                        {{-- <span class="description-short">
-                                            {!! $event->short_description ?? mb_strimwidth(html_entity_decode($event->description), 0, 19, '...') !!}
-                                        </span> --}}
-                                        <!-- Read More button for longer descriptions -->
-                                        @if (str_word_count(strip_tags($event->description)) > 1)
-                                            <button class="btn btn-link read-more"
-                                                data-id="{{ $event->category->name }}"
-                                                data-description="{{ html_entity_decode($event->description) }}">Read
-                                                More</button>
-                                        @endif
-                                    </td>
-                                    <td>
-                                        <div class="list-icon-function">
-                                            <button type="button" class="show" data-id="{{ $event->id }}">
-                                                <div class="item eye">
-                                                    <i class="icon-eye"></i>
-                                                </div>
-                                            </button>
-                                            <a href="{{ route('menuevent.edit', $event->id) }}">
-                                                <div class="item edit">
-                                                    <i class="icon-edit-3"></i>
-                                                </div>
-                                            </a> <button type="button" class="delete" data-id="{{ $event->id }}">
-                                            <div class="item text-danger">
-                                                <i class="icon-trash-2"></i>
+                                    <tr>
+                                        <td>{{ $event->id }}</td>
+                                        <td>{{ $event->category->name ?? 'N/A' }}</td> <!-- Using the relationship -->
+                                        <td>{{ $event->sub_category ?? 'N/A' }}</td>
+                                        <td>
+                                            @if ($event->images)
+                                                <img src="{{ asset('storage/uploads/backend/event/' . $event->images) }}"
+                                                    alt="Event Image" width="100">
+                                            @else
+                                                <span>No image available</span>
+                                            @endif
+                                        </td>
+                                        <td>
+                                            <div class="list-icon-function">
+                                                <button type="button" class="show"
+                                                    data-id="{{ $event->category->name ?? 'N/A' }}"
+                                                    data-sub_category="{{ $event->sub_category ?? 'N/A' }}"
+                                                    data-short_desc="{{ html_entity_decode($event->short_desc) ?? 'N/A' }}"
+                                                    data-description="{{ html_entity_decode($event->description) ?? 'No description available' }}">
+                                                    <div class="item eye">
+                                                        <i class="icon-eye"></i>
+                                                    </div>
+                                                </button>
+                                                <a href="{{ route('menuevent.edit', $event->id) }}">
+                                                    <div class="item edit">
+                                                        <i class="icon-edit-3"></i>
+                                                    </div>
+                                                </a> <button type="button" class="delete" data-id="{{ $event->id }}">
+                                                    <div class="item text-danger">
+                                                        <i class="icon-trash-2"></i>
+                                                    </div>
+                                                </button>
                                             </div>
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
+                                        </td>
+                                    </tr>
                                 @endforeach
                             @else
                                 <tr>
@@ -112,43 +97,57 @@
             </div>
         </div>
     </div>
-        <!-- Modal Structure for Read more button-->
-        <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="resourceModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content rounded-3 shadow-lg">
-                    <div class="modal-header bg-primary text-white">
-                        <h5 class="modal-title text-white" id="resourceModalLabel">Resource Details</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                            aria-label="Close"></button>
+    <!-- Modal Structure for Read more button-->
+    <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="resourceModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content rounded-3 shadow-lg">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title text-white" id="resourceModalLabel">Resource Details</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4" style="max-height: 70vh; overflow-y: auto;">
+                    <div class="row mb-10">
+                        <div class="col-md-4 fw-bold mb-5">Resource Name:</div>
+                        <div class="col-md-8" id="modal-event-name"></div>
                     </div>
-                    <div class="modal-body p-4" style="max-height: 70vh; overflow-y: auto;">
-                        <div class="row mb-10">
-                            <div class="col-md-4 fw-bold mb-5">Resource Name:</div>
-                            <div class="col-md-8" id="modal-event-name"></div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col-md-4 fw-bold">Full Description:</div>
-                            <div class="col-md-8" id="modal-event-description"></div>
-                        </div>
+                    <div class="row mb-10">
+                        <div class="col-md-4 fw-bold mb-5">Sub Category:</div>
+                        <div class="col-md-8" id="modal-event-sub_category"></div>
                     </div>
-                    <div class="modal-footer bg-light">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <div class="row mb-10">
+                        <div class="col-md-4 fw-bold mb-5">Short Desc:</div>
+                        <div class="col-md-8" id="modal-event-short_desc"></div>
                     </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4 fw-bold">Full Description:</div>
+                        <div class="col-md-8" id="modal-event-description"></div>
+                    </div>
+                </div>
+                <div class="modal-footer bg-light">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
+    </div>
 @endsection
 
 @push('scripts')
     <script>
         $(document).ready(function() {
-            $(document).on('click', '.read-more', function() {
+            $(document).on('click', '.show', function() {
                 var eventId = $(this).data('id');
+                var subcategory = $(this).data('sub_category');
+                var short_desc = $(this).data('short_desc');
                 var fullDescription = $(this).data('description');
 
-                $('#modal-event-name').text(eventId);
+                // Set the full description in the modal
+                $('#modal-event-name').text(eventId); // to do category name instead of even Id 
+                $('#modal-event-sub_category').html(subcategory);
+                $('#modal-event-short_desc').html(short_desc);
                 $('#modal-event-description').html(fullDescription);
 
+                // Show the modal
                 $('#eventModal').modal('show');
             });
 
@@ -165,7 +164,8 @@
                 }).then((result) => {
                     if (result.isConfirmed) {
                         $.ajax({
-                            url: "{{ route('menuevent.destroy', ':id') }}".replace(':id', eventId),
+                            url: "{{ route('menuevent.destroy', ':id') }}".replace(':id',
+                                eventId),
                             method: "DELETE",
                             data: {
                                 _token: "{{ csrf_token() }}"

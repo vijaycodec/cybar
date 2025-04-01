@@ -45,8 +45,8 @@
                                 <th>Category</th>
                                 <th>Sub Category Name</th>
                                 <th>slug</th>
-                                
-                                
+
+
                                 <th>Actions</th>
                             </tr>
                         </thead>
@@ -61,7 +61,10 @@
                                     <td>{{ $subCategory->slug }}</td>
                                     <td style="padding: 10px;">
                                         <div class="list-icon-function">
-                                            <button type="button" class="show" data-id="{{ $subCategory->id }}">
+                                            <button type="button" class="show"
+                                                data-id="{{ $subCategory->pageCategory->page_name ?? 'N/A' }}"
+                                                data-name="{{ $subCategory->category->name  ?? 'N/A' }}"
+                                                data-sub_category="{{ $subCategory->sub_category ?? 'N/A' }}">
                                                 <div class="item eye">
                                                     <i class="icon-eye"></i>
                                                 </div>
@@ -103,22 +106,22 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content rounded-3 shadow-lg">
                 <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title text-white" id="CategoryModalLabel">Category Details</h5>
+                    <h5 class="modal-title text-white" id="CategoryModalLabel">Sub Category Details</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-4">
                     <div class="row mb-3">
+                        <div class="col-md-4 fw-bold mb-10">Page Name:</div>
+                        <div class="col-md-8 mb-10" id="category-page_name"></div>
+                    </div>
+                    <div class="row mb-3">
                         <div class="col-md-4 fw-bold mb-10">Category Name:</div>
                         <div class="col-md-8 mb-10" id="category-name"></div>
                     </div>
                     <div class="row mb-3">
-                        <div class="col-md-4 fw-bold mb-10">Category Title:</div>
-                        <div class="col-md-8 mb-10" id="category-title"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold">Created At:</div>
-                        <div class="col-md-8" id="category-created-at"></div>
+                        <div class="col-md-4 fw-bold mb-10">Sub Category:</div>
+                        <div class="col-md-8 mb-10" id="category-sub_category"></div>
                     </div>
                 </div>
                 <div class="modal-footer bg-light">
@@ -132,7 +135,21 @@
 @push('scripts')
     <script>
         $(document).ready(function() {
-            // Handle delete button click
+            // Handle Read More button click
+            $(document).on('click', '.show', function() {
+                var subcategoryId = $(this).data('id');
+                var name = $(this).data('name');
+                var sub_category = $(this).data('sub_category');
+                // Set the full description in the modal
+                $('#category-page_name').text(subcategoryId); // to do category name instead of podcast Id 
+                $('#category-name').text(name);
+                $('#category-sub_category').text(sub_category);
+                // Show the modal
+                $('#CategoryModal').modal('show');
+            });
+
+
+            //script for Delete
             $(document).on('click', '.delete', function() {
                 var subcategoryId = $(this).data('id'); // Get ID from data attribute
                 Swal.fire({
@@ -147,8 +164,7 @@
                     if (result.isConfirmed) {
                         // Perform AJAX request to delete
                         $.ajax({
-                            url: "{{ route('sub-category.destroy', ':id') }}"
-                                .replace(':id',
+                            url: "{{ route('sub-category.destroy', ':id') }}".replace(':id',
                                 subcategoryId),
                             method: "DELETE",
                             data: {
@@ -172,30 +188,6 @@
                                 );
                             }
                         });
-                    }
-                });
-            });
-        });
-    </script>
-
-    <script>
-        $(document).ready(function() {
-            // Show permission details in modal
-            $(document).on('click', '.show', function() {
-                var categoryId = $(this).data('id');
-
-                $.ajax({
-                    url: "{{ route('resources-category.show', ':id') }}".replace(':id',
-                        categoryId),
-                    method: "GET",
-                    success: function(response) {
-                        $('#category-name').text(response.name);
-                        $('#category-title').text(response.title);
-                        $('#category-created-at').text(response.created_at);
-                        $('#CategoryModal').modal('show');
-                    },
-                    error: function() {
-                        Swal.fire('Error!', 'Unable to fetch category details.', 'error');
                     }
                 });
             });
