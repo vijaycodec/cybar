@@ -66,19 +66,18 @@
                                             data-index="{{ $index }}">
                                             @foreach ($category->newsletters as $newsletter)
                                                 <div class="item">
-                                                    <a href="{{ route('newLetter.View', $newsletter->slug) }}">
+                                                    <a href="{{ route('newLetter.View', ['category_slug' => $category->slug, 'slug' => $newsletter->slug]) }}">
                                                         <div class="template15-wrap-main">
                                                             <div class="template15-wrap-main-img">
                                                                 <img src="{{ asset('storage/uploads/backend/newsletter/' . $newsletter->images) }}" />
                                                             </div>
                                                             <div class="template15-wrap-main-content">
                                                                 <span><i>{{ $newsletter->created_at->format('d M Y') }}</i></span>
-                                                                <h4><a
-                                                                        href="{{ route('newLetter.View', $newsletter->slug) }}">{{ $newsletter->sub_category }}</a>
+                                                                <h4> <a href="{{ route('newLetter.View', ['category_slug' => $category->slug, 'slug' => $newsletter->slug]) }}">{{ $newsletter->sub_category }}</a>
                                                                 </h4>
                                                                 <p>
                                                                     {{ $newsletter->short_desc }}
-                                                                    <a href="{{ route('newLetter.View', $newsletter->slug) }}">
+                                                                    <a href="{{ route('newLetter.View', ['category_slug' => $category->slug, 'slug' => $newsletter->slug]) }}">
                                                                         Read More[...]
                                                                     </a>
                                                                 </p>

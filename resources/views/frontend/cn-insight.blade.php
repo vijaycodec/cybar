@@ -109,18 +109,19 @@
                         @foreach ($TrendingBlogs as $trendingblog)
                             <div class="col-md-4">
                                 <div class="template15-wrap-main">
-                                    <a href="{{ route('blog-view', $trendingblog->slug) }}">
+                                    <a href="{{ route('blog-view',  ['category_slug' => $trendingblog->category->slug, 'blog_slug' => $trendingblog->slug]) }}">
+                                       
                                         <div class="template15-wrap-main-img">
                                             <img src="{{ asset('storage/uploads/backend/blog/' . $trendingblog->images) }}" />
                                         </div>
                                     </a>
                                     <div class="template15-wrap-main-content">
                                         <span><i>{{ \Carbon\Carbon::parse($trendingblog->created_at)->format('d M Y') }}</i></span>
-                                            <h4><a href="{{ route('blog-view', $trendingblog->slug) }}">{{ $trendingblog->sub_category	 }}</a>
+                                            <h4><a href="{{ route('blog-view',  ['category_slug' => $trendingblog->category->slug, 'blog_slug' => $trendingblog->slug]) }}">{{ $trendingblog->sub_category	 }}</a>
                                         </h4>
                                         <p>
                                             {{ $trendingblog->short_desc}}
-                                            <a href="{{ route('blog-view', $trendingblog->slug) }}"> Read More[...]</a>
+                                            <a href="{{ route('blog-view',  ['category_slug' => $trendingblog->category->slug, 'blog_slug' => $trendingblog->slug]) }}">Read More[...]</a>
                                         </p>
                                     </div>
                                 </div>
@@ -152,10 +153,13 @@
                                 <div class="template15-wrap-main-content">
                                     {{-- <span><i>19 Oct 2020</i></span> --}}
                                     <span><i>{{ \Carbon\Carbon::parse($trendingblog->created_at)->format('d M Y') }}</i></span>
-                                    <h4><a href="{{ route('blog-view', $trendingblog->slug) }}">{{ $trendingblog->sub_category	 }}</a>
+                                    <h4>
+                                        <a href="{{ route('blog-view',  ['category_slug' => $trendingblog->category->slug, 'blog_slug' => $trendingblog->slug]) }}">
+                                            
+                                            {{ $trendingblog->sub_category	 }}</a>
                                     <p>
                                         {{ $trendingblog->short_desc}}
-                                        <a href="{{ route('blog-view', $trendingblog->slug) }}"> Read More[...]</a>
+                                        <a href="{{ route('blog-view',  ['category_slug' => $trendingblog->category->slug, 'blog_slug' => $trendingblog->slug]) }}"> Read More[...]</a>
                                     </p>
                                 </div>
                             </div>
@@ -177,15 +181,24 @@
                                 </div>
                                 <div class="template15-wrap-main-content">
                                     <span><i>{{ \Carbon\Carbon::parse($trendingblog->created_at)->format('d M Y') }}</i></span>
-                                    <h4><a href="{{ route('blog-view', $trendingblog->slug) }}">{{ $trendingblog->sub_category	 }}</a>
-                                        <p>
-                                            {{ $trendingblog->short_desc}}
-                                            <a href="{{ route('blog-view', $trendingblog->slug) }}"> Read More[...]</a>
-                                        </p>
+                                    
+                                    <!-- Correctly passing both category_slug and blog_slug -->
+                                    <h4>
+                                        <a href="{{ route('blog-view', ['category_slug' => $trendingblog->category->slug, 'blog_slug' => $trendingblog->slug]) }}">
+                                            {{ $trendingblog->sub_category }}
+                                        </a>
+                                    </h4>
+                                    
+                                    <p>
+                                        {{ $trendingblog->short_desc }}
+                                        <a href="{{ route('blog-view', ['category_slug' => $trendingblog->category->slug, 'blog_slug' => $trendingblog->slug]) }}">
+                                            Read More [...]
+                                        </a>
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                        @endforeach
+                    @endforeach
                         <!-- blog box1 end -->
                     </div>
                     <div id="cninsight-nav-count12" class="count-nav-box"></div>
@@ -226,13 +239,16 @@
                                                 @foreach ($newsletter->newsletters as $letter)
                                                 <li class="col-md-3">
                                                     <div class="codec-wrap-main">
-                                                        <a href="{{ route('newLetter.View',$letter->slug) }}">
+                                                        {{-- <a href="{{ route('newLetter.View',$letter->slug) }}"> --}}
+                                                        <a href="{{ route('newLetter.View', ['category_slug' => $newsletter->slug, 'slug' => $letter->slug]) }}">
+
                                                             <div class="codec-wrap-main-img">
                                                                 <img src="{{ asset('storage/uploads/backend/newsletter/' . $letter->images) }}" />
                                                             </div>
                                                         </a>
                                                         <div class="codec-wrap-main-content">
-                                                            <h4><a href="{{ route('newLetter.View',$letter->slug) }}">{{ $letter->sub_category }}</a></h4>
+                                                            <h4><a href="{{ route('newLetter.View', ['category_slug' => $newsletter->slug, 'slug' => $letter->slug]) }}">
+                                                                {{ $letter->sub_category }}</a></h4>
                                                             <p>{{ $letter->short_desc }}
                                                             </p>
                                                         </div>
@@ -271,13 +287,13 @@
                                 <div class="item">
                                     <div class="col-md-3">
                                         <div class="codec-wrap-main">
-                                                <a href="{{ route('newLetter.View',$letter->slug) }}">
+                                                <a href="{{ route('newLetter.View', ['category_slug' => $newsletter->slug, 'slug' => $letter->slug]) }}">
                                                 <div class="codec-wrap-main-img">
                                                     <img src="{{ asset('storage/uploads/backend/newsletter/' . $letter->images) }}" />
                                                 </div>
                                             </a>
                                             <div class="codec-wrap-main-content">
-                                                <h4><a href="{{ route('newLetter.View',$letter->slug) }}">{{ $letter->sub_category }}</a></h4>
+                                                <h4> <a href="{{ route('newLetter.View', ['category_slug' => $newsletter->slug, 'slug' => $letter->slug]) }}">{{ $letter->sub_category }}</a></h4>
                                                 <p>{{ $letter->short_desc }}
                                                 </p>
                                             </div>

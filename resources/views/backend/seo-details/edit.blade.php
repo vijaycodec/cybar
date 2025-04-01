@@ -29,7 +29,7 @@
 
                     <fieldset class="name">
                         <div class="body-title">Select Page Category <span class="tf-color-1">*</span></div>
-                        <select class="flex-grow" name="page_category_id" id="page_category" required>
+                        <select class="flex-grow" name="page_category_id" id="page_category" >
                             <option value="" disabled selected>Select page category</option>
                             @foreach ($page_categories as $pageCategory)
                                 <option value="{{ $pageCategory->id }}"
@@ -40,10 +40,9 @@
                         </select>
                     </fieldset>
 
-
                     <fieldset class="name">
                         <div class="body-title">Select Category <span class="tf-color-1">*</span></div>
-                        <select class="flex-grow" name="category_id" id="category" required>
+                        <select class="flex-grow" name="category_id" id="category" >
                             @foreach ($categories as $category)
                                 <option value="{{ $category->id }}"
                                     {{ $category->id == $seoDetail->category_id ? 'selected' : '' }}>
@@ -55,7 +54,7 @@
 
                     <fieldset class="name">
                         <div class="body-title">Select Sub Course <span class="tf-color-1">*</span></div>
-                        <select class="flex-grow" name="sub_category_id" id="sub_category" required>
+                        <select class="flex-grow" name="sub_category_id" id="sub_category" >
                             <option value="" disabled>Select Sub category</option>
                             @foreach ($subCategories as $subCategory)
                                 <option value="{{ $subCategory->id }}"

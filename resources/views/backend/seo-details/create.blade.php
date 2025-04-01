@@ -46,7 +46,7 @@
                     <!-- Category (Dependent on Page Category) -->
                     <fieldset class="name">
                         <div class="body-title">Select Course<span class="tf-color-1">*</span></div>
-                        <select class="flex-grow" name="category_id" id="category" required>
+                        <select class="flex-grow" name="category_id" id="category" >
                             <option value="" disabled selected>Select category</option>
                         </select>
                     </fieldset>
@@ -54,7 +54,7 @@
                     <!-- Sub Category (Dependent on Category) -->
                     <fieldset class="name">
                         <div class="body-title">Select Sub Course <span class="tf-color-1">*</span></div>
-                        <select class="flex-grow" name="sub_category_id" id="sub_category" required>
+                        <select class="flex-grow" name="sub_category_id" id="sub_category" >
                             <option value="" disabled selected>Select Sub category</option>
                         </select>
                     </fieldset>

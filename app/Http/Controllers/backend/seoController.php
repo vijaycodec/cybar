@@ -56,8 +56,6 @@ class seoController extends Controller
         return response()->json($subcategories);
     }
 
-
-
     public function store(Request $request)
     {
         // Validate the request data
@@ -69,68 +67,80 @@ class seoController extends Controller
             'seo_title'          => 'required|string|max:255',
             'seo_description'    => 'required|string|max:500',
             'seo_keywords'       => 'required|string|max:255',
-            'google_analytics'   => 'nullable|string', // Allowing script as a string
+            'google_analytics'   => 'nullable|string',
         ]);
-
+    
         // Check if validation fails
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
         }
-
+    
         try {
-            // Initialize variables
-            //  $page_name = null;
-
-            // Fetch Page Name only if page_category_id is provided
+            // Initialize variables to NULL to avoid "undefined variable" errors
+            $page_name = null;
+            $category_name = null;
+            $subcategory_name = null;
+            $category_id = null;
+            $sub_category_id = null;
+    
+            // Fetch Page Name if page_category_id is provided
             if ($request->filled('page_category_id')) {
                 $page_data = PageDetail::where('id', $request->page_category_id)->first();
-                $page_id = $page_data->id;
-                $page_name = $page_data->page_name;
-                // dd($page_name );
+                if ($page_data) {
+                    $page_name = $page_data->page_name;
+                }
             }
-
-            // Fetch Category Name only if category_id is provided
+    
+            // Fetch Category Name if category_id is provided
             if ($request->filled('category_id')) {
-                $category_data = CourseCategory::where('page_category', $page_id)
+                $category_data = CourseCategory::where('page_category', $request->page_category_id)
                     ->where('id', $request->category_id)->first();
-
-                $category_id = $category_data->id;
-                $category_name = $category_data->name;
-                // dd($category_name);
+    
+                if ($category_data) {
+                    $category_id = $category_data->id;
+                    $category_name = $category_data->name;
+                }
             }
-
-            // Fetch Subcategory Name only if sub_category_id is provided
-            if ($request->filled('sub_category_id')) {
-                $subcategory_name = SubCategory::where('page_category_id', $page_id)
-                    ->where('category_id', $category_id)->where('id', $request->sub_category_id)->first();
-                $subcategory_name = $subcategory_name->sub_category;
+    
+            // Fetch Subcategory Name if sub_category_id is provided
+            if ($request->filled('sub_category_id') && $category_id !== null) {
+                $subcategory_data = SubCategory::where('page_category_id', $request->page_category_id)
+                    ->where('category_id', $category_id)
+                    ->where('id', $request->sub_category_id)
+                    ->first();
+    
+                if ($subcategory_data) {
+                    $sub_category_id = $subcategory_data->id;
+                    $subcategory_name = $subcategory_data->sub_category;
+                }
             }
-
+    
             // Save SEO Details
             $seodetails = new Seo();
-            $seodetails->page_name = $page_name; // Null allowed
-            $seodetails->category_name = $category_name; // Null allowed
-            $seodetails->sub_category_name = $subcategory_name; // Null allowed
-
-            //store id 
-            $seodetails->page_category_id = $request->page_category_id; // Null allowed
-            $seodetails->category_id = $request->category_id; // Null allowed
-            $seodetails->sub_category_id = $request->sub_category_id; // Null allowed
-
-            //
+            
+            $seodetails->page_name = $page_name;
+            $seodetails->category_name = $category_name;
+            $seodetails->sub_category_name = $subcategory_name;
+    
+            // Store IDs ensuring NULL if not found
+            $seodetails->page_category_id = $request->page_category_id;
+            $seodetails->category_id = $category_id;
+            $seodetails->sub_category_id = $sub_category_id;
+    
             $seodetails->template_name = $request->template_name;
             $seodetails->seo_title = $request->seo_title;
             $seodetails->seo_keywords = $request->seo_keywords;
             $seodetails->seo_description = $request->seo_description;
             $seodetails->google_analytics = $request->google_analytics;
-
+    
             $seodetails->save();
-
+    
             return redirect()->route('seo-details.list')->with('message', 'Record has been added successfully!');
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'An error occurred while adding the SEO Details: ' . $e->getMessage());
         }
     }
+    
 
     public function edit($id)
     {
