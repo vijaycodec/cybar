@@ -292,7 +292,9 @@ Route::middleware(['auth','admin','prevent_history'])->group(function () {
 
 Route::middleware(['FrameGuard'])->group(function () {
     Route::get('/', [homeController::class, 'index'])->name('home');
-    Route::get('/services', [servicesController::class, 'getServices'])->name('services');
+    Route::get('/services/{category?}', [servicesController::class, 'getServices'])
+    ->where('category', '[A-Za-z0-9-]+') // Allow slugs
+    ->name('services');
     // Route::get('/training', [trainingController::class, 'get_training'])->name('training');
     Route::get('/training/{category?}', [TrainingController::class, 'get_training'])
     ->where('category', '[A-Za-z0-9-]+') // Allow slugs

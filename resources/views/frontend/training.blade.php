@@ -28,9 +28,11 @@
                                                 </a>
                                             </li> --}}
                                             <li id="li_border">
-                                                <a class="tablinks1 {{ request()->segment(2) === Str::slug($category->name) ? 'active' : '' }} {{ $loop->first ? 'active' : ' ' }}"
-                                                   href="{{ url('training/' . Str::slug($category->name)) }}">
-                                                   {{ $category->name }}
+                                                <a class="tablinks1 {{ $loop->first ? 'active' : '' }}"
+                                                    href="javascript:void(0);"
+                                                    data-category="{{ Str::slug($category->name) }}"
+                                                    onclick="updateURLAndOpenCity(event, '{{ Str::slug($category->name) }}')">
+                                                    {{ $category->name }}
                                                 </a>
                                             </li>
                                         @endforeach
@@ -293,5 +295,46 @@
             });
         });
     </script>
+
+
+<script>
+    // Ensure the active tab and section are displayed based on URL hash
+    document.addEventListener("DOMContentLoaded", function () {
+        let pathSegments = window.location.pathname.split('/');
+        let category = pathSegments[2]; // Extract category from URL (if available)
+
+        if (category) {
+            let targetTab = document.querySelector(`a[data-category="${category}"]`);
+            if (targetTab) {
+                targetTab.classList.add("active"); // Highlight active tab
+                openCity(new Event("click"), category); // Open the category section
+            }
+        }
+    });
+
+    // This function will update the URL and call openCity to display the section
+    function updateURLAndOpenCity(evt, category) {
+        evt.preventDefault(); // Prevent default anchor action
+
+        // Update the URL without reloading the page
+        history.pushState(null, '', `/services/${category}`);
+
+        // Call openCity to display the relevant content
+        openCity(evt, category);
+
+        // Scroll smoothly to the targeted section
+        let targetSection = document.getElementById(category);
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Remove the active class from all other tabs
+        document.querySelectorAll('.tablinks1').forEach(el => el.classList.remove('active'));
+
+        // Add the active class to the clicked tab
+        evt.currentTarget.classList.add('active');
+    }
+</script>
+
     
 @endpush
