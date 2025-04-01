@@ -28,7 +28,11 @@
                 <div class="row">
                     <div class="col-md-12">
                         <ul class="breadcromb-ul">
-                            <li><a href="{{ route('home') }}">Codec Networks</a></li>
+                            <li>
+                                <a href="{{ route('home') }}" style="background-color: #14426e; padding: 0px 6px; display: inline-block;">
+                                    <img src="{{ asset('assets/images/Home-Codec-Networks.png') }}" alt="Home Codec Networks Logo" title="Home Codec Networks">
+                                </a>
+                            </li> 
                             <li><a href="{{ route('events') }}">Events</a></li>
                             <li><a href="javascript:void(0)">{{ $slug }}</a></li>
                         </ul>

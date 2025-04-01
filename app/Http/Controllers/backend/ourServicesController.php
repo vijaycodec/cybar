@@ -42,7 +42,6 @@ class OurServicesController extends Controller
         'category_id' => 'required',
         'sub_category_id' => 'required',
         'description' => 'required',
-        'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048', // Validate image file
     ]);
 
         $this->servicesRepository->create($validate, $request);

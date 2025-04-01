@@ -8,23 +8,36 @@ use App\Models\MenuBlog;
 
 class blogViewController extends Controller
 {
-    public function view($slug)
-    {   
-        // dd($slug);
-        // Fetch resource using the slug instead of the ID
-        $resource = MenuBlog::with('category')->where('slug', $slug)->first();
-        $slug=$resource->sub_category;
-        // Fetch all categories for trending blogs
-        // $trendings = Category::where('category_type', 'blog')->latest()->take(5)->get();
+    public function view($category_slug, $slug)
+    {
+        // Fetch the blog post along with its category
+        $resource = MenuBlog::with('category')
+            ->where('slug', $slug)
+            ->whereHas('category', function ($query) use ($category_slug) {
+                $query->where('slug', $category_slug);
+            })
+            ->first();
+
+        // Fetch category name
+
+        // If blog not found, return 404
+        if (!$resource) {
+            abort(404, 'Blog not found');
+        }
+
+        $category_slug = $resource->category->name ?? null;
+
+        // Fetch subcategory name (if relation exists)
+        $slug = $resource->sub_category ?? null;
+        // Fetch trending blogs
         $trendings = MenuBlog::with('category')->latest()->take(5)->get();
 
-        // Check if resource exists
-        if ($resource) {
-            return view('frontend.blog-view', ['resource' => $resource, 'trendings' => $trendings,'slug'=>$slug]);
-        }
-    
-        // If not found, show a 404 page
-  
+        return view('frontend.blog-view', [
+            'resource' => $resource,
+            'trendings' => $trendings,
+            'category_slug' => $category_slug,
+            'slug' => $slug
+        ]);
     }
 
     public function trendingResourceView($id = null)
@@ -33,7 +46,7 @@ class blogViewController extends Controller
         $resource = MenuBlog::with('category')->where('category_id', $id)->first();
 
         // Fetch all categories for trendings Resources
-        $trendings = Category::where('category_type','blog')->latest()->take(5)->get();
+        $trendings = Category::where('category_type', 'blog')->latest()->take(5)->get();
 
         // Fetch the category
         $category = Category::findOrFail($id);
@@ -41,13 +54,8 @@ class blogViewController extends Controller
         if ($resource) {
             // Resource found, pass resource data to view
             return view('frontend.blog-view', ['resource' => $resource, 'trendings' => $trendings, 'category' => $category]);
-        } else{
-            return view('frontend.blog-view', [ 'trendings' => $trendings, 'category' => $category]);
-
+        } else {
+            return view('frontend.blog-view', ['trendings' => $trendings, 'category' => $category]);
         }
-       
+    }
 }
-}
-
-
-

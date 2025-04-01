@@ -295,15 +295,26 @@ Route::middleware(['FrameGuard'])->group(function () {
     Route::get('/services', [servicesController::class, 'getServices'])->name('services');
     Route::get('/training', [trainingController::class, 'get_training'])->name('training');
     Route::get('/resources', [resourcesController::class, 'index'])->name('resources');
-    Route::get('/resources/{slug}', [resourcesViewController::class, 'view'])
-    ->where('slug', '[a-zA-Z0-9-]+') // Ensures only valid slugs match
+    // Route::get('/resources/{slug}', [resourcesViewController::class, 'view'])
+    // ->where('slug', '[a-zA-Z0-9-]+') // Ensures only valid slugs match
+    // ->name('resources-view');
+
+    Route::get('/resources/{category_slug}/{resource_slug}', [resourcesViewController::class, 'view'])
+    ->where(['category_slug' => '[a-zA-Z0-9-]+', 'resource_slug' => '[a-zA-Z0-9-]+'])
     ->name('resources-view');
     Route::get('/resources-view-trending/{id?}', [resourcesViewController::class, 'trendingResourceView'])->name('resources-view-trending');
 
     Route::get('/blogs', [blogController::class, 'index'])->name('blogs');
     // Route::get('/blog-view/{id?}', [blogViewController::class, 'view'])->name('blog-view');
-    Route::get('/blogs/{slug}', [blogViewController::class, 'view'])
-    ->where('slug', '[a-zA-Z0-9-]+') // Ensures only valid slugs match
+    // Route::get('/blogs/{slug}', [blogViewController::class, 'view'])
+    // ->where('slug', '[a-zA-Z0-9-]+') // Ensures only valid slugs match
+    // ->name('blog-view');
+
+    Route::get('/blogs/{category_slug}/{blog_slug}', [BlogViewController::class, 'view'])
+    ->where([
+        'category_slug' => '[a-zA-Z0-9-]+',
+        'blog_slug' => '[a-zA-Z0-9-]+'
+    ])
     ->name('blog-view');
 
     Route::get('/blog-view-trending/{id?}', [blogViewController::class, 'trendingResourceView'])->name('blog-view-trending');
@@ -312,7 +323,11 @@ Route::middleware(['FrameGuard'])->group(function () {
 
     Route::get('/testimonials', [testimonialsController::class, 'index'])->name('testimonials');
     Route::get('/career', [careerController::class, 'index'])->name('careers');
-    Route::get('/career/{slug}', [careerViewController::class, 'view'])->name('careers-view');
+    // Route::get('/career/{slug}', [careerViewController::class, 'view'])->name('careers-view');
+    Route::get('/career/{category_slug}/{career_slug}', [CareerViewController::class, 'view'])
+    ->where(['category_slug' => '[a-zA-Z0-9-]+', 'career_slug' => '[a-zA-Z0-9-]+'])
+    ->name('careers-view');
+
     Route::get('/contact', [contactController::class, 'index'])->name('contact');
     Route::get('/cn-insight', [cnInsightController::class, 'index'])->name('cn-insight');
     Route::get('/l3-template', [l3templateController::class, 'getl3'])->name('l3-template');
@@ -332,7 +347,10 @@ Route::middleware(['FrameGuard'])->group(function () {
     Route::get('/search-resources', [SearchController::class, 'search']);
     Route::get('/newsletter', [NewsLetterMainController::class, 'index'])->name('newsletter.main');
 
-    Route::get('/newsletter/{slug}', [NewsLetteViewsController ::class, 'newLetterView'])->name('newLetter.View'); //trendingNewsLetterView
+    // Route::get('/newsletter/{slug}', [NewsLetteViewsController ::class, 'newLetterView'])->name('newLetter.View'); //trendingNewsLetterView
+    Route::get('/newsletter/{category_slug}/{slug}', [NewsLetteViewsController::class, 'newLetterView'])
+    ->where(['category_slug' => '[a-zA-Z0-9-]+', 'slug' => '[a-zA-Z0-9-]+'])
+    ->name('newLetter.View');
     Route::get('/newsletter/view-trending/{id?}', [NewsLetteViewsController::class, 'trendingNewsLetterView'])->name('newsletter-view-trending');
     Route::get('/podcast', [PodcastController ::class, 'podcast'])->name('podcast.View');
 

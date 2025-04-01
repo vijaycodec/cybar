@@ -66,7 +66,7 @@
                                         <div class="owl-carousel1 owl-carousel owl-theme" id="carousel-{{ $index }}">
                                             @foreach ($category->resources as $resource)
                                                 <div class="item">
-                                                    <a href="{{ route('resources-view', $resource->slug) }}" tabindex="-1">
+                                                    <a href="{{ route('resources-view', ['category_slug' => $category->slug, 'resource_slug' => $resource->slug]) }}" tabindex="-1">
                                                         <div class="card_wrapper">
                                                             <div class="card_img">
                                                                 <div class="cn-hover-box">
@@ -135,8 +135,8 @@
                                     <h2 class="custom-heading">
                                         {{ $resource->sub_category }}
                                     </h2>
-                                    <a href="{{ route('resources-view', $resource->slug) }}"
-                                        class="test_mob_app_btn">
+                                        <a href="{{ route('resources-view', ['category_slug' => $resource->category->slug, 'resource_slug' => $resource->slug]) }}" 
+                                            class="test_mob_app_btn">
                                         Know more
                                     </a>
                                     <img src="{{ asset('assets/images/vapt-services.jpg') }}" class="custom-image">

@@ -68,7 +68,7 @@
                                         <div class="owl-carousel1 owl-carousel owl-theme">
                                             @foreach ($category->careers as $career)
                                                 <div class="item">
-                                                    <a href="{{ route('careers-view', $career->slug) }}" class="career-link">
+                                                    <a href="{{ route('careers-view', ['category_slug' => $category->slug, 'career_slug' => $career->slug]) }}" class="career-link">
                                                         <h4 class="career-heading">{{ $career->subcategory }}</h4>
                                                         <p class="career-detail"><strong>Location :</strong>
                                                             {{ $career->location }}</p>
@@ -114,20 +114,21 @@
                                 </form>
                             </div>
                         </div>
-
                         <!-- Top Viewed Careers -->
                         <div class="offer-sec-inn">
                             <div class="view_blog career-margin-right">
                                 <h4 class="btm-bdr">Top Viewed Career</h4>
                                 <ul class="career-bg-top">
                                     @foreach ($trendings as $career)
-                                        <li><i class="fa fa-caret-right" aria-hidden="true"></i> <a
-                                                href="{{ route('careers-view', $career->slug) }}">{{ $career->subcategory }}</a>
+                                        <li><i class="fa fa-caret-right" aria-hidden="true"></i> 
+                                            <a href="{{ route('careers-view', ['category_slug' => $career->category->slug, 'career_slug' => $career->slug]) }}">
+                                                {{ $career->subcategory }}
+                                            </a>
                                         </li>
                                     @endforeach
                                 </ul>
                             </div>
-                        </div>
+                        </div>                        
                     </div>
                 </div>
             </div>
@@ -149,7 +150,7 @@
                                 <div class="item">
                                     <div class="blog-cat-inn">
                                         <div class="blog-cat">
-                                            <a href="{{ route('careers-view', $career->slug) }}">
+                                             <a href="{{ route('careers-view', ['category_slug' => $career->category->slug, 'career_slug' => $career->slug]) }}">
                                                 <h4>{{ $career->subcategory }}</h4>
                                                 <p>Location : {{ $career->location }} Educational Background :
                                                     {{ $career->educational_background }}</p>
@@ -184,8 +185,8 @@
                 <h4 class="btm-bdr">Top Viewed Career</h4>
                 <ul>
                     @foreach ($trendings as $career)
-                        <li><i class="fa fa-caret-right" aria-hidden="true"></i> <a
-                                href="{{ route('careers-view', $career->slug) }}">{{ $career->subcategory }}</a>
+                        <li><i class="fa fa-caret-right" aria-hidden="true"></i> 
+                            <a href="{{ route('careers-view', ['category_slug' => $career->category->slug, 'career_slug' => $career->slug]) }}">{{ $career->subcategory }}</a>
                         </li>
                     @endforeach
                 </ul>

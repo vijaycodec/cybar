@@ -36,8 +36,14 @@
                 <div class="row">
                     <div class="col-md-12">
                         <ul class="breadcromb-ul">
-                            <li><a href="{{ route('home') }}">Codec Networks</a></li>
+                            <li>
+                                <a href="{{ route('home') }}" style="background-color: #14426e; padding: 0px 6px; display: inline-block;">
+                                    <img src="{{ asset('assets/images/Home-Codec-Networks.png') }}" alt="Home Codec Networks Logo" title="Home Codec Networks">
+                                </a>
+                            </li>  
+                            
                             <li><a href="{{ route('newsletter.main') }}">News Letter </a></li>
+                            <li><a href="javascript:void(0)">{{ $category_slug }}</a></li>
                             <li><a href="javascript:void(0)">{{ $slug }}</a></li>
                         </ul>
                     </div>
@@ -76,7 +82,9 @@
                             <h2 class="custom-heading">
                               {{ $resource->sub_category }}
                             </h2>
-                            <a href="{{ route('newLetter.View', $resource->slug) }}" class="test_mob_app_btn">
+                           
+                            <a href="{{ route('newLetter.View', ['category_slug' => $resource->category->slug, 'slug' => $resource->slug]) }}" 
+                                class="test_mob_app_btn">
                                 Know more
                             </a>
                             <img src="{{ asset('assets/images/vapt-services.jpg') }}" class="custom-image">

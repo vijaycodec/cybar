@@ -44,6 +44,7 @@
                                 </a>
                             </li>                                                   
                             <li><a href="{{ route('blogs') }}">Blog</a></li>
+                            <li><a href="javascript:void(0)">{{ $category_slug }}</a></li>
                             <li><a href="javascript:void(0)">{{ $slug }}</a></li>
                         </ul>
                     </div>
@@ -178,10 +179,9 @@
                         @foreach ($trendings as $index => $resource)
                             <div class="test_mob_app custom-box" style="height: {{ $heights[$index % $totalHeights] }}">
                                 <h2 class="custom-heading">
-                                    {{ $resource->sub_category }}
+                                    {{ $resource->sub_category }} {{ $resource->category->$slug }}
                                 </h2>
-                                <a href="{{ route('blog-view', $resource->slug) }}"
-                                    class="test_mob_app_btn">
+                                <a href="{{ route('blog-view', ['category_slug' => $resource->category->slug, 'blog_slug' => $resource->slug]) }}" class="test_mob_app_btn">
                                     Know more
                                 </a>
                                 <img src="{{ asset('assets/images/vapt-services.jpg') }}" class="custom-image">

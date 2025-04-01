@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('seos', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('page_category_id');
-            $table->unsignedBigInteger('category_id');
-            $table->unsignedBigInteger('sub_category_id');
+            $table->unsignedBigInteger('category_id')->nullable();
+            $table->unsignedBigInteger('sub_category_id')->nullable();
             $table->string('page_name');
-            $table->string('category_name');
-            $table->string('sub_category_name');
+            $table->string('category_name')->nullable();
+            $table->string('sub_category_name')->nullable();
             $table->text('template_name');
             $table->text('seo_title');
             $table->text('seo_description');
