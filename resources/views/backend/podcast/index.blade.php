@@ -40,9 +40,8 @@
                                 <th>#</th>
                                 <th>Category Name</th>
                                 <th>Sub Category Name</th>
+                                <th>slug</th>
                                 <th>Image</th>
-                                <th>Short Description</th>
-                                {{-- <th>Description</th> --}}
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -53,7 +52,7 @@
                                         <td>{{ $podcast->id }}</td>
                                         <td>{{ $podcast->category->name ?? 'N/A' }}</td> 
                                         <td>{{ $podcast->sub_category ?? 'N/A' }}</td>
-                                        
+                                        <td>{{ $podcast->slug ?? 'N/A' }}</td>
                                         <td>
                                             @if ($podcast->images)
                                                 <img src="{{ asset('storage/uploads/backend/podcast/' . $podcast->images) }}"
@@ -62,26 +61,14 @@
                                                 <span>No image available</span>
                                             @endif
                                         </td>
-                                        <td style="max-width: 400px;"> <!-- Increase width here -->
-                                            <!-- Short description (up to 10 words) -->
-                                            <span>{{ $podcast->short_desc }}</span>
-                                        </td>
-                                        {{-- <td style="max-width: 400px;"> <!-- Increase width here -->
-                                            <!-- Short description (up to 10 words) -->
-                                            <span class="description-short">
-                                                {!! $podcast->short_description ?? mb_strimwidth(html_entity_decode($podcast->description), 0, 19, '...') !!}
-                                            </span>
-                                            <!-- Read More button for longer descriptions -->
-                                            @if (str_word_count(strip_tags($podcast->description)) > 19)
-                                                <button class="btn btn-link read-more"
-                                                    data-id="{{ $podcast->category->name }}"
-                                                    data-description="{{ html_entity_decode($podcast->description) }}">Read
-                                                    More</button>
-                                            @endif
-                                        </td> --}}
                                         <td>
                                             <div class="list-icon-function">
-                                                <button type="button" class="show" data-id="{{ $podcast->id }}">
+                                                <button type="button" class="show"
+                                                    data-id="{{ $podcast->category->name ?? 'N/A' }}"
+                                                    data-sub_category="{{ $podcast->sub_category ?? 'N/A' }}"
+                                                    data-video_url="{{ $podcast->video_url ?? 'N/A' }}"
+                                                    data-short_desc="{{ html_entity_decode($podcast->short_desc) ?? 'N/A' }}"
+                                                    data-description="{{ html_entity_decode($podcast->description) ?? 'No description available' }}">
                                                     <div class="item eye">
                                                         <i class="icon-eye"></i>
                                                     </div>
@@ -121,14 +108,26 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content rounded-3 shadow-lg">
                 <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title text-white" id="podcastModalLabel">podcast Details</h5>
+                    <h5 class="modal-title text-white" id="podcastModalLabel">Podcast Details</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-4" style="max-height: 70vh; overflow-y: auto;">
                     <div class="row mb-10">
-                        <div class="col-md-4 fw-bold mb-5">podcast Name:</div>
+                        <div class="col-md-4 fw-bold mb-5">Category Name:</div>
                         <div class="col-md-8" id="modal-podcast-name"></div>
+                    </div>
+                    <div class="row mb-10">
+                        <div class="col-md-4 fw-bold mb-5">Sub Category:</div>
+                        <div class="col-md-8" id="modal-podcast-sub_category"></div>
+                    </div>
+                    <div class="row mb-10">
+                        <div class="col-md-4 fw-bold mb-5">Video URL:</div>
+                        <div class="col-md-8" id="modal-podcast-video_url"></div>
+                    </div>
+                    <div class="row mb-10">
+                        <div class="col-md-4 fw-bold mb-5">Short_desc:</div>
+                        <div class="col-md-8" id="modal-podcast-short_desc"></div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-md-4 fw-bold">Full Description:</div>
@@ -141,53 +140,24 @@
             </div>
         </div>
     </div>
-
-    <div class="modal fade" id="podcastModalShow" tabindex="-1" aria-labelledby="podcastModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content rounded-3 shadow-lg">
-                <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title text-white" id="podcastModalLabel">podcast Details</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body p-4" style="max-height: 70vh; overflow-y: auto;">
-                    <div class="row mb-10">
-                        <div class="col-md-4 fw-bold mb-5">podcast Name:</div>
-                        <div class="col-md-8" id="podcast_name"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold">short Desc:</div>
-                        <div class="col-md-8" id="short_desc" style="line-height: 30px;"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold">Full Description:</div>
-                        <div class="col-md-8" id="description"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold">Created At:</div>
-                        <div class="col-md-8" id="podcasts-created-at"></div>
-                    </div>
-                </div>
-                <div class="modal-footer bg-light">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
 @endsection
 
 @push('scripts')
     <script>
         $(document).ready(function() {
             // Handle Read More button click
-            $(document).on('click', '.read-more', function() {
+            $(document).on('click', '.show', function() {
                 var podcastId = $(this).data('id');
+                var sub_category = $(this).data('sub_category');
+                var video_url = $(this).data('video_url');
+                var short_desc = $(this).data('short_desc');
                 var fullDescription = $(this).data('description');
 
                 // Set the full description in the modal
                 $('#modal-podcast-name').text(podcastId); // to do category name instead of podcast Id 
+                $('#modal-podcast-sub_category').text(sub_category);
+                $('#modal-podcast-video_url').text(video_url);
+                $('#modal-podcast-short_desc').text(short_desc);
                 $('#modal-podcast-description').html(fullDescription);
 
                 // Show the modal
@@ -234,33 +204,6 @@
                                 );
                             }
                         });
-                    }
-                });
-            });
-        });
-    </script>
-
-    {{-- script for update  --}}
-    <script>
-        $(document).ready(function() {
-            // Show permission details in modal
-            $(document).on('click', '.show', function() {
-                var podcastsId = $(this).data('id');
-                $.ajax({
-                    url: "{{ route('podcast.show', ':id') }}".replace(':id', podcastsId),
-                    method: "GET",
-                    success: function(podcast) {
-                        // Correctly access properties with a hyphen
-                        $('#podcast_name').text(podcast
-                            .podcast_name); // Use default value if undefined
-                        $('#short_desc').text(response.short_desc); // Handle null or undefined
-                        $('#description').html(response.description);
-                        $('#podcasts-created-at').text(response.created_at);
-                        $('#podcastModalShow').modal('show');
-
-                    },
-                    error: function() {
-                        Swal.fire('Error!', 'Unable to fetch podcasts details.', 'error');
                     }
                 });
             });

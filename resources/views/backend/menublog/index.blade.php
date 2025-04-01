@@ -42,8 +42,6 @@
                                 <th>Sub Category Name</th>
                                 <th>Sub Category Slug</th>
                                 <th>Image</th>
-                                <th>Short Description</th>
-                                <th>Description</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -52,9 +50,9 @@
                                 @foreach ($blogs as $blog)
                                     <tr>
                                         <td>{{ $blog->id }}</td>
-                                        <td>{{ $blog->category->name ?? 'N/A' }}</td> 
+                                        <td>{{ $blog->category->name ?? 'N/A' }}</td>
                                         <td>{{ $blog->sub_category ?? 'N/A' }}</td>
-                                        <td>{{ $blog->slug ?? 'N/A' }}</td>    
+                                        <td>{{ $blog->slug ?? 'N/A' }}</td>
                                         <td>
                                             @if ($blog->images)
                                                 <img src="{{ asset('storage/uploads/backend/blog/' . $blog->images) }}"
@@ -63,38 +61,25 @@
                                                 <span>No image available</span>
                                             @endif
                                         </td>
-                                        <td style="max-width: 400px;"> <!-- Increase width here -->
-                                            <!-- Short description (up to 10 words) -->
-                                            <span>{{ $blog->short_desc }}</span>
-                                        </td>
-                                        <td style="max-width: 400px;"> <!-- Increase width here -->
-                                            <!-- Short description (up to 10 words) -->
-                                            {{-- <span class="description-short">
-                                                {!! $blog->short_description ?? mb_strimwidth(html_entity_decode($blog->description), 0, 19, '...') !!}
-                                            </span> --}}
-                                            <!-- Read More button for longer descriptions -->
-                                            @if (str_word_count(strip_tags($blog->description)) > 5)
-                                                <button class="btn btn-link read-more"
-                                                    data-id="{{ $blog->category->name }}"
-                                                    data-description="{{ html_entity_decode($blog->description) }}">Read
-                                                    More</button>
-                                            @endif
-                                        </td>
                                         <td>
                                             <div class="list-icon-function">
-                                                <button type="button" class="show" data-id="{{ $blog->id }}">
-                                                    <div class="item eye">
-                                                        <i class="icon-eye"></i>
-                                                    </div>
-                                                </button>
+                                            <button type="button" class="show"
+                                                data-id="{{ $blog->category->name ?? 'N/A' }}"
+                                                data-sub_category="{{ $blog->sub_category ?? 'N/A' }}"
+                                                data-short_desc="{{ html_entity_decode($blog->short_desc) ?? 'N/A' }}"
+                                                data-description="{{ html_entity_decode($blog->description) ?? 'No description available' }}">
+                                                <div class="item eye">
+                                                    <i class="icon-eye"></i>
+                                                </div>
+                                            </button>
                                                 <a href="{{ route('menublog.edit', $blog->id) }}">
                                                     <div class="item edit">
                                                         <i class="icon-edit-3"></i>
                                                     </div>
                                                 </a> <button type="button" class="delete" data-id="{{ $blog->id }}">
-                                                <div class="item text-danger">
-                                                    <i class="icon-trash-2"></i>
-                                                </div>
+                                                    <div class="item text-danger">
+                                                        <i class="icon-trash-2"></i>
+                                                    </div>
                                                 </button>
                                             </div>
                                         </td>
@@ -128,8 +113,16 @@
                 </div>
                 <div class="modal-body p-4" style="max-height: 70vh; overflow-y: auto;">
                     <div class="row mb-10">
-                        <div class="col-md-4 fw-bold mb-5">blog Name:</div>
+                        <div class="col-md-4 fw-bold mb-5">Blog Name:</div>
                         <div class="col-md-8" id="modal-blog-name"></div>
+                    </div>
+                    <div class="row mb-10">
+                        <div class="col-md-4 fw-bold mb-5">Sub Category:</div>
+                        <div class="col-md-8" id="modal-blog-sub_category"></div>
+                    </div>
+                    <div class="row mb-10">
+                        <div class="col-md-4 fw-bold mb-5">Short Desc:</div>
+                        <div class="col-md-8" id="modal-blog-short_desc"></div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-md-4 fw-bold">Full Description:</div>
@@ -142,53 +135,22 @@
             </div>
         </div>
     </div>
-
-    <div class="modal fade" id="blogModalShow" tabindex="-1" aria-labelledby="blogModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content rounded-3 shadow-lg">
-                <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title text-white" id="blogModalLabel">blog Details</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body p-4" style="max-height: 70vh; overflow-y: auto;">
-                    <div class="row mb-10">
-                        <div class="col-md-4 fw-bold mb-5">blog Name:</div>
-                        <div class="col-md-8" id="blog_name"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold">short Desc:</div>
-                        <div class="col-md-8" id="short_desc" style="line-height: 30px;"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold">Full Description:</div>
-                        <div class="col-md-8" id="description"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-4 fw-bold">Created At:</div>
-                        <div class="col-md-8" id="blogs-created-at"></div>
-                    </div>
-                </div>
-                <div class="modal-footer bg-light">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
 @endsection
 
 @push('scripts')
     <script>
         $(document).ready(function() {
             // Handle Read More button click
-            $(document).on('click', '.read-more', function() {
+            $(document).on('click', '.show', function() {
                 var blogId = $(this).data('id');
+                var subcategory = $(this).data('sub_category');
+                var short_desc = $(this).data('short_desc');
                 var fullDescription = $(this).data('description');
 
                 // Set the full description in the modal
                 $('#modal-blog-name').text(blogId); // to do category name instead of blog Id 
+                $('#modal-blog-sub_category').html(subcategory);
+                $('#modal-blog-short_desc').html(short_desc);
                 $('#modal-blog-description').html(fullDescription);
 
                 // Show the modal
@@ -235,33 +197,6 @@
                                 );
                             }
                         });
-                    }
-                });
-            });
-        });
-    </script>
-
-    {{-- script for update  --}}
-    <script>
-        $(document).ready(function() {
-            // Show permission details in modal
-            $(document).on('click', '.show', function() {
-                var blogsId = $(this).data('id');
-                $.ajax({
-                    url: "{{ route('menublog.show', ':id') }}".replace(':id', blogsId),
-                    method: "GET",
-                    success: function(blog) {
-                        // Correctly access properties with a hyphen
-                        $('#blog_name').text(blog
-                            .blog_name); // Use default value if undefined
-                        $('#short_desc').text(response.short_desc); // Handle null or undefined
-                        $('#description').html(response.description);
-                        $('#blogs-created-at').text(response.created_at);
-                        $('#blogModalShow').modal('show');
-
-                    },
-                    error: function() {
-                        Swal.fire('Error!', 'Unable to fetch blogs details.', 'error');
                     }
                 });
             });
