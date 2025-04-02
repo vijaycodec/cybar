@@ -110,7 +110,7 @@
         </div>--><!-- /recovery links -->
         </form><!-- /.auth-form -->
         <!-- copyright -->
-        <footer class="auth-footer"> 2024 © CYBAR WIND CRM.</footer>
+        <footer class="auth-footer"> 2025 © CYBAR WIND CMS.</footer>
     </main><!-- /.auth -->
     <!-- BEGIN BASE JS -->
     <script src="assets2/vendor/jquery/jquery.min.js"></script>
