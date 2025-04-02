@@ -56,7 +56,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::middleware(['auth','admin','prevent_history'])->group(function () {
+Route::middleware(['auth', 'admin', 'prevent_history'])->group(function () {
 
     Route::get('/logout', [AuthController::class, 'logout'])->name('admin.logout');
 
@@ -137,8 +137,8 @@ Route::middleware(['auth','admin','prevent_history'])->group(function () {
     Route::put('l3-content/update/{id}', [l3_contentController::class, 'update'])->name('l3-content.update');
     Route::delete('l3-content/delete/{id}', [l3_contentController::class, 'destroy'])->name('l3-content.destroy');
     //category and sub-category and L3 Dependent Routes 
-    Route::get('content/l3-get-categories', [l3_contentController::class, 'l3GetL3Categories'])->name('l3-get-l3categories') ->middleware('throttle:10,1'); // 10 requests per minute;
-    
+    Route::get('content/l3-get-categories', [l3_contentController::class, 'l3GetL3Categories'])->name('l3-get-l3categories')->middleware('throttle:10,1'); // 10 requests per minute;
+
     // corporate training Routes
     route::get('/corporate-training/list', [corporateController::class, 'index'])->name('corporate-training.list');
     route::get('/corporate-training/create/{pageId}', [corporateController::class, 'create'])->name('corporate-training.create');
@@ -194,11 +194,11 @@ Route::middleware(['auth','admin','prevent_history'])->group(function () {
     Route::put('seo-details/update/{id}', [seoController::class, 'update'])->name('seo-details.update');
     Route::delete('seo-details/delete/{id}', [seoController::class, 'destroy'])->name('seo-details.destroy');
 
-     // L3 category and sub-category Dependent Routes 
-     Route::get('/seo-get-categories', [seoController::class, 'SeoGetCategories'])->name('seo-get-categories');
-     Route::get('/seo-get-subcategories', [seoController::class, 'SeoGetSubCategories'])->name('seo-get-subcategories');
+    // L3 category and sub-category Dependent Routes 
+    Route::get('/seo-get-categories', [seoController::class, 'SeoGetCategories'])->name('seo-get-categories');
+    Route::get('/seo-get-subcategories', [seoController::class, 'SeoGetSubCategories'])->name('seo-get-subcategories');
 
-     // newsletter Routes
+    // newsletter Routes
     route::get('/newsletter/list', [NewsLetterController::class, 'index'])->name('newsletter.list');
     route::get('/newsletter/create', [NewsLetterController::class, 'create'])->name('newsletter.create');
     route::post('/newsletter/store', [NewsLetterController::class, 'store'])->name('newsletter.store');
@@ -254,87 +254,94 @@ Route::middleware(['auth','admin','prevent_history'])->group(function () {
     Route::put('industry/update/{id}', [industriesController::class, 'update'])->name('industry.update');
     Route::delete('industry/delete/{id}', [industriesController::class, 'destroy'])->name('industry.destroy');
 
-        //cyberwind-sub category Routes
-        route::get('/cyberwind/list', [cyberwimdController::class, 'index'])->name('cyberwind.list');
-        route::get('/cyberwind/create', [cyberwimdController::class, 'create'])->name('cyberwind.create');
-        route::post('/cyberwind/store', [cyberwimdController::class, 'store'])->name('cyberwind.store');
-        Route::get('/cyberwind/show/{id}', [cyberwimdController::class, 'show'])->name('cyberwind.show');
-        route::get('/cyberwind/edit/{id}', [cyberwimdController::class, 'edit'])->name('cyberwind.edit');
-        Route::put('cyberwind/update/{id}', [cyberwimdController::class, 'update'])->name('cyberwind.update');
-        Route::delete('cyberwind/delete/{id}', [cyberwimdController::class, 'destroy'])->name('cyberwind.destroy');
-    
-        //blog-sub category Routes
-        route::get('/blog/list', [blogsubCategoryController::class, 'index'])->name('blog.list');
-        route::get('/blog/create', [blogsubCategoryController::class, 'create'])->name('blog.create');
-        route::post('/blog/store', [blogsubCategoryController::class, 'store'])->name('blog.store');
-        Route::get('/blog/show/{id}', [blogsubCategoryController::class, 'show'])->name('blog.show');
-        route::get('/blog/edit/{id}', [blogsubCategoryController::class, 'edit'])->name('blog.edit');
-        Route::put('blog/update/{id}', [blogsubCategoryController::class, 'update'])->name('blog.update');
-        Route::delete('blog/delete/{id}', [blogsubCategoryController::class, 'destroy'])->name('blog.destroy');
-    
-        //faq-sub category Routes
-        route::get('/faq/list', [faqController::class, 'index'])->name('faq.list');
-        route::get('/faq/create', [faqController::class, 'create'])->name('faq.create');
-        route::post('/faq/store', [faqController::class, 'store'])->name('faq.store');
-        Route::get('/faq/show/{id}', [faqController::class, 'show'])->name('faq.show');
-        route::get('/faq/edit/{id}', [faqController::class, 'edit'])->name('faq.edit');
-        Route::put('faq/update/{id}', [faqController::class, 'update'])->name('faq.update');
-        Route::delete('faq/delete/{id}', [faqController::class, 'destroy'])->name('faq.destroy');
+    //cyberwind-sub category Routes
+    route::get('/cyberwind/list', [cyberwimdController::class, 'index'])->name('cyberwind.list');
+    route::get('/cyberwind/create', [cyberwimdController::class, 'create'])->name('cyberwind.create');
+    route::post('/cyberwind/store', [cyberwimdController::class, 'store'])->name('cyberwind.store');
+    Route::get('/cyberwind/show/{id}', [cyberwimdController::class, 'show'])->name('cyberwind.show');
+    route::get('/cyberwind/edit/{id}', [cyberwimdController::class, 'edit'])->name('cyberwind.edit');
+    Route::put('cyberwind/update/{id}', [cyberwimdController::class, 'update'])->name('cyberwind.update');
+    Route::delete('cyberwind/delete/{id}', [cyberwimdController::class, 'destroy'])->name('cyberwind.destroy');
+
+    //blog-sub category Routes
+    route::get('/blog/list', [blogsubCategoryController::class, 'index'])->name('blog.list');
+    route::get('/blog/create', [blogsubCategoryController::class, 'create'])->name('blog.create');
+    route::post('/blog/store', [blogsubCategoryController::class, 'store'])->name('blog.store');
+    Route::get('/blog/show/{id}', [blogsubCategoryController::class, 'show'])->name('blog.show');
+    route::get('/blog/edit/{id}', [blogsubCategoryController::class, 'edit'])->name('blog.edit');
+    Route::put('blog/update/{id}', [blogsubCategoryController::class, 'update'])->name('blog.update');
+    Route::delete('blog/delete/{id}', [blogsubCategoryController::class, 'destroy'])->name('blog.destroy');
+
+    //faq-sub category Routes
+    route::get('/faq/list', [faqController::class, 'index'])->name('faq.list');
+    route::get('/faq/create', [faqController::class, 'create'])->name('faq.create');
+    route::post('/faq/store', [faqController::class, 'store'])->name('faq.store');
+    Route::get('/faq/show/{id}', [faqController::class, 'show'])->name('faq.show');
+    route::get('/faq/edit/{id}', [faqController::class, 'edit'])->name('faq.edit');
+    Route::put('faq/update/{id}', [faqController::class, 'update'])->name('faq.update');
+    Route::delete('faq/delete/{id}', [faqController::class, 'destroy'])->name('faq.destroy');
 
 
-        Route::middleware(['auth'])->group(function () {
-            Route::get('/change-password', [ChangePasswordController::class, 'showChangePasswordForm'])->name('password.change');
-            Route::post('/change-password', [ChangePasswordController::class, 'updatePassword'])->name('password.update');
-        });
-
+    Route::middleware(['auth'])->group(function () {
+        Route::get('/change-password', [ChangePasswordController::class, 'showChangePasswordForm'])->name('password.change');
+        Route::post('/change-password', [ChangePasswordController::class, 'updatePassword'])->name('password.update');
+    });
 });
 
 
 Route::middleware(['FrameGuard'])->group(function () {
     Route::get('/', [homeController::class, 'index'])->name('home');
-    Route::get('/services/{category?}', [servicesController::class, 'getServices'])
-    ->where('category', '[A-Za-z0-9-]+') // Allow slugs
-    ->name('services');
-    // Route::get('/training', [trainingController::class, 'get_training'])->name('training');
-    Route::get('/training/{category?}', [TrainingController::class, 'get_training'])
-    ->where('category', '[A-Za-z0-9-]+') // Allow slugs
-    ->name('training');
-    Route::get('/resources', [resourcesController::class, 'index'])->name('resources');
-    // Route::get('/resources/{slug}', [resourcesViewController::class, 'view'])
-    // ->where('slug', '[a-zA-Z0-9-]+') // Ensures only valid slugs match
-    // ->name('resources-view');
 
+    Route::middleware(['TrackPage'])->group(function () {
+
+        Route::get('/services/{category?}', [servicesController::class, 'getServices'])
+            ->where('category', '[A-Za-z0-9-]+') // Allow slugs
+            ->name('services');
+        // Route::get('/training', [trainingController::class, 'get_training'])->name('training');
+        Route::get('/training/{category?}', [TrainingController::class, 'get_training'])
+            ->where('category', '[A-Za-z0-9-]+') // Allow slugs
+            ->name('training');
+        Route::get('/resources', [resourcesController::class, 'index'])->name('resources');
+        // Route::get('/resources/{slug}', [resourcesViewController::class, 'view'])
+        // ->where('slug', '[a-zA-Z0-9-]+') // Ensures only valid slugs match
+        // ->name('resources-view');
+
+        Route::get('/blogs', [blogController::class, 'index'])->name('blogs');
+        Route::get('/events', [eventController::class, 'index'])->name('events');
+        Route::get('/career', [careerController::class, 'index'])->name('careers');
+        Route::get('/cn-insight', [cnInsightController::class, 'index'])->name('cn-insight');
+        Route::get('/newsletter', [NewsLetterMainController::class, 'index'])->name('newsletter.main');
+
+
+    });
     Route::get('/resources/{category_slug}/{resource_slug}', [resourcesViewController::class, 'view'])
-    ->where(['category_slug' => '[a-zA-Z0-9-]+', 'resource_slug' => '[a-zA-Z0-9-]+'])
-    ->name('resources-view');
+        ->where(['category_slug' => '[a-zA-Z0-9-]+', 'resource_slug' => '[a-zA-Z0-9-]+'])
+        ->name('resources-view');
     Route::get('/resources-view-trending/{id?}', [resourcesViewController::class, 'trendingResourceView'])->name('resources-view-trending');
 
-    Route::get('/blogs', [blogController::class, 'index'])->name('blogs');
+   
     // Route::get('/blog-view/{id?}', [blogViewController::class, 'view'])->name('blog-view');
     // Route::get('/blogs/{slug}', [blogViewController::class, 'view'])
     // ->where('slug', '[a-zA-Z0-9-]+') // Ensures only valid slugs match
     // ->name('blog-view');
 
     Route::get('/blogs/{category_slug}/{blog_slug}', [BlogViewController::class, 'view'])
-    ->where([
-        'category_slug' => '[a-zA-Z0-9-]+',
-        'blog_slug' => '[a-zA-Z0-9-]+'
-    ])
-    ->name('blog-view');
+        ->where([
+            'category_slug' => '[a-zA-Z0-9-]+',
+            'blog_slug' => '[a-zA-Z0-9-]+'
+        ])
+        ->name('blog-view');
 
     Route::get('/blog-view-trending/{id?}', [blogViewController::class, 'trendingResourceView'])->name('blog-view-trending');
-    Route::get('/events', [eventController::class, 'index'])->name('events');
     Route::get('/events/{slug}', [eventViewController::class, 'view'])->name('events-view');
 
     Route::get('/testimonials', [testimonialsController::class, 'index'])->name('testimonials');
-    Route::get('/career', [careerController::class, 'index'])->name('careers');
     // Route::get('/career/{slug}', [careerViewController::class, 'view'])->name('careers-view');
     Route::get('/career/{category_slug}/{career_slug}', [CareerViewController::class, 'view'])
-    ->where(['category_slug' => '[a-zA-Z0-9-]+', 'career_slug' => '[a-zA-Z0-9-]+'])
-    ->name('careers-view');
+        ->where(['category_slug' => '[a-zA-Z0-9-]+', 'career_slug' => '[a-zA-Z0-9-]+'])
+        ->name('careers-view');
 
     Route::get('/contact', [contactController::class, 'index'])->name('contact');
-    Route::get('/cn-insight', [cnInsightController::class, 'index'])->name('cn-insight');
     Route::get('/l3-template', [l3templateController::class, 'getl3'])->name('l3-template');
 
     Route::get('/login', [loginController::class, 'login'])->name('login');
@@ -345,23 +352,19 @@ Route::middleware(['FrameGuard'])->group(function () {
     Route::get('/template2', [templateController::class, 'template2'])->name('template2');
     Route::get('/fraud-detection', [templateController::class, 'fraudDetection'])->name('fraud-detection');
 
-    Route::post('/submit-enquiry', [EnquiryController ::class, 'submitEnquiry'])->name('submit.enquiry');
+    Route::post('/submit-enquiry', [EnquiryController::class, 'submitEnquiry'])->name('submit.enquiry');
     Route::post('/comment/user', [commentController::class, 'store'])->name('resources-comment.store');
     Route::post('/career/jobs', [jobCarrerController::class, 'store'])->name('job.career.store');
 
     Route::get('/search-resources', [SearchController::class, 'search']);
-    Route::get('/newsletter', [NewsLetterMainController::class, 'index'])->name('newsletter.main');
 
     // Route::get('/newsletter/{slug}', [NewsLetteViewsController ::class, 'newLetterView'])->name('newLetter.View'); //trendingNewsLetterView
     Route::get('/newsletter/{category_slug}/{slug}', [NewsLetteViewsController::class, 'newLetterView'])
-    ->where(['category_slug' => '[a-zA-Z0-9-]+', 'slug' => '[a-zA-Z0-9-]+'])
-    ->name('newLetter.View');
+        ->where(['category_slug' => '[a-zA-Z0-9-]+', 'slug' => '[a-zA-Z0-9-]+'])
+        ->name('newLetter.View');
     Route::get('/newsletter/view-trending/{id?}', [NewsLetteViewsController::class, 'trendingNewsLetterView'])->name('newsletter-view-trending');
-    Route::get('/podcast', [PodcastController ::class, 'podcast'])->name('podcast.View');
+    Route::get('/podcast', [PodcastController::class, 'podcast'])->name('podcast.View');
 
     Route::get('/download-brochure/{file}', [BrochurePdfController::class, 'download'])
-    ->name('download.brochure');
-
+        ->name('download.brochure');
 });
-
-

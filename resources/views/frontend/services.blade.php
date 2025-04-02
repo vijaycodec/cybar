@@ -38,17 +38,17 @@
                                 <ul class="case1-tab">
 
                                     @foreach ($categories as $category)
-                                        {{-- <li><a class="{{ $loop->first ? 'active' : ' ' }}"
+                                        <li><a class="{{ $loop->first ? 'active' : ' ' }}"
                                                 href="#{{ Str::slug($category->name) }}">{{ $category->name }}</a>
-                                        </li> --}}
-                                        <li>
+                                        </li>
+                                        {{-- <li>
                                             <a href="javascript:void(0);"
                                                 class="{{ request()->segment(2) === Str::slug($category->name) ? 'active' : '' }} {{ $loop->first ? 'active' : ' ' }}"
                                                 data-category="{{ Str::slug($category->name) }}"
                                                 onclick="updateURL('{{ Str::slug($category->name) }}')">
                                                 {{ $category->name }}
                                             </a>
-                                        </li>
+                                        </li> --}}
                                     @endforeach
                                 </ul>
 
@@ -452,7 +452,7 @@
 
 
 
-<script>
+{{-- <script>
     document.addEventListener("DOMContentLoaded", function() {
         let pathSegments = window.location.pathname.split('/');
         let category = pathSegments[2]; // Extract category name from URL
@@ -502,5 +502,5 @@
             }
         }
     }
-</script>
+</script> --}}
 @endpush

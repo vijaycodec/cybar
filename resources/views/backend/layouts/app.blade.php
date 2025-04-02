@@ -88,7 +88,7 @@
                     </div>
                     <div class="center">
                         <div class="center-item">
-                            <div class="center-heading">Main Home</div>
+                            {{-- <div class="center-heading">Main Home</div> --}}
                             <ul class="menu-list">
                                 <li class="menu-item">
                                     <a href="{{ route('admin.dashboard') }}" class="">
@@ -125,7 +125,7 @@
                                     </ul>
                                 </li>
             
-                                <li class="menu-item has-children">
+                                {{-- <li class="menu-item has-children">
                                     <a href="javascript:void(0);" class="menu-item-button">
                                         <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
                                                 style="height:18px"></div>
@@ -147,9 +147,9 @@
                                         </li>
             
                                     </ul>
-                                </li>
+                                </li> --}}
 
-                                <li class="menu-item has-children">
+                                {{-- <li class="menu-item has-children">
                                     <a href="javascript:void(0);" class="menu-item-button">
                                         <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
                                                 style="height:18px"></div>
@@ -171,9 +171,9 @@
                                         </li>
             
                                     </ul>
-                                </li>
+                                </li> --}}
 
-                                <li class="menu-item has-children">
+                                {{-- <li class="menu-item has-children">
                                     <a href="javascript:void(0);" class="menu-item-button">
                                         <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
                                                 style="height:18px"></div>
@@ -195,9 +195,9 @@
                                         </li>
             
                                     </ul>
-                                </li>
+                                </li> --}}
 
-                                <li class="menu-item has-children">
+                                {{-- <li class="menu-item has-children">
                                     <a href="javascript:void(0);" class="menu-item-button">
                                         <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
                                                 style="height:18px"></div>
@@ -219,9 +219,9 @@
                                         </li>
             
                                     </ul>
-                                </li>
+                                </li> --}}
 
-                                <li class="menu-item has-children">
+                                {{-- <li class="menu-item has-children">
                                     <a href="javascript:void(0);" class="menu-item-button">
                                         <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
                                                 style="height:18px"></div>
@@ -243,9 +243,9 @@
                                         </li>
             
                                     </ul>
-                                </li>
+                                </li> --}}
 
-                                <li class="menu-item has-children">
+                                {{-- <li class="menu-item has-children">
                                     <a href="javascript:void(0);" class="menu-item-button">
                                         <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
                                                 style="height:18px"></div>
@@ -267,31 +267,9 @@
                                         </li>
             
                                     </ul>
-                                </li>
+                                </li> --}}
 
-                                <li class="menu-item has-children">
-                                    <a href="javascript:void(0);" class="menu-item-button">
-                                        <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
-                                                style="height:18px"></div>
-                                        <div class="text">Podcasts</div>
-                                    </a>
-            
-                                    <ul class="sub-menu">
-                                        <li class="sub-menu-item">
-                                            <a href="{{ route('podcast.list') }}" class="">
-                                                <div class="text">Podcasts List</div>
-                                            </a>
-                                        </li>
-            
-            
-                                        <li class="sub-menu-item">
-                                            <a href="{{ route('podcast.create') }}" class="">
-                                                <div class="text">Add Podcasts</div>
-                                            </a>
-                                        </li>
-            
-                                    </ul>
-                                </li>
+                              
 
                                 <li class="menu-item has-children">
                                     <a href="javascript:void(0);" class="menu-item-button">
@@ -320,13 +298,13 @@
                                     <a href="javascript:void(0);" class="menu-item-button">
                                         <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
                                                 style="height:18px"></div>
-                                        <div class="text"> Sub Category</div>
+                                        <div class="text">Sub Category</div>
                                     </a>
             
                                     <ul class="sub-menu">
                                         <li class="sub-menu-item">
                                             <a href="{{ route('sub-category.list') }}" class="">
-                                                <div class="text"> Sub Categories List</div>
+                                                <div class="text">Sub Categories List</div>
                                             </a>
                                         </li>
             
@@ -341,7 +319,7 @@
                                     </ul>
                                 </li>
 
-                                <li class="menu-item has-children">
+                                {{-- <li class="menu-item has-children">
                                     <a href="javascript:void(0);" class="menu-item-button">
                                         <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
                                                 style="height:18px"></div>
@@ -356,17 +334,15 @@
                                         </li>
             
                                         <li class="sub-menu-item">
-                                            {{-- <a href="{{ route('our-services.create, ['pageId' => 1]') }}" class="">
-                                                <div class="text">Our Services </div>
-                                            </a> --}}
+                                           
                                             <a href="{{ route('our-services.create', ['pageId' => 1]) }}" class=""> <div class="text">Our Services </div></a>
 
                                         </li>
             
                                     </ul>
-                                </li>
+                                </li> --}}
 
-                                <li class="menu-item has-children">
+                                {{-- <li class="menu-item has-children">
                                     <a href="javascript:void(0);" class="menu-item-button">
                                         <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
                                                 style="height:18px"></div>
@@ -381,38 +357,14 @@
                                         </li>
             
                                         <li class="sub-menu-item">
-                                            {{-- <a href="{{ route('our-services.create, ['pageId' => 1]') }}" class="">
-                                                <div class="text">Our Services </div>
-                                            </a> --}}
+                                            
                                             <a href="{{ route('corporate-training.create', ['pageId' => 2]) }}" class=""> <div class="text">Add Corporate Training </div></a>
 
                                         </li>
             
                                     </ul>
-                                </li>
+                                </li> --}}
 
-                                <li class="menu-item has-children">
-                                    <a href="javascript:void(0);" class="menu-item-button">
-                                        <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
-                                                style="height:18px"></div>
-                                        <div class="text">SEO Details</div>
-                                    </a>
-            
-                                    <ul class="sub-menu">
-                                        <li class="sub-menu-item">
-                                            <a href="{{ route('seo-details.list') }}" class="">
-                                                <div class="text"> SEO Details List</div>
-                                            </a>
-                                        </li>
-
-                                        <li class="sub-menu-item">
-                                            {{-- <a href="{{ route('our-services.create, ['pageId' => 1]') }}" class="">
-                                                <div class="text">Our Services </div>
-                                            </a> --}}
-                                            <a href="{{ route('seo-details.create') }}" class=""> <div class="text">Add L3 Category </div></a>
-                                        </li>
-                                    </ul>
-                                </li>
 
                                 <li class="menu-item has-children">
                                     <a href="javascript:void(0);" class="menu-item-button">
@@ -435,38 +387,6 @@
                                             <a href="{{ route('l3-category.create') }}" class=""> <div class="text">Add L3 Category </div></a>
                                         </li>
                                     </ul>
-                                </li>
-
-                                <li class="menu-item has-children">
-                                    <a href="javascript:void(0);" class="menu-item-button">
-                                        <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
-                                                style="height:18px"></div>
-                                        <div class="text">L3 Content</div>
-                                    </a>
-            
-                                    <ul class="sub-menu">
-                                        <li class="sub-menu-item">
-                                            <a href="{{ route('l3-content.list') }}" class="">
-                                                <div class="text"> L3 Content List</div>
-                                            </a>
-                                        </li>
-
-                                        <li class="sub-menu-item">
-                                            {{-- <a href="{{ route('our-services.create, ['pageId' => 1]') }}" class="">
-                                                <div class="text">Our Services </div>
-                                            </a> --}}
-                                            <a href="{{ route('l3-content.create') }}" class=""> <div class="text">Add L3 Content </div></a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li class="menu-item has-children">
-                                    <a href="{{ route('resources-comment.list') }}" class="menu-item-button">
-                                        <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="" style="height:18px">
-                                        </div>
-                                        <div class="text">Comments</div>
-                                    </a>
-            
                                 </li>
 
                                 <li class="menu-item has-children">
@@ -558,6 +478,87 @@
                                     </ul>
 
                                 </li>
+
+                                <li class="menu-item has-children">
+                                    <a href="javascript:void(0);" class="menu-item-button">
+                                        <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
+                                                style="height:18px"></div>
+                                        <div class="text">L3 Content</div>
+                                    </a>
+            
+                                    <ul class="sub-menu">
+                                        <li class="sub-menu-item">
+                                            <a href="{{ route('l3-content.list') }}" class="">
+                                                <div class="text"> L3 Content List</div>
+                                            </a>
+                                        </li>
+
+                                        <li class="sub-menu-item">
+                                            {{-- <a href="{{ route('our-services.create, ['pageId' => 1]') }}" class="">
+                                                <div class="text">Our Services </div>
+                                            </a> --}}
+                                            <a href="{{ route('l3-content.create') }}" class=""> <div class="text">Add L3 Content </div></a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="menu-item has-children">
+                                    <a href="javascript:void(0);" class="menu-item-button">
+                                        <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
+                                                style="height:18px"></div>
+                                        <div class="text">Podcasts</div>
+                                    </a>
+            
+                                    <ul class="sub-menu">
+                                        <li class="sub-menu-item">
+                                            <a href="{{ route('podcast.list') }}" class="">
+                                                <div class="text">Podcasts List</div>
+                                            </a>
+                                        </li>
+            
+            
+                                        <li class="sub-menu-item">
+                                            <a href="{{ route('podcast.create') }}" class="">
+                                                <div class="text">Add Podcasts</div>
+                                            </a>
+                                        </li>
+            
+                                    </ul>
+                                </li>
+
+                                <li class="menu-item has-children">
+                                    <a href="javascript:void(0);" class="menu-item-button">
+                                        <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
+                                                style="height:18px"></div>
+                                        <div class="text">SEO Details</div>
+                                    </a>
+            
+                                    <ul class="sub-menu">
+                                        <li class="sub-menu-item">
+                                            <a href="{{ route('seo-details.list') }}" class="">
+                                                <div class="text"> SEO Details List</div>
+                                            </a>
+                                        </li>
+
+                                        <li class="sub-menu-item">
+                                            {{-- <a href="{{ route('our-services.create, ['pageId' => 1]') }}" class="">
+                                                <div class="text">Our Services </div>
+                                            </a> --}}
+                                            <a href="{{ route('seo-details.create') }}" class=""> <div class="text">Add L3 Category </div></a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="menu-item has-children">
+                                    <a href="{{ route('resources-comment.list') }}" class="menu-item-button">
+                                        <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="" style="height:18px">
+                                        </div>
+                                        <div class="text">Comments</div>
+                                    </a>
+            
+                                </li>
+
+                               
             
                                 {{-- <li class="menu-item">
                                 <a href="users.html" class="">
@@ -593,7 +594,7 @@
                             <div class="header-left">
                                 <a href="index-2.html">
                                     <img class="" id="logo_header_mobile" alt=""
-                                        src="{{ asset('backend/assets/images/logo/logo.png') }}"
+                                        src="{{ asset('backend/assets/images/logo/cybarwind-logo.png') }}"
                                         data-light="images/logo/logo.png" data-dark="images/logo/logo.png"
                                         data-width="154px" data-height="52px" data-retina="images/logo/logo.png">
                                 </a>
@@ -749,24 +750,6 @@
                     </div>
                     {{-- main content  div --}}
                     <div class="main-content">
-                        <!-- Success Message -->
-                        @if (session('success'))
-                            <div class="alert alert-success" style="font-size: 20px">
-                                {{ session('success') }}
-                            </div>
-                        @endif
-
-                        <!-- Error Message -->
-                        @if ($errors->any())
-                            <div class="alert alert-danger" style="font-size: 20px">
-                                <ul class="mb-0">
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
-
                         @yield('content')
 
                         <div class="bottom-page bottom-margin">
