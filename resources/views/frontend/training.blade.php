@@ -20,21 +20,21 @@
                                 <div class="ecsp_div">
                                     <ul class="tab2">
                                         @foreach ($categories as $category)
-                                            {{-- <li id="li_border">
+                                            <li id="li_border">
                                                 <a class="tablinks1 {{ $loop->first ? 'active' : ' ' }}"
                                                     href="#{{ Str::slug($category->name) }}"
                                                     onclick="openCity(event, '{{ Str::slug($category->name) }}')">
                                                     {{ $category->name }}
                                                 </a>
-                                            </li> --}}
-                                            <li id="li_border">
+                                            </li>
+                                            {{-- <li id="li_border">
                                                 <a class="tablinks1 {{ $loop->first ? 'active' : '' }}"
                                                     href="javascript:void(0);"
                                                     data-category="{{ Str::slug($category->name) }}"
                                                     onclick="updateURLAndOpenCity(event, '{{ Str::slug($category->name) }}')">
                                                     {{ $category->name }}
                                                 </a>
-                                            </li>
+                                            </li> --}}
                                         @endforeach
                                     </ul>
                                 </div>
@@ -297,7 +297,7 @@
     </script>
 
 
-<script>
+{{-- <script>
     // Ensure the active tab and section are displayed based on URL hash
     document.addEventListener("DOMContentLoaded", function () {
         let pathSegments = window.location.pathname.split('/');
@@ -334,7 +334,7 @@
         // Add the active class to the clicked tab
         evt.currentTarget.classList.add('active');
     }
-</script>
+</script> --}}
 
     
 @endpush

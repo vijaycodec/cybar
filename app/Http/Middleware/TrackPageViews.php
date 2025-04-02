@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\PageView;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
+use App\Jobs\TrackPageView; // Import Job class
 
 class TrackPageViews
 {
@@ -20,23 +21,14 @@ class TrackPageViews
     public function handle(Request $request, Closure $next)
     {
         $pageName = $this->extractPageName($request);
-        $ip = $request->ip(); // Get user IP address
+        $ip = $request->ip(); 
         $today = Carbon::today();
-
+    
         if ($pageName) {
-            // Check if this IP has visited before
-            $existingVisit = PageView::where('user_ip', $ip)->exists();
-
-            // Track page views and visitor status
-            PageView::updateOrCreate(
-                ['page_name' => $pageName, 'user_ip' => $ip, 'view_date' => $today],
-                [
-                    'is_new_visitor' => !$existingVisit, // Mark as new visitor if IP doesn't exist
-                    'views' => DB::raw('COALESCE(views, 0) + 1') // Ensure views are incremented
-                ]
-            );
+            // Push the tracking task to a queue
+            TrackPageView::dispatch($pageName, $ip, $today);
         }
-
+    
         return $next($request);
     }
 
