@@ -608,10 +608,10 @@
                                     <div class="dropdown">
                                         <button class="btn btn-secondary dropdown-toggle" type="button"
                                             id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <span class="header-item">
+                                            {{-- <span class="header-item">
                                                 <span class="text-tiny">1</span>
                                                 <i class="icon-bell"></i>
-                                            </span>
+                                            </span> --}}
                                         </button>
                                         <ul class="dropdown-menu dropdown-menu-end has-content"
                                             aria-labelledby="dropdownMenuButton2">
@@ -689,6 +689,8 @@
                                                 <!-- Check if the user is logged in -->
                                                 <span class="body-title mb-2">
                                                     {{-- {{ Auth::guard('admin')->user()->first_name . ' ' . Auth::guard('admin')->user()->last_name }} --}}
+                                                    {{ Auth::check() ? Auth::user()->name : 'Guest' }}
+
                                                 </span>
                                                 {{-- <span --}}
                                                 {{-- class="text-tiny">{{ Auth::guard('admin')->user()->role == 1 ? 'Super Admin' : 'Admin' }}</span> --}}
@@ -701,7 +703,7 @@
                                         <ul class="dropdown-menu dropdown-menu-end has-content"
                                             aria-labelledby="dropdownMenuButton3">
                                             <li>
-                                                <a href="#" class="user-item">
+                                                <a href="{{ route('password.change') }}" class="user-item">
                                                     <div class="icon">
                                                         <i class="icon-user"></i>
                                                     </div>
@@ -911,7 +913,13 @@
 
 </script>
 
-
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('dropdownMenuButton3').addEventListener('click', function (event) {
+        event.stopPropagation(); // Prevents other event handlers from being triggered
+    });
+});
+</script>
 </body>
 
 </html>
