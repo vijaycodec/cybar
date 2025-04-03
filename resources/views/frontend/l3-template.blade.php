@@ -5,14 +5,14 @@
 @section('meta_keywords', $seoData['seo_keywords'])
 
 {{-- <link rel="stylesheet" type="text/css" href="/assets/css/sample7.css"> --}}
-
-@section('content')
 <style>
     .cn-hover-box:hover .cn-content .height {
         height: 0px;
         display: block;
     }
 </style>
+@section('content')
+
 {{-- @section('content') --}}
 @include ('frontend.layouts.header-css')
 <body class="sample-body" id="main-content-body">
