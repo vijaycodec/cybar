@@ -1,7 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Blog-view')
-
+@section('title', $seoData['seo_title'])
+@section('meta_description', $seoData['seo_description'])
+@section('meta_keywords', $seoData['seo_keywords'])
 @section('content')
 
     <body>
