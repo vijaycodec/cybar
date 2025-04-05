@@ -136,7 +136,7 @@
 
             </div>
 
-            <div class="container mobile-view">
+            <div class="container mobile-view" id="mhome-div1">
                 <div class="home-blog">
                     <div class="m-title" style="background-color: #ccc">
                         <h3>Trending Blogs</h3>
@@ -268,7 +268,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container mobile-view">
+            <div class="container mobile-view" id="mhome-div2">
                 <div class="m-title" style="background-color: #ADD8E6;">
                     <h3>Trending Newsletters</h3>
                 </div>
@@ -341,7 +341,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container mobile-view">
+            <div class="container mobile-view" id="mhome-div3">
                 <div class="m-title" style="background-color: #90EE90">
                     <h3>Trending Podcasts</h3>
                 </div>
@@ -444,28 +444,30 @@
                     </div>
                 </div>
             </div>
-            <div class="container mobile-view">
+            <div class="container mobile-view" id="mhome-div4">
                 <div class="m-title" style="background-color: #F08080">
                     <h3>Trending Events and Webinars</h3>
                 </div>
                 <div id="cninsight-slider4" class="owl-carousel owl-theme">
                     @foreach ($TrendingEvents as $trendingEvent)
+                    @foreach ($trendingEvent->events as $event)
                         <div class="item">
                             <div class="col-md-3">
                                 <div class="codec-wrap-main">
                                     <a href="{{ route('events-view', $trendingEvent->slug) }}">
                                         <div class="codec-wrap-main-img">
-                                            <img src="{{ asset('storage/uploads/backend/event/' . $trendingEvent->images) }}" />
+                                            <img src="{{ asset('storage/uploads/backend/event/' . $event->images) }}" />
                                         </div>
                                     </a>
                                     <div class="codec-wrap-main-content">
-                                        <h4><a href="{{ route('events-view', $trendingEvent->slug) }}">{{ $trendingEvent->sub_category }}</a></h4>
-                                        <p>{{ $trendingEvent->short_desc }}
+                                        <h4><a href="{{ route('events-view', $trendingEvent->slug) }}">{{ $event->sub_category }}</a></h4>
+                                        <p>{{ $event->short_desc }}
                                         </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    @endforeach
                     @endforeach
                     
                 </div>

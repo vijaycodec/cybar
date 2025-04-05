@@ -159,7 +159,7 @@
                                     class="test_mob_app_btn">
                                      Know more
                                  </a>
-                                <img src="{{ asset('assets/images/vapt-services.jpg') }}" class="custom-image">
+                                <img src="{{ asset('assets/images/vapt-services.webp') }}" class="custom-image">
     
                             </div>
                             @endforeach

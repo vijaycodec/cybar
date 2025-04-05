@@ -15,18 +15,10 @@
 
    <div class="mobile-ser-tab">
       <ul class="mobile-ser-menu">
-         <li><a href="#mhome-div1">Main Services</a></li>
-         <li><a href="#mhome-div2">VAPT Services</a></li>
-         <li><a href="#mhome-div3">VAPT Services Specilised -RED, Blue Teaming etc.</a></li>
-         <li><a href="#mhome-div4">GRC Services</a></li>
-         <li><a href="#mhome-div5">Risk Assessment Services</a></li>
-         <li><a href="#mhome-div6">Codec COE - Education</a></li>
-         <li><a href="#mhome-div7">Codec Education Domains</a></li>
-         <li><a href="#mhome-div8">Why Codec Networks</a></li>
-         <li><a href="#mhome-div9">Industry We Serve</a></li>
-         <li><a href="#mhome-div10">Our Industry Testimonials</a></li>
-         <li><a href="#mhome-div11">CN INSIGHTS - Blogs, Podcasts, News and Events and Webinar</a></li>
-         <li><a href="#mhome-div12">Codec Networks Plus</a></li>
+         <li><a href="#mhome-div1">Blogs</a></li>
+         <li><a href="#mhome-div2">NewsLetters </a></li>
+         <li><a href="#mhome-div3">Podcast</a></li>
+         <li><a href="#mhome-div4">Events and Webinar</a></li>
       </ul>
       <div class="bottom-btn">
          <a href="javascript:void(0)" class="right-back">Back</a>
