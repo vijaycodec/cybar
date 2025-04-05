@@ -94,11 +94,14 @@
             </div><!-- /.form-group -->
             <!-- .form-group -->
             <div class="form-group">
-                <div class="form-label-group">
+                <div class="form-label-group position-relative">
                     <input type="password" id="inputPassword" name="password" class="form-control cards"
-                        placeholder="Password" required> <label for="inputPassword">Password</label>
+                        placeholder="Password" required>
+                    <label for="inputPassword">Password</label>
+                    <i class="fa fa-eye position-absolute" id="togglePassword" 
+                       style="right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;"></i>
                 </div>
-            </div><!-- /.form-group -->
+            </div>
             <!-- .form-group -->
             <div class="form-group">
                 <input type="hidden" class="txt_csrfname" name="" value="">
@@ -137,7 +140,7 @@
 <script>
     $('input').bind('input', function() {
         var c = this.selectionStart,
-            r = /[^a-z0-9@ .]/gi,
+            r = /[^a-z0-9@#& .]/gi,
             v = $(this).val();
         if (r.test(v)) {
             $(this).val(v.replace(r, ''));
@@ -162,5 +165,20 @@
                 //$('.error').text('');
             }
         });
+    });
+</script>
+<script>
+    document.getElementById('togglePassword').addEventListener('click', function () {
+        var passwordField = document.getElementById('inputPassword');
+        var icon = this;
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+            icon.classList.remove('fa-eye');
+            icon.classList.add('fa-eye-slash');
+        } else {
+            passwordField.type = "password";
+            icon.classList.remove('fa-eye-slash');
+            icon.classList.add('fa-eye');
+        }
     });
 </script>

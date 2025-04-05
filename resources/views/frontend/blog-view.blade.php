@@ -1,7 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Blog-view')
-
+@section('title', $seoData['seo_title'])
+@section('meta_description', $seoData['seo_description'])
+@section('meta_keywords', $seoData['seo_keywords'])
 @section('content')
 
     <body>
@@ -13,7 +14,7 @@
         <section class="sec_ban resource-detail-banner" id="resources-banner">
             <div class="home-ban">
                 <div class="rs-img">
-                    <img src="{{ asset('assets/images/resouces-bg-img.jpg') }}" class="img-fluid rs-banner"
+                    <img src="{{ asset('assets/images/resouces-bg-img.webp') }}" class="img-fluid rs-banner"
                         alt="home banner">
                 </div>
                 @if (isset($resource) && $resource)
@@ -184,7 +185,7 @@
                                 <a href="{{ route('blog-view', ['category_slug' => $resource->category->slug, 'blog_slug' => $resource->slug]) }}" class="test_mob_app_btn">
                                     Know more
                                 </a>
-                                <img src="{{ asset('assets/images/vapt-services.jpg') }}" class="custom-image">
+                                <img src="{{ asset('assets/images/vapt-services.webp') }}" class="custom-image">
 
                             </div>
                         @endforeach

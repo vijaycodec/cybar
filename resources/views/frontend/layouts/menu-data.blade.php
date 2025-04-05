@@ -23,7 +23,7 @@
          <li class="nav-item"><a class="mobile-nav-link" href="{{ route('events') }}">Event</a></li>
          <li class="nav-item"><a class="mobile-nav-link" href="{{ route('testimonials') }}">Testimonial</a></li>
          <li class="nav-item"><a class="mobile-nav-link" href="{{ route('careers') }}">Careers</a></li>
-         <li class="nav-item"><a class="mobile-nav-link" href="#">Contact Us</a></li>
+         <li class="nav-item"><a class="mobile-nav-link" href="{{ route('contact') }}">Contact Us</a></li>
       </ul>
       <div class="bottom-btn">
          <a href="#" class="left-back">Back</a>

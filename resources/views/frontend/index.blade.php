@@ -26,7 +26,7 @@
             <div class="video-container video500 mk-black">
                 <div class="dark_cta"></div>
                 <video autoplay="" loop="" muted="" playsinline="" class="row full-banner banner center-mk-vid"
-                    poster="../content/dam/www/marketing/images/banners/solutions-insights-grow-2.jpg">
+                    poster="../content/dam/www/marketing/images/banners/solutions-insights-grow-2.webp">
                     <source src="{{ asset('assets/video/solutions-webbg-grow-v1-small.mp4') }}" type="video/mp4">
                     {{--
                     <source src="{{ asset('assets/video/solutions-webbg-grow-v1-small.mp4') }}" type="video/webm"> --}}
@@ -81,7 +81,7 @@
                     <div class="col-md-4">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/vapt-services.jpg')}}"> </div>
+                                <div class="cn-hover-img"> <img src="{{asset('assets/images/vapt-services.webp')}}"> </div>
                                 <div class="cn-content">
                                     <p>Services to ensure the Integrity of Information Systems, Softwares & Applications,
                                         block
@@ -108,7 +108,7 @@
                     <div class="col-md-4">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/forensic-seervices.jpg')}}">
+                                <div class="cn-hover-img"> <img src="{{asset('assets/images/forensic-seervices.webp')}}">
                                 </div>
                                 <div class="cn-content">
                                     <p>Identify and resolve Ecrime incidents that adversely impact organizations with
@@ -133,7 +133,7 @@
                     <div class="col-md-4">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/soc-services.jpg')}}"> </div>
+                                <div class="cn-hover-img"> <img src="{{asset('assets/images/soc-services.webp')}}"> </div>
                                 <div class="cn-content">
                                     <p>Provides round-the-clock proactive event monitoring with prioritized alert
                                         notification &
@@ -983,7 +983,7 @@
                     <div class="col-md-2 width238 ">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/vapt-services.jpg')}}"> </div>
+                                <div class="cn-hover-img"> <img src="{{asset('assets/images/vapt-services.webp')}}"> </div>
                                 <div class="cn-content">
                                     <p>Services to ensure the Integrity of Information Systems, Softwares & Applications,
                                         block
@@ -1004,7 +1004,7 @@
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
                                 <div class="cn-hover-img"> <img
-                                        src="{{asset('assets/images/security-audit-compliance.jpg')}}"> </div>
+                                        src="{{asset('assets/images/security-audit-compliance.webp')}}"> </div>
                                 <div class="cn-content">
                                     <p>Help organizations with regular and structured evaluation of compliance with the
                                         security
@@ -1023,7 +1023,7 @@
                     <div class="col-md-2 width238">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/managed-it-services.jpg')}}">
+                                <div class="cn-hover-img"> <img src="{{asset('assets/images/managed-it-services.webp')}}">
                                 </div>
                                 <div class="cn-content">
                                     <p>Preferred Service Partner" for corporate clients with array of customized security
@@ -1043,7 +1043,7 @@
                     <div class="col-md-2 width238">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/forensic-seervices.jpg')}}">
+                                <div class="cn-hover-img"> <img src="{{asset('assets/images/forensic-seervices.webp')}}">
                                 </div>
                                 <div class="cn-content">
                                     <p>Identify and resolve Ecrime incidents that adversely impact organizations with
@@ -1063,7 +1063,7 @@
                     <div class="col-md-2 width238">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/soc-services.jpg')}}"> </div>
+                                <div class="cn-hover-img"> <img src="{{asset('assets/images/soc-services.webp')}}"> </div>
                                 <div class="cn-content">
                                     <p>Provides round-the-clock proactive event monitoring with prioritized alert
                                         notification &
@@ -1089,7 +1089,7 @@
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
                                 <div class="cn-hover-img"> <img
-                                        src="{{asset('assets/images/security-audit-compliance.jpg')}}"> </div>
+                                        src="{{asset('assets/images/security-audit-compliance.webp')}}"> </div>
                                 <div class="cn-content">
                                     <p>Help organizations with regular and structured evaluation of compliance with the
                                         security
@@ -1108,7 +1108,7 @@
                     <div class="item">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/vapt-services.jpg')}}"> </div>
+                                <div class="cn-hover-img"> <img src="{{asset('assets/images/vapt-services.webp')}}"> </div>
                                 <div class="cn-content">
                                     <p>Services to ensure the Integrity of Information Systems, Softwares & Applications,
                                         block
@@ -1128,7 +1128,7 @@
                     <div class="item">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/managed-it-services.jpg')}}">
+                                <div class="cn-hover-img"> <img src="{{asset('assets/images/managed-it-services.webp')}}">
                                 </div>
                                 <div class="cn-content">
                                     <p>Preferred Service Partner" for corporate clients with array of customized security
@@ -1148,7 +1148,7 @@
                     <div class="item">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/forensic-seervices.jpg')}}">
+                                <div class="cn-hover-img"> <img src="{{asset('assets/images/forensic-seervices.webp')}}">
                                 </div>
                                 <div class="cn-content">
                                     <p>Identify and resolve Ecrime incidents that adversely impact organizations with
@@ -1168,7 +1168,7 @@
                     <div class="item">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/soc-services.jpg')}}"> </div>
+                                <div class="cn-hover-img"> <img src="{{asset('assets/images/soc-services.webp')}}"> </div>
                                 <div class="cn-content">
                                     <p>Provides round-the-clock proactive event monitoring with prioritized alert
                                         notification &
@@ -2637,7 +2637,7 @@
                     <div class="col-md-2 width238 ">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/vapt-services.jpg')}}"> </div>
+                                <div class="cn-hover-img"> <img src="{{asset('assets/images/vapt-services.webp')}}"> </div>
                                 <div class="cn-content">
                                     <p>Services to ensure the Integrity of Information Systems, Softwares & Applications,
                                         block
@@ -2658,7 +2658,7 @@
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
                                 <div class="cn-hover-img"> <img
-                                        src="{{asset('assets/images/security-audit-compliance.jpg')}}"> </div>
+                                        src="{{asset('assets/images/security-audit-compliance.webp')}}"> </div>
                                 <div class="cn-content">
                                     <p>Help organizations with regular and structured evaluation of compliance with the
                                         security
@@ -2677,7 +2677,7 @@
                     <div class="col-md-2 width238">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/managed-it-services.jpg')}}">
+                                <div class="cn-hover-img"> <img src="{{asset('assets/images/managed-it-services.webp')}}">
                                 </div>
                                 <div class="cn-content">
                                     <p>Preferred Service Partner" for corporate clients with array of customized security
@@ -2697,7 +2697,7 @@
                     <div class="col-md-2 width238">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/forensic-seervices.jpg')}}">
+                                <div class="cn-hover-img"> <img src="{{asset('assets/images/forensic-seervices.webp')}}">
                                 </div>
                                 <div class="cn-content">
                                     <p>Identify and resolve Ecrime incidents that adversely impact organizations with
@@ -2717,7 +2717,7 @@
                     <div class="col-md-2 width238">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/soc-services.jpg')}}"> </div>
+                                <div class="cn-hover-img"> <img src="{{asset('assets/images/soc-services.webp')}}"> </div>
                                 <div class="cn-content">
                                     <p>Provides round-the-clock proactive event monitoring with prioritized alert
                                         notification &
@@ -2742,7 +2742,7 @@
                     <div class="item">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/forensic-seervices.jpg')}}">
+                                <div class="cn-hover-img"> <img src="{{asset('assets/images/forensic-seervices.webp')}}">
                                 </div>
                                 <div class="cn-content">
                                     <p>Identify and resolve Ecrime incidents that adversely impact organizations with
@@ -2763,7 +2763,7 @@
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
                                 <div class="cn-hover-img"> <img
-                                        src="{{asset('assets/images/security-audit-compliance.jpg')}}"> </div>
+                                        src="{{asset('assets/images/security-audit-compliance.webp')}}"> </div>
                                 <div class="cn-content">
                                     <p>Help organizations with regular and structured evaluation of compliance with the
                                         security
@@ -2782,7 +2782,7 @@
                     <div class="item">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/vapt-services.jpg')}}"> </div>
+                                <div class="cn-hover-img"> <img src="{{asset('assets/images/vapt-services.webp')}}"> </div>
                                 <div class="cn-content">
                                     <p>Services to ensure the Integrity of Information Systems, Softwares & Applications,
                                         block
@@ -2802,7 +2802,7 @@
                     <div class="item">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/managed-it-services.jpg')}}">
+                                <div class="cn-hover-img"> <img src="{{asset('assets/images/managed-it-services.webp')}}">
                                 </div>
                                 <div class="cn-content">
                                     <p>Preferred Service Partner" for corporate clients with array of customized security
@@ -2822,7 +2822,7 @@
                     <div class="item">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{asset('assets/images/soc-services.jpg')}}"> </div>
+                                <div class="cn-hover-img"> <img src="{{asset('assets/images/soc-services.webp')}}"> </div>
                                 <div class="cn-content">
                                     <p>Provides round-the-clock proactive event monitoring with prioritized alert
                                         notification &
@@ -2848,13 +2848,13 @@
         <!-- bg banner start -->
         <section class="mhspace mhspace00" id="mhome-div6">
             <div class="traing-banner desktop-view">
-                <img src="{{asset('assets/images/training-domain-bg.jpg')}}">
+                <img src="{{asset('assets/images/training-domain-bg.webp')}}">
                 <div class="cn-btn"> <a href="javascript:void(0)">KNOW MORE</a> </div>
             </div>
             <!-- bg banner end -->
             <!-- bg banner start -->
             <div class="traing-banner mobile-view">
-                <img src="{{ asset('assets/images/mimg3.jpeg') }}">
+                <img src="{{ asset('assets/images/mimg3.webp') }}">
                 <div class="cn-btn"> <a href="javascript:void(0)">KNOW MORE</a> </div>
             </div>
         </section>
@@ -2965,7 +2965,7 @@
                                         </div>
                                         <div class="col-md-5">
                                             <div class="template12-img">
-                                                <img src="{{asset('assets/images/working-1.png')}}">
+                                                <img src="{{asset('assets/images/working-1.webp')}}">
                                             </div>
                                         </div>
                                     </div>
@@ -3088,22 +3088,22 @@
                                 <div id="mhome-slider19" class="owl-carousel owl-theme">
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg1.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg1.webp') }}" alt="">
                                         </div>
                                     </div>
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg2.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg2.webp') }}" alt="">
                                         </div>
                                     </div>
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg.webp') }}" alt="">
                                         </div>
                                     </div>
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg1.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg1.webp') }}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -3122,7 +3122,7 @@
                             <!--  -->
                             <div class="it-box">
                                 <div class="it-img">
-                                    <img src="{{ asset('assets/images/working-1.png') }}" alt="">
+                                    <img src="{{ asset('assets/images/working-1.webp') }}" alt="">
                                 </div>
                                 <div class="it-content">
                                     <p>In a world teeming with digital threats, ethical hacking emerges as a formidable
@@ -3152,22 +3152,22 @@
                                 <div id="mhome-slider20" class="owl-carousel owl-theme">
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg1.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg1.webp') }}" alt="">
                                         </div>
                                     </div>
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg2.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg2.webp') }}" alt="">
                                         </div>
                                     </div>
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg.webp') }}" alt="">
                                         </div>
                                     </div>
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg1.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg1.webp') }}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -3189,22 +3189,22 @@
                                 <div id="mhome-slider21" class="owl-carousel owl-theme">
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg1.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg1.webp') }}" alt="">
                                         </div>
                                     </div>
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg2.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg2.webp') }}" alt="">
                                         </div>
                                     </div>
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg.webp') }}" alt="">
                                         </div>
                                     </div>
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg1.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg1.webp') }}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -3226,22 +3226,22 @@
                                 <div id="mhome-slider22" class="owl-carousel owl-theme">
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg1.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg1.webp') }}" alt="">
                                         </div>
                                     </div>
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg2.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg2.webp') }}" alt="">
                                         </div>
                                     </div>
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg.webp') }}" alt="">
                                         </div>
                                     </div>
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg1.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg1.webp') }}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -3277,7 +3277,7 @@
                         <a href="javascript:void(0)">
                             <div class="tdw-box row">
                                 <div class="col-md-4 pd0">
-                                    <div class="tdw-img"> <img src="{{ asset('assets/images/ec-council-1.jpg') }}"> </div>
+                                    <div class="tdw-img"> <img src="{{ asset('assets/images/ec-council-1.webp') }}"> </div>
                                 </div>
                                 <div class="col-md-8">
                                     <div class="feature-header">
@@ -3298,7 +3298,7 @@
                             <div class="tdw-box row">
                                 <div class="col-md-4 pd0">
                                     <div class="tdw-img"> <img
-                                            src="{{ asset('assets/images/PECB-Acc-Certification.jpg') }}"> </div>
+                                            src="{{ asset('assets/images/PECB-Acc-Certification.webp') }}"> </div>
                                 </div>
                                 <div class="col-md-8">
                                     <div class="feature-header">
@@ -3318,7 +3318,7 @@
                         <a href="">
                             <div class="tdw-box row">
                                 <div class="col-md-4 pd0">
-                                    <div class="tdw-img"> <img src="{{ asset('assets/images/cyber-security-pene.jpg') }}">
+                                    <div class="tdw-img"> <img src="{{ asset('assets/images/cyber-security-pene.webp') }}">
                                     </div>
                                 </div>
                                 <div class="col-md-8">
@@ -3337,7 +3337,7 @@
                     <div class="col-md-4 mb-3">
                         <div class="tdw-box row">
                             <div class="col-md-4 pd0">
-                                <div class="tdw-img"> <img src="{{ asset('assets/images/Security-oprations-4.jpg') }}">
+                                <div class="tdw-img"> <img src="{{ asset('assets/images/Security-oprations-4.webp') }}">
                                 </div>
                             </div>
                             <div class="col-md-8">
@@ -3354,7 +3354,7 @@
                     <div class="col-md-4 mb-3">
                         <div class="tdw-box row">
                             <div class="col-md-4 pd0">
-                                <div class="tdw-img"> <img src="{{ asset('assets/images/cyber-forensic-5.jpg') }}"> </div>
+                                <div class="tdw-img"> <img src="{{ asset('assets/images/cyber-forensic-5.webp') }}"> </div>
                             </div>
                             <div class="col-md-8">
                                 <div class="feature-header">
@@ -3371,7 +3371,7 @@
                     <div class="col-md-4 mb-3">
                         <div class="tdw-box row">
                             <div class="col-md-4 pd0">
-                                <div class="tdw-img"> <img src="{{ asset('assets/images/instructor-online.jpg') }}"> </div>
+                                <div class="tdw-img"> <img src="{{ asset('assets/images/instructor-online.webp') }}"> </div>
                             </div>
                             <div class="col-md-8">
                                 <div class="feature-header">
@@ -3387,7 +3387,7 @@
                     <div class="col-md-4 mb-3">
                         <div class="tdw-box row">
                             <div class="col-md-4 pd0">
-                                <div class="tdw-img"> <img src="{{ asset('assets/images/Security-oprations-4.jpg') }}">
+                                <div class="tdw-img"> <img src="{{ asset('assets/images/Security-oprations-4.webp') }}">
                                 </div>
                             </div>
                             <div class="col-md-8">
@@ -3403,7 +3403,7 @@
                     <div class="col-md-4 mb-3">
                         <div class="tdw-box row">
                             <div class="col-md-4 pd0">
-                                <div class="tdw-img"> <img src="{{ asset('assets/images/networks-8.jpg') }}"> </div>
+                                <div class="tdw-img"> <img src="{{ asset('assets/images/networks-8.webp') }}"> </div>
                             </div>
                             <div class="col-md-8">
                                 <div class="feature-header">
@@ -3419,7 +3419,7 @@
                     <div class="col-md-4 mb-3">
                         <div class="tdw-box row">
                             <div class="col-md-4 pd0">
-                                <div class="tdw-img"> <img src="{{ asset('assets/images/it-security-opration9.jpg') }}">
+                                <div class="tdw-img"> <img src="{{ asset('assets/images/it-security-opration9.webp') }}">
                                 </div>
                             </div>
                             <div class="col-md-8">
@@ -3437,7 +3437,7 @@
                     <div class="col-md-4 mb-3">
                         <div class="tdw-box row">
                             <div class="col-md-4 pd0">
-                                <div class="tdw-img"> <img src="{{ asset('assets/images/other-quality10.jpg') }}"> </div>
+                                <div class="tdw-img"> <img src="{{ asset('assets/images/other-quality10.webp') }}"> </div>
                             </div>
                             <div class="col-md-8">
                                 <div class="feature-header">
@@ -3453,7 +3453,7 @@
                     <div class="col-md-4 mb-3">
                         <div class="tdw-box row">
                             <div class="col-md-4 pd0">
-                                <div class="tdw-img"> <img src="{{ asset('assets/images/other-quality10.jpg') }}"> </div>
+                                <div class="tdw-img"> <img src="{{ asset('assets/images/other-quality10.webp') }}"> </div>
                             </div>
                             <div class="col-md-8">
                                 <div class="feature-header">
@@ -3469,7 +3469,7 @@
                     <div class="col-md-4 mb-3">
                         <div class="tdw-box row">
                             <div class="col-md-4 pd0">
-                                <div class="tdw-img"> <img src="{{ asset('assets/images/other-quality10.jpg') }}"> </div>
+                                <div class="tdw-img"> <img src="{{ asset('assets/images/other-quality10.webp') }}"> </div>
                             </div>
                             <div class="col-md-8">
                                 <div class="feature-header">
@@ -3494,7 +3494,7 @@
                         <div class="item">
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
-                                    <div class="ftd-img"> <img src="{{ asset('assets/images/ec-council-1.jpg') }}"></div>
+                                    <div class="ftd-img"> <img src="{{ asset('assets/images/ec-council-1.webp') }}"></div>
                                     <div class="ftd-header">
                                         <h3>EC Council Accredited Certification Programs</h3>
                                         <p>Offers buffey of security programs, tools and techniques that are globally
@@ -3508,7 +3508,7 @@
                         <div class="item">
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
-                                    <div class="ftd-img"> <img src="{{ asset('assets/images/ec-council-1.jpg') }}"></div>
+                                    <div class="ftd-img"> <img src="{{ asset('assets/images/ec-council-1.webp') }}"></div>
                                     <div class="ftd-header">
                                         <h3>EC Council Accredited Certification Programs</h3>
                                         <p>Offers buffey of security programs, tools and techniques that are globally
@@ -3522,7 +3522,7 @@
                         <div class="item">
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
-                                    <div class="ftd-img"> <img src="{{ asset('assets/images/ec-council-1.jpg') }}"></div>
+                                    <div class="ftd-img"> <img src="{{ asset('assets/images/ec-council-1.webp') }}"></div>
                                     <div class="ftd-header">
                                         <h3>EC Council Accredited Certification Programs</h3>
                                         <p>Offers buffey of security programs, tools and techniques that are globally
@@ -3546,7 +3546,7 @@
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
                                     <div class="ftd-img"> <img
-                                            src="{{ asset('assets/images/PECB-Acc-Certification.jpg') }}"></div>
+                                            src="{{ asset('assets/images/PECB-Acc-Certification.webp') }}"></div>
                                     <div class="ftd-header">
                                         <h3>PECB Accredited Certification Programs</h3>
                                         <p>Offers buffey of security programs, tools and techniques that are globally
@@ -3561,7 +3561,7 @@
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
                                     <div class="ftd-img"> <img
-                                            src="{{ asset('assets/images/PECB-Acc-Certification.jpg') }}"></div>
+                                            src="{{ asset('assets/images/PECB-Acc-Certification.webp') }}"></div>
                                     <div class="ftd-header">
                                         <h3>PECB Accredited Certification Programs</h3>
                                         <p>Offers buffey of security programs, tools and techniques that are globally
@@ -3576,7 +3576,7 @@
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
                                     <div class="ftd-img"> <img
-                                            src="{{ asset('assets/images/PECB-Acc-Certification.jpg') }}"></div>
+                                            src="{{ asset('assets/images/PECB-Acc-Certification.webp') }}"></div>
                                     <div class="ftd-header">
                                         <h3>PECB Accredited Certification Programs</h3>
                                         <p>Offers buffey of security programs, tools and techniques that are globally
@@ -3599,7 +3599,7 @@
                         <div class="item">
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
-                                    <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-security-pene.jpg') }}">
+                                    <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-security-pene.webp') }}">
                                     </div>
                                     <div class="ftd-header">
                                         <h3>Cyber Security and Penetration Testing</h3>
@@ -3614,7 +3614,7 @@
                         <div class="item">
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
-                                    <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-security-pene.jpg') }}">
+                                    <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-security-pene.webp') }}">
                                     </div>
                                     <div class="ftd-header">
                                         <h3>Cyber Security and Penetration Testing</h3>
@@ -3629,7 +3629,7 @@
                         <div class="item">
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
-                                    <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-security-pene.jpg') }}">
+                                    <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-security-pene.webp') }}">
                                     </div>
                                     <div class="ftd-header">
                                         <h3>Cyber Security and Penetration Testing</h3>
@@ -3653,7 +3653,7 @@
                         <div class="item">
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
-                                    <div class="ftd-img"> <img src="{{ asset('assets/images/Security-oprations-4.jpg') }}">
+                                    <div class="ftd-img"> <img src="{{ asset('assets/images/Security-oprations-4.webp') }}">
                                     </div>
                                     <div class="ftd-header">
                                         <h3>Security Operations and Management</h3>
@@ -3668,7 +3668,7 @@
                         <div class="item">
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
-                                    <div class="ftd-img"> <img src="{{ asset('assets/images/Security-oprations-4.jpg') }}">
+                                    <div class="ftd-img"> <img src="{{ asset('assets/images/Security-oprations-4.webp') }}">
                                     </div>
                                     <div class="ftd-header">
                                         <h3>Security Operations and Management</h3>
@@ -3683,7 +3683,7 @@
                         <div class="item">
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
-                                    <div class="ftd-img"> <img src="{{ asset('assets/images/Security-oprations-4.jpg') }}">
+                                    <div class="ftd-img"> <img src="{{ asset('assets/images/Security-oprations-4.webp') }}">
                                     </div>
                                     <div class="ftd-header">
                                         <h3>Security Operations and Management</h3>
@@ -3707,7 +3707,7 @@
                         <div class="item">
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
-                                    <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-forensic-5.jpg') }}">
+                                    <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-forensic-5.webp') }}">
                                     </div>
                                     <div class="ftd-header">
                                         <h3>Cyber Forensic and Fraud Management</h3>
@@ -3722,7 +3722,7 @@
                         <div class="item">
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
-                                    <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-forensic-5.jpg') }}">
+                                    <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-forensic-5.webp') }}">
                                     </div>
                                     <div class="ftd-header">
                                         <h3>Cyber Forensic and Fraud Management</h3>
@@ -3737,7 +3737,7 @@
                         <div class="item">
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
-                                    <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-forensic-5.jpg') }}">
+                                    <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-forensic-5.webp') }}">
                                     </div>
                                     <div class="ftd-header">
                                         <h3>Cyber Forensic and Fraud Management</h3>
@@ -3832,17 +3832,17 @@
                         <div id="awrad-slider" class="owl-carousel owl-theme">
                             <div class="item">
                                 <div class="award-img">
-                                    <img src="{{ asset('assets/images/EC-Council-Accredited-Training-Center.jpg') }}">
+                                    <img src="{{ asset('assets/images/EC-Council-Accredited-Training-Center.webp') }}">
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="award-img">
-                                    <img src="{{ asset('assets/images/EC-Council-Accredited-Training-Center.jpg') }}">
+                                    <img src="{{ asset('assets/images/EC-Council-Accredited-Training-Center.webp') }}">
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="award-img">
-                                    <img src="{{ asset('assets/images/EC-Council-Accredited-Training-Center.jpg') }}">
+                                    <img src="{{ asset('assets/images/EC-Council-Accredited-Training-Center.webp') }}">
                                 </div>
                             </div>
 
@@ -3855,33 +3855,33 @@
             <div class="container">
                 <div class="row">
                     <div id="client-logo" class="owl-carousel owl-theme">
-                        <div class="item"> <img src="{{ asset('assets/images/clients/eccoincil-partnerlogo.png') }}"
+                        <div class="item"> <img src="{{ asset('assets/images/clients/eccoincil-partnerlogo.webp') }}"
                                 class="img-fluid" alt="">
                         </div>
-                        <div class="item"> <img src="{{ asset('assets/images/clients/pecb-partnerlogo.png') }}"
+                        <div class="item"> <img src="{{ asset('assets/images/clients/pecb-partnerlogo.webp') }}"
                                 class="img-fluid" alt="">
                         </div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/mcafee.png') }}" class="img-fluid"
+                        <div class="item"><img src="{{ asset('assets/images/clients/mcafee.webp') }}" class="img-fluid"
                                 alt=""></div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/being-cert-logopartner.png') }}"
+                        <div class="item"><img src="{{ asset('assets/images/clients/being-cert-logopartner.webp') }}"
                                 class="img-fluid" alt="">
                         </div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/quick-heal.png') }}" class="img-fluid"
+                        <div class="item"><img src="{{ asset('assets/images/clients/quick-heal.webp') }}" class="img-fluid"
                                 alt=""></div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/shophospartnerlogo.png') }}"
+                        <div class="item"><img src="{{ asset('assets/images/clients/shophospartnerlogo.webp') }}"
                                 alt="Owl Image">
                         </div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/symantec.png') }}" class="img-fluid"
+                        <div class="item"><img src="{{ asset('assets/images/clients/symantec.webp') }}" class="img-fluid"
                                 alt=""></div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/tenable.png') }}" class="img-fluid"
+                        <div class="item"><img src="{{ asset('assets/images/clients/tenable.webp') }}" class="img-fluid"
                                 alt=""></div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/kesperskypartner.png') }}"
+                        <div class="item"><img src="{{ asset('assets/images/clients/kesperskypartner.webp') }}"
                                 class="img-fluid" alt="">
                         </div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/acunetix-partner-logo.png') }}"
+                        <div class="item"><img src="{{ asset('assets/images/clients/acunetix-partner-logo.webp') }}"
                                 alt="Owl Image"></div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/seqrite.png') }}" alt="Owl Image"></div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/inspira-partnerlogo.png') }}"
+                        <div class="item"><img src="{{ asset('assets/images/clients/seqrite.webp') }}" alt="Owl Image"></div>
+                        <div class="item"><img src="{{ asset('assets/images/clients/inspira-partnerlogo.webp') }}"
                                 class="img-fluid" alt="">
                         </div>
                     </div>
@@ -4028,7 +4028,7 @@
                                         </div>
                                         <div class="col-md-5">
                                             <div class="template12-img">
-                                                <img src="{{ asset('assets/images/working-1.png') }}">
+                                                <img src="{{ asset('assets/images/working-1.webp') }}">
                                             </div>
                                         </div>
                                     </div>
@@ -4122,22 +4122,22 @@
                                 <div id="mhome-slider23" class="owl-carousel owl-theme">
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg1.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg1.webp') }}" alt="">
                                         </div>
                                     </div>
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg2.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg2.webp') }}" alt="">
                                         </div>
                                     </div>
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg.webp') }}" alt="">
                                         </div>
                                     </div>
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg1.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg1.webp') }}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -4156,7 +4156,7 @@
                             <!--  -->
                             <div class="it-box">
                                 <div class="it-img">
-                                    <img src="{{ asset('assets/images/working-1.png') }}" alt="">
+                                    <img src="{{ asset('assets/images/working-1.webp') }}" alt="">
                                 </div>
                                 <div class="it-content">
                                     <p>In a world teeming with digital threats, ethical hacking emerges as a formidable
@@ -4186,22 +4186,22 @@
                                 <div id="mhome-slider24" class="owl-carousel owl-theme">
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg1.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg1.webp') }}" alt="">
                                         </div>
                                     </div>
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg2.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg2.webp') }}" alt="">
                                         </div>
                                     </div>
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg.webp') }}" alt="">
                                         </div>
                                     </div>
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg1.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg1.webp') }}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -4223,22 +4223,22 @@
                                 <div id="mhome-slider25" class="owl-carousel owl-theme">
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg1.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg1.webp') }}" alt="">
                                         </div>
                                     </div>
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg2.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg2.webp') }}" alt="">
                                         </div>
                                     </div>
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg.webp') }}" alt="">
                                         </div>
                                     </div>
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg1.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg1.webp') }}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -4260,22 +4260,22 @@
                                 <div id="mhome-slider26" class="owl-carousel owl-theme">
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg1.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg1.webp') }}" alt="">
                                         </div>
                                     </div>
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg2.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg2.webp') }}" alt="">
                                         </div>
                                     </div>
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg.webp') }}" alt="">
                                         </div>
                                     </div>
                                     <div class="itme">
                                         <div class="home-banner1">
-                                            <img src="{{ asset('assets/images/mimg1.jpeg') }}" alt="">
+                                            <img src="{{ asset('assets/images/mimg1.webp') }}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -4316,7 +4316,7 @@
                                 <a href="#partnter1">
                                     <div class="team-details">
                                         <div class="team-img part-bg1">
-                                            <img src="{{asset('assets/images/Industries/Technology-IT-Telecom.png')}}"
+                                            <img src="{{asset('assets/images/Industries/Technology-IT-Telecom.webp')}}"
                                                 alt="" title="">
                                             <h3 class="team-name">Technology, IT <br>&amp; Telecom</h3>
                                         </div>
@@ -4332,7 +4332,7 @@
                                 <a href="#partnter2">
                                     <div class="team-details">
                                         <div class="team-img part-bg2">
-                                            <img src="{{ asset('assets/images/Industries/Education.png') }}" alt=""
+                                            <img src="{{ asset('assets/images/Industries/Education.webp') }}" alt=""
                                                 title="">
                                             <h3 class="team-name">Education</h3>
                                         </div>
@@ -4348,7 +4348,7 @@
                                 <a href="#partnter3">
                                     <div class="team-details">
                                         <div class="team-img part-bg3">
-                                            <img src="{{asset('assets/images/Industries/Banking-Finance-Insurance.png')}}"
+                                            <img src="{{asset('assets/images/Industries/Banking-Finance-Insurance.webp')}}"
                                                 alt="" title="">
                                             <h3 class="team-name">Banking, Finance <br>&amp; Insurance</h3>
                                         </div>
@@ -4365,7 +4365,7 @@
                                 <a href="#partnter4">
                                     <div class="team-details">
                                         <div class="team-img part-bg4">
-                                            <img src="{{ asset('assets/images/Industries/Healthcare.png') }}" alt=""
+                                            <img src="{{ asset('assets/images/Industries/Healthcare.webp') }}" alt=""
                                                 title="">
                                             <h3 class="team-name">Healthcare</h3>
                                         </div>
@@ -4381,7 +4381,7 @@
                                 <a href="#partnter5">
                                     <div class="team-details">
                                         <div class="team-img part-bg5">
-                                            <img src="{{ asset('assets/images/Industries/Retail-E-Commerce.png') }}" alt=""
+                                            <img src="{{ asset('assets/images/Industries/Retail-E-Commerce.webp') }}" alt=""
                                                 title="">
                                             <h3 class="team-name">Retail <br>&amp; E-Commerce</h3>
                                         </div>
@@ -4397,7 +4397,7 @@
                                 <a href="#partnter6">
                                     <div class="team-details">
                                         <div class="team-img part-bg6">
-                                            <img src="{{ asset('assets/images/Industries/Power-Energy.png') }}" alt=""
+                                            <img src="{{ asset('assets/images/Industries/Power-Energy.webp') }}" alt=""
                                                 title="">
                                             <h3 class="team-name">Power &amp; Energy</h3>
                                         </div>
@@ -4413,7 +4413,7 @@
                                 <a href="#partnter7">
                                     <div class="team-details">
                                         <div class="team-img part-bg7">
-                                            <img src="{{ asset('assets/images/Industries/Government-Defence.png') }}" alt=""
+                                            <img src="{{ asset('assets/images/Industries/Government-Defence.webp') }}" alt=""
                                                 title="">
                                             <h3 class="team-name">Government <br>&amp; Defence</h3>
                                         </div>
@@ -4429,7 +4429,7 @@
                                 <a href="#partnter8">
                                     <div class="team-details">
                                         <div class="team-img part-bg8">
-                                            <img src="{{ asset('assets/images/Industries/Utilities.png') }}" alt=""
+                                            <img src="{{ asset('assets/images/Industries/Utilities.webp') }}" alt=""
                                                 title="">
                                             <h3 class="team-name">Utilities</h3>
                                         </div>
@@ -4445,7 +4445,7 @@
                                 <a href="#partnter9">
                                     <div class="team-details">
                                         <div class="team-img part-bg9">
-                                            <img src="{{ asset('assets/images/Industries/Industruies-Manufacturing.png') }}"
+                                            <img src="{{ asset('assets/images/Industries/Industruies-Manufacturing.webp') }}"
                                                 alt="" title="">
                                             <h3 class="team-name">Industruies <br>&amp; Manufacturing</h3>
                                         </div>
@@ -4461,7 +4461,7 @@
                                 <a href="#partnter10">
                                     <div class="team-details">
                                         <div class="team-img part-bg10">
-                                            <img src="{{ asset('assets/images/Industries/Tourism-Hospitality.png') }}"
+                                            <img src="{{ asset('assets/images/Industries/Tourism-Hospitality.webp') }}"
                                                 alt="" title="">
                                             <h3 class="team-name">Tourism &amp; Hospitality</h3>
                                         </div>
@@ -4477,7 +4477,7 @@
                                 <a href="#partnter11">
                                     <div class="team-details">
                                         <div class="team-img part-bg11">
-                                            <img src="{{ asset('assets/images/Industries/Media-Entertainment.png') }}"
+                                            <img src="{{ asset('assets/images/Industries/Media-Entertainment.webp') }}"
                                                 alt="" title="">
                                             <h3 class="team-name">Media <br>&amp; Entertainment</h3>
                                         </div>
@@ -4493,7 +4493,7 @@
                                 <a href="#partnter12">
                                     <div class="team-details">
                                         <div class="team-img part-bg12">
-                                            <img src="{{ asset('assets/images/Industries/RealEstate.png') }}" alt=""
+                                            <img src="{{ asset('assets/images/Industries/RealEstate.webp') }}" alt=""
                                                 title="">
                                             <h3 class="team-name">Real Estate</h3>
                                         </div>
@@ -4512,40 +4512,40 @@
                                 <h4>Technology, IT &amp; Telecom</h4>
                                 <ul>
                                     <li>
-                                        <img src="assets/images/clients/ncdc-client-logo.jpg" alt="">
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/aic.jpg" alt="">
+                                        <img src="assets/images/clients/aic.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/MCX.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/Samsung.webp" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/hcl-logo.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/metlife.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/ncdc-client-logo.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/aic.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/MCX.jpg" alt="">
+                                        <img src="assets/images/clients/MCX.webp" alt="">
                                     </li>
                                     <li>
                                         <img src="assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/hcl-logo.jpg" alt="">
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/metlife.jpg" alt="">
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -4555,40 +4555,40 @@
                                 <h4>Education</h4>
                                 <ul>
                                     <li>
-                                        <img src="assets/images/clients/ncdc-client-logo.jpg" alt="">
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/aic.jpg" alt="">
+                                        <img src="assets/images/clients/aic.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/MCX.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/Samsung.webp" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/hcl-logo.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/metlife.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/ncdc-client-logo.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/aic.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/MCX.jpg" alt="">
+                                        <img src="assets/images/clients/MCX.webp" alt="">
                                     </li>
                                     <li>
                                         <img src="assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/hcl-logo.jpg" alt="">
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/metlife.jpg" alt="">
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -4598,40 +4598,40 @@
                                 <h4>Banking, Finance &amp; Insurance</h4>
                                 <ul>
                                     <li>
-                                        <img src="assets/images/clients/ncdc-client-logo.jpg" alt="">
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/aic.jpg" alt="">
+                                        <img src="assets/images/clients/aic.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/MCX.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/Samsung.webp" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/hcl-logo.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/metlife.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/ncdc-client-logo.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/aic.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/MCX.jpg" alt="">
+                                        <img src="assets/images/clients/MCX.webp" alt="">
                                     </li>
                                     <li>
                                         <img src="assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/hcl-logo.jpg" alt="">
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/metlife.jpg" alt="">
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -4641,40 +4641,40 @@
                                 <h4>Healthcare</h4>
                                 <ul>
                                     <li>
-                                        <img src="assets/images/clients/ncdc-client-logo.jpg" alt="">
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/aic.jpg" alt="">
+                                        <img src="assets/images/clients/aic.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/MCX.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/Samsung.webp" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/hcl-logo.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/metlife.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/ncdc-client-logo.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/aic.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/MCX.jpg" alt="">
+                                        <img src="assets/images/clients/MCX.webp" alt="">
                                     </li>
                                     <li>
                                         <img src="assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/hcl-logo.jpg" alt="">
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/metlife.jpg" alt="">
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -4684,40 +4684,40 @@
                                 <h4>Retail &amp; E-Commerce</h4>
                                 <ul>
                                     <li>
-                                        <img src="assets/images/clients/ncdc-client-logo.jpg" alt="">
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/aic.jpg" alt="">
+                                        <img src="assets/images/clients/aic.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/MCX.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/Samsung.webp" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/hcl-logo.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/metlife.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/ncdc-client-logo.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/aic.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/MCX.jpg" alt="">
+                                        <img src="assets/images/clients/MCX.webp" alt="">
                                     </li>
                                     <li>
                                         <img src="assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/hcl-logo.jpg" alt="">
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/metlife.jpg" alt="">
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -4727,40 +4727,40 @@
                                 <h4>Power & Energy</h4>
                                 <ul>
                                     <li>
-                                        <img src="assets/images/clients/ncdc-client-logo.jpg" alt="">
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/aic.jpg" alt="">
+                                        <img src="assets/images/clients/aic.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/MCX.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/Samsung.webp" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/hcl-logo.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/metlife.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/ncdc-client-logo.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/aic.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/MCX.jpg" alt="">
+                                        <img src="assets/images/clients/MCX.webp" alt="">
                                     </li>
                                     <li>
                                         <img src="assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/hcl-logo.jpg" alt="">
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/metlife.jpg" alt="">
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -4770,40 +4770,40 @@
                                 <h4>Government &amp; Defence</h4>
                                 <ul>
                                     <li>
-                                        <img src="assets/images/clients/ncdc-client-logo.jpg" alt="">
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/aic.jpg" alt="">
+                                        <img src="assets/images/clients/aic.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/MCX.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/Samsung.webp" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/hcl-logo.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/metlife.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/ncdc-client-logo.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/aic.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/MCX.jpg" alt="">
+                                        <img src="assets/images/clients/MCX.webp" alt="">
                                     </li>
                                     <li>
                                         <img src="assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/hcl-logo.jpg" alt="">
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/metlife.jpg" alt="">
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -4813,40 +4813,40 @@
                                 <h4>Utilities</h4>
                                 <ul>
                                     <li>
-                                        <img src="{{ asset('assets/images/clients/ncdc-client-logo.jpg')}}" alt="">
+                                        <img src="{{ asset('assets/images/clients/ncdc-client-logo.webp')}}" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/aic.jpg" alt="">
+                                        <img src="assets/images/clients/aic.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/MCX.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/Samsung.webp" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/hcl-logo.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/metlife.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/ncdc-client-logo.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/aic.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/MCX.jpg" alt="">
+                                        <img src="assets/images/clients/MCX.webp" alt="">
                                     </li>
                                     <li>
                                         <img src="assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/hcl-logo.jpg" alt="">
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/metlife.jpg" alt="">
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -4856,40 +4856,40 @@
                                 <h4>Industruies &amp; Manufacturing</h4>
                                 <ul>
                                     <li>
-                                        <img src="assets/images/clients/ncdc-client-logo.jpg" alt="">
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/aic.jpg" alt="">
+                                        <img src="assets/images/clients/aic.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/MCX.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/Samsung.webp" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/hcl-logo.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/metlife.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/ncdc-client-logo.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/aic.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/MCX.jpg" alt="">
+                                        <img src="assets/images/clients/MCX.webp" alt="">
                                     </li>
                                     <li>
                                         <img src="assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/hcl-logo.jpg" alt="">
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/metlife.jpg" alt="">
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -4899,40 +4899,40 @@
                                 <h4>Tourism & Hospitality</h4>
                                 <ul>
                                     <li>
-                                        <img src="assets/images/clients/ncdc-client-logo.jpg" alt="">
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/aic.jpg" alt="">
+                                        <img src="assets/images/clients/aic.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/MCX.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/Samsung.webp" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/hcl-logo.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/metlife.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/ncdc-client-logo.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/aic.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/MCX.jpg" alt="">
+                                        <img src="assets/images/clients/MCX.webp" alt="">
                                     </li>
                                     <li>
                                         <img src="assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/hcl-logo.jpg" alt="">
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/metlife.jpg" alt="">
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -4942,40 +4942,40 @@
                                 <h4>Media &amp; Entertainment</h4>
                                 <ul>
                                     <li>
-                                        <img src="assets/images/clients/ncdc-client-logo.jpg" alt="">
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/aic.jpg" alt="">
+                                        <img src="assets/images/clients/aic.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/MCX.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/Samsung.webp" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/hcl-logo.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/metlife.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/ncdc-client-logo.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/aic.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/MCX.jpg" alt="">
+                                        <img src="assets/images/clients/MCX.webp" alt="">
                                     </li>
                                     <li>
                                         <img src="assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/hcl-logo.jpg" alt="">
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/metlife.jpg" alt="">
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -4985,40 +4985,40 @@
                                 <h4>Real Estate</h4>
                                 <ul>
                                     <li>
-                                        <img src="assets/images/clients/ncdc-client-logo.jpg" alt="">
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/aic.jpg" alt="">
+                                        <img src="assets/images/clients/aic.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/MCX.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/Samsung.webp" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/hcl-logo.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/metlife.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/ncdc-client-logo.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/aic.jpg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/clients/MCX.jpg" alt="">
+                                        <img src="assets/images/clients/MCX.webp" alt="">
                                     </li>
                                     <li>
                                         <img src="assets/images/clients/Samsung.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/hcl-logo.jpg" alt="">
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
                                     </li>
                                     <li>
-                                        <img src="assets/images/clients/metlife.jpg" alt="">
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -5052,7 +5052,7 @@
                             <div class="ceh-testo-box" data-target="client-testimonials-popup1">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <div class="ceh-testo-image"><img src="{{ asset('assets/images/testo.jpg') }}"
+                                        <div class="ceh-testo-image"><img src="{{ asset('assets/images/testo.webp') }}"
                                                 class="img-fluid" alt="t1">
                                         </div>
                                     </div>
@@ -5084,7 +5084,7 @@
                             <div class="ceh-testo-box" data-target="client-testimonials-popup2">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <div class="ceh-testo-image"><img src="{{ asset('assets/images/testo.jpg') }}"
+                                        <div class="ceh-testo-image"><img src="{{ asset('assets/images/testo.webp') }}"
                                                 class="img-fluid" alt="t1">
                                         </div>
                                     </div>
@@ -5116,7 +5116,7 @@
                             <div class="ceh-testo-box" data-target="client-testimonials-popup3">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <div class="ceh-testo-image"><img src="{{ asset('assets/images/testo.jpg') }}"
+                                        <div class="ceh-testo-image"><img src="{{ asset('assets/images/testo.webp') }}"
                                                 class="img-fluid" alt="t1">
                                         </div>
                                     </div>
@@ -5148,7 +5148,7 @@
                             <div class="ceh-testo-box" data-target="client-testimonials-popup4">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <div class="ceh-testo-image"><img src="{{ asset('assets/images/testo.jpg') }}"
+                                        <div class="ceh-testo-image"><img src="{{ asset('assets/images/testo.webp') }}"
                                                 class="img-fluid" alt="t1">
                                         </div>
                                     </div>
@@ -5217,7 +5217,7 @@
                                         <div class="col-md-4">
                                             <div class="template15-wrap-main">
                                                 <div class="template15-wrap-main-img">
-                                                    <img src="{{asset('assets/images/networks-8.jpg')}}">
+                                                    <img src="{{asset('assets/images/networks-8.webp')}}">
                                                 </div>
                                                 <div class="template15-wrap-main-content">
                                                     <span><i>19 Oct 2020</i></span>
@@ -5237,7 +5237,7 @@
                                         <div class="col-md-4">
                                             <div class="template15-wrap-main">
                                                 <div class="template15-wrap-main-img">
-                                                    <img src="{{asset('assets/images/ec-council-1.jpg')}}">
+                                                    <img src="{{asset('assets/images/ec-council-1.webp')}}">
                                                 </div>
                                                 <div class="template15-wrap-main-content">
                                                     <span><i>19 Oct 2020</i></span>
@@ -5257,7 +5257,7 @@
                                         <div class="col-md-4">
                                             <div class="template15-wrap-main">
                                                 <div class="template15-wrap-main-img">
-                                                    <img src="{{asset('assets/images/PECB-Acc-Certification.jpg')}}">
+                                                    <img src="{{asset('assets/images/PECB-Acc-Certification.webp')}}">
                                                 </div>
                                                 <div class="template15-wrap-main-content">
                                                     <span><i>19 Oct 2020</i></span>
@@ -5287,19 +5287,19 @@
                                         <div class="col-md-4">
                                             <div data-videourl="https://www.youtube.com/watch?v=GFHlGYB6Cio"
                                                 class="podcast-video">
-                                                <img src="{{asset('assets/images/video-thumb.jpg')}}">
+                                                <img src="{{asset('assets/images/video-thumb.webp')}}">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div data-videourl="https://www.youtube.com/watch?v=GFHlGYB6Cio"
                                                 class="podcast-video">
-                                                <img src="{{asset('assets/images/video-thumb.jpg')}}">
+                                                <img src="{{asset('assets/images/video-thumb.webp')}}">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div data-videourl="https://www.youtube.com/watch?v=GFHlGYB6Cio"
                                                 class="podcast-video">
-                                                <img src="{{asset('assets/images/video-thumb.jpg')}}">
+                                                <img src="{{asset('assets/images/video-thumb.webp')}}">
                                             </div>
                                         </div>
                                     </div>
@@ -5318,7 +5318,7 @@
                                         <div class="col-md-4">
                                             <div class="template15-wrap-main">
                                                 <div class="template15-wrap-main-img">
-                                                    <img src="{{asset('assets/images/networks-8.jpg')}}">
+                                                    <img src="{{asset('assets/images/networks-8.webp')}}">
                                                 </div>
                                                 <div class="template15-wrap-main-content">
                                                     <span><i>19 Oct 2020</i></span>
@@ -5338,7 +5338,7 @@
                                         <div class="col-md-4">
                                             <div class="template15-wrap-main">
                                                 <div class="template15-wrap-main-img">
-                                                    <img src="{{ asset('assets/images/ec-council-1.jpg') }}">
+                                                    <img src="{{ asset('assets/images/ec-council-1.webp') }}">
                                                 </div>
                                                 <div class="template15-wrap-main-content">
                                                     <span><i>19 Oct 2020</i></span>
@@ -5358,7 +5358,7 @@
                                         <div class="col-md-4">
                                             <div class="template15-wrap-main">
                                                 <div class="template15-wrap-main-img">
-                                                    <img src="{{ asset('assets/images/PECB-Acc-Certification.jpg') }}">
+                                                    <img src="{{ asset('assets/images/PECB-Acc-Certification.webp') }}">
                                                 </div>
                                                 <div class="template15-wrap-main-content">
                                                     <span><i>19 Oct 2020</i></span>
@@ -5391,7 +5391,7 @@
                                         <div class="col-md-4">
                                             <div class="template15-wrap-main">
                                                 <div class="template15-wrap-main-img">
-                                                    <img src="{{asset('assets/images/networks-8.jpg')}}">
+                                                    <img src="{{asset('assets/images/networks-8.webp')}}">
                                                 </div>
                                                 <div class="template15-wrap-main-content">
                                                     <span><i>19 Oct 2020</i></span>
@@ -5411,7 +5411,7 @@
                                         <div class="col-md-4">
                                             <div class="template15-wrap-main">
                                                 <div class="template15-wrap-main-img">
-                                                    <img src="{{ asset('assets/images/ec-council-1.jpg') }}">
+                                                    <img src="{{ asset('assets/images/ec-council-1.webp') }}">
                                                 </div>
                                                 <div class="template15-wrap-main-content">
                                                     <span><i>19 Oct 2020</i></span>
@@ -5431,7 +5431,7 @@
                                         <div class="col-md-4">
                                             <div class="template15-wrap-main">
                                                 <div class="template15-wrap-main-img">
-                                                    <img src="{{ asset('assets/images/PECB-Acc-Certification.jpg') }}">
+                                                    <img src="{{ asset('assets/images/PECB-Acc-Certification.webp') }}">
                                                 </div>
                                                 <div class="template15-wrap-main-content">
                                                     <span><i>19 Oct 2020</i></span>
@@ -5480,7 +5480,7 @@
                                     <div class="item">
                                         <div class="template15-wrap-main">
                                             <div class="template15-wrap-main-img">
-                                                <img src="{{ asset('assets/images/networks-8.jpg') }}">
+                                                <img src="{{ asset('assets/images/networks-8.webp') }}">
                                             </div>
                                             <div class="template15-wrap-main-content">
                                                 <span><i>19 Oct 2020</i></span>
@@ -5499,7 +5499,7 @@
                                     <div class="item">
                                         <div class="template15-wrap-main">
                                             <div class="template15-wrap-main-img">
-                                                <img src="{{ asset('assets/images/ec-council-1.jpg') }}">
+                                                <img src="{{ asset('assets/images/ec-council-1.webp') }}">
                                             </div>
                                             <div class="template15-wrap-main-content">
                                                 <span><i>19 Oct 2020</i></span>
@@ -5518,7 +5518,7 @@
                                     <div class="item">
                                         <div class="template15-wrap-main">
                                             <div class="template15-wrap-main-img">
-                                                <img src="{{ asset('assets/images/PECB-Acc-Certification.jpg') }}">
+                                                <img src="{{ asset('assets/images/PECB-Acc-Certification.webp') }}">
                                             </div>
                                             <div class="template15-wrap-main-content">
                                                 <span><i>19 Oct 2020</i></span>
@@ -5554,19 +5554,19 @@
                                     <div class="item">
                                         <div data-videourl="https://www.youtube.com/watch?v=GFHlGYB6Cio"
                                             class="podcast-video">
-                                            <img src="{{ asset('assets/images/video-thumb.jpg') }}">
+                                            <img src="{{ asset('assets/images/video-thumb.webp') }}">
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div data-videourl="https://www.youtube.com/watch?v=GFHlGYB6Cio"
                                             class="podcast-video">
-                                            <img src="{{asset('assets/images/video-thumb.jpg')}}">
+                                            <img src="{{asset('assets/images/video-thumb.webp')}}">
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div data-videourl="https://www.youtube.com/watch?v=GFHlGYB6Cio"
                                             class="podcast-video">
-                                            <img src="{{ asset('assets/images/video-thumb.jpg') }}">
+                                            <img src="{{ asset('assets/images/video-thumb.webp') }}">
                                         </div>
                                     </div>
                                     <!--  -->
@@ -5590,7 +5590,7 @@
                                     <div class="item">
                                         <div class="template15-wrap-main">
                                             <div class="template15-wrap-main-img">
-                                                <img src="{{ asset('assets/images/networks-8.jpg') }}">
+                                                <img src="{{ asset('assets/images/networks-8.webp') }}">
                                             </div>
                                             <div class="template15-wrap-main-content">
                                                 <span><i>19 Oct 2020</i></span>
@@ -5609,7 +5609,7 @@
                                     <div class="item">
                                         <div class="template15-wrap-main">
                                             <div class="template15-wrap-main-img">
-                                                <img src="{{asset('assets/images/ec-council-1.jpg')}}">
+                                                <img src="{{asset('assets/images/ec-council-1.webp')}}">
                                             </div>
                                             <div class="template15-wrap-main-content">
                                                 <span><i>19 Oct 2020</i></span>
@@ -5628,7 +5628,7 @@
                                     <div class="item">
                                         <div class="template15-wrap-main">
                                             <div class="template15-wrap-main-img">
-                                                <img src="{{asset('assets/images/PECB-Acc-Certification.jpg') }}}">
+                                                <img src="{{asset('assets/images/PECB-Acc-Certification.webp') }}}">
                                             </div>
                                             <div class="template15-wrap-main-content">
                                                 <span><i>19 Oct 2020</i></span>
@@ -5665,7 +5665,7 @@
                                     <div class="item">
                                         <div class="template15-wrap-main">
                                             <div class="template15-wrap-main-img">
-                                                <img src="{{asset('assets/images/networks-8.jpg')}}">
+                                                <img src="{{asset('assets/images/networks-8.webp')}}">
                                             </div>
                                             <div class="template15-wrap-main-content">
                                                 <span><i>19 Oct 2020</i></span>
@@ -5684,7 +5684,7 @@
                                     <div class="item">
                                         <div class="template15-wrap-main">
                                             <div class="template15-wrap-main-img">
-                                                <img src="{{ asset('assets/images/ec-council-1.jpg') }}">
+                                                <img src="{{ asset('assets/images/ec-council-1.webp') }}">
                                             </div>
                                             <div class="template15-wrap-main-content">
                                                 <span><i>19 Oct 2020</i></span>
@@ -5703,7 +5703,7 @@
                                     <div class="item">
                                         <div class="template15-wrap-main">
                                             <div class="template15-wrap-main-img">
-                                                <img src="{{ asset('assets/images/PECB-Acc-Certification.jpg') }}">
+                                                <img src="{{ asset('assets/images/PECB-Acc-Certification.webp') }}">
                                             </div>
                                             <div class="template15-wrap-main-content">
                                                 <span><i>19 Oct 2020</i></span>
@@ -5768,7 +5768,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="box-wrappercareer12">
-                            <div class="box-image-career123"> <img src="{{ asset('assets/images/career-img-png.png') }}"
+                            <div class="box-image-career123"> <img src="{{ asset('assets/images/career-img-png.webp') }}"
                                     class="img-fluid-career12" alt=""> </div>
                             <div class="box-button-career">
                                 <a href="https://www.cybarwind.com/new-demo/asaraf/codec/careers.php" target="_blank">Join
@@ -5782,7 +5782,7 @@
         <!-- career end -->
         <section>
             <div class="coach">
-                <div class="coach-img"> <img src="{{asset('assets/images/career-opportunities.jpg')}}" class="img-fluid"
+                <div class="coach-img"> <img src="{{asset('assets/images/career-opportunities.webp')}}" class="img-fluid"
                         alt="coach image">
                 </div>
                 <div class="coach-text">

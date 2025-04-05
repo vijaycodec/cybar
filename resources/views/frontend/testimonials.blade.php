@@ -16,7 +16,7 @@
         <section class="sec_ban" id="resources-banner">
             <div class="home-ban">
                 <div class="rs-img">
-                    <img src="assets/images/resouces.jpg" class="img-fluid rs-banner" alt="home banner">
+                    <img src="assets/images/resouces.webp" class="img-fluid rs-banner" alt="home banner">
                 </div>
                 <div class="over-h2">
                     <h2>Testimonials

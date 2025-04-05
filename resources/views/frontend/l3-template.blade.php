@@ -1,6 +1,9 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'L3-template')
+@section('title', $seoData['seo_title'])
+@section('meta_description', $seoData['seo_description'])
+@section('meta_keywords', $seoData['seo_keywords'])
+
 {{-- <link rel="stylesheet" type="text/css" href="/assets/css/sample7.css"> --}}
 <style>
     .cn-hover-box:hover .cn-content .height {
@@ -8,9 +11,10 @@
         display: block;
     }
 </style>
+@section('content')
+
 {{-- @section('content') --}}
 @include ('frontend.layouts.header-css')
-
 <body class="sample-body" id="main-content-body">
     <!-- Header start -->
 
@@ -1852,6 +1856,7 @@
     <!-- Global Popup for mobile course -features read more (Only One in the Page) End-->
     <a href="#main-content-body" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
 </body>
+@endsection
 {{-- @endsection --}}
 <!-- Jquery code -->
 @push('scripts')

@@ -1,6 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Events')
+@section('title', $seoData['seo_title'])
+@section('meta_description', $seoData['seo_description'])
+@section('meta_keywords', $seoData['seo_keywords'])
 
 @section('content')
 
@@ -13,7 +15,7 @@
         <section class="sec_ban resource-detail-banner" id="resources-banner">
             <div class="home-ban">
                 <div class="rs-img">
-                    <img src="{{ asset('assets/images/resouces-bg-img.jpg') }}" class="img-fluid rs-banner" alt="home banner">
+                    <img src="{{ asset('assets/images/resouces-bg-img.webp') }}" class="img-fluid rs-banner" alt="home banner">
                 </div>
                 <div class="over-h2">
                     <h1>{{ $categories->name }}</h1>
@@ -34,7 +36,7 @@
                                 </a>
                             </li> 
                             <li><a href="{{ route('events') }}">Events</a></li>
-                            <li><a href="javascript:void(0)">{{ $slug }}</a></li>
+                            <li><a href="javascript:void(0)">{{ $categories->name}}</a></li>
                         </ul>
                     </div>
                 </div>

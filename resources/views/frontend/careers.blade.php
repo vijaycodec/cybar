@@ -16,7 +16,7 @@
         <section class="sec_ban" id="career-banner">
             <div class="home-ban">
                 <div class="rs-img">
-                    <img src="assets/images/careers.jpg" class="img-fluid rs-banner" alt="home banner">
+                    <img src="assets/images/careers.webp" class="img-fluid rs-banner" alt="home banner">
                 </div>
                 <div class="over-h2">
                     <h2>Careers</h2>
