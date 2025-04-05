@@ -9,7 +9,7 @@
         <section class="sec_ban" id="resources-banner">
             <div class="home-ban">
                 <div class="rs-img">
-                    <img src="assets/images/contact.png" class="img-fluid rs-banner" alt="home banner">
+                    <img src="assets/images/contact.webp" class="img-fluid rs-banner" alt="home banner">
                 </div>
                 <div class="over-h2">
                     <h2></h2>
@@ -102,7 +102,7 @@
         <section class="sec_ban" id="resources-banner" style="margin-top: 20px; margin-bottom: 20px;">
             <div class="home-ban">
                 <div class="rs-img">
-                    <img src="assets/images/contact2.png" class="img-fluid rs-banner" alt="home banner">
+                    <img src="assets/images/contact2.webp" class="img-fluid rs-banner" alt="home banner">
                 </div>
                 <div class="over-h2">
                     <h2></h2>
@@ -296,6 +296,7 @@
     </body>
 @endsection
 
+@push('scripts')
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const countrySelect = document.getElementById("hmx_country");
@@ -691,3 +692,5 @@
         });
     });
 </script>
+@endpush
+

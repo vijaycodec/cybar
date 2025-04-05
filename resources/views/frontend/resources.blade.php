@@ -15,7 +15,7 @@
         <section class="sec_ban" id="resources-banner">
             <div class="home-ban">
                 <div class="rs-img">
-                    <img src="{{ asset('assets/images/resouces.jpg') }}" class="img-fluid rs-banner" alt="home banner">
+                    <img src="{{ asset('assets/images/resouces.webp') }}" class="img-fluid rs-banner" alt="home banner">
                 </div>
                 <div class="over-h2">
                     <h2>Resources</h2>
