@@ -5,7 +5,7 @@
 
     <body class="static-menu">
         <!-- Header start -->
-        @include('frontend.layouts.header')
+        @include('frontend.layouts.contact-header')
         <section class="sec_ban" id="resources-banner">
             <div class="home-ban">
                 <div class="rs-img">
@@ -44,7 +44,7 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="AddressMain">
-                                                    <div class="CountryMapdiv">
+                                                    <div class="CountryMapdiv" id="mb-delhi">
                                                         <img src="assets/images/ind_flag.svg" alt="ind_flag" width="45"
                                                             height="30" />
                                                     </div>
@@ -123,7 +123,7 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="AddressMain">
-                                                    <div class="CountryMapdiv">
+                                                    <div class="CountryMapdiv" id="mb-Gurugram">
                                                         <img src="assets/images/ind_flag.svg" alt="ind_flag" width="45"
                                                             height="30" />
                                                     </div>
@@ -204,7 +204,7 @@
                                         @csrf
                                         <input type="hidden" id="country_id" name="country_id" value="99">
                                         <input type="hidden" id="page_nm" name="page_nm" value="">
-                                        <h3 style="margin-bottom: 10px;">To Contact Us</h3>
+                                        <h3 style="margin-bottom: 10px;" id="mb-To-Contact-Us">To Contact Us</h3>
                                         <div class="form_fileds mhmhm_frm_fld">
                                             <ul>
                                                 <li class="wid_half">
@@ -692,5 +692,6 @@
         });
     });
 </script>
+@include('frontend.layouts.right-menu-js')
 @endpush
 
