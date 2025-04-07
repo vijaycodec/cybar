@@ -3,7 +3,7 @@
 
 @section('content')
 
-    <body class="static-menu">
+    <body class="body-main">
         <!-- Header start -->
         @include('frontend.layouts.contact-header')
         <section class="sec_ban" id="resources-banner">
@@ -293,10 +293,27 @@
             </div>
         </div>
         <!-- main section end -->
+        <a href="#body-main" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
     </body>
 @endsection
 
 @push('scripts')
+<script type="text/javascript">
+    // bottom to top scroll
+    $(document).ready(function () {
+            "use strict";
+            var offSetTop = 100;
+            var $scrollToTopButton = $('.scrollToTop');
+            //Check to see if the window is top if not then display button
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > offSetTop) {
+                    $scrollToTopButton.fadeIn();
+                } else {
+                    $scrollToTopButton.fadeOut();
+                }
+            });
+        });
+</script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const countrySelect = document.getElementById("hmx_country");
