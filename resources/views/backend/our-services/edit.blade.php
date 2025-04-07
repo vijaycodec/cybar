@@ -12,14 +12,19 @@
                         </a>
                     </li>
                     <li><i class="icon-chevron-right"></i></li>
-                    <li><a href="#"><div class="text-tiny">Resources</div></a></li>
+                    <li><a href="#">
+                            <div class="text-tiny">Services</div>
+                        </a></li>
                     <li><i class="icon-chevron-right"></i></li>
-                    <li><div class="text-tiny">Edit Resource</div></li>
+                    <li>
+                        <div class="text-tiny">Edit Services</div>
+                    </li>
                 </ul>
             </div>
 
             <div class="wg-box">
-                <form class="form-new-brand form-style-1" action="{{ route('our-services.update', $service->id) }}" method="POST" enctype="multipart/form-data">
+                <form class="form-new-brand form-style-1" id="services-form"
+                    action="{{ route('our-services.update', $service->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <a class="tf-button style-1 w208" style="padding-left: 75px;" href="{{ route('our-services.list') }}">
@@ -29,7 +34,8 @@
                         <select class="flex-grow" name="category_id" id="category" required>
                             <option value="" disabled>Select a category</option>
                             @foreach ($categories as $category)
-                                <option value="{{ $category->id }}" {{ $category->id == $service->category_id ? 'selected' : '' }}>
+                                <option value="{{ $category->id }}"
+                                    {{ $category->id == $service->category_id ? 'selected' : '' }}>
                                     {{ $category->name }}
                                 </option>
                             @endforeach
@@ -71,7 +77,7 @@
                     </fieldset>
                     <fieldset class="name">
                         <div class="body-title">Description <span class="tf-color-1">*</span></div>
-                        <textarea class="flex-grow" style="height:90px;" name="description" required>{{ old('description', $service->description) }}</textarea>
+                        <textarea class="flex-grow" style="height:90px;" id="description" name="description" required>{{ old('description', $service->description) }}</textarea>
                     </fieldset>
                     <div class="bot">
                         <div></div>
@@ -85,6 +91,90 @@
 
 @push('scripts')
     <script>
+        $('#services-form').on('submit', function(e) {
+            e.preventDefault();
+
+            // Clear any old error messages
+            $('.error-text').text('');
+
+            let categoryId = $('#category').val();
+            let subCategoryId = $('#sub_category').val();
+            let description = $('#description').val();
+            let imageFile = $('#myFile')[0].files[0];
+
+            let hasError = false;
+
+            if (!categoryId) {
+                $('#category-error').text('Category is required.');
+                hasError = true;
+            }
+
+            if (!subCategoryId) {
+                $('#sub_category-error').text('Sub-category is required.');
+                hasError = true;
+            }
+
+            if (!description.trim()) {
+                $('#description-error').text('Description is required.');
+                hasError = true;
+            }
+
+            if (hasError) return;
+
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You are about to update this service!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, update it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    let formData = new FormData(this);
+
+                    $.ajax({
+                        url: "{{ route('our-services.update', $service->id) }}",
+                        type: 'POST',
+                        data: formData,
+                        contentType: false,
+                        processData: false,
+                        success: function(response) {
+                            Swal.fire('Success!', response.message ||
+                                    'Service updated successfully!', 'success')
+                                .then(() => {
+                                    window.location.href =
+                                        "{{ route('our-services.list') }}";
+                                });
+                        },
+                        error: function(xhr) {
+                            if (xhr.status === 422) {
+                                let errors = xhr.responseJSON.errors;
+                                if (errors.category_id) {
+                                    $('#category-error').text(errors.category_id[0]);
+                                }
+                                if (errors.sub_category_id) {
+                                    $('#sub_category-error').text(errors.sub_category_id[0]);
+                                }
+                                if (errors.description) {
+                                    $('#description-error').text(errors.description[0]);
+                                }
+                                if (errors.image) {
+                                    $('#image-error').text(errors.image[0]);
+                                }
+                                Swal.fire('Validation Error', 'Please correct the errors.',
+                                    'error');
+                            } else {
+                                Swal.fire('Error!', 'Something went wrong.', 'error');
+                            }
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+
+    <script>
         $(document).ready(function() {
             let categoryId = {{ $service->category_id }};
             let subCategoryId = {{ $service->sub_category_id }};
@@ -94,11 +184,16 @@
                 $.ajax({
                     url: "{{ route('get-categories.get') }}",
                     type: "GET",
-                    data: { category_id: categoryId },
+                    data: {
+                        category_id: categoryId
+                    },
                     success: function(data) {
-                        $('#sub_category').html('<option value="" disabled selected>Select Sub category</option>');
+                        $('#sub_category').html(
+                            '<option value="" disabled selected>Select Sub category</option>');
                         $.each(data, function(key, value) {
-                            $('#sub_category').append('<option value="' + value.id + '" ' + (value.id == selectedSubCategory ? 'selected' : '') + '>' + value.sub_category + '</option>');
+                            $('#sub_category').append('<option value="' + value.id + '" ' + (
+                                    value.id == selectedSubCategory ? 'selected' : '') +
+                                '>' + value.sub_category + '</option>');
                         });
                     }
                 });

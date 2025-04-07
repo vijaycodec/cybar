@@ -334,99 +334,99 @@ class L3ContentRepository implements L3ContentRepositoryInterface
         return redirect()->route('l3-content.create')->with('success', 'Form data saved successfully!');
     }
 
-    // private function uploadImage(Request $request, $folder)
-    // {
-    //     if ($request->hasFile('image')) {
-    //         $request->validate([
-    //             'image' => 'mimes:png,jpg,jpeg,webp|max:4096',
-    //         ]);
-
-    //         $image = $request->file('image');
-
-    //         // Validate MIME type 
-    //         $mimeType = mime_content_type($image->getPathname());
-    //         $allowedTypes = ['image/png', 'image/jpeg', 'image/webp'];
-
-    //         if (!in_array($mimeType, $allowedTypes, true)) {
-    //             throw new \Exception('Invalid file type detected');
-    //         }
-
-    //         // Prevent directory traversal 
-    //         $folder = basename($folder);
-
-    //         // Validate file name 
-    //         $originalName = preg_replace('/[^a-zA-Z0-9._-]/', '', $image->getClientOriginalName());
-    //         if (preg_match('/\.(php|exe|sh|bat|phtml|jsp|asp|aspx|cgi|pl)$/i', $originalName)) {
-    //             throw new \Exception('Disallowed file type');
-    //         }
-
-    //         // Limit file name length 
-    //         if (strlen($originalName) > 255) {
-    //             throw new \Exception('File name too long');
-    //         }
-    //         // Enforce safe naming convention 
-    //         $originalName = str_replace(" ", "_", $originalName);
-    //         // Generate unique filename 
-    //         $file_name = md5(uniqid()) . '.' . $image->getClientOriginalExtension();
-    //         // Store file securely 
-    //         $path = $image->storeAs("uploads/frontend/l3_template/{$folder}", $file_name, 'public');
-    //         return $file_name;
-    //     }
-    //     return null;
-    // }
-
-
-    public function uploadImage(Request $request, string $folder): ?string
+    private function uploadImage(Request $request, $folder)
     {
         if ($request->hasFile('image')) {
-            // Validate file
             $request->validate([
                 'image' => 'mimes:png,jpg,jpeg,webp|max:4096',
             ]);
-    
+
             $image = $request->file('image');
-    
-            // Validate MIME type
+
+            // Validate MIME type 
             $mimeType = mime_content_type($image->getPathname());
             $allowedTypes = ['image/png', 'image/jpeg', 'image/webp'];
+
             if (!in_array($mimeType, $allowedTypes, true)) {
                 throw new \Exception('Invalid file type detected');
             }
-    
-            // Prevent directory traversal
+
+            // Prevent directory traversal 
             $folder = basename($folder);
-    
-            // Sanitize original file name
+
+            // Validate file name 
             $originalName = preg_replace('/[^a-zA-Z0-9._-]/', '', $image->getClientOriginalName());
             if (preg_match('/\.(php|exe|sh|bat|phtml|jsp|asp|aspx|cgi|pl)$/i', $originalName)) {
                 throw new \Exception('Disallowed file type');
             }
 
-            // Limit file name length
+            // Limit file name length 
             if (strlen($originalName) > 255) {
                 throw new \Exception('File name too long');
             }
-
-            // Generate a unique WebP file name
-            $fileName = md5(uniqid()) . '.webp';
-    
-            // Fix: Pass a driver instance (GdDriver or ImagickDriver)
-            $manager = new ImageManager(new GdDriver()); // Use new ImagickDriver() if you prefer Imagick
-    
-            // Convert to WebP using WebpEncoder
-            $webpImage = $manager->read($image)->encode(new WebpEncoder(quality: 70)); // 80% quality
-    
-            // Define the storage path
-            $storagePath = "uploads/frontend/l3_template/{$folder}/{$fileName}";
-    
-            // Save the WebP image to storage (public disk)
-            Storage::disk('public')->put($storagePath, $webpImage);
-    
-            return $fileName;
+            // Enforce safe naming convention 
+            $originalName = str_replace(" ", "_", $originalName);
+            // Generate unique filename 
+            $file_name = md5(uniqid()) . '.' . $image->getClientOriginalExtension();
+            // Store file securely 
+            $path = $image->storeAs("uploads/frontend/l3_template/{$folder}", $file_name, 'public');
+            return $file_name;
         }
-    
         return null;
     }
+
+
+    // public function uploadImage(Request $request, string $folder): ?string
+    // {
+    //     if ($request->hasFile('image')) {
+    //         // Validate file
+    //         $request->validate([
+    //             'image' => 'mimes:png,jpg,jpeg,webp|max:4096',
+    //         ]);
+    
+    //         $image = $request->file('image');
+    
+    //         // Validate MIME type
+    //         $mimeType = mime_content_type($image->getPathname());
+    //         $allowedTypes = ['image/png', 'image/jpeg', 'image/webp'];
+    //         if (!in_array($mimeType, $allowedTypes, true)) {
+    //             throw new \Exception('Invalid file type detected');
+    //         }
+    
+    //         // Prevent directory traversal
+    //         $folder = basename($folder);
+    
+    //         // Sanitize original file name
+    //         $originalName = preg_replace('/[^a-zA-Z0-9._-]/', '', $image->getClientOriginalName());
+    //         if (preg_match('/\.(php|exe|sh|bat|phtml|jsp|asp|aspx|cgi|pl)$/i', $originalName)) {
+    //             throw new \Exception('Disallowed file type');
+    //         }
+
+    //         // Limit file name length
+    //         if (strlen($originalName) > 255) {
+    //             throw new \Exception('File name too long');
+    //         }
+
+    //         // Generate a unique WebP file name
+    //         $fileName = md5(uniqid()) . '.webp';
+    
+    //         // Fix: Pass a driver instance (GdDriver or ImagickDriver)
+    //         $manager = new ImageManager(new GdDriver()); // Use new ImagickDriver() if you prefer Imagick
+    
+    //         // Convert to WebP using WebpEncoder
+    //         $webpImage = $manager->read($image)->encode(new WebpEncoder(quality: 70)); // 80% quality
+    
+    //         // Define the storage path
+    //         $storagePath = "uploads/frontend/l3_template/{$folder}/{$fileName}";
+    
+    //         // Save the WebP image to storage (public disk)
+    //         Storage::disk('public')->put($storagePath, $webpImage);
+    
+    //         return $fileName;
+    //     }
+    
+    //     return null;
+    // }
 
     public function getl3contentById($id)
     {
