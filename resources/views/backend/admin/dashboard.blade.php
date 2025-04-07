@@ -12,7 +12,7 @@
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap14">
                                     <div class="image ic-bg">
-                                        <i class="icon-shopping-bag"></i>
+                                        <img src="{{ asset('backend/assets/images/services.png') }}" alt="">
                                     </div>
                                     <div>
                                         {{-- <div class="body-text mb-2">Services</div> --}}
@@ -29,7 +29,7 @@
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap14">
                                     <div class="image ic-bg">
-                                        <i class="icon-dollar-sign"></i>
+                                        <img src="{{ asset('backend/assets/images/training.webp') }}" alt="">
                                     </div>
                                     <div>
                                         {{-- <div class="body-text mb-2">Trainings</div> --}}
@@ -47,7 +47,7 @@
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap14">
                                     <div class="image ic-bg">
-                                        <i class="icon-shopping-bag"></i>
+                                        <img src="{{ asset('backend/assets/images/resources.webp') }}" alt="">
                                     </div>
                                     <div>
                                         {{-- <div class="body-text mb-2">Pending Orders</div> --}}
@@ -65,7 +65,7 @@
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap14">
                                     <div class="image ic-bg">
-                                        <i class="icon-dollar-sign"></i>
+                                        <img src="{{ asset('backend/assets/images/Blog.png') }}" alt="">
                                     </div>
                                     <div>
                                         {{-- <div class="body-text mb-2">Pending Orders Amount</div> --}}
@@ -86,7 +86,7 @@
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap14">
                                     <div class="image ic-bg">
-                                        <i class="icon-shopping-bag"></i>
+                                        <img src="{{ asset('backend/assets/images/event.png') }}" alt="">
                                     </div>
                                     <div>
                                         {{-- <div class="body-text mb-2">Delivered Orders</div> --}}
@@ -104,7 +104,7 @@
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap14">
                                     <div class="image ic-bg">
-                                        <i class="icon-dollar-sign"></i>
+                                        <img src="{{ asset('backend/assets/images/testimonials.png') }}" alt="">
                                     </div>
                                     <div>
                                         {{-- <div class="body-text mb-2">Delivered Orders Amount</div> --}}
@@ -121,7 +121,7 @@
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap14">
                                     <div class="image ic-bg">
-                                        <i class="icon-shopping-bag"></i>
+                                        <img src="{{ asset('backend/assets/images/career.png') }}" alt="">
                                     </div>
                                     <div>
                                         {{-- <div class="body-text mb-2">Canceled Orders</div> --}}
@@ -139,7 +139,7 @@
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap14">
                                     <div class="image ic-bg">
-                                        <i class="icon-dollar-sign"></i>
+                                        <img src="{{ asset('backend/assets/images/Newsletter.png') }}" alt="">
                                     </div>
                                     <div>
                                         {{-- <div class="body-text mb-2">Canceled Orders Amount</div> --}}

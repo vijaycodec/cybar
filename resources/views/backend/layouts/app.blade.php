@@ -103,8 +103,8 @@
             
                                 <li class="menu-item has-children">
                                     <a href="javascript:void(0);" class="menu-item-button">
-                                        <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
-                                                style="height:18px"></div>
+                                        <div><img src="{{ asset('backend/assets/images/category.webp') }}" alt="category"
+                                                style="height:25px"></div>
                                         <div class="text">Categories</div>
                                     </a>
             
@@ -273,8 +273,9 @@
 
                                 <li class="menu-item has-children">
                                     <a href="javascript:void(0);" class="menu-item-button">
-                                        <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
-                                                style="height:18px"></div>
+                                        <div><img src="{{ asset('backend/assets/images/category.webp') }}" alt="category"
+                                            style="height:25px"></div>
+                                               
                                         <div class="text">Course Categories</div>
                                     </a>
             
@@ -296,8 +297,8 @@
 
                                 <li class="menu-item has-children">
                                     <a href="javascript:void(0);" class="menu-item-button">
-                                        <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
-                                                style="height:18px"></div>
+                                        <div><img src="{{ asset('backend/assets/images/category.webp') }}" alt="category"
+                                            style="height:25px"></div>
                                         <div class="text">Sub Category</div>
                                     </a>
             
@@ -368,8 +369,8 @@
 
                                 <li class="menu-item has-children">
                                     <a href="javascript:void(0);" class="menu-item-button">
-                                        <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
-                                                style="height:18px"></div>
+                                        <div><img src="{{ asset('backend/assets/images/category.webp') }}" alt="category"
+                                            style="height:25px"></div>
                                         <div class="text">L3 Category</div>
                                     </a>
             
@@ -391,8 +392,8 @@
 
                                 <li class="menu-item has-children">
                                     <a href="javascript:void(0);" class="menu-item-button">
-                                        <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
-                                                style="height:18px"></div>
+                                        <div><img src="{{ asset('backend/assets/images/category.webp') }}" alt="category"
+                                            style="height:25px"></div>
                                         <div class="text">L3 Sub Category</div>
                                     </a>
             
@@ -403,8 +404,6 @@
                                             </a>
                                         </li>
             
-            
-                                      
             
                                     </ul>
 
@@ -481,8 +480,8 @@
 
                                 <li class="menu-item has-children">
                                     <a href="javascript:void(0);" class="menu-item-button">
-                                        <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
-                                                style="height:18px"></div>
+                                        <div><img src="{{ asset('backend/assets/images/content.webp') }}" alt="category"
+                                            style="height:25px"></div>
                                         <div class="text">L3 Content</div>
                                     </a>
             
@@ -504,8 +503,8 @@
 
                                 <li class="menu-item has-children">
                                     <a href="javascript:void(0);" class="menu-item-button">
-                                        <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
-                                                style="height:18px"></div>
+                                        <div><img src="{{ asset('backend/assets/images/podcast.png') }}" alt="category"
+                                            style="height:30px"></div>
                                         <div class="text">Podcasts</div>
                                     </a>
             
@@ -528,8 +527,8 @@
 
                                 <li class="menu-item has-children">
                                     <a href="javascript:void(0);" class="menu-item-button">
-                                        <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="Example Image"
-                                                style="height:18px"></div>
+                                        <div><img src="{{ asset('backend/assets/images/seo.webp') }}" alt="category"
+                                            style="height:25px"></div>
                                         <div class="text">SEO Details</div>
                                     </a>
             
@@ -551,15 +550,13 @@
 
                                 <li class="menu-item has-children">
                                     <a href="{{ route('resources-comment.list') }}" class="menu-item-button">
-                                        <div><img src="{{ asset('backend\assets\icon\user.png') }}" alt="" style="height:18px">
-                                        </div>
+                                        <div><img src="{{ asset('backend/assets/images/comments.webp') }}" alt="category"
+                                            style="height:25px"></div>
                                         <div class="text">Comments</div>
                                     </a>
-            
                                 </li>
 
                                
-            
                                 {{-- <li class="menu-item">
                                 <a href="users.html" class="">
                                     <div class="icon"><i class="icon-user"></i></div>

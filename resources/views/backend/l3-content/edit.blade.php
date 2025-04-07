@@ -139,7 +139,7 @@
                                     'incidents' => 'Incidents',
                                     'industries' => 'Industries',
                                     'cyberwind' => 'Why Cyberwind',
-                                    'testimonials' => 'Testimonials'
+                                    'testimonials' => 'Testimonials',
                                     'blog' => 'Blog',
                                     'faqs' => 'FAQs',
                                 ];
