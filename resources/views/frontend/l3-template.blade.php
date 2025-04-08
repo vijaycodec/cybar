@@ -1112,11 +1112,12 @@
                                     @php
                                         // Escape quotes to prevent breaking the HTML attribute
                                         $description = addslashes($contentInfo->course_feature_description);
+                                        $short_description = addslashes($contentInfo->course_feature_short_description);
                                     @endphp
                                     <div class="mobile-cf"
 
                                         data-title="{{ $contentInfo->coursefeatureCategory->name }}"
-                                        data-description="{{ e($description) }}" {{-- Use e() instead of htmlspecialchars() --}}
+                                        data-description="{{ e($short_description) }}{{ e($description) }}" {{-- Use e() instead of htmlspecialchars() --}}
                                         data-image="{{ asset('storage/uploads/frontend/l3_template/coursefeature/' . $contentInfo->images) }}">
 
                                         <div class="mobile-cf-content">
