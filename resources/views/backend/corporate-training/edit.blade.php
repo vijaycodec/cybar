@@ -15,7 +15,7 @@
             </div>
 
             <div class="wg-box">
-                <form class="form-new-brand form-style-1" action="{{ route('corporate-training.update', $corporateTraining->id) }}" method="POST" enctype="multipart/form-data">
+                <form class="form-new-brand form-style-1" id="corporate-training-form" action="{{ route('corporate-training.update', $corporateTraining->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
 
@@ -76,7 +76,7 @@
                     </fieldset>
                     <fieldset class="name">
                         <div class="body-title">Description <span class="tf-color-1">*</span></div>
-                        <textarea class="flex-grow" style="height:90px;" name="description" required>{{ old('description', $corporateTraining->description) }}</textarea>
+                        <textarea class="flex-grow" id="description" style="height:90px;" name="description" required>{{ old('description', $corporateTraining->description) }}</textarea>
                     </fieldset>
 
                     <div class="bot">
@@ -90,6 +90,87 @@
 @endsection
 
 @push('scripts')
+<script>
+    $('#corporate-training-form').on('submit', function(e) {
+        e.preventDefault();
+
+        // Clear previous error messages
+        $('.error-text').text('');
+
+        let categoryId = $('#category').val();
+        let subCategoryId = $('#sub_category').val();
+        let description = $('#description').val();
+        let imageFile = $('#myFile')[0].files[0];
+
+        let hasError = false;
+
+        if (!categoryId) {
+            $('#category-error').text('Category is required.');
+            hasError = true;
+        }
+
+        if (!subCategoryId) {
+            $('#sub_category-error').text('Sub-category is required.');
+            hasError = true;
+        }
+
+        if (!description.trim()) {
+            $('#description-error').text('Description is required.');
+            hasError = true;
+        }
+
+        if (hasError) return;
+
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You are about to update this corporate training!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, update it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                let formData = new FormData(this);
+
+                $.ajax({
+                    url: "{{ route('corporate-training.update', $corporateTraining->id) }}",
+                    type: 'POST',
+                    data: formData,
+                    contentType: false,
+                    processData: false,
+                    success: function(response) {
+                        Swal.fire('Success!', response.message || 'Corporate training updated successfully!', 'success')
+                            .then(() => {
+                                window.location.href = "{{ route('corporate-training.list') }}";
+                            });
+                    },
+                    error: function(xhr) {
+                        if (xhr.status === 422) {
+                            let errors = xhr.responseJSON.errors;
+                            if (errors.category_id) {
+                                $('#category-error').text(errors.category_id[0]);
+                            }
+                            if (errors.sub_category_id) {
+                                $('#sub_category-error').text(errors.sub_category_id[0]);
+                            }
+                            if (errors.description) {
+                                $('#description-error').text(errors.description[0]);
+                            }
+                            if (errors.image) {
+                                $('#image-error').text(errors.image[0]);
+                            }
+                            Swal.fire('Validation Error', 'Please correct the errors.', 'error');
+                        } else {
+                            Swal.fire('Error!', 'Something went wrong.', 'error');
+                        }
+                    }
+                });
+            }
+        });
+    });
+</script>
+
 <script>
     $(document).ready(function() {
         let categoryId = {{ $corporateTraining->category_id }};

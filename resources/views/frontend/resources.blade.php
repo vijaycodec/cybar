@@ -112,11 +112,12 @@
                                         <input type="text" name="q" id="filter" class="form-control input-lg typeahead form-control mb-3" 
                                                placeholder="Search Resources..." autocomplete="off" />
                                     </div>
+                                    <ul id="search-results" class="list-group"></ul>
                                     <button class="btn btn-success btn-lg" id="search-btn" title="Click to Submit">Search</button>
                                 </form>
                                 
                                 <!-- Results Container -->
-                                <ul id="search-results" class="list-group"></ul>
+
                             </div>
 
                         </div>
@@ -131,7 +132,7 @@
                                 $totalHeights = count($heights);
                             @endphp
                             @foreach ($trendings as $index => $resource)
-                                <div class="test_mob_app custom-box" style="height: {{ $heights[$index % $totalHeights] }}">
+                                <div class="test_mob_app custom-box" style="height: {{ $heights[$index % $totalHeights] }}" id="{{ $resource->slug }}">
                                     <h2 class="custom-heading">
                                         {{ $resource->sub_category }}
                                     </h2>
@@ -568,9 +569,9 @@
     $('#filter').on('keyup', function () {
         let query = $(this).val();
 
-        if (query.length > 2) { // Start searching after 3 characters
+        if (query.length >= 1) { // Start searching after 3 characters
             $.ajax({
-                url: "/search-resources", // Laravel route
+                url: "{{ route('search') }}", // Laravel route
                 method: "GET",
                 data: { query: query },
                 success: function (response) {
@@ -578,7 +579,14 @@
 
                     if (response.length > 0) {
                         response.forEach(resource => {
-                            resultHtml += `<li class="list-group-item">${resource.name}</li>`;
+                            // resultHtml += `<li class="list-group-item">${resource.name}</li>`;
+                            resultHtml += `
+                            <li class="list-group-item">
+                                <a href="#${resource.slug}" class="text-decoration-none d-block">
+                                    ${resource.name ?? resource.sub_category}
+                                </a>
+                            </li>`;
+
                         });
                     } else {
                         resultHtml = '<li class="list-group-item text-muted">No results found</li>';
@@ -603,10 +611,17 @@
 
 </script>
     
-<script>
+{{-- <script>
     $(document).on('click', '#search-results li', function () {
     $('#filter').val($(this).text()); // Fill input with selected result
     $('#search-results').hide(); // Hide results
+});
+</script> --}}
+<script>
+    $(document).on('click', '#search-results li', function () {
+    let selectedText = $(this).text().trim().replace(/\s+/g, ' ');
+    $('#filter').val(selectedText); // Cleaned up and inserted
+    $('#search-results').hide();
 });
 </script>
 @endpush
