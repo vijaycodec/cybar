@@ -356,7 +356,7 @@ Route::middleware(['FrameGuard'])->group(function () {
     Route::post('/comment/user', [commentController::class, 'store'])->name('resources-comment.store');
     Route::post('/career/jobs', [jobCarrerController::class, 'store'])->name('job.career.store');
 
-    Route::get('/search-resources', [SearchController::class, 'search']);
+    Route::get('/search-resources', [SearchController::class, 'search'])->name('search');
 
     // Route::get('/newsletter/{slug}', [NewsLetteViewsController ::class, 'newLetterView'])->name('newLetter.View'); //trendingNewsLetterView
     Route::get('/newsletter/{category_slug}/{slug}', [NewsLetteViewsController::class, 'newLetterView'])
