@@ -20,15 +20,16 @@
         $('.mobile-ser-tab').removeClass('ser-menu-show');
         
         var targetId = $(this).attr('href');
+        console.log(targetId);
         var $targetElement = $(targetId);
-        
+        console.log($targetElement);
         if ($targetElement.length) {
             // Get header height for offset
             var headerHeight = $('.mobile-nav-top').outerHeight() || 0;
             
             // Calculate the target position with offset
             var targetPosition = $targetElement.offset().top - headerHeight;
-            
+            console.log(targetPosition);
             // Smooth scroll to target
             $('html, body').animate({
                 scrollTop: targetPosition

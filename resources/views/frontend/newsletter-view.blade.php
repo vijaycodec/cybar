@@ -33,7 +33,7 @@
             </div>
         </section>
         <!-- banner end -->
-        <section class="breadcromb">
+        <section class="breadcromb desktop-view">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
