@@ -54,11 +54,11 @@
                                        
                                         <td>
                                             <div class="list-icon-function">
-                                                <button type="button" class="show" data-id="{{ $category->id }}">
+                                                {{-- <button type="button" class="show" data-id="{{ $category->id }}">
                                                     <div class="item eye">
                                                         <i class="icon-eye"></i>
                                                     </div>
-                                                </button>
+                                                </button> --}}
                                                 <a href="{{ route('industry.edit', $category->id) }}">
                                                     <div class="item edit">
                                                         <i class="icon-edit-3"></i>

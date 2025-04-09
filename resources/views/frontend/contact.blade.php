@@ -3,8 +3,8 @@
 
 @section('content')
 
-    <body class="body-main">
-        <!-- Header start -->
+<body id="body-main">
+    <!-- Header start -->
         @include('frontend.layouts.contact-header')
         <section class="sec_ban" id="resources-banner">
             <div class="home-ban">
@@ -293,7 +293,8 @@
             </div>
         </div>
         <!-- main section end -->
-        <a href="#body-main" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
+        <a href="#body-main" class="scrollToTop" style="display: block;"><i class="fa fa-arrow-up"></i></a>
+        
     </body>
 @endsection
 
