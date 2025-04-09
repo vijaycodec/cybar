@@ -11,7 +11,7 @@
         display: block;
     }
 </style>
-@section('content')
+
 
 {{-- @section('content') --}}
 @include ('frontend.layouts.header-css')
@@ -1859,7 +1859,7 @@
     <!-- Global Popup for mobile course -features read more (Only One in the Page) End-->
     <a href="#main-content-body" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
 </body>
-@endsection
+
 {{-- @endsection --}}
 <!-- Jquery code -->
 @push('scripts')
