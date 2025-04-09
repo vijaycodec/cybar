@@ -258,6 +258,7 @@
                                 @endforeach
                             @endforeach
                         </div>
+                        <div id="navigation-count" class="count-nav-box"></div>
                     </div>
 
                     <!-- slider end -->
