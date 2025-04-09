@@ -27,7 +27,6 @@
             
             // Calculate the target position with offset
             var targetPosition = $targetElement.offset().top - headerHeight;
-            console.log(targetPosition);
             // Smooth scroll to target
             $('html, body').animate({
                 scrollTop: targetPosition
