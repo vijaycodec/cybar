@@ -20,9 +20,7 @@
         $('.mobile-ser-tab').removeClass('ser-menu-show');
         
         var targetId = $(this).attr('href');
-        console.log(targetId);
         var $targetElement = $(targetId);
-        console.log($targetElement);
         if ($targetElement.length) {
             // Get header height for offset
             var headerHeight = $('.mobile-nav-top').outerHeight() || 0;
