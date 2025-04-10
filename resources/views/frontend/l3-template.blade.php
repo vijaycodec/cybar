@@ -468,7 +468,7 @@
 
         <!-- program info 3-->
         @if ($contentInfos->contains(fn($info) => $info->programCategory))
-        <section class="anchor-link sample7-line space7 ceh-pro" id="{{ $categories[3]['slug'] }}">
+        <section class="anchor-link sample7-line space7 ceh-pro" id="{{ $categories[2]['slug'] }}">
             <!-- title  -->
             <div class="container ">
                 <div class="row">
@@ -1000,7 +1000,7 @@
 
     <!-- course Feature start -->
     @if ($contentInfos->contains(fn($info) => $info->coursefeatureCategory))
-        <section class="anchor-link sample7-line space7" id="{{ $categories[2]['slug'] }}">
+        <section class="anchor-link sample7-line space7" id="{{ $categories[3]['slug'] }}">
             <!-- title  -->
             <div class="container">
                 <div class="row">
