@@ -1085,7 +1085,7 @@
 
                                         {{-- What's New in CEH Category --}}
                                     @elseif ($contentInfo->l3_layout_program == 'whatsnewinceh')
-                                        <div id="{{ $programCategorySlug }}mob" style="{{$loop->index == 1 ? 'display:block;' : '' }}" class="acc__panel">
+                                        <div id="{{ $programCategorySlug }}mob" style="display:block;" class="acc__panel">
                                             <div class="pro-mbile pro-mbile1">
                                                 <div class="acc acc-m">
                                                     <!-- Loop through each subcategory -->
@@ -1112,7 +1112,7 @@
                                                             </a>
                                                             <!-- Accordion Content Panel -->
                                                             <div id="{{ $subCategorySlug }}mob" class="acc__panel "
-                                                                style="display:block">
+                                                                style="">
                                                                 <div class="vert-box box-height">
                                                                     @if ($subCategory->image)
                                                                         <div class="template12-img">
