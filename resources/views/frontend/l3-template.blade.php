@@ -439,7 +439,7 @@
                                                     </div>
                                                     {{-- <div class="red-title"> --}}
                                                     @if ($contentInfo->significanceCategory)
-                                                        {!! $contentInfo->significance_description !!}
+                                                        {!! $contentInfo->significance_short_description !!} {!! $contentInfo->significance_description !!}
                                                     @endif
                                                     {{-- </div> --}}
                                                 @else
@@ -578,34 +578,34 @@
                 <div class="acc">
                     @foreach ($l3Categories as $category)
                         @foreach ($category->contentInfos as $contentInfo)
-                            @if ($contentInfo->cyberwindCategory)
+                            @if ($contentInfo->coursefeatureCategory)
                                 <div class="acc__card">
                                     <!-- Accordion Title -->
-                                    <a href="#whycyberwind-{{ $loop->iteration }}"
+                                    <a href="#coursefeatures-{{ $loop->iteration }}"
                                         class="acc__title {{ $loop->first ? 'active' : '' }}"
-                                        data-target="whycyberwind-{{ $loop->iteration }}">
-                                        {{ $contentInfo->cyberwindCategory->name }}
+                                        data-target="coursefeatures-{{ $loop->iteration }}">
+                                        {{ $contentInfo->coursefeatureCategory->name }}
                                     </a>
 
                                     <!-- Accordion Panel -->
                                     <div class="acc__panel" style="{{ $loop->first ? 'display:block;' : '' }}"
-                                        id="whycyberwind-{{ $loop->iteration }}">
+                                        id="coursefeatures-{{ $loop->iteration }}">
                                         <div class="vert-box box-height">
                                             <div class="red-title">
                                                 @if ($contentInfo->images)
                                                     <div class="template12-img">
                                                         <img
-                                                            src="{{ asset('storage/uploads/frontend/l3_template/cyberwind/' . $contentInfo->images) }}">
+                                                            src="{{ asset('storage/uploads/frontend/l3_template/coursefeature/' . $contentInfo->images) }}">
                                                     </div>
                                                     {{-- <div class="red-title"> --}}
-                                                    @if ($contentInfo->cyberwindCategory)
-                                                        {!! $contentInfo->cyberwind_description !!}
+                                                    @if ($contentInfo->coursefeatureCategory)
+                                                        {!! $contentInfo->course_feature_short_description !!}{!! $contentInfo->course_feature_description !!}
                                                     @endif
                                                     {{-- </div> --}}
                                                 @else
                                                     {{-- <div class="red-title"> --}}
-                                                    @if ($contentInfo->cyberwindCategory)
-                                                        {!! $contentInfo->cyberwind_description !!}
+                                                    @if ($contentInfo->coursefeatureCategory)
+                                                        {!! $contentInfo->course_feature_description !!}
                                                     @endif
                                                     {{-- </div> --}}
                                                 @endif
@@ -1545,7 +1545,7 @@
                                                     </div>
                                                     {{-- <div class="red-title"> --}}
                                                     @if ($contentInfo->cyberwindCategory)
-                                                        {!! $contentInfo->cyberwind_description !!}
+                                                        {!! $contentInfo->cyberwind_short_description !!} {!! $contentInfo->cyberwind_description !!}
                                                     @endif
                                                     {{-- </div> --}}
                                                 @else
