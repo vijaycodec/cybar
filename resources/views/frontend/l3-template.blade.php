@@ -466,211 +466,6 @@
     @endif
     <!-- Significance end 2--->
 
-
-
-    <!-- course Feature start -->
-    @if ($contentInfos->contains(fn($info) => $info->coursefeatureCategory))
-        <section class="anchor-link sample7-line space7" id="{{ $categories[2]['slug'] }}">
-            <!-- title  -->
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 cn-title">
-                        {{-- <h2>COURSE FEATURES</h2>
-                        <p>The essential technology that matter most for business today</p> --}}
-                         @foreach ($l3Categories as $category)
-                            @foreach ($category->contentInfos as $contentInfo)
-                                @if ($contentInfo->coursefeature_title)
-                                    <h2>{!! $contentInfo->coursefeature_title->title !!}</h2>
-                                @endif
-                            @endforeach
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-            <!--title end-->
-            <!-- tab2 start  -->
-            <div class="container desktop-view course-features">
-                <div class="row">
-                    <!-- tab2 menu start -->
-                    <ul class="nav nav-tabs sample-tab2-menu" id="tabmenu2">
-                        @foreach ($l3Categories as $category)
-                            {{-- <li class="active"><a data-toggle="tab" href="#ic">BANKING & FINANCE</a></li> --}}
-                            @foreach ($category->contentInfos as $contentInfo)
-                                @if ($contentInfo->coursefeatureCategory)
-                                    <li class="{{ $loop->first ? 'active' : '' }}"><a data-toggle="tab"
-                                            class="codec-tab"
-                                            href="#{{ strtolower(str_replace([' ', '&', ','], '-', $contentInfo->coursefeatureCategory->name)) }}">{{ $contentInfo->coursefeatureCategory->name }}</a>
-                                    </li>
-                                @endif
-                            @endforeach
-                        @endforeach
-                    </ul>
-                    <!--  tab2 menu end -->
-                    <!-- tab2 content box start -->
-
-                    <div class="tab-content sample7-tb-content" style="">
-                        <!-- tab1 conrent start -->
-                        @foreach ($l3Categories as $category)
-                            @foreach ($category->contentInfos as $contentInfo)
-                                @if ($contentInfo->coursefeatureCategory)
-                                    <div id="{{ strtolower(str_replace([' ', '&', ','], '-', $contentInfo->coursefeatureCategory->name)) }}"
-                                        class="tab-pane tab-pane_cf_d fade in {{ $loop->first ? 'active' : '' }}">
-                                        <div class="container">
-                                            <div class="row rowp">
-                                                @if ($contentInfo->images)
-                                                    <div class="col-md-3">
-                                                        <div class="template12-img">
-                                                            <img
-                                                                src="{{ asset('storage/uploads/frontend/l3_template/coursefeature/' . $contentInfo->images) }}">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <div class="red-title">
-                                                            @if ($contentInfo->coursefeatureCategory)
-                                                                {!! $contentInfo->course_feature_short_description !!}
-                                                            @endif
-                                                            <a href="javascript:void(0);" class="btn-show">Read More
-                                                                ...</a>
-
-                                                            <div class="content-hide" style="display: none;">
-                                                                {!! $contentInfo->course_feature_description !!}
-                                                                <a href="javascript:void(0);"
-                                                                    class="btn-hide btn-hide_cf_d"
-                                                                    style="display: none;">Hide Content ...</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                @else
-                                                    <div class="col-md-12">
-                                                        <div class="red-title">
-                                                            @if ($contentInfo->coursefeatureCategory)
-                                                                {!! $contentInfo->course_feature_short_description !!}
-                                                            @endif
-                                                            <a href="javascript:void(0);" class="btn-show">Read More
-                                                                ...</a>
-
-                                                            <div class="content-hide" style="display: none;">
-                                                                {!! $contentInfo->course_feature_description !!}
-                                                                <a href="javascript:void(0);"
-                                                                    class="btn-hide btn-hide_cf_d"
-                                                                    style="display: none;">Hide Content ...</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                @endif
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endif
-                            @endforeach
-                        @endforeach
-
-                        <!-- tab1 content end  -->
-
-                    </div>
-                    <!--  tab2 content box end -->
-                </div>
-            </div>
-            <!-- tba2 end -->
-            <!-- mobile content start  -->
-            {{-- <div class="mobile-view indu-moblie count-navigation"> --}}
-            <div class="container mobile-view significance-space">
-                <div class="acc">
-                    @foreach ($l3Categories as $category)
-                        @foreach ($category->contentInfos as $contentInfo)
-                            @if ($contentInfo->coursefeatureCategory)
-                                <div class="acc__card">
-                                    <!-- Accordion Title -->
-                                    <a href="#coursefeatures-{{ $loop->iteration }}"
-                                        class="acc__title {{ $loop->first ? 'active' : '' }}"
-                                        data-target="coursefeatures-{{ $loop->iteration }}">
-                                        {{ $contentInfo->coursefeatureCategory->name }}
-                                    </a>
-
-                                    <!-- Accordion Panel -->
-                                    <div class="acc__panel" style="{{ $loop->first ? 'display:block;' : '' }}"
-                                        id="coursefeatures-{{ $loop->iteration }}">
-                                        <div class="vert-box box-height">
-                                            <div class="red-title">
-                                                @if ($contentInfo->images)
-                                                    <div class="template12-img">
-                                                        <img
-                                                            src="{{ asset('storage/uploads/frontend/l3_template/coursefeature/' . $contentInfo->images) }}">
-                                                    </div>
-                                                    {{-- <div class="red-title"> --}}
-                                                    @if ($contentInfo->coursefeatureCategory)
-                                                        {!! $contentInfo->course_feature_short_description !!}{!! $contentInfo->course_feature_description !!}
-                                                    @endif
-                                                    {{-- </div> --}}
-                                                @else
-                                                    {{-- <div class="red-title"> --}}
-                                                    @if ($contentInfo->coursefeatureCategory)
-                                                        {!! $contentInfo->course_feature_description !!}
-                                                    @endif
-                                                    {{-- </div> --}}
-                                                @endif
-                                            </div>
-
-                                        </div>
-                                        <a href="javascript:void(0)" class="close-acrodin">Close</a>
-
-                                    </div>
-                                </div>
-                            @endif
-                        @endforeach
-                    @endforeach
-
-
-                </div>
-                {{-- <div id="owl-demo62" class="owl-carousel owl-theme">
-                    @foreach ($l3Categories as $category)
-                        @foreach ($category->contentInfos as $contentInfo)
-                            @if ($contentInfo->coursefeatureCategory)
-                                <div class="item">
-                                    @php
-                                        // Escape quotes to prevent breaking the HTML attribute
-                                        $description = addslashes($contentInfo->course_feature_description);
-                                        $short_description = addslashes($contentInfo->course_feature_short_description);
-                                    @endphp
-                                    <div class="mobile-cf"
-
-                                        data-title="{{ $contentInfo->coursefeatureCategory->name }}"
-                                        data-description="{{ e($short_description) }}{{ e($description) }}"
-                                        data-image="{{ asset('storage/uploads/frontend/l3_template/coursefeature/' . $contentInfo->images) }}">
-
-                                        <div class="mobile-cf-content">
-                                             @if ($contentInfo->images)
-                                                    <img src="{{ asset('storage/uploads/frontend/l3_template/coursefeature/' . $contentInfo->images) }}"
-                                                alt="">
-                                             @else
-                                                                    <img src="https://www.eccouncil.org/wp-content/uploads/2023/01/CEH-cover-broucher-scaled.jpg.webp"
-                                                                        alt="Default Brochure Image">
-                                                                @endif
-
-                                            <h3>{{ $contentInfo->coursefeatureCategory->name }}</h3>
-                                            <p>{!! $contentInfo->course_feature_short_description !!}</p>
-                                            <a href="javascript:void(0)" class="popup-btn">
-                                                Read More
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endif
-                        @endforeach
-                    @endforeach
-
-                </div> --}}
-
-                <!-- Navigation Dots -->
-                <div id="navigation-count2" class="count-nav-box couter-space"></div>
-            </div>
-            <!-- mobile content end  -->
-
-            {{-- @include ('frontend.mobile-components.m-course-features') --}}
-        </section>
-    @endif
-    <!-- course feature  end -->
-
         <!-- program info 3-->
         @if ($contentInfos->contains(fn($info) => $info->programCategory))
         <section class="anchor-link sample7-line space7 ceh-pro" id="{{ $categories[3]['slug'] }}">
@@ -1202,6 +997,209 @@
         </section>
     @endif
     <!-- program info 3-->
+
+    <!-- course Feature start -->
+    @if ($contentInfos->contains(fn($info) => $info->coursefeatureCategory))
+        <section class="anchor-link sample7-line space7" id="{{ $categories[2]['slug'] }}">
+            <!-- title  -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 cn-title">
+                        {{-- <h2>COURSE FEATURES</h2>
+                        <p>The essential technology that matter most for business today</p> --}}
+                         @foreach ($l3Categories as $category)
+                            @foreach ($category->contentInfos as $contentInfo)
+                                @if ($contentInfo->coursefeature_title)
+                                    <h2>{!! $contentInfo->coursefeature_title->title !!}</h2>
+                                @endif
+                            @endforeach
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+            <!--title end-->
+            <!-- tab2 start  -->
+            <div class="container desktop-view course-features">
+                <div class="row">
+                    <!-- tab2 menu start -->
+                    <ul class="nav nav-tabs sample-tab2-menu" id="tabmenu2">
+                        @foreach ($l3Categories as $category)
+                            {{-- <li class="active"><a data-toggle="tab" href="#ic">BANKING & FINANCE</a></li> --}}
+                            @foreach ($category->contentInfos as $contentInfo)
+                                @if ($contentInfo->coursefeatureCategory)
+                                    <li class="{{ $loop->first ? 'active' : '' }}"><a data-toggle="tab"
+                                            class="codec-tab"
+                                            href="#{{ strtolower(str_replace([' ', '&', ','], '-', $contentInfo->coursefeatureCategory->name)) }}">{{ $contentInfo->coursefeatureCategory->name }}</a>
+                                    </li>
+                                @endif
+                            @endforeach
+                        @endforeach
+                    </ul>
+                    <!--  tab2 menu end -->
+                    <!-- tab2 content box start -->
+
+                    <div class="tab-content sample7-tb-content" style="">
+                        <!-- tab1 conrent start -->
+                        @foreach ($l3Categories as $category)
+                            @foreach ($category->contentInfos as $contentInfo)
+                                @if ($contentInfo->coursefeatureCategory)
+                                    <div id="{{ strtolower(str_replace([' ', '&', ','], '-', $contentInfo->coursefeatureCategory->name)) }}"
+                                        class="tab-pane tab-pane_cf_d fade in {{ $loop->first ? 'active' : '' }}">
+                                        <div class="container">
+                                            <div class="row rowp">
+                                                @if ($contentInfo->images)
+                                                    <div class="col-md-3">
+                                                        <div class="template12-img">
+                                                            <img
+                                                                src="{{ asset('storage/uploads/frontend/l3_template/coursefeature/' . $contentInfo->images) }}">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <div class="red-title">
+                                                            @if ($contentInfo->coursefeatureCategory)
+                                                                {!! $contentInfo->course_feature_short_description !!}
+                                                            @endif
+                                                            <a href="javascript:void(0);" class="btn-show">Read More
+                                                                ...</a>
+
+                                                            <div class="content-hide" style="display: none;">
+                                                                {!! $contentInfo->course_feature_description !!}
+                                                                <a href="javascript:void(0);"
+                                                                    class="btn-hide btn-hide_cf_d"
+                                                                    style="display: none;">Hide Content ...</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                @else
+                                                    <div class="col-md-12">
+                                                        <div class="red-title">
+                                                            @if ($contentInfo->coursefeatureCategory)
+                                                                {!! $contentInfo->course_feature_short_description !!}
+                                                            @endif
+                                                            <a href="javascript:void(0);" class="btn-show">Read More
+                                                                ...</a>
+
+                                                            <div class="content-hide" style="display: none;">
+                                                                {!! $contentInfo->course_feature_description !!}
+                                                                <a href="javascript:void(0);"
+                                                                    class="btn-hide btn-hide_cf_d"
+                                                                    style="display: none;">Hide Content ...</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                @endif
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endif
+                            @endforeach
+                        @endforeach
+
+                        <!-- tab1 content end  -->
+
+                    </div>
+                    <!--  tab2 content box end -->
+                </div>
+            </div>
+            <!-- tba2 end -->
+            <!-- mobile content start  -->
+            {{-- <div class="mobile-view indu-moblie count-navigation"> --}}
+            <div class="container mobile-view significance-space">
+                <div class="acc">
+                    @foreach ($l3Categories as $category)
+                        @foreach ($category->contentInfos as $contentInfo)
+                            @if ($contentInfo->coursefeatureCategory)
+                                <div class="acc__card">
+                                    <!-- Accordion Title -->
+                                    <a href="#coursefeatures-{{ $loop->iteration }}"
+                                        class="acc__title {{ $loop->first ? 'active' : '' }}"
+                                        data-target="coursefeatures-{{ $loop->iteration }}">
+                                        {{ $contentInfo->coursefeatureCategory->name }}
+                                    </a>
+
+                                    <!-- Accordion Panel -->
+                                    <div class="acc__panel" style="{{ $loop->first ? 'display:block;' : '' }}"
+                                        id="coursefeatures-{{ $loop->iteration }}">
+                                        <div class="vert-box box-height">
+                                            <div class="red-title">
+                                                @if ($contentInfo->images)
+                                                    <div class="template12-img">
+                                                        <img
+                                                            src="{{ asset('storage/uploads/frontend/l3_template/coursefeature/' . $contentInfo->images) }}">
+                                                    </div>
+                                                    {{-- <div class="red-title"> --}}
+                                                    @if ($contentInfo->coursefeatureCategory)
+                                                        {!! $contentInfo->course_feature_short_description !!}{!! $contentInfo->course_feature_description !!}
+                                                    @endif
+                                                    {{-- </div> --}}
+                                                @else
+                                                    {{-- <div class="red-title"> --}}
+                                                    @if ($contentInfo->coursefeatureCategory)
+                                                        {!! $contentInfo->course_feature_description !!}
+                                                    @endif
+                                                    {{-- </div> --}}
+                                                @endif
+                                            </div>
+
+                                        </div>
+                                        <a href="javascript:void(0)" class="close-acrodin">Close</a>
+
+                                    </div>
+                                </div>
+                            @endif
+                        @endforeach
+                    @endforeach
+
+
+                </div>
+                {{-- <div id="owl-demo62" class="owl-carousel owl-theme">
+                    @foreach ($l3Categories as $category)
+                        @foreach ($category->contentInfos as $contentInfo)
+                            @if ($contentInfo->coursefeatureCategory)
+                                <div class="item">
+                                    @php
+                                        // Escape quotes to prevent breaking the HTML attribute
+                                        $description = addslashes($contentInfo->course_feature_description);
+                                        $short_description = addslashes($contentInfo->course_feature_short_description);
+                                    @endphp
+                                    <div class="mobile-cf"
+
+                                        data-title="{{ $contentInfo->coursefeatureCategory->name }}"
+                                        data-description="{{ e($short_description) }}{{ e($description) }}"
+                                        data-image="{{ asset('storage/uploads/frontend/l3_template/coursefeature/' . $contentInfo->images) }}">
+
+                                        <div class="mobile-cf-content">
+                                             @if ($contentInfo->images)
+                                                    <img src="{{ asset('storage/uploads/frontend/l3_template/coursefeature/' . $contentInfo->images) }}"
+                                                alt="">
+                                             @else
+                                                                    <img src="https://www.eccouncil.org/wp-content/uploads/2023/01/CEH-cover-broucher-scaled.jpg.webp"
+                                                                        alt="Default Brochure Image">
+                                                                @endif
+
+                                            <h3>{{ $contentInfo->coursefeatureCategory->name }}</h3>
+                                            <p>{!! $contentInfo->course_feature_short_description !!}</p>
+                                            <a href="javascript:void(0)" class="popup-btn">
+                                                Read More
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endif
+                        @endforeach
+                    @endforeach
+
+                </div> --}}
+
+                <!-- Navigation Dots -->
+                <div id="navigation-count2" class="count-nav-box couter-space"></div>
+            </div>
+            <!-- mobile content end  -->
+
+            {{-- @include ('frontend.mobile-components.m-course-features') --}}
+        </section>
+    @endif
+    <!-- course feature  end -->
 
         <!--<section class="empower-industry-bg codec-page-section anchor-link" id="industry" style="padding-bottom: 20px !important;">-->
         <!--</section>-->
