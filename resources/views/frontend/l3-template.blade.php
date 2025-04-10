@@ -461,7 +461,7 @@
 
                 </div>
                 <!-- mobile content end  -->
-
+            </div>
         </section>
     @endif
     <!-- Significance end 2--->
@@ -470,7 +470,7 @@
 
     <!-- course Feature start -->
     @if ($contentInfos->contains(fn($info) => $info->coursefeatureCategory))
-        <section class="anchor-link sample7-line cf-desktop space7" id="{{ $categories[2]['slug'] }}">
+        <section class="anchor-link sample7-line space7" id="{{ $categories[2]['slug'] }}">
             <!-- title  -->
             <div class="container">
                 <div class="row">
@@ -574,7 +574,7 @@
             <!-- tba2 end -->
             <!-- mobile content start  -->
             {{-- <div class="mobile-view indu-moblie count-navigation"> --}}
-            <div class="mobile-view">
+            <div class="container mobile-view significance-space">
                 <div class="acc">
                     @foreach ($l3Categories as $category)
                         @foreach ($category->contentInfos as $contentInfo)
