@@ -978,10 +978,10 @@
                     @php
                         // Define an array of colors for alternating styles
                         $colors = [
-                            'background: #deecfb !important; color: #222 !important;', // First color (Light Blue)
-                            'background: #fbe79f !important; color: #222 !important;', // Second color (Light Peach)
-                            'background: #a9efa9 !important; color: #222 !important;', // Third color (Light Green)
-                            'background: #eee !important; color: #222 !important;', // Fourth color (Pale Yellow)
+                            'background: #3f5d8c !important; color: #fff !important;', 
+                            'background: #7a869a !important; color: #fff !important;', 
+                            'background: #4f9d92 !important; color: #fff !important;', 
+                            'background: #d98c7a !important; color: #fff !important;', 
                         ];
 
                         $colorIndex = 0; // Start index for colors
@@ -1015,8 +1015,7 @@
 
                                     {{-- Course Outline Category --}}
                                     @if ($contentInfo->l3_layout_program == 'courseoutline')
-                                        <div id="{{ $programCategorySlug }}mob"
-                                            style="{{ $loop->first ? 'display:block;' : '' }}" class="acc__panel">
+                                        <div id="{{ $programCategorySlug }}mob" style="{{ $loop->first ? 'display:block;' : '' }}" class="acc__panel">
                                             <div class="container">
                                                 <div class="row">
                                                     <div class="pro-title">
@@ -1086,7 +1085,7 @@
 
                                         {{-- What's New in CEH Category --}}
                                     @elseif ($contentInfo->l3_layout_program == 'whatsnewinceh')
-                                        <div id="{{ $programCategorySlug }}mob" class="acc__panel">
+                                        <div id="{{ $programCategorySlug }}mob" style="{{$loop->index == 1 ? 'display:block;' : '' }}" class="acc__panel">
                                             <div class="pro-mbile pro-mbile1">
                                                 <div class="acc acc-m">
                                                     <!-- Loop through each subcategory -->
@@ -1800,10 +1799,10 @@
                     @php
                         // Define an array of colors for alternating styles
                         $colors = [
-                            'background: #deecfb !important; color: #222 !important;', // First color (Light Blue)
-                            'background: #fbe79f !important; color: #222 !important;', // Second color (Light Peach)
-                            'background: #a9efa9 !important; color: #222 !important;', // Third color (Light Green)
-                            'background: #eee !important; color: #222 !important;', // Fourth color (Pale Yellow)
+                            'background: #345995 !important; color: #fff !important;', 
+                            'background: #4a4a4a !important; color: #fff !important;', 
+                            'background: #2e6e4c !important; color: #fff !important;', 
+                            'background: #702f42 !important; color: #fff !important;', 
                         ];
 
                         $colorIndex = 0; // Start index for colors
