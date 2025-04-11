@@ -1904,6 +1904,7 @@
 
     <!-- Global Popup for mobile course -features read more (Only One in the Page) End-->
     <a href="#main-content-body" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
+    <a href="#back" class="backButton mobile-view"><i class="fa fa-arrow-left"></i></a>
 </body>
 
 {{-- @endsection --}}
@@ -2020,6 +2021,16 @@
                 $(target).addClass('show active');
             });
 
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const backButton = document.querySelector('.backButton');
+    
+            backButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.history.back();
+            });
         });
     </script>
 

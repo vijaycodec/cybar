@@ -2900,6 +2900,31 @@ right: inherit !important;}
     overflow-y: auto;
     padding: 0;
 }
+.backButton {
+    display: block; /* Always visible */
+    position: fixed;
+    right: 20px; /* Adjust as needed */
+    bottom: 20px; /* Adjust to avoid overlap with scrollToTop */
+    background-color: #18ba60;
+    transition: all 0.4s ease-in-out 0s;
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    opacity: 1;
+    z-index: 99999;
+}
+
+.backButton i {
+    line-height: 40px;
+}
+
+.backButton:hover {
+    color: #fff;
+}
 .close-space50{}
 .overview-content{}
 .overview-content .col-md-12{
