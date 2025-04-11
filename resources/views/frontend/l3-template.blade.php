@@ -803,7 +803,7 @@
 
                                 <!-- Main Accordion Card for the Program Category -->
                                 <div class="acc__card">
-                                    <a class="acc__title" style="{{ $currentColor }}" href="#{{ $programCategorySlug }}mob">
+                                    <a class="acc__title outer-pro-mbile" style="{{ $currentColor }}" href="#{{ $programCategorySlug }}mob">
                                         {{ $contentInfo->programCategory->name }}
                                     </a>
 

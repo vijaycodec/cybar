@@ -2299,7 +2299,7 @@ right: inherit !important;}
 }
 .pro-mbile{}
 .pro-mbile .acc__title{
-    padding: 30px 20px;
+    padding: 12px 20px;
     position: relative;
     border-left: 4px solid #15416e;
     color: #fff;
@@ -2319,10 +2319,17 @@ right: inherit !important;}
 }
 .pro-mbile .acc__card{
     border: none;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 .pro-mbile .vert-box{
   padding: 0px;
+}
+.outer-pro-mbile.acc__title{
+    padding: 12px 20px;
+    font-size: 20px;
+    position: relative;
+    border-left: 4px solid #15416e;
+    color: #fff;
 }
 .certify-box{}
 .certify-box .acc__title{
