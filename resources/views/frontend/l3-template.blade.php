@@ -897,7 +897,7 @@
                                                                 <div class="acc__card">
                                                                     <!-- Accordion Title -->
                                                                     <a href="#{{ $subCategorySlug }}mob" class="acc__title mbg{{ $index + 1 }} ">
-                                                                        {{ $subCategory->name }} <i class="fa fa-arrow-right"></i>
+                                                                        {{ $subCategory->name }} <i class="fa fa-arrow-down"></i>
                                                                     </a>
                                                                     <!-- Accordion Content Panel -->
                                                                     <div id="{{ $subCategorySlug }}mob" class="acc__panel " style="">
