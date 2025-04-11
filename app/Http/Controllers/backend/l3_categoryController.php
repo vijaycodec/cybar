@@ -18,7 +18,7 @@ class l3_categoryController extends Controller
         $l3Categories = L3Category::with(['pageCategory', 'category', 'subCategory'])
         ->orderBy('id', 'ASC')
         ->get();
-       //dd($l3Categories);
+
         return view('backend.l3-category.index', compact('l3Categories'));
     }
     
@@ -61,7 +61,8 @@ class l3_categoryController extends Controller
             'page_category_id' => 'required',
             'category_id' => 'required',
             'sub_category_id' => 'required',
-            'l3_category_name'=>'required'
+            'l3_category_name'=>'required',
+            'field_key'=>'required'
         ]);
 
         // Check if validation fails
@@ -86,6 +87,8 @@ class l3_categoryController extends Controller
             $l3category->category_id = $request->category_id;
             $l3category->sub_category_id = $request->sub_category_id;
             $l3category->l3_category = $request->l3_category_name;
+            $l3category->field_key = $request->field_key;
+
             
                 $l3category->save();
                 return redirect()->route('l3-category.list')->with('success', 'Record has been added successfully !');
@@ -111,12 +114,14 @@ class l3_categoryController extends Controller
 
     public function update(Request $request, $id)
     {
+        // dd($request->all());
         // Validate input data
         $request->validate([
             'page_category_id' => 'required',
             'category_id' => 'required',
             'sub_category_id' => 'required',
             'l3_category_name' => 'required',
+            'field_key'=>'required'
         ]);
         // Find the L3 Category or return 404
         $l3Category = L3Category::findOrFail($id);
@@ -124,6 +129,8 @@ class l3_categoryController extends Controller
         $l3Category->category_id = $request->category_id;
         $l3Category->sub_category_id = $request->sub_category_id;
         $l3Category->l3_category = $request->l3_category_name;
+        $l3Category->field_key = $request->field_key;
+
         
         $l3Category->save();
 

@@ -461,7 +461,7 @@
 
                 </div>
                 <!-- mobile content end  -->
-            </div>
+
         </section>
     @endif
     <!-- Significance end 2--->
@@ -470,7 +470,7 @@
 
     <!-- course Feature start -->
     @if ($contentInfos->contains(fn($info) => $info->coursefeatureCategory))
-        <section class="anchor-link sample7-line space7" id="{{ $categories[2]['slug'] }}">
+        <section class="anchor-link sample7-line cf-desktop space7" id="{{ $categories[2]['slug'] }}">
             <!-- title  -->
             <div class="container">
                 <div class="row">
@@ -574,22 +574,22 @@
             <!-- tba2 end -->
             <!-- mobile content start  -->
             {{-- <div class="mobile-view indu-moblie count-navigation"> --}}
-            <div class="container mobile-view significance-space">
+            <div class="mobile-view">
                 <div class="acc">
                     @foreach ($l3Categories as $category)
                         @foreach ($category->contentInfos as $contentInfo)
                             @if ($contentInfo->coursefeatureCategory)
                                 <div class="acc__card">
                                     <!-- Accordion Title -->
-                                    <a href="#coursefeatures-{{ $loop->iteration }}"
+                                    <a href="#whycyberwind-{{ $loop->iteration }}"
                                         class="acc__title {{ $loop->first ? 'active' : '' }}"
-                                        data-target="coursefeatures-{{ $loop->iteration }}">
+                                        data-target="whycyberwind-{{ $loop->iteration }}">
                                         {{ $contentInfo->coursefeatureCategory->name }}
                                     </a>
 
                                     <!-- Accordion Panel -->
                                     <div class="acc__panel" style="{{ $loop->first ? 'display:block;' : '' }}"
-                                        id="coursefeatures-{{ $loop->iteration }}">
+                                        id="whycyberwind-{{ $loop->iteration }}">
                                         <div class="vert-box box-height">
                                             <div class="red-title">
                                                 @if ($contentInfo->images)
@@ -978,10 +978,10 @@
                     @php
                         // Define an array of colors for alternating styles
                         $colors = [
-                            'background: #3f5d8c !important; color: #fff !important;', 
-                            'background: #7a869a !important; color: #fff !important;', 
-                            'background: #4f9d92 !important; color: #fff !important;', 
-                            'background: #d98c7a !important; color: #fff !important;', 
+                            'background: #deecfb !important; color: #222 !important;', // First color (Light Blue)
+                            'background: #fbe79f !important; color: #222 !important;', // Second color (Light Peach)
+                            'background: #a9efa9 !important; color: #222 !important;', // Third color (Light Green)
+                            'background: #eee !important; color: #222 !important;', // Fourth color (Pale Yellow)
                         ];
 
                         $colorIndex = 0; // Start index for colors
@@ -1015,7 +1015,8 @@
 
                                     {{-- Course Outline Category --}}
                                     @if ($contentInfo->l3_layout_program == 'courseoutline')
-                                        <div id="{{ $programCategorySlug }}mob" style="{{ $loop->first ? 'display:block;' : '' }}" class="acc__panel">
+                                        <div id="{{ $programCategorySlug }}mob"
+                                            style="{{ $loop->first ? 'display:block;' : '' }}" class="acc__panel">
                                             <div class="container">
                                                 <div class="row">
                                                     <div class="pro-title">
@@ -1085,7 +1086,7 @@
 
                                         {{-- What's New in CEH Category --}}
                                     @elseif ($contentInfo->l3_layout_program == 'whatsnewinceh')
-                                        <div id="{{ $programCategorySlug }}mob" style="display:block;" class="acc__panel">
+                                        <div id="{{ $programCategorySlug }}mob" class="acc__panel">
                                             <div class="pro-mbile pro-mbile1">
                                                 <div class="acc acc-m">
                                                     <!-- Loop through each subcategory -->
@@ -1112,7 +1113,7 @@
                                                             </a>
                                                             <!-- Accordion Content Panel -->
                                                             <div id="{{ $subCategorySlug }}mob" class="acc__panel "
-                                                                style="">
+                                                                style="display:block">
                                                                 <div class="vert-box box-height">
                                                                     @if ($subCategory->image)
                                                                         <div class="template12-img">
@@ -1799,10 +1800,10 @@
                     @php
                         // Define an array of colors for alternating styles
                         $colors = [
-                            'background: #345995 !important; color: #fff !important;', 
-                            'background: #4a4a4a !important; color: #fff !important;', 
-                            'background: #2e6e4c !important; color: #fff !important;', 
-                            'background: #702f42 !important; color: #fff !important;', 
+                            'background: #deecfb !important; color: #222 !important;', // First color (Light Blue)
+                            'background: #fbe79f !important; color: #222 !important;', // Second color (Light Peach)
+                            'background: #a9efa9 !important; color: #222 !important;', // Third color (Light Green)
+                            'background: #eee !important; color: #222 !important;', // Fourth color (Pale Yellow)
                         ];
 
                         $colorIndex = 0; // Start index for colors

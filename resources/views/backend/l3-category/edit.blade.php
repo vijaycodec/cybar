@@ -77,6 +77,34 @@
                             tabindex="0" value="{{ $l3Category->l3_category }}">
                     </fieldset>
 
+                    @php
+                        $fieldKeyLabels = [
+                            'overview_description' => 'Overview',
+                            'significanceCategory' => 'Significance',
+                            'programCategory' => 'Program',
+                            'coursefeatureCategory' => 'Course Features',
+                            'kit_title' => 'CEH Kit',
+                            'incident_description' => 'Incidents',
+                            'industryCategory' => 'Industries',
+                            'cyberwindCategory' => 'Why Cyberwind',
+                            'testimonials' => 'Testimonials',
+                            'blogCategory' => 'Blog',
+                            'FaqCategory' => 'FAQs',
+                        ];
+                    @endphp
+                    <fieldset class="name">
+                        <div class="body-title">Select a Prefer Category Type<span class="tf-color-1">*</span></div>
+                        <select class="flex-grow" name="field_key" id="" required>
+                            @foreach ($fieldKeyLabels as $key => $label)
+                                <option value="{{ $key }}"
+                                    {{ $l3Category->field_key == $key ? 'selected' : '' }}>
+                                    {{ $label }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </fieldset>
+
+
                     <div class="bot">
                         <div></div>
                         <button class="tf-button w208" type="submit">Save</button>
@@ -129,7 +157,7 @@
                     success: function(data) {
                         $('#sub_category').html(
                             '<option value="" disabled selected>Select Sub category</option>'
-                            );
+                        );
                         $.each(data, function(key, value) {
                             $('#sub_category').append('<option value="' + value.id +
                                 '">' + value.sub_category + '</option>');
