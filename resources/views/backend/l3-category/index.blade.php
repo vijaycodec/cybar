@@ -47,6 +47,7 @@
                                 <th>Category</th>
                                 <th>Sub-Category</th>
                                 <th>L3 Category Name</th>
+                                <th>L3 Category Type(Relation)</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -60,6 +61,7 @@
                                         <td>{{ $l3Category->category->name }}</td>
                                         <td>{{ $l3Category->subCategory->sub_category }}</td>
                                         <td>{{ $l3Category->l3_category }}</td>
+                                        <td>{{ $l3Category->field_key }}</td>
                                         <td>
                                             <div class="list-icon-function">
                                                 {{-- <button type="button" class="show" data-id="{{ $l3Category->id }}">

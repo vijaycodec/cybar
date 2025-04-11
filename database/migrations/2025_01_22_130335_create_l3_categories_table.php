@@ -24,6 +24,7 @@ return new class extends Migration
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('sub_category_id');
             $table->string('l3_category');
+            $table->string('field_key')->nullable(); // Example: 'overview_description', 'significanceCategory'
             $table->timestamps();
         });
     }
