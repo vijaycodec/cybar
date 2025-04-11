@@ -1,3 +1,4 @@
+
 @extends('frontend.layouts.app')
 
 @section('title', $seoData['seo_title'])
@@ -43,7 +44,7 @@
     </section>
 
      <!-- Brecumb -->
-     <section class="breadcromb desktop-view">
+     <section class="breadcromb">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -258,7 +259,6 @@
                                 @endforeach
                             @endforeach
                         </div>
-                        <div id="navigation-count" class="count-nav-box"></div>
                     </div>
 
                     <!-- slider end -->
@@ -439,7 +439,7 @@
                                                     </div>
                                                     {{-- <div class="red-title"> --}}
                                                     @if ($contentInfo->significanceCategory)
-                                                        {!! $contentInfo->significance_short_description !!} {!! $contentInfo->significance_description !!}
+                                                        {!! $contentInfo->significance_description !!}
                                                     @endif
                                                     {{-- </div> --}}
                                                 @else
@@ -573,56 +573,8 @@
             </div>
             <!-- tba2 end -->
             <!-- mobile content start  -->
-            {{-- <div class="mobile-view indu-moblie count-navigation"> --}}
-            <div class="mobile-view">
-                <div class="acc">
-                    @foreach ($l3Categories as $category)
-                        @foreach ($category->contentInfos as $contentInfo)
-                            @if ($contentInfo->coursefeatureCategory)
-                                <div class="acc__card">
-                                    <!-- Accordion Title -->
-                                    <a href="#whycyberwind-{{ $loop->iteration }}"
-                                        class="acc__title {{ $loop->first ? 'active' : '' }}"
-                                        data-target="whycyberwind-{{ $loop->iteration }}">
-                                        {{ $contentInfo->coursefeatureCategory->name }}
-                                    </a>
-
-                                    <!-- Accordion Panel -->
-                                    <div class="acc__panel" style="{{ $loop->first ? 'display:block;' : '' }}"
-                                        id="whycyberwind-{{ $loop->iteration }}">
-                                        <div class="vert-box box-height">
-                                            <div class="red-title">
-                                                @if ($contentInfo->images)
-                                                    <div class="template12-img">
-                                                        <img
-                                                            src="{{ asset('storage/uploads/frontend/l3_template/coursefeature/' . $contentInfo->images) }}">
-                                                    </div>
-                                                    {{-- <div class="red-title"> --}}
-                                                    @if ($contentInfo->coursefeatureCategory)
-                                                        {!! $contentInfo->course_feature_short_description !!}{!! $contentInfo->course_feature_description !!}
-                                                    @endif
-                                                    {{-- </div> --}}
-                                                @else
-                                                    {{-- <div class="red-title"> --}}
-                                                    @if ($contentInfo->coursefeatureCategory)
-                                                        {!! $contentInfo->course_feature_description !!}
-                                                    @endif
-                                                    {{-- </div> --}}
-                                                @endif
-                                            </div>
-
-                                        </div>
-                                        <a href="javascript:void(0)" class="close-acrodin">Close</a>
-
-                                    </div>
-                                </div>
-                            @endif
-                        @endforeach
-                    @endforeach
-
-
-                </div>
-                {{-- <div id="owl-demo62" class="owl-carousel owl-theme">
+            <div class="mobile-view indu-moblie count-navigation">
+                <div id="owl-demo62" class="owl-carousel owl-theme">
                     @foreach ($l3Categories as $category)
                         @foreach ($category->contentInfos as $contentInfo)
                             @if ($contentInfo->coursefeatureCategory)
@@ -635,7 +587,7 @@
                                     <div class="mobile-cf"
 
                                         data-title="{{ $contentInfo->coursefeatureCategory->name }}"
-                                        data-description="{{ e($short_description) }}{{ e($description) }}"
+                                        data-description="{{ e($short_description) }}{{ e($description) }}" {{-- Use e() instead of htmlspecialchars() --}}
                                         data-image="{{ asset('storage/uploads/frontend/l3_template/coursefeature/' . $contentInfo->images) }}">
 
                                         <div class="mobile-cf-content">
@@ -659,7 +611,7 @@
                         @endforeach
                     @endforeach
 
-                </div> --}}
+                </div>
 
                 <!-- Navigation Dots -->
                 <div id="navigation-count2" class="count-nav-box couter-space"></div>
@@ -1545,7 +1497,7 @@
                                                     </div>
                                                     {{-- <div class="red-title"> --}}
                                                     @if ($contentInfo->cyberwindCategory)
-                                                        {!! $contentInfo->cyberwind_short_description !!} {!! $contentInfo->cyberwind_description !!}
+                                                        {!! $contentInfo->cyberwind_description !!}
                                                     @endif
                                                     {{-- </div> --}}
                                                 @else
