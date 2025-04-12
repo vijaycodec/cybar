@@ -58,6 +58,7 @@ class L3CategoryRepository implements L3CategoryRepositoryInterface
                     'cyberwindCategory',
                     'industryCategory',
                     'blogCategory',
+                    'blog_title',
                     'testimonials',
                     // 'faqCategory.faqSubCategory',
                     'programCategory' => function ($query) use ($subcategoryId, $pageId) {  
