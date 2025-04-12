@@ -1720,7 +1720,8 @@
 
             <!-- FAQ info start 11 -->
         @elseif ($fieldKey == 'FaqCategory' && $contents->contains(fn($info) => $info->{$fieldKey}))
-            <section class="anchor-link sample7-line space7 ceh-pro ceh-pro1" id="{{ $slug }}">
+            <section class="anchor-link sample7-line space7 ceh-pro ceh-pro1 faqclass" id="{{ $slug }}">
+                {{-- <section class="anchor-link sample7-line space7 ceh-pro ceh-pro1" id="{{ $slug }}">     --}}
                 <!-- title  -->
                 <div class="container">
                     <div class="row">
