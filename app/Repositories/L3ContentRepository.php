@@ -10,6 +10,7 @@ use App\Models\CyberwindCategory;
 use App\Models\IndustryCategory;
 use App\Models\FaqCategory;
 use App\Models\BlogCategory;
+use App\Models\BlogTitle;
 use App\Models\CourseCategory;
 use App\Models\L3Category;
 use App\Models\ProgramCategory;
@@ -285,6 +286,12 @@ class L3ContentRepository implements L3ContentRepositoryInterface
                 ['title' => $request->input('industries_title', 'Default Title')] // Use default if null
             );
         }
+        if ($request->l3_layout_type == 'blog') {
+            BlogTitle::updateOrCreate(
+                ['l3_content_info_id' => $l3ContentInfo->id], // Condition
+                ['title' => $request->input('blog_main_title', 'Our Media')] // Use default if null
+            );
+        }
         //    if ($request->l3_layout_type == 'industries') {
         //     // dd('ok');
         //     // Fetch the first record from the SignificanceTitle table
@@ -454,6 +461,7 @@ class L3ContentRepository implements L3ContentRepositoryInterface
             'cyberwindTitle'         => CyberwindTitle::where('l3_content_info_id', $id)->first(),
             'testimonialData'        => TestimonialDetails::where('l3_content_info_id', $id)->first(),
             'FaqsData'               => FaqSubCategory::where('l3_content_info_id', $id)->first(),
+            'BlogTitle'              => BlogTitle::where('l3_content_info_id', $id)->first(),
         ];
     }
 
@@ -594,6 +602,13 @@ class L3ContentRepository implements L3ContentRepositoryInterface
             IndustryTitle::updateOrCreate(
                 ['l3_content_info_id' => $id],
                 ['title' => $request->input('industries_title', 'Default Title')]
+            );
+        }
+
+        if ($request->l3_layout_type == 'blog') {
+            BlogTitle::updateOrCreate(
+                ['l3_content_info_id' => $l3ContentInfo->id], // Condition
+                ['title' => $request->input('blog_main_title', 'Our Media')] // Use default if null
             );
         }
 

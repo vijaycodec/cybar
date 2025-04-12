@@ -66,6 +66,11 @@ class L3ContentInfo extends Model
         return $this->hasOne(IndustryTitle::class, 'l3_content_info_id');
     }
 
+    public function blog_title()
+    {
+        return $this->hasOne(BlogTitle::class, 'l3_content_info_id');
+    }
+
     public function faqCategory()
     {
         return $this->belongsTo(FaqCategory::class, 'faq_category_id', 'id');
