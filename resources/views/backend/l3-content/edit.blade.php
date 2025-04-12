@@ -359,7 +359,11 @@
                             @endforeach
                         </select>
                     </div>
-
+                    <div class="l3-form form-group blog_main_title">
+                        <div class="body-title">Blog Main Title : <span class="tf-color-1">*</span></div>
+                        <input type="text" name="blog_main_title" placeholder="Enter Blog Title"
+                            value="{{ $industryTitle ? $industryTitle->title : '' }}">
+                    </div>
                     <div class="l3-form" id="style_form" style="display: none;">
                         <div class="body-title">Pick Background Color <span class="tf-color-1">*</span></div>
                         <input type="color" name="style_class" id="colorPicker" class="color-picker-input"
@@ -742,6 +746,7 @@
                     } else if (selectedL3Category === "blog") {
                         $('#blog_form').show();
                         $('.blog_title').show();
+                        $('.blog_main_title').show();
                         $('.blog_image').hide();
                         $('#style_form').show();
                         $('#l3_layout_type').val('blog'); // Set hidden input to 'blog'
