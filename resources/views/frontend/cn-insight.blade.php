@@ -55,9 +55,6 @@
         <!-- Header start -->
         @include('frontend.layouts.header')
         <!-- Header end -->
-        <!-- Brecumb -->
-
-        <!-- breadcromb end -->
         <!-- banner start -->
         <section class="template_12_banner">
 

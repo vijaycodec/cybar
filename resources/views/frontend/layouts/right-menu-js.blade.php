@@ -21,14 +21,12 @@
         
         var targetId = $(this).attr('href');
         var $targetElement = $(targetId);
-        
         if ($targetElement.length) {
             // Get header height for offset
             var headerHeight = $('.mobile-nav-top').outerHeight() || 0;
             
             // Calculate the target position with offset
             var targetPosition = $targetElement.offset().top - headerHeight;
-            
             // Smooth scroll to target
             $('html, body').animate({
                 scrollTop: targetPosition

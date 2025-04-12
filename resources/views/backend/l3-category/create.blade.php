@@ -66,6 +66,23 @@
                             value="{{ old('l3_category') }}" aria-required="true" required="">
                     </fieldset>
 
+                    <fieldset class="name">
+                        <div class="body-title">Select a Prefer Category Type<span class="tf-color-1">*</span></div>
+                        <select class="flex-grow" name="field_key" id="" required>
+                            <option value="overview_description">overview</option>
+                            <option value="significanceCategory">significance</option>
+                            <option value="programCategory">program</option>
+                            <option value="coursefeatureCategory">coursefeatures</option>
+                            <option value="kit_title">cehkit</option>
+                            <option value="incident_description">incidents</option>
+                            <option value="industryCategory">industries</option>
+                            <option value="cyberwindCategory">whycyberwind</option>
+                            <option value="testimonials">testimonials</option>
+                            <option value="blogCategory">blog</option>
+                            <option value="FaqCategory">faqs</option>
+                        </select>
+                    </fieldset>
+
                     <div class="bot">
                         <div></div>
                         <button class="tf-button w208" type="submit">Save</button>

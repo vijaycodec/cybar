@@ -7,108 +7,115 @@ function isMobile() {
 
 // Load the appropriate script
 if (isMobile()) {
-    
     // thirds mobile scripts start
     // Content Read more
 
-
     // Faq js
     $(function () {
-   
+        $(document).ready(function () {
+            let userScrolled = false;
 
+            // Detect user scrolling
+            $(window).on("scroll", function () {
+                userScrolled = true;
+            });
 
-      $(document).ready(function () {
-          let userScrolled = false;
-      
-          // Detect user scrolling
-          $(window).on('scroll', function () {
-              userScrolled = true;
-          });
-      
-          $('.acc__title').click(function (e) {
-              e.preventDefault();
-              userScrolled = false; // Reset flag on click
-      
-              var $this = $(this);
-              var targetId = $this.attr('href');
-              var $panel = $(targetId);
-              var $accordion = $this.closest('.acc');
-      
-              if (!$this.hasClass('active')) {
-                  $accordion.find('.acc__title.active').removeClass('active');
-                  $this.addClass('active');
-              } else {
-                  $this.removeClass('active');
-              }
-      
-              // Close other panels and reset scroll position when closing
-              $accordion.find('.acc__panel').not($panel).slideUp(function () {
-                  $(".box-height.vert-box").animate({ scrollTop: 0 }, 0);
-              });
-      
-              // Toggle clicked panel
-              $panel.stop(false, true).slideToggle(function () {
-                  if (!userScrolled) { // Only animate if the user hasn't scrolled
-                      var scrollTopOffset = ($('.pro-mbile1 .acc__title.acc-top').length > 0)
-                          ? $(this).offset().top - 160
-                          : $panel.offset().top - 100;
-      
-                      $('html, body').stop().animate({
-                          scrollTop: scrollTopOffset
-                      }, 450);
-                  }
-              });
-          });
-      });
+            $(".acc__title").click(function (e) {
+                e.preventDefault();
+                userScrolled = false; // Reset flag on click
 
-      $(document).ready(function () {
-          $(document).on("scroll", onScroll);
+                var $this = $(this);
+                var targetId = $this.attr("href");
+                var $panel = $(targetId);
+                var $accordion = $this.closest(".acc");
 
-          //smoothscroll
-          $('.sticky_link').on('click', function (e) {
-              e.preventDefault();
-              $(document).off("scroll");
+                if (!$this.hasClass("active")) {
+                    $accordion.find(".acc__title.active").removeClass("active");
+                    $this.addClass("active");
+                } else {
+                    $this.removeClass("active");
+                }
 
-              $('a').each(function () {
-                  $(this).removeClass('sapme_active');
-              })
-              $(this).addClass('sapme_active');
+                // Close other panels and reset scroll position when closing
+                $accordion
+                    .find(".acc__panel")
+                    .not($panel)
+                    .slideUp(function () {
+                        $(".box-height.vert-box").animate({ scrollTop: 0 }, 0);
+                    });
 
-              var target = this.hash,
-                  menu = target;
-              $target = $(target);
-              $('html, body').stop().animate({
-                  'scrollTop': $target.offset().top - 80
-              }, 500, 'swing', function () {
-                  window.location.hash = target;
-                  $(document).on("scroll", onScroll);
-              });
-          });
-      });
+                // Toggle clicked panel
+                $panel.stop(false, true).slideToggle(function () {
+                    if (!userScrolled) {
+                        // Only animate if the user hasn't scrolled
+                        var scrollTopOffset =
+                            $(".pro-mbile1 .acc__title.acc-top").length > 0
+                                ? $(this).offset().top - 160
+                                : $panel.offset().top - 100;
 
-      function onScroll(event) {
-          var scrollPos = $(document).scrollTop() + 100;
-          $('.sticky_link').each(function () {
-              var currLink = $(this);
-              var refElement = $(currLink.attr("href"));
+                        $("html, body").stop().animate(
+                            {
+                                scrollTop: scrollTopOffset,
+                            },
+                            450
+                        );
+                    }
+                });
+            });
+        });
 
+        $(document).ready(function () {
+            $(document).on("scroll", onScroll);
 
-              if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-                  $('.anchor-nav li a').removeClass("sapme_active");
+            //smoothscroll
+            $(".sticky_link").on("click", function (e) {
+                e.preventDefault();
+                $(document).off("scroll");
 
-                  currLink.addClass("sapme_active");
-              }
-              else {
-                  // currLink.removeClass("sapme_active");
-              }
+                $("a").each(function () {
+                    $(this).removeClass("sapme_active");
+                });
+                $(this).addClass("sapme_active");
 
+                var target = this.hash,
+                    menu = target;
+                $target = $(target);
+                $("html, body")
+                    .stop()
+                    .animate(
+                        {
+                            scrollTop: $target.offset().top - 80,
+                        },
+                        500,
+                        "swing",
+                        function () {
+                            window.location.hash = target;
+                            $(document).on("scroll", onScroll);
+                        }
+                    );
+            });
+        });
 
-          });
-      }
+        function onScroll(event) {
+            var scrollPos = $(document).scrollTop() + 100;
+            $(".sticky_link").each(function () {
+                var currLink = $(this);
+                var refElement = $(currLink.attr("href"));
 
+                if (
+                    refElement.position().top <= scrollPos &&
+                    refElement.position().top + refElement.height() > scrollPos
+                ) {
+                    $(".anchor-nav li a").removeClass("sapme_active");
 
-  });
-  // thirds mobile scripts end
+                    currLink.addClass("sapme_active");
+                } else {
+                    // currLink.removeClass("sapme_active");
+                }
+            });
+        }
+    });
+    // thirds mobile scripts end
 
     $(document).ready(function () {
         function resetTabs_mob(sectionSelector) {
@@ -165,55 +172,86 @@ if (isMobile()) {
         // const menu = $("#program_mob")[0]; // Convert jQuery object to DOM element for observer
         // observer.observe(menu);
     });
+    document.addEventListener("DOMContentLoaded", function () {
+        const backButton = document.querySelector(".backButton");
+
+        backButton.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const currentPathAndQuery =
+                window.location.pathname + window.location.search;
+
+            function handlePopState() {
+                const newPathAndQuery =
+                    window.location.pathname + window.location.search;
+
+                if (newPathAndQuery !== currentPathAndQuery) {
+                    // We landed on a new actual page
+                    window.removeEventListener("popstate", handlePopState);
+                } else {
+                    // Still on the same path+query, keep going back
+                    history.go(-1);
+                }
+            }
+
+            window.addEventListener("popstate", handlePopState);
+            history.go(-1);
+        });
+    });
 } else {
-    
     //main js for desk start
     // Content Read more
 
     $(document).ready(function () {
-      $(document).on("scroll", onScroll);
+        $(document).on("scroll", onScroll);
 
-      //smoothscroll
-      $('.sticky_link').on('click', function (e) {
-          e.preventDefault();
-          $(document).off("scroll");
+        //smoothscroll
+        $(".sticky_link").on("click", function (e) {
+            e.preventDefault();
+            $(document).off("scroll");
 
-          $('a').each(function () {
-              $(this).removeClass('sapme_active');
-          })
-          $(this).addClass('sapme_active');
+            $("a").each(function () {
+                $(this).removeClass("sapme_active");
+            });
+            $(this).addClass("sapme_active");
 
-          var target = this.hash,
-              menu = target;
-          $target = $(target);
-          $('html, body').stop().animate({
-              'scrollTop': $target.offset().top - 80
-          }, 1000, 'swing', function () {
-              window.location.hash = target;
-              $(document).on("scroll", onScroll);
-          });
-      });
-  });
+            var target = this.hash,
+                menu = target;
+            $target = $(target);
+            $("html, body")
+                .stop()
+                .animate(
+                    {
+                        scrollTop: $target.offset().top - 80,
+                    },
+                    1000,
+                    "swing",
+                    function () {
+                        window.location.hash = target;
+                        $(document).on("scroll", onScroll);
+                    }
+                );
+        });
+    });
 
-  function onScroll(event) {
-      var scrollPos = $(document).scrollTop() + 100;
-      $('.sticky_link').each(function () {
-          var currLink = $(this);
-          var refElement = $(currLink.attr("href"));
+    function onScroll(event) {
+        var scrollPos = $(document).scrollTop() + 100;
+        $(".sticky_link").each(function () {
+            var currLink = $(this);
+            var refElement = $(currLink.attr("href"));
 
+            if (
+                refElement.position().top <= scrollPos &&
+                refElement.position().top + refElement.height() > scrollPos
+            ) {
+                $(".anchor-nav li a").removeClass("sapme_active");
 
-          if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-              $('.anchor-nav li a').removeClass("sapme_active");
+                currLink.addClass("sapme_active");
+            } else {
+                // currLink.removeClass("sapme_active");
+            }
+        });
+    }
 
-              currLink.addClass("sapme_active");
-          }
-          else {
-              // currLink.removeClass("sapme_active");
-          }
-
-
-      });
-  }
-
-  //main js for desk end
+    //main js for desk end
 }

@@ -19,7 +19,9 @@
          @endforeach
       </ul>
       <div class="bottom-btn">
-         <a href="javascript:void(0)" class="right-back">Back</a>
+         <a href="javascript:history.back()" class="right-back">Back</a>
+         {{-- <a href="javascript:history.back()">Go Back</a> --}}
+
       </div>
       <div class="ser-menu-close">
             <span class="ser-icon-close"><i class="fa fa-times"></i></span>
