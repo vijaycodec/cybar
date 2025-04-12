@@ -350,7 +350,7 @@
                         @endforeach
                         <!-- tab1 menu end  -->
                         <!-- tab content box start -->
-                        <div class="tab-content sample7-content" style="">
+                        <div class="tab-content sample7-tb-content" style="">
                             <!-- tab1 conrent start -->
                             @foreach ($l3Categories as $category)
                                 @foreach ($category->contentInfos as $contentInfo)
