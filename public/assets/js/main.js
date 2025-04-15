@@ -254,4 +254,31 @@ if (isMobile()) {
     }
 
     //main js for desk end
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const backButton = document.querySelector(".backButton");
+
+        backButton.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const currentPathAndQuery =
+                window.location.pathname + window.location.search;
+
+            function handlePopState() {
+                const newPathAndQuery =
+                    window.location.pathname + window.location.search;
+
+                if (newPathAndQuery !== currentPathAndQuery) {
+                    // We landed on a new actual page
+                    window.removeEventListener("popstate", handlePopState);
+                } else {
+                    // Still on the same path+query, keep going back
+                    history.go(-1);
+                }
+            }
+
+            window.addEventListener("popstate", handlePopState);
+            history.go(-1);
+        });
+    });
 }

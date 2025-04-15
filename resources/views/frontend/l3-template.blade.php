@@ -1949,7 +1949,7 @@
 
     <!-- Global Popup for mobile course -features read more (Only One in the Page) End-->
     <a href="#main-content-body" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
-    <a href="#back" class="backButton mobile-view"><i class="fa fa-arrow-left"></i></a>
+    <a href="#back" class="backButton"><i class="fa fa-arrow-left"></i></a>
 </body>
 
 {{-- @endsection --}}
