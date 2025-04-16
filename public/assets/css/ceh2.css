@@ -2432,9 +2432,12 @@ right: inherit !important;}
     padding: 10px;
 }
 #why-cyberwind .acc__panel {padding: 15px;}
-#faqs .acc__card .acc__card {
+.faqclass .acc__card .acc__card {
     padding: 10px;
 }
+/* #faqs .acc__card .acc__card {
+    padding: 10px;
+} */
 #overview1 .indu-moblie {
     margin-bottom: 0px !important;
     padding-bottom: 15px;

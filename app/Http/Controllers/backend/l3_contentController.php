@@ -3,13 +3,20 @@
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\BlogCategory;
+use App\Models\CourseFeatureCategory;
 use App\Models\CourseFeatureTitle;
+use App\Models\CyberwindCategory;
 use App\Models\CyberwindTitle;
+use App\Models\FaqCategory;
 use App\Models\FaqSubCategory;
+use App\Models\IndustryCategory;
 use App\Models\IndustryTitle;
 use App\Models\L3ContentInfo;
 use App\Models\L3OverviewSubDescription;
+use App\Models\ProgramCategory;
 use App\Models\ProgramSubCategory;
+use App\Models\SignificanceCategory;
 use App\Models\SignificanceTitle;
 use App\Models\TestimonialDetails;
 use Illuminate\Http\Request;
@@ -62,9 +69,76 @@ class l3_contentController extends Controller
 
     public function l3GetL3Categories(Request $request)
     {
+        $validated = $request->validate([
+            'category_id' => 'required|integer',
+            'page_category_id' => 'required|integer',
+            'sub_category_Id' => 'required|integer',
+        ]);
+
+        // Pass validated data to repository
         $l3categories = $this->l3ContentRepository->getL3Categories($request);
-        return response()->json($l3categories);
+
+        $significanceCategories = SignificanceCategory::where('page_category_id', $validated['page_category_id'])
+            ->where('category_id', $validated['category_id'])
+            ->where('sub_category_id', $validated['sub_category_Id'])
+            ->orderBy('id', 'desc')
+            ->get();
+
+            $courseFeatureCategories = CourseFeatureCategory::where('page_category_id', $validated['page_category_id'])
+            ->where('category_id', $validated['category_id'])
+            ->where('sub_category_id', $validated['sub_category_Id'])
+            ->orderBy('id', 'desc')
+            ->get();
+
+            $programCategories = ProgramCategory::where('page_category_id', $validated['page_category_id'])
+            ->where('category_id', $validated['category_id'])
+            ->where('sub_category_id', $validated['sub_category_Id'])
+            ->orderBy('id', 'desc')
+            ->get();
+
+            $cyberwindCategories = CyberwindCategory::where('page_category_id', $validated['page_category_id'])
+            ->where('category_id', $validated['category_id'])
+            ->where('sub_category_id', $validated['sub_category_Id'])
+            ->orderBy('id', 'desc')
+            ->get();
+
+            $industryCategories = IndustryCategory::where('page_category_id', $validated['page_category_id'])
+            ->where('category_id', $validated['category_id'])
+            ->where('sub_category_id', $validated['sub_category_Id'])
+            ->orderBy('id', 'desc')
+            ->get();
+
+            $industryCategories = IndustryCategory::where('page_category_id', $validated['page_category_id'])
+            ->where('category_id', $validated['category_id'])
+            ->where('sub_category_id', $validated['sub_category_Id'])
+            ->orderBy('id', 'desc')
+            ->get();
+
+            $faqCategories = FaqCategory::where('page_category_id', $validated['page_category_id'])
+            ->where('category_id', $validated['category_id'])
+            ->where('sub_category_id', $validated['sub_category_Id'])
+            ->orderBy('id', 'desc')
+            ->get();
+
+            $blogCategories = BlogCategory::where('page_category_id', $validated['page_category_id'])
+            ->where('category_id', $validated['category_id'])
+            ->where('sub_category_id', $validated['sub_category_Id'])
+            ->orderBy('id', 'desc')
+            ->get();
+
+            // dd($programCategories);
+        return response()->json([
+            'l3_categories' => $l3categories,
+            'significance_categories' => $significanceCategories,
+            'courseFeatureCategories' => $courseFeatureCategories,
+            'programCategories' => $programCategories,
+            'cyberwindCategories' => $cyberwindCategories,
+            'industryCategories' => $industryCategories,
+            'faqCategories' => $faqCategories,
+            'blogCategories' => $blogCategories,
+        ]);
     }
+
 
     public function store(Request $request)
     {

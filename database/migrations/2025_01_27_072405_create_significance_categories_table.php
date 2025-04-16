@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('significance_categories', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('page_category_id')->nullable();
+            $table->unsignedBigInteger('category_id')->nullable();
+            $table->unsignedBigInteger('sub_category_id')->nullable();
             $table->string('name');
             $table->string('slug')->nullable();
             $table->timestamps();

@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\CourseCategory;
 use App\Models\CyberwindCategory;
+use App\Models\PageDetail;
+use App\Models\SubCategory;
 use Illuminate\Http\Request;
 
 class cyberwimdController extends Controller
@@ -20,7 +23,11 @@ class cyberwimdController extends Controller
      */
     public function create()
     {
-        return view('backend.cyberwind.create');
+        $pageCategories = PageDetail::all();
+        return view('backend.cyberwind.create', [
+            'page_categories' => $pageCategories
+        ]);
+        
     }
 
     /**
@@ -31,11 +38,17 @@ class cyberwimdController extends Controller
         $request->validate([
             'name' => 'required',
             'slug' => 'required',
+            'page_category_id' => 'required',
+            'category_id' => 'required',
+            'sub_category_id' => 'required',
         ]);
 
         CyberwindCategory::create([
             'name' => $request->name,
             'slug' => $request->slug,
+            'page_category_id' =>$request->page_category_id,
+            'category_id' =>$request->category_id,
+            'sub_category_id' =>$request->sub_category_id,
         ]);
 
         return redirect()->route('cyberwind.list')->with('success', 'Category created successfully!');
@@ -43,8 +56,11 @@ class cyberwimdController extends Controller
 
     public function edit($id)
     {
-        $subcategory = CyberwindCategory::findOrFail($id);
-        return view('backend.cyberwind.edit', compact('subcategory'));
+        $l3Category = CyberwindCategory::findOrFail($id);
+        $page_categories = PageDetail::all();
+        $categories = CourseCategory::where('page_category', $l3Category->page_category_id)->get();
+        $subCategories =SubCategory::where('category_id', $l3Category->category_id)->get();
+        return view('backend.cyberwind.edit', compact('l3Category', 'page_categories', 'categories', 'subCategories'));
     }
 
     public function update(Request $request, $id)
@@ -52,12 +68,18 @@ class cyberwimdController extends Controller
         $request->validate([
             'name' => 'required',
             'slug' => 'required',
+            'page_category_id' => 'required',
+            'category_id' => 'required',
+            'sub_category_id' => 'required',
         ]);
 
         $subcategory = CyberwindCategory::findOrFail($id);
         $subcategory->update([
             'name' => $request->name,
             'slug' => $request->slug,
+            'page_category_id' =>$request->page_category_id,
+            'category_id' =>$request->category_id,
+            'sub_category_id' =>$request->sub_category_id,
         ]);
 
         return redirect()->route('cyberwind.list')->with('success', 'Subcategory updated successfully.');

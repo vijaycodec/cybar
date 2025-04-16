@@ -28,10 +28,10 @@
                                 <button class="" type="submit"><i class="icon-search"></i></button>
                             </div>
                         </form>
-                    </div>
+                    </div> --}}
                     <a class="tf-button style-1 w208" href=" {{ route('blog.create') }}">
                         <i class="icon-plus"></i>Add New </a>
-                </div> --}}
+                </div>
 
                 <div class="table-responsive">
                     <table id="myTable" class="table table-striped table-bordered " style="table-layout: auto;">

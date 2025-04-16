@@ -123,7 +123,7 @@
                                         <!--  -->
                                         <div class="col-md-12">
                                             <div class="third-content smple-box1">
-                                                <h4>What Technical Skills you Learn</h4>
+                                                {{-- <h4>What Technical Skills you Learn</h4> --}}
                                             </div>
                                             <!--  -->
                                             <div class="info-graphic">
@@ -350,7 +350,7 @@
                         @endforeach
                         <!-- tab1 menu end  -->
                         <!-- tab content box start -->
-                        <div class="tab-content sample7-content" style="">
+                        <div class="tab-content sample7-tb-content" style="">
                             <!-- tab1 conrent start -->
                             @foreach ($l3Categories as $category)
                                 @foreach ($category->contentInfos as $contentInfo)
@@ -1684,10 +1684,16 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 cn-title">
-                            <h2
-                                style="margin: auto; font-weight: 500; line-height: 1.2; font-size: 24px; letter-spacing: 2px; color: rgb(66, 66, 66); text-align: center; font-family: &quot;Roboto Medium&quot;; max-width: 100%; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; background-color: rgb(241, 242, 248); scroll-behavior: smooth !important;">
-                                Our Media
-                            </h2>
+                            @foreach ($l3Categories as $category)
+                                @foreach ($category->contentInfos as $contentInfo)
+                                    @if ($contentInfo->blog_title)
+                                        {{-- <h2>{!! $contentInfo->blog_title->title !!}</h2> --}}
+                                        <h2 style="margin: auto; font-weight: 500; line-height: 1.2; font-size: 24px; letter-spacing: 2px; color: rgb(66, 66, 66); text-align: center; font-family: &quot;Roboto Medium&quot;; max-width: 100%; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; background-color: rgb(241, 242, 248); scroll-behavior: smooth !important;">
+                                        {{ $contentInfo->blog_title->title }}
+                                    </h2>
+                                    @endif
+                                @endforeach
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -1720,7 +1726,8 @@
 
             <!-- FAQ info start 11 -->
         @elseif ($fieldKey == 'FaqCategory' && $contents->contains(fn($info) => $info->{$fieldKey}))
-            <section class="anchor-link sample7-line space7 ceh-pro ceh-pro1" id="{{ $slug }}">
+            <section class="anchor-link sample7-line space7 ceh-pro ceh-pro1 faqclass" id="{{ $slug }}">
+                {{-- <section class="anchor-link sample7-line space7 ceh-pro ceh-pro1" id="{{ $slug }}">     --}}
                 <!-- title  -->
                 <div class="container">
                     <div class="row">
@@ -1942,7 +1949,7 @@
 
     <!-- Global Popup for mobile course -features read more (Only One in the Page) End-->
     <a href="#main-content-body" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
-    <a href="#back" class="backButton mobile-view"><i class="fa fa-arrow-left"></i></a>
+    <a href="#back" class="backButton"><i class="fa fa-arrow-left"></i></a>
 </body>
 
 {{-- @endsection --}}
