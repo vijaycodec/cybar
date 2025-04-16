@@ -438,20 +438,20 @@ class L3ContentRepository implements L3ContentRepositoryInterface
     public function getl3contentById($id)
     {
         $l3Content = L3ContentInfo::findOrFail($id);
-
+// dd(SignificanceCategory::where('sub_category_id', $l3Content->sub_category_id)->get());
         return [
             'l3Content'              => $l3Content,
             'page_categories'        => PageDetail::all(),
             'coursecategories'       => CourseCategory::all(),
             'subCategories'          => SubCategory::all(),
             'l3Categories'           => L3Category::where('sub_category_id', $l3Content->sub_category_id)->get(),
-            'significanceCategories' => SignificanceCategory::all(),
-            'courseFeatureCategories' => CourseFeatureCategory::all(),
-            'cyberwindCategories'    => CyberwindCategory::all(),
-            'industryCategories'     => IndustryCategory::all(),
-            'faqCategories'          => FaqCategory::all(),
-            'blogCategories'         => BlogCategory::all(),
-            'programCategories'      => ProgramCategory::all(),
+            'significanceCategories' => SignificanceCategory::where('sub_category_id', $l3Content->sub_category_id)->get(),
+            'courseFeatureCategories' => CourseFeatureCategory::where('sub_category_id', $l3Content->sub_category_id)->get(),
+            'cyberwindCategories'    => CyberwindCategory::where('sub_category_id', $l3Content->sub_category_id)->get(),
+            'industryCategories'     => IndustryCategory::where('sub_category_id', $l3Content->sub_category_id)->get(),
+            'faqCategories'          => FaqCategory::where('sub_category_id', $l3Content->sub_category_id)->get(),
+            'blogCategories'         => BlogCategory::where('sub_category_id', $l3Content->sub_category_id)->get(),
+            'programCategories'      => ProgramCategory::where('sub_category_id', $l3Content->sub_category_id)->get(),
             'l3overview_desc'        => L3OverviewSubDescription::where('l3_content_info_id', $id)->get(),
             'l3overview_count_desc'  => L3OverviewSubDescription::where('l3_content_info_id', $id)->count(),
             'significanceTitle'      => SignificanceTitle::where('l3_content_info_id', $id)->first(),

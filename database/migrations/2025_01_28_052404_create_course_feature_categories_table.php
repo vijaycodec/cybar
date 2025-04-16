@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('course_feature_categories', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('page_category_id');
+            $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('sub_category_id');
             $table->string('name');
             $table->string('slug')->nullable();
             $table->timestamps();

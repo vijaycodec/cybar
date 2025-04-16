@@ -198,7 +198,7 @@
                     <div class="l3-form" id="significance_form" style="display: none;">
 
                         <div class="body-title  ">Select Significance Type <span class="tf-color-1">*</span></div>
-                        <select class="flex-grow" name="significance_type">
+                        <select class="flex-grow" id="significance_category" name="significance_type">
                             <option value="" disabled selected>Select Significance</option>
                             @foreach ($significanceCategories as $category)
                                 <option value="{{ $category->id }}"
@@ -362,7 +362,7 @@
                     <div class="l3-form form-group blog_main_title">
                         <div class="body-title">Blog Main Title : <span class="tf-color-1">*</span></div>
                         <input type="text" name="blog_main_title" placeholder="Enter Blog Title"
-                            value="{{ $industryTitle ? $industryTitle->title : '' }}">
+                            value="{{ $BlogTitle ? $BlogTitle->title : '' }}">
                     </div>
                     <div class="l3-form" id="style_form" style="display: none;">
                         <div class="body-title">Pick Background Color <span class="tf-color-1">*</span></div>

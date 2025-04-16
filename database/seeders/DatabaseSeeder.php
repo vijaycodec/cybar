@@ -23,15 +23,15 @@ class DatabaseSeeder extends Seeder
         $this->call(UsersTableSeeder::class);
         $this->call(CategoryTableSeeder::class);
         $this->call(PageDetailsTableSeeder::class);
-        $this->call(SignificanceCategoryTableSeeder::class);
+        // $this->call(SignificanceCategoryTableSeeder::class);
         $this->call(CourseCategoryTableSeeder::class);
         $this->call(CourseSubCategoryTableSeeder::class);
-        $this->call(CourseFeatureCategoryTableSeeder::class);
-        $this->call(CyberwindCategoryTableSeeder::class);
-        $this->call(IndustryCategoryTableSeeder::class);
-        $this->call(faqsCategoryTableSeeder::class);
-        $this->call(BlogCategoryTableSeeder::class);
-        $this->call(ProgramCategoryTableSeeder::class);
+        // $this->call(CourseFeatureCategoryTableSeeder::class);
+        // $this->call(CyberwindCategoryTableSeeder::class);
+        // $this->call(IndustryCategoryTableSeeder::class);
+        // $this->call(faqsCategoryTableSeeder::class);
+        // $this->call(BlogCategoryTableSeeder::class);
+        // $this->call(ProgramCategoryTableSeeder::class);
         $this->call(L3CategoryTableSeeder::class);
         $this->call(MenuBlogCategoryTableSeeder::class);
 

@@ -123,7 +123,7 @@
                                         <!--  -->
                                         <div class="col-md-12">
                                             <div class="third-content smple-box1">
-                                                <h4>What Technical Skills you Learn</h4>
+                                                {{-- <h4>What Technical Skills you Learn</h4> --}}
                                             </div>
                                             <!--  -->
                                             <div class="info-graphic">

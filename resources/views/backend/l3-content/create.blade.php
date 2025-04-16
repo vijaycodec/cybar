@@ -161,7 +161,7 @@
                     <div class="l3-form" id="significance_form" style="display: none;">
 
                         <div class="body-title  ">Select Significance Type <span class="tf-color-1">*</span></div>
-                        <select class="flex-grow" name="significance_type">
+                        <select class="flex-grow" id="significance_category" name="significance_type">
                             <option value="" disabled selected>Select Significance</option>
                             @foreach ($significanceCategories as $category)
                                 <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -190,7 +190,7 @@
                     <div class="l3-form" id="courseFeature_form" style="display: none;">
 
                         <div class="body-title">Select Course Feature Type <span class="tf-color-1">*</span></div>
-                        <select class="flex-grow" name="coursefeature_type">
+                        <select class="flex-grow" id="course_category" name="coursefeature_type">
                             <option value="" disabled selected>Select Course Feature Category</option>
                             @foreach ($courseFeatureCategories as $category)
                                 <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -222,7 +222,7 @@
                     <div class="l3-form" id="cyberwind_form" style="display: none;">
 
                         <div class="body-title">Select Cyberwind Type <span class="tf-color-1">*</span></div>
-                        <select class="flex-grow" style="" name="cyberwind_type">
+                        <select class="flex-grow" style="" id="cyberwind_category" name="cyberwind_type">
                             <option value="" disabled selected>Select Cyberwind Category</option>
                             @foreach ($cyberwindCategories as $category)
                                 <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -251,7 +251,7 @@
                     <div class="l3-form" id="industries_form" style="display: none;">
 
                         <div class="body-title">Select Industries Type <span class="tf-color-1">*</span></div>
-                        <select class="flex-grow" style="" name="industries_type">
+                        <select class="flex-grow" style="" id="industry_category" name="industries_type">
                             <option value="" disabled selected>Select Industries Category</option>
                             @foreach ($industryCategories as $category)
                                 <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -275,7 +275,7 @@
                     <!-- FAQ'S Form Start -->
                     <div class="l3-form" id="faqs_form" style="display: none;">
                         <div class="body-title">Select FAQ'S Type <span class="tf-color-1">*</span></div>
-                        <select class="flex-grow" style="" name="faq_category_id">
+                        <select class="flex-grow" style="" id="faq_category" name="faq_category_id">
                             <option value="" disabled selected>Select FAQ'S Category</option>
                             @foreach ($faqCategories as $category)
                                 <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -303,7 +303,7 @@
 
                     <div class="l3-form" id="blog_form" style="display: none;">
                         <div class="body-title">Select Blog Type <span class="tf-color-1">*</span></div>
-                        <select class="flex-grow" name="blog_category_type">
+                        <select class="flex-grow" id="blog_category" name="blog_category_type">
                             <option value="" disabled selected>Select Blog Category</option>
                             @foreach ($blogCategories as $category)
                                 <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -390,7 +390,7 @@
                     <!-- Program Form Start -->
                     <div class="l3-form" id="program_form" style="display: none;">
                         <div class="body-title">Select Program Category <span class="tf-color-1">*</span></div>
-                        <select class="flex-grow" style="" name="program_category_id">
+                        <select class="flex-grow" style="" id="program_category" name="program_category_id">
                             <option value="" disabled selected>Select Program Category</option>
                             @foreach ($programCategories as $category)
                                 <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -400,7 +400,7 @@
 
                     <div class="l3-form" id="layout_program_form" style="display: none;">
                         <div class="body-title">Select L3 Layouts Program <span class="tf-color-1">*</span></div>
-                        <select class="flex-grow l3_content" name="l3_layout_program">
+                        <select class="flex-grow l3_content"  name="l3_layout_program">
                             <option value="" disabled selected>Select L3 Category</option>
                             <option value="courseoutline">courseoutline</option>
                             <option value="whatsnewinceh">whatsnewinceh</option>
@@ -648,12 +648,68 @@
                         sub_category_Id: subCategoryId
                     },
                     success: function(data) {
+                        // Populate L3 Categories
                         $('#l3_category').html(
                             '<option value="" disabled selected>Select L3 category</option>'
                         );
-                        $.each(data, function(key, value) {
-                            $('#l3_category').append('<option value="' + value.id +
-                                '">' + value.l3_category + '</option>');
+                        $.each(data.l3_categories, function(index, value) {
+                            $('#l3_category').append('<option value="' + value.id + '">' + value.l3_category + '</option>');
+                        });
+
+                        // Populate Significance Categories
+                        $('#significance_category').html(
+                            '<option value="" disabled selected>Select Significance category</option>'
+                        );
+                        $.each(data.significance_categories, function(index, value) {
+                            $('#significance_category').append('<option value="' + value.id + '">' + value.name + '</option>');
+                        });
+
+                        // Populate CourseFeature Categories
+                        $('#course_category').html(
+                            '<option value="" disabled selected>Select CourseFeature category</option>'
+                        );
+                        $.each(data.courseFeatureCategories, function(index, value) {
+                            $('#course_category').append('<option value="' + value.id + '">' + value.name + '</option>');
+                        });
+
+                         // Populate Program Categories 
+                         $('#program_category').html(
+                            '<option value="" disabled selected>Select Program category</option>'
+                        );
+                        $.each(data.programCategories, function(index, value) {
+                            $('#program_category').append('<option value="' + value.id + '">' + value.name + '</option>');
+                        });
+
+                         // Populate industry Categories 
+                         $('#industry_category').html(
+                            '<option value="" disabled selected>Select Program category</option>' 
+                        );
+                        $.each(data.industryCategories, function(index, value) {
+                            $('#industry_category').append('<option value="' + value.id + '">' + value.name + '</option>');
+                        });
+
+                         // Populate cyberwind Categories 
+                         $('#cyberwind_category').html(
+                            '<option value="" disabled selected>Select Program category</option>' 
+                        );
+                        $.each(data.cyberwindCategories, function(index, value) {
+                            $('#cyberwind_category').append('<option value="' + value.id + '">' + value.name + '</option>');
+                        });
+
+                        // Populate faq Categories 
+                        $('#faq_category').html(
+                            '<option value="" disabled selected>Select Program category</option>' 
+                        );
+                        $.each(data.faqCategories, function(index, value) {
+                            $('#faq_category').append('<option value="' + value.id + '">' + value.name + '</option>');
+                        });
+
+                        // Populate blog Categories 
+                        $('#blog_category').html(
+                            '<option value="" disabled selected>Select Program category</option>' 
+                        );
+                        $.each(data.blogCategories, function(index, value) {
+                            $('#blog_category').append('<option value="' + value.id + '">' + value.name + '</option>');
                         });
                     }
                 });
