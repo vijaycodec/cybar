@@ -1197,7 +1197,6 @@ body{
     }
     .wwyl-box{
     background: #f1f2f8;
-    border-left: 50px solid #F8BB43;
     position: relative;
     box-shadow: 0px 2px 4px 2px rgba(204, 204, 204, 0.3);
     border-radius: 5px;
@@ -1208,7 +1207,7 @@ body{
     margin: 0px;}
     .wwyl-box-circle{
     position: absolute;
-    top: 7px;
+    top: 25%;
     left: -26px;
     background: #f8bb43;
     width: 40px;
@@ -1225,18 +1224,14 @@ body{
     font-weight: bold;
     }
     .wwyl-row{max-width: 100%;margin: auto;padding-top: 10px;}
-    .orange{    border-left: 50px solid #F58D21 !important;}
     .orange-circle{
     background: #f58d21 !important;
     border: 1px solid #e68219 !important;
     }
-    .purple{border-left: 50px solid #DF5DA0 !important;}
     .purple-circle{	background: #DF5DA0 !important;
     border: 1px solid #cc3181 !important;}
-    .color4{  border-left: 50px solid #9B70AE !important; }
     .color4-circle{background: #9B70AE !important;
     border: 1px solid #89599e !important;}
-    .green{  border-left: 50px solid #8DCBA7 !important; }
     .green-circle{background: #8DCBA7 !important;
     border: 1px solid #5cb983 !important;}
     .third-cn-title-white h2{
