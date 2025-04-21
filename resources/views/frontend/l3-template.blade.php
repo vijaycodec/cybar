@@ -116,90 +116,90 @@
                                     @endforeach
                                 @endforeach
                                 {{-- <a href="javascript:void(0)" class="btn-show">Read More ...</a>
-                                    <div class="content-hide"> --}}
+                                <div class="content-hide"> --}}
 
-                                <div class="container">
-                                    <div class="row overview-content">
-                                        <!--  -->
-                                        <div class="col-md-12">
-                                            <div class="third-content smple-box1">
-                                                {{-- <h4>What Technical Skills you Learn</h4> --}}
-                                            </div>
+                                    <div class="container">
+                                        <div class="row overview-content">
                                             <!--  -->
-                                            <div class="info-graphic">
-                                                <div class="row info-graphic-row">
-                                                    <div class="col-md-12">
-                                                        <!-- desktop start  -->
-                                                        <div class="desktop-view">
-                                                            @foreach ($l3Categories as $category)
-                                                                @foreach ($category->contentInfos as $contentInfo)
-                                                                    <!-- Checking and Displaying Sub Descriptions -->
-                                                                    @if ($contentInfo->overviewSubDescriptions->isNotEmpty())
-                                                                        @foreach ($contentInfo->overviewSubDescriptions as $index => $subDescription)
-                                                                            <div class="wwyl-row">
+                                            <div class="col-md-12">
+                                                <div class="third-content smple-box1">
+                                                    {{-- <h4>What Technical Skills you Learn</h4> --}}
+                                                </div>
+                                                <!--  -->
+                                                <div class="info-graphic">
+                                                    <div class="row info-graphic-row">
+                                                        <div class="col-md-12">
+                                                            <!-- desktop start  -->
+                                                            <div class="desktop-view">
+                                                                @foreach ($l3Categories as $category)
+                                                                                                    @foreach ($category->contentInfos as $contentInfo)
+                                                                                                                                        <!-- Checking and Displaying Sub Descriptions -->
+                                                                                                                                        @if ($contentInfo->overviewSubDescriptions->isNotEmpty())
+                                                                                                                                                                            @foreach ($contentInfo->overviewSubDescriptions as $index => $subDescription)
+                                                                                                                                                                                                                <div class="wwyl-row">
 
-                                                                                <!-- Dynamic Class for wwyl-box -->
-                                                                                @php
-                                                                                    $boxClasses = [
-                                                                                        'wwyl-box', // For 0th index
-                                                                                        'wwyl-box orange ', // For 1st index
-                                                                                        'wwyl-box purple', // For 2nd index
-                                                                                        'wwyl-box color4', // For 3rd index
-                                                                                        'wwyl-box green', // For 4th index
-                                                                                    ];
+                                                                                                                                                                                                                    <!-- Dynamic Class for wwyl-box -->
+                                                                                                                                                                                                                    @php
+                                                                                                                                                                                                                        $boxClasses = [
+                                                                                                                                                                                                                            'wwyl-box', // For 0th index
+                                                                                                                                                                                                                            'wwyl-box orange ', // For 1st index
+                                                                                                                                                                                                                            'wwyl-box purple', // For 2nd index
+                                                                                                                                                                                                                            'wwyl-box color4', // For 3rd index
+                                                                                                                                                                                                                            'wwyl-box green', // For 4th index
+                                                                                                                                                                                                                        ];
 
-                                                                                    // Use the array index, if index > 4, default to 'wwyl-box'
-                                                                                    $boxClass =
-                                                                                        $boxClasses[$index] ??
-                                                                                        'wwyl-box';
+                                                                                                                                                                                                                        // Use the array index, if index > 4, default to 'wwyl-box'
+                                                                                                                                                                                                                        $boxClass =
+                                                                                                                                                                                                                            $boxClasses[$index] ??
+                                                                                                                                                                                                                            'wwyl-box';
 
-                                                                                    // Circle Class (Same as before)
-                                                                                    $circleClasses = [
-                                                                                        'wwyl-box-circle', // For 0th index
-                                                                                        'wwyl-box-circle orange-circle', // For 1st index
-                                                                                        'wwyl-box-circle purple-circle', // For 2nd index
-                                                                                        'wwyl-box-circle color4-circle', // For 3rd index
-                                                                                        'wwyl-box-circle green-circle', // For 4th index
-                                                                                    ];
+                                                                                                                                                                                                                        // Circle Class (Same as before)
+                                                                                                                                                                                                                        $circleClasses = [
+                                                                                                                                                                                                                            'wwyl-box-circle', // For 0th index
+                                                                                                                                                                                                                            'wwyl-box-circle orange-circle', // For 1st index
+                                                                                                                                                                                                                            'wwyl-box-circle purple-circle', // For 2nd index
+                                                                                                                                                                                                                            'wwyl-box-circle color4-circle', // For 3rd index
+                                                                                                                                                                                                                            'wwyl-box-circle green-circle', // For 4th index
+                                                                                                                                                                                                                        ];
 
-                                                                                    // Circle class for the current index
-                                                                                    $circleClass =
-                                                                                        $circleClasses[$index] ??
-                                                                                        'wwyl-box-circle';
-                                                                                @endphp
+                                                                                                                                                                                                                        // Circle class for the current index
+                                                                                                                                                                                                                        $circleClass =
+                                                                                                                                                                                                                            $circleClasses[$index] ??
+                                                                                                                                                                                                                            'wwyl-box-circle';
+                                                                                                                                                                                                                    @endphp
 
-                                                                                <div class="{{ $boxClass }}">
-                                                                                    <p>
-                                                                                        {!! $subDescription->sub_description !!}
-                                                                                    </p>
+                                                                                                                                                                                                                    <div class="{{ $boxClass }}">
+                                                                                                                                                                                                                        <p>
+                                                                                                                                                                                                                            {!! $subDescription->sub_description !!}
+                                                                                                                                                                                                                        </p>
 
-                                                                                    <!-- Dynamic Circle Class -->
-                                                                                    <div class="{{ $circleClass }}">
-                                                                                        <span>{{ $index + 1 }}</span>
-                                                                                        <!-- Simple Iteration Number -->
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        @endforeach
-                                                                    @endif
+                                                                                                                                                                                                                        <!-- Dynamic Circle Class -->
+                                                                                                                                                                                                                        <div class="{{ $circleClass }}">
+                                                                                                                                                                                                                            <span>{{ $index + 1 }}</span>
+                                                                                                                                                                                                                            <!-- Simple Iteration Number -->
+                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                </div>
+                                                                                                                                                                            @endforeach
+                                                                                                                                        @endif
+                                                                                                    @endforeach
                                                                 @endforeach
-                                                            @endforeach
+                                                            </div>
+                                                            <!--  -->
+                                                            <!-- mobile start -->
+                                                            <!-- mobile end -->
+                                                            <!--  -->
                                                         </div>
-                                                        <!--  -->
-                                                        <!-- mobile start -->
-                                                        <!-- mobile end -->
-                                                        <!--  -->
                                                     </div>
                                                 </div>
-                                            </div>
 
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                {{--
-                                    </div>
-                                    <a href="#overview2" class="btn-hide" id="btn-hide1">Hide Content ...</a> --}}
+                                    {{--
+                                </div>
+                                <a href="#overview2" class="btn-hide" id="btn-hide1">Hide Content ...</a> --}}
                             </div>
                         </div>
                     </div>
@@ -220,47 +220,47 @@
 
                         <!-- slider start -->
                         {{-- <div class="mobile-view indu-moblie indu-moblie1 count-navigation">
-                                <div id="owl-demo65" class="owl-carousel owl-theme">
-                                    <!--  -->
-                                    <div class="item">
-                                        <div class="mobile-cont slider">
-                                            @foreach ($l3Categories as $category)
-                                            @foreach ($category->contentInfos as $contentInfo)
-                                            @if (!empty($contentInfo->overview_description))
-                                            <p>{!! $contentInfo->overview_description !!}</p>
-                                            @endif
-                                            @endforeach
-                                            @endforeach
-                                        </div>
+                            <div id="owl-demo65" class="owl-carousel owl-theme">
+                                <!--  -->
+                                <div class="item">
+                                    <div class="mobile-cont slider">
+                                        @foreach ($l3Categories as $category)
+                                        @foreach ($category->contentInfos as $contentInfo)
+                                        @if (!empty($contentInfo->overview_description))
+                                        <p>{!! $contentInfo->overview_description !!}</p>
+                                        @endif
+                                        @endforeach
+                                        @endforeach
                                     </div>
-                                    <!--  -->
-
-
                                 </div>
+                                <!--  -->
 
-                                <div id="navigation-count" class="count-nav-box"></div>
-                            </div> --}}
+
+                            </div>
+
+                            <div id="navigation-count" class="count-nav-box"></div>
+                        </div> --}}
                         <div class="mobile-view indu-moblie indu-moblie1 count-navigation">
                             <div id="owl-demo65" class="owl-carousel owl-theme">
                                 @foreach ($l3Categories as $category)
-                                    @foreach ($category->contentInfos as $contentInfo)
-                                        @if (!empty($contentInfo->overview_description))
-                                            @php
-                                                // Split the description into chunks of 50 words
-                                                $words = explode(' ', strip_tags($contentInfo->overview_description));
-                                                $chunks = array_chunk($words, 70); // Split into arrays of 50 words
-                                            @endphp
+                                        @foreach ($category->contentInfos as $contentInfo)
+                                                @if (!empty($contentInfo->overview_description))
+                                                        @php
+                                                            // Split the description into chunks of 50 words
+                                                            $words = explode(' ', strip_tags($contentInfo->overview_description));
+                                                            $chunks = array_chunk($words, 70); // Split into arrays of 50 words
+                                                        @endphp
 
-                                            @foreach ($chunks as $chunk)
-                                                <div class="item">
-                                                    <div class="mobile-cont slider">
-                                                        <p>{!! implode(' ', $chunk) !!}</p>
-                                                        <!-- Convert chunk back to a string -->
-                                                    </div>
-                                                </div>
-                                            @endforeach
-                                        @endif
-                                    @endforeach
+                                                        @foreach ($chunks as $chunk)
+                                                            <div class="item">
+                                                                <div class="mobile-cont slider">
+                                                                    <p>{!! implode(' ', $chunk) !!}</p>
+                                                                    <!-- Convert chunk back to a string -->
+                                                                </div>
+                                                            </div>
+                                                        @endforeach
+                                                @endif
+                                        @endforeach
                                 @endforeach
                             </div>
                             <div id="navigation-count" class="count-nav-box"></div>
@@ -340,8 +340,7 @@
                                 {{-- <li class="active"><a data-toggle="tab" href="#ic">BANKING & FINANCE</a></li> --}}
                                 @foreach ($category->contentInfos as $contentInfo)
                                     @if ($contentInfo->significanceCategory)
-                                        <li class="tab-pane fade {{ $loop->first ? 'active ' : '' }}"><a
-                                                data-toggle="tab" class="codec-tab"
+                                        <li class="tab-pane fade {{ $loop->first ? 'active ' : '' }}"><a data-toggle="tab" class="codec-tab"
                                                 href="#{{ strtolower(str_replace([' ', '&', ','], '-', $contentInfo->significanceCategory->name)) }}">{{ $contentInfo->significanceCategory->name }}</a>
                                         </li>
                                     @endif
@@ -376,8 +375,7 @@
 
                                                                 <div class="content-hide" style="display: none;">
                                                                     {!! $contentInfo->significance_description !!}
-                                                                    <a href="javascript:void(0);"
-                                                                        class="btn-hide btn-hide_sig"
+                                                                    <a href="javascript:void(0);" class="btn-hide btn-hide_sig"
                                                                         style="display: none;">Hide Content ...</a>
                                                                 </div>
                                                             </div>
@@ -395,8 +393,7 @@
 
                                                                 <div class="content-hide" style="display: none;">
                                                                     {!! $contentInfo->significance_description !!}
-                                                                    <a href="javascript:void(0);"
-                                                                        class="btn-hide btn-hide_sig"
+                                                                    <a href="javascript:void(0);" class="btn-hide btn-hide_sig"
                                                                         style="display: none;">Hide Content ...</a>
                                                                 </div>
                                                             </div>
@@ -444,20 +441,20 @@
                                                                 src="{{ asset('storage/uploads/frontend/l3_template/significance/' . $contentInfo->images) }}">
                                                         </div>
                                                         {{-- <div class="red-title"> --}}
-                                                        @if ($contentInfo->significanceCategory)
-                                                            {!! $contentInfo->significance_short_description !!}
-                                                            {!! $contentInfo->significance_description !!}
-                                                        @endif
-                                                        {{--
-                                                            </div> --}}
+                                                            @if ($contentInfo->significanceCategory)
+                                                                {!! $contentInfo->significance_short_description !!}
+                                                                {!! $contentInfo->significance_description !!}
+                                                            @endif
+                                                            {{--
+                                                        </div> --}}
                                                     @else
                                                         {{-- <div class="red-title"> --}}
-                                                        @if ($contentInfo->significanceCategory)
-                                                            {!! $contentInfo->significance_short_description !!}
-                                                            {!! $contentInfo->significance_description !!}
-                                                        @endif
-                                                        {{--
-                                                            </div> --}}
+                                                            @if ($contentInfo->significanceCategory)
+                                                                {!! $contentInfo->significance_short_description !!}
+                                                                {!! $contentInfo->significance_description !!}
+                                                            @endif
+                                                            {{--
+                                                        </div> --}}
                                                     @endif
                                                 </div>
                                             </div>
@@ -543,8 +540,7 @@
                                         @endphp
 
                                         @if ($contentInfo->l3_layout_program == 'courseoutline')
-                                            <div id="{{ $programCategorySlug }}"
-                                                class="tab-pane fade in {{ $loop->first ? 'active' : '' }}">
+                                            <div id="{{ $programCategorySlug }}" class="tab-pane fade in {{ $loop->first ? 'active' : '' }}">
                                                 <div class="container module-tab">
                                                     <div class="row">
                                                         <div class="pro-title">
@@ -571,42 +567,40 @@
                                                                         <div class="pro-mod1">
                                                                             <div class="acc">
                                                                                 @foreach ($contentInfo->programCategory->programSubCategories as $index => $subCategory)
-                                                                                    @if ($index < $half)
-                                                                                        @php
-                                                                                            $uniqueId =
-                                                                                                strtolower(
-                                                                                                    preg_replace(
-                                                                                                        '/[^a-zA-Z0-9]/',
-                                                                                                        '',
-                                                                                                        str_replace(
-                                                                                                            [
-                                                                                                                ' ',
-                                                                                                                '&',
-                                                                                                                ',',
-                                                                                                            ],
-                                                                                                            '-',
-                                                                                                            $subCategory->name,
-                                                                                                        ),
-                                                                                                    ),
-                                                                                                ) .
-                                                                                                '-' .
-                                                                                                $index;
-                                                                                        @endphp
-                                                                                        <div class="acc__card">
-                                                                                            <!-- Subcategory Name -->
-                                                                                            <a href="#{{ $uniqueId }}"
-                                                                                                class="acc__title">
-                                                                                                {{ $subCategory->name }}
-                                                                                            </a>
+                                                                                                            @if ($index < $half)
+                                                                                                                                        @php
+                                                                                                                                            $uniqueId =
+                                                                                                                                                strtolower(
+                                                                                                                                                    preg_replace(
+                                                                                                                                                        '/[^a-zA-Z0-9]/',
+                                                                                                                                                        '',
+                                                                                                                                                        str_replace(
+                                                                                                                                                            [
+                                                                                                                                                                ' ',
+                                                                                                                                                                '&',
+                                                                                                                                                                ',',
+                                                                                                                                                            ],
+                                                                                                                                                            '-',
+                                                                                                                                                            $subCategory->name,
+                                                                                                                                                        ),
+                                                                                                                                                    ),
+                                                                                                                                                ) .
+                                                                                                                                                '-' .
+                                                                                                                                                $index;
+                                                                                                                                        @endphp
+                                                                                                                                        <div class="acc__card">
+                                                                                                                                            <!-- Subcategory Name -->
+                                                                                                                                            <a href="#{{ $uniqueId }}" class="acc__title">
+                                                                                                                                                {{ $subCategory->name }}
+                                                                                                                                            </a>
 
-                                                                                            <!-- Subcategory Description -->
-                                                                                            <div class="acc__panel"
-                                                                                                style="display: none;"
-                                                                                                id="{{ $uniqueId }}">
-                                                                                                {!! $subCategory->description !!}
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    @endif
+                                                                                                                                            <!-- Subcategory Description -->
+                                                                                                                                            <div class="acc__panel" style="display: none;"
+                                                                                                                                                id="{{ $uniqueId }}">
+                                                                                                                                                {!! $subCategory->description !!}
+                                                                                                                                            </div>
+                                                                                                                                        </div>
+                                                                                                            @endif
                                                                                 @endforeach
                                                                             </div>
                                                                         </div>
@@ -617,42 +611,40 @@
                                                                         <div class="pro-mod1">
                                                                             <div class="acc">
                                                                                 @foreach ($contentInfo->programCategory->programSubCategories as $index => $subCategory)
-                                                                                    @if ($index >= $half)
-                                                                                        @php
-                                                                                            $uniqueId =
-                                                                                                strtolower(
-                                                                                                    preg_replace(
-                                                                                                        '/[^a-zA-Z0-9]/',
-                                                                                                        '',
-                                                                                                        str_replace(
-                                                                                                            [
-                                                                                                                ' ',
-                                                                                                                '&',
-                                                                                                                ',',
-                                                                                                            ],
-                                                                                                            '-',
-                                                                                                            $subCategory->name,
-                                                                                                        ),
-                                                                                                    ),
-                                                                                                ) .
-                                                                                                '-' .
-                                                                                                $index;
-                                                                                        @endphp
-                                                                                        <div class="acc__card">
-                                                                                            <!-- Subcategory Name -->
-                                                                                            <a href="#{{ $uniqueId }}"
-                                                                                                class="acc__title">
-                                                                                                {{ $subCategory->name }}
-                                                                                            </a>
+                                                                                                            @if ($index >= $half)
+                                                                                                                                        @php
+                                                                                                                                            $uniqueId =
+                                                                                                                                                strtolower(
+                                                                                                                                                    preg_replace(
+                                                                                                                                                        '/[^a-zA-Z0-9]/',
+                                                                                                                                                        '',
+                                                                                                                                                        str_replace(
+                                                                                                                                                            [
+                                                                                                                                                                ' ',
+                                                                                                                                                                '&',
+                                                                                                                                                                ',',
+                                                                                                                                                            ],
+                                                                                                                                                            '-',
+                                                                                                                                                            $subCategory->name,
+                                                                                                                                                        ),
+                                                                                                                                                    ),
+                                                                                                                                                ) .
+                                                                                                                                                '-' .
+                                                                                                                                                $index;
+                                                                                                                                        @endphp
+                                                                                                                                        <div class="acc__card">
+                                                                                                                                            <!-- Subcategory Name -->
+                                                                                                                                            <a href="#{{ $uniqueId }}" class="acc__title">
+                                                                                                                                                {{ $subCategory->name }}
+                                                                                                                                            </a>
 
-                                                                                            <!-- Subcategory Description -->
-                                                                                            <div class="acc__panel"
-                                                                                                style="display: none;"
-                                                                                                id="{{ $uniqueId }}">
-                                                                                                {!! $subCategory->description !!}
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    @endif
+                                                                                                                                            <!-- Subcategory Description -->
+                                                                                                                                            <div class="acc__panel" style="display: none;"
+                                                                                                                                                id="{{ $uniqueId }}">
+                                                                                                                                                {!! $subCategory->description !!}
+                                                                                                                                            </div>
+                                                                                                                                        </div>
+                                                                                                            @endif
                                                                                 @endforeach
                                                                             </div>
                                                                         </div>
@@ -675,12 +667,10 @@
                                                             <div class="vertical-ceh">
                                                                 <ul class="nav nav-tabs vertical-ceh-nav">
                                                                     @foreach ($contentInfo->programCategory->programSubCategories as $index => $subCategory)
-                                                                        <li
-                                                                            class="{{ $loop->first ? 'active' : '' }} bg{{ $index + 1 }}">
+                                                                        <li class="{{ $loop->first ? 'active' : '' }} bg{{ $index + 1 }}">
                                                                             <a data-toggle="tab"
                                                                                 href="#{{ strtolower(preg_replace('/[^a-zA-Z0-9]/', '', str_replace([' ', '&', ','], '-', $subCategory->name))) }}">
-                                                                                {{ $subCategory->name }} <i
-                                                                                    class="fa fa-arrow-right"></i>
+                                                                                {{ $subCategory->name }} <i class="fa fa-arrow-right"></i>
                                                                             </a>
                                                                         </li>
                                                                     @endforeach
@@ -811,13 +801,13 @@
                                 @if ($contentInfo->programCategory && !in_array($contentInfo->programCategory->id, $displayedProgramCategories))
                                     @php
                                         // Mark this program category as displayed so it won't repeat
-                                    $displayedProgramCategories[] = $contentInfo->programCategory->id;
-                                    // Generate a slug from the program category name
-                                    $programCategorySlug = strtolower(
-                                        preg_replace(
-                                            '/[^a-zA-Z0-9]/',
-                                            '',
-                                            str_replace([' ', '&', ','], '-', $contentInfo->programCategory->name),
+                                        $displayedProgramCategories[] = $contentInfo->programCategory->id;
+                                        // Generate a slug from the program category name
+                                        $programCategorySlug = strtolower(
+                                            preg_replace(
+                                                '/[^a-zA-Z0-9]/',
+                                                '',
+                                                str_replace([' ', '&', ','], '-', $contentInfo->programCategory->name),
                                             ),
                                         );
                                         // Get the color based on the iteration count
@@ -834,8 +824,7 @@
 
                                         {{-- Course Outline Category --}}
                                         @if ($contentInfo->l3_layout_program == 'courseoutline')
-                                            <div id="{{ $programCategorySlug }}mob"
-                                                style="{{ $loop->first ? 'display:block;' : '' }}"
+                                            <div id="{{ $programCategorySlug }}mob" style="{{ $loop->first ? 'display:block;' : '' }}"
                                                 class="acc__panel">
                                                 <div class="container">
                                                     <div class="row">
@@ -856,47 +845,43 @@
                                                                 @endphp
                                                                 <div class="acc" , style="padding: 0%">
                                                                     @foreach ($chunks as $chunk)
-                                                                        <div class="col-md-6">
-                                                                            <div class="pro-mod1">
+                                                                                    <div class="col-md-6">
+                                                                                        <div class="pro-mod1">
 
-                                                                                @foreach ($chunk as $subCategory)
-                                                                                    @php
-                                                                                        $subCategorySlug = strtolower(
-                                                                                            preg_replace(
-                                                                                                '/[^a-zA-Z0-9]/',
-                                                                                                '',
-                                                                                                str_replace(
-                                                                                                    [' ', '&', ','],
-                                                                                                    '-',
-                                                                                                    $subCategory->name,
-                                                                                                ),
-                                                                                            ),
-                                                                                        );
-                                                                                    @endphp
-                                                                                    <div class="acc__card">
-                                                                                        <!-- Subcategory Title -->
-                                                                                        <a href="#{{ $subCategorySlug }}mob"
-                                                                                            class="acc__title">
-                                                                                            {{ $subCategory->name }}
-                                                                                        </a>
-                                                                                        <!-- Subcategory Description -->
-                                                                                        <div id="{{ $subCategorySlug }}mob"
-                                                                                            class="acc__panel"
-                                                                                            style="display: none;">
-                                                                                            <div
-                                                                                                class="vert-box box-height">
-                                                                                                {!! $subCategory->description !!}
+                                                                                            @foreach ($chunk as $subCategory)
+                                                                                                                    @php
+                                                                                                                        $subCategorySlug = strtolower(
+                                                                                                                            preg_replace(
+                                                                                                                                '/[^a-zA-Z0-9]/',
+                                                                                                                                '',
+                                                                                                                                str_replace(
+                                                                                                                                    [' ', '&', ','],
+                                                                                                                                    '-',
+                                                                                                                                    $subCategory->name,
+                                                                                                                                ),
+                                                                                                                            ),
+                                                                                                                        );
+                                                                                                                    @endphp
+                                                                                                                    <div class="acc__card">
+                                                                                                                        <!-- Subcategory Title -->
+                                                                                                                        <a href="#{{ $subCategorySlug }}mob" class="acc__title">
+                                                                                                                            {{ $subCategory->name }}
+                                                                                                                        </a>
+                                                                                                                        <!-- Subcategory Description -->
+                                                                                                                        <div id="{{ $subCategorySlug }}mob" class="acc__panel"
+                                                                                                                            style="display: none;">
+                                                                                                                            <div class="vert-box box-height">
+                                                                                                                                {!! $subCategory->description !!}
 
-                                                                                            </div>
-                                                                                            <a href="javascript:void(0)"
-                                                                                                class="close-acrodin">Close</a>
+                                                                                                                            </div>
+                                                                                                                            <a href="javascript:void(0)" class="close-acrodin">Close</a>
+                                                                                                                        </div>
+
+                                                                                                                    </div>
+                                                                                            @endforeach
+
                                                                                         </div>
-
                                                                                     </div>
-                                                                                @endforeach
-
-                                                                            </div>
-                                                                        </div>
                                                                     @endforeach
                                                                 </div>
                                                             </div>
@@ -907,52 +892,47 @@
 
                                             {{-- What's New in CEH Category --}}
                                         @elseif ($contentInfo->l3_layout_program == 'whatsnewinceh')
-                                            <div id="{{ $programCategorySlug }}mob" style="display:block;"
-                                                class="acc__panel">
+                                            <div id="{{ $programCategorySlug }}mob" style="display:block;" class="acc__panel">
                                                 <div class="pro-mbile pro-mbile1">
                                                     <div class="acc acc-m">
                                                         <!-- Loop through each subcategory -->
                                                         @foreach ($contentInfo->programCategory->programSubCategories as $index => $subCategory)
-                                                            @php
-                                                                $subCategorySlug = strtolower(
-                                                                    preg_replace(
-                                                                        '/[^a-zA-Z0-9]/',
-                                                                        '',
-                                                                        str_replace(
-                                                                            [' ', '&', ','],
-                                                                            '-',
-                                                                            $subCategory->name,
+                                                                @php
+                                                                    $subCategorySlug = strtolower(
+                                                                        preg_replace(
+                                                                            '/[^a-zA-Z0-9]/',
+                                                                            '',
+                                                                            str_replace(
+                                                                                [' ', '&', ','],
+                                                                                '-',
+                                                                                $subCategory->name,
+                                                                            ),
                                                                         ),
-                                                                    ),
-                                                                );
-                                                            @endphp
-                                                            <div class="acc__card">
-                                                                <!-- Accordion Title -->
-                                                                <a href="#{{ $subCategorySlug }}mob"
-                                                                    class="acc__title mbg{{ $index + 1 }} ">
-                                                                    {{ $subCategory->name }} <i
-                                                                        class="fa fa-arrow-down"></i>
-                                                                </a>
-                                                                <!-- Accordion Content Panel -->
-                                                                <div id="{{ $subCategorySlug }}mob"
-                                                                    class="acc__panel " style="">
-                                                                    <div class="vert-box box-height">
-                                                                        @if ($subCategory->image)
-                                                                            <div class="template12-img">
-                                                                                <img src="{{ asset('storage/uploads/frontend/l3_template/program/' . $subCategory->image) }}"
-                                                                                    alt="{{ $subCategory->name }}">
-                                                                            </div>
-                                                                        @endif
+                                                                    );
+                                                                @endphp
+                                                                <div class="acc__card">
+                                                                    <!-- Accordion Title -->
+                                                                    <a href="#{{ $subCategorySlug }}mob" class="acc__title mbg{{ $index + 1 }} ">
+                                                                        {{ $subCategory->name }} <i class="fa fa-arrow-down"></i>
+                                                                    </a>
+                                                                    <!-- Accordion Content Panel -->
+                                                                    <div id="{{ $subCategorySlug }}mob" class="acc__panel " style="">
+                                                                        <div class="vert-box box-height">
+                                                                            @if ($subCategory->image)
+                                                                                <div class="template12-img">
+                                                                                    <img src="{{ asset('storage/uploads/frontend/l3_template/program/' . $subCategory->image) }}"
+                                                                                        alt="{{ $subCategory->name }}">
+                                                                                </div>
+                                                                            @endif
 
-                                                                        <p>{!! $subCategory->description !!}</p>
+                                                                            <p>{!! $subCategory->description !!}</p>
 
+                                                                        </div>
+                                                                        <a href="javascript:void(0)" class="close-acrodin">Close</a>
                                                                     </div>
-                                                                    <a href="javascript:void(0)"
-                                                                        class="close-acrodin">Close</a>
-                                                                </div>
-                                                                <!-- Close button (optional) -->
+                                                                    <!-- Close button (optional) -->
 
-                                                            </div>
+                                                                </div>
                                                         @endforeach
                                                     </div>
                                                 </div>
@@ -976,8 +956,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <a href="javascript:void(0)"
-                                                    class="close-acrodin close-space">Close</a>
+                                                <a href="javascript:void(0)" class="close-acrodin close-space">Close</a>
                                             </div>
 
                                             {{-- Brochure Category --}}
@@ -1038,7 +1017,7 @@
                     <div class="row">
                         <div class="col-md-12 cn-title">
                             {{-- <h2>COURSE FEATURES</h2>
-                                <p>The essential technology that matter most for business today</p> --}}
+                            <p>The essential technology that matter most for business today</p> --}}
                             @foreach ($l3Categories as $category)
                                 @foreach ($category->contentInfos as $contentInfo)
                                     @if ($contentInfo->coursefeature_title)
@@ -1059,8 +1038,7 @@
                                 {{-- <li class="active"><a data-toggle="tab" href="#ic">BANKING & FINANCE</a></li> --}}
                                 @foreach ($category->contentInfos as $contentInfo)
                                     @if ($contentInfo->coursefeatureCategory)
-                                        <li class="{{ $loop->first ? 'active' : '' }}"><a data-toggle="tab"
-                                                class="codec-tab"
+                                        <li class="{{ $loop->first ? 'active' : '' }}"><a data-toggle="tab" class="codec-tab"
                                                 href="#{{ strtolower(str_replace([' ', '&', ','], '-', $contentInfo->coursefeatureCategory->name)) }}">{{ $contentInfo->coursefeatureCategory->name }}</a>
                                         </li>
                                     @endif
@@ -1097,8 +1075,7 @@
 
                                                                 <div class="content-hide" style="display: none;">
                                                                     {!! $contentInfo->course_feature_description !!}
-                                                                    <a href="javascript:void(0);"
-                                                                        class="btn-hide btn-hide_cf_d"
+                                                                    <a href="javascript:void(0);" class="btn-hide btn-hide_cf_d"
                                                                         style="display: none;">Hide Content ...</a>
                                                                 </div>
                                                             </div>
@@ -1115,8 +1092,7 @@
 
                                                                 <div class="content-hide" style="display: none;">
                                                                     {!! $contentInfo->course_feature_description !!}
-                                                                    <a href="javascript:void(0);"
-                                                                        class="btn-hide btn-hide_cf_d"
+                                                                    <a href="javascript:void(0);" class="btn-hide btn-hide_cf_d"
                                                                         style="display: none;">Hide Content ...</a>
                                                                 </div>
                                                             </div>
@@ -1138,99 +1114,99 @@
                 <!-- tba2 end -->
                 <!-- mobile content start  -->
                 {{-- <div class="mobile-view indu-moblie count-navigation"> --}}
-                <div class="container mobile-view significance-space">
-                    <div class="acc">
-                        @foreach ($l3Categories as $category)
-                            @foreach ($category->contentInfos as $contentInfo)
-                                @if ($contentInfo->coursefeatureCategory)
-                                    <div class="acc__card">
-                                        <!-- Accordion Title -->
-                                        <a href="#coursefeatures-{{ $loop->iteration }}"
-                                            class="acc__title {{ $loop->first ? 'active' : '' }}"
-                                            data-target="coursefeatures-{{ $loop->iteration }}">
-                                            {{ $contentInfo->coursefeatureCategory->name }}
-                                        </a>
+                    <div class="container mobile-view significance-space">
+                        <div class="acc">
+                            @foreach ($l3Categories as $category)
+                                @foreach ($category->contentInfos as $contentInfo)
+                                    @if ($contentInfo->coursefeatureCategory)
+                                        <div class="acc__card">
+                                            <!-- Accordion Title -->
+                                            <a href="#coursefeatures-{{ $loop->iteration }}"
+                                                class="acc__title {{ $loop->first ? 'active' : '' }}"
+                                                data-target="coursefeatures-{{ $loop->iteration }}">
+                                                {{ $contentInfo->coursefeatureCategory->name }}
+                                            </a>
 
-                                        <!-- Accordion Panel -->
-                                        <div class="acc__panel" style="{{ $loop->first ? 'display:block;' : '' }}"
-                                            id="coursefeatures-{{ $loop->iteration }}">
-                                            <div class="vert-box box-height">
-                                                <div class="red-title">
-                                                    @if ($contentInfo->images)
-                                                        <div class="template12-img">
-                                                            <img
-                                                                src="{{ asset('storage/uploads/frontend/l3_template/coursefeature/' . $contentInfo->images) }}">
-                                                        </div>
-                                                        {{-- <div class="red-title"> --}}
-                                                        @if ($contentInfo->coursefeatureCategory)
-                                                            {!! $contentInfo->course_feature_short_description !!}{!! $contentInfo->course_feature_description !!}
+                                            <!-- Accordion Panel -->
+                                            <div class="acc__panel" style="{{ $loop->first ? 'display:block;' : '' }}"
+                                                id="coursefeatures-{{ $loop->iteration }}">
+                                                <div class="vert-box box-height">
+                                                    <div class="red-title">
+                                                        @if ($contentInfo->images)
+                                                            <div class="template12-img">
+                                                                <img
+                                                                    src="{{ asset('storage/uploads/frontend/l3_template/coursefeature/' . $contentInfo->images) }}">
+                                                            </div>
+                                                            {{-- <div class="red-title"> --}}
+                                                                @if ($contentInfo->coursefeatureCategory)
+                                                                    {!! $contentInfo->course_feature_short_description !!}{!! $contentInfo->course_feature_description !!}
+                                                                @endif
+                                                                {{--
+                                                            </div> --}}
+                                                        @else
+                                                            {{-- <div class="red-title"> --}}
+                                                                @if ($contentInfo->coursefeatureCategory)
+                                                                    {!! $contentInfo->course_feature_short_description !!}{!! $contentInfo->course_feature_description !!}
+                                                                @endif
+                                                                {{--
+                                                            </div> --}}
                                                         @endif
-                                                        {{--
-                                                                </div> --}}
-                                                    @else
-                                                        {{-- <div class="red-title"> --}}
-                                                        @if ($contentInfo->coursefeatureCategory)
-                                                            {!! $contentInfo->course_feature_short_description !!}{!! $contentInfo->course_feature_description !!}
-                                                        @endif
-                                                        {{--
-                                                                </div> --}}
-                                                    @endif
+                                                    </div>
+
                                                 </div>
+                                                <a href="javascript:void(0)" class="close-acrodin">Close</a>
 
                                             </div>
-                                            <a href="javascript:void(0)" class="close-acrodin">Close</a>
-
                                         </div>
-                                    </div>
-                                @endif
+                                    @endif
+                                @endforeach
                             @endforeach
-                        @endforeach
 
 
-                    </div>
-                    {{-- <div id="owl-demo62" class="owl-carousel owl-theme">
-                                @foreach ($l3Categories as $category)
-                                @foreach ($category->contentInfos as $contentInfo)
-                                @if ($contentInfo->coursefeatureCategory)
-                                <div class="item">
-                                    @php
-                                    // Escape quotes to prevent breaking the HTML attribute
-                                    $description = addslashes($contentInfo->course_feature_description);
-                                    $short_description = addslashes($contentInfo->course_feature_short_description);
-                                    @endphp
-                                    <div class="mobile-cf" data-title="{{ $contentInfo->coursefeatureCategory->name }}"
-                                        data-description="{{ e($short_description) }}{{ e($description) }}"
-                                        data-image="{{ asset('storage/uploads/frontend/l3_template/coursefeature/' . $contentInfo->images) }}">
+                        </div>
+                        {{-- <div id="owl-demo62" class="owl-carousel owl-theme">
+                            @foreach ($l3Categories as $category)
+                            @foreach ($category->contentInfos as $contentInfo)
+                            @if ($contentInfo->coursefeatureCategory)
+                            <div class="item">
+                                @php
+                                // Escape quotes to prevent breaking the HTML attribute
+                                $description = addslashes($contentInfo->course_feature_description);
+                                $short_description = addslashes($contentInfo->course_feature_short_description);
+                                @endphp
+                                <div class="mobile-cf" data-title="{{ $contentInfo->coursefeatureCategory->name }}"
+                                    data-description="{{ e($short_description) }}{{ e($description) }}"
+                                    data-image="{{ asset('storage/uploads/frontend/l3_template/coursefeature/' . $contentInfo->images) }}">
 
-                                        <div class="mobile-cf-content">
-                                            @if ($contentInfo->images)
-                                            <img src="{{ asset('storage/uploads/frontend/l3_template/coursefeature/' . $contentInfo->images) }}"
-                                                alt="">
-                                            @else
-                                            <img src="https://www.eccouncil.org/wp-content/uploads/2023/01/CEH-cover-broucher-scaled.jpg.webp"
-                                                alt="Default Brochure Image">
-                                            @endif
+                                    <div class="mobile-cf-content">
+                                        @if ($contentInfo->images)
+                                        <img src="{{ asset('storage/uploads/frontend/l3_template/coursefeature/' . $contentInfo->images) }}"
+                                            alt="">
+                                        @else
+                                        <img src="https://www.eccouncil.org/wp-content/uploads/2023/01/CEH-cover-broucher-scaled.jpg.webp"
+                                            alt="Default Brochure Image">
+                                        @endif
 
-                                            <h3>{{ $contentInfo->coursefeatureCategory->name }}</h3>
-                                            <p>{!! $contentInfo->course_feature_short_description !!}</p>
-                                            <a href="javascript:void(0)" class="popup-btn">
-                                                Read More
-                                            </a>
-                                        </div>
+                                        <h3>{{ $contentInfo->coursefeatureCategory->name }}</h3>
+                                        <p>{!! $contentInfo->course_feature_short_description !!}</p>
+                                        <a href="javascript:void(0)" class="popup-btn">
+                                            Read More
+                                        </a>
                                     </div>
                                 </div>
-                                @endif
-                                @endforeach
-                                @endforeach
+                            </div>
+                            @endif
+                            @endforeach
+                            @endforeach
 
-                            </div> --}}
+                        </div> --}}
 
-                    <!-- Navigation Dots -->
-                    <div id="navigation-count2" class="count-nav-box couter-space"></div>
-                </div>
-                <!-- mobile content end  -->
+                        <!-- Navigation Dots -->
+                        <div id="navigation-count2" class="count-nav-box couter-space"></div>
+                    </div>
+                    <!-- mobile content end  -->
 
-                {{-- @include ('frontend.mobile-components.m-course-features') --}}
+                    {{-- @include ('frontend.mobile-components.m-course-features') --}}
             </section>
             <!-- course feature  end 4-->
 
@@ -1458,9 +1434,9 @@
                                     @foreach ($category->contentInfos as $contentInfo)
                                         @if ($contentInfo->cyberwindCategory)
                                             {{-- <li class="{{ $loop->first ? 'active' : '' }}"><a data-toggle="tab" class="codec-tab"
-                                                        href="#{{ strtolower(str_replace([' ', '&', ','], '-', $contentInfo->cyberwindCategory->name)) }}">{{
-                                                        $contentInfo->cyberwindCategory->name }}</a>
-                                                </li> --}}
+                                                    href="#{{ strtolower(str_replace([' ', '&', ','], '-', $contentInfo->cyberwindCategory->name)) }}">{{
+                                                    $contentInfo->cyberwindCategory->name }}</a>
+                                            </li> --}}
                                             <button class="tab3-tablinks"
                                                 onclick="openCity(event, '{{ strtolower(str_replace([' ', '&', ','], '-', $contentInfo->cyberwindCategory->name)) }}')"
                                                 id="{{ $loop->first ? 'defaultOpen' : ' ' }}">
@@ -1494,15 +1470,13 @@
                                                                     @if ($contentInfo->cyberwind_short_description)
                                                                         {!! $contentInfo->cyberwind_short_description !!}
                                                                     @endif
-                                                                    <a href="javascript:void(0);"
-                                                                        class="btn-show">Read
+                                                                    <a href="javascript:void(0);" class="btn-show">Read
                                                                         More
                                                                         ...</a>
 
                                                                     <div class="content-hide" style="display: none;">
                                                                         {!! $contentInfo->cyberwind_description !!}
-                                                                        <a href="javascript:void(0);"
-                                                                            class="btn-hide hide-btn_tab3"
+                                                                        <a href="javascript:void(0);" class="btn-hide hide-btn_tab3"
                                                                             style="display: none;">Hide Content ...</a>
                                                                     </div>
 
@@ -1514,15 +1488,13 @@
                                                                     @if ($contentInfo->cyberwind_short_description)
                                                                         {!! $contentInfo->cyberwind_short_description !!}
                                                                     @endif
-                                                                    <a href="javascript:void(0);"
-                                                                        class="btn-show">Read
+                                                                    <a href="javascript:void(0);" class="btn-show">Read
                                                                         More
                                                                         ...</a>
 
                                                                     <div class="content-hide" style="display: none;">
                                                                         {!! $contentInfo->cyberwind_description !!}
-                                                                        <a href="javascript:void(0);"
-                                                                            class="btn-hide hide-btn_tab3"
+                                                                        <a href="javascript:void(0);" class="btn-hide hide-btn_tab3"
                                                                             style="display: none;">Hide Content ...</a>
                                                                     </div>
 
@@ -1552,8 +1524,7 @@
                                 @if ($contentInfo->cyberwindCategory)
                                     <div class="acc__card">
                                         <!-- Accordion Title -->
-                                        <a href="#whycyberwind-{{ $loop->iteration }}"
-                                            class="acc__title {{ $loop->first ? 'active' : '' }}"
+                                        <a href="#whycyberwind-{{ $loop->iteration }}" class="acc__title {{ $loop->first ? 'active' : '' }}"
                                             data-target="whycyberwind-{{ $loop->iteration }}">
                                             {{ $contentInfo->cyberwindCategory->name }}
                                         </a>
@@ -1569,20 +1540,20 @@
                                                                 src="{{ asset('storage/uploads/frontend/l3_template/cyberwind/' . $contentInfo->images) }}">
                                                         </div>
                                                         {{-- <div class="red-title"> --}}
-                                                        @if ($contentInfo->cyberwindCategory)
-                                                            {!! $contentInfo->cyberwind_short_description !!}
-                                                            {!! $contentInfo->cyberwind_description !!}
-                                                        @endif
-                                                        {{--
-                                                            </div> --}}
+                                                            @if ($contentInfo->cyberwindCategory)
+                                                                {!! $contentInfo->cyberwind_short_description !!}
+                                                                {!! $contentInfo->cyberwind_description !!}
+                                                            @endif
+                                                            {{--
+                                                        </div> --}}
                                                     @else
                                                         {{-- <div class="red-title"> --}}
-                                                        @if ($contentInfo->cyberwindCategory)
-                                                            {!! $contentInfo->cyberwind_short_description !!}
-                                                            {!! $contentInfo->cyberwind_description !!}
-                                                        @endif
-                                                        {{--
-                                                            </div> --}}
+                                                            @if ($contentInfo->cyberwindCategory)
+                                                                {!! $contentInfo->cyberwind_short_description !!}
+                                                                {!! $contentInfo->cyberwind_description !!}
+                                                            @endif
+                                                            {{--
+                                                        </div> --}}
                                                     @endif
                                                 </div>
 
@@ -1688,9 +1659,10 @@
                                 @foreach ($category->contentInfos as $contentInfo)
                                     @if ($contentInfo->blog_title)
                                         {{-- <h2>{!! $contentInfo->blog_title->title !!}</h2> --}}
-                                        <h2 style="margin: auto; font-weight: 500; line-height: 1.2; font-size: 24px; letter-spacing: 2px; color: rgb(66, 66, 66); text-align: center; font-family: &quot;Roboto Medium&quot;; max-width: 100%; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; background-color: rgb(241, 242, 248); scroll-behavior: smooth !important;">
-                                        {{ $contentInfo->blog_title->title }}
-                                    </h2>
+                                        <h2
+                                            style="margin: auto; font-weight: 500; line-height: 1.2; font-size: 24px; letter-spacing: 2px; color: rgb(66, 66, 66); text-align: center; font-family: &quot;Roboto Medium&quot;; max-width: 100%; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; background-color: rgb(241, 242, 248); scroll-behavior: smooth !important;">
+                                            {{ $contentInfo->blog_title->title }}
+                                        </h2>
                                     @endif
                                 @endforeach
                             @endforeach
@@ -1703,8 +1675,7 @@
                             @foreach ($category->contentInfos as $index => $contentInfo)
                                 @if ($contentInfo->blogCategory)
                                     <div class="col-md-6" style="padding-bottom: 20px;">
-                                        <div class="industry-box black-bg"
-                                            style="background-color: {{ $contentInfo->style_class_id }}">
+                                        <div class="industry-box black-bg" style="background-color: {{ $contentInfo->style_class_id }}">
                                             <p>{{ $contentInfo->blogCategory->name }}</p> <!-- Blog Category Name -->
                                             <h3>{{ $contentInfo->blog_description }}</h3> <!-- Blog Title -->
                                             <a href="#">Watch Now</a>
@@ -1727,94 +1698,170 @@
             <!-- FAQ info start 11 -->
         @elseif ($fieldKey == 'FaqCategory' && $contents->contains(fn($info) => $info->{$fieldKey}))
             <section class="anchor-link sample7-line space7 ceh-pro ceh-pro1 faqclass" id="{{ $slug }}">
-                {{-- <section class="anchor-link sample7-line space7 ceh-pro ceh-pro1" id="{{ $slug }}">     --}}
-                <!-- title  -->
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 cn-title ceh-title">
-                            @foreach ($l3Categories as $category)
-                                @foreach ($category->contentInfos as $contentInfo)
-                                    @if ($contentInfo->faqCategory)
-                                        @foreach ($contentInfo->faqCategory->faqSubCategory as $faqSubCategory)
-                                            @if ($faqSubCategory->title)
-                                                {!! $faqSubCategory->title !!}
-                                                @php break 2; @endphp
-                                            @endif
-                                        @endforeach
-                                    @endif
+                {{-- <section class="anchor-link sample7-line space7 ceh-pro ceh-pro1" id="{{ $slug }}"> --}}
+                    <!-- title  -->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 cn-title ceh-title">
+                                @foreach ($l3Categories as $category)
+                                    @foreach ($category->contentInfos as $contentInfo)
+                                        @if ($contentInfo->faqCategory)
+                                            @foreach ($contentInfo->faqCategory->faqSubCategory as $faqSubCategory)
+                                                @if ($faqSubCategory->title)
+                                                    {!! $faqSubCategory->title !!}
+                                                    @php break 2; @endphp
+                                                @endif
+                                            @endforeach
+                                        @endif
+                                    @endforeach
                                 @endforeach
-                            @endforeach
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!--title end-->
-                <!-- body start -->
+                    <!--title end-->
+                    <!-- body start -->
 
-                <!-- Faq backup section -->
+                    <!-- Faq backup section -->
 
-                <div class="container desktop-view faq">
+                    <div class="container desktop-view faq">
 
-                    @php
-                        $displayedFaqCategories = []; // Array to store displayed FAQ category IDs
-                    @endphp
+                        @php
+                            $displayedFaqCategories = []; // Array to store displayed FAQ category IDs
+                        @endphp
 
-                    <div class="row">
-                        <!-- Tab Menu Start -->
-                        <ul class="nav nav-tabs nav-tabs3 program-tab program-tab2" id="program_tab2">
-                            @foreach ($l3Categories as $category)
-                                @foreach ($category->contentInfos as $contentInfo)
-                                    @if ($contentInfo->faqCategory && !in_array($contentInfo->faqCategory->id, $displayedFaqCategories))
-                                        @php
-                                            $displayedFaqCategories[] = $contentInfo->faqCategory->id; // Mark this ID as displayed
-                                        @endphp
-                                        <li class="{{ $loop->first ? 'active' : '' }}">
-                                            <a data-toggle="tab"
-                                                href="#{{ strtolower(preg_replace('/[^a-zA-Z0-9\s]/', '', str_replace([' ', '&', ','], '-', $contentInfo->faqCategory->name))) }}">
-                                                {{ $contentInfo->faqCategory->name }}
-                                            </a>
-                                        </li>
-                                    @endif
+                        <div class="row">
+                            <!-- Tab Menu Start -->
+                            <ul class="nav nav-tabs nav-tabs3 program-tab program-tab2" id="program_tab2">
+                                @foreach ($l3Categories as $category)
+                                        @foreach ($category->contentInfos as $contentInfo)
+                                                @if ($contentInfo->faqCategory && !in_array($contentInfo->faqCategory->id, $displayedFaqCategories))
+                                                        @php
+                                                            $displayedFaqCategories[] = $contentInfo->faqCategory->id; // Mark this ID as displayed
+                                                        @endphp
+                                                        <li class="{{ $loop->first ? 'active' : '' }}">
+                                                            <a data-toggle="tab"
+                                                                href="#{{ strtolower(preg_replace('/[^a-zA-Z0-9\s]/', '', str_replace([' ', '&', ','], '-', $contentInfo->faqCategory->name))) }}">
+                                                                {{ $contentInfo->faqCategory->name }}
+                                                            </a>
+                                                        </li>
+                                                @endif
+                                        @endforeach
                                 @endforeach
-                            @endforeach
-                        </ul>
-                        <!-- Tab Menu End -->
+                            </ul>
+                            <!-- Tab Menu End -->
 
-                        <!-- Tab Content Start -->
-                        <div class="tab-content program-content">
+                            <!-- Tab Content Start -->
+                            <div class="tab-content program-content">
+                                @php
+                                    $displayedFaqCategories = []; // Reset array for tab content
+                                @endphp
+                                @foreach ($l3Categories as $category)
+                                        @foreach ($category->contentInfos as $contentInfo)
+                                                @if ($contentInfo->faqCategory && !in_array($contentInfo->faqCategory->id, $displayedFaqCategories))
+                                                        @php
+                                                            $displayedFaqCategories[] = $contentInfo->faqCategory->id; // Mark this ID as displayed
+                                                        @endphp
+                                                        <div id="{{ strtolower(preg_replace('/[^a-zA-Z0-9\s]/', '', str_replace([' ', '&', ','], '-', $contentInfo->faqCategory->name))) }}"
+                                                            class="tab-pane tab-pane3 fade {{ $loop->first ? 'active' : '' }}">
+                                                            <!-- FAQ Subcategories -->
+                                                            <div class="container">
+                                                                <div class="row">
+                                                                    <div class="acc__section_faq">
+                                                                        <div class="pro-faq">
+                                                                            <div class="acc">
+                                                                                @foreach ($contentInfo->faqCategory->faqSubCategory as $faqSubCategory)
+                                                                                    <div class="acc__card">
+                                                                                        <!-- Subcategory Name -->
+                                                                                        <a href="#faqsub{{ strtolower(preg_replace('/[^a-zA-Z0-9\s]/', '', str_replace([' ', '&', ','], '-', $faqSubCategory->id))) }}"
+                                                                                            class="acc__title ">
+                                                                                            {{ $faqSubCategory->name }}
+                                                                                        </a>
+
+                                                                                        <!-- Subcategory Description -->
+                                                                                        <div class="acc__panel" style="display: "
+                                                                                            id="faqsub{{ strtolower(preg_replace('/[^a-zA-Z0-9\s]/', '', str_replace([' ', '&', ','], '-', $faqSubCategory->id))) }}">
+                                                                                            {{ $faqSubCategory->description }}
+                                                                                        </div>
+                                                                                    </div>
+                                                                                @endforeach
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                @endif
+                                        @endforeach
+                                @endforeach
+                            </div>
+                            <!-- Tab Content End -->
+                        </div>
+
+                    </div>
+
+                    <!-- jQuery Script to Fix Tab Switching Issue -->
+
+
+                    <!-- body end -->
+                    <!-- mobile end -->
+                    <div class="container mobile-view" id="faqs_mob">
+                        <div class="acc">
                             @php
                                 $displayedFaqCategories = []; // Reset array for tab content
                             @endphp
+
+                            @php
+                                // Define an array of colors for alternating styles
+                                $colors = [
+                                    'background: #345995 !important; color: #fff !important;',
+                                    'background: #4a4a4a !important; color: #fff !important;',
+                                    'background: #2e6e4c !important; color: #fff !important;',
+                                    'background: #702f42 !important; color: #fff !important;',
+                                ];
+
+                                $colorIndex = 0; // Start index for colors
+                            @endphp
+
                             @foreach ($l3Categories as $category)
                                 @foreach ($category->contentInfos as $contentInfo)
                                     @if ($contentInfo->faqCategory && !in_array($contentInfo->faqCategory->id, $displayedFaqCategories))
                                         @php
                                             $displayedFaqCategories[] = $contentInfo->faqCategory->id; // Mark this ID as displayed
-                                        @endphp
-                                        <div id="{{ strtolower(preg_replace('/[^a-zA-Z0-9\s]/', '', str_replace([' ', '&', ','], '-', $contentInfo->faqCategory->name))) }}"
-                                            class="tab-pane tab-pane3 fade {{ $loop->first ? 'active' : '' }}">
-                                            <!-- FAQ Subcategories -->
-                                            <div class="container">
-                                                <div class="row">
-                                                    <div class="acc__section_faq">
-                                                        <div class="pro-faq">
-                                                            <div class="acc">
-                                                                @foreach ($contentInfo->faqCategory->faqSubCategory as $faqSubCategory)
-                                                                    <div class="acc__card">
-                                                                        <!-- Subcategory Name -->
-                                                                        <a href="#faqsub{{ strtolower(preg_replace('/[^a-zA-Z0-9\s]/', '', str_replace([' ', '&', ','], '-', $faqSubCategory->id))) }}"
-                                                                            class="acc__title ">
-                                                                            {{ $faqSubCategory->name }}
-                                                                        </a>
 
-                                                                        <!-- Subcategory Description -->
-                                                                        <div class="acc__panel" style="display: "
-                                                                            id="faqsub{{ strtolower(preg_replace('/[^a-zA-Z0-9\s]/', '', str_replace([' ', '&', ','], '-', $faqSubCategory->id))) }}">
-                                                                            {{ $faqSubCategory->description }}
-                                                                        </div>
-                                                                    </div>
-                                                                @endforeach
+                                            // Get the color based on the iteration count
+                                            $currentColor = $colors[$colorIndex % count($colors)];
+                                            $colorIndex++; // Increment the color index for the next iteration
+                                        @endphp
+
+
+                                        <!-- FAQ Category -->
+                                        <div class="acc__card">
+                                            <a class="acc__title" style="{{ $currentColor }}"
+                                                href="#{{ strtolower(preg_replace('/[^a-zA-Z0-9]/', '', str_replace([' ', '&', ','], '-', $contentInfo->faqCategory->name))) }}mob"
+                                                data-target="{{ strtolower(preg_replace('/[^a-zA-Z0-9]/', '', str_replace([' ', '&', ','], '-', $contentInfo->faqCategory->name))) }}mob">
+                                                {{ $contentInfo->faqCategory->name }}
+                                            </a>
+
+                                            <div id="{{ strtolower(preg_replace('/[^a-zA-Z0-9]/', '', str_replace([' ', '&', ','], '-', $contentInfo->faqCategory->name))) }}mob"
+                                                class="acc__panel" style="{{ $loop->first ? 'display:block;' : '' }}">
+
+                                                <div class="pro-faq m-pro-faq">
+                                                    <div class="acc">
+                                                        @foreach ($contentInfo->faqCategory->faqSubCategory as $faqSubCategory)
+                                                            <div class="acc__card">
+                                                                <!-- Subcategory Name -->
+                                                                <a class="acc__title"
+                                                                    href="#faqsub{{ strtolower(preg_replace('/[^a-zA-Z0-9]/', '', str_replace([' ', '&', ','], '-', $faqSubCategory->id))) }}mob">
+                                                                    {{ $faqSubCategory->name }}
+                                                                </a>
+
+                                                                <!-- Subcategory Description -->
+                                                                <div id="faqsub{{ strtolower(preg_replace('/[^a-zA-Z0-9]/', '', str_replace([' ', '&', ','], '-', $faqSubCategory->id))) }}mob"
+                                                                    class="acc__panel">
+                                                                    {{ $faqSubCategory->description }}
+                                                                </div>
                                                             </div>
-                                                        </div>
+                                                        @endforeach
                                                     </div>
                                                 </div>
                                             </div>
@@ -1823,255 +1870,621 @@
                                 @endforeach
                             @endforeach
                         </div>
-                        <!-- Tab Content End -->
                     </div>
+                    <!-- mobile start -->
+                    <!--  -->
+                </section>
+                <!-- FAQ info End 11 -->
+        @endif
+    @endforeach
+        <!--  -->
+        <!-- Global Popup fot Testomonials (Only One in the Page) -->
+        <section class="light-grey sample7-line anchor-link space7_1" id="overview1">
+            <!--  -->
+            <div class="container desktop-view">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="third-content" id="overview2">
+                            <h3>Certified Ethical Hacking Certification</h3>
+                            <p> A Certified Ethical Hacker (CEH) is a trained professional who legally penetrates
+                                networks and systems
+                                to identify vulnerabilities and weaknesses. Unlike malicious hackers, CEHs operate with
+                                permission and
+                                adhere to ethical guidelines. They utilize the same tools and techniques as
+                                cybercriminals but with the
+                                goal of improving security rather than causing harm. CEHs employ various methods such as
+                                penetration
+                                testing, vulnerability assessments, and social engineering to assess the security
+                                posture of
+                                organizations. By simulating real-world cyberattacks, they help businesses identify and
+                                mitigate potential
+                                risks, thereby strengthening their defenses against malicious intrusions.</p>
+                            <p>To become a Certified Ethical Hacker, individuals typically undergo rigorous training and
+                                pass an
+                                examination to demonstrate their proficiency in ethical hacking techniques and best
+                                practices. This
+                                certification is highly regarded in the cybersecurity industry and is often pursued by
+                                professionals
+                                seeking careers in penetration testing, security analysis, and risk management.</p>
+                            <a href="javascript:void(0)" class="btn-show">Read More ...</a>
+                            <div class="content-hide">
 
+                                <div class="container">
+                                    <div class="row overview-content">
+                                        <!--  -->
+                                        <div class="col-md-12">
+                                            <div class="smple-box1">
+                                                <h4>Certified Ethical Hacker (CEH) Training Overview:</h4>
+                                            </div>
+                                            <div class="smple-box1">
+                                                <ul class="code-ul">
+                                                    <li>
+                                                        <p><b>Skill Development:</b> Acquire skills in ethical hacking,
+                                                            penetration testing, and
+                                                            vulnerability assessment to strengthen cybersecurity
+                                                            defenses.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>Hands-On Labs:</b> Engage in practical, real-world
+                                                            scenarios through hands-on labs,
+                                                            simulating cyber threats and attacks.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>Certification Preparation:</b> Receive comprehensive
+                                                            training to prepare for the CEH
+                                                            certification exam, validating your expertise in ethical
+                                                            hacking practices.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>Current Threat Landscape:</b> Stay updated on the latest
+                                                            cyber threats, vulnerabilities,
+                                                            and
+                                                            defensive strategies in today's rapidly evolving digital
+                                                            landscape.</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#overview2" class="btn-hide" id="btn-hide1">Hide Content ...</a>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <!--  -->
+            <div class="container mobile-view">
+                <!--  -->
+                <div class="third-content">
+                    <h3>Certified Ethical Hacking Certification</h3>
+                    <!-- slider start -->
+                    <div class="mobile-view indu-moblie indu-moblie1 count-navigation">
+                        <div id="owl-demo65" class="owl-carousel owl-theme">
+                            <!--  -->
+                            <div class="item">
+                                <div class="mobile-cont">
+                                    <p>A Certified Ethical Hacker (CEH) is a trained professional who legally penetrates
+                                        networks and
+                                        systems to identify vulnerabilities and weaknesses. Unlike malicious hackers,
+                                        CEHs operate with
+                                        permission and adhere to ethical guidelines. They utilize the same tools and
+                                        techniques as
+                                        cybercriminals but with the goal of improving security rather than causing harm.
+                                        CEHs employ various
+                                        methods such as penetration testing, vulnerability assessments, and social
+                                        engineering to assess the
+                                        security posture of organizations.</p>
+                                </div>
+                            </div>
+                            <!--  -->
 
-                <!-- jQuery Script to Fix Tab Switching Issue -->
+                            <!--  -->
+                            <div class="item">
+                                <div class="mobile-cont">
+                                    <p>A Certified Ethical Hacker (CEH) is a trained professional who legally penetrates
+                                        networks and
+                                        systems to identify vulnerabilities and weaknesses. Unlike malicious hackers,
+                                        CEHs operate with
+                                        permission and adhere to ethical guidelines. They utilize the same tools and
+                                        techniques as
+                                        cybercriminals but with the goal of improving security rather than causing harm.
+                                        CEHs employ various
+                                        methods such as penetration testing, vulnerability assessments, and social
+                                        engineering to assess the
+                                        security posture of organizations.</p>
+                                </div>
+                            </div>
+                            <!--  -->
 
+                            <!--  -->
+                            <div class="item">
+                                <div class="mobile-cont">
+                                    <p>A Certified Ethical Hacker (CEH) is a trained professional who legally penetrates
+                                        networks and
+                                        systems to identify vulnerabilities and weaknesses. Unlike malicious hackers,
+                                        CEHs operate with
+                                        permission and adhere to ethical guidelines. They utilize the same tools and
+                                        techniques as
+                                        cybercriminals but with the goal of improving security rather than causing harm.
+                                        CEHs employ various
+                                        methods such as penetration testing, vulnerability assessments, and social
+                                        engineering to assess the
+                                        security posture of organizations.</p>
+                                </div>
+                            </div>
+                            <!--  -->
 
-                <!-- body end -->
-                <!-- mobile end -->
-                <div class="container mobile-view" id="faqs_mob">
-                    <div class="acc">
-                        @php
-                            $displayedFaqCategories = []; // Reset array for tab content
-                        @endphp
+                            <!--  -->
+                            <div class="item">
+                                <div class="mobile-cont">
+                                    <p>A Certified Ethical Hacker (CEH) is a trained professional who legally penetrates
+                                        networks and
+                                        systems to identify vulnerabilities and weaknesses. Unlike malicious hackers,
+                                        CEHs operate with
+                                        permission and adhere to ethical guidelines. They utilize the same tools and
+                                        techniques as
+                                        cybercriminals but with the goal of improving security rather than causing harm.
+                                        CEHs employ various
+                                        methods such as penetration testing, vulnerability assessments, and social
+                                        engineering to assess the
+                                        security posture of organizations.</p>
+                                </div>
+                            </div>
+                            <!--  -->
+                        </div>
 
-                        @php
-                            // Define an array of colors for alternating styles
-                            $colors = [
-                                'background: #345995 !important; color: #fff !important;',
-                                'background: #4a4a4a !important; color: #fff !important;',
-                                'background: #2e6e4c !important; color: #fff !important;',
-                                'background: #702f42 !important; color: #fff !important;',
-                            ];
+                        <div id="navigation-count" class="count-nav-box"></div>
+                    </div>
+                    <!-- slider end -->
+                </div>
+                <!--  -->
+            </div>
+            <!--  -->
+        </section>
 
-                            $colorIndex = 0; // Start index for colors
-                        @endphp
-
-                        @foreach ($l3Categories as $category)
-                            @foreach ($category->contentInfos as $contentInfo)
-                                @if ($contentInfo->faqCategory && !in_array($contentInfo->faqCategory->id, $displayedFaqCategories))
-                                    @php
-                                        $displayedFaqCategories[] = $contentInfo->faqCategory->id; // Mark this ID as displayed
-
-                                        // Get the color based on the iteration count
-                                        $currentColor = $colors[$colorIndex % count($colors)];
-                                        $colorIndex++; // Increment the color index for the next iteration
-                                    @endphp
-
-
-                                    <!-- FAQ Category -->
-                                    <div class="acc__card">
-                                        <a class="acc__title" style="{{ $currentColor }}"
-                                            href="#{{ strtolower(preg_replace('/[^a-zA-Z0-9]/', '', str_replace([' ', '&', ','], '-', $contentInfo->faqCategory->name))) }}mob"
-                                            data-target="{{ strtolower(preg_replace('/[^a-zA-Z0-9]/', '', str_replace([' ', '&', ','], '-', $contentInfo->faqCategory->name))) }}mob">
-                                            {{ $contentInfo->faqCategory->name }}
-                                        </a>
-
-                                        <div id="{{ strtolower(preg_replace('/[^a-zA-Z0-9]/', '', str_replace([' ', '&', ','], '-', $contentInfo->faqCategory->name))) }}mob"
-                                            class="acc__panel" style="{{ $loop->first ? 'display:block;' : '' }}">
-
-                                            <div class="pro-faq m-pro-faq">
-                                                <div class="acc">
-                                                    @foreach ($contentInfo->faqCategory->faqSubCategory as $faqSubCategory)
-                                                        <div class="acc__card">
-                                                            <!-- Subcategory Name -->
-                                                            <a class="acc__title"
-                                                                href="#faqsub{{ strtolower(preg_replace('/[^a-zA-Z0-9]/', '', str_replace([' ', '&', ','], '-', $faqSubCategory->id))) }}mob">
-                                                                {{ $faqSubCategory->name }}
-                                                            </a>
-
-                                                            <!-- Subcategory Description -->
-                                                            <div id="faqsub{{ strtolower(preg_replace('/[^a-zA-Z0-9]/', '', str_replace([' ', '&', ','], '-', $faqSubCategory->id))) }}mob"
-                                                                class="acc__panel">
-                                                                {{ $faqSubCategory->description }}
+        <section class="light-grey sample7-line anchor-link space7_1" id="overview1">
+            <!--  -->
+            <div class="container desktop-view">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="third-content" id="overview2">
+                            <div class="container">
+                                <div class="row overview-content">
+                                    <div class="third-content smple-box1">
+                                        <h4>What Technical Skills you Learn</h4>
+                                        <p>In the process of becoming a Certified Ethical Hacker (CEH), individuals
+                                            acquire a diverse
+                                            set of technical skills essential for effectively identifying and mitigating
+                                            cybersecurity
+                                            risks. These skills include:</p>
+                                    </div>
+                                    <!--  -->
+                                    <div class="info-graphic">
+                                        <div class="row info-graphic-row">
+                                            <div class="col-md-12">
+                                                <!-- desktop start  -->
+                                                <div class="desktop-view">
+                                                    <div class="wwyl-row">
+                                                        <div class="wwyl-box">
+                                                            <p> Ethical Hacking: CEH imparts practical skills in ethical
+                                                                hacking, enabling
+                                                                professionals to identify and exploit vulnerabilities,
+                                                                assess security postures, and
+                                                                strengthen defenses against cyber threats. </p>
+                                                            <div class="wwyl-box-circle">
+                                                                <span>01</span>
                                                             </div>
                                                         </div>
-                                                    @endforeach
+                                                        <div class="wwyl-box orange ">
+                                                            <p> Penetration Testing: CEH equips individuals with the
+                                                                expertise to conduct
+                                                                penetration
+                                                                tests, simulating cyber attacks to evaluate system
+                                                                vulnerabilities and assess the
+                                                                effectiveness of security measures. </p>
+                                                            <div class="wwyl-box-circle orange-circle">
+                                                                <span>02</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="wwyl-box purple">
+                                                            <p> Incident Response: CEH provides knowledge in incident
+                                                                handling and response,
+                                                                enabling
+                                                                professionals to effectively manage and mitigate the
+                                                                impact of cybersecurity
+                                                                incidents,
+                                                                minimizing downtime and data loss. </p>
+                                                            <div class="wwyl-box-circle purple-circle">
+                                                                <span>03</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="wwyl-box color4">
+                                                            <p> Network Security: CEH covers network security concepts,
+                                                                offering skills in securing
+                                                                networks, configuring firewalls, and implementing
+                                                                intrusion detection systems to
+                                                                protect
+                                                                against unauthorized access and data breaches. </p>
+                                                            <div class="wwyl-box-circle color4-circle">
+                                                                <span>04</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="wwyl-box green">
+                                                            <p>Forensic Analysis: CEH includes training in digital
+                                                                forensics, allowing professionals
+                                                                to investigate and analyze cyber incidents, gather
+                                                                evidence, and support legal actions
+                                                                against cybercriminals.</p>
+                                                            <div class="wwyl-box-circle green-circle">
+                                                                <span>05</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- desktop end -->
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                @endif
-                            @endforeach
-                        @endforeach
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- mobile start -->
+            </div>
+            <!--  -->
+            <div class="container mobile-view">
                 <!--  -->
-            </section>
-            <!-- FAQ info End 11 -->
-        @endif
-    @endforeach
-    <!--  -->
-    <!-- Global Popup fot Testomonials (Only One in the Page) -->
-    <div class="popup" id="global-testimonial-popup">
-        <div class="popup-box popup-testo">
-            <div class="testo-popup">
-                <div class="testo-popup-cont-top">
-                    <div class="testo-popup-cont-top-img">
-                        <img src="" id="popup-image" class="img-fluid" alt="Testimonial Image">
+                <div class="third-content">
+                    <h3 class="space1">What Technical Skills you Learn</h3>
+                    <!-- mobile start -->
+                    <div class="mobile-view indu-moblie count-navigation">
+                        <div id="owl-demo64" class="owl-carousel owl-theme">
+                            <!--  -->
+                            <div class="wwyl-box">
+                                <p> Ethical Hacking: CEH imparts practical skills in ethical hacking, enabling
+                                    professionals to identify and exploit vulnerabilities, assess security postures, and
+                                    strengthen defenses against cyber threats. </p>
+                                <div class="wwyl-box-circle">
+                                    <span>01</span>
+                                </div>
+                            </div>
+                            <div class="wwyl-box orange ">
+                                <p> Penetration Testing: CEH equips individuals with the expertise to conduct
+                                    penetration
+                                    tests, simulating cyber attacks to evaluate system vulnerabilities and assess the
+                                    effectiveness of security measures. </p>
+                                <div class="wwyl-box-circle orange-circle">
+                                    <span>02</span>
+                                </div>
+                            </div>
+                            <div class="wwyl-box purple">
+                                <p> Incident Response: CEH provides knowledge in incident handling and response,
+                                    enabling
+                                    professionals to effectively manage and mitigate the impact of cybersecurity
+                                    incidents,
+                                    minimizing downtime and data loss. </p>
+                                <div class="wwyl-box-circle purple-circle">
+                                    <span>03</span>
+                                </div>
+                            </div>
+                            <div class="wwyl-box color4">
+                                <p> Network Security: CEH covers network security concepts, offering skills in securing
+                                    networks, configuring firewalls, and implementing intrusion detection systems to
+                                    protect
+                                    against unauthorized access and data breaches. </p>
+                                <div class="wwyl-box-circle color4-circle">
+                                    <span>04</span>
+                                </div>
+                            </div>
+                            <div class="wwyl-box green">
+                                <p>Forensic Analysis: CEH includes training in digital forensics, allowing professionals
+                                    to investigate and analyze cyber incidents, gather evidence, and support legal
+                                    actions
+                                    against cybercriminals.</p>
+                                <div class="wwyl-box-circle green-circle">
+                                    <span>05</span>
+                                </div>
+                            </div>
+                            <!--  -->
+                        </div>
+                        <div id="navigation-count1" class="count-nav-box"></div>
                     </div>
-                    <div class="testo-popup-cont-top-title">
-                        <h3 id="popup-name"></h3>
-                        <span id="popup-designation"></span>
+                    <!-- mobile end -->
+                </div>
+                <!--  -->
+            </div>
+            <!--  -->
+        </section>
+
+        <section class="sec-wrap-cod-2" style="background: #dceff6;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h3 class="temp-head"> Don't just take our word for it</h3>
+                    </div>
+
+                    <div class="col-sm-4 testi-temp">
+                        <p> When we were managing Apache Spark and Kafka in-house, we had issues with corrupt messages
+                            and
+                            the pipeline failing. With Cloudera’s expertise, we’ve been able to solve those problems.
+                        </p>
+
+                        <p class="sign"> Jeremy Kayne, CTO, Bidtellect.</p>
+                    </div>
+
+                    <div class="col-sm-4 testi-temp">
+                        <p> When we were managing Apache Spark and Kafka in-house, we had issues with corrupt messages
+                            and
+                            the pipeline failing. With Cloudera’s expertise, we’ve been able to solve those problems.
+                        </p>
+
+                        <p class="sign"> Jeremy Kayne, CTO, Bidtellect</p>
+                    </div>
+
+                    <div class="col-sm-4 testi-temp">
+                        <p> When we were managing Apache Spark and Kafka in-house, we had issues with corrupt messages
+                            and
+                            the pipeline failing. With Cloudera’s expertise, we’ve been able to solve those problems.
+                        </p>
+
+                        <p class="sign"> Jeremy Kayne, CTO, Bidtellect</p>
                     </div>
                 </div>
-                <div class="testo-popup-body">
-                    <p id="popup-description"></p>
+
+
+            </div>
+        </section>
+
+        <section class="sec-wrap-cod-2"
+            style="background-image:url('assets/images/image-bg-top.jpg'); background-repeat: repeat;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-7 mid-banner temp-3-sec">
+                        <h3 class="temp-head">Cloudera Cares. Do-gooders unite.</h3>
+
+                        <p>Cloudera Cares is the arm of the company that does the really good stuff. We've donated
+                            software,
+                            professional service hours, hosted hackathons for nonprofits, cleaned up parks, served food
+                            to
+                            the less fortunate, and everything in between. To date, Clouderans have donated more than
+                            3,900
+                            hours to doing good.</p>
+                    </div>
+                    <div class="col-sm-5 mid-banner temp-3-sec">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiN6qXhtzwuv1MSV5CY9tQrL9s4juOLQ4B8XaTuh3oXnkoLB3T"
+                            target="_blank">
+                    </div>
                 </div>
             </div>
-            <a href="javascript:void(0)" class="bottom-close-d close_1"><i class="fa fa-times"></i></a>
-            <a href="javascript:void(0)" class="close_21 close_1"> Close</a>
-        </div>
-    </div>
+        </section>
 
-    <!-- Global Popup for mobile course -features read more (Only One in the Page) start-->
-
-    <div class="popup " id="mobilecf1" style="display: none;">
-        <div class="popup-box ">
-            <div class="mobile-cf-popup">
-
-                <img src="" id="popup-images" class="" alt="course-features Image">
-                <div class="mobile-cf-content-popup">
-
-                    <h3></h3>
-                    <p></p>
+        <section class="why-codec codec-page-section anchor-link" id="Market-dymanics">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 cn-title">
+                        <h2>CHALLENGES</h2>
+                        <p>The technology – still been unexplored meet different challenges. The challenges act as the
+                            force that obligates us to evolve</p>
+                    </div>
                 </div>
             </div>
-            <a href="javascript:void(0)" class="bottom-close close_1">Close</a>
-            <a href="javascript:void(0)" class="bottom-close-d close_1"><i class="fa fa-times"></i></a>
-        </div>
-    </div>
+            <div class="container">
+                <div class="row">
+                    <div class="container">
+                        <div class="row rowp">
+                            <div class="col-md-5">
+                                <div class="template12-img">
+                                    <img src="assets/images/Industry Challenges.jpg">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="red-title">
+                                    <h3 style="color: #000"> Infrastructure</h3>
+                                    <p>Replacing outdated infrastructure with traditional legacy systems
+                                        continues to be a major challenge for most organizations. As
+                                        discussed earlier Artificial Intelligence based solutions have a
+                                        high level of computational speed, which means replacing the
+                                        existing infrastructure i.e. an integrating AI have cost attached in
+                                        various aspects.</p>
+                                    <h3 style="color: #000"> Computing Power</h3>
+                                    <p>The amount of power these algorithms use is a factor keeping most
+                                        developers away. Machine Learning and Deep Learning are the
+                                        stepping-stones of this Artificial Intelligence, and they demand an
+                                        ever-increasing number of cores and GPUs to work efficiently.
+                                        Although, due to the availability of Cloud Computing and parallel
+                                        processing systems developers work on AI systems more effectively,
+                                        they come at a price.</p>
+                                    <a href="javascript:void(0);" class="btn-show" id="btn-show6">Read More
+                                        ...</a>
+                                    <div class="content-hide" id="content-hide6">
+                                        <h3 style="color: #000"> Data Privacy and security </h3>
+                                        <p>Data is the sole of AI, the applications depend on massive
+                                            volumes of data to learn and make intelligent decisions. Almost
+                                            all the time the data millions of users generate data around the
+                                            globe and often the data is sensitive and personal in nature.
+                                            This systematic learning of these ML systems can become prone to
+                                            data breach and identity theft. </p>
+                                        <h3 style="color: #000"> Moral and Ethics</h3>
+                                        <p>With respect to AI bigger decision-making role, ethical concerns
+                                            mount the technology. Questions about the opacity,
+                                            unpredictability and the need for large datasets to train the
+                                            technologies give rise to ethical dilemma. </p>
+                                    </div>
+                                    <a href="javascript:void(0);" class="btn-hide" id="btn-hide6">Hide
+                                        Content ...</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Global Popup for mobile course -features read more (Only One in the Page) End-->
-    <a href="#main-content-body" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
-    <a href="#back" class="backButton"><i class="fa fa-arrow-left"></i></a>
+        <div class="popup" id="global-testimonial-popup">
+            <div class="popup-box popup-testo">
+                <div class="testo-popup">
+                    <div class="testo-popup-cont-top">
+                        <div class="testo-popup-cont-top-img">
+                            <img src="" id="popup-image" class="img-fluid" alt="Testimonial Image">
+                        </div>
+                        <div class="testo-popup-cont-top-title">
+                            <h3 id="popup-name"></h3>
+                            <span id="popup-designation"></span>
+                        </div>
+                    </div>
+                    <div class="testo-popup-body">
+                        <p id="popup-description"></p>
+                    </div>
+                </div>
+                <a href="javascript:void(0)" class="bottom-close-d close_1"><i class="fa fa-times"></i></a>
+                <a href="javascript:void(0)" class="close_21 close_1"> Close</a>
+            </div>
+        </div>
+
+        <!-- Global Popup for mobile course -features read more (Only One in the Page) start-->
+
+        <div class="popup " id="mobilecf1" style="display: none;">
+            <div class="popup-box ">
+                <div class="mobile-cf-popup">
+
+                    <img src="" id="popup-images" class="" alt="course-features Image">
+                    <div class="mobile-cf-content-popup">
+
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+                <a href="javascript:void(0)" class="bottom-close close_1">Close</a>
+                <a href="javascript:void(0)" class="bottom-close-d close_1"><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+
+        <!-- Global Popup for mobile course -features read more (Only One in the Page) End-->
+        <a href="#main-content-body" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
+        <a href="#back" class="backButton"><i class="fa fa-arrow-left"></i></a>
 </body>
 
 {{-- @endsection --}}
 <!-- Jquery code -->
 @push('scripts')
-    <script>
-        $(document).ready(function() {
-            // When the "Read More" button is clicked
-            $(".btn-show").click(function() {
-                $(this).hide(); // Hide "Read More" button
-                var content = $(this).next(".content-hide");
+<script>
+    $(document).ready(function () {
+        // When the "Read More" button is clicked
+        $(".btn-show").click(function () {
+            $(this).hide(); // Hide "Read More" button
+            var content = $(this).next(".content-hide");
 
-                // Smoothly slide down content and show "Hide Content"
-                content.stop(true, true).slideDown(0, function() {
-                    $(this).find(".btn-hide").fadeIn();
-                });
+            // Smoothly slide down content and show "Hide Content"
+            content.stop(true, true).slideDown(0, function () {
+                $(this).find(".btn-hide").fadeIn();
+            });
+        });
+
+        // When the "Hide Content" button is clicked
+        $(".btn-hide").click(function () {
+            var content = $(this).closest(".content-hide");
+
+            // Smoothly slide up content and show "Read More" button
+            content.stop(true, true).slideUp(0, function () {
+                $(this).prev(".btn-show").fadeIn();
             });
 
-            // When the "Hide Content" button is clicked
-            $(".btn-hide").click(function() {
-                var content = $(this).closest(".content-hide");
+            // Hide the "Hide Content" button after hiding the content
+            $(this).fadeOut();
+        });
+    });
+</script>
 
-                // Smoothly slide up content and show "Read More" button
-                content.stop(true, true).slideUp(0, function() {
-                    $(this).prev(".btn-show").fadeIn();
-                });
+<script>
+    $(document).ready(function () {
+        // Open the popup dynamically when clicking a testimonial box
+        $(document).on("click", ".ceh-testo-box", function () {
+            console.log("clicked");
+            // Get data from the clicked testimonial
+            var name = $(this).data("name");
+            var designation = $(this).data("designation");
+            var description = $(this).data("description");
+            var image = $(this).data("image");
+            console.log(name);
+            // Populate the global popup with dynamic content
+            $("#popup-name").text(name);
+            $("#popup-designation").text(designation);
+            $("#popup-description").text(description);
+            $("#popup-image").attr("src", image);
 
-                // Hide the "Hide Content" button after hiding the content
+            // Show the popup
+            $("#global-testimonial-popup").fadeIn();
+        });
+
+        // Close the popup when clicking on the close button (using delegated event handling)
+        $(document).on("click", ".close_1, .close_21", function () {
+            $(this).closest(".popup").fadeOut(); // Close the closest popup
+        });
+
+        // Close the popup when clicking outside of the popup content
+        $("#global-testimonial-popup").click(function (e) {
+            if ($(e.target).hasClass("popup")) {
                 $(this).fadeOut();
+            }
+        });
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".btn-toggle").forEach(function (button) {
+            button.addEventListener("click", function () {
+                let content = this.previousElementSibling; // Get the description container
+                let shortText = content.querySelector(".short-text");
+                let fullText = content.querySelector(".full-text");
+                let hideButton = this.nextElementSibling; // The hide button
+
+                shortText.style.display = "none";
+                fullText.style.display = "inline";
+                this.style.display = "none";
+                hideButton.style.display = "inline";
             });
         });
-    </script>
 
-    <script>
-        $(document).ready(function() {
-            // Open the popup dynamically when clicking a testimonial box
-            $(document).on("click", ".ceh-testo-box", function() {
-                console.log("clicked");
-                // Get data from the clicked testimonial
-                var name = $(this).data("name");
-                var designation = $(this).data("designation");
-                var description = $(this).data("description");
-                var image = $(this).data("image");
-                console.log(name);
-                // Populate the global popup with dynamic content
-                $("#popup-name").text(name);
-                $("#popup-designation").text(designation);
-                $("#popup-description").text(description);
-                $("#popup-image").attr("src", image);
+        document.querySelectorAll(".btn-hide").forEach(function (button) {
+            button.addEventListener("click", function () {
+                let content = this.previousElementSibling
+                    .previousElementSibling; // Get the description container
+                let shortText = content.querySelector(".short-text");
+                let fullText = content.querySelector(".full-text");
+                let readMoreButton = this.previousElementSibling; // The "Read More" button
 
-                // Show the popup
-                $("#global-testimonial-popup").fadeIn();
-            });
-
-            // Close the popup when clicking on the close button (using delegated event handling)
-            $(document).on("click", ".close_1, .close_21", function() {
-                $(this).closest(".popup").fadeOut(); // Close the closest popup
-            });
-
-            // Close the popup when clicking outside of the popup content
-            $("#global-testimonial-popup").click(function(e) {
-                if ($(e.target).hasClass("popup")) {
-                    $(this).fadeOut();
-                }
+                shortText.style.display = "inline";
+                fullText.style.display = "none";
+                this.style.display = "none";
+                readMoreButton.style.display = "inline";
             });
         });
-    </script>
+    });
+</script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            document.querySelectorAll(".btn-toggle").forEach(function(button) {
-                button.addEventListener("click", function() {
-                    let content = this.previousElementSibling; // Get the description container
-                    let shortText = content.querySelector(".short-text");
-                    let fullText = content.querySelector(".full-text");
-                    let hideButton = this.nextElementSibling; // The hide button
 
-                    shortText.style.display = "none";
-                    fullText.style.display = "inline";
-                    this.style.display = "none";
-                    hideButton.style.display = "inline";
-                });
-            });
 
-            document.querySelectorAll(".btn-hide").forEach(function(button) {
-                button.addEventListener("click", function() {
-                    let content = this.previousElementSibling
-                        .previousElementSibling; // Get the description container
-                    let shortText = content.querySelector(".short-text");
-                    let fullText = content.querySelector(".full-text");
-                    let readMoreButton = this.previousElementSibling; // The "Read More" button
+<script>
+    $(document).ready(function () {
+        // Bootstrap tab fix
+        $('.nav-tabs3 a').on('click', function (e) {
+            e.preventDefault();
+            $('.nav-tabs3 li').removeClass('active');
+            $(this).parent().addClass('active');
 
-                    shortText.style.display = "inline";
-                    fullText.style.display = "none";
-                    this.style.display = "none";
-                    readMoreButton.style.display = "inline";
-                });
-            });
+            var target = $(this).attr("href");
+            $('.tab-pane3').removeClass('show active');
+            $(target).addClass('show active');
         });
-    </script>
 
+    });
+</script>
 
-
-    <script>
-        $(document).ready(function() {
-            // Bootstrap tab fix
-            $('.nav-tabs3 a').on('click', function(e) {
-                e.preventDefault();
-                $('.nav-tabs3 li').removeClass('active');
-                $(this).parent().addClass('active');
-
-                var target = $(this).attr("href");
-                $('.tab-pane3').removeClass('show active');
-                $(target).addClass('show active');
-            });
-
-        });
-    </script>
-
-    <script type="text/javascript" src="{{ asset('assets/js/common.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/js/main.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/js/l3-check.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/js/slider.js') }}"></script>
-    @include ('frontend.layouts.right-menu-js')
+<script type="text/javascript" src="{{ asset('assets/js/common.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/js/main.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/js/l3-check.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/js/slider.js') }}"></script>
+@include ('frontend.layouts.right-menu-js')
 @endpush
