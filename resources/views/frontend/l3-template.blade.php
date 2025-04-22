@@ -2272,10 +2272,10 @@
             <div class="container">
                 <div class="row">
                     <div class="cn-tabs1">
-                        <ul id="tabs-nav100" class="desktop-view">
-                            <li class="active"><a href="#tab11"> Industry Challenges</a></li>
-                            <li><a href="#tab12">Technological Challenges</a></li>
-                            <li><a href="#tab13">Operational Challenges</a></li>
+                        <ul id="tabs-nav100">
+                            <li class="active"><a href="#tab11"> Industry <br>Challenges</a></li>
+                            <li><a href="#tab12">Technological <br>Challenges</a></li>
+                            <li><a href="#tab13">Operational <br>Challenges</a></li>
                             <!--  <li><a href="#tab14">Working autonomy </a></li>
                <li><a href="#tab15">Digital reflection </a></li> -->
                         </ul> <!-- END tabs-nav -->

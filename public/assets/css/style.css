@@ -5780,3 +5780,18 @@ ul#tabs-nav100 li.active, ul#tabs-nav100 li:hover {
 #tabs-nav100 li.active a, #tabs-nav100 li:hover a {
     color: #fff;
 }
+
+@media only screen and (max-width: 991px){
+    ul#tabs-nav100 li {
+        background: #ccc !important;
+        border: 2px solid #ccc;
+        display: inline-block;
+        padding: 10px 20px;
+        margin: auto 15px;
+        width: inherit;
+        max-width: inherit;
+        float: none;
+        display: inline-block;
+        min-width: 150px;
+    }
+}
