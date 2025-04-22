@@ -2271,55 +2271,251 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="container">
-                        <div class="row rowp">
-                            <div class="col-md-5">
-                                <div class="template12-img">
-                                    <img src="assets/images/Industry Challenges.jpg">
-                                </div>
-                            </div>
-                            <div class="col-md-7">
-                                <div class="red-title">
-                                    <h3 style="color: #000"> Infrastructure</h3>
-                                    <p>Replacing outdated infrastructure with traditional legacy systems
-                                        continues to be a major challenge for most organizations. As
-                                        discussed earlier Artificial Intelligence based solutions have a
-                                        high level of computational speed, which means replacing the
-                                        existing infrastructure i.e. an integrating AI have cost attached in
-                                        various aspects.</p>
-                                    <h3 style="color: #000"> Computing Power</h3>
-                                    <p>The amount of power these algorithms use is a factor keeping most
-                                        developers away. Machine Learning and Deep Learning are the
-                                        stepping-stones of this Artificial Intelligence, and they demand an
-                                        ever-increasing number of cores and GPUs to work efficiently.
-                                        Although, due to the availability of Cloud Computing and parallel
-                                        processing systems developers work on AI systems more effectively,
-                                        they come at a price.</p>
-                                    <a href="javascript:void(0);" class="btn-show" id="btn-show6">Read More
-                                        ...</a>
-                                    <div class="content-hide" id="content-hide6">
-                                        <h3 style="color: #000"> Data Privacy and security </h3>
-                                        <p>Data is the sole of AI, the applications depend on massive
-                                            volumes of data to learn and make intelligent decisions. Almost
-                                            all the time the data millions of users generate data around the
-                                            globe and often the data is sensitive and personal in nature.
-                                            This systematic learning of these ML systems can become prone to
-                                            data breach and identity theft. </p>
-                                        <h3 style="color: #000"> Moral and Ethics</h3>
-                                        <p>With respect to AI bigger decision-making role, ethical concerns
-                                            mount the technology. Questions about the opacity,
-                                            unpredictability and the need for large datasets to train the
-                                            technologies give rise to ethical dilemma. </p>
+                    <div class="cn-tabs1">
+                        <ul id="tabs-nav100" class="desktop-view">
+                            <li class="active"><a href="#tab11"> Industry Challenges</a></li>
+                            <li><a href="#tab12">Technological Challenges</a></li>
+                            <li><a href="#tab13">Operational Challenges</a></li>
+                            <!--  <li><a href="#tab14">Working autonomy </a></li>
+               <li><a href="#tab15">Digital reflection </a></li> -->
+                        </ul> <!-- END tabs-nav -->
+                        <div id="tabs-content100">
+                            <div id="tab11" class="tab-content100" style="display: block;">
+                                <div class="container">
+                                    <div class="row rowp">
+                                        <div class="col-md-5">
+                                            <div class="template12-img">
+                                                <img src="assets/images/Industry Challenges.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="red-title">
+                                                <h3 style="color: #000"> Infrastructure</h3>
+                                                <p>Replacing outdated infrastructure with traditional legacy systems
+                                                    continues to be a major challenge for most organizations. As
+                                                    discussed earlier Artificial Intelligence based solutions have a
+                                                    high level of computational speed, which means replacing the
+                                                    existing infrastructure i.e. an integrating AI have cost attached in
+                                                    various aspects.</p>
+                                                <h3 style="color: #000"> Computing Power</h3>
+                                                <p>The amount of power these algorithms use is a factor keeping most
+                                                    developers away. Machine Learning and Deep Learning are the
+                                                    stepping-stones of this Artificial Intelligence, and they demand an
+                                                    ever-increasing number of cores and GPUs to work efficiently.
+                                                    Although, due to the availability of Cloud Computing and parallel
+                                                    processing systems developers work on AI systems more effectively,
+                                                    they come at a price.</p>
+                                                <!-- 
+               <h3 style="color: #000">	Data Privacy and security </h3>
+               
+               <p>Data is the sole of AI, the applications depend on massive volumes of data to learn and make intelligent decisions. Almost all the time the data millions of users generate data around the globe and often the data is sensitive and personal in nature. This systematic learning of these ML systems can become prone to data breach and identity theft. </p>
+               
+               <h3 style="color: #000">	Moral and Ethics</h3>
+               
+               <p>With respect to AI bigger decision-making role, ethical concerns mount the technology.  Questions about the opacity, unpredictability and the need for large datasets to train the technologies give rise to ethical dilemma. </p> -->
+                                                <a href="javascript:void(0);" class="btn-show" id="btn-show6">Read More
+                                                    ...</a>
+                                                <div class="content-hide" id="content-hide6">
+                                                    <h3 style="color: #000"> Data Privacy and security </h3>
+                                                    <p>Data is the sole of AI, the applications depend on massive
+                                                        volumes of data to learn and make intelligent decisions. Almost
+                                                        all the time the data millions of users generate data around the
+                                                        globe and often the data is sensitive and personal in nature.
+                                                        This systematic learning of these ML systems can become prone to
+                                                        data breach and identity theft. </p>
+                                                    <h3 style="color: #000"> Moral and Ethics</h3>
+                                                    <p>With respect to AI bigger decision-making role, ethical concerns
+                                                        mount the technology. Questions about the opacity,
+                                                        unpredictability and the need for large datasets to train the
+                                                        technologies give rise to ethical dilemma. </p>
+                                                </div>
+                                                <a href="javascript:void(0);" class="btn-hide" id="btn-hide6">Hide
+                                                    Content ...</a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <a href="javascript:void(0);" class="btn-hide" id="btn-hide6">Hide
-                                        Content ...</a>
                                 </div>
                             </div>
+                            <div id="tab12" class="tab-content100" style="display: none;">
+                                <div class="container">
+                                    <div class="row rowp">
+                                        <div class="col-md-5">
+                                            <div class="template12-img">
+                                                <img src="assets/images/Technological Challenges.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="red-title">
+                                                <h3 style="color: #000"> Case-specific learning </h3>
+                                                <p>Humans can transfer learning from one context to another similar
+                                                    context. Artificial intelligence continues to have difficulties
+                                                    carrying its experiences from one set of circumstances to another.
+                                                    As mentioned earlier the system that plays poker cannot play
+                                                    solitaire or chess. The system that detects fraud cannot drive a car
+                                                    or give you legal advice. In fact, an AI system that detects health
+                                                    care fraud cannot accurately detect tax fraud or guarantee claims
+                                                    fraud.</p>
+                                                <h3 style="color: #000"> Algorithm Bias </h3>
+                                                <p>The good or bad nature of an AI system really depends on the data
+                                                    used for training. Currently getting unbiased data to train the
+                                                    system is still a challenge.The problem is that the everyday data
+                                                    the organizations collect is poor and holds no significance of its
+                                                    own and is biased. The bias is towards any religion, ethnicity,
+                                                    gender, community, and other racial biases. Number of factors such
+                                                    as the way of collecting data, the probing methods etc. cause this
+                                                    bias.</p>
+                                                <!-- 	<h3 style="color: #000">		Data Scarcity  </h3>
+               <p>The quality of the system relies heavily on the data given to the system for learning purpose. Now, although there is data in abundance quality is still a problem i.e. it is not data scarcity that the challenge but scarcity of quality data. In addition, some types of data may are still difficult to obtain, e.g. clinical data that would allow more accurate treatment outcomes predictions. Although the possibility of synthesizing data and organizations investing in design methodologies and focusing on how to create AI models learn despite the scarcity of labelled data is a ray of hope</p> -->
+                                                <a href="javascript:void(0);" class="btn-show" id="btn-show7">Read More
+                                                    ...</a>
+                                                <div class="content-hide" id="content-hide7">
+                                                    <h3 style="color: #000"> Data Scarcity </h3>
+                                                    <p>The quality of the system relies heavily on the data given to the
+                                                        system for learning purpose. Now, although there is data in
+                                                        abundance quality is still a problem i.e. it is not data
+                                                        scarcity that the challenge but scarcity of quality data. In
+                                                        addition, some types of data may are still difficult to obtain,
+                                                        e.g. clinical data that would allow more accurate treatment
+                                                        outcomes predictions. Although the possibility of synthesizing
+                                                        data and organizations investing in design methodologies and
+                                                        focusing on how to create AI models learn despite the scarcity
+                                                        of labelled data is a ray of hope</p>
+                                                </div>
+                                                <a href="javascript:void(0);" class="btn-hide" id="btn-hide7">Hide
+                                                    Content ...</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab13" class="tab-content100" style="display: none;">
+                                <div class="container">
+                                    <div class="row rowp">
+                                        <div class="col-md-5">
+                                            <div class="template12-img">
+                                                <img src="assets/images/Operational Challenges.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="red-title">
+                                                <h3 style="color: #000"> Limited Knowledge</h3>
+                                                <p>Although there are many places in the market where we can use
+                                                    Artificial Intelligence as a better alternative to the traditional
+                                                    systems. The real problem is the knowledge of Artificial
+                                                    Intelligence. Apart from technology enthusiasts, college students,
+                                                    and researchers, there are only a limited number of people who are
+                                                    aware of the potential of AI. In addition, In order to develop a
+                                                    successful AI solution, you need both the technical knowledge and
+                                                    business understanding. Unfortunately, it is often one or the other
+                                                </p>
+                                                <h3 style="color: #000"> Customer Support </h3>
+                                                <p>Due to the immediacy that accompanies the majority of the market
+                                                    place, the customer experience has become a vital part of every
+                                                    company’s success. The limited knowledge directly complements
+                                                    customer support. Simply put, we do not have enough people who know
+                                                    how to operate machines that think and learn by themselves.</p>
+                                                <!-- 	<a href="javascript:void(0);" class="btn-show" id="btn-show8">Read More ...</a>
+               <div class="content-hide" id="content-hide8">
+               
+                   <p>Learn more about the developments that are helping to shape the IoT’s evolution, and explore relevant news and trends.</p>
+               
+                   
+               
+               </div>
+               
+               <a href="javascript:void(0);" class="btn-hide" id="btn-hide8">Hide Content ...</a> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab14" class="tab-content100" style="display: none;">
+                                <div class="container">
+                                    <div class="row rowp">
+                                        <div class="col-md-5">
+                                            <div class="template12-img">
+                                                <img src="assets/images/tab-thumbnail-automating-trust-2.webp">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="red-title">
+                                                <h3 style="color: #000">Technologies: AI, Blockchain, IoT</h3>
+                                                <p>To automate trust, some Essential Eight technologies — such as
+                                                    blockchain, IoT and AI — work together to ensure the authenticity of
+                                                    data, verify identities and enable secure multi-party transactions.
+                                                    For example, IoT sensors can track a pallet of food from the farm to
+                                                    the warehouse to the store, verifying the entire supply chain. This
+                                                    authenticates where a shipment is along the route, as well as the
+                                                    conditions during each leg of the journey: Is the shipping container
+                                                    becoming too hot, too cold or too humid? This information is
+                                                    recorded in a secure, unchangeable blockchain. Together, IoT and
+                                                    blockchain create an immutable supply chain, ensuring that buyers
+                                                    are getting an authentic product that has not been damaged along the
+                                                    way. These technologies can also verify whether a product that
+                                                    contains hazardous materials has been disposed of correctly and
+                                                    safely.</p>
+                                                <!-- 	<a href="javascript:void(0);" class="btn-show" id="btn-show9">Read More ...</a>
+               <div class="content-hide" id="content-hide9">
+               
+                   <p>Learn more about the developments that are helping to shape the IoT’s evolution, and explore relevant news and trends.</p>
+               
+                   
+               
+               </div>
+               
+               <a href="javascript:void(0);" class="btn-hide" id="btn-hide9">Hide Content ...</a> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab15" class="tab-content100" style="display: none;">
+                                <div class="container">
+                                    <div class="row rowp">
+                                        <div class="col-md-5">
+                                            <div class="template12-img">
+                                                <img src="assets/images/tab-thumbnail-automating-trust-2.webp">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="red-title">
+                                                <h3 style="color: #000">Technologies: AI, Blockchain, IoT</h3>
+                                                <p>To automate trust, some Essential Eight technologies — such as
+                                                    blockchain, IoT and AI — work together to ensure the authenticity of
+                                                    data, verify identities and enable secure multi-party transactions.
+                                                    For example, IoT sensors can track a pallet of food from the farm to
+                                                    the warehouse to the store, verifying the entire supply chain. This
+                                                    authenticates where a shipment is along the route, as well as the
+                                                    conditions during each leg of the journey: Is the shipping container
+                                                    becoming too hot, too cold or too humid? This information is
+                                                    recorded in a secure, unchangeable blockchain. Together, IoT and
+                                                    blockchain create an immutable supply chain, ensuring that buyers
+                                                    are getting an authentic product that has not been damaged along the
+                                                    way. These technologies can also verify whether a product that
+                                                    contains hazardous materials has been disposed of correctly and
+                                                    safely.</p>
+                                                <!-- 	<a href="javascript:void(0);" class="btn-show" id="btn-show10">Read More ...</a>
+               <div class="content-hide" id="content-hide10">
+               
+                   <p>Learn more about the developments that are helping to shape the IoT’s evolution, and explore relevant news and trends.</p>
+               
+                   
+               
+               </div>
+               
+               <a href="javascript:void(0);" class="btn-hide" id="btn-hide10">Hide Content ...</a> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END tabs-content -->
+                            </div> <!-- END tabs -->
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- Market dynamics end--->
 
         <div class="popup" id="global-testimonial-popup">
             <div class="popup-box popup-testo">

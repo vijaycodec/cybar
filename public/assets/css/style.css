@@ -5727,3 +5727,56 @@ p{
   display: block;
 }
 }
+
+ul#tabs-nav100 {
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+    overflow: auto;
+}
+
+ul#tabs-nav100 {
+    text-align: center;
+}
+
+ul#tabs-nav100 li {
+    margin-right: 2px;
+    padding: 6px 6px;
+    cursor: pointer;
+    font-size: 18px;
+    background: #e5e8ee;
+    float: left;
+    width: 19%;
+    text-align: center;
+    min-width: 230px;
+}
+
+ul#tabs-nav100 li {
+    background: #ccc !important;
+    border: 2px solid #ccc;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: auto 30px;
+    width: inherit;
+    max-width: inherit;
+    float: none;
+    display: inline-block;
+}
+
+ul#tabs-nav100 li.active, ul#tabs-nav100 li:hover {
+    outline: 0;
+    background-color: #18ba60 !important;
+    border-color: #18ba60 !important;
+}
+
+ul#tabs-nav100 li.active, ul#tabs-nav100 li:hover {
+    outline: 0;
+    background-color: #18ba60 !important;
+    border-color: #18ba60 !important;
+}
+#tabs-nav100 li a {
+    color: #333;
+}
+#tabs-nav100 li.active a, #tabs-nav100 li:hover a {
+    color: #fff;
+}

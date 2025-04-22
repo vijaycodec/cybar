@@ -37,6 +37,7 @@ function isMobile() {
        handleTabClick("#tabs-nav2", ".tab-content2");
        handleTabClick("#tabs-nav3", ".tab-content3");
        handleTabClick("#tabs-nav4", ".tab-content4");
+       handleTabClick("#tabs-nav100", ".tab-content100");
    });
    //
    //  right menu
