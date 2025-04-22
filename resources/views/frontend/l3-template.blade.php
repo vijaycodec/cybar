@@ -2515,7 +2515,181 @@
                 </div>
             </div>
         </section>
-        <!-- Market dynamics end--->
+
+        <section class="empower-industry-bg codec-page-section anchor-link" id="zigzag" style="padding-bottom: 20px !important; padding-top: 40px !important;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 cn-title">
+                        <!-- <h1>Industries we cater</h1> -->
+                        <h2>Encompasses integrated RPA capabilities<br> assisted by a wider suite of automation
+                            technologies such as Smart
+                            Optical Character Recognition (OCR)</h2>
+                    </div>
+                </div>
+            </div>
+            <!--ist start-->
+            <div class="container">
+                <div class="row rowp">
+                    <div class="col-md-5">
+                        <div class="template12-img">
+                            <img src="assets/images/intelligent-automation.webp">
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="red-title">
+                            <h3 style="color: #000">Intelligent automation</h3>
+                            <p>Intelligent Automation is the use of software bots with Artificial Intelligence
+                                and Machine Learning capabilities to handle manual and repetitive processes
+                                efficiently by mimicking user actions. With Intelligent Automation solutions,
+                                enterprises can quickly accelerate their automation across both transactional
+                                and judgement-intensive activities. IA encompasses integrated RPA capabilities
+                                assisted by a wider suite of automation technologies such as Smart Optical
+                                Character Recognition (OCR), Natural Language Processing/Generation (NLP/NLG),
+                                chatbots and analytics.</p>
+                            <a href="javascript:void(0);" class="btn-show" id="btn-show5">Read More ...</a>
+                            <div class="content-hide" id="content-hide5">
+                                <p>Learn more about the developments that are helping to shape the IoT’s
+                                    evolution, and explore relevant news and trends.</p>
+                            </div>
+                            <a href="javascript:void(0);" class="btn-hide" id="btn-hide5">Hide Content ...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--2nd start-->
+            <div class="container">
+                <div class="row rowp">
+                    <div class="col-md-7">
+                        <div class="red-title">
+                            <h3 style="color: #000">Intelligent automation</h3>
+                            <p>Intelligent Automation is the use of software bots with Artificial Intelligence
+                                and Machine Learning capabilities to handle manual and repetitive processes
+                                efficiently by mimicking user actions. With Intelligent Automation solutions,
+                                enterprises can quickly accelerate their automation across both transactional
+                                and judgement-intensive activities. IA encompasses integrated RPA capabilities
+                                assisted by a wider suite of automation technologies such as Smart Optical
+                                Character Recognition (OCR), Natural Language Processing/Generation (NLP/NLG),
+                                chatbots and analytics.</p>
+                            <a href="javascript:void(0);" class="btn-show" id="btn-show5">Read More ...</a>
+                            <div class="content-hide" id="content-hide5">
+                                <p>Learn more about the developments that are helping to shape the IoT’s
+                                    evolution, and explore relevant news and trends.</p>
+
+                            </div>
+                            <a href="javascript:void(0);" class="btn-hide" id="btn-hide5">Hide Content ...</a>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="template12-img">
+                            <img src="assets/images/intelligent-automation.webp">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--3rd start-->
+            <div class="container">
+                <div class="row rowp">
+                    <div class="col-md-5">
+                        <div class="template12-img">
+                            <img src="assets/images/intelligent-automation.webp">
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="red-title">
+                            <h3 style="color: #000">Intelligent automation</h3>
+                            <p>Intelligent Automation is the use of software bots with Artificial Intelligence
+                                and Machine Learning capabilities to handle manual and repetitive processes
+                                efficiently by mimicking user actions. With Intelligent Automation solutions,
+                                enterprises can quickly accelerate their automation across both transactional
+                                and judgement-intensive activities. IA encompasses integrated RPA capabilities
+                                assisted by a wider suite of automation technologies such as Smart Optical
+                                Character Recognition (OCR), Natural Language Processing/Generation (NLP/NLG),
+                                chatbots and analytics.</p>
+                            <a href="javascript:void(0);" class="btn-show" id="btn-show5">Read More ...</a>
+                            <div class="content-hide" id="content-hide5">
+                                <p>Learn more about the developments that are helping to shape the IoT’s
+                                    evolution, and explore relevant news and trends.</p>
+                            </div>
+                            <a href="javascript:void(0);" class="btn-hide" id="btn-hide5">Hide Content ...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="light-grey sample7-line anchor-link space7_1" id="overview1">
+            <!--  -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="third-content" id="overview2">
+                            <h3>Certified Ethical Hacking Certification</h3>
+                            <p> A Certified Ethical Hacker (CEH) is a trained professional who legally penetrates
+                                networks and systems
+                                to identify vulnerabilities and weaknesses. Unlike malicious hackers, CEHs operate with
+                                permission and
+                                adhere to ethical guidelines. They utilize the same tools and techniques as
+                                cybercriminals but with the
+                                goal of improving security rather than causing harm. CEHs employ various methods such as
+                                penetration
+                                testing, vulnerability assessments, and social engineering to assess the security
+                                posture of
+                                organizations. By simulating real-world cyberattacks, they help businesses identify and
+                                mitigate potential
+                                risks, thereby strengthening their defenses against malicious intrusions.</p>
+                            <p>To become a Certified Ethical Hacker, individuals typically undergo rigorous training and
+                                pass an
+                                examination to demonstrate their proficiency in ethical hacking techniques and best
+                                practices. This
+                                certification is highly regarded in the cybersecurity industry and is often pursued by
+                                professionals
+                                seeking careers in penetration testing, security analysis, and risk management.</p>
+                                <div class="container">
+                                    <div class="row overview-content">
+                                        <!--  -->
+                                        <div class="col-md-12">
+                                            <div class="smple-box1">
+                                                <h4>Certified Ethical Hacker (CEH) Training Overview:</h4>
+                                            </div>
+                                            <div class="smple-box1">
+                                                <ul class="code-ul">
+                                                    <li>
+                                                        <p><b>Skill Development:</b> Acquire skills in ethical hacking,
+                                                            penetration testing, and
+                                                            vulnerability assessment to strengthen cybersecurity
+                                                            defenses.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>Hands-On Labs:</b> Engage in practical, real-world
+                                                            scenarios through hands-on labs,
+                                                            simulating cyber threats and attacks.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>Certification Preparation:</b> Receive comprehensive
+                                                            training to prepare for the CEH
+                                                            certification exam, validating your expertise in ethical
+                                                            hacking practices.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>Current Threat Landscape:</b> Stay updated on the latest
+                                                            cyber threats, vulnerabilities,
+                                                            and
+                                                            defensive strategies in today's rapidly evolving digital
+                                                            landscape.</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+        </section>
 
         <div class="popup" id="global-testimonial-popup">
             <div class="popup-box popup-testo">
@@ -2564,123 +2738,123 @@
 {{-- @endsection --}}
 <!-- Jquery code -->
 @push('scripts')
-<script>
-    $(document).ready(function () {
-        // When the "Read More" button is clicked
-        $(".btn-show").click(function () {
-            $(this).hide(); // Hide "Read More" button
-            var content = $(this).next(".content-hide");
+    <script>
+        $(document).ready(function () {
+            // When the "Read More" button is clicked
+            $(".btn-show").click(function () {
+                $(this).hide(); // Hide "Read More" button
+                var content = $(this).next(".content-hide");
 
-            // Smoothly slide down content and show "Hide Content"
-            content.stop(true, true).slideDown(0, function () {
-                $(this).find(".btn-hide").fadeIn();
-            });
-        });
-
-        // When the "Hide Content" button is clicked
-        $(".btn-hide").click(function () {
-            var content = $(this).closest(".content-hide");
-
-            // Smoothly slide up content and show "Read More" button
-            content.stop(true, true).slideUp(0, function () {
-                $(this).prev(".btn-show").fadeIn();
+                // Smoothly slide down content and show "Hide Content"
+                content.stop(true, true).slideDown(0, function () {
+                    $(this).find(".btn-hide").fadeIn();
+                });
             });
 
-            // Hide the "Hide Content" button after hiding the content
-            $(this).fadeOut();
-        });
-    });
-</script>
+            // When the "Hide Content" button is clicked
+            $(".btn-hide").click(function () {
+                var content = $(this).closest(".content-hide");
 
-<script>
-    $(document).ready(function () {
-        // Open the popup dynamically when clicking a testimonial box
-        $(document).on("click", ".ceh-testo-box", function () {
-            console.log("clicked");
-            // Get data from the clicked testimonial
-            var name = $(this).data("name");
-            var designation = $(this).data("designation");
-            var description = $(this).data("description");
-            var image = $(this).data("image");
-            console.log(name);
-            // Populate the global popup with dynamic content
-            $("#popup-name").text(name);
-            $("#popup-designation").text(designation);
-            $("#popup-description").text(description);
-            $("#popup-image").attr("src", image);
+                // Smoothly slide up content and show "Read More" button
+                content.stop(true, true).slideUp(0, function () {
+                    $(this).prev(".btn-show").fadeIn();
+                });
 
-            // Show the popup
-            $("#global-testimonial-popup").fadeIn();
-        });
-
-        // Close the popup when clicking on the close button (using delegated event handling)
-        $(document).on("click", ".close_1, .close_21", function () {
-            $(this).closest(".popup").fadeOut(); // Close the closest popup
-        });
-
-        // Close the popup when clicking outside of the popup content
-        $("#global-testimonial-popup").click(function (e) {
-            if ($(e.target).hasClass("popup")) {
+                // Hide the "Hide Content" button after hiding the content
                 $(this).fadeOut();
-            }
-        });
-    });
-</script>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        document.querySelectorAll(".btn-toggle").forEach(function (button) {
-            button.addEventListener("click", function () {
-                let content = this.previousElementSibling; // Get the description container
-                let shortText = content.querySelector(".short-text");
-                let fullText = content.querySelector(".full-text");
-                let hideButton = this.nextElementSibling; // The hide button
-
-                shortText.style.display = "none";
-                fullText.style.display = "inline";
-                this.style.display = "none";
-                hideButton.style.display = "inline";
             });
         });
+    </script>
 
-        document.querySelectorAll(".btn-hide").forEach(function (button) {
-            button.addEventListener("click", function () {
-                let content = this.previousElementSibling
-                    .previousElementSibling; // Get the description container
-                let shortText = content.querySelector(".short-text");
-                let fullText = content.querySelector(".full-text");
-                let readMoreButton = this.previousElementSibling; // The "Read More" button
+    <script>
+        $(document).ready(function () {
+            // Open the popup dynamically when clicking a testimonial box
+            $(document).on("click", ".ceh-testo-box", function () {
+                console.log("clicked");
+                // Get data from the clicked testimonial
+                var name = $(this).data("name");
+                var designation = $(this).data("designation");
+                var description = $(this).data("description");
+                var image = $(this).data("image");
+                console.log(name);
+                // Populate the global popup with dynamic content
+                $("#popup-name").text(name);
+                $("#popup-designation").text(designation);
+                $("#popup-description").text(description);
+                $("#popup-image").attr("src", image);
 
-                shortText.style.display = "inline";
-                fullText.style.display = "none";
-                this.style.display = "none";
-                readMoreButton.style.display = "inline";
+                // Show the popup
+                $("#global-testimonial-popup").fadeIn();
+            });
+
+            // Close the popup when clicking on the close button (using delegated event handling)
+            $(document).on("click", ".close_1, .close_21", function () {
+                $(this).closest(".popup").fadeOut(); // Close the closest popup
+            });
+
+            // Close the popup when clicking outside of the popup content
+            $("#global-testimonial-popup").click(function (e) {
+                if ($(e.target).hasClass("popup")) {
+                    $(this).fadeOut();
+                }
             });
         });
-    });
-</script>
+    </script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".btn-toggle").forEach(function (button) {
+                button.addEventListener("click", function () {
+                    let content = this.previousElementSibling; // Get the description container
+                    let shortText = content.querySelector(".short-text");
+                    let fullText = content.querySelector(".full-text");
+                    let hideButton = this.nextElementSibling; // The hide button
 
+                    shortText.style.display = "none";
+                    fullText.style.display = "inline";
+                    this.style.display = "none";
+                    hideButton.style.display = "inline";
+                });
+            });
 
-<script>
-    $(document).ready(function () {
-        // Bootstrap tab fix
-        $('.nav-tabs3 a').on('click', function (e) {
-            e.preventDefault();
-            $('.nav-tabs3 li').removeClass('active');
-            $(this).parent().addClass('active');
+            document.querySelectorAll(".btn-hide").forEach(function (button) {
+                button.addEventListener("click", function () {
+                    let content = this.previousElementSibling
+                        .previousElementSibling; // Get the description container
+                    let shortText = content.querySelector(".short-text");
+                    let fullText = content.querySelector(".full-text");
+                    let readMoreButton = this.previousElementSibling; // The "Read More" button
 
-            var target = $(this).attr("href");
-            $('.tab-pane3').removeClass('show active');
-            $(target).addClass('show active');
+                    shortText.style.display = "inline";
+                    fullText.style.display = "none";
+                    this.style.display = "none";
+                    readMoreButton.style.display = "inline";
+                });
+            });
         });
+    </script>
 
-    });
-</script>
 
-<script type="text/javascript" src="{{ asset('assets/js/common.js') }}"></script>
-<script type="text/javascript" src="{{ asset('assets/js/main.js') }}"></script>
-<script type="text/javascript" src="{{ asset('assets/js/l3-check.js') }}"></script>
-<script type="text/javascript" src="{{ asset('assets/js/slider.js') }}"></script>
-@include ('frontend.layouts.right-menu-js')
+
+    <script>
+        $(document).ready(function () {
+            // Bootstrap tab fix
+            $('.nav-tabs3 a').on('click', function (e) {
+                e.preventDefault();
+                $('.nav-tabs3 li').removeClass('active');
+                $(this).parent().addClass('active');
+
+                var target = $(this).attr("href");
+                $('.tab-pane3').removeClass('show active');
+                $(target).addClass('show active');
+            });
+
+        });
+    </script>
+
+    <script type="text/javascript" src="{{ asset('assets/js/common.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/main.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/l3-check.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/slider.js') }}"></script>
+    @include ('frontend.layouts.right-menu-js')
 @endpush
