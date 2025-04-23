@@ -121,6 +121,13 @@
                             <option value="testimonials">testimonials</option>
                             <option value="blog">blog</option>
                             <option value="faqs">faqs</option>
+                            <option value="overview2">overview 2</option>
+                            <option value="overview15">overview 15</option>
+                            <option value="overview16">overview 16</option>
+                            <option value="overview17">overview 17</option>
+                            <option value="overview2subdescription">overview2 Sub description</option>
+                            <option value="significance2">significance 2</option>
+                            <option value="industries2">industries 2</option>
                         </select>
                     </fieldset>
 
@@ -142,7 +149,7 @@
                     </div>
 
                     <div class="l3-form" id="overview_sub_desc" style="display: none;">
-                        <div class="body-title">SelectS ub Descriptions: <span class="tf-color-1"></span></div>
+                        <div class="body-title">Select Sub Descriptions: <span class="tf-color-1"></span></div>
                         <select id="overview_count" class="flex-grow l3_content">
                             <option value="">Select</option>
                             @for ($i = 1; $i <= 10; $i++)
@@ -156,6 +163,116 @@
 
 
                     <!-- Overview Form ends-->
+
+                    <!-- Overview 2 Form start-->
+
+                    <div class="l3-form form-group overview2_title">
+                        <div class="body-title">Overview Title(H) :<span class="tf-color-1">*</span></div>
+                        <input type="text" class="" name="overview2_title">{{ old('overview2_title') }}</input>
+                    </div>
+
+                    <div class="l3-form form-group overview_short_description">
+
+                        <div class="body-title">Overview Short Description :<span class="tf-color-1">*</span></div>
+                        <textarea class="summernote" name="overview2_short_descriptions">{{ old('overview2_short_descriptions') }}</textarea>
+                    </div>
+
+                    <div class="form-group l3-form overview_form " id="overview2_form">
+
+                        <div class="body-title">Overview Description :<span class="tf-color-1">*</span></div>
+                        <textarea class="summernote" name="overview2_long_descriptions">{{ old('overview2_long_descriptions') }}</textarea>
+                    </div>
+
+                    
+
+                    <div class="form-group" id="dynamic_overview_sections"></div>
+
+
+                    <!-- Overview 2 Form ends-->
+
+                     <!-- Overview2 sub Description Form start-->
+
+                     <div class="l3-form form-group overview3_title" >
+                        <div class="body-title">Overview Title(H) :<span class="tf-color-1">*</span></div>
+                        <input type="text" class="" name="overview3_title">{{ old('overview3_title') }}</input>
+                    </div>
+                   
+                    <div class="l3-form" id="overview3_sub_desc" style="display: none;">
+                        <div class="body-title">Select Sub Descriptions: <span class="tf-color-1"></span></div>
+                        <select id="overview3_count" class="flex-grow l3_content">
+                            <option value="">Select</option>
+                            @for ($i = 1; $i <= 10; $i++)
+                                <option value="{{ $i }}">{{ $i }}</option>
+                            @endfor
+                        </select>
+                    </div>
+
+
+                    <div class="form-group" id="dynamic_overview3_sections"></div>
+
+
+                    <!--  Overview2 sub DescriptionForm ends--> 
+
+                     <!-- Overview 15 Form start-->
+
+                     <div class="l3-form form-group overview15_title">
+                        <div class="body-title">Overview Title(H) :<span class="tf-color-1">*</span></div>
+                        <input type="text" class="" name="overview15_title">{{ old('overview15_title') }}</input>
+                    </div>
+
+                    <div class="form-group l3-form overview_form " id="overview15_form">
+
+                        <div class="body-title">Overview Description :<span class="tf-color-1">*</span></div>
+                        <textarea class="summernote" name="overview15_descriptions">{{ old('overview15_descriptions') }}</textarea>
+                    </div>
+
+                    
+
+                    <div class="form-group" id="dynamic_overview_sections"></div>
+
+
+                    <!-- Overview 15 Form ends-->
+
+                    <!-- Overview 16 Form start-->
+
+                    <div class="l3-form form-group overview16_title">
+                        <div class="body-title">Overview Title(H) :<span class="tf-color-1">*</span></div>
+                        <input type="text" class="" name="overview16_title">{{ old('overview16_title') }}</input>
+                    </div>
+
+                    <div class="l3-form form-group overview16_short_description">
+
+                        <div class="body-title">Overview Short Description :<span class="tf-color-1">*</span></div>
+                        <textarea class="summernote" name="overview16_short_descriptions">{{ old('overview16_short_descriptions') }}</textarea>
+                    </div>
+
+                    <div class="form-group l3-form overview16_form " id="overview16_form">
+
+                        <div class="body-title">Overview Description :<span class="tf-color-1">*</span></div>
+                        <textarea class="summernote" name="overview16_long_descriptions">{{ old('overview16_long_descriptions') }}</textarea>
+                    </div>
+
+                    
+
+                    <div class="form-group" id="dynamic_overview16_sections"></div>
+
+
+                    <!-- Overview 16 Form ends-->
+
+                    <!-- Overview 17 Form start-->
+
+                   
+
+                    <div class="l3-form form-group overview17_description">
+
+                        <div class="body-title">Overview Description :<span class="tf-color-1">*</span></div>
+                        <textarea class="summernote" name="overview17_descriptions">{{ old('overview17_descriptions') }}</textarea>
+                    </div>
+
+                    <div class="form-group" id="dynamic_overview17_sections"></div>
+
+
+                    <!-- Overview 17 Form ends-->
 
                     <!-- Significance Form Start -->
                     <div class="l3-form" id="significance_form" style="display: none;">
@@ -185,6 +302,39 @@
                         <textarea class="summernote" name="Significance_title">{{ old('Significance_title') }}</textarea>
                     </div>
                     <!-- Significance Form ends-->
+
+                    <!-- Significance2 Form Start -->
+
+                    <div class="l3-form" id="significance2_form" style="display: none;">
+
+                        <div class="body-title  ">Select Significance2 Type <span class="tf-color-1">*</span></div>
+                        <select class="flex-grow" id="significance2_category" name="significance2_type">
+                            <option value="" disabled selected>Select Significance</option>
+                            {{-- <option value="1"> Significance2</option>
+                            <option value="2"> Significance3</option>
+                            <option value="3"> Significance4</option> --}}
+                            @foreach ($significanceCategories as $category)
+                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                     <div class="l3-form form-group significance2_title">
+                        <div class="body-title">Significance Title :<span class="tf-color-1">*</span></div>
+
+                        <textarea class="summernote" name="significance2_title">{{ old('significance2_title') }}</textarea>
+                    </div> 
+
+                    <div class="l3-form form-group significance2_short_description">
+                        <div class="body-title">Significance Short Description :<span class="tf-color-1">*</span></div>
+                        <textarea class="summernote" name="significance2_short_description">{{ old('significance2_short_description') }}</textarea>
+                    </div>
+                    <div class="l3-form form-group significance2_desc">
+                        <div class="body-title">Significance Description :<span class="tf-color-1">*</span></div>
+                        <textarea class="summernote" name="significance2_long_description">{{ old('significance2_long_description') }}</textarea>
+                    </div>
+
+                    <!-- Significance2 Form ends-->
 
                     <!-- course Feature Form Start -->
                     <div class="l3-form" id="courseFeature_form" style="display: none;">
@@ -271,6 +421,37 @@
                     </div>
 
                     <!-- industries Form End -->
+
+                    <!-- industries2 Form Start -->
+                    {{-- <div class="l3-form" id="industries2_form" style="display: none;">
+
+                        <div class="body-title">Select Industries Type <span class="tf-color-1">*</span></div>
+                        <select class="flex-grow" style="" id="industry_category" name="industries_type">
+                            <option value="" disabled selected>Select Industries Category</option>
+                            @foreach ($industryCategories as $category)
+                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                            @endforeach
+                        </select>
+
+                    </div> --}}
+                    <!-- Industries2 Title Form -->
+
+                    <div class="l3-form form-group industries2_title">
+                        <div class="body-title">Industries Title : <span class="tf-color-1">*</span></div>
+                        <textarea class="summernote" name="industry2_title">{{ old('industry2_title') }}</textarea>
+                    </div>
+                    <div class="l3-form form-group industries2_desc">
+                        <div class="body-title">Industries Description :<span class="tf-color-1">*</span></div>
+                        <label><strong></strong></label>
+                        <textarea class="" name="industry2_description">{{ old('industry2_description') }}</textarea>
+                    </div>
+
+                    <div class="l3-form form-group industry2_testimonial_name">
+                        <div class="body-title">Testimonial Name (H) :<span class="tf-color-1">*</span></div>
+                        <input type="text" class="" name="industry2_testimonial_name">{{ old('industry2_testimonial_name') }}</input>
+                    </div>
+
+                    <!-- industries2 Form End -->
 
                     <!-- FAQ'S Form Start -->
                     <div class="l3-form" id="faqs_form" style="display: none;">
@@ -576,6 +757,42 @@
                     $('.brochure_pdf').show();
                     $('.comman_images').show();
                     $('#l3_layout_type').val('program'); // Set hidden input to 'cehkit'
+                } else if (selectedL3Category === "overview2") {
+                    $('#overview2_form').show();
+                    $('.overview_short_description').show();
+                    $('.overview2_title').show();
+                    $('#l3_layout_type').val('overview2'); // Set hidden input to 'significance'
+                } else if (selectedL3Category === "overview2subdescription") {
+                    $('.overview3_title').show();
+                    $('#overview3_sub_desc').show();
+                    $('#l3_layout_type').val('overview2subdescription'); // Set hidden input to 'significance'
+                } else if (selectedL3Category === "overview15") {
+                    $('#overview15_form').show();
+                    $('.comman_images').show();
+                    $('.overview15_title').show();
+                    $('#l3_layout_type').val('overview15'); // Set hidden input to 'significance'
+                } else if (selectedL3Category === "overview16") {
+                    $('#overview16_form').show();
+                    $('.overview16_short_description').show();
+                    $('.overview16_title').show();
+                    $('.comman_images').show();
+                    $('#l3_layout_type').val('overview16'); // Set hidden input to 'significance'
+                } else if (selectedL3Category === "overview17") { 
+                    $('.overview17_description').show();
+                    $('#l3_layout_type').val('overview17'); // Set hidden input to 'significance'
+                } else if (selectedL3Category === "significance2") { 
+                    $('#significance2_form').show();
+                    $('.significance2_title').show();
+                    $('.significance2_desc').show();
+                    $('.significance2_short_description').show();
+                    $('.comman_images').show();
+                    $('#l3_layout_type').val('significance2'); // Set hidden input to 'significance'
+                } else if (selectedL3Category === "industries2") {
+                    $('.industry2_testimonial_name').show();
+                    $('.industries2_title').show();
+                    $('.industries2_desc').show();
+                    // $('.comman_images').show();
+                    $('#l3_layout_type').val('industries2'); // Set hidden input to 'industries'
                 } else if (selectedL3Category === "history") {
                     // $('#history_form').show();
                 }
@@ -718,7 +935,7 @@
     </script>
 
 
-    <script>
+    {{-- <script>
         $(document).ready(function() {
             $('#overview_count').change(function() {
                 let count = $(this).val();
@@ -747,5 +964,74 @@
                 });
             });
         });
+    </script> --}}
+
+    <script>
+        $(document).ready(function() {
+            $('#overview3_count').change(function() {
+                let count = $(this).val();
+                let container = $('#dynamic_overview3_sections');
+
+                container.empty(); // Clear previous forms
+
+                for (let i = 1; i <= count; i++) {
+                    let subForm = `
+                   
+                        <div class="body-title">Overview Sub Description ${i} :<span class="tf-color-1">*</span></div>
+                        <textarea class="mr-5 summernote" name="overview2_sub_description[]"></textarea>
+                   
+            `;
+                    container.append(subForm);
+                }
+
+                // Re-initialize Summernote for new textareas
+                $('.summernote').summernote({
+                    height: 150,
+                    toolbar: [
+                        ['style', ['bold', 'italic', 'underline', 'clear']],
+                        ['para', ['ul', 'ol', 'paragraph']],
+                        ['insert', ['link', 'picture', 'video']],
+                    ]
+                });
+            });
+        });
     </script>
+
+    {{-- <script>
+        function handleOverviewChange(selector, containerId) {
+            $(selector).change(function () {
+                let count = parseInt($(this).val()) || 0;
+                let container = $(containerId);
+    
+                container.empty(); // Clear previous forms
+    
+                for (let i = 1; i <= count; i++) {
+                    let subForm = `
+                        <div class="form-group mb-3">
+                            <label class="body-title">Overview Sub Description ${i} <span class="tf-color-1">*</span></label>
+                            <textarea class="form-control summernote" name="overview_sub_descriptions[]" rows="4"></textarea>
+                        </div>
+                    `;
+                    container.append(subForm);
+                }
+    
+                // Re-initialize Summernote for new textareas
+                container.find('.summernote').summernote({
+                    height: 150,
+                    toolbar: [
+                        ['style', ['bold', 'italic', 'underline', 'clear']],
+                        ['para', ['ul', 'ol', 'paragraph']],
+                        ['insert', ['link', 'picture', 'video']],
+                    ]
+                });
+            });
+        }
+    
+        $(document).ready(function () {
+            handleOverviewChange('#overview_count', '#dynamic_overview_sections');
+            handleOverviewChange('#overview3_count', '#dynamic_overview3_sections'); // Make sure this container exists
+        });
+    </script>
+     --}}
+
 @endpush

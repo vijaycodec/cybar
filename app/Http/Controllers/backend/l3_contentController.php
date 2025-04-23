@@ -158,11 +158,42 @@ class l3_contentController extends Controller
                 $rules['overview_title'] = 'required|String';
                 $rules['overview_description'] = 'required|string';
                 break;
+            
+            case 'overview2':
+                $rules['overview2_title'] = 'required|String';
+                $rules['overview2_short_descriptions'] = 'required|string';
+                $rules['overview2_long_descriptions'] = 'required|string';
+                break;
+
+            case 'overview15':
+                $rules['overview15_title'] = 'required|String';
+                $rules['overview15_descriptions'] = 'required|string';
+                break;
+
+            case 'overview16':
+                $rules['overview16_title'] = 'required|String';
+                $rules['overview16_short_descriptions'] = 'required|string';
+                $rules['overview16_long_descriptions'] = 'required|string';
+                break;
+
+            case 'overview17':
+                $rules['overview17_descriptions'] = 'required|string';
+                break;
+
+            case 'overview2subdescription':
+                $rules['overview3_title'] = 'required|String';
+                break;
 
             case 'significance':
                 $rules['significance_description'] = 'required|string';
                 $rules['significance_type'] = 'required|integer';
                 break;
+
+            case 'significance2':
+                $rules['significance2_short_description'] = 'required|string';
+                $rules['significance2_long_description'] = 'required|string';
+                $rules['significance2_type'] = 'required|integer';
+                break;    
 
             case 'coursefeatures':
                 $rules['course_feature_description'] = 'required|string';
@@ -178,6 +209,11 @@ class l3_contentController extends Controller
                 $rules['industries_description'] = 'required|string';
                 $rules['industries_type'] = 'required|integer';
                 break;
+
+            case 'industries2':
+                $rules['industry2_description'] = 'required|string';
+                $rules['industry2_testimonial_name'] = 'required|string';
+                    break;
 
             case 'faqs':
                 $rules['faq_category_id'] = 'required|exists:faq_categories,id';
@@ -205,7 +241,6 @@ class l3_contentController extends Controller
         }
 
         $request->validate($rules);
-
         try {
             $this->l3ContentRepository->store($request);
             return redirect()->route('l3-content.create')->with('success', 'Form data saved successfully!');

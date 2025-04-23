@@ -51,6 +51,7 @@ class L3CategoryRepository implements L3CategoryRepositoryInterface
             'contentInfos' => function ($query) use ($subcategoryId, $pageId) {
                 $query->with([
                     'overviewSubDescriptions',
+                    'overview2Descriptions', // <-- Add this line
                     'significanceCategory',
                     'significance_title',
                     'coursefeatureCategory',

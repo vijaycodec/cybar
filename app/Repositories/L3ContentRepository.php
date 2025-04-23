@@ -20,9 +20,14 @@ use App\Models\SignificanceTitle;
 use App\Models\CourseFeatureTitle;
 use App\Models\CyberwindTitle;
 use App\Models\FaqSubCategory;
+use App\Models\Industry2Title;
 use App\Models\IndustryTitle;
+use App\Models\L3Overview2_Description;
+use App\Models\L3Overview2SubDescription;
+use App\Models\Overview15;
 use App\Models\TestimonialDetails;
 use App\Models\ProgramSubCategory;
+use App\Models\Significance2;
 use App\Models\SubCategory;
 use App\Repositories\Interfaces\L3ContentRepositoryInterface;
 use Illuminate\Support\Facades\Storage;
@@ -47,6 +52,7 @@ class L3ContentRepository implements L3ContentRepositoryInterface
 
     public function getCreateData()
     {
+        // dd(SignificanceCategory::all());
         return [
             'page_categories' => PageDetail::all(),
             'significanceCategories' => SignificanceCategory::all(),
@@ -78,8 +84,8 @@ class L3ContentRepository implements L3ContentRepositoryInterface
 
     public function store(Request $request)
     {
-        // dd($request->all());
 
+        // dd($request->industry2_title);
         //  Store in `l3_content_infos`
         $l3ContentInfo = new L3ContentInfo();
         $l3ContentInfo->page_category_id = $request->page_category_id;
@@ -96,11 +102,30 @@ class L3ContentRepository implements L3ContentRepositoryInterface
                 $l3ContentInfo->overview_description = $request->overview_description;
                 break;
 
+            case 'overview16':
+                $l3ContentInfo->overview16_title = $request->overview16_title;
+                $l3ContentInfo->overview16_short_descriptions = $request->overview16_short_descriptions;
+                $l3ContentInfo->overview16_long_descriptions = $request->overview16_long_descriptions;
+                $l3ContentInfo->images = $this->uploadImage($request, 'overview16');
+                break; 
+                
+            case 'overview17':
+                $l3ContentInfo->overview17_descriptions = $request->overview17_descriptions;
+                break; 
+
+            case 'overview2subdescription':
+                $l3ContentInfo->overview3_title = $request->overview3_title;
+                break;
+                                                              
             case 'significance':
                 $l3ContentInfo->significance_category_type = $request->significance_type;
                 $l3ContentInfo->significance_description = $request->significance_description;
                 $l3ContentInfo->significance_short_description = $request->significance_short_description;
                 $l3ContentInfo->images = $this->uploadImage($request, 'significance');
+                break;
+
+            case 'significance2':
+                $l3ContentInfo->significance2_category_type = $request->significance2_type;
                 break;
 
             case 'coursefeatures':
@@ -122,6 +147,13 @@ class L3ContentRepository implements L3ContentRepositoryInterface
                 $l3ContentInfo->industry_description = $request->industries_description;
                 $l3ContentInfo->images = $this->uploadImage($request, 'industry');
                 break;
+
+                case 'industries2':
+                    $l3ContentInfo->industry2_description = $request->industry2_description;
+                    $l3ContentInfo->industry2_testimonial_name = $request->industry2_testimonial_name;
+                  
+                break;
+
 
             case 'faqs':
                 $l3ContentInfo->faq_category_id = $request->faq_category_id;
@@ -220,7 +252,75 @@ class L3ContentRepository implements L3ContentRepositoryInterface
             }
         }
 
+        if ($request->l3_layout_type == 'overview2') {
+           
+            if ($request->has('overview2_short_descriptions')) {
+                // dd( $request->input('overview2_title'));
+                L3Overview2_Description::create([
+                    'l3_content_info_id' => $l3ContentInfo->id,
+                    'overview2_title' => $request->input('overview2_title'),
+                    'overview2_short_descriptions' => $request->input('overview2_short_descriptions'),
+                    'overview2_long_descriptions' => $request->input('overview2_long_descriptions'),                         
+                ]);
+            }
+        }
+
+        if ($request->l3_layout_type == 'overview15') {
+
+            if ($request->has('overview15_descriptions')) {
+                $data = [
+                    'overview15_title' => $request->input('overview15_title'),
+                    'overview15_descriptions' => $request->input('overview15_descriptions'),
+                ];
+        
+                if ($request->hasFile('image')) {
+                    $data['image'] = $this->uploadImage($request, 'image'); // Use input name
+                }
+        
+                Overview15::updateOrCreate(
+                    ['l3_content_info_id' => $l3ContentInfo->id],
+                    $data
+                );
+            }
+        }
+
+        if ($request->l3_layout_type == 'overview2subdescription') {
+
+            if ($request->has('overview2_sub_description')) {
+
+                foreach ($request->overview2_sub_description as $subDesc) {
+                    L3Overview2SubDescription::create([
+                        'l3_content_info_id' => $l3ContentInfo->id,
+                        'overview2_sub_description' => $subDesc,
+                    ]);
+                }
+            }
+        }
+
         // Optional: If you're using a separate table for significance titles
+        if ($request->l3_layout_type == 'significance2') {
+            //  dd( $request->Significance2_title);
+            // Prepare data for update/create
+            $data = [
+                'significance2_short_description' => $request->input('significance2_short_description'),
+                'significance2_long_description' => $request->input('significance2_long_description'),
+                'significance2_title' => $request->input('significance2_title'),
+            ];
+        
+            // Check if image is present and upload it
+            if ($request->image) {
+
+                $data['image'] = $this->uploadImage($request, 'significance2');
+            }
+        
+            // Perform update or create
+            Significance2::updateOrCreate(
+                ['l3_content_info_id' => $l3ContentInfo->id],
+                $data
+            );
+        
+        }
+                                                                                               
         if ($request->l3_layout_type == 'significance') {
             SignificanceTitle::updateOrCreate(
                 ['l3_content_info_id' => $l3ContentInfo->id], // Condition
@@ -286,6 +386,14 @@ class L3ContentRepository implements L3ContentRepositoryInterface
                 ['title' => $request->input('industries_title', 'Default Title')] // Use default if null
             );
         }
+
+        if ($request->l3_layout_type == 'industries2') {
+            Industry2Title::updateOrCreate(
+                ['l3_content_info_id' => $l3ContentInfo->id], // Condition
+                ['title' => $request->input('industry2_title', 'Default Title')] // Use default if null
+            );
+        }
+
         if ($request->l3_layout_type == 'blog') {
             BlogTitle::updateOrCreate(
                 ['l3_content_info_id' => $l3ContentInfo->id], // Condition
@@ -438,7 +546,9 @@ class L3ContentRepository implements L3ContentRepositoryInterface
     public function getl3contentById($id)
     {
         $l3Content = L3ContentInfo::findOrFail($id);
-// dd(SignificanceCategory::where('sub_category_id', $l3Content->sub_category_id)->get());
+        // dd($l3Content);
+        // dd( L3Overview2SubDescription::where('l3_content_info_id', $id)->get());
+       // dd(L3Overview2SubDescription::where('sub_category_id', $l3Content->sub_category_id)->get());
         return [
             'l3Content'              => $l3Content,
             'page_categories'        => PageDetail::all(),
@@ -462,6 +572,11 @@ class L3ContentRepository implements L3ContentRepositoryInterface
             'testimonialData'        => TestimonialDetails::where('l3_content_info_id', $id)->first(),
             'FaqsData'               => FaqSubCategory::where('l3_content_info_id', $id)->first(),
             'BlogTitle'              => BlogTitle::where('l3_content_info_id', $id)->first(),
+            'Overview2'              => L3Overview2_Description::where('l3_content_info_id', $id)->first(),
+            'Overview15'             => Overview15::where('l3_content_info_id', $id)->first(),
+            'L3Overview2SubDescription' => L3Overview2SubDescription::where('l3_content_info_id', $id)->get(),
+            'significance2'             => Significance2::where('l3_content_info_id', $id)->first(),
+            'Industry2Title'             => Industry2Title::where('l3_content_info_id', $id)->first(),
         ];
     }
 
@@ -486,6 +601,64 @@ class L3ContentRepository implements L3ContentRepositoryInterface
                 $l3ContentInfo->overview_title = $request->overview_title;
                 $l3ContentInfo->overview_description = $request->overview_description;
                 break;
+
+                
+            case 'overview2':
+                if ($request->has('overview2_short_descriptions')) {
+                    L3Overview2_Description::create([
+                        'l3_content_info_id' => $l3ContentInfo->id,
+                        'overview2_title' => $request->input('overview2_title'),
+                        'overview2_short_descriptions' => $request->input('overview2_short_descriptions'),
+                        'overview2_long_descriptions' => $request->input('overview2_long_descriptions'),
+                    ]);
+                }
+                break;
+    
+            case 'overview15':
+                if ($request->has('overview15_descriptions')) {
+                    $data = [
+                        'overview15_title' => $request->input('overview15_title'),
+                        'overview15_descriptions' => $request->input('overview15_descriptions'),
+                    ];
+    
+                    if ($request->hasFile('image')) {
+                        $data['image'] = $this->uploadImage($request, 'image');
+                    }
+    
+                    Overview15::updateOrCreate(
+                        ['l3_content_info_id' => $l3ContentInfo->id],
+                        $data
+                    );
+                }
+                break;
+    
+            case 'overview2subdescription':
+                if ($request->has('overview2_sub_description')) {
+                    foreach ($request->overview2_sub_description as $subDesc) {
+                        L3Overview2SubDescription::create([
+                            'l3_content_info_id' => $l3ContentInfo->id,
+                            'overview2_sub_description' => $subDesc,
+                        ]);
+                    }
+                }
+                break;
+    
+            case 'significance2':
+                $data = [
+                    'significance2_short_description' => $request->input('significance2_short_description'),
+                    'significance2_long_description' => $request->input('significance2_long_description'),
+                ];
+    
+                if ($request->hasFile('image')) {
+                    $data['image'] = $this->uploadImage($request, 'significance2');
+                }
+    
+                Significance2::updateOrCreate(
+                    ['l3_content_info_id' => $l3ContentInfo->id],
+                    $data
+                );
+                break;
+                
 
             case 'significance':
                 $l3ContentInfo->significance_category_type = $request->significance_type;
@@ -580,6 +753,8 @@ class L3ContentRepository implements L3ContentRepositoryInterface
                 ]);
             }
         }
+
+        
 
         // Update significance title
         if ($request->l3_layout_type == 'significance') {
