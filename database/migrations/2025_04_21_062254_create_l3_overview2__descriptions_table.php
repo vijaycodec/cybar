@@ -14,9 +14,12 @@ return new class extends Migration
         Schema::create('l3_overview2__descriptions', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('l3_content_info_id');
-            $table->text('overview2_title');
-            $table->text('overview2_short_descriptions');
-            $table->text('overview2_long_descriptions');
+            $table->text('overview2_title')->nullable();
+            $table->text('overview2_paragraph1');
+            $table->text('overview2_paragraph2')->nullable();
+            $table->text('overview2_paragraph3')->nullable();
+            $table->text('overview2_paragraph4')->nullable();
+            $table->text('overview2_paragraph5')->nullable();
             $table->timestamps();
         });
     }

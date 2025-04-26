@@ -24,7 +24,11 @@ return new class extends Migration
 
             //overview section columns
             $table->text('overview_title')->nullable();
-            $table->text('overview_description')->nullable();  //   Overview description
+            $table->text('overview_description')->nullable(); 
+            $table->text('overview_description1')->nullable();
+            $table->text('overview_description2')->nullable();
+            $table->text('overview_description3')->nullable();
+            $table->text('overview_description4')->nullable(); //   Overview description
 
             //overview16 section columns
             $table->text('overview16_title')->nullable();

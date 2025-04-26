@@ -10,4 +10,9 @@ class Significance2 extends Model
     use HasFactory;
 
     protected $fillable = ['l3_content_info_id','significance2_title','significance2_short_description','significance2_long_description','image'];
+
+        public function l3ContentInfo()
+    {
+        return $this->belongsTo(L3ContentInfo::class, 'l3_content_info_id');
+    }
 }

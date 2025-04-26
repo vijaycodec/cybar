@@ -142,11 +142,42 @@
                         <div class="body-title">Overview Title(H) :<span class="tf-color-1">*</span></div>
                         <input type="text" class="" name="overview_title">{{ old('overview_title') }}</input>
                     </div>
+
                     <div class="form-group l3-form overview_form " id="overview_form">
 
-                        <div class="body-title">Overview Description :<span class="tf-color-1">*</span></div>
+                        <div class="body-title">Overview Paragraph 1 :<span class="tf-color-1">*</span></div>
                         <textarea class="summernote" name="overview_description">{{ old('overview_description') }}</textarea>
                     </div>
+
+                    <div class="form-group l3-form overview_form " id="overview_form1">
+
+                        <div class="body-title">Overview Paragraph 2 :<span class="tf-color-1">*</span></div>
+                        <textarea class="summernote" name="overview_description1">{{ old('overview_description1') }}</textarea>
+                    </div>
+
+                    <div class="form-group l3-form overview_form " id="overview_form2">
+
+                        <div class="body-title">Overview Paragraph 3 :<span class="tf-color-1">*</span></div>
+                        <textarea class="summernote" name="overview_description2">{{ old('overview_description2') }}</textarea>
+                    </div>
+
+                    <div class="form-group l3-form overview_form " id="overview_form3">
+
+                        <div class="body-title">Overview Paragraph 4 :<span class="tf-color-1">*</span></div>
+                        <textarea class="summernote" name="overview_description3">{{ old('overview_description3') }}</textarea>
+                    </div>
+
+                    <div class="form-group l3-form overview_form " id="overview_form4">
+
+                        <div class="body-title">Overview Paragraph 5 :<span class="tf-color-1">*</span></div>
+                        <textarea class="summernote" name="overview_description4">{{ old('overview_description4') }}</textarea>
+                    </div>
+
+                    <div class="l3-form form-group overview_subdescription_title">
+                        <div class="body-title">Overview Sub Title(H) :<span class="tf-color-1">*</span></div>
+                        <input type="text" class="" name="overview_subdescription_title">{{ old('overview_subdescription_title') }}</input>
+                    </div>
+
 
                     <div class="l3-form" id="overview_sub_desc" style="display: none;">
                         <div class="body-title">Select Sub Descriptions: <span class="tf-color-1"></span></div>
@@ -171,32 +202,48 @@
                         <input type="text" class="" name="overview2_title">{{ old('overview2_title') }}</input>
                     </div>
 
-                    <div class="l3-form form-group overview_short_description">
+                    <div class="l3-form form-group overview2_paragraph1">
 
-                        <div class="body-title">Overview Short Description :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="overview2_short_descriptions">{{ old('overview2_short_descriptions') }}</textarea>
+                        <div class="body-title">Overview Paragraph1 :<span class="tf-color-1">*</span></div>
+                        <textarea class="summernote" name="overview2_paragraph1">{{ old('overview2_paragraph1') }}</textarea>
                     </div>
 
-                    <div class="form-group l3-form overview_form " id="overview2_form">
+                    <div class="l3-form form-group overview2_paragraph2">
 
-                        <div class="body-title">Overview Description :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="overview2_long_descriptions">{{ old('overview2_long_descriptions') }}</textarea>
+                        <div class="body-title">Overview Paragraph2 :<span class="tf-color-1">*</span></div>
+                        <textarea class="summernote" name="overview2_paragraph2">{{ old('overview2_paragraph2') }}</textarea>
                     </div>
 
-                    
+                    <div class="l3-form form-group overview2_paragraph3">
+
+                        <div class="body-title">Overview Paragraph3 :<span class="tf-color-1">*</span></div>
+                        <textarea class="summernote" name="overview2_paragraph3">{{ old('overview2_paragraph3') }}</textarea>
+                    </div>
+
+                    <div class="l3-form form-group overview2_paragraph4">
+
+                        <div class="body-title">Overview Paragraph4 :<span class="tf-color-1">*</span></div>
+                        <textarea class="summernote" name="overview2_paragraph4">{{ old('overview2_paragraph4') }}</textarea>
+                    </div>
+
+                    <div class="l3-form form-group overview2_paragraph5">
+
+                        <div class="body-title">Overview Paragraph5 :<span class="tf-color-1">*</span></div>
+                        <textarea class="summernote" name="overview2_paragraph5">{{ old('overview2_paragraph5') }}</textarea>
+                    </div>
 
                     <div class="form-group" id="dynamic_overview_sections"></div>
 
 
                     <!-- Overview 2 Form ends-->
 
-                     <!-- Overview2 sub Description Form start-->
+                    <!-- Overview2 sub Description Form start-->
 
-                     <div class="l3-form form-group overview3_title" >
+                    <div class="l3-form form-group overview3_title">
                         <div class="body-title">Overview Title(H) :<span class="tf-color-1">*</span></div>
-                        <input type="text" class="" name="overview3_title">{{ old('overview3_title') }}</input>
+                        <textarea class="summernote" name="overview3_title">{{ old('overview3_title') }}</textarea>
                     </div>
-                   
+
                     <div class="l3-form" id="overview3_sub_desc" style="display: none;">
                         <div class="body-title">Select Sub Descriptions: <span class="tf-color-1"></span></div>
                         <select id="overview3_count" class="flex-grow l3_content">
@@ -207,17 +254,16 @@
                         </select>
                     </div>
 
-
                     <div class="form-group" id="dynamic_overview3_sections"></div>
 
+                    <!--  Overview2 sub DescriptionForm ends-->
 
-                    <!--  Overview2 sub DescriptionForm ends--> 
+                    <!-- Overview 15 Form start-->
 
-                     <!-- Overview 15 Form start-->
-
-                     <div class="l3-form form-group overview15_title">
+                    <div class="l3-form form-group overview15_title">
                         <div class="body-title">Overview Title(H) :<span class="tf-color-1">*</span></div>
-                        <input type="text" class="" name="overview15_title">{{ old('overview15_title') }}</input>
+                        <input type="text" class=""
+                            name="overview15_title">{{ old('overview15_title') }}</input>
                     </div>
 
                     <div class="form-group l3-form overview_form " id="overview15_form">
@@ -226,7 +272,7 @@
                         <textarea class="summernote" name="overview15_descriptions">{{ old('overview15_descriptions') }}</textarea>
                     </div>
 
-                    
+
 
                     <div class="form-group" id="dynamic_overview_sections"></div>
 
@@ -237,7 +283,8 @@
 
                     <div class="l3-form form-group overview16_title">
                         <div class="body-title">Overview Title(H) :<span class="tf-color-1">*</span></div>
-                        <input type="text" class="" name="overview16_title">{{ old('overview16_title') }}</input>
+                        <input type="text" class=""
+                            name="overview16_title">{{ old('overview16_title') }}</input>
                     </div>
 
                     <div class="l3-form form-group overview16_short_description">
@@ -252,7 +299,7 @@
                         <textarea class="summernote" name="overview16_long_descriptions">{{ old('overview16_long_descriptions') }}</textarea>
                     </div>
 
-                    
+
 
                     <div class="form-group" id="dynamic_overview16_sections"></div>
 
@@ -261,7 +308,7 @@
 
                     <!-- Overview 17 Form start-->
 
-                   
+
 
                     <div class="l3-form form-group overview17_description">
 
@@ -310,20 +357,17 @@
                         <div class="body-title  ">Select Significance2 Type <span class="tf-color-1">*</span></div>
                         <select class="flex-grow" id="significance2_category" name="significance2_type">
                             <option value="" disabled selected>Select Significance</option>
-                            {{-- <option value="1"> Significance2</option>
-                            <option value="2"> Significance3</option>
-                            <option value="3"> Significance4</option> --}}
-                            @foreach ($significanceCategories as $category)
+                            @foreach ($significance2Categories as $category)
                                 <option value="{{ $category->id }}">{{ $category->name }}</option>
                             @endforeach
                         </select>
                     </div>
 
-                     <div class="l3-form form-group significance2_title">
+                    <div class="l3-form form-group significance2_title">
                         <div class="body-title">Significance Title :<span class="tf-color-1">*</span></div>
 
                         <textarea class="summernote" name="significance2_title">{{ old('significance2_title') }}</textarea>
-                    </div> 
+                    </div>
 
                     <div class="l3-form form-group significance2_short_description">
                         <div class="body-title">Significance Short Description :<span class="tf-color-1">*</span></div>
@@ -448,7 +492,8 @@
 
                     <div class="l3-form form-group industry2_testimonial_name">
                         <div class="body-title">Testimonial Name (H) :<span class="tf-color-1">*</span></div>
-                        <input type="text" class="" name="industry2_testimonial_name">{{ old('industry2_testimonial_name') }}</input>
+                        <input type="text" class=""
+                            name="industry2_testimonial_name">{{ old('industry2_testimonial_name') }}</input>
                     </div>
 
                     <!-- industries2 Form End -->
@@ -581,7 +626,7 @@
 
                     <div class="l3-form" id="layout_program_form" style="display: none;">
                         <div class="body-title">Select L3 Layouts Program <span class="tf-color-1">*</span></div>
-                        <select class="flex-grow l3_content"  name="l3_layout_program">
+                        <select class="flex-grow l3_content" name="l3_layout_program">
                             <option value="" disabled selected>Select L3 Category</option>
                             <option value="courseoutline">courseoutline</option>
                             <option value="whatsnewinceh">whatsnewinceh</option>
@@ -682,6 +727,11 @@
                 // Show the form based on selected value
                 if (selectedL3Category === "overview") {
                     $('#overview_form').show();
+                    $('#overview_form1').show();
+                    $('#overview_form2').show();
+                    $('#overview_form3').show();  
+                    $('#overview_form4').show();
+                    $('.overview_subdescription_title').show();
                     $('#overview_sub_desc').show();
                     $('.overview_title').show();
                     $('#l3_layout_type').val('overview'); // Set hidden input to 'overview'
@@ -758,14 +808,18 @@
                     $('.comman_images').show();
                     $('#l3_layout_type').val('program'); // Set hidden input to 'cehkit'
                 } else if (selectedL3Category === "overview2") {
-                    $('#overview2_form').show();
-                    $('.overview_short_description').show();
+                    $('.overview2_paragraph1').show();
+                    $('.overview2_paragraph2').show();
+                    $('.overview2_paragraph3').show();
+                    $('.overview2_paragraph4').show();
+                    $('.overview2_paragraph5').show();
                     $('.overview2_title').show();
                     $('#l3_layout_type').val('overview2'); // Set hidden input to 'significance'
                 } else if (selectedL3Category === "overview2subdescription") {
                     $('.overview3_title').show();
                     $('#overview3_sub_desc').show();
-                    $('#l3_layout_type').val('overview2subdescription'); // Set hidden input to 'significance'
+                    $('#l3_layout_type').val(
+                    'overview2subdescription'); // Set hidden input to 'significance'
                 } else if (selectedL3Category === "overview15") {
                     $('#overview15_form').show();
                     $('.comman_images').show();
@@ -777,10 +831,10 @@
                     $('.overview16_title').show();
                     $('.comman_images').show();
                     $('#l3_layout_type').val('overview16'); // Set hidden input to 'significance'
-                } else if (selectedL3Category === "overview17") { 
+                } else if (selectedL3Category === "overview17") {
                     $('.overview17_description').show();
                     $('#l3_layout_type').val('overview17'); // Set hidden input to 'significance'
-                } else if (selectedL3Category === "significance2") { 
+                } else if (selectedL3Category === "significance2") {
                     $('#significance2_form').show();
                     $('.significance2_title').show();
                     $('.significance2_desc').show();
@@ -870,7 +924,8 @@
                             '<option value="" disabled selected>Select L3 category</option>'
                         );
                         $.each(data.l3_categories, function(index, value) {
-                            $('#l3_category').append('<option value="' + value.id + '">' + value.l3_category + '</option>');
+                            $('#l3_category').append('<option value="' + value.id +
+                                '">' + value.l3_category + '</option>');
                         });
 
                         // Populate Significance Categories
@@ -878,7 +933,17 @@
                             '<option value="" disabled selected>Select Significance category</option>'
                         );
                         $.each(data.significance_categories, function(index, value) {
-                            $('#significance_category').append('<option value="' + value.id + '">' + value.name + '</option>');
+                            $('#significance_category').append('<option value="' + value
+                                .id + '">' + value.name + '</option>');
+                        });
+
+                        // Populate Significance2 Categories
+                        $('#significance2_category').html(
+                            '<option value="" disabled selected>Select Significance2 category</option>'
+                        );
+                        $.each(data.significance2_categories, function(index, value) {
+                            $('#significance2_category').append('<option value="' +
+                                value.id + '">' + value.name + '</option>');
                         });
 
                         // Populate CourseFeature Categories
@@ -886,47 +951,53 @@
                             '<option value="" disabled selected>Select CourseFeature category</option>'
                         );
                         $.each(data.courseFeatureCategories, function(index, value) {
-                            $('#course_category').append('<option value="' + value.id + '">' + value.name + '</option>');
+                            $('#course_category').append('<option value="' + value.id +
+                                '">' + value.name + '</option>');
                         });
 
-                         // Populate Program Categories 
-                         $('#program_category').html(
+                        // Populate Program Categories 
+                        $('#program_category').html(
                             '<option value="" disabled selected>Select Program category</option>'
                         );
                         $.each(data.programCategories, function(index, value) {
-                            $('#program_category').append('<option value="' + value.id + '">' + value.name + '</option>');
+                            $('#program_category').append('<option value="' + value.id +
+                                '">' + value.name + '</option>');
                         });
 
-                         // Populate industry Categories 
-                         $('#industry_category').html(
-                            '<option value="" disabled selected>Select Program category</option>' 
+                        // Populate industry Categories 
+                        $('#industry_category').html(
+                            '<option value="" disabled selected>Select Program category</option>'
                         );
                         $.each(data.industryCategories, function(index, value) {
-                            $('#industry_category').append('<option value="' + value.id + '">' + value.name + '</option>');
+                            $('#industry_category').append('<option value="' + value
+                                .id + '">' + value.name + '</option>');
                         });
 
-                         // Populate cyberwind Categories 
-                         $('#cyberwind_category').html(
-                            '<option value="" disabled selected>Select Program category</option>' 
+                        // Populate cyberwind Categories 
+                        $('#cyberwind_category').html(
+                            '<option value="" disabled selected>Select Program category</option>'
                         );
                         $.each(data.cyberwindCategories, function(index, value) {
-                            $('#cyberwind_category').append('<option value="' + value.id + '">' + value.name + '</option>');
+                            $('#cyberwind_category').append('<option value="' + value
+                                .id + '">' + value.name + '</option>');
                         });
 
                         // Populate faq Categories 
                         $('#faq_category').html(
-                            '<option value="" disabled selected>Select Program category</option>' 
+                            '<option value="" disabled selected>Select Program category</option>'
                         );
                         $.each(data.faqCategories, function(index, value) {
-                            $('#faq_category').append('<option value="' + value.id + '">' + value.name + '</option>');
+                            $('#faq_category').append('<option value="' + value.id +
+                                '">' + value.name + '</option>');
                         });
 
                         // Populate blog Categories 
                         $('#blog_category').html(
-                            '<option value="" disabled selected>Select Program category</option>' 
+                            '<option value="" disabled selected>Select Program category</option>'
                         );
                         $.each(data.blogCategories, function(index, value) {
-                            $('#blog_category').append('<option value="' + value.id + '">' + value.name + '</option>');
+                            $('#blog_category').append('<option value="' + value.id +
+                                '">' + value.name + '</option>');
                         });
                     }
                 });
@@ -935,7 +1006,7 @@
     </script>
 
 
-    {{-- <script>
+    <script>
         $(document).ready(function() {
             $('#overview_count').change(function() {
                 let count = $(this).val();
@@ -964,7 +1035,7 @@
                 });
             });
         });
-    </script> --}}
+    </script>
 
     <script>
         $(document).ready(function() {
@@ -1033,5 +1104,4 @@
         });
     </script>
      --}}
-
 @endpush

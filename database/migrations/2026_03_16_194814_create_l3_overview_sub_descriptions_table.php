@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('l3_overview_sub_descriptions', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('l3_content_info_id');
+            $table->unsignedBigInteger('l3_content_info_id'); 
+            $table->text('overview_subdescription_title')->nullable();
             $table->text('sub_description');
             $table->timestamps();
 

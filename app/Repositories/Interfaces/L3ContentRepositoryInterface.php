@@ -10,7 +10,7 @@ interface L3ContentRepositoryInterface
     public function getCreateData();
 
     public function getl3contentById($id);
-    public function deleteL3Content($id);
+    // public function deleteL3Content($id);
     public function getL3Categories(Request $request);
 
     public function store(Request $request);

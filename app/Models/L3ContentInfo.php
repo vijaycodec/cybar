@@ -39,7 +39,30 @@ class L3ContentInfo extends Model
     {
         return $this->hasMany(L3Overview2_Description::class, 'l3_content_info_id');
     }
-    
+        public function overview2SubDescriptions()
+    {
+        return $this->hasMany(L3Overview2SubDescription::class,'l3_content_info_id', 'id');
+    }
+
+        public function industry2Title()
+    {
+        return $this->hasOne(Industry2Title::class, 'l3_content_info_id');
+    }
+
+        public function overview15s()
+    {
+        return $this->hasMany(Overview15::class, 'l3_content_info_id');
+    }
+    public function significance2s()
+    {
+        return $this->hasMany(Significance2::class, 'l3_content_info_id');
+    }
+
+    public function significance2Category()
+    {
+        return $this->belongsTo(significance2Category::class, 'significance2_category_type', 'id');
+    }
+
     public function coursefeatureCategory()
     {
         return $this->belongsTo(CourseFeatureCategory::class, 'course_feature_type', 'id');
@@ -59,7 +82,6 @@ class L3ContentInfo extends Model
     {
         return $this->hasOne(CyberwindTitle::class, 'l3_content_info_id');
     }
-
 
     public function industryCategory()
     {

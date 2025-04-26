@@ -10,5 +10,10 @@ class L3Overview2SubDescription extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['l3_content_info_id','overview2_sub_description'];
+    protected $fillable = ['l3_content_info_id', 'overview2_sub_description'];
+
+    public function contentInfo()
+    {
+        return $this->belongsTo(L3ContentInfo::class, 'l3_content_info_id', 'id');
+    }
 }

@@ -52,6 +52,11 @@ class L3CategoryRepository implements L3CategoryRepositoryInterface
                 $query->with([
                     'overviewSubDescriptions',
                     'overview2Descriptions', // <-- Add this line
+                    'overview2SubDescriptions',
+                    'industry2Title', 
+                    'overview15s',
+                    'significance2s',
+                    'significance2Category',
                     'significanceCategory',
                     'significance_title',
                     'coursefeatureCategory',

@@ -9,5 +9,10 @@ class Industry2Title extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['l3_content_info_id','title'];
+    protected $fillable = ['l3_content_info_id', 'title'];
+
+    public function contentInfo()
+    {
+        return $this->belongsTo(L3ContentInfo::class, 'l3_content_info_id');
+    }
 }

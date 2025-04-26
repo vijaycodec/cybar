@@ -169,6 +169,43 @@ if (isMobile()) {
         }
     });
 
+    $(function () {
+        var owl = $("#owl-overview2subdescription");
+
+        owl.owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            dots: true,
+            navigationText: ['<i class="fa fa-long-arrow-left" aria-hidden="true"></i>', '<i class="fa fa-long-arrow-right" aria-hidden="true"></i>'],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                900: {
+                    items: 1
+                },
+                1200: {
+                    items: 4
+                }
+            },
+            onInitialized: updateNavigationCount,
+            onChanged: updateNavigationCount
+        });
+
+
+        function updateNavigationCount(e) {
+            if (!e.namespace) {
+                return;
+            }
+            var carousel = e.relatedTarget;
+            $("#navigation-overview2subdescription").html(carousel.relative(carousel.current()) + 1 + '/' + carousel.items().length);
+        }
+    });
+
     $(document).ready(function () {
         $(".btn-show").click(function () {
             $(this).next(".content-hide").show();
@@ -219,6 +256,42 @@ if (isMobile()) {
             }
             var carousel = e.relatedTarget;
             $("#navigation-count").html(carousel.relative(carousel.current()) + 1 + '/' + carousel.items().length);
+        }
+    });
+
+    $(function () {
+        var owl = $("#owl-overview2");
+
+        owl.owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            dots: true,
+            navigationText: ['<i class="fa fa-long-arrow-left" aria-hidden="true"></i>', '<i class="fa fa-long-arrow-right" aria-hidden="true"></i>'],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                900: {
+                    items: 1
+                },
+                1200: {
+                    items: 1
+                }
+            },
+            onInitialized: updateNavigationCount,
+            onChanged: updateNavigationCount
+        });
+
+        function updateNavigationCount(e) {
+            if (!e.namespace) {
+                return;
+            }
+            var carousel = e.relatedTarget;
+            $("#navigation-count-overview2").html(carousel.relative(carousel.current()) + 1 + '/' + carousel.items().length);
         }
     });
 
@@ -768,7 +841,42 @@ if (isMobile()) {
         }
     });
 
+    $(function () {
+        var owl = $("#owl-overview2subdescription");
 
+        owl.owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            dots: true,
+            navigationText: ['<i class="fa fa-long-arrow-left" aria-hidden="true"></i>', '<i class="fa fa-long-arrow-right" aria-hidden="true"></i>'],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                900: {
+                    items: 1
+                },
+                1200: {
+                    items: 4
+                }
+            },
+            onInitialized: updateNavigationCount,
+            onChanged: updateNavigationCount
+        });
+
+
+        function updateNavigationCount(e) {
+            if (!e.namespace) {
+                return;
+            }
+            var carousel = e.relatedTarget;
+            $("#navigation-overview2subdescription").html(carousel.relative(carousel.current()) + 1 + '/' + carousel.items().length);
+        }
+    });
 
 
 
@@ -805,6 +913,42 @@ if (isMobile()) {
             }
             var carousel = e.relatedTarget;
             $("#navigation-count").html(carousel.relative(carousel.current()) + 1 + '/' + carousel.items().length);
+        }
+    });
+
+    $(function () {
+        var owl = $("#owl-overview2");
+
+        owl.owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            dots: true,
+            navigationText: ['<i class="fa fa-long-arrow-left" aria-hidden="true"></i>', '<i class="fa fa-long-arrow-right" aria-hidden="true"></i>'],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                900: {
+                    items: 1
+                },
+                1200: {
+                    items: 1
+                }
+            },
+            onInitialized: updateNavigationCount,
+            onChanged: updateNavigationCount
+        });
+
+        function updateNavigationCount(e) {
+            if (!e.namespace) {
+                return;
+            }
+            var carousel = e.relatedTarget;
+            $("#navigation-count-overview2").html(carousel.relative(carousel.current()) + 1 + '/' + carousel.items().length);
         }
     });
 

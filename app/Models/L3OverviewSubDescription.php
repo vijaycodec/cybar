@@ -9,7 +9,7 @@ class L3OverviewSubDescription extends Model
 {
 
     use HasFactory;
-    protected $fillable = ['l3_content_info_id', 'sub_description'];
+    protected $fillable = ['l3_content_info_id', 'sub_description', 'overview_subdescription_title'];
 
     
     public function contentInfo()
