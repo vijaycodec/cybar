@@ -1197,7 +1197,6 @@ body{
     }
     .wwyl-box{
     background: #f1f2f8;
-    border-left: 50px solid #F8BB43;
     position: relative;
     box-shadow: 0px 2px 4px 2px rgba(204, 204, 204, 0.3);
     border-radius: 5px;
@@ -1208,7 +1207,7 @@ body{
     margin: 0px;}
     .wwyl-box-circle{
     position: absolute;
-    top: 7px;
+    top: 25%;
     left: -26px;
     background: #f8bb43;
     width: 40px;
@@ -1225,18 +1224,14 @@ body{
     font-weight: bold;
     }
     .wwyl-row{max-width: 100%;margin: auto;padding-top: 10px;}
-    .orange{    border-left: 50px solid #F58D21 !important;}
     .orange-circle{
     background: #f58d21 !important;
     border: 1px solid #e68219 !important;
     }
-    .purple{border-left: 50px solid #DF5DA0 !important;}
     .purple-circle{	background: #DF5DA0 !important;
     border: 1px solid #cc3181 !important;}
-    .color4{  border-left: 50px solid #9B70AE !important; }
     .color4-circle{background: #9B70AE !important;
     border: 1px solid #89599e !important;}
-    .green{  border-left: 50px solid #8DCBA7 !important; }
     .green-circle{background: #8DCBA7 !important;
     border: 1px solid #5cb983 !important;}
     .third-cn-title-white h2{
@@ -5731,4 +5726,72 @@ p{
 .career-scroll-top {
   display: block;
 }
+}
+
+ul#tabs-nav100 {
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+    overflow: auto;
+}
+
+ul#tabs-nav100 {
+    text-align: center;
+}
+
+ul#tabs-nav100 li {
+    margin-right: 2px;
+    padding: 6px 6px;
+    cursor: pointer;
+    font-size: 18px;
+    background: #e5e8ee;
+    float: left;
+    width: 19%;
+    text-align: center;
+    min-width: 230px;
+}
+
+ul#tabs-nav100 li {
+    background: #ccc !important;
+    border: 2px solid #ccc;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: auto 30px;
+    width: inherit;
+    max-width: inherit;
+    float: none;
+    display: inline-block;
+}
+
+ul#tabs-nav100 li.active, ul#tabs-nav100 li:hover {
+    outline: 0;
+    background-color: #18ba60 !important;
+    border-color: #18ba60 !important;
+}
+
+ul#tabs-nav100 li.active, ul#tabs-nav100 li:hover {
+    outline: 0;
+    background-color: #18ba60 !important;
+    border-color: #18ba60 !important;
+}
+#tabs-nav100 li a {
+    color: #333;
+}
+#tabs-nav100 li.active a, #tabs-nav100 li:hover a {
+    color: #fff;
+}
+
+@media only screen and (max-width: 991px){
+    ul#tabs-nav100 li {
+        background: #ccc !important;
+        border: 2px solid #ccc;
+        display: inline-block;
+        padding: 10px 10px;
+        margin: auto 5px;
+        width: inherit;
+        max-width: inherit;
+        float: none;
+        display: inline-block;
+        min-width: 0px;
+    }
 }

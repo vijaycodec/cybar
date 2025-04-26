@@ -5,12 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class L3OverviewSubDescription extends Model
+class L3Overview2_Description extends Model
 {
-
     use HasFactory;
-    protected $fillable = ['l3_content_info_id', 'sub_description', 'overview_subdescription_title'];
 
+    protected $fillable = ['l3_content_info_id','overview2_title','overview2_paragraph1','overview2_paragraph2','overview2_paragraph3','overview2_paragraph4','overview2_paragraph5',];
     
     public function contentInfo()
     {

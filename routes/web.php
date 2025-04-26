@@ -48,6 +48,7 @@ use App\Http\Controllers\frontend\NewsLetteViewsController;
 use App\Http\Controllers\frontend\PodcastController;
 use App\Http\Controllers\backend\podcastController as BackendPodcastController;
 use App\Http\Controllers\backend\programController;
+use App\Http\Controllers\backend\significance2Controller;
 use App\Http\Controllers\backend\significanceController;
 use App\Http\Controllers\frontend\NewsLetterMainController;
 use Illuminate\Support\Facades\Route;
@@ -225,6 +226,14 @@ Route::middleware(['auth', 'admin', 'prevent_history'])->group(function () {
     Route::put('significance/update/{id}', [significanceController::class, 'update'])->name('significance.update');
     Route::delete('significance/delete/{id}', [significanceController::class, 'destroy'])->name('significance.destroy');
 
+    //Significance2-sub category Routes
+    route::get('/significance2/list', [significance2Controller::class, 'index'])->name('significance2.list');
+    route::get('/significance2/create', [significance2Controller::class, 'create'])->name('significance2.create');
+    route::post('/significance2/store', [significance2Controller::class, 'store'])->name('significance2.store');
+    Route::get('/significance2/show/{id}', [significance2Controller::class, 'show'])->name('significance2.show');
+    route::get('/significance2/edit/{id}', [significance2Controller::class, 'edit'])->name('significance2.edit');
+    Route::put('significance2/update/{id}', [significance2Controller::class, 'update'])->name('significance2.update');
+    Route::delete('significance2/delete/{id}', [significance2Controller::class, 'destroy'])->name('significance2.destroy');
 
     //Program-sub category Routes
     route::get('/program/list', [programController::class, 'index'])->name('program.list');
@@ -234,7 +243,6 @@ Route::middleware(['auth', 'admin', 'prevent_history'])->group(function () {
     route::get('/program/edit/{id}', [programController::class, 'edit'])->name('program.edit');
     Route::put('program/update/{id}', [programController::class, 'update'])->name('program.update');
     Route::delete('program/delete/{id}', [programController::class, 'destroy'])->name('program.destroy');
-
 
     //coursefeature-sub category Routes
     route::get('/coursefeature/list', [coursrfeaturesController::class, 'index'])->name('coursefeature.list');
@@ -281,13 +289,11 @@ Route::middleware(['auth', 'admin', 'prevent_history'])->group(function () {
     Route::put('faq/update/{id}', [faqController::class, 'update'])->name('faq.update');
     Route::delete('faq/delete/{id}', [faqController::class, 'destroy'])->name('faq.destroy');
 
-
     Route::middleware(['auth'])->group(function () {
         Route::get('/change-password', [ChangePasswordController::class, 'showChangePasswordForm'])->name('password.change');
         Route::post('/change-password', [ChangePasswordController::class, 'updatePassword'])->name('password.update');
     });
 });
-
 
 Route::middleware(['FrameGuard'])->group(function () {
     Route::get('/', [homeController::class, 'index'])->name('home');
