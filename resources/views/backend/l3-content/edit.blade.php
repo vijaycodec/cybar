@@ -140,6 +140,7 @@
                                     'industries' => 'Industries',
                                     'cyberwind' => 'Why Cyberwind',
                                     'testimonials' => 'Testimonials',
+                                    'blog' => 'blog',
                                     'faqs' => 'FAQs',
                                     'overview2' => 'overview2',
                                     'overview15' => 'overview15',
