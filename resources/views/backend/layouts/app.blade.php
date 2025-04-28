@@ -403,8 +403,15 @@
                                                 <div class="text">Significance List</div>
                                             </a>
                                         </li>
-            
-            
+                                    </ul>
+
+
+                                    <ul class="sub-menu">
+                                        <li class="sub-menu-item">
+                                            <a href="{{ route('significance2.list') }}" class="">
+                                                <div class="text">Significance2 List</div>
+                                            </a>
+                                        </li>
                                     </ul>
 
                                     <ul class="sub-menu">
@@ -413,10 +420,6 @@
                                                 <div class="text">Program List</div>
                                             </a>
                                         </li>
-            
-            
-                                        
-            
                                     </ul>
 
                                     <ul class="sub-menu">
@@ -425,10 +428,6 @@
                                                 <div class="text">CourseFeature List</div>
                                             </a>
                                         </li>
-            
-            
-                                       
-            
                                     </ul>
 
                                     <ul class="sub-menu">
@@ -437,10 +436,6 @@
                                                 <div class="text">Industry List</div>
                                             </a>
                                         </li>
-            
-            
-                                       
-            
                                     </ul>
 
                                     <ul class="sub-menu">
@@ -449,9 +444,6 @@
                                                 <div class="text">Cyberwind List</div>
                                             </a>
                                         </li>
-            
-                                        
-            
                                     </ul>
 
                                     <ul class="sub-menu">
@@ -460,9 +452,6 @@
                                                 <div class="text">Blog List</div>
                                             </a>
                                         </li>
-            
-                                       
-            
                                     </ul>
 
                                     <ul class="sub-menu">
@@ -471,9 +460,6 @@
                                                 <div class="text">Faq List</div>
                                             </a>
                                         </li>
-            
-                                       
-            
                                     </ul>
 
                                 </li>

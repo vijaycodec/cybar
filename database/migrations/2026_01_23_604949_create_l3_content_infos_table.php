@@ -21,17 +21,37 @@ return new class extends Migration
             $table->text('l3_layout_program')->nullable();
             $table->string('images')->nullable(); 
             $table->string('brochure_pdf')->nullable();
+
             //overview section columns
             $table->text('overview_title')->nullable();
-            $table->text('overview_description')->nullable();  //   Overview description
+            $table->text('overview_description')->nullable(); 
+            $table->text('overview_description1')->nullable();
+            $table->text('overview_description2')->nullable();
+            $table->text('overview_description3')->nullable();
+            $table->text('overview_description4')->nullable(); //   Overview description
+
+            //overview16 section columns
+            $table->text('overview16_title')->nullable();
+            $table->text('overview16_short_descriptions')->nullable();  
+            $table->text('overview16_long_descriptions')->nullable();  
+
+             //overview17 section columns
+             $table->text('overview17_descriptions')->nullable();
+
+            //overview sub description title section columns
+            $table->text('overview3_title')->nullable();
+            
             //significance section columns
             $table->integer('significance_category_type')->nullable();  //  Significance Category Name
-            $table->longText('significance_description')->nullable();  //   Significance description
+            $table->longText('significance_description')->nullable();  //   Significance description  
             $table->text('significance_short_description')->nullable();  //   Significance description
             //course features section columns
             $table->integer('course_feature_type')->nullable();  //  Course Feature Category Name
             $table->longText('course_feature_description')->nullable();  // course Feature Description
             $table->longText('course_feature_short_description')->nullable();  // course Feature Description
+            
+            //significance2 section columns
+            $table->text('significance2_category_type')->nullable();
 
             //cyberwind section columns
             $table->integer('cyberwind_type')->nullable();  //  Cyberwind Category Name
@@ -41,6 +61,10 @@ return new class extends Migration
             //industry section columns
             $table->integer('industry_type')->nullable();  // Industry Category Name
             $table->text('industry_description')->nullable();  //   industry description
+
+            //industry section columns
+            $table->text('industry2_description')->nullable();  //   industry description
+            $table->text('industry2_testimonial_name')->nullable();  //   industry description
             //faq section columns
             $table->unsignedBigInteger('faq_category_id')->nullable(); // Foreign key to faq_categories
             //Blog section columns

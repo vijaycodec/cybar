@@ -10,12 +10,18 @@ use App\Models\CyberwindCategory;
 use App\Models\CyberwindTitle;
 use App\Models\FaqCategory;
 use App\Models\FaqSubCategory;
+use App\Models\Industry2Title;
 use App\Models\IndustryCategory;
 use App\Models\IndustryTitle;
 use App\Models\L3ContentInfo;
+use App\Models\L3Overview2_Description;
+use App\Models\L3Overview2SubDescription;
 use App\Models\L3OverviewSubDescription;
+use App\Models\Overview15;
 use App\Models\ProgramCategory;
 use App\Models\ProgramSubCategory;
+use App\Models\Significance2;
+use App\Models\Significance2Category;
 use App\Models\SignificanceCategory;
 use App\Models\SignificanceTitle;
 use App\Models\TestimonialDetails;
@@ -48,6 +54,7 @@ class l3_contentController extends Controller
 
         $page_categories = $data['page_categories'];
         $significanceCategories = $data['significanceCategories'];
+        $significance2Categories = $data['significance2Categories'];
         $courseFeatureCategories = $data['courseFeatureCategories'];
         $cyberwindCategories = $data['cyberwindCategories'];
         $industryCategories = $data['industryCategories'];
@@ -58,6 +65,7 @@ class l3_contentController extends Controller
         return view('backend.l3-content.create', compact(
             'page_categories',
             'significanceCategories',
+            'significance2Categories',
             'courseFeatureCategories',
             'cyberwindCategories',
             'industryCategories',
@@ -84,52 +92,59 @@ class l3_contentController extends Controller
             ->orderBy('id', 'desc')
             ->get();
 
-            $courseFeatureCategories = CourseFeatureCategory::where('page_category_id', $validated['page_category_id'])
+        $significance2Categories = Significance2Category::where('page_category_id', $validated['page_category_id'])
             ->where('category_id', $validated['category_id'])
             ->where('sub_category_id', $validated['sub_category_Id'])
             ->orderBy('id', 'desc')
             ->get();
 
-            $programCategories = ProgramCategory::where('page_category_id', $validated['page_category_id'])
+        $courseFeatureCategories = CourseFeatureCategory::where('page_category_id', $validated['page_category_id'])
             ->where('category_id', $validated['category_id'])
             ->where('sub_category_id', $validated['sub_category_Id'])
             ->orderBy('id', 'desc')
             ->get();
 
-            $cyberwindCategories = CyberwindCategory::where('page_category_id', $validated['page_category_id'])
+        $programCategories = ProgramCategory::where('page_category_id', $validated['page_category_id'])
             ->where('category_id', $validated['category_id'])
             ->where('sub_category_id', $validated['sub_category_Id'])
             ->orderBy('id', 'desc')
             ->get();
 
-            $industryCategories = IndustryCategory::where('page_category_id', $validated['page_category_id'])
+        $cyberwindCategories = CyberwindCategory::where('page_category_id', $validated['page_category_id'])
             ->where('category_id', $validated['category_id'])
             ->where('sub_category_id', $validated['sub_category_Id'])
             ->orderBy('id', 'desc')
             ->get();
 
-            $industryCategories = IndustryCategory::where('page_category_id', $validated['page_category_id'])
+        $industryCategories = IndustryCategory::where('page_category_id', $validated['page_category_id'])
             ->where('category_id', $validated['category_id'])
             ->where('sub_category_id', $validated['sub_category_Id'])
             ->orderBy('id', 'desc')
             ->get();
 
-            $faqCategories = FaqCategory::where('page_category_id', $validated['page_category_id'])
+        $industryCategories = IndustryCategory::where('page_category_id', $validated['page_category_id'])
             ->where('category_id', $validated['category_id'])
             ->where('sub_category_id', $validated['sub_category_Id'])
             ->orderBy('id', 'desc')
             ->get();
 
-            $blogCategories = BlogCategory::where('page_category_id', $validated['page_category_id'])
+        $faqCategories = FaqCategory::where('page_category_id', $validated['page_category_id'])
             ->where('category_id', $validated['category_id'])
             ->where('sub_category_id', $validated['sub_category_Id'])
             ->orderBy('id', 'desc')
             ->get();
 
-            // dd($programCategories);
+        $blogCategories = BlogCategory::where('page_category_id', $validated['page_category_id'])
+            ->where('category_id', $validated['category_id'])
+            ->where('sub_category_id', $validated['sub_category_Id'])
+            ->orderBy('id', 'desc')
+            ->get();
+
+        // dd($programCategories);
         return response()->json([
             'l3_categories' => $l3categories,
             'significance_categories' => $significanceCategories,
+            'significance2_categories' => $significance2Categories,
             'courseFeatureCategories' => $courseFeatureCategories,
             'programCategories' => $programCategories,
             'cyberwindCategories' => $cyberwindCategories,
@@ -150,18 +165,43 @@ class l3_contentController extends Controller
             'sub_category_id'  => 'required',
             'l3_category_id'   => 'required',
             'l3_layout_type'   => 'nullable',
-            
+
         ];
 
         switch ($request->l3_layout_type) {
             case 'overview':
                 $rules['overview_title'] = 'required|String';
-                $rules['overview_description'] = 'required|string';
+
+                break;
+
+            case 'overview2':
+                $rules['overview2_paragraph1'] = 'required|string';
+
+                break;
+
+            case 'overview15':
+                $rules['overview15_title'] = 'required|String';
+                $rules['overview15_descriptions'] = 'required|string';
+                break;
+
+            case 'overview16':
+                $rules['overview16_short_descriptions'] = 'required|string';
+                $rules['overview16_long_descriptions'] = 'required|string';
+                break;
+
+            case 'overview17':
+                $rules['overview17_descriptions'] = 'required|string';
                 break;
 
             case 'significance':
                 $rules['significance_description'] = 'required|string';
                 $rules['significance_type'] = 'required|integer';
+                break;
+
+            case 'significance2':
+                $rules['significance2_short_description'] = 'required|string';
+                $rules['significance2_long_description'] = 'required|string';
+                $rules['significance2_type'] = 'required|integer';
                 break;
 
             case 'coursefeatures':
@@ -177,6 +217,11 @@ class l3_contentController extends Controller
             case 'industries':
                 $rules['industries_description'] = 'required|string';
                 $rules['industries_type'] = 'required|integer';
+                break;
+
+            case 'industries2':
+                $rules['industry2_description'] = 'required|string';
+                $rules['industry2_testimonial_name'] = 'required|string';
                 break;
 
             case 'faqs':
@@ -200,12 +245,11 @@ class l3_contentController extends Controller
                 break;
             case 'program':
                 $rules['program_category_id'] = 'required|exists:program_categories,id';
-                $rules ['l3_layout_program']   = 'nullable';
+                $rules['l3_layout_program']   = 'nullable';
                 break;
         }
 
         $request->validate($rules);
-
         try {
             $this->l3ContentRepository->store($request);
             return redirect()->route('l3-content.create')->with('success', 'Form data saved successfully!');
@@ -236,11 +280,49 @@ class l3_contentController extends Controller
             case 'overview':
                 $rules['overview_title'] = 'required|string';
                 $rules['overview_description'] = 'required|string';
+                $rules['overview_description1'] = 'nullable|string';
+                $rules['overview_description2'] = 'nullable|string';
+                $rules['overview_description3'] = 'nullable|string';
+                $rules['overview_description4'] = 'nullable|string';
                 break;
+
+            case 'overview2':
+                $rules['overview2_paragraph1'] = 'required|string';
+                $rules['overview2_paragraph2'] = 'nullable|string';
+                $rules['overview2_paragraph3'] = 'nullable|string';
+                $rules['overview2_paragraph4'] = 'nullable|string';
+                $rules['overview2_paragraph5'] = 'nullable|string';
+                break;
+
+            case 'overview15':
+                $rules['overview15_title'] = 'required|String';
+                $rules['overview15_descriptions'] = 'required|string';
+                break;
+
+            case 'overview16':
+                $rules['overview16_short_descriptions'] = 'required|string';
+                $rules['overview16_long_descriptions'] = 'required|string';
+                break;
+
+            case 'overview17':
+                $rules['overview17_descriptions'] = 'required|string';
+                break;
+
+            case 'overview2subdescription':
+                $rules['overview3_title'] = 'required|String';
+                break;
+
             case 'significance':
                 $rules['significance_description'] = 'required|string';
                 $rules['significance_type'] = 'required|integer';
                 break;
+
+            case 'significance2':
+                $rules['significance2_short_description'] = 'required|string';
+                $rules['significance2_long_description'] = 'required|string';
+                $rules['significance2_type'] = 'required|integer';
+                break;
+
             case 'coursefeatures':
                 $rules['course_feature_description'] = 'required|string';
                 $rules['coursefeature_type'] = 'required|integer';
@@ -253,6 +335,12 @@ class l3_contentController extends Controller
                 $rules['industries_description'] = 'required|string';
                 $rules['industries_type'] = 'required|integer';
                 break;
+
+            case 'industries2':
+                $rules['industry2_description'] = 'required|string';
+                $rules['industry2_testimonial_name'] = 'required|string';
+                break;
+
             case 'faqs':
                 $rules['faq_category_id'] = 'required|exists:faq_categories,id';
                 break;
@@ -271,7 +359,7 @@ class l3_contentController extends Controller
                 break;
             case 'program':
                 $rules['program_category_id'] = 'required|exists:program_categories,id';
-                $rules ['l3_layout_program']   = 'nullable';
+                $rules['l3_layout_program']   = 'nullable';
                 break;
         }
 
@@ -298,26 +386,86 @@ class l3_contentController extends Controller
             }
 
             // Delete associated images if they exist
-            if ($l3ContentInfo->images) {
-                $this->deleteImage($l3ContentInfo->images, 'significance');
+
+            if (!empty($l3ContentInfo->images)) {
+                $filename = basename($l3ContentInfo->images); // Extract only the filename
+
+                $folders = [
+                    'significance',
+                    'coursefeature',
+                    'cyberwind',
+                    'industry',
+                    'incidents',
+                    'cehkit',
+                    'program'
+                ];
+
+                foreach ($folders as $folder) {
+                    $this->deleteImage($filename, $folder);
+                }
             }
 
             if (isset($l3ContentInfo) && !empty($l3ContentInfo->overview_title)) {
                 L3OverviewSubDescription::where('l3_content_info_id', $id)->delete();
             }
+
             if (!empty($l3ContentInfo->program_category_id)) {
                 ProgramSubCategory::where('l3_content_info_id', $id)->delete();
             }
 
             $testimonialRecords = TestimonialDetails::where('l3_content_info_id', $id)->get();
+
             if ($testimonialRecords->isNotEmpty()) {
-                TestimonialDetails::where('l3_content_info_id', $id)->delete();
+                foreach ($testimonialRecords as $testimonial) {
+                    if (!empty($testimonial->images)) {
+                        $this->deleteImage($testimonial->images, 'testimonials'); // Adjust folder name if needed
+                    }
+                    $testimonial->delete();
+                }
             }
 
             $faqRecords = FaqSubCategory::where('l3_content_info_id', $id)->get();
             if ($faqRecords->isNotEmpty()) {
                 FaqSubCategory::where('l3_content_info_id', $id)->delete();
             }
+
+            $L3Overview2_Description = L3Overview2_Description::where('l3_content_info_id', $id)->get();
+            if ($L3Overview2_Description->isNotEmpty()) {
+                L3Overview2_Description::where('l3_content_info_id', $id)->delete();
+            }
+
+            $L3Overview2SubDescription = L3Overview2SubDescription::where('l3_content_info_id', $id)->get();
+            if ($L3Overview2SubDescription->isNotEmpty()) {
+                L3Overview2SubDescription::where('l3_content_info_id', $id)->delete();
+            }
+
+            $significance2Records = Significance2::where('l3_content_info_id', $id)->get();
+
+            if ($significance2Records->isNotEmpty()) {
+                foreach ($significance2Records as $significance2) {
+                    if (!empty($significance2->image)) {
+                        $this->deleteImage($significance2->image, 'significance2');
+                    }
+                    $significance2->delete(); // delete each individually after deleting image
+                }
+            }
+
+            $Industry2Title = Industry2Title::where('l3_content_info_id', $id)->get();
+            if ($Industry2Title->isNotEmpty()) {
+                Industry2Title::where('l3_content_info_id', $id)->delete();
+            }
+
+            $overview15Records = Overview15::where('l3_content_info_id', $id)->get();
+
+            if ($overview15Records->isNotEmpty()) {
+                foreach ($overview15Records as $overview15) {
+                    if (!empty($overview15->image)) {
+                        $this->deleteImage($overview15->image, 'overview15'); // adjust folder name if different
+                    }
+                    $overview15->delete();
+                }
+            }
+
 
             // Finally, delete the main L3Content record
             $l3ContentInfo->delete();

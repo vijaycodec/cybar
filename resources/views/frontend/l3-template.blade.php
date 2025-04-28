@@ -13,7 +13,6 @@
     }
 </style>
 
-
 {{-- @section('content') --}}
 @include ('frontend.layouts.header-css')
 
@@ -22,7 +21,6 @@
 
     @include ('frontend.layouts.l3-header', ['l3Categories' => $l3Categories])
 
-    <!--  -->
     <section class="cn-bg" id="banner">
         <div class="container">
             <div class="row">
@@ -105,101 +103,105 @@
                 <div class="container desktop-view">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="third-content" id="2">
+                            <div  class="third-content" id="2">
                                 @foreach ($l3Categories as $category)
                                     @foreach ($category->contentInfos as $contentInfo)
                                         <!-- Overview Section -->
-                                        @if ($contentInfo->overview_description)
+                                        @if ($contentInfo->overview_title)
                                             <h3> {{ $contentInfo->overview_title }} </h3>
-                                            {!! $contentInfo->overview_description !!}
                                         @endif
+                                        @if ($contentInfo->overview_description)
+                                            {!! $contentInfo->overview_description !!}  <!-- First overview Description -->
+                                       @endif 
+                                       @if ($contentInfo->overview_description1)
+                                            {!! $contentInfo->overview_description1 !!} <!-- Second overview Description -->
+                                       @endif
+                                       @if ($contentInfo->overview_description2)
+                                            {!! $contentInfo->overview_description2 !!} <!-- Third overview Description -->
+                                       @endif
+                                       @if ($contentInfo->overview_description3)
+                                            {!! $contentInfo->overview_description3 !!} <!-- Fourth overview Description -->
+                                       @endif
+                                       @if ($contentInfo->overview_description4)
+                                            {!! $contentInfo->overview_description4 !!}<!-- Fifth overview Description -->
+                                       @endif
                                     @endforeach
                                 @endforeach
-                                {{-- <a href="javascript:void(0)" class="btn-show">Read More ...</a>
-                                <div class="content-hide"> --}}
-
-                                    <div class="container">
-                                        <div class="row overview-content">
+                                <div class="container">
+                                    <div class="row overview-content">
+                                        <!--  -->
+                                        <div class="col-md-12">
+                                            <div class="third-content smple-box1">
+                                                {{-- <h4>What Technical Skills you Learn</h4> --}}
+                                            </div>
                                             <!--  -->
-                                            <div class="col-md-12">
-                                                <div class="third-content smple-box1">
-                                                    {{-- <h4>What Technical Skills you Learn</h4> --}}
-                                                </div>
-                                                <!--  -->
-                                                <div class="info-graphic">
-                                                    <div class="row info-graphic-row">
-                                                        <div class="col-md-12">
-                                                            <!-- desktop start  -->
-                                                            <div class="desktop-view">
-                                                                @foreach ($l3Categories as $category)
-                                                                                                    @foreach ($category->contentInfos as $contentInfo)
-                                                                                                                                        <!-- Checking and Displaying Sub Descriptions -->
-                                                                                                                                        @if ($contentInfo->overviewSubDescriptions->isNotEmpty())
-                                                                                                                                                                            @foreach ($contentInfo->overviewSubDescriptions as $index => $subDescription)
-                                                                                                                                                                                                                <div class="wwyl-row">
+                                            <div class="info-graphic">
+                                                <div class="row info-graphic-row">
+                                                    <div class="col-md-12">
+                                                        <!-- desktop start  -->
+                                                        <div class="desktop-view">
+                                                            @foreach ($l3Categories as $category)
+                                                                @foreach ($category->contentInfos as $contentInfo)
+                                                                        <!-- Checking and Displaying Sub Descriptions -->
+                                                                    @if ($contentInfo->overviewSubDescriptions->isNotEmpty())
+                                                                        @foreach ($contentInfo->overviewSubDescriptions as $index => $subDescription)
+                                                                            <div class="wwyl-row">
 
-                                                                                                                                                                                                                    <!-- Dynamic Class for wwyl-box -->
-                                                                                                                                                                                                                    @php
-                                                                                                                                                                                                                        $boxClasses = [
-                                                                                                                                                                                                                            'wwyl-box', // For 0th index
-                                                                                                                                                                                                                            'wwyl-box orange ', // For 1st index
-                                                                                                                                                                                                                            'wwyl-box purple', // For 2nd index
-                                                                                                                                                                                                                            'wwyl-box color4', // For 3rd index
-                                                                                                                                                                                                                            'wwyl-box green', // For 4th index
-                                                                                                                                                                                                                        ];
+                                                                                <!-- Dynamic Class for wwyl-box -->
+                                                                                @php
+                                                                                    $boxClasses = [
+                                                                                        'wwyl-box', // For 0th index
+                                                                                        'wwyl-box orange ', // For 1st index
+                                                                                        'wwyl-box purple', // For 2nd index
+                                                                                        'wwyl-box color4', // For 3rd index
+                                                                                        'wwyl-box green', // For 4th index
+                                                                                    ];
 
-                                                                                                                                                                                                                        // Use the array index, if index > 4, default to 'wwyl-box'
-                                                                                                                                                                                                                        $boxClass =
-                                                                                                                                                                                                                            $boxClasses[$index] ??
-                                                                                                                                                                                                                            'wwyl-box';
+                                                                                    // Use the array index, if index > 4, default to 'wwyl-box'
+                                                                                    $boxClass =
+                                                                                        $boxClasses[$index] ??
+                                                                                        'wwyl-box';
 
-                                                                                                                                                                                                                        // Circle Class (Same as before)
-                                                                                                                                                                                                                        $circleClasses = [
-                                                                                                                                                                                                                            'wwyl-box-circle', // For 0th index
-                                                                                                                                                                                                                            'wwyl-box-circle orange-circle', // For 1st index
-                                                                                                                                                                                                                            'wwyl-box-circle purple-circle', // For 2nd index
-                                                                                                                                                                                                                            'wwyl-box-circle color4-circle', // For 3rd index
-                                                                                                                                                                                                                            'wwyl-box-circle green-circle', // For 4th index
-                                                                                                                                                                                                                        ];
+                                                                                    // Circle Class (Same as before)
+                                                                                    $circleClasses = [
+                                                                                        'wwyl-box-circle', // For 0th index
+                                                                                        'wwyl-box-circle orange-circle', // For 1st index
+                                                                                        'wwyl-box-circle purple-circle', // For 2nd index
+                                                                                        'wwyl-box-circle color4-circle', // For 3rd index
+                                                                                        'wwyl-box-circle green-circle', // For 4th index
+                                                                                    ];
 
-                                                                                                                                                                                                                        // Circle class for the current index
-                                                                                                                                                                                                                        $circleClass =
-                                                                                                                                                                                                                            $circleClasses[$index] ??
-                                                                                                                                                                                                                            'wwyl-box-circle';
-                                                                                                                                                                                                                    @endphp
+                                                                                    // Circle class for the current index
+                                                                                    $circleClass =
+                                                                                        $circleClasses[$index] ??
+                                                                                        'wwyl-box-circle';
+                                                                                @endphp
 
-                                                                                                                                                                                                                    <div class="{{ $boxClass }}">
-                                                                                                                                                                                                                        <p>
-                                                                                                                                                                                                                            {!! $subDescription->sub_description !!}
-                                                                                                                                                                                                                        </p>
+                                                                                <div class="{{ $boxClass }}">
+                                                                                    <p>
+                                                                                        {!! $subDescription->sub_description !!}
+                                                                                    </p>
 
-                                                                                                                                                                                                                        <!-- Dynamic Circle Class -->
-                                                                                                                                                                                                                        <div class="{{ $circleClass }}">
-                                                                                                                                                                                                                            <span>{{ $index + 1 }}</span>
-                                                                                                                                                                                                                            <!-- Simple Iteration Number -->
-                                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                </div>
-                                                                                                                                                                            @endforeach
-                                                                                                                                        @endif
-                                                                                                    @endforeach
+                                                                                    <!-- Dynamic Circle Class -->
+                                                                                    <div class="{{ $circleClass }}">
+                                                                                        <span>{{ $index + 1 }}</span>
+                                                                                        <!-- Simple Iteration Number -->
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        @endforeach
+                                                                    @endif
                                                                 @endforeach
-                                                            </div>
-                                                            <!--  -->
-                                                            <!-- mobile start -->
-                                                            <!-- mobile end -->
-                                                            <!--  -->
+                                                            @endforeach
                                                         </div>
+                                                        <!--  -->
                                                     </div>
                                                 </div>
-
                                             </div>
+
                                         </div>
                                     </div>
-
-                                    {{--
                                 </div>
-                                <a href="#overview2" class="btn-hide" id="btn-hide1">Hide Content ...</a> --}}
                             </div>
                         </div>
                     </div>
@@ -212,7 +214,7 @@
                         @foreach ($l3Categories as $category)
                             @foreach ($category->contentInfos as $contentInfo)
                                 <!-- Overview Section -->
-                                @if ($contentInfo->overview_description)
+                                @if ($contentInfo->overview_title)
                                     <h3> {{ $contentInfo->overview_title }} </h3>
                                 @endif
                             @endforeach
@@ -220,27 +222,6 @@
 
                         <!-- slider start -->
                         {{-- <div class="mobile-view indu-moblie indu-moblie1 count-navigation">
-                            <div id="owl-demo65" class="owl-carousel owl-theme">
-                                <!--  -->
-                                <div class="item">
-                                    <div class="mobile-cont slider">
-                                        @foreach ($l3Categories as $category)
-                                        @foreach ($category->contentInfos as $contentInfo)
-                                        @if (!empty($contentInfo->overview_description))
-                                        <p>{!! $contentInfo->overview_description !!}</p>
-                                        @endif
-                                        @endforeach
-                                        @endforeach
-                                    </div>
-                                </div>
-                                <!--  -->
-
-
-                            </div>
-
-                            <div id="navigation-count" class="count-nav-box"></div>
-                        </div> --}}
-                        <div class="mobile-view indu-moblie indu-moblie1 count-navigation">
                             <div id="owl-demo65" class="owl-carousel owl-theme">
                                 @foreach ($l3Categories as $category)
                                         @foreach ($category->contentInfos as $contentInfo)
@@ -264,7 +245,30 @@
                                 @endforeach
                             </div>
                             <div id="navigation-count" class="count-nav-box"></div>
+                        </div> --}}
+
+                        <div class="mobile-view indu-moblie indu-moblie1 count-navigation">
+                            <div id="owl-demo65" class="owl-carousel owl-theme">
+                                @foreach ($l3Categories as $category)
+                                    @foreach ($category->contentInfos as $contentInfo)
+                                        @foreach (range(0, 4) as $index)
+                                            @php
+                                                $descriptionField = 'overview_description' . ($index > 0 ? $index : '');
+                                            @endphp
+                                            @if (!empty($contentInfo->$descriptionField))
+                                                <div class="item">
+                                                    <div class="mobile-cont slider">
+                                                        <p>{!! $contentInfo->$descriptionField !!}</p>
+                                                    </div>
+                                                </div>
+                                            @endif
+                                        @endforeach
+                                    @endforeach
+                                @endforeach
+                            </div>
+                            <div id="navigation-count" class="count-nav-box"></div>
                         </div>
+                        
 
                         <!-- slider end -->
                         <h3 class="space1">What Technical Skills you Learn</h3>
@@ -1873,399 +1877,231 @@
                     </div>
                     <!-- mobile start -->
                     <!--  -->
-                </section>
+            </section>
                 <!-- FAQ info End 11 -->
-        @endif
-    @endforeach
-        <!--  -->
+
         <!-- Global Popup fot Testomonials (Only One in the Page) -->
-        <section class="light-grey sample7-line anchor-link space7_1" id="overview1">
+        @elseif ($fieldKey == 'overview2Descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
+        <section class="light-grey sample7-line anchor-link space7_1" id="{{ $slug }}">
             <!--  -->
             <div class="container desktop-view">
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="third-content" id="overview2">
-                            <h3>Certified Ethical Hacking Certification</h3>
-                            <p> A Certified Ethical Hacker (CEH) is a trained professional who legally penetrates
-                                networks and systems
-                                to identify vulnerabilities and weaknesses. Unlike malicious hackers, CEHs operate with
-                                permission and
-                                adhere to ethical guidelines. They utilize the same tools and techniques as
-                                cybercriminals but with the
-                                goal of improving security rather than causing harm. CEHs employ various methods such as
-                                penetration
-                                testing, vulnerability assessments, and social engineering to assess the security
-                                posture of
-                                organizations. By simulating real-world cyberattacks, they help businesses identify and
-                                mitigate potential
-                                risks, thereby strengthening their defenses against malicious intrusions.</p>
-                            <p>To become a Certified Ethical Hacker, individuals typically undergo rigorous training and
-                                pass an
-                                examination to demonstrate their proficiency in ethical hacking techniques and best
-                                practices. This
-                                certification is highly regarded in the cybersecurity industry and is often pursued by
-                                professionals
-                                seeking careers in penetration testing, security analysis, and risk management.</p>
-                            <a href="javascript:void(0)" class="btn-show">Read More ...</a>
-                            <div class="content-hide">
-
-                                <div class="container">
-                                    <div class="row overview-content">
-                                        <!--  -->
-                                        <div class="col-md-12">
-                                            <div class="smple-box1">
-                                                <h4>Certified Ethical Hacker (CEH) Training Overview:</h4>
-                                            </div>
-                                            <div class="smple-box1">
-                                                <ul class="code-ul">
-                                                    <li>
-                                                        <p><b>Skill Development:</b> Acquire skills in ethical hacking,
-                                                            penetration testing, and
-                                                            vulnerability assessment to strengthen cybersecurity
-                                                            defenses.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><b>Hands-On Labs:</b> Engage in practical, real-world
-                                                            scenarios through hands-on labs,
-                                                            simulating cyber threats and attacks.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><b>Certification Preparation:</b> Receive comprehensive
-                                                            training to prepare for the CEH
-                                                            certification exam, validating your expertise in ethical
-                                                            hacking practices.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><b>Current Threat Landscape:</b> Stay updated on the latest
-                                                            cyber threats, vulnerabilities,
-                                                            and
-                                                            defensive strategies in today's rapidly evolving digital
-                                                            landscape.</p>
-                                                    </li>
-                                                </ul>
+                    @foreach ($l3Categories as $category)
+                        @foreach ($category->contentInfos as $info)
+                            @if ($info->l3_layout_type === 'overview2' && $info->overview2Descriptions->count())
+                                <div class="col-md-12">
+                                    <div class="third-content" id="overview2">
+                                        @foreach ($info->overview2Descriptions as $desc)
+                                            @if($desc->overview2_title)
+                                                <h3>{{ $desc->overview2_title }}</h3>
+                                            @endif
+                                            @if($desc->overview2_paragraph1)
+                                              <p>{!! $desc->overview2_paragraph1 !!}</p>
+                                            @endif 
+                                        <a href="javascript:void(0)" class="btn-show">Read More ...</a>
+                                        <div class="content-hide">
+                                            <div class="container">
+                                                <div class="row overview-content">
+                                                    <div class="col-md-12">
+                                                        <div class="smple-box1">
+                                                            <p>{!! $desc->overview2_paragraph2 !!}</p>
+                                                            <p>{!! $desc->overview2_paragraph3 !!}</p>
+                                                            <p>{!! $desc->overview2_paragraph4 !!}</p>
+                                                            <p>{!! $desc->overview2_paragraph5 !!}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
+                                        @endforeach
+                                        <a href="#overview2" class="btn-hide" id="btn-hide1">Hide Content ...</a>
                                     </div>
                                 </div>
-                            </div>
-                            <a href="#overview2" class="btn-hide" id="btn-hide1">Hide Content ...</a>
-                        </div>
-                    </div>
+                            @endif
+                        @endforeach
+                    @endforeach
                 </div>
             </div>
             <!--  -->
             <div class="container mobile-view">
-                <!--  -->
-                <div class="third-content">
-                    <h3>Certified Ethical Hacking Certification</h3>
-                    <!-- slider start -->
-                    <div class="mobile-view indu-moblie indu-moblie1 count-navigation">
-                        <div id="owl-demo65" class="owl-carousel owl-theme">
-                            <!--  -->
-                            <div class="item">
-                                <div class="mobile-cont">
-                                    <p>A Certified Ethical Hacker (CEH) is a trained professional who legally penetrates
-                                        networks and
-                                        systems to identify vulnerabilities and weaknesses. Unlike malicious hackers,
-                                        CEHs operate with
-                                        permission and adhere to ethical guidelines. They utilize the same tools and
-                                        techniques as
-                                        cybercriminals but with the goal of improving security rather than causing harm.
-                                        CEHs employ various
-                                        methods such as penetration testing, vulnerability assessments, and social
-                                        engineering to assess the
-                                        security posture of organizations.</p>
-                                </div>
-                            </div>
-                            <!--  -->
-
-                            <!--  -->
-                            <div class="item">
-                                <div class="mobile-cont">
-                                    <p>A Certified Ethical Hacker (CEH) is a trained professional who legally penetrates
-                                        networks and
-                                        systems to identify vulnerabilities and weaknesses. Unlike malicious hackers,
-                                        CEHs operate with
-                                        permission and adhere to ethical guidelines. They utilize the same tools and
-                                        techniques as
-                                        cybercriminals but with the goal of improving security rather than causing harm.
-                                        CEHs employ various
-                                        methods such as penetration testing, vulnerability assessments, and social
-                                        engineering to assess the
-                                        security posture of organizations.</p>
-                                </div>
-                            </div>
-                            <!--  -->
-
-                            <!--  -->
-                            <div class="item">
-                                <div class="mobile-cont">
-                                    <p>A Certified Ethical Hacker (CEH) is a trained professional who legally penetrates
-                                        networks and
-                                        systems to identify vulnerabilities and weaknesses. Unlike malicious hackers,
-                                        CEHs operate with
-                                        permission and adhere to ethical guidelines. They utilize the same tools and
-                                        techniques as
-                                        cybercriminals but with the goal of improving security rather than causing harm.
-                                        CEHs employ various
-                                        methods such as penetration testing, vulnerability assessments, and social
-                                        engineering to assess the
-                                        security posture of organizations.</p>
-                                </div>
-                            </div>
-                            <!--  -->
-
-                            <!--  -->
-                            <div class="item">
-                                <div class="mobile-cont">
-                                    <p>A Certified Ethical Hacker (CEH) is a trained professional who legally penetrates
-                                        networks and
-                                        systems to identify vulnerabilities and weaknesses. Unlike malicious hackers,
-                                        CEHs operate with
-                                        permission and adhere to ethical guidelines. They utilize the same tools and
-                                        techniques as
-                                        cybercriminals but with the goal of improving security rather than causing harm.
-                                        CEHs employ various
-                                        methods such as penetration testing, vulnerability assessments, and social
-                                        engineering to assess the
-                                        security posture of organizations.</p>
-                                </div>
-                            </div>
-                            <!--  -->
-                        </div>
-
-                        <div id="navigation-count" class="count-nav-box"></div>
-                    </div>
-                    <!-- slider end -->
-                </div>
-                <!--  -->
-            </div>
-            <!--  -->
-        </section>
-
-        <section class="light-grey sample7-line anchor-link space7_1" id="overview1">
-            <!--  -->
-            <div class="container desktop-view">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="third-content" id="overview2">
-                            <div class="container">
-                                <div class="row overview-content">
-                                    <div class="third-content smple-box1">
-                                        <h4>What Technical Skills you Learn</h4>
-                                        <p>In the process of becoming a Certified Ethical Hacker (CEH), individuals
-                                            acquire a diverse
-                                            set of technical skills essential for effectively identifying and mitigating
-                                            cybersecurity
-                                            risks. These skills include:</p>
-                                    </div>
-                                    <!--  -->
-                                    <div class="info-graphic">
-                                        <div class="row info-graphic-row">
-                                            <div class="col-md-12">
-                                                <!-- desktop start  -->
-                                                <div class="desktop-view">
-                                                    <div class="wwyl-row">
-                                                        <div class="wwyl-box">
-                                                            <p> Ethical Hacking: CEH imparts practical skills in ethical
-                                                                hacking, enabling
-                                                                professionals to identify and exploit vulnerabilities,
-                                                                assess security postures, and
-                                                                strengthen defenses against cyber threats. </p>
-                                                            <div class="wwyl-box-circle">
-                                                                <span>01</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="wwyl-box orange ">
-                                                            <p> Penetration Testing: CEH equips individuals with the
-                                                                expertise to conduct
-                                                                penetration
-                                                                tests, simulating cyber attacks to evaluate system
-                                                                vulnerabilities and assess the
-                                                                effectiveness of security measures. </p>
-                                                            <div class="wwyl-box-circle orange-circle">
-                                                                <span>02</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="wwyl-box purple">
-                                                            <p> Incident Response: CEH provides knowledge in incident
-                                                                handling and response,
-                                                                enabling
-                                                                professionals to effectively manage and mitigate the
-                                                                impact of cybersecurity
-                                                                incidents,
-                                                                minimizing downtime and data loss. </p>
-                                                            <div class="wwyl-box-circle purple-circle">
-                                                                <span>03</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="wwyl-box color4">
-                                                            <p> Network Security: CEH covers network security concepts,
-                                                                offering skills in securing
-                                                                networks, configuring firewalls, and implementing
-                                                                intrusion detection systems to
-                                                                protect
-                                                                against unauthorized access and data breaches. </p>
-                                                            <div class="wwyl-box-circle color4-circle">
-                                                                <span>04</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="wwyl-box green">
-                                                            <p>Forensic Analysis: CEH includes training in digital
-                                                                forensics, allowing professionals
-                                                                to investigate and analyze cyber incidents, gather
-                                                                evidence, and support legal actions
-                                                                against cybercriminals.</p>
-                                                            <div class="wwyl-box-circle green-circle">
-                                                                <span>05</span>
-                                                            </div>
+                @foreach ($l3Categories as $category)
+                    @foreach ($category->contentInfos as $info)
+                        @if ($info->l3_layout_type === 'overview2' && $info->overview2Descriptions->count())
+                            <div class="third-content">
+                                <h3>{{ $info->overview2Descriptions->first()->overview2_title ?? 'Overview' }}</h3>
+                                <!-- Slider start -->
+                                <div class="mobile-view indu-moblie indu-moblie1 count-navigation">
+                                    <div id="owl-overview2" class="owl-carousel owl-theme">
+                                        @foreach ($info->overview2Descriptions as $desc)
+                                            @foreach (range(1, 5) as $i)
+                                                @php
+                                                    $paragraph = $desc->{'overview2_paragraph' . $i};
+                                                @endphp
+                                                @if (!empty($paragraph))
+                                                    <div class="item">
+                                                        <div class="mobile-cont">
+                                                            <p>{!! $paragraph !!}</p>
                                                         </div>
                                                     </div>
-                                                    <!-- desktop end -->
+                                                @endif
+                                            @endforeach
+                                        @endforeach
+                                    </div>
+                                    <div id="navigation-count-overview2" class="count-nav-box"></div>
+                                </div>
+                                <!-- Slider end -->
+                            </div>
+                        @endif
+                    @endforeach
+                @endforeach
+            </div>
+            
+        </section>
+        @elseif ($fieldKey == 'overview2SubDescriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
+        <section class="light-grey sample7-line anchor-link space7_1" id="{{ $slug }}">
+            @foreach ($l3Categories as $category)
+               @foreach ($category->contentInfos as $contentInfo)
+                   @if ($contentInfo->l3_layout_type === 'overview2subdescription')
+                        <!-- Desktop View -->
+                        <div class="container desktop-view">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="third-content">
+                                        @if($contentInfo->overview3_title)
+                                            <h4>{!! $contentInfo->overview3_title !!}</h4>
+                                        @endif
+                                        <div class="info-graphic">
+                                            <div class="row info-graphic-row">
+                                                <div class="col-md-12">
+                                                    <div class="desktop-view">
+                                                        <div class="wwyl-row">
+                                                            @foreach ($contentInfo->overview2SubDescriptions as $key => $sub)
+                                                                @php
+                                                                    $colors = ['', 'orange', 'purple', 'color4', 'green'];
+                                                                    $color = $colors[$key % count($colors)];
+                                                                @endphp
+                                                                <div class="wwyl-box {{ $color }}">
+                                                                    <p>{!! $sub->overview2_sub_description !!}</p>
+                                                                    <div class="wwyl-box-circle {{ $color ? $color . '-circle' : '' }}">
+                                                                        <span>{{ str_pad($key + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                                                                    </div>
+                                                                </div>
+                                                            @endforeach
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>   
+                        <!-- Mobile View -->
+                        <div class="container mobile-view">
+                            <div class="third-content">
+                                @if($contentInfo->overview3_title)
+                                    <h3 class="space1">{!! $contentInfo->overview3_title !!}</h3>
+                                @endif
+                                <div class="mobile-view indu-moblie count-navigation">
+                                    <div id="owl-overview2subdescription" class="owl-carousel owl-theme">
+                                        @foreach ($contentInfo->overview2SubDescriptions as $key => $sub)
+                                            @php
+                                                $colors = ['', 'orange', 'purple', 'color4', 'green'];
+                                                $color = $colors[$key % count($colors)];
+                                            @endphp
+                                            <div class="wwyl-box {{ $color }}">
+                                                <p>{!! $sub->overview2_sub_description !!}</p>
+                                                <div class="wwyl-box-circle {{ $color ? $color . '-circle' : '' }}">
+                                                    <span>{{ str_pad($key + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                    <div id="navigation-overview2subdescription" class="count-nav-box"></div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <!--  -->
-            <div class="container mobile-view">
-                <!--  -->
-                <div class="third-content">
-                    <h3 class="space1">What Technical Skills you Learn</h3>
-                    <!-- mobile start -->
-                    <div class="mobile-view indu-moblie count-navigation">
-                        <div id="owl-demo64" class="owl-carousel owl-theme">
-                            <!--  -->
-                            <div class="wwyl-box">
-                                <p> Ethical Hacking: CEH imparts practical skills in ethical hacking, enabling
-                                    professionals to identify and exploit vulnerabilities, assess security postures, and
-                                    strengthen defenses against cyber threats. </p>
-                                <div class="wwyl-box-circle">
-                                    <span>01</span>
-                                </div>
-                            </div>
-                            <div class="wwyl-box orange ">
-                                <p> Penetration Testing: CEH equips individuals with the expertise to conduct
-                                    penetration
-                                    tests, simulating cyber attacks to evaluate system vulnerabilities and assess the
-                                    effectiveness of security measures. </p>
-                                <div class="wwyl-box-circle orange-circle">
-                                    <span>02</span>
-                                </div>
-                            </div>
-                            <div class="wwyl-box purple">
-                                <p> Incident Response: CEH provides knowledge in incident handling and response,
-                                    enabling
-                                    professionals to effectively manage and mitigate the impact of cybersecurity
-                                    incidents,
-                                    minimizing downtime and data loss. </p>
-                                <div class="wwyl-box-circle purple-circle">
-                                    <span>03</span>
-                                </div>
-                            </div>
-                            <div class="wwyl-box color4">
-                                <p> Network Security: CEH covers network security concepts, offering skills in securing
-                                    networks, configuring firewalls, and implementing intrusion detection systems to
-                                    protect
-                                    against unauthorized access and data breaches. </p>
-                                <div class="wwyl-box-circle color4-circle">
-                                    <span>04</span>
-                                </div>
-                            </div>
-                            <div class="wwyl-box green">
-                                <p>Forensic Analysis: CEH includes training in digital forensics, allowing professionals
-                                    to investigate and analyze cyber incidents, gather evidence, and support legal
-                                    actions
-                                    against cybercriminals.</p>
-                                <div class="wwyl-box-circle green-circle">
-                                    <span>05</span>
-                                </div>
-                            </div>
-                            <!--  -->
-                        </div>
-                        <div id="navigation-count1" class="count-nav-box"></div>
-                    </div>
-                    <!-- mobile end -->
-                </div>
-                <!--  -->
-            </div>
-            <!--  -->
+                    @endif
+                @endforeach
+            @endforeach
         </section>
-
-        <section class="sec-wrap-cod-2" style="background: #dceff6;">
+    
+        @elseif ($fieldKey == 'industry2_description' && $contents->contains(fn($info) => $info->{$fieldKey}))
+        <section class="sec-wrap-cod-2" style="background: #dceff6;" id="{{ $slug }}">
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <h3 class="temp-head"> Don't just take our word for it</h3>
-                    </div>
-
-                    <div class="col-sm-4 testi-temp">
-                        <p> When we were managing Apache Spark and Kafka in-house, we had issues with corrupt messages
-                            and
-                            the pipeline failing. With Cloudera’s expertise, we’ve been able to solve those problems.
-                        </p>
-
-                        <p class="sign"> Jeremy Kayne, CTO, Bidtellect.</p>
-                    </div>
-
-                    <div class="col-sm-4 testi-temp">
-                        <p> When we were managing Apache Spark and Kafka in-house, we had issues with corrupt messages
-                            and
-                            the pipeline failing. With Cloudera’s expertise, we’ve been able to solve those problems.
-                        </p>
-
-                        <p class="sign"> Jeremy Kayne, CTO, Bidtellect</p>
-                    </div>
-
-                    <div class="col-sm-4 testi-temp">
-                        <p> When we were managing Apache Spark and Kafka in-house, we had issues with corrupt messages
-                            and
-                            the pipeline failing. With Cloudera’s expertise, we’ve been able to solve those problems.
-                        </p>
-
-                        <p class="sign"> Jeremy Kayne, CTO, Bidtellect</p>
+                        <!-- Dynamic Title -->
+                        @foreach ($l3Categories as $category)
+                            @foreach ($category->contentInfos as $contentInfo)
+                                @if (!empty($contentInfo->industry2title))
+                                    <h3 class="temp-head">{!! $contentInfo->industry2title->title !!}</h3>
+                                    @break  <!-- We only need one title -->
+                                @endif
+                            @endforeach
+                        @endforeach
                     </div>
                 </div>
+        
+                @php
+                    $testimonials = collect();
+                    foreach ($l3Categories as $category) {
+                        foreach ($category->contentInfos as $contentInfo) {
+                            if (!empty($contentInfo->industry2_description)) {
+                                $testimonials->push($contentInfo);
+                            }
+                        }
+                    }
+                @endphp
 
-
+                @foreach ($testimonials->chunk(3) as $testimonialChunk)
+                    <div class="row">
+                        @foreach ($testimonialChunk as $contentInfo)
+                            <div class="col-sm-4 testi-temp">
+                                <p>{{ $contentInfo->industry2_description }}</p>
+                                <p class="sign">{{ $contentInfo->industry2_testimonial_name }}</p>
+                            </div>
+                        @endforeach
+                    </div>
+                @endforeach
             </div>
         </section>
-
-        <section class="sec-wrap-cod-2"
-            style="background-image:url('assets/images/image-bg-top.jpg'); background-repeat: repeat;">
+        @elseif ($fieldKey == 'overview15s' && $contents->contains(fn($info) => $info->{$fieldKey}))
+        <section class="sec-wrap-cod-2" style="background-image:url('assets/images/image-bg-top.jpg'); background-repeat: repeat;" id="{{ $slug }}">
             <div class="container">
-                <div class="row">
-                    <div class="col-sm-7 mid-banner temp-3-sec">
-                        <h3 class="temp-head">Cloudera Cares. Do-gooders unite.</h3>
-
-                        <p>Cloudera Cares is the arm of the company that does the really good stuff. We've donated
-                            software,
-                            professional service hours, hosted hackathons for nonprofits, cleaned up parks, served food
-                            to
-                            the less fortunate, and everything in between. To date, Clouderans have donated more than
-                            3,900
-                            hours to doing good.</p>
-                    </div>
-                    <div class="col-sm-5 mid-banner temp-3-sec">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiN6qXhtzwuv1MSV5CY9tQrL9s4juOLQ4B8XaTuh3oXnkoLB3T"
-                            target="_blank">
-                    </div>
-                </div>
+                @foreach ($l3Categories as $category)
+                    @foreach ($category->contentInfos as $contentInfo)
+                        @foreach ($contentInfo->overview15s as $overview)
+                            <div class="row">
+                                <div class="col-sm-7 mid-banner temp-3-sec">
+                                    <h3 class="temp-head">{{ $overview->overview15_title }}</h3>
+                                    <p>{!! $overview->overview15_descriptions !!}</p>
+                                </div>
+                                <div class="col-sm-5 mid-banner temp-3-sec">
+                                    @if($overview->image)
+                                        <img src="{{ asset('storage/uploads/frontend/l3_template/overview15/' . $overview->image) }}" alt="Overview Image" class="img-fluid">
+                                    @endif
+                                </div>
+                            </div>
+                        @endforeach
+                    @endforeach
+                @endforeach
             </div>
         </section>
-
-        <section class="why-codec codec-page-section anchor-link" id="Market-dymanics">
+        @elseif ($fieldKey == 'significance2s' && $contents->contains(fn($info) => $info->{$fieldKey}))
+        <section class="why-codec codec-page-section anchor-link"  id="{{ $slug }}">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 cn-title">
-                        <h2>CHALLENGES</h2>
-                        <p>The technology – still been unexplored meet different challenges. The challenges act as the
-                            force that obligates us to evolve</p>
+                        @foreach ($l3Categories as $category)
+                            @foreach ($category->contentInfos as $info)
+                                @foreach ($info->significance2s as $significance)
+                                    @if ($significance->significance2_title)
+                                        {!! $significance->significance2_title !!}
+                                    @endif
+                                @endforeach
+                            @endforeach
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -2273,424 +2109,142 @@
                 <div class="row">
                     <div class="cn-tabs1">
                         <ul id="tabs-nav100">
-                            <li class="active"><a href="#tab11"> Industry <br>Challenges</a></li>
-                            <li><a href="#tab12">Technological <br>Challenges</a></li>
-                            <li><a href="#tab13">Operational <br>Challenges</a></li>
-                            <!--  <li><a href="#tab14">Working autonomy </a></li>
-               <li><a href="#tab15">Digital reflection </a></li> -->
+                            @foreach ($l3Categories as $category)
+                                @foreach ($category->contentInfos as $contentInfo)
+                                    @if ($contentInfo->significance2Category)
+                                            <li class="{{ $loop->first ? 'active' : ' ' }}"><a href="#{{ strtolower(str_replace([' ', '&', ','], '-', $contentInfo->significance2Category->name)) }}"> {{ $contentInfo->significance2Category->name }}</a></li>
+                                    @endif
+                                @endforeach
+                            @endforeach
                         </ul> <!-- END tabs-nav -->
                         <div id="tabs-content100">
-                            <div id="tab11" class="tab-content100" style="display: block;">
-                                <div class="container">
-                                    <div class="row rowp">
-                                        <div class="col-md-5">
-                                            <div class="template12-img">
-                                                <img src="assets/images/Industry Challenges.jpg">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-7">
-                                            <div class="red-title">
-                                                <h3 style="color: #000"> Infrastructure</h3>
-                                                <p>Replacing outdated infrastructure with traditional legacy systems
-                                                    continues to be a major challenge for most organizations. As
-                                                    discussed earlier Artificial Intelligence based solutions have a
-                                                    high level of computational speed, which means replacing the
-                                                    existing infrastructure i.e. an integrating AI have cost attached in
-                                                    various aspects.</p>
-                                                <h3 style="color: #000"> Computing Power</h3>
-                                                <p>The amount of power these algorithms use is a factor keeping most
-                                                    developers away. Machine Learning and Deep Learning are the
-                                                    stepping-stones of this Artificial Intelligence, and they demand an
-                                                    ever-increasing number of cores and GPUs to work efficiently.
-                                                    Although, due to the availability of Cloud Computing and parallel
-                                                    processing systems developers work on AI systems more effectively,
-                                                    they come at a price.</p>
-                                                <!-- 
-               <h3 style="color: #000">	Data Privacy and security </h3>
-               
-               <p>Data is the sole of AI, the applications depend on massive volumes of data to learn and make intelligent decisions. Almost all the time the data millions of users generate data around the globe and often the data is sensitive and personal in nature. This systematic learning of these ML systems can become prone to data breach and identity theft. </p>
-               
-               <h3 style="color: #000">	Moral and Ethics</h3>
-               
-               <p>With respect to AI bigger decision-making role, ethical concerns mount the technology.  Questions about the opacity, unpredictability and the need for large datasets to train the technologies give rise to ethical dilemma. </p> -->
-                                                <a href="javascript:void(0);" class="btn-show" id="btn-show6">Read More
-                                                    ...</a>
-                                                <div class="content-hide" id="content-hide6">
-                                                    <h3 style="color: #000"> Data Privacy and security </h3>
-                                                    <p>Data is the sole of AI, the applications depend on massive
-                                                        volumes of data to learn and make intelligent decisions. Almost
-                                                        all the time the data millions of users generate data around the
-                                                        globe and often the data is sensitive and personal in nature.
-                                                        This systematic learning of these ML systems can become prone to
-                                                        data breach and identity theft. </p>
-                                                    <h3 style="color: #000"> Moral and Ethics</h3>
-                                                    <p>With respect to AI bigger decision-making role, ethical concerns
-                                                        mount the technology. Questions about the opacity,
-                                                        unpredictability and the need for large datasets to train the
-                                                        technologies give rise to ethical dilemma. </p>
+                            @foreach ($l3Categories as $category)
+                               @foreach ($category->contentInfos as $info)
+                                   @foreach ($info->significance2s as $significance)
+                                        <div id="{{ strtolower(str_replace([' ', '&', ','], '-', $info->significance2Category->name)) }}" class="tab-content100" style="display: block;">
+                                            <div class="container">
+                                                <div class="row rowp">
+                                                    <div class="col-md-5">
+                                                        <div class="template12-img">
+                                                            <img src="{{ asset('storage/uploads/frontend/l3_template/significance2/' . $significance->image) }}" alt="significance2 Image" class="img-fluid">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-7">
+                                                        <div class="red-title">
+                                                                @if ($significance->significance2_short_description)
+                                                                    {!! $significance->significance2_short_description !!}
+                                                                @endif
+                                                            <a href="javascript:void(0);" class="btn-show" id="btn-show6">Read More
+                                                                ...</a>
+                                                            <div class="content-hide" id="content-hide6">
+                                                                @if ($significance->significance2_long_description)
+                                                                    {!! $significance->significance2_long_description !!}
+                                                                @endif
+                                                            </div>
+                                                            <a href="javascript:void(0);" class="btn-hide" id="btn-hide6">Hide
+                                                                Content ...</a>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <a href="javascript:void(0);" class="btn-hide" id="btn-hide6">Hide
-                                                    Content ...</a>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="tab12" class="tab-content100" style="display: none;">
-                                <div class="container">
-                                    <div class="row rowp">
-                                        <div class="col-md-5">
-                                            <div class="template12-img">
-                                                <img src="assets/images/Technological Challenges.jpg">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-7">
-                                            <div class="red-title">
-                                                <h3 style="color: #000"> Case-specific learning </h3>
-                                                <p>Humans can transfer learning from one context to another similar
-                                                    context. Artificial intelligence continues to have difficulties
-                                                    carrying its experiences from one set of circumstances to another.
-                                                    As mentioned earlier the system that plays poker cannot play
-                                                    solitaire or chess. The system that detects fraud cannot drive a car
-                                                    or give you legal advice. In fact, an AI system that detects health
-                                                    care fraud cannot accurately detect tax fraud or guarantee claims
-                                                    fraud.</p>
-                                                <h3 style="color: #000"> Algorithm Bias </h3>
-                                                <p>The good or bad nature of an AI system really depends on the data
-                                                    used for training. Currently getting unbiased data to train the
-                                                    system is still a challenge.The problem is that the everyday data
-                                                    the organizations collect is poor and holds no significance of its
-                                                    own and is biased. The bias is towards any religion, ethnicity,
-                                                    gender, community, and other racial biases. Number of factors such
-                                                    as the way of collecting data, the probing methods etc. cause this
-                                                    bias.</p>
-                                                <!-- 	<h3 style="color: #000">		Data Scarcity  </h3>
-               <p>The quality of the system relies heavily on the data given to the system for learning purpose. Now, although there is data in abundance quality is still a problem i.e. it is not data scarcity that the challenge but scarcity of quality data. In addition, some types of data may are still difficult to obtain, e.g. clinical data that would allow more accurate treatment outcomes predictions. Although the possibility of synthesizing data and organizations investing in design methodologies and focusing on how to create AI models learn despite the scarcity of labelled data is a ray of hope</p> -->
-                                                <a href="javascript:void(0);" class="btn-show" id="btn-show7">Read More
-                                                    ...</a>
-                                                <div class="content-hide" id="content-hide7">
-                                                    <h3 style="color: #000"> Data Scarcity </h3>
-                                                    <p>The quality of the system relies heavily on the data given to the
-                                                        system for learning purpose. Now, although there is data in
-                                                        abundance quality is still a problem i.e. it is not data
-                                                        scarcity that the challenge but scarcity of quality data. In
-                                                        addition, some types of data may are still difficult to obtain,
-                                                        e.g. clinical data that would allow more accurate treatment
-                                                        outcomes predictions. Although the possibility of synthesizing
-                                                        data and organizations investing in design methodologies and
-                                                        focusing on how to create AI models learn despite the scarcity
-                                                        of labelled data is a ray of hope</p>
-                                                </div>
-                                                <a href="javascript:void(0);" class="btn-hide" id="btn-hide7">Hide
-                                                    Content ...</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="tab13" class="tab-content100" style="display: none;">
-                                <div class="container">
-                                    <div class="row rowp">
-                                        <div class="col-md-5">
-                                            <div class="template12-img">
-                                                <img src="assets/images/Operational Challenges.jpg">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-7">
-                                            <div class="red-title">
-                                                <h3 style="color: #000"> Limited Knowledge</h3>
-                                                <p>Although there are many places in the market where we can use
-                                                    Artificial Intelligence as a better alternative to the traditional
-                                                    systems. The real problem is the knowledge of Artificial
-                                                    Intelligence. Apart from technology enthusiasts, college students,
-                                                    and researchers, there are only a limited number of people who are
-                                                    aware of the potential of AI. In addition, In order to develop a
-                                                    successful AI solution, you need both the technical knowledge and
-                                                    business understanding. Unfortunately, it is often one or the other
-                                                </p>
-                                                <h3 style="color: #000"> Customer Support </h3>
-                                                <p>Due to the immediacy that accompanies the majority of the market
-                                                    place, the customer experience has become a vital part of every
-                                                    company’s success. The limited knowledge directly complements
-                                                    customer support. Simply put, we do not have enough people who know
-                                                    how to operate machines that think and learn by themselves.</p>
-                                                <!-- 	<a href="javascript:void(0);" class="btn-show" id="btn-show8">Read More ...</a>
-               <div class="content-hide" id="content-hide8">
-               
-                   <p>Learn more about the developments that are helping to shape the IoT’s evolution, and explore relevant news and trends.</p>
-               
-                   
-               
-               </div>
-               
-               <a href="javascript:void(0);" class="btn-hide" id="btn-hide8">Hide Content ...</a> -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="tab14" class="tab-content100" style="display: none;">
-                                <div class="container">
-                                    <div class="row rowp">
-                                        <div class="col-md-5">
-                                            <div class="template12-img">
-                                                <img src="assets/images/tab-thumbnail-automating-trust-2.webp">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-7">
-                                            <div class="red-title">
-                                                <h3 style="color: #000">Technologies: AI, Blockchain, IoT</h3>
-                                                <p>To automate trust, some Essential Eight technologies — such as
-                                                    blockchain, IoT and AI — work together to ensure the authenticity of
-                                                    data, verify identities and enable secure multi-party transactions.
-                                                    For example, IoT sensors can track a pallet of food from the farm to
-                                                    the warehouse to the store, verifying the entire supply chain. This
-                                                    authenticates where a shipment is along the route, as well as the
-                                                    conditions during each leg of the journey: Is the shipping container
-                                                    becoming too hot, too cold or too humid? This information is
-                                                    recorded in a secure, unchangeable blockchain. Together, IoT and
-                                                    blockchain create an immutable supply chain, ensuring that buyers
-                                                    are getting an authentic product that has not been damaged along the
-                                                    way. These technologies can also verify whether a product that
-                                                    contains hazardous materials has been disposed of correctly and
-                                                    safely.</p>
-                                                <!-- 	<a href="javascript:void(0);" class="btn-show" id="btn-show9">Read More ...</a>
-               <div class="content-hide" id="content-hide9">
-               
-                   <p>Learn more about the developments that are helping to shape the IoT’s evolution, and explore relevant news and trends.</p>
-               
-                   
-               
-               </div>
-               
-               <a href="javascript:void(0);" class="btn-hide" id="btn-hide9">Hide Content ...</a> -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="tab15" class="tab-content100" style="display: none;">
-                                <div class="container">
-                                    <div class="row rowp">
-                                        <div class="col-md-5">
-                                            <div class="template12-img">
-                                                <img src="assets/images/tab-thumbnail-automating-trust-2.webp">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-7">
-                                            <div class="red-title">
-                                                <h3 style="color: #000">Technologies: AI, Blockchain, IoT</h3>
-                                                <p>To automate trust, some Essential Eight technologies — such as
-                                                    blockchain, IoT and AI — work together to ensure the authenticity of
-                                                    data, verify identities and enable secure multi-party transactions.
-                                                    For example, IoT sensors can track a pallet of food from the farm to
-                                                    the warehouse to the store, verifying the entire supply chain. This
-                                                    authenticates where a shipment is along the route, as well as the
-                                                    conditions during each leg of the journey: Is the shipping container
-                                                    becoming too hot, too cold or too humid? This information is
-                                                    recorded in a secure, unchangeable blockchain. Together, IoT and
-                                                    blockchain create an immutable supply chain, ensuring that buyers
-                                                    are getting an authentic product that has not been damaged along the
-                                                    way. These technologies can also verify whether a product that
-                                                    contains hazardous materials has been disposed of correctly and
-                                                    safely.</p>
-                                                <!-- 	<a href="javascript:void(0);" class="btn-show" id="btn-show10">Read More ...</a>
-               <div class="content-hide" id="content-hide10">
-               
-                   <p>Learn more about the developments that are helping to shape the IoT’s evolution, and explore relevant news and trends.</p>
-               
-                   
-               
-               </div>
-               
-               <a href="javascript:void(0);" class="btn-hide" id="btn-hide10">Hide Content ...</a> -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- END tabs-content -->
-                            </div> <!-- END tabs -->
+                                    @endforeach
+                                 @endforeach
+                             @endforeach
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section class="empower-industry-bg codec-page-section anchor-link" id="zigzag" style="padding-bottom: 20px !important; padding-top: 40px !important;">
+        
+        @elseif ($fieldKey == 'overview16_short_descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
+        <section class="empower-industry-bg codec-page-section anchor-link"  style="padding-bottom: 20px !important; padding-top: 40px !important;" id="{{ $slug }}">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 cn-title">
-                        <!-- <h1>Industries we cater</h1> -->
-                        <h2>Encompasses integrated RPA capabilities<br> assisted by a wider suite of automation
-                            technologies such as Smart
-                            Optical Character Recognition (OCR)</h2>
-                    </div>
-                </div>
-            </div>
-            <!--ist start-->
-            <div class="container">
-                <div class="row rowp">
-                    <div class="col-md-5">
-                        <div class="template12-img">
-                            <img src="assets/images/intelligent-automation.webp">
-                        </div>
-                    </div>
-                    <div class="col-md-7">
-                        <div class="red-title">
-                            <h3 style="color: #000">Intelligent automation</h3>
-                            <p>Intelligent Automation is the use of software bots with Artificial Intelligence
-                                and Machine Learning capabilities to handle manual and repetitive processes
-                                efficiently by mimicking user actions. With Intelligent Automation solutions,
-                                enterprises can quickly accelerate their automation across both transactional
-                                and judgement-intensive activities. IA encompasses integrated RPA capabilities
-                                assisted by a wider suite of automation technologies such as Smart Optical
-                                Character Recognition (OCR), Natural Language Processing/Generation (NLP/NLG),
-                                chatbots and analytics.</p>
-                            <a href="javascript:void(0);" class="btn-show" id="btn-show5">Read More ...</a>
-                            <div class="content-hide" id="content-hide5">
-                                <p>Learn more about the developments that are helping to shape the IoT’s
-                                    evolution, and explore relevant news and trends.</p>
-                            </div>
-                            <a href="javascript:void(0);" class="btn-hide" id="btn-hide5">Hide Content ...</a>
-                        </div>
+                        @foreach ($l3Categories as $category)
+                            @foreach ($category->contentInfos as $contentInfo)
+                                @if (!empty($contentInfo->overview16_title))
+                                    <h2>{!! $contentInfo->overview16_title !!}</h2>
+                                @endif
+                            @endforeach
+                        @endforeach
                     </div>
                 </div>
             </div>
 
-            <!--2nd start-->
-            <div class="container">
-                <div class="row rowp">
-                    <div class="col-md-7">
-                        <div class="red-title">
-                            <h3 style="color: #000">Intelligent automation</h3>
-                            <p>Intelligent Automation is the use of software bots with Artificial Intelligence
-                                and Machine Learning capabilities to handle manual and repetitive processes
-                                efficiently by mimicking user actions. With Intelligent Automation solutions,
-                                enterprises can quickly accelerate their automation across both transactional
-                                and judgement-intensive activities. IA encompasses integrated RPA capabilities
-                                assisted by a wider suite of automation technologies such as Smart Optical
-                                Character Recognition (OCR), Natural Language Processing/Generation (NLP/NLG),
-                                chatbots and analytics.</p>
-                            <a href="javascript:void(0);" class="btn-show" id="btn-show5">Read More ...</a>
-                            <div class="content-hide" id="content-hide5">
-                                <p>Learn more about the developments that are helping to shape the IoT’s
-                                    evolution, and explore relevant news and trends.</p>
-
+            @php $index = 0; @endphp
+            @foreach ($l3Categories as $category)
+                @foreach ($category->contentInfos as $contentInfo)
+                    @if (!empty($contentInfo->overview16_short_descriptions) || !empty($contentInfo->overview16_long_descriptions))
+                        <div class="container">
+                            <div class="row rowp">
+                                @if ($index % 2 == 0)
+                                    {{-- Even Index: Image Left, Content Right --}}
+                                    <div class="col-md-5">
+                                        <div class="template12-img">
+                                            <img src="{{ $contentInfo->images ? asset('storage/uploads/frontend/l3_template/overview16/' . $contentInfo->images) : asset('assets/images/intelligent-automation.webp') }}" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="red-title">
+                                            {!! $contentInfo->overview16_short_descriptions !!}
+                                            @if (!empty($contentInfo->overview16_long_descriptions))
+                                                <a href="javascript:void(0);" class="btn-show" id="btn-show-{{ $index }}">Read More ...</a>
+                                                <div class="content-hide" id="content-hide-{{ $index }}">
+                                                    {!! $contentInfo->overview16_long_descriptions !!}
+                                                </div>
+                                                <a href="javascript:void(0);" class="btn-hide" id="btn-hide-{{ $index }}">Hide Content ...</a>
+                                            @endif
+                                        </div>
+                                    </div>
+                                @else
+                                    {{-- Odd Index: Content Left, Image Right --}}
+                                    <div class="col-md-7">
+                                        <div class="red-title">
+                                            {!! $contentInfo->overview16_short_descriptions !!}
+                                            @if (!empty($contentInfo->overview16_long_descriptions))
+                                                <a href="javascript:void(0);" class="btn-show" id="btn-show-{{ $index }}">Read More ...</a>
+                                                <div class="content-hide" id="content-hide-{{ $index }}">
+                                                    {!! $contentInfo->overview16_long_descriptions !!}
+                                                </div>
+                                                <a href="javascript:void(0);" class="btn-hide" id="btn-hide-{{ $index }}">Hide Content ...</a>
+                                            @endif
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="template12-img">
+                                            <img src="{{ $contentInfo->images ? asset('storage/uploads/frontend/l3_template/overview16/' . $contentInfo->images) : asset('assets/images/intelligent-automation.webp') }}" alt="">
+                                        </div>
+                                    </div>
+                                @endif
                             </div>
-                            <a href="javascript:void(0);" class="btn-hide" id="btn-hide5">Hide Content ...</a>
                         </div>
-                    </div>
-                    <div class="col-md-5">
-                        <div class="template12-img">
-                            <img src="assets/images/intelligent-automation.webp">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--3rd start-->
-            <div class="container">
-                <div class="row rowp">
-                    <div class="col-md-5">
-                        <div class="template12-img">
-                            <img src="assets/images/intelligent-automation.webp">
-                        </div>
-                    </div>
-                    <div class="col-md-7">
-                        <div class="red-title">
-                            <h3 style="color: #000">Intelligent automation</h3>
-                            <p>Intelligent Automation is the use of software bots with Artificial Intelligence
-                                and Machine Learning capabilities to handle manual and repetitive processes
-                                efficiently by mimicking user actions. With Intelligent Automation solutions,
-                                enterprises can quickly accelerate their automation across both transactional
-                                and judgement-intensive activities. IA encompasses integrated RPA capabilities
-                                assisted by a wider suite of automation technologies such as Smart Optical
-                                Character Recognition (OCR), Natural Language Processing/Generation (NLP/NLG),
-                                chatbots and analytics.</p>
-                            <a href="javascript:void(0);" class="btn-show" id="btn-show5">Read More ...</a>
-                            <div class="content-hide" id="content-hide5">
-                                <p>Learn more about the developments that are helping to shape the IoT’s
-                                    evolution, and explore relevant news and trends.</p>
-                            </div>
-                            <a href="javascript:void(0);" class="btn-hide" id="btn-hide5">Hide Content ...</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        @php $index++; @endphp
+                    @endif
+                @endforeach
+            @endforeach
         </section>
-
-        <section class="light-grey sample7-line anchor-link space7_1" id="overview1">
-            <!--  -->
+        @elseif ($fieldKey == 'overview17_descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
+        <section class="light-grey sample7-line anchor-link space7_1"  id="{{ $slug }}">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="third-content" id="overview2">
-                            <h3>Certified Ethical Hacking Certification</h3>
-                            <p> A Certified Ethical Hacker (CEH) is a trained professional who legally penetrates
-                                networks and systems
-                                to identify vulnerabilities and weaknesses. Unlike malicious hackers, CEHs operate with
-                                permission and
-                                adhere to ethical guidelines. They utilize the same tools and techniques as
-                                cybercriminals but with the
-                                goal of improving security rather than causing harm. CEHs employ various methods such as
-                                penetration
-                                testing, vulnerability assessments, and social engineering to assess the security
-                                posture of
-                                organizations. By simulating real-world cyberattacks, they help businesses identify and
-                                mitigate potential
-                                risks, thereby strengthening their defenses against malicious intrusions.</p>
-                            <p>To become a Certified Ethical Hacker, individuals typically undergo rigorous training and
-                                pass an
-                                examination to demonstrate their proficiency in ethical hacking techniques and best
-                                practices. This
-                                certification is highly regarded in the cybersecurity industry and is often pursued by
-                                professionals
-                                seeking careers in penetration testing, security analysis, and risk management.</p>
-                                <div class="container">
-                                    <div class="row overview-content">
-                                        <!--  -->
-                                        <div class="col-md-12">
-                                            <div class="smple-box1">
-                                                <h4>Certified Ethical Hacker (CEH) Training Overview:</h4>
-                                            </div>
-                                            <div class="smple-box1">
-                                                <ul class="code-ul">
-                                                    <li>
-                                                        <p><b>Skill Development:</b> Acquire skills in ethical hacking,
-                                                            penetration testing, and
-                                                            vulnerability assessment to strengthen cybersecurity
-                                                            defenses.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><b>Hands-On Labs:</b> Engage in practical, real-world
-                                                            scenarios through hands-on labs,
-                                                            simulating cyber threats and attacks.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><b>Certification Preparation:</b> Receive comprehensive
-                                                            training to prepare for the CEH
-                                                            certification exam, validating your expertise in ethical
-                                                            hacking practices.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><b>Current Threat Landscape:</b> Stay updated on the latest
-                                                            cyber threats, vulnerabilities,
-                                                            and
-                                                            defensive strategies in today's rapidly evolving digital
-                                                            landscape.</p>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="third-content" id="">
+                            @foreach ($l3Categories as $category)
+                            @foreach ($category->contentInfos as $contentInfo)
+                                @if (!empty($contentInfo->overview17_descriptions))
+                                    <h2>{!! $contentInfo->overview17_descriptions !!}</h2>
+                                @endif
+                            @endforeach
+                        @endforeach
                         </div>
                     </div>
                 </div>
             </div>
-            <!--  -->
         </section>
-
+     @endif
+    @endforeach
         <div class="popup" id="global-testimonial-popup">
             <div class="popup-box popup-testo">
                 <div class="testo-popup">
@@ -2711,9 +2265,7 @@
                 <a href="javascript:void(0)" class="close_21 close_1"> Close</a>
             </div>
         </div>
-
         <!-- Global Popup for mobile course -features read more (Only One in the Page) start-->
-
         <div class="popup " id="mobilecf1" style="display: none;">
             <div class="popup-box ">
                 <div class="mobile-cf-popup">
@@ -2729,7 +2281,6 @@
                 <a href="javascript:void(0)" class="bottom-close-d close_1"><i class="fa fa-times"></i></a>
             </div>
         </div>
-
         <!-- Global Popup for mobile course -features read more (Only One in the Page) End-->
         <a href="#main-content-body" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
         <a href="#back" class="backButton"><i class="fa fa-arrow-left"></i></a>

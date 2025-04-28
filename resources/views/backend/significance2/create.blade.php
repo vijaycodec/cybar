@@ -1,36 +1,39 @@
 @extends('backend.layouts.app')
-
 @section('content')
-    <!-- Include Summernote CSS and JS -->
-
-
+    <!-- main-content-wrap -->
     <div class="main-content-inner">
         <div class="main-content-wrap">
             <div class="flex items-center flex-wrap justify-between gap20 mb-27">
-                <h3>L3 Category Information</h3>
+                <h3>Significance2 infomation</h3>
                 <ul class="breadcrumbs flex items-center flex-wrap justify-start gap10">
                     <li>
                         <a href="#">
                             <div class="text-tiny">Dashboard</div>
                         </a>
                     </li>
-                    <li><i class="icon-chevron-right"></i></li>
-                    <li><a href="#">
-                            <div class="text-tiny">L3-Category</div>
-                        </a></li>
-                    <li><i class="icon-chevron-right"></i></li>
                     <li>
-                        <div class="text-tiny">New L3-Category</div>
+                        <i class="icon-chevron-right"></i>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="text-tiny">Significance2</div>
+                        </a>
+                    </li>
+                    <li>
+                        <i class="icon-chevron-right"></i>
+                    </li>
+                    <li>
+                        <div class="text-tiny">New Significance2</div>
                     </li>
                 </ul>
             </div>
-
+            <!-- new-category -->
             <div class="wg-box">
-                <form class="form-new-brand form-style-1" action="{{ route('l3-category.store') }}" method="POST"
+                <form class="form-new-brand form-style-1" action="{{ route('significance2.store') }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
-                    <a class="tf-button style-1 w208" style="padding-left: 75px;"
-                        href="{{ route('l3-category.list') }}">Back</a>
+                    <a class="tf-button style-1 w208" style="padding-left: 75px;" href=" {{ route('significance2.list') }}">
+                        Back</a>
 
                     <!-- Page Category -->
                     <fieldset class="name">
@@ -45,50 +48,30 @@
 
                     <!-- Category (Dependent on Page Category) -->
                     <fieldset class="name">
-                        <div class="body-title">Select a Category <span class="tf-color-1">*</span></div>
+                        <div class="body-title">Select Course Category <span class="tf-color-1">*</span></div>
                         <select class="flex-grow" name="category_id" id="category" required>
-                            <option value="" disabled selected>Select category</option>
+                            <option value="" disabled selected>Select Category</option>
                         </select>
                     </fieldset>
-                    
+
                     <!-- Sub Category (Dependent on Category) -->
                     <fieldset class="name">
-                        <div class="body-title">Select a Category <span class="tf-color-1">*</span></div>
+                        <div class="body-title">Select Sub Category <span class="tf-color-1">*</span></div>
                         <select class="flex-grow" name="sub_category_id" id="sub_category" required>
-                            <option value="" disabled selected>Select Sub category</option>
+                            <option value="" disabled selected>Select Sub Category</option>
                         </select>
                     </fieldset>
 
-                    <!-- Sub-Category  -->
                     <fieldset class="name">
-                        <div class="body-title">L3 Category Name <span class="tf-color-1">*</span></div>
-                        <input class="flex-grow" type="text" placeholder="Category Name" name="l3_category_name" tabindex="0"
-                            value="{{ old('l3_category') }}" aria-required="true" required="">
+                        <div class="body-title"> Sub Category Name <span class="tf-color-1">*</span></div>
+                        <input class="flex-grow" type="text" placeholder="Sub Category Name" id="categorySelect"
+                            name="name" tabindex="0" value="{{ old('name') }}" aria-required="true" required="">
                     </fieldset>
 
                     <fieldset class="name">
-                        <div class="body-title">Select a Prefer Category Type<span class="tf-color-1">*</span></div>
-                        <select class="flex-grow" name="field_key" id="" required>
-                            <option value="overview_description">overview</option>
-                            <option value="significanceCategory">significance</option>
-                            <option value="programCategory">program</option>
-                            <option value="coursefeatureCategory">coursefeatures</option>
-                            <option value="kit_title">cehkit</option>
-                            <option value="incident_description">incidents</option>
-                            <option value="industryCategory">industries</option>
-                            <option value="cyberwindCategory">whycyberwind</option>
-                            <option value="testimonials">testimonials</option>
-                            <option value="blogCategory">blog</option>
-                            <option value="FaqCategory">faqs</option>
-                            
-                            <option value="overview2Descriptions">Section12</option>
-                            <option value="overview2SubDescriptions">Section13</option>
-                            <option value="industry2_description">Section14</option>
-                            <option value="overview15s">Section15</option>
-                            <option value="overview16_short_descriptions">Section16</option>
-                            <option value="overview17_descriptions">Section17</option>
-                            <option value="significance2s">Section18</option>
-                        </select>
+                        <div class="body-title">Slug <span class="tf-color-1">*</span></div>
+                        <input class="flex-grow" id="categorySlug" type="text" placeholder="Category Name" name="slug"
+                            tabindex="0" value="{{ old('slug') }}" aria-required="true" required readonly>
                     </fieldset>
 
                     <div class="bot">
@@ -97,18 +80,37 @@
                     </div>
                 </form>
             </div>
-
         </div>
     </div>
+    <!-- /main-content-wrap -->
 @endsection
+
 @push('scripts')
+    <script>
+        $(document).ready(function() {
+            function slugify(text) {
+                return text.toString().toLowerCase()
+                    .trim()
+                    .replace(/\s+/g, '-') // Replace spaces with hyphens
+                    .replace(/[^\w\-]+/g, '') // Remove all non-word characters
+                    .replace(/\-\-+/g, '-'); // Replace multiple hyphens with single hyphen
+            }
+
+            $('#categorySelect').on('input', function() {
+                var title = $(this).val();
+                var slug = slugify(title);
+                $('#categorySlug').val(slug); // Set generated slug in the input field
+            });
+        });
+    </script>
+
     <script>
         $(document).ready(function() {
             // Load Categories when Page Category changes
             $('#page_category').change(function() {
                 var pageCategoryId = $(this).val();
                 $('#category').html(
-                '<option value="" disabled selected>Loading...</option>'); // Loading text
+                    '<option value="" disabled selected>Loading...</option>'); // Loading text
 
                 $.ajax({
                     url: "{{ route('l3-get-categories') }}",
@@ -132,7 +134,7 @@
                 var categoryId = $(this).val();
                 var pageCategoryId = $('#page_category').val(); // Get selected Page Category ID
                 $('#sub_category').html(
-                '<option value="" disabled selected>Loading...</option>'); // Loading text
+                    '<option value="" disabled selected>Loading...</option>'); // Loading text
 
                 $.ajax({
                     url: "{{ route('l3-get-subcategories') }}",
@@ -144,7 +146,7 @@
                     success: function(data) {
                         $('#sub_category').html(
                             '<option value="" disabled selected>Select Sub category</option>'
-                            );
+                        );
                         $.each(data, function(key, value) {
                             $('#sub_category').append('<option value="' + value.id +
                                 '">' + value.sub_category + '</option>');
