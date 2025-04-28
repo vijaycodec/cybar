@@ -103,7 +103,7 @@
                 <div class="container desktop-view">
                     <div class="row">
                         <div class="col-md-12">
-                            <div  class="third-content" id="2">
+                            <div class="third-content" id="2">
                                 @foreach ($l3Categories as $category)
                                     @foreach ($category->contentInfos as $contentInfo)
                                         <!-- Overview Section -->
@@ -111,20 +111,20 @@
                                             <h3> {{ $contentInfo->overview_title }} </h3>
                                         @endif
                                         @if ($contentInfo->overview_description)
-                                            {!! $contentInfo->overview_description !!}  <!-- First overview Description -->
-                                       @endif 
-                                       @if ($contentInfo->overview_description1)
+                                            {!! $contentInfo->overview_description !!} <!-- First overview Description -->
+                                        @endif
+                                        @if ($contentInfo->overview_description1)
                                             {!! $contentInfo->overview_description1 !!} <!-- Second overview Description -->
-                                       @endif
-                                       @if ($contentInfo->overview_description2)
+                                        @endif
+                                        @if ($contentInfo->overview_description2)
                                             {!! $contentInfo->overview_description2 !!} <!-- Third overview Description -->
-                                       @endif
-                                       @if ($contentInfo->overview_description3)
+                                        @endif
+                                        @if ($contentInfo->overview_description3)
                                             {!! $contentInfo->overview_description3 !!} <!-- Fourth overview Description -->
-                                       @endif
-                                       @if ($contentInfo->overview_description4)
+                                        @endif
+                                        @if ($contentInfo->overview_description4)
                                             {!! $contentInfo->overview_description4 !!}<!-- Fifth overview Description -->
-                                       @endif
+                                        @endif
                                     @endforeach
                                 @endforeach
                                 <div class="container">
@@ -141,57 +141,57 @@
                                                         <!-- desktop start  -->
                                                         <div class="desktop-view">
                                                             @foreach ($l3Categories as $category)
-                                                                @foreach ($category->contentInfos as $contentInfo)
-                                                                        <!-- Checking and Displaying Sub Descriptions -->
-                                                                    @if ($contentInfo->overviewSubDescriptions->isNotEmpty())
-                                                                        @foreach ($contentInfo->overviewSubDescriptions as $index => $subDescription)
-                                                                            <div class="wwyl-row">
+                                                                                            @foreach ($category->contentInfos as $contentInfo)
+                                                                                                                            <!-- Checking and Displaying Sub Descriptions -->
+                                                                                                                            @if ($contentInfo->overviewSubDescriptions->isNotEmpty())
+                                                                                                                                                            @foreach ($contentInfo->overviewSubDescriptions as $index => $subDescription)
+                                                                                                                                                                                            <div class="wwyl-row">
 
-                                                                                <!-- Dynamic Class for wwyl-box -->
-                                                                                @php
-                                                                                    $boxClasses = [
-                                                                                        'wwyl-box', // For 0th index
-                                                                                        'wwyl-box orange ', // For 1st index
-                                                                                        'wwyl-box purple', // For 2nd index
-                                                                                        'wwyl-box color4', // For 3rd index
-                                                                                        'wwyl-box green', // For 4th index
-                                                                                    ];
+                                                                                                                                                                                                <!-- Dynamic Class for wwyl-box -->
+                                                                                                                                                                                                @php
+                                                                                                                                                                                                    $boxClasses = [
+                                                                                                                                                                                                        'wwyl-box', // For 0th index
+                                                                                                                                                                                                        'wwyl-box orange ', // For 1st index
+                                                                                                                                                                                                        'wwyl-box purple', // For 2nd index
+                                                                                                                                                                                                        'wwyl-box color4', // For 3rd index
+                                                                                                                                                                                                        'wwyl-box green', // For 4th index
+                                                                                                                                                                                                    ];
 
-                                                                                    // Use the array index, if index > 4, default to 'wwyl-box'
-                                                                                    $boxClass =
-                                                                                        $boxClasses[$index] ??
-                                                                                        'wwyl-box';
+                                                                                                                                                                                                    // Use the array index, if index > 4, default to 'wwyl-box'
+                                                                                                                                                                                                    $boxClass =
+                                                                                                                                                                                                        $boxClasses[$index] ??
+                                                                                                                                                                                                        'wwyl-box';
 
-                                                                                    // Circle Class (Same as before)
-                                                                                    $circleClasses = [
-                                                                                        'wwyl-box-circle', // For 0th index
-                                                                                        'wwyl-box-circle orange-circle', // For 1st index
-                                                                                        'wwyl-box-circle purple-circle', // For 2nd index
-                                                                                        'wwyl-box-circle color4-circle', // For 3rd index
-                                                                                        'wwyl-box-circle green-circle', // For 4th index
-                                                                                    ];
+                                                                                                                                                                                                    // Circle Class (Same as before)
+                                                                                                                                                                                                    $circleClasses = [
+                                                                                                                                                                                                        'wwyl-box-circle', // For 0th index
+                                                                                                                                                                                                        'wwyl-box-circle orange-circle', // For 1st index
+                                                                                                                                                                                                        'wwyl-box-circle purple-circle', // For 2nd index
+                                                                                                                                                                                                        'wwyl-box-circle color4-circle', // For 3rd index
+                                                                                                                                                                                                        'wwyl-box-circle green-circle', // For 4th index
+                                                                                                                                                                                                    ];
 
-                                                                                    // Circle class for the current index
-                                                                                    $circleClass =
-                                                                                        $circleClasses[$index] ??
-                                                                                        'wwyl-box-circle';
-                                                                                @endphp
+                                                                                                                                                                                                    // Circle class for the current index
+                                                                                                                                                                                                    $circleClass =
+                                                                                                                                                                                                        $circleClasses[$index] ??
+                                                                                                                                                                                                        'wwyl-box-circle';
+                                                                                                                                                                                                @endphp
 
-                                                                                <div class="{{ $boxClass }}">
-                                                                                    <p>
-                                                                                        {!! $subDescription->sub_description !!}
-                                                                                    </p>
+                                                                                                                                                                                                <div class="{{ $boxClass }}">
+                                                                                                                                                                                                    <p>
+                                                                                                                                                                                                        {!! $subDescription->sub_description !!}
+                                                                                                                                                                                                    </p>
 
-                                                                                    <!-- Dynamic Circle Class -->
-                                                                                    <div class="{{ $circleClass }}">
-                                                                                        <span>{{ $index + 1 }}</span>
-                                                                                        <!-- Simple Iteration Number -->
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        @endforeach
-                                                                    @endif
-                                                                @endforeach
+                                                                                                                                                                                                    <!-- Dynamic Circle Class -->
+                                                                                                                                                                                                    <div class="{{ $circleClass }}">
+                                                                                                                                                                                                        <span>{{ $index + 1 }}</span>
+                                                                                                                                                                                                        <!-- Simple Iteration Number -->
+                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                </div>
+                                                                                                                                                                                            </div>
+                                                                                                                                                            @endforeach
+                                                                                                                            @endif
+                                                                                            @endforeach
                                                             @endforeach
                                                         </div>
                                                         <!--  -->
@@ -224,24 +224,24 @@
                         {{-- <div class="mobile-view indu-moblie indu-moblie1 count-navigation">
                             <div id="owl-demo65" class="owl-carousel owl-theme">
                                 @foreach ($l3Categories as $category)
-                                        @foreach ($category->contentInfos as $contentInfo)
-                                                @if (!empty($contentInfo->overview_description))
-                                                        @php
-                                                            // Split the description into chunks of 50 words
-                                                            $words = explode(' ', strip_tags($contentInfo->overview_description));
-                                                            $chunks = array_chunk($words, 70); // Split into arrays of 50 words
-                                                        @endphp
+                                @foreach ($category->contentInfos as $contentInfo)
+                                @if (!empty($contentInfo->overview_description))
+                                @php
+                                // Split the description into chunks of 50 words
+                                $words = explode(' ', strip_tags($contentInfo->overview_description));
+                                $chunks = array_chunk($words, 70); // Split into arrays of 50 words
+                                @endphp
 
-                                                        @foreach ($chunks as $chunk)
-                                                            <div class="item">
-                                                                <div class="mobile-cont slider">
-                                                                    <p>{!! implode(' ', $chunk) !!}</p>
-                                                                    <!-- Convert chunk back to a string -->
-                                                                </div>
-                                                            </div>
-                                                        @endforeach
-                                                @endif
-                                        @endforeach
+                                @foreach ($chunks as $chunk)
+                                <div class="item">
+                                    <div class="mobile-cont slider">
+                                        <p>{!! implode(' ', $chunk) !!}</p>
+                                        <!-- Convert chunk back to a string -->
+                                    </div>
+                                </div>
+                                @endforeach
+                                @endif
+                                @endforeach
                                 @endforeach
                             </div>
                             <div id="navigation-count" class="count-nav-box"></div>
@@ -250,25 +250,25 @@
                         <div class="mobile-view indu-moblie indu-moblie1 count-navigation">
                             <div id="owl-demo65" class="owl-carousel owl-theme">
                                 @foreach ($l3Categories as $category)
-                                    @foreach ($category->contentInfos as $contentInfo)
-                                        @foreach (range(0, 4) as $index)
-                                            @php
-                                                $descriptionField = 'overview_description' . ($index > 0 ? $index : '');
-                                            @endphp
-                                            @if (!empty($contentInfo->$descriptionField))
-                                                <div class="item">
-                                                    <div class="mobile-cont slider">
-                                                        <p>{!! $contentInfo->$descriptionField !!}</p>
-                                                    </div>
-                                                </div>
-                                            @endif
+                                        @foreach ($category->contentInfos as $contentInfo)
+                                                @foreach (range(0, 4) as $index)
+                                                        @php
+                                                            $descriptionField = 'overview_description' . ($index > 0 ? $index : '');
+                                                        @endphp
+                                                        @if (!empty($contentInfo->$descriptionField))
+                                                            <div class="item">
+                                                                <div class="mobile-cont slider">
+                                                                    <p>{!! $contentInfo->$descriptionField !!}</p>
+                                                                </div>
+                                                            </div>
+                                                        @endif
+                                                @endforeach
                                         @endforeach
-                                    @endforeach
                                 @endforeach
                             </div>
                             <div id="navigation-count" class="count-nav-box"></div>
                         </div>
-                        
+
 
                         <!-- slider end -->
                         <h3 class="space1">What Technical Skills you Learn</h3>
@@ -1877,373 +1877,384 @@
                     </div>
                     <!-- mobile start -->
                     <!--  -->
-            </section>
+                </section>
                 <!-- FAQ info End 11 -->
 
-        <!-- Global Popup fot Testomonials (Only One in the Page) -->
+                <!-- Global Popup fot Testomonials (Only One in the Page) -->
         @elseif ($fieldKey == 'overview2Descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
-        <section class="light-grey sample7-line anchor-link space7_1" id="{{ $slug }}">
-            <!--  -->
-            <div class="container desktop-view">
-                <div class="row">
-                    @foreach ($l3Categories as $category)
-                        @foreach ($category->contentInfos as $info)
-                            @if ($info->l3_layout_type === 'overview2' && $info->overview2Descriptions->count())
-                                <div class="col-md-12">
-                                    <div class="third-content" id="overview2">
-                                        @foreach ($info->overview2Descriptions as $desc)
-                                            @if($desc->overview2_title)
-                                                <h3>{{ $desc->overview2_title }}</h3>
-                                            @endif
-                                            @if($desc->overview2_paragraph1)
-                                              <p>{!! $desc->overview2_paragraph1 !!}</p>
-                                            @endif 
-                                        <a href="javascript:void(0)" class="btn-show">Read More ...</a>
-                                        <div class="content-hide">
-                                            <div class="container">
-                                                <div class="row overview-content">
-                                                    <div class="col-md-12">
-                                                        <div class="smple-box1">
-                                                            <p>{!! $desc->overview2_paragraph2 !!}</p>
-                                                            <p>{!! $desc->overview2_paragraph3 !!}</p>
-                                                            <p>{!! $desc->overview2_paragraph4 !!}</p>
-                                                            <p>{!! $desc->overview2_paragraph5 !!}</p>
+            <section class="light-grey sample7-line anchor-link space7_1" id="{{ $slug }}">
+                <!--  -->
+                <div class="container desktop-view">
+                    <div class="row">
+                        @foreach ($l3Categories as $category)
+                            @foreach ($category->contentInfos as $info)
+                                @if ($info->l3_layout_type === 'overview2' && $info->overview2Descriptions->count())
+                                    <div class="col-md-12">
+                                        <div class="third-content" id="overview2">
+                                            @foreach ($info->overview2Descriptions as $desc)
+                                                @if($desc->overview2_title)
+                                                    <h3>{{ $desc->overview2_title }}</h3>
+                                                @endif
+                                                @if($desc->overview2_paragraph1)
+                                                    <p>{!! $desc->overview2_paragraph1 !!}</p>
+                                                @endif
+                                                <a href="javascript:void(0)" class="btn-show">Read More ...</a>
+                                                <div class="content-hide">
+                                                    <div class="container">
+                                                        <div class="row overview-content">
+                                                            <div class="col-md-12">
+                                                                <div class="smple-box1">
+                                                                    <p>{!! $desc->overview2_paragraph2 !!}</p>
+                                                                    <p>{!! $desc->overview2_paragraph3 !!}</p>
+                                                                    <p>{!! $desc->overview2_paragraph4 !!}</p>
+                                                                    <p>{!! $desc->overview2_paragraph5 !!}</p>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            @endforeach
+                                            <a href="#overview2" class="btn-hide" id="btn-hide1">Hide Content ...</a>
                                         </div>
-                                        @endforeach
-                                        <a href="#overview2" class="btn-hide" id="btn-hide1">Hide Content ...</a>
                                     </div>
+                                @endif
+                            @endforeach
+                        @endforeach
+                    </div>
+                </div>
+                <!--  -->
+                <div class="container mobile-view">
+                    @foreach ($l3Categories as $category)
+                        @foreach ($category->contentInfos as $info)
+                            @if ($info->l3_layout_type === 'overview2' && $info->overview2Descriptions->count())
+                                <div class="third-content">
+                                    <h3>{{ $info->overview2Descriptions->first()->overview2_title ?? 'Overview' }}</h3>
+                                    <!-- Slider start -->
+                                    <div class="mobile-view indu-moblie indu-moblie1 count-navigation">
+                                        <div id="owl-overview2" class="owl-carousel owl-theme">
+                                            @foreach ($info->overview2Descriptions as $desc)
+                                                @foreach (range(1, 5) as $i)
+                                                    @php
+                                                        $paragraph = $desc->{'overview2_paragraph' . $i};
+                                                    @endphp
+                                                    @if (!empty($paragraph))
+                                                        <div class="item">
+                                                            <div class="mobile-cont">
+                                                                <p>{!! $paragraph !!}</p>
+                                                            </div>
+                                                        </div>
+                                                    @endif
+                                                @endforeach
+                                            @endforeach
+                                        </div>
+                                        <div id="navigation-count-overview2" class="count-nav-box"></div>
+                                    </div>
+                                    <!-- Slider end -->
                                 </div>
                             @endif
                         @endforeach
                     @endforeach
                 </div>
-            </div>
-            <!--  -->
-            <div class="container mobile-view">
+
+            </section>
+        @elseif ($fieldKey == 'overview2SubDescriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
+            <section class="light-grey sample7-line anchor-link space7_1" id="{{ $slug }}">
                 @foreach ($l3Categories as $category)
-                    @foreach ($category->contentInfos as $info)
-                        @if ($info->l3_layout_type === 'overview2' && $info->overview2Descriptions->count())
-                            <div class="third-content">
-                                <h3>{{ $info->overview2Descriptions->first()->overview2_title ?? 'Overview' }}</h3>
-                                <!-- Slider start -->
-                                <div class="mobile-view indu-moblie indu-moblie1 count-navigation">
-                                    <div id="owl-overview2" class="owl-carousel owl-theme">
-                                        @foreach ($info->overview2Descriptions as $desc)
-                                            @foreach (range(1, 5) as $i)
-                                                @php
-                                                    $paragraph = $desc->{'overview2_paragraph' . $i};
-                                                @endphp
-                                                @if (!empty($paragraph))
-                                                    <div class="item">
-                                                        <div class="mobile-cont">
-                                                            <p>{!! $paragraph !!}</p>
+                    @foreach ($category->contentInfos as $contentInfo)
+                        @if ($contentInfo->l3_layout_type === 'overview2subdescription')
+                            <!-- Desktop View -->
+                            <div class="container desktop-view">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="third-content">
+                                            @if($contentInfo->overview3_title)
+                                                <h4>{!! $contentInfo->overview3_title !!}</h4>
+                                            @endif
+                                            <div class="info-graphic">
+                                                <div class="row info-graphic-row">
+                                                    <div class="col-md-12">
+                                                        <div class="desktop-view">
+                                                            <div class="wwyl-row">
+                                                                @foreach ($contentInfo->overview2SubDescriptions as $key => $sub)
+                                                                                            @php
+                                                                                                $colors = ['', 'orange', 'purple', 'color4', 'green'];
+                                                                                                $color = $colors[$key % count($colors)];
+                                                                                            @endphp
+                                                                                            <div class="wwyl-box {{ $color }}">
+                                                                                                <p>{!! $sub->overview2_sub_description !!}</p>
+                                                                                                <div class="wwyl-box-circle {{ $color ? $color . '-circle' : '' }}">
+                                                                                                    <span>{{ str_pad($key + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                @endforeach
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                @endif
-                                            @endforeach
-                                        @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div id="navigation-count-overview2" class="count-nav-box"></div>
                                 </div>
-                                <!-- Slider end -->
+                            </div>
+                            <!-- Mobile View -->
+                            <div class="container mobile-view">
+                                <div class="third-content">
+                                    @if($contentInfo->overview3_title)
+                                        <h3 class="space1">{!! $contentInfo->overview3_title !!}</h3>
+                                    @endif
+                                    <div class="mobile-view indu-moblie count-navigation">
+                                        <div id="owl-overview2subdescription" class="owl-carousel owl-theme">
+                                            @foreach ($contentInfo->overview2SubDescriptions as $key => $sub)
+                                                    @php
+                                                        $colors = ['', 'orange', 'purple', 'color4', 'green'];
+                                                        $color = $colors[$key % count($colors)];
+                                                    @endphp
+                                                    <div class="wwyl-box {{ $color }}">
+                                                        <p>{!! $sub->overview2_sub_description !!}</p>
+                                                        <div class="wwyl-box-circle {{ $color ? $color . '-circle' : '' }}">
+                                                            <span>{{ str_pad($key + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                                                        </div>
+                                                    </div>
+                                            @endforeach
+                                        </div>
+                                        <div id="navigation-overview2subdescription" class="count-nav-box"></div>
+                                    </div>
+                                </div>
                             </div>
                         @endif
                     @endforeach
                 @endforeach
-            </div>
-            
-        </section>
-        @elseif ($fieldKey == 'overview2SubDescriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
-        <section class="light-grey sample7-line anchor-link space7_1" id="{{ $slug }}">
-            @foreach ($l3Categories as $category)
-               @foreach ($category->contentInfos as $contentInfo)
-                   @if ($contentInfo->l3_layout_type === 'overview2subdescription')
-                        <!-- Desktop View -->
-                        <div class="container desktop-view">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="third-content">
-                                        @if($contentInfo->overview3_title)
-                                            <h4>{!! $contentInfo->overview3_title !!}</h4>
-                                        @endif
-                                        <div class="info-graphic">
-                                            <div class="row info-graphic-row">
-                                                <div class="col-md-12">
-                                                    <div class="desktop-view">
-                                                        <div class="wwyl-row">
-                                                            @foreach ($contentInfo->overview2SubDescriptions as $key => $sub)
-                                                                @php
-                                                                    $colors = ['', 'orange', 'purple', 'color4', 'green'];
-                                                                    $color = $colors[$key % count($colors)];
-                                                                @endphp
-                                                                <div class="wwyl-box {{ $color }}">
-                                                                    <p>{!! $sub->overview2_sub_description !!}</p>
-                                                                    <div class="wwyl-box-circle {{ $color ? $color . '-circle' : '' }}">
-                                                                        <span>{{ str_pad($key + 1, 2, '0', STR_PAD_LEFT) }}</span>
-                                                                    </div>
-                                                                </div>
-                                                            @endforeach
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>   
-                        <!-- Mobile View -->
-                        <div class="container mobile-view">
-                            <div class="third-content">
-                                @if($contentInfo->overview3_title)
-                                    <h3 class="space1">{!! $contentInfo->overview3_title !!}</h3>
-                                @endif
-                                <div class="mobile-view indu-moblie count-navigation">
-                                    <div id="owl-overview2subdescription" class="owl-carousel owl-theme">
-                                        @foreach ($contentInfo->overview2SubDescriptions as $key => $sub)
-                                            @php
-                                                $colors = ['', 'orange', 'purple', 'color4', 'green'];
-                                                $color = $colors[$key % count($colors)];
-                                            @endphp
-                                            <div class="wwyl-box {{ $color }}">
-                                                <p>{!! $sub->overview2_sub_description !!}</p>
-                                                <div class="wwyl-box-circle {{ $color ? $color . '-circle' : '' }}">
-                                                    <span>{{ str_pad($key + 1, 2, '0', STR_PAD_LEFT) }}</span>
-                                                </div>
-                                            </div>
-                                        @endforeach
-                                    </div>
-                                    <div id="navigation-overview2subdescription" class="count-nav-box"></div>
-                                </div>
-                            </div>
-                        </div>
-                    @endif
-                @endforeach
-            @endforeach
-        </section>
-    
-        @elseif ($fieldKey == 'industry2_description' && $contents->contains(fn($info) => $info->{$fieldKey}))
-        <section class="sec-wrap-cod-2" style="background: #dceff6;" id="{{ $slug }}">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <!-- Dynamic Title -->
-                        @foreach ($l3Categories as $category)
-                            @foreach ($category->contentInfos as $contentInfo)
-                                @if (!empty($contentInfo->industry2title))
-                                    <h3 class="temp-head">{!! $contentInfo->industry2title->title !!}</h3>
-                                    @break  <!-- We only need one title -->
-                                @endif
-                            @endforeach
-                        @endforeach
-                    </div>
-                </div>
-        
-                @php
-                    $testimonials = collect();
-                    foreach ($l3Categories as $category) {
-                        foreach ($category->contentInfos as $contentInfo) {
-                            if (!empty($contentInfo->industry2_description)) {
-                                $testimonials->push($contentInfo);
-                            }
-                        }
-                    }
-                @endphp
+            </section>
 
-                @foreach ($testimonials->chunk(3) as $testimonialChunk)
+        @elseif ($fieldKey == 'industry2_description' && $contents->contains(fn($info) => $info->{$fieldKey}))
+            <section class="sec-wrap-cod-2" style="background: #dceff6;" id="{{ $slug }}">
+                <div class="container">
                     <div class="row">
-                        @foreach ($testimonialChunk as $contentInfo)
-                            <div class="col-sm-4 testi-temp">
-                                <p>{{ $contentInfo->industry2_description }}</p>
-                                <p class="sign">{{ $contentInfo->industry2_testimonial_name }}</p>
-                            </div>
-                        @endforeach
-                    </div>
-                @endforeach
-            </div>
-        </section>
-        @elseif ($fieldKey == 'overview15s' && $contents->contains(fn($info) => $info->{$fieldKey}))
-        <section class="sec-wrap-cod-2" style="background-image:url('assets/images/image-bg-top.jpg'); background-repeat: repeat;" id="{{ $slug }}">
-            <div class="container">
-                @foreach ($l3Categories as $category)
-                    @foreach ($category->contentInfos as $contentInfo)
-                        @foreach ($contentInfo->overview15s as $overview)
-                            <div class="row">
-                                <div class="col-sm-7 mid-banner temp-3-sec">
-                                    <h3 class="temp-head">{{ $overview->overview15_title }}</h3>
-                                    <p>{!! $overview->overview15_descriptions !!}</p>
-                                </div>
-                                <div class="col-sm-5 mid-banner temp-3-sec">
-                                    @if($overview->image)
-                                        <img src="{{ asset('storage/uploads/frontend/l3_template/overview15/' . $overview->image) }}" alt="Overview Image" class="img-fluid">
-                                    @endif
-                                </div>
-                            </div>
-                        @endforeach
-                    @endforeach
-                @endforeach
-            </div>
-        </section>
-        @elseif ($fieldKey == 'significance2s' && $contents->contains(fn($info) => $info->{$fieldKey}))
-        <section class="why-codec codec-page-section anchor-link"  id="{{ $slug }}">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 cn-title">
-                        @foreach ($l3Categories as $category)
-                            @foreach ($category->contentInfos as $info)
-                                @foreach ($info->significance2s as $significance)
-                                    @if ($significance->significance2_title)
-                                        {!! $significance->significance2_title !!}
-                                    @endif
-                                @endforeach
-                            @endforeach
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="cn-tabs1">
-                        <ul id="tabs-nav100">
+                        <div class="col-12 text-center">
+                            <!-- Dynamic Title -->
                             @foreach ($l3Categories as $category)
                                 @foreach ($category->contentInfos as $contentInfo)
-                                    @if ($contentInfo->significance2Category)
-                                            <li class="{{ $loop->first ? 'active' : ' ' }}"><a href="#{{ strtolower(str_replace([' ', '&', ','], '-', $contentInfo->significance2Category->name)) }}"> {{ $contentInfo->significance2Category->name }}</a></li>
+                                    @if (!empty($contentInfo->industry2title))
+                                        <h3 class="temp-head">{!! $contentInfo->industry2title->title !!}</h3>
+                                        @break <!-- We only need one title -->
                                     @endif
                                 @endforeach
                             @endforeach
-                        </ul> <!-- END tabs-nav -->
-                        <div id="tabs-content100">
+                        </div>
+                    </div>
+
+                    @php
+                        $testimonials = collect();
+                        foreach ($l3Categories as $category) {
+                            foreach ($category->contentInfos as $contentInfo) {
+                                if (!empty($contentInfo->industry2_description)) {
+                                    $testimonials->push($contentInfo);
+                                }
+                            }
+                        }
+                    @endphp
+
+                    @foreach ($testimonials->chunk(3) as $testimonialChunk)
+                        <div class="row">
+                            @foreach ($testimonialChunk as $contentInfo)
+                                <div class="col-sm-4 testi-temp">
+                                    <p>{{ $contentInfo->industry2_description }}</p>
+                                    <p class="sign">{{ $contentInfo->industry2_testimonial_name }}</p>
+                                </div>
+                            @endforeach
+                        </div>
+                    @endforeach
+                </div>
+            </section>
+        @elseif ($fieldKey == 'overview15s' && $contents->contains(fn($info) => $info->{$fieldKey}))
+            <section class="sec-wrap-cod-2"
+                style="background-image:url('assets/images/image-bg-top.jpg'); background-repeat: repeat;" id="{{ $slug }}">
+                <div class="container">
+                    @foreach ($l3Categories as $category)
+                        @foreach ($category->contentInfos as $contentInfo)
+                            @foreach ($contentInfo->overview15s as $overview)
+                                <div class="row">
+                                    <div class="col-sm-7 mid-banner temp-3-sec">
+                                        <h3 class="temp-head">{{ $overview->overview15_title }}</h3>
+                                        <p>{!! $overview->overview15_descriptions !!}</p>
+                                    </div>
+                                    <div class="col-sm-5 mid-banner temp-3-sec">
+                                        @if($overview->image)
+                                            <img src="{{ asset('storage/uploads/frontend/l3_template/overview15/' . $overview->image) }}"
+                                                alt="Overview Image" class="img-fluid">
+                                        @endif
+                                    </div>
+                                </div>
+                            @endforeach
+                        @endforeach
+                    @endforeach
+                </div>
+            </section>
+        @elseif ($fieldKey == 'significance2s' && $contents->contains(fn($info) => $info->{$fieldKey}))
+            <section class="why-codec codec-page-section anchor-link" id="{{ $slug }}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 cn-title">
                             @foreach ($l3Categories as $category)
-                               @foreach ($category->contentInfos as $info)
-                                   @foreach ($info->significance2s as $significance)
-                                        <div id="{{ strtolower(str_replace([' ', '&', ','], '-', $info->significance2Category->name)) }}" class="tab-content100" style="display: block;">
-                                            <div class="container">
-                                                <div class="row rowp">
-                                                    <div class="col-md-5">
-                                                        <div class="template12-img">
-                                                            <img src="{{ asset('storage/uploads/frontend/l3_template/significance2/' . $significance->image) }}" alt="significance2 Image" class="img-fluid">
+                                @foreach ($category->contentInfos as $info)
+                                    @foreach ($info->significance2s as $significance)
+                                        @if ($significance->significance2_title)
+                                            {!! $significance->significance2_title !!}
+                                        @endif
+                                    @endforeach
+                                @endforeach
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="cn-tabs1">
+                            <ul id="tabs-nav100">
+                                @foreach ($l3Categories as $category)
+                                    @foreach ($category->contentInfos as $contentInfo)
+                                        @if ($contentInfo->significance2Category)
+                                            <li class="{{ $loop->first ? 'active' : ' ' }}"><a
+                                                    href="#{{ strtolower(str_replace([' ', '&', ','], '-', $contentInfo->significance2Category->name)) }}">
+                                                    {{ $contentInfo->significance2Category->name }}</a></li>
+                                        @endif
+                                    @endforeach
+                                @endforeach
+                            </ul> <!-- END tabs-nav -->
+                            <div id="tabs-content100">
+                                @foreach ($l3Categories as $category)
+                                    @foreach ($category->contentInfos as $info)
+                                        @foreach ($info->significance2s as $significance)
+                                            <div id="{{ strtolower(str_replace([' ', '&', ','], '-', $info->significance2Category->name)) }}"
+                                                class="tab-content100" style="display: block;">
+                                                <div class="container">
+                                                    <div class="row rowp">
+                                                        <div class="col-md-5">
+                                                            <div class="template12-img">
+                                                                <img src="{{ asset('storage/uploads/frontend/l3_template/significance2/' . $significance->image) }}"
+                                                                    alt="significance2 Image" class="img-fluid">
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-md-7">
-                                                        <div class="red-title">
+                                                        <div class="col-md-7">
+                                                            <div class="red-title">
                                                                 @if ($significance->significance2_short_description)
                                                                     {!! $significance->significance2_short_description !!}
                                                                 @endif
-                                                            <a href="javascript:void(0);" class="btn-show" id="btn-show6">Read More
-                                                                ...</a>
-                                                            <div class="content-hide" id="content-hide6">
-                                                                @if ($significance->significance2_long_description)
-                                                                    {!! $significance->significance2_long_description !!}
-                                                                @endif
+                                                                <a href="javascript:void(0);" class="btn-show" id="btn-show6">Read More
+                                                                    ...</a>
+                                                                <div class="content-hide" id="content-hide6">
+                                                                    @if ($significance->significance2_long_description)
+                                                                        {!! $significance->significance2_long_description !!}
+                                                                    @endif
+                                                                </div>
+                                                                <a href="javascript:void(0);" class="btn-hide" id="btn-hide6">Hide
+                                                                    Content ...</a>
                                                             </div>
-                                                            <a href="javascript:void(0);" class="btn-hide" id="btn-hide6">Hide
-                                                                Content ...</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        @endforeach
                                     @endforeach
-                                 @endforeach
-                             @endforeach
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        @elseif ($fieldKey == 'overview16_short_descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
-        <section class="empower-industry-bg codec-page-section anchor-link"  style="padding-bottom: 20px !important; padding-top: 40px !important;" id="{{ $slug }}">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 cn-title">
-                        @foreach ($l3Categories as $category)
-                            @foreach ($category->contentInfos as $contentInfo)
-                                @if (!empty($contentInfo->overview16_title))
-                                    <h2>{!! $contentInfo->overview16_title !!}</h2>
-                                @endif
-                            @endforeach
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-
-            @php $index = 0; @endphp
-            @foreach ($l3Categories as $category)
-                @foreach ($category->contentInfos as $contentInfo)
-                    @if (!empty($contentInfo->overview16_short_descriptions) || !empty($contentInfo->overview16_long_descriptions))
-                        <div class="container">
-                            <div class="row rowp">
-                                @if ($index % 2 == 0)
-                                    {{-- Even Index: Image Left, Content Right --}}
-                                    <div class="col-md-5">
-                                        <div class="template12-img">
-                                            <img src="{{ $contentInfo->images ? asset('storage/uploads/frontend/l3_template/overview16/' . $contentInfo->images) : asset('assets/images/intelligent-automation.webp') }}" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-7">
-                                        <div class="red-title">
-                                            {!! $contentInfo->overview16_short_descriptions !!}
-                                            @if (!empty($contentInfo->overview16_long_descriptions))
-                                                <a href="javascript:void(0);" class="btn-show" id="btn-show-{{ $index }}">Read More ...</a>
-                                                <div class="content-hide" id="content-hide-{{ $index }}">
-                                                    {!! $contentInfo->overview16_long_descriptions !!}
-                                                </div>
-                                                <a href="javascript:void(0);" class="btn-hide" id="btn-hide-{{ $index }}">Hide Content ...</a>
-                                            @endif
-                                        </div>
-                                    </div>
-                                @else
-                                    {{-- Odd Index: Content Left, Image Right --}}
-                                    <div class="col-md-7">
-                                        <div class="red-title">
-                                            {!! $contentInfo->overview16_short_descriptions !!}
-                                            @if (!empty($contentInfo->overview16_long_descriptions))
-                                                <a href="javascript:void(0);" class="btn-show" id="btn-show-{{ $index }}">Read More ...</a>
-                                                <div class="content-hide" id="content-hide-{{ $index }}">
-                                                    {!! $contentInfo->overview16_long_descriptions !!}
-                                                </div>
-                                                <a href="javascript:void(0);" class="btn-hide" id="btn-hide-{{ $index }}">Hide Content ...</a>
-                                            @endif
-                                        </div>
-                                    </div>
-                                    <div class="col-md-5">
-                                        <div class="template12-img">
-                                            <img src="{{ $contentInfo->images ? asset('storage/uploads/frontend/l3_template/overview16/' . $contentInfo->images) : asset('assets/images/intelligent-automation.webp') }}" alt="">
-                                        </div>
-                                    </div>
-                                @endif
+                                @endforeach
                             </div>
                         </div>
-                        @php $index++; @endphp
-                    @endif
-                @endforeach
-            @endforeach
-        </section>
-        @elseif ($fieldKey == 'overview17_descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
-        <section class="light-grey sample7-line anchor-link space7_1"  id="{{ $slug }}">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="third-content" id="">
+                    </div>
+                </div>
+            </section>
+
+        @elseif ($fieldKey == 'overview16_short_descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
+            <section class="empower-industry-bg codec-page-section anchor-link"
+                style="padding-bottom: 20px !important; padding-top: 40px !important;" id="{{ $slug }}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 cn-title">
                             @foreach ($l3Categories as $category)
-                            @foreach ($category->contentInfos as $contentInfo)
-                                @if (!empty($contentInfo->overview17_descriptions))
-                                    <h2>{!! $contentInfo->overview17_descriptions !!}</h2>
-                                @endif
+                                @foreach ($category->contentInfos as $contentInfo)
+                                    @if (!empty($contentInfo->overview16_title))
+                                        <h2>{!! $contentInfo->overview16_title !!}</h2>
+                                    @endif
+                                @endforeach
                             @endforeach
-                        @endforeach
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-     @endif
+
+                @php $index = 0; @endphp
+                @foreach ($l3Categories as $category)
+                    @foreach ($category->contentInfos as $contentInfo)
+                        @if (!empty($contentInfo->overview16_short_descriptions) || !empty($contentInfo->overview16_long_descriptions))
+                            <div class="container">
+                                <div class="row rowp">
+                                    @if ($index % 2 == 0)
+                                        {{-- Even Index: Image Left, Content Right --}}
+                                        <div class="col-md-5">
+                                            <div class="template12-img">
+                                                <img src="{{ $contentInfo->images ? asset('storage/uploads/frontend/l3_template/overview16/' . $contentInfo->images) : asset('assets/images/intelligent-automation.webp') }}"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="red-title">
+                                                {!! $contentInfo->overview16_short_descriptions !!}
+                                                @if (!empty($contentInfo->overview16_long_descriptions))
+                                                    <a href="javascript:void(0);" class="btn-show" id="btn-show-{{ $index }}">Read More ...</a>
+                                                    <div class="content-hide" id="content-hide-{{ $index }}">
+                                                        {!! $contentInfo->overview16_long_descriptions !!}
+                                                    </div>
+                                                    <a href="javascript:void(0);" class="btn-hide" id="btn-hide-{{ $index }}">Hide Content
+                                                        ...</a>
+                                                @endif
+                                            </div>
+                                        </div>
+                                    @else
+                                        {{-- Odd Index: Content Left, Image Right --}}
+                                        <div class="col-md-7">
+                                            <div class="red-title">
+                                                {!! $contentInfo->overview16_short_descriptions !!}
+                                                @if (!empty($contentInfo->overview16_long_descriptions))
+                                                    <a href="javascript:void(0);" class="btn-show" id="btn-show-{{ $index }}">Read More ...</a>
+                                                    <div class="content-hide" id="content-hide-{{ $index }}">
+                                                        {!! $contentInfo->overview16_long_descriptions !!}
+                                                    </div>
+                                                    <a href="javascript:void(0);" class="btn-hide" id="btn-hide-{{ $index }}">Hide Content
+                                                        ...</a>
+                                                @endif
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="template12-img">
+                                                <img src="{{ $contentInfo->images ? asset('storage/uploads/frontend/l3_template/overview16/' . $contentInfo->images) : asset('assets/images/intelligent-automation.webp') }}"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                    @endif
+                                </div>
+                            </div>
+                            @php $index++; @endphp
+                        @endif
+                    @endforeach
+                @endforeach
+            </section>
+        @elseif ($fieldKey == 'overview17_descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
+            <section class="light-grey sample7-line anchor-link space7_1" id="{{ $slug }}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="third-content" id="">
+                                @foreach ($l3Categories as $category)
+                                    @foreach ($category->contentInfos as $contentInfo)
+                                        @if (!empty($contentInfo->overview17_descriptions))
+                                            <h2>{!! $contentInfo->overview17_descriptions !!}</h2>
+                                        @endif
+                                    @endforeach
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        @endif
     @endforeach
         <div class="popup" id="global-testimonial-popup">
             <div class="popup-box popup-testo">
