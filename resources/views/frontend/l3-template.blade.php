@@ -2107,7 +2107,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container desktop-view">
                     <div class="row">
                         <div class="cn-tabs1">
                             <ul id="tabs-nav100">
@@ -2160,6 +2160,60 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="container mobile-view significance-space" id="sf_mob">
+                    <!--  -->
+                    <div class="acc">
+
+                        @foreach ($l3Categories as $category)
+                            @foreach ($category->contentInfos as $contentInfo)
+                                @if ($contentInfo->significanceCategory)
+                                    <div class="acc__card">
+                                        <!-- Accordion Title -->
+                                        <a href="#significance-{{ $loop->iteration }}"
+                                            class="acc__title {{ $loop->first ? 'active' : ' ' }}"
+                                            data-target="significance-{{ $loop->iteration }}">
+                                            {{ $contentInfo->significanceCategory->name }}
+                                        </a>
+
+                                        <!-- Accordion Panel -->
+                                        <div class="acc__panel" style="{{ $loop->first ? 'display:block;' : '' }}"
+                                            id="significance-{{ $loop->iteration }}">
+                                            <div class="box-height vert-box">
+                                                <div class="red-title">
+                                                    @if ($contentInfo->images)
+                                                        <div class="template12-img">
+                                                            <img
+                                                                src="{{ asset('storage/uploads/frontend/l3_template/significance/' . $contentInfo->images) }}">
+                                                        </div>
+                                                        {{-- <div class="red-title"> --}}
+                                                            @if ($contentInfo->significanceCategory)
+                                                                {!! $contentInfo->significance_short_description !!}
+                                                                {!! $contentInfo->significance_description !!}
+                                                            @endif
+                                                            {{--
+                                                        </div> --}}
+                                                    @else
+                                                        {{-- <div class="red-title"> --}}
+                                                            @if ($contentInfo->significanceCategory)
+                                                                {!! $contentInfo->significance_short_description !!}
+                                                                {!! $contentInfo->significance_description !!}
+                                                            @endif
+                                                            {{--
+                                                        </div> --}}
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            <a href="javascript:void(0)" class="close-acrodin">Close</a>
+                                        </div>
+                                    </div>
+                                @endif
+                            @endforeach
+                        @endforeach
+
+
+                    </div>
+                    <!-- mobile content end  -->
                 </div>
             </section>
 
