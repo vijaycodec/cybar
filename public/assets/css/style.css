@@ -5795,3 +5795,9 @@ ul#tabs-nav100 li.active, ul#tabs-nav100 li:hover {
         min-width: 0px;
     }
 }
+
+@media screen and (min-width:800px){
+    p.sign {
+    padding-left: 80px;
+    }
+}
