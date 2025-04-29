@@ -19,9 +19,10 @@
     <link rel="apple-touch-icon-precomposed" href="{{ asset('backend/assets/images/favicon3.png ') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('backend/assets/css/sweetalert.min.css ') }}">
     <link href="https://cdn.jsdelivr.net/npm/toastr@2.1.4/build/toastr.min.css" rel="stylesheet">
+    {{-- <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> --}}
+
     <link rel="stylesheet" type="text/css" href="{{ asset('backend/assets/css/custom.css ') }}">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
-
     <!-- Add Summernote CSS -->
     {{-- <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet"> --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-lite.min.css">
@@ -836,36 +837,40 @@
         });
     </script>
 
-
     <!-- Initialize Summernote -->
     <script>
         $(document).ready(function() {
             $('.summernote').summernote({
-                height: 200, // Set height for the editor
-                minHeight: 100, // Minimum height
-                maxHeight: 500, // Maximum height
-                width: '100%', // Set width to 100% of the container
+                placeholder: 'Start typing here...',
+                tabsize: 2,
+                height: 300,
+                minHeight: 150,
+                maxHeight: 600,
+                width: '100%',
                 toolbar: [
-                    ['style', ['style']], // Enables Heading (H1, H2, etc.)
-                    ['font', ['bold', 'italic', 'underline', 'clear']], // Font styles
-                    ['fontsize', ['fontsize']], // Font size dropdown
-                    ['fontname', ['fontname']], // Font family selection
-                    ['color', ['color']], // Text color & background color
-                    ['para', ['ul', 'ol', 'paragraph']], // Lists and paragraph alignment
-                    ['table', ['table']], // Table insert option
-                    ['insert', ['link', 'picture', 'video']], // Insert options
-                    ['view', ['fullscreen', 'codeview', 'help']] // Fullscreen, Code view, Help
+                    ['style', ['style']],
+                    ['font', ['bold', 'italic', 'underline', 'strikethrough', 'clear', 'fontname', 'fontsize', 'color']],
+                    ['para', ['ul', 'ol', 'paragraph', 'height']],
+                    ['insert', ['link', 'picture', 'video', 'table', 'hr']],
+                    ['view', ['fullscreen', 'codeview', 'help']]
                 ],
                 styleTags: [
-                    'p', 'blockquote', 'pre', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' // Enables headings in dropdown
+                    'p', 'blockquote', 'pre', 
+                    { title: 'Heading 1', tag: 'h1', className: 'h1' },
+                    { title: 'Heading 2', tag: 'h2', className: 'h2' },
+                    { title: 'Heading 3', tag: 'h3', className: 'h3' },
+                    { title: 'Heading 4', tag: 'h4', className: 'h4' },
+                    { title: 'Heading 5', tag: 'h5', className: 'h5' },
+                    { title: 'Heading 6', tag: 'h6', className: 'h6' }
                 ],
-                fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Merriweather'], // Custom fonts
-
+                fontNames: ['Roboto', 'Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Merriweather', 'Sans-serif', 'Times New Roman', 'Verdana'],
+                fontNamesIgnoreCheck: ['Roboto', 'Merriweather', 'Sans-serif'],
+                fontSizes: ['8', '10', '12', '14', '16', '15', '18', '20', '22', '24', '26', '28', '30', '32'],
+                
             });
         });
     </script>
-
-
+    
 <script>
     $(document).ready(function() {
     if ($('#myTable').length) {

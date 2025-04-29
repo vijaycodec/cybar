@@ -13,7 +13,7 @@
       <ul class="nav-items nav-level-1">
          <!-- Services menu start -->
          <li class="nav-item nav-expand">
-            <a class="mobile-nav-link nav-expand-link" href="#">
+            <a class="mobile-nav-link nav-expand-link" style="font-size: 16px; font-weight: bold; color: #15416e;" href="#">
                Services
             </a>
             <!-- Menu derop 1 level 1  -->
@@ -1585,7 +1585,7 @@
          <!--  -->
          <!-- Corporate Trainings menu start  -->
          <li class="nav-item nav-expand">
-            <a class="mobile-nav-link nav-expand-link" href="#">
+            <a class="mobile-nav-link nav-expand-link" style="font-size: 16px; font-weight: bold; color: #15416e;" href="#">
                Corporate Trainings
             </a>
             <!-- Menu derop 1 level 1  -->
@@ -2884,7 +2884,7 @@
          </li>
          <!--  -->
          <li class="nav-item">
-            <a class="mobile-nav-link" href="CN-Insigh.php">
+            <a class="mobile-nav-link" style="font-size: 16px; font-weight: bold; color: #15416e;" href="CN-Insigh.php">
                CN Insight
             </a>
          </li>

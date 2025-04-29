@@ -98,12 +98,12 @@
         @endphp
         <!-- Overview start 1-->
         @if ($fieldKey == 'overview_description' && $contents->contains(fn($info) => $info->{$fieldKey}))
-            <section class="light-grey sample7-line anchor-link space7_1" id="{{ $slug }}">
+           <section class="light-grey sample7-line anchor-link space7_1" id="{{ $slug }}">
                 <!--  -->
                 <div class="container desktop-view">
                     <div class="row">
                         <div class="col-md-12">
-                            <div  class="third-content" id="2">
+                            <div class="third-content" id="2">
                                 @foreach ($l3Categories as $category)
                                     @foreach ($category->contentInfos as $contentInfo)
                                         <!-- Overview Section -->
@@ -111,29 +111,45 @@
                                             <h3> {{ $contentInfo->overview_title }} </h3>
                                         @endif
                                         @if ($contentInfo->overview_description)
-                                            {!! $contentInfo->overview_description !!}  <!-- First overview Description -->
-                                       @endif 
-                                       @if ($contentInfo->overview_description1)
+                                            {!! $contentInfo->overview_description !!} <!-- First overview Description -->
+                                        @endif
+                                        @if ($contentInfo->overview_description1)
                                             {!! $contentInfo->overview_description1 !!} <!-- Second overview Description -->
-                                       @endif
-                                       @if ($contentInfo->overview_description2)
+                                        @endif
+                                        @if ($contentInfo->overview_description2)
                                             {!! $contentInfo->overview_description2 !!} <!-- Third overview Description -->
-                                       @endif
-                                       @if ($contentInfo->overview_description3)
+                                        @endif
+                                        @if ($contentInfo->overview_description3)
                                             {!! $contentInfo->overview_description3 !!} <!-- Fourth overview Description -->
-                                       @endif
-                                       @if ($contentInfo->overview_description4)
+                                        @endif
+                                        @if ($contentInfo->overview_description4)
                                             {!! $contentInfo->overview_description4 !!}<!-- Fifth overview Description -->
-                                       @endif
+                                        @endif
                                     @endforeach
                                 @endforeach
                                 <div class="container">
                                     <div class="row overview-content">
                                         <!--  -->
                                         <div class="col-md-12">
-                                            <div class="third-content smple-box1">
-                                                {{-- <h4>What Technical Skills you Learn</h4> --}}
-                                            </div>
+                                                @php
+                                                    $firstTitle = null;
+                                                
+                                                    foreach ($l3Categories as $category) {
+                                                        foreach ($category->contentInfos as $contentInfo) {
+                                                            foreach ($contentInfo->overviewSubDescriptions as $subDescription) {
+                                                                if (!empty($subDescription->overview_subdescription_title)) {
+                                                                    $firstTitle = $subDescription->overview_subdescription_title;
+                                                                    break 3; // break all loops
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                @endphp
+                                                @if ($firstTitle)
+                                                    <div class="third-content smple-box1">
+                                                        <h4>{!! $firstTitle !!}</h4>
+                                                    </div>
+                                                @endif
                                             <!--  -->
                                             <div class="info-graphic">
                                                 <div class="row info-graphic-row">
@@ -142,7 +158,7 @@
                                                         <div class="desktop-view">
                                                             @foreach ($l3Categories as $category)
                                                                 @foreach ($category->contentInfos as $contentInfo)
-                                                                        <!-- Checking and Displaying Sub Descriptions -->
+                                                                    <!-- Checking and Displaying Sub Descriptions -->
                                                                     @if ($contentInfo->overviewSubDescriptions->isNotEmpty())
                                                                         @foreach ($contentInfo->overviewSubDescriptions as $index => $subDescription)
                                                                             <div class="wwyl-row">
@@ -178,9 +194,9 @@
                                                                                 @endphp
 
                                                                                 <div class="{{ $boxClass }}">
-                                                                                    <p>
+                                                                                    
                                                                                         {!! $subDescription->sub_description !!}
-                                                                                    </p>
+                                                                                    
 
                                                                                     <!-- Dynamic Circle Class -->
                                                                                     <div class="{{ $circleClass }}">
@@ -224,24 +240,24 @@
                         {{-- <div class="mobile-view indu-moblie indu-moblie1 count-navigation">
                             <div id="owl-demo65" class="owl-carousel owl-theme">
                                 @foreach ($l3Categories as $category)
-                                        @foreach ($category->contentInfos as $contentInfo)
-                                                @if (!empty($contentInfo->overview_description))
-                                                        @php
-                                                            // Split the description into chunks of 50 words
-                                                            $words = explode(' ', strip_tags($contentInfo->overview_description));
-                                                            $chunks = array_chunk($words, 70); // Split into arrays of 50 words
-                                                        @endphp
+                                @foreach ($category->contentInfos as $contentInfo)
+                                @if (!empty($contentInfo->overview_description))
+                                @php
+                                // Split the description into chunks of 50 words
+                                $words = explode(' ', strip_tags($contentInfo->overview_description));
+                                $chunks = array_chunk($words, 70); // Split into arrays of 50 words
+                                @endphp
 
-                                                        @foreach ($chunks as $chunk)
-                                                            <div class="item">
-                                                                <div class="mobile-cont slider">
-                                                                    <p>{!! implode(' ', $chunk) !!}</p>
-                                                                    <!-- Convert chunk back to a string -->
-                                                                </div>
-                                                            </div>
-                                                        @endforeach
-                                                @endif
-                                        @endforeach
+                                @foreach ($chunks as $chunk)
+                                <div class="item">
+                                    <div class="mobile-cont slider">
+                                        <p>{!! implode(' ', $chunk) !!}</p>
+                                        <!-- Convert chunk back to a string -->
+                                    </div>
+                                </div>
+                                @endforeach
+                                @endif
+                                @endforeach
                                 @endforeach
                             </div>
                             <div id="navigation-count" class="count-nav-box"></div>
@@ -268,10 +284,28 @@
                             </div>
                             <div id="navigation-count" class="count-nav-box"></div>
                         </div>
-                        
+
 
                         <!-- slider end -->
-                        <h3 class="space1">What Technical Skills you Learn</h3>
+                        @php
+                                                    $firstTitle = null;
+                                                
+                                                    foreach ($l3Categories as $category) {
+                                                        foreach ($category->contentInfos as $contentInfo) {
+                                                            foreach ($contentInfo->overviewSubDescriptions as $subDescription) {
+                                                                if (!empty($subDescription->overview_subdescription_title)) {
+                                                                    $firstTitle = $subDescription->overview_subdescription_title;
+                                                                    break 3; // break all loops
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                @endphp
+                                                @if ($firstTitle)
+                                                        <h3>{!! $firstTitle !!}</h3>
+                                                @endif
+                    
+                    
                         <!-- mobile start -->
                         <div class="mobile-view indu-moblie count-navigation">
                             <div id="owl-demo64" class="owl-carousel owl-theme">
@@ -280,7 +314,7 @@
                                         @if ($contentInfo->overviewSubDescriptions->isNotEmpty())
                                             @foreach ($contentInfo->overviewSubDescriptions as $index => $subDescription)
                                                 <div class="wwyl-box">
-                                                    <p>{!! $subDescription->sub_description !!}</p>
+                                                    {!! $subDescription->sub_description !!}
 
                                                     <!-- Dynamic Circle Class -->
                                                     @php
@@ -315,7 +349,7 @@
                     <!--  -->
                 </div>
                 <!--  -->
-            </section>
+            </section>
             <!-- Overview end  1 -->
 
             <!-- Significance start  2-->
@@ -2089,73 +2123,127 @@
             </div>
         </section>
         @elseif ($fieldKey == 'significance2s' && $contents->contains(fn($info) => $info->{$fieldKey}))
-        <section class="why-codec codec-page-section anchor-link"  id="{{ $slug }}">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 cn-title">
-                        @foreach ($l3Categories as $category)
-                            @foreach ($category->contentInfos as $info)
-                                @foreach ($info->significance2s as $significance)
-                                    @if ($significance->significance2_title)
-                                        {!! $significance->significance2_title !!}
-                                    @endif
+       <section class="why-codec codec-page-section anchor-link" id="{{ $slug }}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 cn-title">
+                            @foreach ($l3Categories as $category)
+                                @foreach ($category->contentInfos as $info)
+                                    @foreach ($info->significance2s as $significance)
+                                        @if ($significance->significance2_title)
+                                            {!! $significance->significance2_title !!}
+                                        @endif
+                                    @endforeach
                                 @endforeach
                             @endforeach
-                        @endforeach
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="cn-tabs1">
-                        <ul id="tabs-nav100">
-                            @foreach ($l3Categories as $category)
-                                @foreach ($category->contentInfos as $contentInfo)
-                                    @if ($contentInfo->significance2Category)
-                                            <li class="{{ $loop->first ? 'active' : ' ' }}"><a href="#{{ strtolower(str_replace([' ', '&', ','], '-', $contentInfo->significance2Category->name)) }}"> {{ $contentInfo->significance2Category->name }}</a></li>
-                                    @endif
+                <div class="container desktop-view">
+                    <div class="row">
+                        <div class="cn-tabs1">
+                            <ul id="tabs-nav100">
+                                @foreach ($l3Categories as $category)
+                                    @foreach ($category->contentInfos as $contentInfo)
+                                        @if ($contentInfo->significance2Category)
+                                            <li class="{{ $loop->first ? 'active' : ' ' }}"><a
+                                                    href="#{{ strtolower(str_replace([' ', '&', ','], '-', $contentInfo->significance2Category->name)) }}">
+                                                    {{ $contentInfo->significance2Category->name }}</a></li>
+                                        @endif
+                                    @endforeach
                                 @endforeach
-                            @endforeach
-                        </ul> <!-- END tabs-nav -->
-                        <div id="tabs-content100">
-                            @foreach ($l3Categories as $category)
-                               @foreach ($category->contentInfos as $info)
-                                   @foreach ($info->significance2s as $significance)
-                                        <div id="{{ strtolower(str_replace([' ', '&', ','], '-', $info->significance2Category->name)) }}" class="tab-content100" style="display: block;">
-                                            <div class="container">
-                                                <div class="row rowp">
-                                                    <div class="col-md-5">
-                                                        <div class="template12-img">
-                                                            <img src="{{ asset('storage/uploads/frontend/l3_template/significance2/' . $significance->image) }}" alt="significance2 Image" class="img-fluid">
+                            </ul> <!-- END tabs-nav -->
+                            <div id="tabs-content100">
+                                @foreach ($l3Categories as $category)
+                                    @foreach ($category->contentInfos as $info)
+                                        @foreach ($info->significance2s as $significance)
+                                            <div id="{{ strtolower(str_replace([' ', '&', ','], '-', $info->significance2Category->name)) }}"
+                                                class="tab-content100" style="display: block;">
+                                                <div class="container">
+                                                    <div class="row rowp">
+                                                        <div class="col-md-5">
+                                                            <div class="template12-img">
+                                                                <img src="{{ asset('storage/uploads/frontend/l3_template/significance2/' . $significance->image) }}"
+                                                                    alt="significance2 Image" class="img-fluid">
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-md-7">
-                                                        <div class="red-title">
+                                                        <div class="col-md-7">
+                                                            <div class="red-title">
                                                                 @if ($significance->significance2_short_description)
                                                                     {!! $significance->significance2_short_description !!}
                                                                 @endif
-                                                            <a href="javascript:void(0);" class="btn-show" id="btn-show6">Read More
-                                                                ...</a>
-                                                            <div class="content-hide" id="content-hide6">
-                                                                @if ($significance->significance2_long_description)
-                                                                    {!! $significance->significance2_long_description !!}
-                                                                @endif
+                                                                <a href="javascript:void(0);" class="btn-show"
+                                                                    id="btn-show6">Read More
+                                                                    ...</a>
+                                                                <div class="content-hide" id="content-hide6">
+                                                                    @if ($significance->significance2_long_description)
+                                                                        {!! $significance->significance2_long_description !!}
+                                                                    @endif
+                                                                </div>
+                                                                <a href="javascript:void(0);" class="btn-hide"
+                                                                    id="btn-hide6">Hide
+                                                                    Content ...</a>
                                                             </div>
-                                                            <a href="javascript:void(0);" class="btn-hide" id="btn-hide6">Hide
-                                                                Content ...</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        @endforeach
                                     @endforeach
-                                 @endforeach
-                             @endforeach
+                                @endforeach
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+                <div class="container mobile-view significance-space" id="sf_mob">
+                    <!--  -->
+                    <div class="acc">
+
+                        @foreach ($l3Categories as $category)
+                            @foreach ($category->contentInfos as $contentInfo)
+                                @if ($contentInfo->significance2Category)
+                                    <div class="acc__card">
+                                        <!-- Accordion Title -->
+                                        <a href="#significance2s-{{ $loop->iteration }}"
+                                            class="acc__title {{ $loop->first ? 'active' : ' ' }}"
+                                            data-target="significance2s-{{ $loop->iteration }}">
+                                            {{ $contentInfo->significance2Category->name }}
+                                        </a>
+
+                                        <!-- Accordion Panel -->
+                                        @foreach ($contentInfo->significance2s as $significance)
+                                            <div class="acc__panel"
+                                                style="{{ $loop->first ? 'display:block;' : '' }}"
+                                                id="significance2s-{{ $loop->iteration }}">
+                                                <div class="box-height vert-box">
+                                                    <div class="red-title">
+                                                        @if ($significance->image)
+                                                            <div class="template12-img">
+                                                                <img
+                                                                    src="{{ asset('storage/uploads/frontend/l3_template/significance2/' . $contentInfo->image) }}">
+                                                            </div>
+
+                                                            {!! $significance->significance2_short_description !!}
+                                                            {!! $significance->significance2_long_description !!}
+                                                        @else
+                                                            {!! $significance->significance2_short_description !!}
+                                                            {!! $significance->significance2_long_description !!}
+                                                        @endif
+                                                    </div>
+                                                </div>
+                                                <a href="javascript:void(0)" class="close-acrodin">Close</a>
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                @endif
+                            @endforeach
+                        @endforeach
+
+
+                    </div>
+                    <!-- mobile content end  -->
+                </div>
+      </section>
         
         @elseif ($fieldKey == 'overview16_short_descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
         <section class="empower-industry-bg codec-page-section anchor-link"  style="padding-bottom: 20px !important; padding-top: 40px !important;" id="{{ $slug }}">

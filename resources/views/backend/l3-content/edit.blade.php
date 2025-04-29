@@ -42,6 +42,7 @@
             border: 1px solid #ccc;
             cursor: pointer;
         }
+        
     </style>
     <div class="main-content-inner">
         <div class="main-content-wrap">
@@ -140,6 +141,7 @@
                                     'industries' => 'Industries',
                                     'cyberwind' => 'Why Cyberwind',
                                     'testimonials' => 'Testimonials',
+                                    'blog' => 'blog',
                                     'faqs' => 'FAQs',
                                     'overview2' => 'overview2',
                                     'overview15' => 'overview15',
@@ -1109,7 +1111,7 @@
         });
     </script>
 
-    <script>
+    {{-- <script>
         $(document).ready(function() {
             // Convert Laravel array into JavaScript array
             let existingData = @json($l3overview_desc ?? []);
@@ -1156,8 +1158,76 @@
                 generateSubDescriptions(initialCount);
             }
         });
-    </script>
+    </script> --}}
+<script>
+    $(document).ready(function() {
+    // Convert Laravel array into JavaScript array
+    let existingData = @json($l3overview_desc ?? []);
 
+    function generateSubDescriptions(count) {
+        let container = $('#dynamic_overview_sections');
+        container.empty(); // Clear previous content
+
+        // Iterate through the number of descriptions needed
+        for (let i = 0; i < count; i++) {
+            let content = existingData[i]?.sub_description ?? ''; // Fetch specific overview_sub_descriptions
+
+            let subForm = `
+                <div class="overview-sub-section">
+                    <div class="body-title">Overview Sub Description ${i + 1} :<span class="tf-color-1">*</span></div>
+                    <textarea id="overview_sub_description_${i + 1}" class="mr-5 summernote" name="overview_sub_descriptions[]">${content}</textarea>
+                </div>
+            `;
+
+            container.append(subForm);
+        }
+
+        // Re-initialize Summernote for new textareas (to ensure they work in both create and edit)
+        $('.summernote').summernote({
+                placeholder: 'Start typing here...',
+                tabsize: 2,
+                height: 300,
+                minHeight: 150,
+                maxHeight: 600,
+                width: '100%',
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'italic', 'underline', 'strikethrough', 'clear', 'fontname', 'fontsize', 'color']],
+                    ['para', ['ul', 'ol', 'paragraph', 'height']],
+                    ['insert', ['link', 'picture', 'video', 'table', 'hr']],
+                    ['view', ['fullscreen', 'codeview', 'help']]
+                ],
+                styleTags: [
+                    'p', 'blockquote', 'pre', 
+                    { title: 'Heading 1', tag: 'h1', className: 'h1' },
+                    { title: 'Heading 2', tag: 'h2', className: 'h2' },
+                    { title: 'Heading 3', tag: 'h3', className: 'h3' },
+                    { title: 'Heading 4', tag: 'h4', className: 'h4' },
+                    { title: 'Heading 5', tag: 'h5', className: 'h5' },
+                    { title: 'Heading 6', tag: 'h6', className: 'h6' }
+                ],
+                fontNames: ['Roboto', 'Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Merriweather', 'Sans-serif', 'Times New Roman', 'Verdana'],
+                fontNamesIgnoreCheck: ['Roboto', 'Merriweather', 'Sans-serif'],
+                fontSizes: ['8', '10', '12', '14', '16', '15', '18', '20', '22', '24', '26', '28', '30', '32'],
+                
+                
+            });
+    }
+
+    // Generate fields when dropdown value changes
+    $('#overview_count').change(function() {
+        let count = parseInt($(this).val()) || 0;
+        generateSubDescriptions(count);
+    });
+
+    // Auto-generate fields on page load if a value is preselected
+    let initialCount = parseInt($('#overview_count').val()) || existingData.length;
+    if (initialCount > 0) {
+        generateSubDescriptions(initialCount);
+    }
+});
+
+</script>
     <script>
         $(document).ready(function() {
             // Convert Laravel array into JavaScript array
@@ -1184,13 +1254,32 @@
 
                 // Re-initialize Summernote for new textareas
                 $('.summernote').summernote({
-                    height: 150,
-                    toolbar: [
-                        ['style', ['bold', 'italic', 'underline', 'clear']],
-                        ['para', ['ul', 'ol', 'paragraph']],
-                        ['insert', ['link', 'picture', 'video']]
-                    ]
-                });
+                placeholder: 'Start typing here...',
+                tabsize: 2,
+                height: 300,
+                minHeight: 150,
+                maxHeight: 600,
+                width: '100%',
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'italic', 'underline', 'strikethrough', 'clear', 'fontname', 'fontsize', 'color']],
+                    ['para', ['ul', 'ol', 'paragraph', 'height']],
+                    ['insert', ['link', 'picture', 'video', 'table', 'hr']],
+                    ['view', ['fullscreen', 'codeview', 'help']]
+                ],
+                styleTags: [
+                    'p', 'blockquote', 'pre', 
+                    { title: 'Heading 1', tag: 'h1', className: 'h1' },
+                    { title: 'Heading 2', tag: 'h2', className: 'h2' },
+                    { title: 'Heading 3', tag: 'h3', className: 'h3' },
+                    { title: 'Heading 4', tag: 'h4', className: 'h4' },
+                    { title: 'Heading 5', tag: 'h5', className: 'h5' },
+                    { title: 'Heading 6', tag: 'h6', className: 'h6' }
+                ],
+                fontNames: ['Roboto', 'Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Merriweather', 'Sans-serif', 'Times New Roman', 'Verdana'],
+                fontNamesIgnoreCheck: ['Roboto', 'Merriweather', 'Sans-serif'],
+                fontSizes: ['8', '10', '12', '14', '16','15', '18', '20', '22', '24', '26', '28', '30', '32']            
+            });
             }
 
             // Generate fields when dropdown value changes

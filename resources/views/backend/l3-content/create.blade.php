@@ -274,7 +274,9 @@
 
 
 
-                    <div class="form-group" id="dynamic_overview_sections"></div>
+                    <div class="form-group" id="dynamic_overview_sections">
+
+                    </div>
 
 
                     <!-- Overview 15 Form ends-->
@@ -1016,25 +1018,41 @@
 
                 for (let i = 1; i <= count; i++) {
                     let subForm = `
-                   
                         <div class="body-title">Overview Sub Description ${i} :<span class="tf-color-1">*</span></div>
-                        <textarea class="mr-5 summernote" name="overview_sub_descriptions[]"></textarea>
-                   
-            `;
+                        <textarea class="mr-5 summernote" name="overview_sub_descriptions[]"></textarea>`;
                     container.append(subForm);
                 }
 
                 // Re-initialize Summernote for new textareas
                 $('.summernote').summernote({
-                    height: 150,
-                    toolbar: [
-                        ['style', ['bold', 'italic', 'underline', 'clear']],
-                        ['para', ['ul', 'ol', 'paragraph']],
-                        ['insert', ['link', 'picture', 'video']],
-                    ]
-                });
+                placeholder: 'Start typing here...',
+                tabsize: 2,
+                height: 300,
+                minHeight: 150,
+                maxHeight: 600,
+                width: '100%',
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'italic', 'underline', 'strikethrough', 'clear', 'fontname', 'fontsize', 'color']],
+                    ['para', ['ul', 'ol', 'paragraph', 'height']],
+                    ['insert', ['link', 'picture', 'video', 'table', 'hr']],
+                    ['view', ['fullscreen', 'codeview', 'help']]
+                ],
+                styleTags: [
+                    'p', 'blockquote', 'pre', 
+                    { title: 'Heading 1', tag: 'h1', className: 'h1' },
+                    { title: 'Heading 2', tag: 'h2', className: 'h2' },
+                    { title: 'Heading 3', tag: 'h3', className: 'h3' },
+                    { title: 'Heading 4', tag: 'h4', className: 'h4' },
+                    { title: 'Heading 5', tag: 'h5', className: 'h5' },
+                    { title: 'Heading 6', tag: 'h6', className: 'h6' }
+                ],
+                fontNames: ['Roboto', 'Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Merriweather', 'Sans-serif', 'Times New Roman', 'Verdana'],
+                fontNamesIgnoreCheck: ['Roboto', 'Merriweather', 'Sans-serif'],
+                fontSizes: ['8', '10', '12', '14','15', '16','18','20', '22', '24', '26', '28', '30', '32'],
             });
         });
+    });
     </script>
 
     <script>
@@ -1047,22 +1065,41 @@
 
                 for (let i = 1; i <= count; i++) {
                     let subForm = `
-                   
                         <div class="body-title">Overview Sub Description ${i} :<span class="tf-color-1">*</span></div>
-                        <textarea class="mr-5 summernote" name="overview2_sub_description[]"></textarea>
-                   
-            `;
+                        <textarea class="mr-5 summernote" name="overview2_sub_description[]"></textarea>`;
                     container.append(subForm);
                 }
 
                 // Re-initialize Summernote for new textareas
                 $('.summernote').summernote({
-                    height: 150,
+                    placeholder: 'Start typing here...',
+                    tabsize: 2,
+                    height: 300,
+                    minHeight: 150,
+                    maxHeight: 600,
+                    width: '100%',
                     toolbar: [
-                        ['style', ['bold', 'italic', 'underline', 'clear']],
-                        ['para', ['ul', 'ol', 'paragraph']],
-                        ['insert', ['link', 'picture', 'video']],
-                    ]
+                        ['style', ['style']],
+                        ['font', ['bold', 'italic', 'underline', 'strikethrough', 'clear', 'fontname', 'fontsize', 'color']],
+                        ['para', ['ul', 'ol', 'paragraph', 'height']],
+                        ['insert', ['link', 'picture', 'video', 'table', 'hr']],
+                        ['view', ['fullscreen', 'codeview', 'help']]
+                    ],
+                    styleTags: [
+                        'p', 'blockquote', 'pre', 
+                        { title: 'Heading 1', tag: 'h1', className: 'h1' },
+                        { title: 'Heading 2', tag: 'h2', className: 'h2' },
+                        { title: 'Heading 3', tag: 'h3', className: 'h3' },
+                        { title: 'Heading 4', tag: 'h4', className: 'h4' },
+                        { title: 'Heading 5', tag: 'h5', className: 'h5' },
+                        { title: 'Heading 6', tag: 'h6', className: 'h6' }
+                    ],
+                    fontNames: ['Roboto', 'Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Merriweather', 'Sans-serif', 'Times New Roman', 'Verdana'],
+                    fontNamesIgnoreCheck: ['Roboto', 'Merriweather', 'Sans-serif'],
+                    fontSizes: ['8', '10', '12', '14', '16', '15', '18', '20', '22', '24', '26', '28', '30', '32'],
+                    
+                    // Preserve styling when pasting content
+
                 });
             });
         });
