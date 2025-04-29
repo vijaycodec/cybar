@@ -3599,10 +3599,13 @@ body{
     height: auto;
     margin-bottom: 20px;
     }
-    .wwyl-box p {
+    .wwyl-box p:first-of-type {
     font-size: 15px;
-    padding: 20px 0px;
-
+    padding: 20px 0px 2px 0px;
+    }
+    .wwyl-box p:last-of-type {
+        font-size: 15px;
+        padding: 0px 0px 20px 0px;
     }
     .ecss-box {
     font-size: 15px;

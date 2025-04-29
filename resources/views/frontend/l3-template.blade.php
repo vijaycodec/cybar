@@ -332,7 +332,7 @@
 
                                                     <!-- Dynamic Circle -->
                                                     <div class="{{ $circleClass }}">
-                                                        <span>{{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                                                        <span>{{ $index + 1}}</span>
                                                         <!-- Dynamic Number -->
                                                     </div>
                                                 </div>
