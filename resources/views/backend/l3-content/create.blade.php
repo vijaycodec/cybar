@@ -146,31 +146,31 @@
                     <div class="form-group l3-form overview_form " id="overview_form">
 
                         <div class="body-title">Overview Paragraph 1 :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="overview_description">{{ old('overview_description') }}</textarea>
+                        <textarea class="ckeditor" name="overview_description">{{ old('overview_description') }}</textarea>
                     </div>
 
                     <div class="form-group l3-form overview_form " id="overview_form1">
 
                         <div class="body-title">Overview Paragraph 2 :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="overview_description1">{{ old('overview_description1') }}</textarea>
+                        <textarea class="ckeditor" name="overview_description1">{{ old('overview_description1') }}</textarea>
                     </div>
 
                     <div class="form-group l3-form overview_form " id="overview_form2">
 
                         <div class="body-title">Overview Paragraph 3 :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="overview_description2">{{ old('overview_description2') }}</textarea>
+                        <textarea class="ckeditor" name="overview_description2">{{ old('overview_description2') }}</textarea>
                     </div>
 
                     <div class="form-group l3-form overview_form " id="overview_form3">
 
                         <div class="body-title">Overview Paragraph 4 :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="overview_description3">{{ old('overview_description3') }}</textarea>
+                        <textarea class="ckeditor" name="overview_description3">{{ old('overview_description3') }}</textarea>
                     </div>
 
                     <div class="form-group l3-form overview_form " id="overview_form4">
 
                         <div class="body-title">Overview Paragraph 5 :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="overview_description4">{{ old('overview_description4') }}</textarea>
+                        <textarea class="ckeditor" name="overview_description4">{{ old('overview_description4') }}</textarea>
                     </div>
 
                     <div class="l3-form form-group overview_subdescription_title">
@@ -205,31 +205,31 @@
                     <div class="l3-form form-group overview2_paragraph1">
 
                         <div class="body-title">Overview Paragraph1 :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="overview2_paragraph1">{{ old('overview2_paragraph1') }}</textarea>
+                        <textarea class="ckeditor" name="overview2_paragraph1">{{ old('overview2_paragraph1') }}</textarea>
                     </div>
 
                     <div class="l3-form form-group overview2_paragraph2">
 
                         <div class="body-title">Overview Paragraph2 :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="overview2_paragraph2">{{ old('overview2_paragraph2') }}</textarea>
+                        <textarea class="ckeditor" name="overview2_paragraph2">{{ old('overview2_paragraph2') }}</textarea>
                     </div>
 
                     <div class="l3-form form-group overview2_paragraph3">
 
                         <div class="body-title">Overview Paragraph3 :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="overview2_paragraph3">{{ old('overview2_paragraph3') }}</textarea>
+                        <textarea class="ckeditor" name="overview2_paragraph3">{{ old('overview2_paragraph3') }}</textarea>
                     </div>
 
                     <div class="l3-form form-group overview2_paragraph4">
 
                         <div class="body-title">Overview Paragraph4 :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="overview2_paragraph4">{{ old('overview2_paragraph4') }}</textarea>
+                        <textarea class="ckeditor" name="overview2_paragraph4">{{ old('overview2_paragraph4') }}</textarea>
                     </div>
 
                     <div class="l3-form form-group overview2_paragraph5">
 
                         <div class="body-title">Overview Paragraph5 :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="overview2_paragraph5">{{ old('overview2_paragraph5') }}</textarea>
+                        <textarea class="ckeditor" name="overview2_paragraph5">{{ old('overview2_paragraph5') }}</textarea>
                     </div>
 
                     <div class="form-group" id="dynamic_overview_sections"></div>
@@ -241,7 +241,7 @@
 
                     <div class="l3-form form-group overview3_title">
                         <div class="body-title">Overview Title(H) :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="overview3_title">{{ old('overview3_title') }}</textarea>
+                        <textarea class="ckeditor" name="overview3_title">{{ old('overview3_title') }}</textarea>
                     </div>
 
                     <div class="l3-form" id="overview3_sub_desc" style="display: none;">
@@ -269,7 +269,7 @@
                     <div class="form-group l3-form overview_form " id="overview15_form">
 
                         <div class="body-title">Overview Description :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="overview15_descriptions">{{ old('overview15_descriptions') }}</textarea>
+                        <textarea class="ckeditor" name="overview15_descriptions">{{ old('overview15_descriptions') }}</textarea>
                     </div>
 
 
@@ -292,13 +292,13 @@
                     <div class="l3-form form-group overview16_short_description">
 
                         <div class="body-title">Overview Short Description :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="overview16_short_descriptions">{{ old('overview16_short_descriptions') }}</textarea>
+                        <textarea class="ckeditor" name="overview16_short_descriptions">{{ old('overview16_short_descriptions') }}</textarea>
                     </div>
 
                     <div class="form-group l3-form overview16_form " id="overview16_form">
 
                         <div class="body-title">Overview Description :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="overview16_long_descriptions">{{ old('overview16_long_descriptions') }}</textarea>
+                        <textarea class="ckeditor" name="overview16_long_descriptions">{{ old('overview16_long_descriptions') }}</textarea>
                     </div>
 
 
@@ -315,7 +315,7 @@
                     <div class="l3-form form-group overview17_description">
 
                         <div class="body-title">Overview Description :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="overview17_descriptions">{{ old('overview17_descriptions') }}</textarea>
+                        <textarea class="ckeditor" name="overview17_descriptions">{{ old('overview17_descriptions') }}</textarea>
                     </div>
 
                     <div class="form-group" id="dynamic_overview17_sections"></div>
@@ -337,18 +337,18 @@
 
                     <div class="l3-form form-group significance_short_description">
                         <div class="body-title">Significance Short Description :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="significance_short_description">{{ old('significance_short_description') }}</textarea>
+                        <textarea class="ckeditor" name="significance_short_description">{{ old('significance_short_description') }}</textarea>
                     </div>
                     <div class="l3-form form-group significance_desc">
                         <div class="body-title">Significance Description :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="significance_description">{{ old('significance_description') }}</textarea>
+                        <textarea class="ckeditor" name="significance_description">{{ old('significance_description') }}</textarea>
                     </div>
 
 
                     <div class="l3-form form-group significance_title">
                         <div class="body-title">Significance Title :<span class="tf-color-1">*</span></div>
 
-                        <textarea class="summernote" name="Significance_title">{{ old('Significance_title') }}</textarea>
+                        <textarea class="ckeditor" name="Significance_title">{{ old('Significance_title') }}</textarea>
                     </div>
                     <!-- Significance Form ends-->
 
@@ -368,16 +368,16 @@
                     <div class="l3-form form-group significance2_title">
                         <div class="body-title">Significance Title :<span class="tf-color-1">*</span></div>
 
-                        <textarea class="summernote" name="significance2_title">{{ old('significance2_title') }}</textarea>
+                        <textarea class="ckeditor" name="significance2_title">{{ old('significance2_title') }}</textarea>
                     </div>
 
                     <div class="l3-form form-group significance2_short_description">
                         <div class="body-title">Significance Short Description :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="significance2_short_description">{{ old('significance2_short_description') }}</textarea>
+                        <textarea class="ckeditor" name="significance2_short_description">{{ old('significance2_short_description') }}</textarea>
                     </div>
                     <div class="l3-form form-group significance2_desc">
                         <div class="body-title">Significance Description :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="significance2_long_description">{{ old('significance2_long_description') }}</textarea>
+                        <textarea class="ckeditor" name="significance2_long_description">{{ old('significance2_long_description') }}</textarea>
                     </div>
 
                     <!-- Significance2 Form ends-->
@@ -397,18 +397,18 @@
                     <!-- Course Feature Title Form -->
                     <div class="l3-form form-group coursefeature_title">
                         <div class="body-title">Course Feature Title :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="coursefeature_title">{{ old('coursefeature_title') }}</textarea>
+                        <textarea class="ckeditor" name="coursefeature_title">{{ old('coursefeature_title') }}</textarea>
                     </div>
 
                     <div class="l3-form form-group course_feature_short_description">
 
                         <div class="body-title">Course Feature Short Description :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="course_feature_short_description">{{ old('course_feature_short_description') }}</textarea>
+                        <textarea class="ckeditor" name="course_feature_short_description">{{ old('course_feature_short_description') }}</textarea>
                     </div>
                     <div class="l3-form form-group coursefeature_desc">
 
                         <div class="body-title">Course Feature Description :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="course_feature_description">{{ old('course_feature_description') }}</textarea>
+                        <textarea class="ckeditor" name="course_feature_description">{{ old('course_feature_description') }}</textarea>
                     </div>
 
 
@@ -429,15 +429,15 @@
                     <!-- Cyberwind Title Form -->
                     <div class="l3-form form-group cyberwind_title">
                         <div class="body-title">Cyberwind Title :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="cyberwind_title">{{ old('cyberwind_title') }}</textarea>
+                        <textarea class="ckeditor" name="cyberwind_title">{{ old('cyberwind_title') }}</textarea>
                     </div>
                     <div class="l3-form form-group cyberwind_short_description">
                         <div class="body-title">Cyberwind Short Description :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="cyberwind_short_description">{{ old('cyberwind_short_description') }}</textarea>
+                        <textarea class="ckeditor" name="cyberwind_short_description">{{ old('cyberwind_short_description') }}</textarea>
                     </div>
                     <div class="l3-form form-group cyberwind_desc">
                         <div class="body-title">Cyberwind Description :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="cyberwind_description">{{ old('cyberwind_description') }}</textarea>
+                        <textarea class="ckeditor" name="cyberwind_description">{{ old('cyberwind_description') }}</textarea>
                     </div>
 
 
@@ -458,7 +458,7 @@
                     <!-- Industries Title Form -->
                     <div class="l3-form form-group industries_title">
                         <div class="body-title">Industries Title : <span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="industries_title">{{ old('industries_title') }}</textarea>
+                        <textarea class="ckeditor" name="industries_title">{{ old('industries_title') }}</textarea>
                     </div>
                     <div class="l3-form form-group industries_desc">
                         <div class="body-title">Industries Description :<span class="tf-color-1">*</span></div>
@@ -484,7 +484,7 @@
 
                     <div class="l3-form form-group industries2_title">
                         <div class="body-title">Industries Title : <span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="industry2_title">{{ old('industry2_title') }}</textarea>
+                        <textarea class="ckeditor" name="industry2_title">{{ old('industry2_title') }}</textarea>
                     </div>
                     <div class="l3-form form-group industries2_desc">
                         <div class="body-title">Industries Description :<span class="tf-color-1">*</span></div>
@@ -512,7 +512,7 @@
                     </div>
                     <div class="l3-form form-group sub_category">
                         <div class="body-title">Faqs Title :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="faq_title">{{ old('title') }}</textarea>
+                        <textarea class="ckeditor" name="faq_title">{{ old('title') }}</textarea>
 
                     </div>
                     <div class="name l3-form sub_category" id="">
@@ -582,7 +582,7 @@
                     <div class="name l3-form" id="incident_form" style="display: none;">
 
                         <div class="body-title">Incident Title :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="incident_title">{{ old('incident_title') }}</textarea>
+                        <textarea class="ckeditor" name="incident_title">{{ old('incident_title') }}</textarea>
                     </div>
                     <div class="l3-form form-group Video_link">
                         <div class="body-title">Video Link : <span class="tf-color-1">*</span></div>
@@ -591,7 +591,7 @@
 
                     <div class="l3-form  incident_description">
                         <div class="body-title">Incident Description :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="incident_description">{{ old('incident_description') }}</textarea>
+                        <textarea class="ckeditor" name="incident_description">{{ old('incident_description') }}</textarea>
                     </div>
 
 
@@ -601,7 +601,7 @@
                     {{-- CEH kit form start --}}
                     <div class="l3-form form-group cehkit_form" id="cehkit_form">
                         <div class="body-title">CEH KIT Title (Top) : <span class="tf-color-1"></span></div>
-                        <textarea class="summernote" name="main_title">{{ old('main_title') }}</textarea>
+                        <textarea class="ckeditor" name="main_title">{{ old('main_title') }}</textarea>
                     </div>
                     <div class="form-group l3-form  kit_title">
                         <div class="body-title">Sub Title :<span class="tf-color-1">*</span></div>
@@ -609,7 +609,7 @@
                     </div>
                     <div class="l3-form  ceh_description">
                         <div class="body-title">CEH KIT Description :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="ceh_description">{{ old('ceh_description') }}</textarea>
+                        <textarea class="ckeditor" name="ceh_description">{{ old('ceh_description') }}</textarea>
                     </div>
 
 
@@ -649,11 +649,11 @@
                     </div>
                     <div class="l3-form form-group program_sub_title">
                         <div class="body-title">Program Sub Title(H) :<span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="program_sub_title">{{ old('program_sub_title') }}</textarea>
+                        <textarea class="ckeditor" name="program_sub_title">{{ old('program_sub_title') }}</textarea>
                     </div>
                     <div class="l3-form form-group program_description">
                         <div class="body-title"> Description : <span class="tf-color-1">*</span></div>
-                        <textarea class="summernote" name="program_description">{{ old('program_description') }}</textarea>
+                        <textarea class="ckeditor" name="program_description">{{ old('program_description') }}</textarea>
                     </div>
                     <div class="l3-form form-group brochure_pdf">
                         <div class="body-title">Upload Brochure (PDF) :<span class="tf-color-1"></span></div>
@@ -1019,38 +1019,14 @@
                 for (let i = 1; i <= count; i++) {
                     let subForm = `
                         <div class="body-title">Overview Sub Description ${i} :<span class="tf-color-1">*</span></div>
-                        <textarea class="mr-5 summernote" name="overview_sub_descriptions[]"></textarea>`;
+                        <textarea class="mr-5 ckeditor" name="overview_sub_descriptions[]"></textarea>`;
                     container.append(subForm);
                 }
 
-                // Re-initialize Summernote for new textareas
-                $('.summernote').summernote({
-                placeholder: 'Start typing here...',
-                tabsize: 2,
-                height: 300,
-                minHeight: 150,
-                maxHeight: 600,
-                width: '100%',
-                toolbar: [
-                    ['style', ['style']],
-                    ['font', ['bold', 'italic', 'underline', 'strikethrough', 'clear', 'fontname', 'fontsize', 'color']],
-                    ['para', ['ul', 'ol', 'paragraph', 'height']],
-                    ['insert', ['link', 'picture', 'video', 'table', 'hr']],
-                    ['view', ['fullscreen', 'codeview', 'help']]
-                ],
-                styleTags: [
-                    'p', 'blockquote', 'pre', 
-                    { title: 'Heading 1', tag: 'h1', className: 'h1' },
-                    { title: 'Heading 2', tag: 'h2', className: 'h2' },
-                    { title: 'Heading 3', tag: 'h3', className: 'h3' },
-                    { title: 'Heading 4', tag: 'h4', className: 'h4' },
-                    { title: 'Heading 5', tag: 'h5', className: 'h5' },
-                    { title: 'Heading 6', tag: 'h6', className: 'h6' }
-                ],
-                fontNames: ['Roboto', 'Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Merriweather', 'Sans-serif', 'Times New Roman', 'Verdana'],
-                fontNamesIgnoreCheck: ['Roboto', 'Merriweather', 'Sans-serif'],
-                fontSizes: ['8', '10', '12', '14','15', '16','18','20', '22', '24', '26', '28', '30', '32'],
-            });
+                // Re-initialize ckeditor for new textareas
+                document.querySelectorAll('.ckeditor').forEach(function(element) {
+                        CKEDITOR.replace(element);
+                    });
         });
     });
     </script>
@@ -1066,41 +1042,14 @@
                 for (let i = 1; i <= count; i++) {
                     let subForm = `
                         <div class="body-title">Overview Sub Description ${i} :<span class="tf-color-1">*</span></div>
-                        <textarea class="mr-5 summernote" name="overview2_sub_description[]"></textarea>`;
+                        <textarea class="mr-5 ckeditor" name="overview2_sub_description[]"></textarea>`;
                     container.append(subForm);
                 }
 
-                // Re-initialize Summernote for new textareas
-                $('.summernote').summernote({
-                    placeholder: 'Start typing here...',
-                    tabsize: 2,
-                    height: 300,
-                    minHeight: 150,
-                    maxHeight: 600,
-                    width: '100%',
-                    toolbar: [
-                        ['style', ['style']],
-                        ['font', ['bold', 'italic', 'underline', 'strikethrough', 'clear', 'fontname', 'fontsize', 'color']],
-                        ['para', ['ul', 'ol', 'paragraph', 'height']],
-                        ['insert', ['link', 'picture', 'video', 'table', 'hr']],
-                        ['view', ['fullscreen', 'codeview', 'help']]
-                    ],
-                    styleTags: [
-                        'p', 'blockquote', 'pre', 
-                        { title: 'Heading 1', tag: 'h1', className: 'h1' },
-                        { title: 'Heading 2', tag: 'h2', className: 'h2' },
-                        { title: 'Heading 3', tag: 'h3', className: 'h3' },
-                        { title: 'Heading 4', tag: 'h4', className: 'h4' },
-                        { title: 'Heading 5', tag: 'h5', className: 'h5' },
-                        { title: 'Heading 6', tag: 'h6', className: 'h6' }
-                    ],
-                    fontNames: ['Roboto', 'Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Merriweather', 'Sans-serif', 'Times New Roman', 'Verdana'],
-                    fontNamesIgnoreCheck: ['Roboto', 'Merriweather', 'Sans-serif'],
-                    fontSizes: ['8', '10', '12', '14', '16', '15', '18', '20', '22', '24', '26', '28', '30', '32'],
-                    
-                    // Preserve styling when pasting content
-
-                });
+                // Re-initialize ckeditor for new textareas
+                document.querySelectorAll('.ckeditor').forEach(function(element) {
+        CKEDITOR.replace(element);
+    });
             });
         });
     </script>
@@ -1117,14 +1066,14 @@
                     let subForm = `
                         <div class="form-group mb-3">
                             <label class="body-title">Overview Sub Description ${i} <span class="tf-color-1">*</span></label>
-                            <textarea class="form-control summernote" name="overview_sub_descriptions[]" rows="4"></textarea>
+                            <textarea class="form-control ckeditor" name="overview_sub_descriptions[]" rows="4"></textarea>
                         </div>
                     `;
                     container.append(subForm);
                 }
     
-                // Re-initialize Summernote for new textareas
-                container.find('.summernote').summernote({
+                // Re-initialize ckeditor for new textareas
+                container.find('.ckeditor').ckeditor({
                     height: 150,
                     toolbar: [
                         ['style', ['bold', 'italic', 'underline', 'clear']],

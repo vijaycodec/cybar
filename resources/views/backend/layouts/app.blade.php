@@ -900,6 +900,15 @@
 });
 
 </script>
+{{-- <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script> --}}
+<script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+<script>
+    // Initialize CKEditor on all elements with class 'ckeditor'
+    document.querySelectorAll('.ckeditor').forEach(function(element) {
+        CKEDITOR.replace(element);
+    });
+</script>
+
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
