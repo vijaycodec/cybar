@@ -2002,16 +2002,16 @@
                                                         <div class="desktop-view">
                                                             <div class="wwyl-row">
                                                                 @foreach ($contentInfo->overview2SubDescriptions as $key => $sub)
-                                                                                            @php
-                                                                                                $colors = ['', 'orange', 'purple', 'color4', 'green'];
-                                                                                                $color = $colors[$key % count($colors)];
-                                                                                            @endphp
-                                                                                            <div class="wwyl-box {{ $color }}">
-                                                                                                <p>{!! $sub->overview2_sub_description !!}</p>
-                                                                                                <div class="wwyl-box-circle {{ $color ? $color . '-circle' : '' }}">
-                                                                                                    <span>{{ str_pad($key + 1, 2, '0', STR_PAD_LEFT) }}</span>
-                                                                                                </div>
-                                                                                            </div>
+                                                                        @php
+                                                                            $colors = ['', 'orange', 'purple', 'color4', 'green'];
+                                                                            $color = $colors[$key % count($colors)];
+                                                                        @endphp
+                                                                        <div class="wwyl-box {{ $color }}">
+                                                                            <p>{!! $sub->overview2_sub_description !!}</p>
+                                                                            <div class="wwyl-box-circle {{ $color ? $color . '-circle' : '' }}">
+                                                                                <span>{{ str_pad($key + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                                                                            </div>
+                                                                        </div>
                                                                 @endforeach
                                                             </div>
                                                         </div>

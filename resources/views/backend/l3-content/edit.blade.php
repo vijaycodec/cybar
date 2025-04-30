@@ -1175,7 +1175,7 @@
             let subForm = `
                 <div class="overview-sub-section">
                     <div class="body-title">Overview Sub Description ${i + 1} :<span class="tf-color-1">*</span></div>
-                    <textarea id="overview_sub_description_${i + 1}" class="mr-5 summernote" name="overview_sub_descriptions[]">${content}</textarea>
+                    <textarea id="overview_sub_description_${i + 1}" class="mr-5 ckeditor" name="overview_sub_descriptions[]">${content}</textarea>
                 </div>
             `;
 
@@ -1183,35 +1183,9 @@
         }
 
         // Re-initialize Summernote for new textareas (to ensure they work in both create and edit)
-        $('.summernote').summernote({
-                placeholder: 'Start typing here...',
-                tabsize: 2,
-                height: 300,
-                minHeight: 150,
-                maxHeight: 600,
-                width: '100%',
-                toolbar: [
-                    ['style', ['style']],
-                    ['font', ['bold', 'italic', 'underline', 'strikethrough', 'clear', 'fontname', 'fontsize', 'color']],
-                    ['para', ['ul', 'ol', 'paragraph', 'height']],
-                    ['insert', ['link', 'picture', 'video', 'table', 'hr']],
-                    ['view', ['fullscreen', 'codeview', 'help']]
-                ],
-                styleTags: [
-                    'p', 'blockquote', 'pre', 
-                    { title: 'Heading 1', tag: 'h1', className: 'h1' },
-                    { title: 'Heading 2', tag: 'h2', className: 'h2' },
-                    { title: 'Heading 3', tag: 'h3', className: 'h3' },
-                    { title: 'Heading 4', tag: 'h4', className: 'h4' },
-                    { title: 'Heading 5', tag: 'h5', className: 'h5' },
-                    { title: 'Heading 6', tag: 'h6', className: 'h6' }
-                ],
-                fontNames: ['Roboto', 'Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Merriweather', 'Sans-serif', 'Times New Roman', 'Verdana'],
-                fontNamesIgnoreCheck: ['Roboto', 'Merriweather', 'Sans-serif'],
-                fontSizes: ['8', '10', '12', '14', '16', '15', '18', '20', '22', '24', '26', '28', '30', '32'],
-                
-                
-            });
+        document.querySelectorAll('.ckeditor').forEach(function(element) {
+            CKEDITOR.replace(element);
+        });
     }
 
     // Generate fields when dropdown value changes
@@ -1245,7 +1219,7 @@
                     let subForm = `
                     <div class="overview-sub-section">
                         <div class="body-title">Overview Sub Description ${i + 1} :<span class="tf-color-1">*</span></div>
-                        <textarea id="overview3_sub_desc${i + 1}" class="mr-5 summernote" name="overview2_sub_description[]">${content}</textarea>
+                        <textarea id="overview3_sub_desc${i + 1}" class="mr-5 ckeditor" name="overview2_sub_description[]">${content}</textarea>
                     </div>
                 `;
 
@@ -1253,34 +1227,10 @@
                 }
 
                 // Re-initialize Summernote for new textareas
-                $('.summernote').summernote({
-                placeholder: 'Start typing here...',
-                tabsize: 2,
-                height: 300,
-                minHeight: 150,
-                maxHeight: 600,
-                width: '100%',
-                toolbar: [
-                    ['style', ['style']],
-                    ['font', ['bold', 'italic', 'underline', 'strikethrough', 'clear', 'fontname', 'fontsize', 'color']],
-                    ['para', ['ul', 'ol', 'paragraph', 'height']],
-                    ['insert', ['link', 'picture', 'video', 'table', 'hr']],
-                    ['view', ['fullscreen', 'codeview', 'help']]
-                ],
-                styleTags: [
-                    'p', 'blockquote', 'pre', 
-                    { title: 'Heading 1', tag: 'h1', className: 'h1' },
-                    { title: 'Heading 2', tag: 'h2', className: 'h2' },
-                    { title: 'Heading 3', tag: 'h3', className: 'h3' },
-                    { title: 'Heading 4', tag: 'h4', className: 'h4' },
-                    { title: 'Heading 5', tag: 'h5', className: 'h5' },
-                    { title: 'Heading 6', tag: 'h6', className: 'h6' }
-                ],
-                fontNames: ['Roboto', 'Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Merriweather', 'Sans-serif', 'Times New Roman', 'Verdana'],
-                fontNamesIgnoreCheck: ['Roboto', 'Merriweather', 'Sans-serif'],
-                fontSizes: ['8', '10', '12', '14', '16','15', '18', '20', '22', '24', '26', '28', '30', '32']            
-            });
-            }
+                document.querySelectorAll('.ckeditor').forEach(function(element) {
+                        CKEDITOR.replace(element);
+                    });
+                }
 
             // Generate fields when dropdown value changes
             $('#overview3_count').change(function() {
