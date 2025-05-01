@@ -280,8 +280,8 @@
 
                     <div class="l3-form form-group overview3_title" id="overview3_form">
                         <div class="body-title">Overview Title(H) :<span class="tf-color-1">*</span></div>
-                        <input type="text" class="ckeditor" name="overview3_title"
-                            value="{{ $l3Content->overview3_title ?? '' }}"></input>
+                        <textarea  class="ckeditor" name="overview3_title"
+                            >{{ $l3Content->overview3_title ?? '' }}</textarea>
                     </div>
 
                     <div class="l3-form" id="overview3_sub_desc" style="display: none;">
@@ -1218,7 +1218,7 @@
 
                     let subForm = `
                     <div class="overview-sub-section">
-                        <div class="body-title">Overview Sub Description ${i + 1} :<span class="tf-color-1">*</span></div>
+                        <div class="body-title">Overview2 Sub Description ${i + 1} :<span class="tf-color-1">*</span></div>
                         <textarea id="overview3_sub_desc${i + 1}" class="mr-5 ckeditor" name="overview2_sub_description[]">${content}</textarea>
                     </div>
                 `;
