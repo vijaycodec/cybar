@@ -7,8 +7,24 @@ use Illuminate\Database\Eloquent\Model;
 class CyberwindCategory extends Model
 {
     protected $fillable = ['name', 'slug', 'page_category_id', 'category_id', 'sub_category_id'];
+
     public function l3ContentInfo()
     {
         return $this->belongsTo(L3ContentInfo::class, 'l3_content_info_id');
+    }
+
+    public function pageCategory()
+    {
+        return $this->belongsTo(PageDetail::class);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(CourseCategory::class);
+    }
+
+    public function subCategory()
+    {
+        return $this->belongsTo(SubCategory::class);
     }
 }

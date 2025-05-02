@@ -12,4 +12,19 @@ class Significance2Category extends Model
     {
         return $this->belongsTo(L3ContentInfo::class, 'l3_content_info_id');
     }
+
+    public function pageCategory()
+    {
+        return $this->belongsTo(PageDetail::class);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(CourseCategory::class);
+    }
+
+    public function subCategory()
+    {
+        return $this->belongsTo(SubCategory::class);
+    }
 }

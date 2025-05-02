@@ -38,6 +38,9 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
+                                <th>Page Category</th>
+                                <th>Category</th>
+                                <th>Sub-Category</th>
                                 <th>Sub Category Name</th>
                                 <th>Slug</th>
                                 <th>Actions</th>
@@ -48,6 +51,9 @@
                                 @foreach ($subcategories  as $category)
                                     <tr>
                                         <td>{{ $category->id }}</td>
+                                        <td>{{ $category->pageCategory->page_name ?? 'N/A'  }}</td>
+                                        <td>{{ $category->category->name ?? 'N/A'  }}</td>
+                                        <td>{{ $category->subCategory->sub_category ?? 'N/A'  }}</td>
                                         <td>{{ $category->name }}</td>
                                         <td>{{ $category->slug }}</td>
                                        
