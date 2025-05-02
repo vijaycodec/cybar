@@ -1,4 +1,4 @@
-    .mbg1,.pro-mbile .mbg1.acc__title.active{
+.mbg1,.pro-mbile .mbg1.acc__title.active{
     background: #deecfb  !important;
     border-color: #deecfb  !important;
     color:#000 !important;
@@ -2136,13 +2136,13 @@ background-color: #f3f3f3 !important;
     display: none;
    }
 .third-content h3 {
-    font-size: 20px;
+    font-size: 21px;
     line-height: 1.4;
     max-width: 100%;
 }
 .third-content p {
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 28px;
     text-align: start;
 }
 .ceh-title h2, .cn-title h2 {
