@@ -217,7 +217,6 @@
 .tab3-content {
   padding-top: 0px;
   height: 400px;
-  overflow-y: auto;
   overscroll-behavior: contain;
   margin-top: 40px;
 }
@@ -225,6 +224,97 @@
 .tab3-content .container {
   width: 100%;
 }
+
+.tab3-tab {
+  background: #ffffffad;
+}
+
+.tab3-tab1 {
+  position: sticky;
+  top: 120px;
+  z-index: 908;
+}
+
+.tab3-tab .tablinks1 {
+  display: block;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  text-align: start;
+}
+
+.tab3-tab .tablinks1.tab3-active,
+.tab3-tab .tablinks1.tab3-active:hover {
+  color: #fff !important;
+  background: #18ba60;
+  border-bottom: 0px solid #18ba60;
+}
+
+.tab3-tab .tablinks1:hover {
+  color: #000 !important;
+  background: #dddddd;
+  border-bottom: 0px solid #18ba60;
+}
+
+.tabcontent1 {
+  padding-top: 0px;
+  height: 400px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.tabcontent1 .container {
+  width: 100%;
+}
+
+.tab3-tab {
+  background: #ffffffad;
+}
+
+.tab3-tab1 {
+  position: sticky;
+  top: 120px;
+  z-index: 908;
+}
+
+.tab3-tab .tablinks3 {
+  display: block;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  text-align: start;
+}
+
+.tab3-tab .tablinks3.tab3-active,
+.tab3-tab .tablinks3.tab3-active:hover {
+  color: #fff !important;
+  background: #18ba60;
+  border-bottom: 0px solid #18ba60;
+}
+
+.tab3-tab .tablinks3:hover {
+  color: #000 !important;
+  background: #dddddd;
+  border-bottom: 0px solid #18ba60;
+}
+
+.tabcontent3 {
+  padding-top: 0px;
+  height: 400px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.tabcontent3 .container {
+  width: 100%;
+}
+
 
 .red-title h4 {
   font-size: 18px;

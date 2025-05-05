@@ -157,57 +157,57 @@
                                                         <!-- desktop start  -->
                                                         <div class="desktop-view">
                                                             @foreach ($l3Categories as $category)
-                                                                                            @foreach ($category->contentInfos as $contentInfo)
-                                                                                                                            <!-- Checking and Displaying Sub Descriptions -->
-                                                                                                                            @if ($contentInfo->overviewSubDescriptions->isNotEmpty())
-                                                                                                                                                            @foreach ($contentInfo->overviewSubDescriptions as $index => $subDescription)
-                                                                                                                                                                                            <div class="wwyl-row">
+                                                                @foreach ($category->contentInfos as $contentInfo)
+                                                                    <!-- Checking and Displaying Sub Descriptions -->
+                                                                    @if ($contentInfo->overviewSubDescriptions->isNotEmpty())
+                                                                        @foreach ($contentInfo->overviewSubDescriptions as $index => $subDescription)
+                                                                            <div class="wwyl-row">
 
-                                                                                                                                                                                                <!-- Dynamic Class for wwyl-box -->
-                                                                                                                                                                                                @php
-                                                                                                                                                                                                    $boxClasses = [
-                                                                                                                                                                                                        'wwyl-box', // For 0th index
-                                                                                                                                                                                                        'wwyl-box orange ', // For 1st index
-                                                                                                                                                                                                        'wwyl-box purple', // For 2nd index
-                                                                                                                                                                                                        'wwyl-box color4', // For 3rd index
-                                                                                                                                                                                                        'wwyl-box green', // For 4th index
-                                                                                                                                                                                                    ];
+                                                                                <!-- Dynamic Class for wwyl-box -->
+                                                                                @php
+                                                                                    $boxClasses = [
+                                                                                        'wwyl-box', // For 0th index
+                                                                                        'wwyl-box orange ', // For 1st index
+                                                                                        'wwyl-box purple', // For 2nd index
+                                                                                        'wwyl-box color4', // For 3rd index
+                                                                                        'wwyl-box green', // For 4th index
+                                                                                    ];
 
-                                                                                                                                                                                                    // Use the array index, if index > 4, default to 'wwyl-box'
-                                                                                                                                                                                                    $boxClass =
-                                                                                                                                                                                                        $boxClasses[$index] ??
-                                                                                                                                                                                                        'wwyl-box';
+                                                                                    // Use the array index, if index > 4, default to 'wwyl-box'
+                                                                                    $boxClass =
+                                                                                        $boxClasses[$index] ??
+                                                                                        'wwyl-box';
 
-                                                                                                                                                                                                    // Circle Class (Same as before)
-                                                                                                                                                                                                    $circleClasses = [
-                                                                                                                                                                                                        'wwyl-box-circle', // For 0th index
-                                                                                                                                                                                                        'wwyl-box-circle orange-circle', // For 1st index
-                                                                                                                                                                                                        'wwyl-box-circle purple-circle', // For 2nd index
-                                                                                                                                                                                                        'wwyl-box-circle color4-circle', // For 3rd index
-                                                                                                                                                                                                        'wwyl-box-circle green-circle', // For 4th index
-                                                                                                                                                                                                    ];
+                                                                                    // Circle Class (Same as before)
+                                                                                    $circleClasses = [
+                                                                                        'wwyl-box-circle', // For 0th index
+                                                                                        'wwyl-box-circle orange-circle', // For 1st index
+                                                                                        'wwyl-box-circle purple-circle', // For 2nd index
+                                                                                        'wwyl-box-circle color4-circle', // For 3rd index
+                                                                                        'wwyl-box-circle green-circle', // For 4th index
+                                                                                    ];
 
-                                                                                                                                                                                                    // Circle class for the current index
-                                                                                                                                                                                                    $circleClass =
-                                                                                                                                                                                                        $circleClasses[$index] ??
-                                                                                                                                                                                                        'wwyl-box-circle';
-                                                                                                                                                                                                @endphp
+                                                                                    // Circle class for the current index
+                                                                                    $circleClass =
+                                                                                        $circleClasses[$index] ??
+                                                                                        'wwyl-box-circle';
+                                                                                @endphp
 
-                                                                                                                                                                                                <div class="{{ $boxClass }}">
+                                                                                <div class="{{ $boxClass }}">
 
-                                                                                                                                                                                                    {!! $subDescription->sub_description !!}
+                                                                                    {!! $subDescription->sub_description !!}
 
 
-                                                                                                                                                                                                    <!-- Dynamic Circle Class -->
-                                                                                                                                                                                                    <div class="{{ $circleClass }}">
-                                                                                                                                                                                                        <span>{{ $index + 1 }}</span>
-                                                                                                                                                                                                        <!-- Simple Iteration Number -->
-                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                </div>
-                                                                                                                                                                                            </div>
-                                                                                                                                                            @endforeach
-                                                                                                                            @endif
-                                                                                            @endforeach
+                                                                                    <!-- Dynamic Circle Class -->
+                                                                                    <div class="{{ $circleClass }}">
+                                                                                        <span>{{ $index + 1 }}</span>
+                                                                                        <!-- Simple Iteration Number -->
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        @endforeach
+                                                                    @endif
+                                                                @endforeach
                                                             @endforeach
                                                         </div>
                                                         <!--  -->
@@ -266,20 +266,20 @@
                         <div class="mobile-view indu-moblie indu-moblie1 count-navigation">
                             <div id="owl-demo65" class="owl-carousel owl-theme">
                                 @foreach ($l3Categories as $category)
-                                        @foreach ($category->contentInfos as $contentInfo)
-                                                @foreach (range(0, 4) as $index)
-                                                        @php
-                                                            $descriptionField = 'overview_description' . ($index > 0 ? $index : '');
-                                                        @endphp
-                                                        @if (!empty($contentInfo->$descriptionField))
-                                                            <div class="item">
-                                                                <div class="mobile-cont slider">
-                                                                    <p>{!! $contentInfo->$descriptionField !!}</p>
-                                                                </div>
-                                                            </div>
-                                                        @endif
-                                                @endforeach
+                                    @foreach ($category->contentInfos as $contentInfo)
+                                        @foreach (range(0, 4) as $index)
+                                            @php
+                                                $descriptionField = 'overview_description' . ($index > 0 ? $index : '');
+                                            @endphp
+                                            @if (!empty($contentInfo->$descriptionField))
+                                                <div class="item">
+                                                    <div class="mobile-cont slider">
+                                                        <p>{!! $contentInfo->$descriptionField !!}</p>
+                                                    </div>
+                                                </div>
+                                            @endif
                                         @endforeach
+                                    @endforeach
                                 @endforeach
                             </div>
                             <div id="navigation-count" class="count-nav-box"></div>
@@ -605,40 +605,40 @@
                                                                         <div class="pro-mod1">
                                                                             <div class="acc">
                                                                                 @foreach ($contentInfo->programCategory->programSubCategories as $index => $subCategory)
-                                                                                                            @if ($index < $half)
-                                                                                                                                        @php
-                                                                                                                                            $uniqueId =
-                                                                                                                                                strtolower(
-                                                                                                                                                    preg_replace(
-                                                                                                                                                        '/[^a-zA-Z0-9]/',
-                                                                                                                                                        '',
-                                                                                                                                                        str_replace(
-                                                                                                                                                            [
-                                                                                                                                                                ' ',
-                                                                                                                                                                '&',
-                                                                                                                                                                ',',
-                                                                                                                                                            ],
-                                                                                                                                                            '-',
-                                                                                                                                                            $subCategory->name,
-                                                                                                                                                        ),
-                                                                                                                                                    ),
-                                                                                                                                                ) .
-                                                                                                                                                '-' .
-                                                                                                                                                $index;
-                                                                                                                                        @endphp
-                                                                                                                                        <div class="acc__card">
-                                                                                                                                            <!-- Subcategory Name -->
-                                                                                                                                            <a href="#{{ $uniqueId }}" class="acc__title">
-                                                                                                                                                {{ $subCategory->name }}
-                                                                                                                                            </a>
+                                                                                    @if ($index < $half)
+                                                                                        @php
+                                                                                            $uniqueId =
+                                                                                                strtolower(
+                                                                                                    preg_replace(
+                                                                                                        '/[^a-zA-Z0-9]/',
+                                                                                                        '',
+                                                                                                        str_replace(
+                                                                                                            [
+                                                                                                                ' ',
+                                                                                                                '&',
+                                                                                                                ',',
+                                                                                                            ],
+                                                                                                            '-',
+                                                                                                            $subCategory->name,
+                                                                                                        ),
+                                                                                                    ),
+                                                                                                ) .
+                                                                                                '-' .
+                                                                                                $index;
+                                                                                        @endphp
+                                                                                        <div class="acc__card">
+                                                                                            <!-- Subcategory Name -->
+                                                                                            <a href="#{{ $uniqueId }}" class="acc__title">
+                                                                                                {{ $subCategory->name }}
+                                                                                            </a>
 
-                                                                                                                                            <!-- Subcategory Description -->
-                                                                                                                                            <div class="acc__panel" style="display: none;"
-                                                                                                                                                id="{{ $uniqueId }}">
-                                                                                                                                                {!! $subCategory->description !!}
-                                                                                                                                            </div>
-                                                                                                                                        </div>
-                                                                                                            @endif
+                                                                                            <!-- Subcategory Description -->
+                                                                                            <div class="acc__panel" style="display: none;"
+                                                                                                id="{{ $uniqueId }}">
+                                                                                                {!! $subCategory->description !!}
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    @endif
                                                                                 @endforeach
                                                                             </div>
                                                                         </div>
@@ -649,40 +649,40 @@
                                                                         <div class="pro-mod1">
                                                                             <div class="acc">
                                                                                 @foreach ($contentInfo->programCategory->programSubCategories as $index => $subCategory)
-                                                                                                            @if ($index >= $half)
-                                                                                                                                        @php
-                                                                                                                                            $uniqueId =
-                                                                                                                                                strtolower(
-                                                                                                                                                    preg_replace(
-                                                                                                                                                        '/[^a-zA-Z0-9]/',
-                                                                                                                                                        '',
-                                                                                                                                                        str_replace(
-                                                                                                                                                            [
-                                                                                                                                                                ' ',
-                                                                                                                                                                '&',
-                                                                                                                                                                ',',
-                                                                                                                                                            ],
-                                                                                                                                                            '-',
-                                                                                                                                                            $subCategory->name,
-                                                                                                                                                        ),
-                                                                                                                                                    ),
-                                                                                                                                                ) .
-                                                                                                                                                '-' .
-                                                                                                                                                $index;
-                                                                                                                                        @endphp
-                                                                                                                                        <div class="acc__card">
-                                                                                                                                            <!-- Subcategory Name -->
-                                                                                                                                            <a href="#{{ $uniqueId }}" class="acc__title">
-                                                                                                                                                {{ $subCategory->name }}
-                                                                                                                                            </a>
+                                                                                    @if ($index >= $half)
+                                                                                        @php
+                                                                                            $uniqueId =
+                                                                                                strtolower(
+                                                                                                    preg_replace(
+                                                                                                        '/[^a-zA-Z0-9]/',
+                                                                                                        '',
+                                                                                                        str_replace(
+                                                                                                            [
+                                                                                                                ' ',
+                                                                                                                '&',
+                                                                                                                ',',
+                                                                                                            ],
+                                                                                                            '-',
+                                                                                                            $subCategory->name,
+                                                                                                        ),
+                                                                                                    ),
+                                                                                                ) .
+                                                                                                '-' .
+                                                                                                $index;
+                                                                                        @endphp
+                                                                                        <div class="acc__card">
+                                                                                            <!-- Subcategory Name -->
+                                                                                            <a href="#{{ $uniqueId }}" class="acc__title">
+                                                                                                {{ $subCategory->name }}
+                                                                                            </a>
 
-                                                                                                                                            <!-- Subcategory Description -->
-                                                                                                                                            <div class="acc__panel" style="display: none;"
-                                                                                                                                                id="{{ $uniqueId }}">
-                                                                                                                                                {!! $subCategory->description !!}
-                                                                                                                                            </div>
-                                                                                                                                        </div>
-                                                                                                            @endif
+                                                                                            <!-- Subcategory Description -->
+                                                                                            <div class="acc__panel" style="display: none;"
+                                                                                                id="{{ $uniqueId }}">
+                                                                                                {!! $subCategory->description !!}
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    @endif
                                                                                 @endforeach
                                                                             </div>
                                                                         </div>
@@ -883,43 +883,43 @@
                                                                 @endphp
                                                                 <div class="acc" , style="padding: 0%">
                                                                     @foreach ($chunks as $chunk)
-                                                                                    <div class="col-md-6">
-                                                                                        <div class="pro-mod1">
+                                                                        <div class="col-md-6">
+                                                                            <div class="pro-mod1">
 
-                                                                                            @foreach ($chunk as $subCategory)
-                                                                                                                    @php
-                                                                                                                        $subCategorySlug = strtolower(
-                                                                                                                            preg_replace(
-                                                                                                                                '/[^a-zA-Z0-9]/',
-                                                                                                                                '',
-                                                                                                                                str_replace(
-                                                                                                                                    [' ', '&', ','],
-                                                                                                                                    '-',
-                                                                                                                                    $subCategory->name,
-                                                                                                                                ),
-                                                                                                                            ),
-                                                                                                                        );
-                                                                                                                    @endphp
-                                                                                                                    <div class="acc__card">
-                                                                                                                        <!-- Subcategory Title -->
-                                                                                                                        <a href="#{{ $subCategorySlug }}mob" class="acc__title">
-                                                                                                                            {{ $subCategory->name }}
-                                                                                                                        </a>
-                                                                                                                        <!-- Subcategory Description -->
-                                                                                                                        <div id="{{ $subCategorySlug }}mob" class="acc__panel"
-                                                                                                                            style="display: none;">
-                                                                                                                            <div class="vert-box box-height">
-                                                                                                                                {!! $subCategory->description !!}
+                                                                                @foreach ($chunk as $subCategory)
+                                                                                    @php
+                                                                                        $subCategorySlug = strtolower(
+                                                                                            preg_replace(
+                                                                                                '/[^a-zA-Z0-9]/',
+                                                                                                '',
+                                                                                                str_replace(
+                                                                                                    [' ', '&', ','],
+                                                                                                    '-',
+                                                                                                    $subCategory->name,
+                                                                                                ),
+                                                                                            ),
+                                                                                        );
+                                                                                    @endphp
+                                                                                    <div class="acc__card">
+                                                                                        <!-- Subcategory Title -->
+                                                                                        <a href="#{{ $subCategorySlug }}mob" class="acc__title">
+                                                                                            {{ $subCategory->name }}
+                                                                                        </a>
+                                                                                        <!-- Subcategory Description -->
+                                                                                        <div id="{{ $subCategorySlug }}mob" class="acc__panel"
+                                                                                            style="display: none;">
+                                                                                            <div class="vert-box box-height">
+                                                                                                {!! $subCategory->description !!}
 
-                                                                                                                            </div>
-                                                                                                                            <a href="javascript:void(0)" class="close-acrodin">Close</a>
-                                                                                                                        </div>
-
-                                                                                                                    </div>
-                                                                                            @endforeach
-
+                                                                                            </div>
+                                                                                            <a href="javascript:void(0)" class="close-acrodin">Close</a>
                                                                                         </div>
+
                                                                                     </div>
+                                                                                @endforeach
+
+                                                                            </div>
+                                                                        </div>
                                                                     @endforeach
                                                                 </div>
                                                             </div>
@@ -935,42 +935,42 @@
                                                     <div class="acc acc-m">
                                                         <!-- Loop through each subcategory -->
                                                         @foreach ($contentInfo->programCategory->programSubCategories as $index => $subCategory)
-                                                                @php
-                                                                    $subCategorySlug = strtolower(
-                                                                        preg_replace(
-                                                                            '/[^a-zA-Z0-9]/',
-                                                                            '',
-                                                                            str_replace(
-                                                                                [' ', '&', ','],
-                                                                                '-',
-                                                                                $subCategory->name,
-                                                                            ),
+                                                            @php
+                                                                $subCategorySlug = strtolower(
+                                                                    preg_replace(
+                                                                        '/[^a-zA-Z0-9]/',
+                                                                        '',
+                                                                        str_replace(
+                                                                            [' ', '&', ','],
+                                                                            '-',
+                                                                            $subCategory->name,
                                                                         ),
-                                                                    );
-                                                                @endphp
-                                                                <div class="acc__card">
-                                                                    <!-- Accordion Title -->
-                                                                    <a href="#{{ $subCategorySlug }}mob" class="acc__title mbg{{ $index + 1 }} ">
-                                                                        {{ $subCategory->name }} <i class="fa fa-arrow-down"></i>
-                                                                    </a>
-                                                                    <!-- Accordion Content Panel -->
-                                                                    <div id="{{ $subCategorySlug }}mob" class="acc__panel " style="">
-                                                                        <div class="vert-box box-height">
-                                                                            @if ($subCategory->image)
-                                                                                <div class="template12-img">
-                                                                                    <img src="{{ asset('storage/uploads/frontend/l3_template/program/' . $subCategory->image) }}"
-                                                                                        alt="{{ $subCategory->name }}">
-                                                                                </div>
-                                                                            @endif
+                                                                    ),
+                                                                );
+                                                            @endphp
+                                                            <div class="acc__card">
+                                                                <!-- Accordion Title -->
+                                                                <a href="#{{ $subCategorySlug }}mob" class="acc__title mbg{{ $index + 1 }} ">
+                                                                    {{ $subCategory->name }} <i class="fa fa-arrow-down"></i>
+                                                                </a>
+                                                                <!-- Accordion Content Panel -->
+                                                                <div id="{{ $subCategorySlug }}mob" class="acc__panel " style="">
+                                                                    <div class="vert-box box-height">
+                                                                        @if ($subCategory->image)
+                                                                            <div class="template12-img">
+                                                                                <img src="{{ asset('storage/uploads/frontend/l3_template/program/' . $subCategory->image) }}"
+                                                                                    alt="{{ $subCategory->name }}">
+                                                                            </div>
+                                                                        @endif
 
-                                                                            <p>{!! $subCategory->description !!}</p>
+                                                                        <p>{!! $subCategory->description !!}</p>
 
-                                                                        </div>
-                                                                        <a href="javascript:void(0)" class="close-acrodin">Close</a>
                                                                     </div>
-                                                                    <!-- Close button (optional) -->
-
+                                                                    <a href="javascript:void(0)" class="close-acrodin">Close</a>
                                                                 </div>
+                                                                <!-- Close button (optional) -->
+
+                                                            </div>
                                                         @endforeach
                                                     </div>
                                                 </div>
@@ -1771,19 +1771,19 @@
                             <!-- Tab Menu Start -->
                             <ul class="nav nav-tabs nav-tabs3 program-tab program-tab2" id="program_tab2">
                                 @foreach ($l3Categories as $category)
-                                        @foreach ($category->contentInfos as $contentInfo)
-                                                @if ($contentInfo->faqCategory && !in_array($contentInfo->faqCategory->id, $displayedFaqCategories))
-                                                        @php
-                                                            $displayedFaqCategories[] = $contentInfo->faqCategory->id; // Mark this ID as displayed
-                                                        @endphp
-                                                        <li class="{{ $loop->first ? 'active' : '' }}">
-                                                            <a data-toggle="tab"
-                                                                href="#{{ strtolower(preg_replace('/[^a-zA-Z0-9\s]/', '', str_replace([' ', '&', ','], '-', $contentInfo->faqCategory->name))) }}">
-                                                                {{ $contentInfo->faqCategory->name }}
-                                                            </a>
-                                                        </li>
-                                                @endif
-                                        @endforeach
+                                    @foreach ($category->contentInfos as $contentInfo)
+                                        @if ($contentInfo->faqCategory && !in_array($contentInfo->faqCategory->id, $displayedFaqCategories))
+                                            @php
+                                                $displayedFaqCategories[] = $contentInfo->faqCategory->id; // Mark this ID as displayed
+                                            @endphp
+                                            <li class="{{ $loop->first ? 'active' : '' }}">
+                                                <a data-toggle="tab"
+                                                    href="#{{ strtolower(preg_replace('/[^a-zA-Z0-9\s]/', '', str_replace([' ', '&', ','], '-', $contentInfo->faqCategory->name))) }}">
+                                                    {{ $contentInfo->faqCategory->name }}
+                                                </a>
+                                            </li>
+                                        @endif
+                                    @endforeach
                                 @endforeach
                             </ul>
                             <!-- Tab Menu End -->
@@ -1794,42 +1794,42 @@
                                     $displayedFaqCategories = []; // Reset array for tab content
                                 @endphp
                                 @foreach ($l3Categories as $category)
-                                        @foreach ($category->contentInfos as $contentInfo)
-                                                @if ($contentInfo->faqCategory && !in_array($contentInfo->faqCategory->id, $displayedFaqCategories))
-                                                        @php
-                                                            $displayedFaqCategories[] = $contentInfo->faqCategory->id; // Mark this ID as displayed
-                                                        @endphp
-                                                        <div id="{{ strtolower(preg_replace('/[^a-zA-Z0-9\s]/', '', str_replace([' ', '&', ','], '-', $contentInfo->faqCategory->name))) }}"
-                                                            class="tab-pane tab-pane3 fade {{ $loop->first ? 'active' : '' }}">
-                                                            <!-- FAQ Subcategories -->
-                                                            <div class="container">
-                                                                <div class="row">
-                                                                    <div class="acc__section_faq">
-                                                                        <div class="pro-faq">
-                                                                            <div class="acc">
-                                                                                @foreach ($contentInfo->faqCategory->faqSubCategory as $faqSubCategory)
-                                                                                    <div class="acc__card">
-                                                                                        <!-- Subcategory Name -->
-                                                                                        <a href="#faqsub{{ strtolower(preg_replace('/[^a-zA-Z0-9\s]/', '', str_replace([' ', '&', ','], '-', $faqSubCategory->id))) }}"
-                                                                                            class="acc__title ">
-                                                                                            {{ $faqSubCategory->name }}
-                                                                                        </a>
+                                    @foreach ($category->contentInfos as $contentInfo)
+                                        @if ($contentInfo->faqCategory && !in_array($contentInfo->faqCategory->id, $displayedFaqCategories))
+                                            @php
+                                                $displayedFaqCategories[] = $contentInfo->faqCategory->id; // Mark this ID as displayed
+                                            @endphp
+                                            <div id="{{ strtolower(preg_replace('/[^a-zA-Z0-9\s]/', '', str_replace([' ', '&', ','], '-', $contentInfo->faqCategory->name))) }}"
+                                                class="tab-pane tab-pane3 fade {{ $loop->first ? 'active' : '' }}">
+                                                <!-- FAQ Subcategories -->
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="acc__section_faq">
+                                                            <div class="pro-faq">
+                                                                <div class="acc">
+                                                                    @foreach ($contentInfo->faqCategory->faqSubCategory as $faqSubCategory)
+                                                                        <div class="acc__card">
+                                                                            <!-- Subcategory Name -->
+                                                                            <a href="#faqsub{{ strtolower(preg_replace('/[^a-zA-Z0-9\s]/', '', str_replace([' ', '&', ','], '-', $faqSubCategory->id))) }}"
+                                                                                class="acc__title ">
+                                                                                {{ $faqSubCategory->name }}
+                                                                            </a>
 
-                                                                                        <!-- Subcategory Description -->
-                                                                                        <div class="acc__panel" style="display: "
-                                                                                            id="faqsub{{ strtolower(preg_replace('/[^a-zA-Z0-9\s]/', '', str_replace([' ', '&', ','], '-', $faqSubCategory->id))) }}">
-                                                                                            {{ $faqSubCategory->description }}
-                                                                                        </div>
-                                                                                    </div>
-                                                                                @endforeach
+                                                                            <!-- Subcategory Description -->
+                                                                            <div class="acc__panel" style="display: "
+                                                                                id="faqsub{{ strtolower(preg_replace('/[^a-zA-Z0-9\s]/', '', str_replace([' ', '&', ','], '-', $faqSubCategory->id))) }}">
+                                                                                {{ $faqSubCategory->description }}
                                                                             </div>
                                                                         </div>
-                                                                    </div>
+                                                                    @endforeach
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                @endif
-                                        @endforeach
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @endif
+                                    @endforeach
                                 @endforeach
                             </div>
                             <!-- Tab Content End -->
@@ -1916,92 +1916,92 @@
 
                 <!-- Global Popup fot Testomonials (Only One in the Page) -->
         @elseif ($fieldKey == 'overview2Descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
-            <section class="light-grey sample7-line anchor-link space7_1" id="{{ $slug }}">
-                <!--  -->
-                <div class="container desktop-view">
-                    <div class="row">
+                <section class="light-grey sample7-line anchor-link space7_1" id="{{ $slug }}">
+                    <!--  -->
+                    <div class="container desktop-view">
+                        <div class="row">
+                            @foreach ($l3Categories as $category)
+                                @foreach ($category->contentInfos as $info)
+                                    @if ($info->l3_layout_type === 'overview2' && $info->overview2Descriptions->count())
+                                        <div class="col-md-12">
+                                            <div class="third-content" id="overview2">
+                                                @foreach ($info->overview2Descriptions as $desc)
+                                                    @if($desc->overview2_title)
+                                                        <h3>{{ $desc->overview2_title }}</h3>
+                                                    @endif
+                                                    @if($desc->overview2_paragraph1)
+                                                        {!! $desc->overview2_paragraph1 !!}
+                                                    @endif
+                                                    <a href="javascript:void(0)" class="btn-show">Read More ...</a>
+                                                    <div class="content-hide">
+                                                        {!! $desc->overview2_paragraph2 !!}
+                                                        {!! $desc->overview2_paragraph3 !!}
+                                                        {!! $desc->overview2_paragraph4 !!}
+                                                        {!! $desc->overview2_paragraph5 !!}
+                                                    </div>
+                                                @endforeach
+                                                <a href="#overview2" class="btn-hide" id="btn-hide1">Hide Content ...</a>
+                                            </div>
+                                        </div>
+                                    @endif
+                                @endforeach
+                            @endforeach
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="container mobile-view">
                         @foreach ($l3Categories as $category)
                             @foreach ($category->contentInfos as $info)
                                 @if ($info->l3_layout_type === 'overview2' && $info->overview2Descriptions->count())
-                                    <div class="col-md-12">
-                                        <div class="third-content" id="overview2">
-                                            @foreach ($info->overview2Descriptions as $desc)
-                                                @if($desc->overview2_title)
-                                                    <h3>{{ $desc->overview2_title }}</h3>
-                                                @endif
-                                                @if($desc->overview2_paragraph1)
-                                                    {!! $desc->overview2_paragraph1 !!}
-                                                @endif
-                                                <a href="javascript:void(0)" class="btn-show">Read More ...</a>
-                                                <div class="content-hide">
-                                                    {!! $desc->overview2_paragraph2 !!}
-                                                    {!! $desc->overview2_paragraph3 !!}
-                                                    {!! $desc->overview2_paragraph4 !!}
-                                                    {!! $desc->overview2_paragraph5 !!}
-                                                </div>
-                                            @endforeach
-                                            <a href="#overview2" class="btn-hide" id="btn-hide1">Hide Content ...</a>
+                                    <div class="third-content">
+                                        <h3>{{ $info->overview2Descriptions->first()->overview2_title ?? 'Overview' }}</h3>
+                                        <!-- Slider start -->
+                                        <div class="mobile-view indu-moblie indu-moblie1 count-navigation">
+                                            <div id="owl-overview2" class="owl-carousel owl-theme">
+                                                @foreach ($info->overview2Descriptions as $desc)
+                                                    @foreach (range(1, 5) as $i)
+                                                        @php
+                                                            $paragraph = $desc->{'overview2_paragraph' . $i};
+                                                        @endphp
+                                                        @if (!empty($paragraph))
+                                                            <div class="item">
+                                                                <div class="mobile-cont">
+                                                                    <p>{!! $paragraph !!}</p>
+                                                                </div>
+                                                            </div>
+                                                        @endif
+                                                    @endforeach
+                                                @endforeach
+                                            </div>
+                                            <div id="navigation-count-overview2" class="count-nav-box"></div>
                                         </div>
+                                        <!-- Slider end -->
                                     </div>
                                 @endif
                             @endforeach
                         @endforeach
                     </div>
-                </div>
-                <!--  -->
-                <div class="container mobile-view">
-                    @foreach ($l3Categories as $category)
-                        @foreach ($category->contentInfos as $info)
-                            @if ($info->l3_layout_type === 'overview2' && $info->overview2Descriptions->count())
-                                <div class="third-content">
-                                    <h3>{{ $info->overview2Descriptions->first()->overview2_title ?? 'Overview' }}</h3>
-                                    <!-- Slider start -->
-                                    <div class="mobile-view indu-moblie indu-moblie1 count-navigation">
-                                        <div id="owl-overview2" class="owl-carousel owl-theme">
-                                            @foreach ($info->overview2Descriptions as $desc)
-                                                @foreach (range(1, 5) as $i)
-                                                    @php
-                                                        $paragraph = $desc->{'overview2_paragraph' . $i};
-                                                    @endphp
-                                                    @if (!empty($paragraph))
-                                                        <div class="item">
-                                                            <div class="mobile-cont">
-                                                                <p>{!! $paragraph !!}</p>
-                                                            </div>
-                                                        </div>
-                                                    @endif
-                                                @endforeach
-                                            @endforeach
-                                        </div>
-                                        <div id="navigation-count-overview2" class="count-nav-box"></div>
-                                    </div>
-                                    <!-- Slider end -->
-                                </div>
-                            @endif
-                        @endforeach
-                    @endforeach
-                </div>
 
-            </section>
-        @elseif ($fieldKey == 'overview2SubDescriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
-            <section class="light-grey sample7-line anchor-link space7_1" id="{{ $slug }}">
-                @foreach ($l3Categories as $category)
-                    @foreach ($category->contentInfos as $contentInfo)
-                        @if ($contentInfo->l3_layout_type === 'overview2subdescription')
-                            <!-- Desktop View -->
-                            <div class="container desktop-view">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="third-content">
-                                            @if($contentInfo->overview3_title)
-                                                <h4>{!! $contentInfo->overview3_title !!}</h4>
-                                            @endif
-                                            <div class="info-graphic">
-                                                <div class="row info-graphic-row">
-                                                    <div class="col-md-12">
-                                                        <div class="desktop-view">
-                                                            <div class="wwyl-row">
-                                                                @foreach ($contentInfo->overview2SubDescriptions as $key => $sub)
+                </section>
+            @elseif ($fieldKey == 'overview2SubDescriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
+                <section class="light-grey sample7-line anchor-link space7_1" id="{{ $slug }}">
+                    @foreach ($l3Categories as $category)
+                        @foreach ($category->contentInfos as $contentInfo)
+                            @if ($contentInfo->l3_layout_type === 'overview2subdescription')
+                                <!-- Desktop View -->
+                                <div class="container desktop-view">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="third-content">
+                                                @if($contentInfo->overview3_title)
+                                                    <h4>{!! $contentInfo->overview3_title !!}</h4>
+                                                @endif
+                                                <div class="info-graphic">
+                                                    <div class="row info-graphic-row">
+                                                        <div class="col-md-12">
+                                                            <div class="desktop-view">
+                                                                <div class="wwyl-row">
+                                                                    @foreach ($contentInfo->overview2SubDescriptions as $key => $sub)
                                                                         @php
                                                                             $colors = ['', 'orange', 'purple', 'color4', 'green'];
                                                                             $color = $colors[$key % count($colors)];
@@ -2012,7 +2012,8 @@
                                                                                 <span>{{ str_pad($key + 1, 2, '0', STR_PAD_LEFT) }}</span>
                                                                             </div>
                                                                         </div>
-                                                                @endforeach
+                                                                    @endforeach
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -2021,16 +2022,15 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- Mobile View -->
-                            <div class="container mobile-view">
-                                <div class="third-content">
-                                    @if($contentInfo->overview3_title)
-                                        <h3 class="space1">{!! $contentInfo->overview3_title !!}</h3>
-                                    @endif
-                                    <div class="mobile-view indu-moblie count-navigation">
-                                        <div id="owl-overview2subdescription" class="owl-carousel owl-theme">
-                                            @foreach ($contentInfo->overview2SubDescriptions as $key => $sub)
+                                <!-- Mobile View -->
+                                <div class="container mobile-view">
+                                    <div class="third-content">
+                                        @if($contentInfo->overview3_title)
+                                            <h3 class="space1">{!! $contentInfo->overview3_title !!}</h3>
+                                        @endif
+                                        <div class="mobile-view indu-moblie count-navigation">
+                                            <div id="owl-overview2subdescription" class="owl-carousel owl-theme">
+                                                @foreach ($contentInfo->overview2SubDescriptions as $key => $sub)
                                                     @php
                                                         $colors = ['', 'orange', 'purple', 'color4', 'green'];
                                                         $color = $colors[$key % count($colors)];
@@ -2041,1030 +2041,2649 @@
                                                             <span>{{ str_pad($key + 1, 2, '0', STR_PAD_LEFT) }}</span>
                                                         </div>
                                                     </div>
-                                            @endforeach
+                                                @endforeach
+                                            </div>
+                                            <div id="navigation-overview2subdescription" class="count-nav-box"></div>
                                         </div>
-                                        <div id="navigation-overview2subdescription" class="count-nav-box"></div>
                                     </div>
                                 </div>
-                            </div>
-                        @endif
-                    @endforeach
-                @endforeach
-            </section>
-
-        @elseif ($fieldKey == 'industry2_description' && $contents->contains(fn($info) => $info->{$fieldKey}))
-            <section class="sec-wrap-cod-2" style="background: #dceff6;" id="{{ $slug }}">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <!-- Dynamic Title -->
-                            @foreach ($l3Categories as $category)
-                                @foreach ($category->contentInfos as $contentInfo)
-                                    @if (!empty($contentInfo->industry2title))
-                                        <h3 class="temp-head">{!! $contentInfo->industry2title->title !!}</h3>
-                                        @break <!-- We only need one title -->
-                                    @endif
-                                @endforeach
-                            @endforeach
-                        </div>
-                    </div>
-
-                    @php
-                        $testimonials = collect();
-                        foreach ($l3Categories as $category) {
-                            foreach ($category->contentInfos as $contentInfo) {
-                                if (!empty($contentInfo->industry2_description)) {
-                                    $testimonials->push($contentInfo);
-                                }
-                            }
-                        }
-                    @endphp
-
-                    @foreach ($testimonials->chunk(3) as $testimonialChunk)
-                        <div class="row">
-                            @foreach ($testimonialChunk as $contentInfo)
-                                <div class="col-sm-4 testi-temp">
-                                    <p>{{ $contentInfo->industry2_description }}</p>
-                                    <p class="sign">{{ $contentInfo->industry2_testimonial_name }}</p>
-                                </div>
-                            @endforeach
-                        </div>
-                    @endforeach
-                </div>
-            </section>
-        @elseif ($fieldKey == 'overview15s' && $contents->contains(fn($info) => $info->{$fieldKey}))
-            <section class="sec-wrap-cod-2"
-                style="background-image:url('assets/images/image-bg-top.jpg'); background-repeat: repeat;" id="{{ $slug }}">
-                <div class="container">
-                    @foreach ($l3Categories as $category)
-                        @foreach ($category->contentInfos as $contentInfo)
-                            @foreach ($contentInfo->overview15s as $overview)
-                                <div class="row">
-                                    <div class="col-sm-7 mid-banner temp-3-sec">
-                                        <h3 class="temp-head">{{ $overview->overview15_title }}</h3>
-                                        <p>{!! $overview->overview15_descriptions !!}</p>
-                                    </div>
-                                    <div class="col-sm-5 mid-banner temp-3-sec">
-                                        @if($overview->image)
-                                            <img src="{{ asset('storage/uploads/frontend/l3_template/overview15/' . $overview->image) }}"
-                                                alt="Overview Image" class="img-fluid">
-                                        @endif
-                                    </div>
-                                </div>
-                            @endforeach
+                            @endif
                         @endforeach
                     @endforeach
-                </div>
-            </section>
-        @elseif ($fieldKey == 'significance2s' && $contents->contains(fn($info) => $info->{$fieldKey}))
-            <section class="why-codec codec-page-section anchor-link" id="{{ $slug }}">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 cn-title">
-                            @foreach ($l3Categories as $category)
-                                @foreach ($category->contentInfos as $info)
-                                    @foreach ($info->significance2s as $significance)
-                                        @if ($significance->significance2_title)
-                                            {!! $significance->significance2_title !!}
-                                        @endif
-                                    @endforeach
-                                @endforeach
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-                <div class="container desktop-view">
-                    <div class="row">
-                        <div class="cn-tabs1">
-                            <ul id="tabs-nav100">
+                </section>
+
+            @elseif ($fieldKey == 'industry2_description' && $contents->contains(fn($info) => $info->{$fieldKey}))
+                <section class="sec-wrap-cod-2" style="background: #dceff6;" id="{{ $slug }}">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <!-- Dynamic Title -->
                                 @foreach ($l3Categories as $category)
                                     @foreach ($category->contentInfos as $contentInfo)
-                                        @if ($contentInfo->significance2Category)
-                                            <li class="{{ $loop->first ? 'active' : ' ' }}"><a
-                                                    href="#{{ strtolower(str_replace([' ', '&', ','], '-', $contentInfo->significance2Category->name)) }}">
-                                                    {{ $contentInfo->significance2Category->name }}</a></li>
+                                        @if (!empty($contentInfo->industry2title))
+                                            <h3 class="temp-head">{!! $contentInfo->industry2title->title !!}</h3>
+                                            @break <!-- We only need one title -->
                                         @endif
                                     @endforeach
                                 @endforeach
-                            </ul> <!-- END tabs-nav -->
-                            <div id="tabs-content100">
+                            </div>
+                        </div>
+
+                        @php
+                            $testimonials = collect();
+                            foreach ($l3Categories as $category) {
+                                foreach ($category->contentInfos as $contentInfo) {
+                                    if (!empty($contentInfo->industry2_description)) {
+                                        $testimonials->push($contentInfo);
+                                    }
+                                }
+                            }
+                        @endphp
+
+                        @foreach ($testimonials->chunk(3) as $testimonialChunk)
+                            <div class="row">
+                                @foreach ($testimonialChunk as $contentInfo)
+                                    <div class="col-sm-4 testi-temp">
+                                        <p>{{ $contentInfo->industry2_description }}</p>
+                                        <p class="sign">{{ $contentInfo->industry2_testimonial_name }}</p>
+                                    </div>
+                                @endforeach
+                            </div>
+                        @endforeach
+                    </div>
+                </section>
+            @elseif ($fieldKey == 'overview15s' && $contents->contains(fn($info) => $info->{$fieldKey}))
+                <section class="sec-wrap-cod-2"
+                    style="background-image:url('assets/images/image-bg-top.jpg'); background-repeat: repeat;" id="{{ $slug }}">
+                    <div class="container">
+                        @foreach ($l3Categories as $category)
+                            @foreach ($category->contentInfos as $contentInfo)
+                                @foreach ($contentInfo->overview15s as $overview)
+                                    <div class="row">
+                                        <div class="col-sm-7 mid-banner temp-3-sec">
+                                            <h3 class="temp-head">{{ $overview->overview15_title }}</h3>
+                                            <p>{!! $overview->overview15_descriptions !!}</p>
+                                        </div>
+                                        <div class="col-sm-5 mid-banner temp-3-sec">
+                                            @if($overview->image)
+                                                <img src="{{ asset('storage/uploads/frontend/l3_template/overview15/' . $overview->image) }}"
+                                                    alt="Overview Image" class="img-fluid">
+                                            @endif
+                                        </div>
+                                    </div>
+                                @endforeach
+                            @endforeach
+                        @endforeach
+                    </div>
+                </section>
+            @elseif ($fieldKey == 'significance2s' && $contents->contains(fn($info) => $info->{$fieldKey}))
+                <section class="why-codec codec-page-section anchor-link light-grey" id="{{ $slug }}">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 cn-title">
                                 @foreach ($l3Categories as $category)
                                     @foreach ($category->contentInfos as $info)
                                         @foreach ($info->significance2s as $significance)
-                                            <div id="{{ strtolower(str_replace([' ', '&', ','], '-', $info->significance2Category->name)) }}"
-                                                class="tab-content100" style="display: block;">
-                                                <div class="container">
-                                                    <div class="row rowp">
-                                                        <div class="col-md-5">
-                                                            <div class="template12-img">
-                                                                <img src="{{ asset('storage/uploads/frontend/l3_template/significance2/' . $significance->image) }}"
-                                                                    alt="significance2 Image" class="img-fluid">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-7">
-                                                            <div class="red-title">
-                                                                @if ($significance->significance2_short_description)
-                                                                    {!! $significance->significance2_short_description !!}
-                                                                @endif
-                                                                <a href="javascript:void(0);" class="btn-show" id="btn-show6">Read More
-                                                                    ...</a>
-                                                                <div class="content-hide" id="content-hide6">
-                                                                    @if ($significance->significance2_long_description)
-                                                                        {!! $significance->significance2_long_description !!}
-                                                                    @endif
-                                                                </div>
-                                                                <a href="javascript:void(0);" class="btn-hide" id="btn-hide6">Hide
-                                                                    Content ...</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            @if ($significance->significance2_title)
+                                                {!! $significance->significance2_title !!}
+                                            @endif
                                         @endforeach
                                     @endforeach
                                 @endforeach
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="container mobile-view significance-space" id="sf_mob">
-                    <!--  -->
-                    <div class="acc">
-
-                        @foreach ($l3Categories as $category)
-                            @foreach ($category->contentInfos as $contentInfo)
-                                @if ($contentInfo->significance2Category)
-                                    <div class="acc__card">
-                                        <!-- Accordion Title -->
-                                        <a href="#significance2s-{{ $loop->iteration }}"
-                                            class="acc__title {{ $loop->first ? 'active' : ' ' }}"
-                                            data-target="significance2s-{{ $loop->iteration }}">
-                                            {{ $contentInfo->significance2Category->name }}
-                                        </a>
-
-                                        <!-- Accordion Panel -->
-                                        @foreach ($contentInfo->significance2s as $significance)
-                                            <div class="acc__panel" style="{{ $loop->first ? 'display:block;' : '' }}"
-                                                id="significance2s-{{ $loop->iteration }}">
-                                                <div class="box-height vert-box">
-                                                    <div class="red-title">
-                                                        @if ($significance->image)
-                                                            <div class="template12-img">
-                                                                <img
-                                                                    src="{{ asset('storage/uploads/frontend/l3_template/significance2/' . $contentInfo->image) }}">
-                                                            </div>
-
-                                                            {!! $significance->significance2_short_description !!}
-                                                            {!! $significance->significance2_long_description !!}
-                                                        @else
-                                                            {!! $significance->significance2_short_description !!}
-                                                            {!! $significance->significance2_long_description !!}
-                                                        @endif
+                    <div class="container desktop-view">
+                        <div class="row">
+                            <div class="cn-tabs1">
+                                <ul id="tabs-nav100">
+                                    @foreach ($l3Categories as $category)
+                                        @foreach ($category->contentInfos as $contentInfo)
+                                            @if ($contentInfo->significance2Category)
+                                                <li class="{{ $loop->first ? 'active' : ' ' }}"><a
+                                                        href="#{{ strtolower(str_replace([' ', '&', ','], '-', $contentInfo->significance2Category->name)) }}">
+                                                        {{ $contentInfo->significance2Category->name }}</a></li>
+                                            @endif
+                                        @endforeach
+                                    @endforeach
+                                </ul> <!-- END tabs-nav -->
+                                <div id="tabs-content100">
+                                    {{-- @foreach ($l3Categories as $category)
+                                    @foreach ($category->contentInfos as $info)
+                                    @foreach ($info->significance2s as $significance)
+                                    <div id="{{ strtolower(str_replace([' ', '&', ','], '-', $info->significance2Category->name)) }}"
+                                        class="tab-content100" style="display: block;">
+                                        <div class="container">
+                                            <div class="row rowp">
+                                                <div class="col-md-5">
+                                                    <div class="template12-img">
+                                                        <img src="{{ asset('storage/uploads/frontend/l3_template/significance2/' . $significance->image) }}"
+                                                            alt="significance2 Image" class="img-fluid">
                                                     </div>
                                                 </div>
-                                                <a href="javascript:void(0)" class="close-acrodin">Close</a>
+                                                <div class="col-md-7">
+                                                    <div class="red-title">
+                                                        @if ($significance->significance2_short_description)
+                                                        {!! $significance->significance2_short_description !!}
+                                                        @endif
+                                                        <a href="javascript:void(0);" class="btn-show" id="btn-show6">Read More
+                                                            ...</a>
+                                                        <div class="content-hide" id="content-hide6">
+                                                            @if ($significance->significance2_long_description)
+                                                            {!! $significance->significance2_long_description !!}
+                                                            @endif
+                                                        </div>
+                                                        <a href="javascript:void(0);" class="btn-hide" id="btn-hide6">Hide
+                                                            Content ...</a>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        @endforeach
+                                        </div>
                                     </div>
-                                @endif
-                            @endforeach
-                        @endforeach
+                                    @endforeach
+                                    @endforeach
+                                    @endforeach --}}
+                                    <div id="significance12"
+                                        class="tab-content100" style="display: block;">
+                                        <div class="container">
+                                            <div class="row rowp">
+                                                <div class="container desktop-view why-chossetab">
+                                                    <div class="row">
+                                                      <div class="col-md-3 tab3-tab1">
+                                                        <!--  -->
+                                                        <div class="tab3-tab" id="tab3_why_us">
+                                                          {{-- <button class="tablinks1" onclick="openCity2(event, 'industry_challenges')" id="defaultOpen"> Industry
+                                                            Challenges</button> --}}
+                                                          <button class="tablinks1 tab3-active" onclick="openCity2(event, 'technological_challenges')" id="defaultOpen">Technological
+                                                            Challenges</button>
+                                                          <button class="tablinks1" onclick="openCity2(event, 'operational_challenges')">Operational
+                                                            Challenges</button>
+                                                          <button class="tablinks1" onclick="openCity2(event, 'working_autonomy')">Working autonomy </button>
+                                                          <button class="tablinks1" onclick="openCity2(event, 'digital_reflection')">Digital reflection </button>
+                                                          <button class="tablinks1" onclick="openCity2(event, 'information_technology')">Information
+                                                            Technology</button>
+                                                          <button class="tablinks1" onclick="openCity2(event, 'cyber_security')">Cyber Security </button>
+                                                          <button class="tablinks1" onclick="openCity2(event, 'networks_security')">Networks Security </button>
+                                                        </div>
+                                                        <!--  -->
+                                                      </div>
+                                                      <div class="col-md-9">
+                                                        <!--  -->
+                                                        <div class="tab3-content">
+                                                          <!-- tab3 content1 start -->
+                                                          <div id="industry_challenges" class="tabcontent1">
+                                                            <div class="container">
+                                                              <div class="row rowp">
+                                                                <div class="col-md-5">
+                                                                  <div class="template12-img">
+                                                                    <img src="assets/images/Industry Challenges.jpg">
+                                                                  </div>
+                                                                </div>
+                                                                <div class="col-md-7">
+                                                                  <div class="red-title">
+                                                                    <h3 style="color: #000"> Infrastructure 2</h3>
+                                                                    <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                      challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                      have a high level of computational speed, which means replacing the existing infrastructure i.e.
+                                                                      an integrating AI have cost attached in various aspects.</p>
+                                                                    <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                      challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                      have a high level of computational speed, which means replacing the existing infrastructure i.e.
+                                                                      an integrating AI have cost attached in various aspects.
+                                                                    </p>
+                                                                    <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                      challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                      have a high level of computational speed, which means replacing the existing infrastructure i.e.
+                                                                      an integrating AI have cost attached in various aspects.
+                                                                    </p>
+                                              
+                                                                    <a href="javascript:void(0);" class="btn-show">Read More ...</a>
+                                                                    <div class="content-hide">
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Data Privacy and security </h3>
+                                                                      <p>Data is the sole of AI, the applications depend on massive volumes of data to learn and make
+                                                                        intelligent decisions. Almost all the time the data millions of users generate data around the
+                                                                        globe and often the data is sensitive and personal in nature. This systematic learning of
+                                                                        these ML systems can become prone to data breach and identity theft. </p>
+                                                                      <h3 style="color: #000"> Moral and Ethics</h3>
+                                                                      <p>With respect to AI bigger decision-making role, ethical concerns mount the technology.
+                                                                        Questions about the opacity, unpredictability and the need for large datasets to train the
+                                                                        technologies give rise to ethical dilemma. </p>
+                                                                    </div>
+                                                                    <a href="javascript:void(0);" class="btn-hide hide-btn_tab3" id="hide-btn3_1">Hide Content ...</a>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <!-- tab3 content1 end  -->
+                                                          <!-- tab3 content2 start -->
+                                                          <div id="technological_challenges" class="tabcontent1" style="display: block;">
+                                                            <!--  -->
+                                                            <div class="container">
+                                                              <div class="row rowp">
+                                                                <!-- <div class="col-md-5">
+                                                                  <div class="template12-img">
+                                                                    <img src="assets/images/Industry Challenges.jpg">
+                                                                  </div>
+                                                                </div> -->
+                                                                <div class="col-md-12">
+                                                                  <div class="red-title">
+                                                                    <h3 style="color: #000"> Cyber Security</h3>
+                                              
+                                                                    <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                      Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                      demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                      availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                      more effectively, they come at a price.</p>
+                                                                    <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                      challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                      have a high level of computational speed, which means replacing the existing infrastructure i.e.
+                                                                      an integrating AI have cost attached in various aspects.</p>
+                                                                    <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                      challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                      have a high level of computational speed, which means replacing the existing infrastructure
+                                                                      i.e.
+                                                                      an integrating AI have cost attached in various aspects.</p>
+                                                                    <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                      challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                      have a high level of computational speed, which means replacing the existing infrastructure
+                                                                      i.e.
+                                                                      an integrating AI have cost attached in various aspects.</p>
+                                              
+                                              
+                                                                    <a href="javascript:void(0);" class="btn-show">Read More ...</a>
+                                                                    <div class="content-hide">
+                                              
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Data Privacy and security </h3>
+                                                                      <p>Data is the sole of AI, the applications depend on massive volumes of data to learn and make
+                                                                        intelligent decisions. Almost all the time the data millions of users generate data around the
+                                                                        globe and often the data is sensitive and personal in nature. This systematic learning of
+                                                                        these ML systems can become prone to data breach and identity theft. </p>
+                                                                      <h3 style="color: #000"> Moral and Ethics</h3>
+                                                                      <p>With respect to AI bigger decision-making role, ethical concerns mount the technology.
+                                                                        Questions about the opacity, unpredictability and the need for large datasets to train the
+                                                                        technologies give rise to ethical dilemma. </p>
+                                                                    </div>
+                                                                    <a href="javascript:void(0);" class="btn-hide hide-btn_tab3">Hide Content ...</a>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                            <!--  -->
+                                                          </div>
+                                                          <!-- tab3 content2 end  -->
+                                                          <!-- tab3 content3 start -->
+                                                          <div id="operational_challenges" class="tabcontent1">
+                                                            <div class="container">
+                                                              <div class="row rowp">
+                                                                <div class="col-md-5">
+                                                                  <div class="template12-img">
+                                                                    <img src="assets/images/Industry Challenges.jpg">
+                                                                  </div>
+                                                                </div>
+                                                                <div class="col-md-7">
+                                                                  <div class="red-title">
+                                                                    <h3 style="color: #000"> EC Council</h3>
+                                                                    <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                      challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                      have a high level of computational speed, which means replacing the existing infrastructure i.e.
+                                                                      an integrating AI have cost attached in various aspects.</p>
+                                                                    <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                      Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                      demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                      availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                      more effectively, they come at a price.</p>
+                                              
+                                              
+                                                                    <a href="javascript:void(0);" class="btn-show">Read More ...</a>
+                                                                    <div class="content-hide">
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Data Privacy and security </h3>
+                                                                      <p>Data is the sole of AI, the applications depend on massive volumes of data to learn and make
+                                                                        intelligent decisions. Almost all the time the data millions of users generate data around the
+                                                                        globe and often the data is sensitive and personal in nature. This systematic learning of
+                                                                        these ML systems can become prone to data breach and identity theft. </p>
+                                                                      <h3 style="color: #000"> Moral and Ethics</h3>
+                                                                      <p>With respect to AI bigger decision-making role, ethical concerns mount the technology.
+                                                                        Questions about the opacity, unpredictability and the need for large datasets to train the
+                                                                        technologies give rise to ethical dilemma. </p>
+                                                                    </div>
+                                                                    <a href="javascript:void(0);" class="btn-hide hide-btn_tab3">Hide Content ...</a>
+                                              
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <!-- tab3 content3 end -->
+                                                          <!-- tab3 content4 start -->
+                                                          <div id="working_autonomy" class="tabcontent1">
+                                                            <!--  -->
+                                                            <div class="container">
+                                                              <div class="row rowp">
+                                                                <div class="col-md-5">
+                                                                  <div class="template12-img">
+                                                                    <img src="assets/images/Industry Challenges.jpg">
+                                                                  </div>
+                                                                </div>
+                                                                <div class="col-md-7">
+                                                                  <div class="red-title">
+                                                                    <h3 style="color: #000"> Information Security</h3>
+                                                                    <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                      Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                      demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                      availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                      more effectively, they come at a price.</p>
+                                                                    <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                      Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                      demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                      availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                      more effectively, they come at a price.</p>
+                                              
+                                              
+                                                                    <a href="javascript:void(0);" class="btn-show">Read More ...</a>
+                                                                    <div class="content-hide">
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Data Privacy and security </h3>
+                                                                      <p>Data is the sole of AI, the applications depend on massive volumes of data to learn and make
+                                                                        intelligent decisions. Almost all the time the data millions of users generate data around the
+                                                                        globe and often the data is sensitive and personal in nature. This systematic learning of
+                                                                        these ML systems can become prone to data breach and identity theft. </p>
+                                                                      <h3 style="color: #000"> Moral and Ethics</h3>
+                                                                      <p>With respect to AI bigger decision-making role, ethical concerns mount the technology.
+                                                                        Questions about the opacity, unpredictability and the need for large datasets to train the
+                                                                        technologies give rise to ethical dilemma. </p>
+                                                                    </div>
+                                                                    <a href="javascript:void(0);" class="btn-hide hide-btn_tab3">Hide Content ...</a>
+                                              
+                                              
+                                              
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                            <!--  -->
+                                                          </div>
+                                                          <!-- tab3 content4 end -->
+                                                          <!-- tab3 content5 start -->
+                                                          <div id="digital_reflection" class="tabcontent1">
+                                                            <!--  -->
+                                                            <div class="container">
+                                                              <div class="row rowp">
+                                                                <div class="col-md-5">
+                                                                  <div class="template12-img">
+                                                                    <img src="assets/images/Industry Challenges.jpg">
+                                                                  </div>
+                                                                </div>
+                                                                <div class="col-md-7">
+                                                                  <div class="red-title">
+                                                                    <h3 style="color: #000"> IT Audit & Services</h3>
+                                                                    <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                      challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                      have a high level of computational speed, which means replacing the existing infrastructure i.e.
+                                                                      an integrating AI have cost attached in various aspects.</p>
+                                                                    <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                      Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                      demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                      availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                      more effectively, they come at a price.</p>
+                                              
+                                                                    <a href="javascript:void(0);" class="btn-show">Read More ...</a>
+                                                                    <div class="content-hide">
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Data Privacy and security </h3>
+                                                                      <p>Data is the sole of AI, the applications depend on massive volumes of data to learn and make
+                                                                        intelligent decisions. Almost all the time the data millions of users generate data around the
+                                                                        globe and often the data is sensitive and personal in nature. This systematic learning of
+                                                                        these ML systems can become prone to data breach and identity theft. </p>
+                                                                      <h3 style="color: #000"> Moral and Ethics</h3>
+                                                                      <p>With respect to AI bigger decision-making role, ethical concerns mount the technology.
+                                                                        Questions about the opacity, unpredictability and the need for large datasets to train the
+                                                                        technologies give rise to ethical dilemma. </p>
+                                                                    </div>
+                                                                    <a href="javascript:void(0);" class="btn-hide hide-btn_tab3">Hide Content ...</a>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                            <!--  -->
+                                                          </div>
+                                                          <!-- tab3 content5 end -->
+                                                          <!-- tab3 content6 start -->
+                                                          <div id="information_technology" class="tabcontent1">
+                                                            <!-- 6 -->
+                                                            <div class="container">
+                                                              <div class="row rowp">
+                                                                <div class="col-md-5">
+                                                                  <div class="template12-img">
+                                                                    <img src="assets/images/Industry Challenges.jpg">
+                                                                  </div>
+                                                                </div>
+                                                                <div class="col-md-7">
+                                                                  <div class="red-title">
+                                                                    <h3 style="color: #000"> Ethical Hacking</h3>
+                                              
+                                                                    <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                      Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                      demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                      availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                      more effectively, they come at a price.</p>
+                                                                    <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                      challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                      have a high level of computational speed, which means replacing the existing infrastructure i.e.
+                                                                      an integrating AI have cost attached in various aspects.</p>
+                                              
+                                                                    <a href="javascript:void(0);" class="btn-show">Read More ...</a>
+                                                                    <div class="content-hide">
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Data Privacy and security </h3>
+                                                                      <p>Data is the sole of AI, the applications depend on massive volumes of data to learn and make
+                                                                        intelligent decisions. Almost all the time the data millions of users generate data around the
+                                                                        globe and often the data is sensitive and personal in nature. This systematic learning of
+                                                                        these ML systems can become prone to data breach and identity theft. </p>
+                                                                      <h3 style="color: #000"> Moral and Ethics</h3>
+                                                                      <p>With respect to AI bigger decision-making role, ethical concerns mount the technology.
+                                                                        Questions about the opacity, unpredictability and the need for large datasets to train the
+                                                                        technologies give rise to ethical dilemma. </p>
+                                                                    </div>
+                                                                    <a href="javascript:void(0);" class="btn-hide hide-btn_tab3">Hide Content ...</a>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                            <!--  -->
+                                                          </div>
+                                                          <!-- tab3 content6 end -->
+                                                          <!-- tab3 content7 start -->
+                                                          <div id="cyber_security" class="tabcontent1">
+                                                            <!--  -->
+                                                            <div class="container">
+                                                              <div class="row rowp">
+                                                                <div class="col-md-5">
+                                                                  <div class="template12-img">
+                                                                    <img src="assets/images/Industry Challenges.jpg">
+                                                                  </div>
+                                                                </div>
+                                                                <div class="col-md-7">
+                                                                  <div class="red-title">
+                                                                    <h3 style="color: #000"> Network Security </h3>
+                                                                    <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                      challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                      have a high level of computational speed, which means replacing the existing infrastructure i.e.
+                                                                      an integrating AI have cost attached in various aspects.</p>
+                                                                    <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                      Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                      demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                      availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                      more effectively, they come at a price.</p>
+                                              
+                                                                    <a href="javascript:void(0);" class="btn-show">Read More ...</a>
+                                                                    <div class="content-hide">
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Data Privacy and security </h3>
+                                                                      <p>Data is the sole of AI, the applications depend on massive volumes of data to learn and make
+                                                                        intelligent decisions. Almost all the time the data millions of users generate data around the
+                                                                        globe and often the data is sensitive and personal in nature. This systematic learning of
+                                                                        these ML systems can become prone to data breach and identity theft. </p>
+                                                                      <h3 style="color: #000"> Moral and Ethics</h3>
+                                                                      <p>With respect to AI bigger decision-making role, ethical concerns mount the technology.
+                                                                        Questions about the opacity, unpredictability and the need for large datasets to train the
+                                                                        technologies give rise to ethical dilemma. </p>
+                                                                    </div>
+                                                                    <a href="javascript:void(0);" class="btn-hide hide-btn_tab3">Hide Content ...</a>
+                                              
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                            <!--  -->
+                                                          </div>
+                                                          <!-- tab3 content7 end -->
+                                                          <!-- tab3 content8 start -->
+                                                          <div id="networks_security" class="tabcontent1">
+                                                            <!--  -->
+                                                            <div class="container">
+                                                              <div class="row rowp">
+                                                                <div class="col-md-5">
+                                                                  <div class="template12-img">
+                                                                    <img src="assets/images/Industry Challenges.jpg">
+                                                                  </div>
+                                                                </div>
+                                                                <div class="col-md-7">
+                                                                  <div class="red-title">
+                                                                    <h3 style="color: #000"> Cyber Security</h3>
+                                              
+                                                                    <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                      Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                      demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                      availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                      more effectively, they come at a price.</p>
+                                                                    <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                      challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                      have a high level of computational speed, which means replacing the existing infrastructure i.e.
+                                                                      an integrating AI have cost attached in various aspects.</p>
+                                              
+                                                                    <a href="javascript:void(0);" class="btn-show">Read More ...</a>
+                                                                    <div class="content-hide">
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Data Privacy and security </h3>
+                                                                      <p>Data is the sole of AI, the applications depend on massive volumes of data to learn and make
+                                                                        intelligent decisions. Almost all the time the data millions of users generate data around the
+                                                                        globe and often the data is sensitive and personal in nature. This systematic learning of
+                                                                        these ML systems can become prone to data breach and identity theft. </p>
+                                                                      <h3 style="color: #000"> Moral and Ethics</h3>
+                                                                      <p>With respect to AI bigger decision-making role, ethical concerns mount the technology.
+                                                                        Questions about the opacity, unpredictability and the need for large datasets to train the
+                                                                        technologies give rise to ethical dilemma. </p>
+                                                                    </div>
+                                                                    <a href="javascript:void(0);" class="btn-hide hide-btn_tab3">Hide Content ...</a>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                            <!--  -->
+                                                          </div>
+                                                          <!-- tab3 content8 end -->
+                                                        </div>
+                                                        <!--  -->
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="significance22"
+                                        class="tab-content100" style="display: block;">
+                                        <div class="container">
+                                            <div class="row rowp">
+                                                <div class="container desktop-view why-chossetab">
+                                                    <div class="row">
+                                                      <div class="col-md-3 tab3-tab1">
+                                                        <!--  -->
+                                                        <div class="tab3-tab" id="tab3_why_us">
+                                                          {{-- <button class="tablinks1" onclick="openCity2(event, 'industry_challenges')" id="defaultOpen"> Industry
+                                                            Challenges</button> --}}
+                                                          <button class="tablinks3 tab3-active" onclick="openCity3(event, 'technological_challenges3')" id="defaultOpen">Technological
+                                                            Challenges</button>
+                                                          <button class="tablinks3" onclick="openCity3(event, 'operational_challenges3')">Operational
+                                                            Challenges</button>
+                                                          <button class="tablinks3" onclick="openCity3(event, 'working_autonomy3')">Working autonomy </button>
+                                                          <button class="tablinks3" onclick="openCity3(event, 'digital_reflection3')">Digital reflection </button>
+                                                          <button class="tablinks3" onclick="openCity3(event, 'information_technology3')">Information
+                                                            Technology</button>
+                                                          <button class="tablinks3" onclick="openCity3(event, 'cyber_security3')">Cyber Security </button>
+                                                          <button class="tablinks3" onclick="openCity3(event, 'networks_security3')">Networks Security </button>
+                                                        </div>
+                                                        <!--  -->
+                                                      </div>
+                                                      <div class="col-md-9">
+                                                        <!--  -->
+                                                        <div class="tab3-content">
+                                                          <!-- tab3 content1 start -->
+                                                          <div id="industry_challenges3" class="tabcontent3">
+                                                            <div class="container">
+                                                              <div class="row rowp">
+                                                                <div class="col-md-5">
+                                                                  <div class="template12-img">
+                                                                    <img src="assets/images/Industry Challenges.jpg">
+                                                                  </div>
+                                                                </div>
+                                                                <div class="col-md-7">
+                                                                  <div class="red-title">
+                                                                    <h3 style="color: #000"> Infrastructure 2</h3>
+                                                                    <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                      challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                      have a high level of computational speed, which means replacing the existing infrastructure i.e.
+                                                                      an integrating AI have cost attached in various aspects.</p>
+                                                                    <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                      challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                      have a high level of computational speed, which means replacing the existing infrastructure i.e.
+                                                                      an integrating AI have cost attached in various aspects.
+                                                                    </p>
+                                                                    <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                      challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                      have a high level of computational speed, which means replacing the existing infrastructure i.e.
+                                                                      an integrating AI have cost attached in various aspects.
+                                                                    </p>
+                                              
+                                                                    <a href="javascript:void(0);" class="btn-show">Read More ...</a>
+                                                                    <div class="content-hide">
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Data Privacy and security </h3>
+                                                                      <p>Data is the sole of AI, the applications depend on massive volumes of data to learn and make
+                                                                        intelligent decisions. Almost all the time the data millions of users generate data around the
+                                                                        globe and often the data is sensitive and personal in nature. This systematic learning of
+                                                                        these ML systems can become prone to data breach and identity theft. </p>
+                                                                      <h3 style="color: #000"> Moral and Ethics</h3>
+                                                                      <p>With respect to AI bigger decision-making role, ethical concerns mount the technology.
+                                                                        Questions about the opacity, unpredictability and the need for large datasets to train the
+                                                                        technologies give rise to ethical dilemma. </p>
+                                                                    </div>
+                                                                    <a href="javascript:void(0);" class="btn-hide hide-btn_tab3" id="hide-btn3_1">Hide Content ...</a>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <!-- tab3 content1 end  -->
+                                                          <!-- tab3 content2 start -->
+                                                          <div id="technological_challenges3" class="tabcontent3" style="display: block;">
+                                                            <!--  -->
+                                                            <div class="container">
+                                                              <div class="row rowp">
+                                                                <!-- <div class="col-md-5">
+                                                                  <div class="template12-img">
+                                                                    <img src="assets/images/Industry Challenges.jpg">
+                                                                  </div>
+                                                                </div> -->
+                                                                <div class="col-md-12">
+                                                                  <div class="red-title">
+                                                                    <h3 style="color: #000"> Cyber Security</h3>
+                                              
+                                                                    <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                      Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                      demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                      availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                      more effectively, they come at a price.</p>
+                                                                    <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                      challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                      have a high level of computational speed, which means replacing the existing infrastructure i.e.
+                                                                      an integrating AI have cost attached in various aspects.</p>
+                                                                    <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                      challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                      have a high level of computational speed, which means replacing the existing infrastructure
+                                                                      i.e.
+                                                                      an integrating AI have cost attached in various aspects.</p>
+                                                                    <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                      challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                      have a high level of computational speed, which means replacing the existing infrastructure
+                                                                      i.e.
+                                                                      an integrating AI have cost attached in various aspects.</p>
+                                              
+                                              
+                                                                    <a href="javascript:void(0);" class="btn-show">Read More ...</a>
+                                                                    <div class="content-hide">
+                                              
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Data Privacy and security </h3>
+                                                                      <p>Data is the sole of AI, the applications depend on massive volumes of data to learn and make
+                                                                        intelligent decisions. Almost all the time the data millions of users generate data around the
+                                                                        globe and often the data is sensitive and personal in nature. This systematic learning of
+                                                                        these ML systems can become prone to data breach and identity theft. </p>
+                                                                      <h3 style="color: #000"> Moral and Ethics</h3>
+                                                                      <p>With respect to AI bigger decision-making role, ethical concerns mount the technology.
+                                                                        Questions about the opacity, unpredictability and the need for large datasets to train the
+                                                                        technologies give rise to ethical dilemma. </p>
+                                                                    </div>
+                                                                    <a href="javascript:void(0);" class="btn-hide hide-btn_tab3">Hide Content ...</a>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                            <!--  -->
+                                                          </div>
+                                                          <!-- tab3 content2 end  -->
+                                                          <!-- tab3 content3 start -->
+                                                          <div id="operational_challenges3" class="tabcontent3">
+                                                            <div class="container">
+                                                              <div class="row rowp">
+                                                                <div class="col-md-5">
+                                                                  <div class="template12-img">
+                                                                    <img src="assets/images/Industry Challenges.jpg">
+                                                                  </div>
+                                                                </div>
+                                                                <div class="col-md-7">
+                                                                  <div class="red-title">
+                                                                    <h3 style="color: #000"> EC Council</h3>
+                                                                    <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                      challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                      have a high level of computational speed, which means replacing the existing infrastructure i.e.
+                                                                      an integrating AI have cost attached in various aspects.</p>
+                                                                    <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                      Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                      demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                      availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                      more effectively, they come at a price.</p>
+                                              
+                                              
+                                                                    <a href="javascript:void(0);" class="btn-show">Read More ...</a>
+                                                                    <div class="content-hide">
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Data Privacy and security </h3>
+                                                                      <p>Data is the sole of AI, the applications depend on massive volumes of data to learn and make
+                                                                        intelligent decisions. Almost all the time the data millions of users generate data around the
+                                                                        globe and often the data is sensitive and personal in nature. This systematic learning of
+                                                                        these ML systems can become prone to data breach and identity theft. </p>
+                                                                      <h3 style="color: #000"> Moral and Ethics</h3>
+                                                                      <p>With respect to AI bigger decision-making role, ethical concerns mount the technology.
+                                                                        Questions about the opacity, unpredictability and the need for large datasets to train the
+                                                                        technologies give rise to ethical dilemma. </p>
+                                                                    </div>
+                                                                    <a href="javascript:void(0);" class="btn-hide hide-btn_tab3">Hide Content ...</a>
+                                              
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <!-- tab3 content3 end -->
+                                                          <!-- tab3 content4 start -->
+                                                          <div id="working_autonomy3" class="tabcontent3">
+                                                            <!--  -->
+                                                            <div class="container">
+                                                              <div class="row rowp">
+                                                                <div class="col-md-5">
+                                                                  <div class="template12-img">
+                                                                    <img src="assets/images/Industry Challenges.jpg">
+                                                                  </div>
+                                                                </div>
+                                                                <div class="col-md-7">
+                                                                  <div class="red-title">
+                                                                    <h3 style="color: #000"> Information Security</h3>
+                                                                    <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                      Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                      demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                      availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                      more effectively, they come at a price.</p>
+                                                                    <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                      Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                      demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                      availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                      more effectively, they come at a price.</p>
+                                              
+                                              
+                                                                    <a href="javascript:void(0);" class="btn-show">Read More ...</a>
+                                                                    <div class="content-hide">
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Data Privacy and security </h3>
+                                                                      <p>Data is the sole of AI, the applications depend on massive volumes of data to learn and make
+                                                                        intelligent decisions. Almost all the time the data millions of users generate data around the
+                                                                        globe and often the data is sensitive and personal in nature. This systematic learning of
+                                                                        these ML systems can become prone to data breach and identity theft. </p>
+                                                                      <h3 style="color: #000"> Moral and Ethics</h3>
+                                                                      <p>With respect to AI bigger decision-making role, ethical concerns mount the technology.
+                                                                        Questions about the opacity, unpredictability and the need for large datasets to train the
+                                                                        technologies give rise to ethical dilemma. </p>
+                                                                    </div>
+                                                                    <a href="javascript:void(0);" class="btn-hide hide-btn_tab3">Hide Content ...</a>
+                                              
+                                              
+                                              
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                            <!--  -->
+                                                          </div>
+                                                          <!-- tab3 content4 end -->
+                                                          <!-- tab3 content5 start -->
+                                                          <div id="digital_reflection3" class="tabcontent3">
+                                                            <!--  -->
+                                                            <div class="container">
+                                                              <div class="row rowp">
+                                                                <div class="col-md-5">
+                                                                  <div class="template12-img">
+                                                                    <img src="assets/images/Industry Challenges.jpg">
+                                                                  </div>
+                                                                </div>
+                                                                <div class="col-md-7">
+                                                                  <div class="red-title">
+                                                                    <h3 style="color: #000"> IT Audit & Services</h3>
+                                                                    <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                      challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                      have a high level of computational speed, which means replacing the existing infrastructure i.e.
+                                                                      an integrating AI have cost attached in various aspects.</p>
+                                                                    <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                      Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                      demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                      availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                      more effectively, they come at a price.</p>
+                                              
+                                                                    <a href="javascript:void(0);" class="btn-show">Read More ...</a>
+                                                                    <div class="content-hide">
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Data Privacy and security </h3>
+                                                                      <p>Data is the sole of AI, the applications depend on massive volumes of data to learn and make
+                                                                        intelligent decisions. Almost all the time the data millions of users generate data around the
+                                                                        globe and often the data is sensitive and personal in nature. This systematic learning of
+                                                                        these ML systems can become prone to data breach and identity theft. </p>
+                                                                      <h3 style="color: #000"> Moral and Ethics</h3>
+                                                                      <p>With respect to AI bigger decision-making role, ethical concerns mount the technology.
+                                                                        Questions about the opacity, unpredictability and the need for large datasets to train the
+                                                                        technologies give rise to ethical dilemma. </p>
+                                                                    </div>
+                                                                    <a href="javascript:void(0);" class="btn-hide hide-btn_tab3">Hide Content ...</a>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                            <!--  -->
+                                                          </div>
+                                                          <!-- tab3 content5 end -->
+                                                          <!-- tab3 content6 start -->
+                                                          <div id="information_technology3" class="tabcontent3">
+                                                            <!-- 6 -->
+                                                            <div class="container">
+                                                              <div class="row rowp">
+                                                                <div class="col-md-5">
+                                                                  <div class="template12-img">
+                                                                    <img src="assets/images/Industry Challenges.jpg">
+                                                                  </div>
+                                                                </div>
+                                                                <div class="col-md-7">
+                                                                  <div class="red-title">
+                                                                    <h3 style="color: #000"> Ethical Hacking</h3>
+                                              
+                                                                    <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                      Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                      demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                      availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                      more effectively, they come at a price.</p>
+                                                                    <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                      challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                      have a high level of computational speed, which means replacing the existing infrastructure i.e.
+                                                                      an integrating AI have cost attached in various aspects.</p>
+                                              
+                                                                    <a href="javascript:void(0);" class="btn-show">Read More ...</a>
+                                                                    <div class="content-hide">
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Data Privacy and security </h3>
+                                                                      <p>Data is the sole of AI, the applications depend on massive volumes of data to learn and make
+                                                                        intelligent decisions. Almost all the time the data millions of users generate data around the
+                                                                        globe and often the data is sensitive and personal in nature. This systematic learning of
+                                                                        these ML systems can become prone to data breach and identity theft. </p>
+                                                                      <h3 style="color: #000"> Moral and Ethics</h3>
+                                                                      <p>With respect to AI bigger decision-making role, ethical concerns mount the technology.
+                                                                        Questions about the opacity, unpredictability and the need for large datasets to train the
+                                                                        technologies give rise to ethical dilemma. </p>
+                                                                    </div>
+                                                                    <a href="javascript:void(0);" class="btn-hide hide-btn_tab3">Hide Content ...</a>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                            <!--  -->
+                                                          </div>
+                                                          <!-- tab3 content6 end -->
+                                                          <!-- tab3 content7 start -->
+                                                          <div id="cyber_security3" class="tabcontent3">
+                                                            <!--  -->
+                                                            <div class="container">
+                                                              <div class="row rowp">
+                                                                <div class="col-md-5">
+                                                                  <div class="template12-img">
+                                                                    <img src="assets/images/Industry Challenges.jpg">
+                                                                  </div>
+                                                                </div>
+                                                                <div class="col-md-7">
+                                                                  <div class="red-title">
+                                                                    <h3 style="color: #000"> Network Security </h3>
+                                                                    <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                      challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                      have a high level of computational speed, which means replacing the existing infrastructure i.e.
+                                                                      an integrating AI have cost attached in various aspects.</p>
+                                                                    <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                      Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                      demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                      availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                      more effectively, they come at a price.</p>
+                                              
+                                                                    <a href="javascript:void(0);" class="btn-show">Read More ...</a>
+                                                                    <div class="content-hide">
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Data Privacy and security </h3>
+                                                                      <p>Data is the sole of AI, the applications depend on massive volumes of data to learn and make
+                                                                        intelligent decisions. Almost all the time the data millions of users generate data around the
+                                                                        globe and often the data is sensitive and personal in nature. This systematic learning of
+                                                                        these ML systems can become prone to data breach and identity theft. </p>
+                                                                      <h3 style="color: #000"> Moral and Ethics</h3>
+                                                                      <p>With respect to AI bigger decision-making role, ethical concerns mount the technology.
+                                                                        Questions about the opacity, unpredictability and the need for large datasets to train the
+                                                                        technologies give rise to ethical dilemma. </p>
+                                                                    </div>
+                                                                    <a href="javascript:void(0);" class="btn-hide hide-btn_tab3">Hide Content ...</a>
+                                              
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                            <!--  -->
+                                                          </div>
+                                                          <!-- tab3 content7 end -->
+                                                          <!-- tab3 content8 start -->
+                                                          <div id="networks_security3" class="tabcontent3">
+                                                            <!--  -->
+                                                            <div class="container">
+                                                              <div class="row rowp">
+                                                                <div class="col-md-5">
+                                                                  <div class="template12-img">
+                                                                    <img src="assets/images/Industry Challenges.jpg">
+                                                                  </div>
+                                                                </div>
+                                                                <div class="col-md-7">
+                                                                  <div class="red-title">
+                                                                    <h3 style="color: #000"> Cyber Security</h3>
+                                              
+                                                                    <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                      Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                      demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                      availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                      more effectively, they come at a price.</p>
+                                                                    <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                      challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                      have a high level of computational speed, which means replacing the existing infrastructure i.e.
+                                                                      an integrating AI have cost attached in various aspects.</p>
+                                              
+                                                                    <a href="javascript:void(0);" class="btn-show">Read More ...</a>
+                                                                    <div class="content-hide">
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <p>Replacing outdated infrastructure with traditional legacy systems continues to be a major
+                                                                        challenge for most organizations. As discussed earlier Artificial Intelligence based solutions
+                                                                        have a high level of computational speed, which means replacing the existing infrastructure
+                                                                        i.e.
+                                                                        an integrating AI have cost attached in various aspects.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Computing Power</h3>
+                                                                      <p>The amount of power these algorithms use is a factor keeping most developers away. Machine
+                                                                        Learning and Deep Learning are the stepping-stones of this Artificial Intelligence, and they
+                                                                        demand an ever-increasing number of cores and GPUs to work efficiently. Although, due to the
+                                                                        availability of Cloud Computing and parallel processing systems developers work on AI systems
+                                                                        more effectively, they come at a price.</p>
+                                                                      <h3 style="color: #000"> Data Privacy and security </h3>
+                                                                      <p>Data is the sole of AI, the applications depend on massive volumes of data to learn and make
+                                                                        intelligent decisions. Almost all the time the data millions of users generate data around the
+                                                                        globe and often the data is sensitive and personal in nature. This systematic learning of
+                                                                        these ML systems can become prone to data breach and identity theft. </p>
+                                                                      <h3 style="color: #000"> Moral and Ethics</h3>
+                                                                      <p>With respect to AI bigger decision-making role, ethical concerns mount the technology.
+                                                                        Questions about the opacity, unpredictability and the need for large datasets to train the
+                                                                        technologies give rise to ethical dilemma. </p>
+                                                                    </div>
+                                                                    <a href="javascript:void(0);" class="btn-hide hide-btn_tab3">Hide Content ...</a>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                            <!--  -->
+                                                          </div>
+                                                          <!-- tab3 content8 end -->
+                                                        </div>
+                                                        <!--  -->
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!-- mobile content end  -->
-                </div>
-            </section>
+                    <div class="container mobile-view significance-space" id="sf_mob">
+                        <!--  -->
+                        <div class="acc">
 
-        @elseif ($fieldKey == 'overview16_short_descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
-            <section class="empower-industry-bg codec-page-section anchor-link"
-                style="padding-bottom: 20px !important; padding-top: 40px !important;" id="{{ $slug }}">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 cn-title">
                             @foreach ($l3Categories as $category)
                                 @foreach ($category->contentInfos as $contentInfo)
-                                    @if (!empty($contentInfo->overview16_title))
-                                        <h2>{!! $contentInfo->overview16_title !!}</h2>
+                                    @if ($contentInfo->significance2Category)
+                                        <div class="acc__card">
+                                            <!-- Accordion Title -->
+                                            <a href="#significance2s-{{ $loop->iteration }}"
+                                                class="acc__title {{ $loop->first ? 'active' : ' ' }}"
+                                                data-target="significance2s-{{ $loop->iteration }}">
+                                                {{ $contentInfo->significance2Category->name }}
+                                            </a>
+
+                                            <!-- Accordion Panel -->
+                                            @foreach ($contentInfo->significance2s as $significance)
+                                                <div class="acc__panel" style="{{ $loop->first ? 'display:block;' : '' }}"
+                                                    id="significance2s-{{ $loop->iteration }}">
+                                                    <div class="box-height vert-box">
+                                                        <div class="red-title">
+                                                            @if ($significance->image)
+                                                                <div class="template12-img">
+                                                                    <img
+                                                                        src="{{ asset('storage/uploads/frontend/l3_template/significance2/' . $contentInfo->image) }}">
+                                                                </div>
+
+                                                                {!! $significance->significance2_short_description !!}
+                                                                {!! $significance->significance2_long_description !!}
+                                                            @else
+                                                                {!! $significance->significance2_short_description !!}
+                                                                {!! $significance->significance2_long_description !!}
+                                                            @endif
+                                                        </div>
+                                                    </div>
+                                                    <a href="javascript:void(0)" class="close-acrodin">Close</a>
+                                                </div>
+                                            @endforeach
+                                        </div>
                                     @endif
                                 @endforeach
                             @endforeach
-                        </div>
-                    </div>
-                </div>
 
-                @php $index = 0; @endphp
-                @foreach ($l3Categories as $category)
-                    @foreach ($category->contentInfos as $contentInfo)
-                        @if (!empty($contentInfo->overview16_short_descriptions) || !empty($contentInfo->overview16_long_descriptions))
-                            <div class="container">
-                                <div class="row rowp">
-                                    @if ($index % 2 == 0)
-                                        {{-- Even Index: Image Left, Content Right --}}
-                                        <div class="col-md-5">
-                                            <div class="template12-img">
-                                                <img src="{{ $contentInfo->images ? asset('storage/uploads/frontend/l3_template/overview16/' . $contentInfo->images) : asset('assets/images/intelligent-automation.webp') }}"
-                                                    alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-7">
-                                            <div class="red-title">
-                                                {!! $contentInfo->overview16_short_descriptions !!}
-                                                @if (!empty($contentInfo->overview16_long_descriptions))
-                                                    <a href="javascript:void(0);" class="btn-show" id="btn-show-{{ $index }}">Read More ...</a>
-                                                    <div class="content-hide" id="content-hide-{{ $index }}">
-                                                        {!! $contentInfo->overview16_long_descriptions !!}
-                                                    </div>
-                                                    <a href="javascript:void(0);" class="btn-hide" id="btn-hide-{{ $index }}">Hide Content
-                                                        ...</a>
-                                                @endif
-                                            </div>
-                                        </div>
-                                    @else
-                                        {{-- Odd Index: Content Left, Image Right --}}
-                                        <div class="col-md-7">
-                                            <div class="red-title">
-                                                {!! $contentInfo->overview16_short_descriptions !!}
-                                                @if (!empty($contentInfo->overview16_long_descriptions))
-                                                    <a href="javascript:void(0);" class="btn-show" id="btn-show-{{ $index }}">Read More ...</a>
-                                                    <div class="content-hide" id="content-hide-{{ $index }}">
-                                                        {!! $contentInfo->overview16_long_descriptions !!}
-                                                    </div>
-                                                    <a href="javascript:void(0);" class="btn-hide" id="btn-hide-{{ $index }}">Hide Content
-                                                        ...</a>
-                                                @endif
-                                            </div>
-                                        </div>
-                                        <div class="col-md-5">
-                                            <div class="template12-img">
-                                                <img src="{{ $contentInfo->images ? asset('storage/uploads/frontend/l3_template/overview16/' . $contentInfo->images) : asset('assets/images/intelligent-automation.webp') }}"
-                                                    alt="">
-                                            </div>
-                                        </div>
-                                    @endif
-                                </div>
-                            </div>
-                            @php $index++; @endphp
-                        @endif
-                    @endforeach
-                @endforeach
-            </section>
-        @elseif ($fieldKey == 'overview17_descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
-            <section class="light-grey sample7-line anchor-link space7_1" id="{{ $slug }}">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="third-content" id="">
+
+                        </div>
+                        <!-- mobile content end  -->
+                    </div>
+                </section>
+
+            @elseif ($fieldKey == 'overview16_short_descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
+                <section class="empower-industry-bg codec-page-section anchor-link"
+                    style="padding-bottom: 20px !important; padding-top: 40px !important;" id="{{ $slug }}">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 cn-title">
                                 @foreach ($l3Categories as $category)
                                     @foreach ($category->contentInfos as $contentInfo)
-                                        @if (!empty($contentInfo->overview17_descriptions))
-                                            <h2>{!! $contentInfo->overview17_descriptions !!}</h2>
+                                        @if (!empty($contentInfo->overview16_title))
+                                            <h2>{!! $contentInfo->overview16_title !!}</h2>
                                         @endif
                                     @endforeach
                                 @endforeach
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        @endif
+
+                    @php $index = 0; @endphp
+                    @foreach ($l3Categories as $category)
+                        @foreach ($category->contentInfos as $contentInfo)
+                            @if (!empty($contentInfo->overview16_short_descriptions) || !empty($contentInfo->overview16_long_descriptions))
+                                <div class="container">
+                                    <div class="row rowp">
+                                        @if ($index % 2 == 0)
+                                            {{-- Even Index: Image Left, Content Right --}}
+                                            <div class="col-md-5">
+                                                <div class="template12-img">
+                                                    <img src="{{ $contentInfo->images ? asset('storage/uploads/frontend/l3_template/overview16/' . $contentInfo->images) : asset('assets/images/intelligent-automation.webp') }}"
+                                                        alt="">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <div class="red-title">
+                                                    {!! $contentInfo->overview16_short_descriptions !!}
+                                                    @if (!empty($contentInfo->overview16_long_descriptions))
+                                                        <a href="javascript:void(0);" class="btn-show" id="btn-show-{{ $index }}">Read More ...</a>
+                                                        <div class="content-hide" id="content-hide-{{ $index }}">
+                                                            {!! $contentInfo->overview16_long_descriptions !!}
+                                                        </div>
+                                                        <a href="javascript:void(0);" class="btn-hide" id="btn-hide-{{ $index }}">Hide Content
+                                                            ...</a>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                        @else
+                                            {{-- Odd Index: Content Left, Image Right --}}
+                                            <div class="col-md-7">
+                                                <div class="red-title">
+                                                    {!! $contentInfo->overview16_short_descriptions !!}
+                                                    @if (!empty($contentInfo->overview16_long_descriptions))
+                                                        <a href="javascript:void(0);" class="btn-show" id="btn-show-{{ $index }}">Read More ...</a>
+                                                        <div class="content-hide" id="content-hide-{{ $index }}">
+                                                            {!! $contentInfo->overview16_long_descriptions !!}
+                                                        </div>
+                                                        <a href="javascript:void(0);" class="btn-hide" id="btn-hide-{{ $index }}">Hide Content
+                                                            ...</a>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <div class="template12-img">
+                                                    <img src="{{ $contentInfo->images ? asset('storage/uploads/frontend/l3_template/overview16/' . $contentInfo->images) : asset('assets/images/intelligent-automation.webp') }}"
+                                                        alt="">
+                                                </div>
+                                            </div>
+                                        @endif
+                                    </div>
+                                </div>
+                                @php $index++; @endphp
+                            @endif
+                        @endforeach
+                    @endforeach
+                </section>
+            @elseif ($fieldKey == 'overview17_descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
+                <section class="light-grey sample7-line anchor-link space7_1" id="{{ $slug }}">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="third-content" id="">
+                                    @foreach ($l3Categories as $category)
+                                        @foreach ($category->contentInfos as $contentInfo)
+                                            @if (!empty($contentInfo->overview17_descriptions))
+                                                <h2>{!! $contentInfo->overview17_descriptions !!}</h2>
+                                            @endif
+                                        @endforeach
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            @endif
     @endforeach
 
-    <section class="cn-iws mhspace" id="mhome-div9">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 cn-title">
-                    <h2>Industry We Serve</h2>
-                    <p>Serve large segment of SME & Hi-cap Enterprise customers</p>
+        <section class="cn-iws mhspace" id="mhome-div9">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 cn-title">
+                        <h2>Industry We Serve</h2>
+                        <p>Serve large segment of SME & Hi-cap Enterprise customers</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <!--  -->
-                <!--  -->
-                <div class="industry-slider">
-                    <div id="industry-slider" class="owl-carousel owl-theme">
-                        <!-- logo item1 -->
-                        <div class="items active">
-                            <a href="#partnter1">
-                                <div class="team-details">
-                                    <div class="team-img part-bg1">
-                                        <img src="{{asset('assets/images/Industries/Technology-IT-Telecom.webp')}}"
-                                            alt="" title="">
-                                        <h3 class="team-name">Technology, IT <br>&amp; Telecom</h3>
-                                    </div>
-                                    <div class="team-bottom">
-                                        <div class="team-text"></div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- logo item1 end -->
-                        <!-- logo item1 -->
-                        <div class="items">
-                            <a href="#partnter2">
-                                <div class="team-details">
-                                    <div class="team-img part-bg2">
-                                        <img src="{{ asset('assets/images/Industries/Education.webp') }}" alt=""
-                                            title="">
-                                        <h3 class="team-name">Education</h3>
-                                    </div>
-                                    <div class="team-bottom">
-                                        <div class="team-text"></div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- logo item1 end -->
-                        <!-- logo item1 -->
-                        <div class="items">
-                            <a href="#partnter3">
-                                <div class="team-details">
-                                    <div class="team-img part-bg3">
-                                        <img src="{{asset('assets/images/Industries/Banking-Finance-Insurance.webp')}}"
-                                            alt="" title="">
-                                        <h3 class="team-name">Banking, Finance <br>&amp; Insurance</h3>
-                                    </div>
-                                    <div class="team-bottom">
-                                        <div class="team-text">
+            <div class="container">
+                <div class="row">
+                    <!--  -->
+                    <!--  -->
+                    <div class="industry-slider">
+                        <div id="industry-slider" class="owl-carousel owl-theme">
+                            <!-- logo item1 -->
+                            <div class="items active">
+                                <a href="#partnter1">
+                                    <div class="team-details">
+                                        <div class="team-img part-bg1">
+                                            <img src="{{asset('assets/images/Industries/Technology-IT-Telecom.webp')}}"
+                                                alt="" title="">
+                                            <h3 class="team-name">Technology, IT <br>&amp; Telecom</h3>
+                                        </div>
+                                        <div class="team-bottom">
+                                            <div class="team-text"></div>
                                         </div>
                                     </div>
-                                </div>
-                            </a>
+                                </a>
+                            </div>
+                            <!-- logo item1 end -->
+                            <!-- logo item1 -->
+                            <div class="items">
+                                <a href="#partnter2">
+                                    <div class="team-details">
+                                        <div class="team-img part-bg2">
+                                            <img src="{{ asset('assets/images/Industries/Education.webp') }}" alt=""
+                                                title="">
+                                            <h3 class="team-name">Education</h3>
+                                        </div>
+                                        <div class="team-bottom">
+                                            <div class="team-text"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- logo item1 end -->
+                            <!-- logo item1 -->
+                            <div class="items">
+                                <a href="#partnter3">
+                                    <div class="team-details">
+                                        <div class="team-img part-bg3">
+                                            <img src="{{asset('assets/images/Industries/Banking-Finance-Insurance.webp')}}"
+                                                alt="" title="">
+                                            <h3 class="team-name">Banking, Finance <br>&amp; Insurance</h3>
+                                        </div>
+                                        <div class="team-bottom">
+                                            <div class="team-text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- logo item1 end -->
+                            <!-- logo item1 -->
+                            <div class="items">
+                                <a href="#partnter4">
+                                    <div class="team-details">
+                                        <div class="team-img part-bg4">
+                                            <img src="{{ asset('assets/images/Industries/Healthcare.webp') }}" alt=""
+                                                title="">
+                                            <h3 class="team-name">Healthcare</h3>
+                                        </div>
+                                        <div class="team-bottom">
+                                            <div class="team-text"> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- logo item1 end -->
+                            <!-- logo item1 -->
+                            <div class="items">
+                                <a href="#partnter5">
+                                    <div class="team-details">
+                                        <div class="team-img part-bg5">
+                                            <img src="{{ asset('assets/images/Industries/Retail-E-Commerce.webp') }}"
+                                                alt="" title="">
+                                            <h3 class="team-name">Retail <br>&amp; E-Commerce</h3>
+                                        </div>
+                                        <div class="team-bottom">
+                                            <div class="team-text"> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- logo item1 end -->
+                            <!-- logo item1 -->
+                            <div class="items">
+                                <a href="#partnter6">
+                                    <div class="team-details">
+                                        <div class="team-img part-bg6">
+                                            <img src="{{ asset('assets/images/Industries/Power-Energy.webp') }}" alt=""
+                                                title="">
+                                            <h3 class="team-name">Power &amp; Energy</h3>
+                                        </div>
+                                        <div class="team-bottom">
+                                            <div class="team-text"> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- logo item1 end -->
+                            <!-- logo item1 -->
+                            <div class="items">
+                                <a href="#partnter7">
+                                    <div class="team-details">
+                                        <div class="team-img part-bg7">
+                                            <img src="{{ asset('assets/images/Industries/Government-Defence.webp') }}"
+                                                alt="" title="">
+                                            <h3 class="team-name">Government <br>&amp; Defence</h3>
+                                        </div>
+                                        <div class="team-bottom">
+                                            <div class="team-text"> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- logo item1 end -->
+                            <!-- logo item1 -->
+                            <div class="items">
+                                <a href="#partnter8">
+                                    <div class="team-details">
+                                        <div class="team-img part-bg8">
+                                            <img src="{{ asset('assets/images/Industries/Utilities.webp') }}" alt=""
+                                                title="">
+                                            <h3 class="team-name">Utilities</h3>
+                                        </div>
+                                        <div class="team-bottom">
+                                            <div class="team-text"> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- logo item1 end -->
+                            <!-- logo item1 -->
+                            <div class="items">
+                                <a href="#partnter9">
+                                    <div class="team-details">
+                                        <div class="team-img part-bg9">
+                                            <img src="{{ asset('assets/images/Industries/Industruies-Manufacturing.webp') }}"
+                                                alt="" title="">
+                                            <h3 class="team-name">Industruies <br>&amp; Manufacturing</h3>
+                                        </div>
+                                        <div class="team-bottom">
+                                            <div class="team-text"> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- logo item1 end -->
+                            <!-- logo item1 -->
+                            <div class="items">
+                                <a href="#partnter10">
+                                    <div class="team-details">
+                                        <div class="team-img part-bg10">
+                                            <img src="{{ asset('assets/images/Industries/Tourism-Hospitality.webp') }}"
+                                                alt="" title="">
+                                            <h3 class="team-name">Tourism &amp; Hospitality</h3>
+                                        </div>
+                                        <div class="team-bottom">
+                                            <div class="team-text"> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- logo item1 end -->
+                            <!-- logo item1 -->
+                            <div class="items">
+                                <a href="#partnter11">
+                                    <div class="team-details">
+                                        <div class="team-img part-bg11">
+                                            <img src="{{ asset('assets/images/Industries/Media-Entertainment.webp') }}"
+                                                alt="" title="">
+                                            <h3 class="team-name">Media <br>&amp; Entertainment</h3>
+                                        </div>
+                                        <div class="team-bottom">
+                                            <div class="team-text"> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- logo item1 end -->
+                            <!-- logo item1 -->
+                            <div class="items">
+                                <a href="#partnter12">
+                                    <div class="team-details">
+                                        <div class="team-img part-bg12">
+                                            <img src="{{ asset('assets/images/Industries/RealEstate.webp') }}" alt=""
+                                                title="">
+                                            <h3 class="team-name">Real Estate</h3>
+                                        </div>
+                                        <div class="team-bottom">
+                                            <div class="team-text"> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- logo item1 end -->
                         </div>
-                        <!-- logo item1 end -->
-                        <!-- logo item1 -->
-                        <div class="items">
-                            <a href="#partnter4">
-                                <div class="team-details">
-                                    <div class="team-img part-bg4">
-                                        <img src="{{ asset('assets/images/Industries/Healthcare.webp') }}" alt=""
-                                            title="">
-                                        <h3 class="team-name">Healthcare</h3>
-                                    </div>
-                                    <div class="team-bottom">
-                                        <div class="team-text"> </div>
-                                    </div>
-                                </div>
-                            </a>
+                        <!-- partner logo start -->
+                        <div class="partner-mian">
+                            <!-- partner logo row 1 -->
+                            <div class="partner-logo" id="partnter1" style="display:block">
+                                <h4>Technology, IT &amp; Telecom</h4>
+                                <ul>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- partner logo row 1 end  -->
+                            <!-- partner logo row 1 -->
+                            <div class="partner-logo" id="partnter2">
+                                <h4>Education</h4>
+                                <ul>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- partner logo row 1 end  -->
+                            <!-- partner logo row 1 -->
+                            <div class="partner-logo" id="partnter3">
+                                <h4>Banking, Finance &amp; Insurance</h4>
+                                <ul>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- partner logo row 1 end  -->
+                            <!-- partner logo row 1 -->
+                            <div class="partner-logo" id="partnter4">
+                                <h4>Healthcare</h4>
+                                <ul>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- partner logo row 1 end  -->
+                            <!-- partner logo row 1 -->
+                            <div class="partner-logo" id="partnter5">
+                                <h4>Retail &amp; E-Commerce</h4>
+                                <ul>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- partner logo row 1 end  -->
+                            <!-- partner logo row 1 -->
+                            <div class="partner-logo" id="partnter6">
+                                <h4>Power & Energy</h4>
+                                <ul>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- partner logo row 1 end  -->
+                            <!-- partner logo row 1 -->
+                            <div class="partner-logo" id="partnter7">
+                                <h4>Government &amp; Defence</h4>
+                                <ul>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- partner logo row 1 end  -->
+                            <!-- partner logo row 1 -->
+                            <div class="partner-logo" id="partnter8">
+                                <h4>Utilities</h4>
+                                <ul>
+                                    <li>
+                                        <img src="{{ asset('assets/images/clients/ncdc-client-logo.webp')}}" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- partner logo row 1 end  -->
+                            <!-- partner logo row 1 -->
+                            <div class="partner-logo" id="partnter9">
+                                <h4>Industruies &amp; Manufacturing</h4>
+                                <ul>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- partner logo row 1 end  -->
+                            <!-- partner logo row 1 -->
+                            <div class="partner-logo" id="partnter10">
+                                <h4>Tourism & Hospitality</h4>
+                                <ul>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- partner logo row 1 end  -->
+                            <!-- partner logo row 1 -->
+                            <div class="partner-logo" id="partnter11">
+                                <h4>Media &amp; Entertainment</h4>
+                                <ul>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- partner logo row 1 end  -->
+                            <!-- partner logo row 1 -->
+                            <div class="partner-logo" id="partnter12">
+                                <h4>Real Estate</h4>
+                                <ul>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/aic.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/MCX.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/Samsung.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/clients/metlife.webp" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- partner logo row 1 end  -->
                         </div>
-                        <!-- logo item1 end -->
-                        <!-- logo item1 -->
-                        <div class="items">
-                            <a href="#partnter5">
-                                <div class="team-details">
-                                    <div class="team-img part-bg5">
-                                        <img src="{{ asset('assets/images/Industries/Retail-E-Commerce.webp') }}" alt=""
-                                            title="">
-                                        <h3 class="team-name">Retail <br>&amp; E-Commerce</h3>
-                                    </div>
-                                    <div class="team-bottom">
-                                        <div class="team-text"> </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- logo item1 end -->
-                        <!-- logo item1 -->
-                        <div class="items">
-                            <a href="#partnter6">
-                                <div class="team-details">
-                                    <div class="team-img part-bg6">
-                                        <img src="{{ asset('assets/images/Industries/Power-Energy.webp') }}" alt=""
-                                            title="">
-                                        <h3 class="team-name">Power &amp; Energy</h3>
-                                    </div>
-                                    <div class="team-bottom">
-                                        <div class="team-text"> </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- logo item1 end -->
-                        <!-- logo item1 -->
-                        <div class="items">
-                            <a href="#partnter7">
-                                <div class="team-details">
-                                    <div class="team-img part-bg7">
-                                        <img src="{{ asset('assets/images/Industries/Government-Defence.webp') }}" alt=""
-                                            title="">
-                                        <h3 class="team-name">Government <br>&amp; Defence</h3>
-                                    </div>
-                                    <div class="team-bottom">
-                                        <div class="team-text"> </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- logo item1 end -->
-                        <!-- logo item1 -->
-                        <div class="items">
-                            <a href="#partnter8">
-                                <div class="team-details">
-                                    <div class="team-img part-bg8">
-                                        <img src="{{ asset('assets/images/Industries/Utilities.webp') }}" alt=""
-                                            title="">
-                                        <h3 class="team-name">Utilities</h3>
-                                    </div>
-                                    <div class="team-bottom">
-                                        <div class="team-text"> </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- logo item1 end -->
-                        <!-- logo item1 -->
-                        <div class="items">
-                            <a href="#partnter9">
-                                <div class="team-details">
-                                    <div class="team-img part-bg9">
-                                        <img src="{{ asset('assets/images/Industries/Industruies-Manufacturing.webp') }}"
-                                            alt="" title="">
-                                        <h3 class="team-name">Industruies <br>&amp; Manufacturing</h3>
-                                    </div>
-                                    <div class="team-bottom">
-                                        <div class="team-text"> </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- logo item1 end -->
-                        <!-- logo item1 -->
-                        <div class="items">
-                            <a href="#partnter10">
-                                <div class="team-details">
-                                    <div class="team-img part-bg10">
-                                        <img src="{{ asset('assets/images/Industries/Tourism-Hospitality.webp') }}"
-                                            alt="" title="">
-                                        <h3 class="team-name">Tourism &amp; Hospitality</h3>
-                                    </div>
-                                    <div class="team-bottom">
-                                        <div class="team-text"> </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- logo item1 end -->
-                        <!-- logo item1 -->
-                        <div class="items">
-                            <a href="#partnter11">
-                                <div class="team-details">
-                                    <div class="team-img part-bg11">
-                                        <img src="{{ asset('assets/images/Industries/Media-Entertainment.webp') }}"
-                                            alt="" title="">
-                                        <h3 class="team-name">Media <br>&amp; Entertainment</h3>
-                                    </div>
-                                    <div class="team-bottom">
-                                        <div class="team-text"> </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- logo item1 end -->
-                        <!-- logo item1 -->
-                        <div class="items">
-                            <a href="#partnter12">
-                                <div class="team-details">
-                                    <div class="team-img part-bg12">
-                                        <img src="{{ asset('assets/images/Industries/RealEstate.webp') }}" alt=""
-                                            title="">
-                                        <h3 class="team-name">Real Estate</h3>
-                                    </div>
-                                    <div class="team-bottom">
-                                        <div class="team-text"> </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- logo item1 end -->
+                        <!--  partner logo end-->
                     </div>
-                    <!-- partner logo start -->
-                    <div class="partner-mian">
-                        <!-- partner logo row 1 -->
-                        <div class="partner-logo" id="partnter1" style="display:block">
-                            <h4>Technology, IT &amp; Telecom</h4>
-                            <ul>
-                                <li>
-                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/aic.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/MCX.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/Samsung.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/metlife.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/aic.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/MCX.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/Samsung.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/metlife.webp" alt="">
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- partner logo row 1 end  -->
-                        <!-- partner logo row 1 -->
-                        <div class="partner-logo" id="partnter2">
-                            <h4>Education</h4>
-                            <ul>
-                                <li>
-                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/aic.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/MCX.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/Samsung.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/metlife.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/aic.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/MCX.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/Samsung.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/metlife.webp" alt="">
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- partner logo row 1 end  -->
-                        <!-- partner logo row 1 -->
-                        <div class="partner-logo" id="partnter3">
-                            <h4>Banking, Finance &amp; Insurance</h4>
-                            <ul>
-                                <li>
-                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/aic.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/MCX.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/Samsung.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/metlife.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/aic.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/MCX.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/Samsung.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/metlife.webp" alt="">
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- partner logo row 1 end  -->
-                        <!-- partner logo row 1 -->
-                        <div class="partner-logo" id="partnter4">
-                            <h4>Healthcare</h4>
-                            <ul>
-                                <li>
-                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/aic.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/MCX.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/Samsung.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/metlife.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/aic.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/MCX.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/Samsung.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/metlife.webp" alt="">
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- partner logo row 1 end  -->
-                        <!-- partner logo row 1 -->
-                        <div class="partner-logo" id="partnter5">
-                            <h4>Retail &amp; E-Commerce</h4>
-                            <ul>
-                                <li>
-                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/aic.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/MCX.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/Samsung.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/metlife.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/aic.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/MCX.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/Samsung.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/metlife.webp" alt="">
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- partner logo row 1 end  -->
-                        <!-- partner logo row 1 -->
-                        <div class="partner-logo" id="partnter6">
-                            <h4>Power & Energy</h4>
-                            <ul>
-                                <li>
-                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/aic.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/MCX.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/Samsung.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/metlife.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/aic.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/MCX.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/Samsung.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/metlife.webp" alt="">
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- partner logo row 1 end  -->
-                        <!-- partner logo row 1 -->
-                        <div class="partner-logo" id="partnter7">
-                            <h4>Government &amp; Defence</h4>
-                            <ul>
-                                <li>
-                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/aic.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/MCX.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/Samsung.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/metlife.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/aic.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/MCX.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/Samsung.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/metlife.webp" alt="">
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- partner logo row 1 end  -->
-                        <!-- partner logo row 1 -->
-                        <div class="partner-logo" id="partnter8">
-                            <h4>Utilities</h4>
-                            <ul>
-                                <li>
-                                    <img src="{{ asset('assets/images/clients/ncdc-client-logo.webp')}}" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/aic.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/MCX.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/Samsung.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/metlife.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/aic.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/MCX.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/Samsung.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/metlife.webp" alt="">
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- partner logo row 1 end  -->
-                        <!-- partner logo row 1 -->
-                        <div class="partner-logo" id="partnter9">
-                            <h4>Industruies &amp; Manufacturing</h4>
-                            <ul>
-                                <li>
-                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/aic.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/MCX.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/Samsung.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/metlife.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/aic.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/MCX.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/Samsung.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/metlife.webp" alt="">
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- partner logo row 1 end  -->
-                        <!-- partner logo row 1 -->
-                        <div class="partner-logo" id="partnter10">
-                            <h4>Tourism & Hospitality</h4>
-                            <ul>
-                                <li>
-                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/aic.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/MCX.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/Samsung.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/metlife.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/aic.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/MCX.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/Samsung.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/metlife.webp" alt="">
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- partner logo row 1 end  -->
-                        <!-- partner logo row 1 -->
-                        <div class="partner-logo" id="partnter11">
-                            <h4>Media &amp; Entertainment</h4>
-                            <ul>
-                                <li>
-                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/aic.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/MCX.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/Samsung.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/metlife.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/aic.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/MCX.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/Samsung.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/metlife.webp" alt="">
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- partner logo row 1 end  -->
-                        <!-- partner logo row 1 -->
-                        <div class="partner-logo" id="partnter12">
-                            <h4>Real Estate</h4>
-                            <ul>
-                                <li>
-                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/aic.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/MCX.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/Samsung.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/metlife.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/aic.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/MCX.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/Samsung.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/clients/metlife.webp" alt="">
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- partner logo row 1 end  -->
-                    </div>
-                    <!--  partner logo end-->
+                    <!--  -->
+                    <!--  -->
                 </div>
-                <!--  -->
-                <!--  -->
             </div>
-        </div>
-    </section>
+        </section>
         <div class="popup" id="global-testimonial-popup">
             <div class="popup-box popup-testo">
                 <div class="testo-popup">
