@@ -39,17 +39,17 @@ class L3ContentInfo extends Model
     {
         return $this->hasMany(L3Overview2_Description::class, 'l3_content_info_id');
     }
-        public function overview2SubDescriptions()
+    public function overview2SubDescriptions()
     {
-        return $this->hasMany(L3Overview2SubDescription::class,'l3_content_info_id', 'id');
+        return $this->hasMany(L3Overview2SubDescription::class, 'l3_content_info_id', 'id');
     }
 
-        public function industry2Title()
+    public function industry2Title()
     {
         return $this->hasOne(Industry2Title::class, 'l3_content_info_id');
     }
 
-        public function overview15s()
+    public function overview15s()
     {
         return $this->hasMany(Overview15::class, 'l3_content_info_id');
     }

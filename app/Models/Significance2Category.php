@@ -27,4 +27,10 @@ class Significance2Category extends Model
     {
         return $this->belongsTo(SubCategory::class);
     }
+
+    public function Significance2SubCategory()
+    {
+        return $this->hasMany(Significance2::class, 'significance2_category_id');
+    }
+
 }

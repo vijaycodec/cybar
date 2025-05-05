@@ -9,7 +9,7 @@ class FaqSubCategory extends Model
     protected $fillable = [
         'l3_content_info_id',
         'faq_category_id',
-        'sub_category_id', // ✅ Add this to allow mass assignment
+        'sub_category_id', //  Add this to allow mass assignment
         'page_id',
         'name',
         'title',

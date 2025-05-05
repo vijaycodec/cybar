@@ -331,28 +331,49 @@ class L3ContentRepository implements L3ContentRepositoryInterface
         }
 
         // Optional: If you're using a separate table for significance titles
+        // if ($request->l3_layout_type == 'significance2') {
+        //                // Prepare data for update/create
+        //     $data = [
+        //         'page_id' => $request->input('page_category_id'),
+        //         'sub_category_id' => $request->input('sub_category_id'),
+        //         'name' => $request->input('Significance2_subcategory_name'),
+        //         'significance2_short_description' => $request->input('significance2_short_description'),
+        //         'significance2_long_description' => $request->input('significance2_long_description'),
+        //         'significance2_title' => $request->input('significance2_title'),
+        //         'significance2_category_id' => $request->significance2_type,
+        //     ];
+
+        //     // Check if image is present and upload it
+        //     if ($request->image) {
+
+        //         $data['image'] = $this->uploadImage($request, 'significance2');
+        //     }
+
+        //     // Perform update or create
+        //     Significance2::updateOrCreate(
+        //         ['l3_content_info_id' => $l3ContentInfo->id],
+        //         $data
+        //     );
+        // }
         if ($request->l3_layout_type == 'significance2') {
-            //  dd( $request->Significance2_title);
-            // Prepare data for update/create
-            $data = [
-                'significance2_short_description' => $request->input('significance2_short_description'),
-                'significance2_long_description' => $request->input('significance2_long_description'),
-                'significance2_title' => $request->input('significance2_title'),
-            ];
-
-            // Check if image is present and upload it
-            if ($request->image) {
-
-                $data['image'] = $this->uploadImage($request, 'significance2');
+            $significance2 = new Significance2();
+            $significance2->l3_content_info_id = $l3ContentInfo->id;
+            $significance2->page_id = $request->input('page_category_id');
+            $significance2->sub_category_id = $request->input('sub_category_id');
+            $significance2->significance2_category_id = $request->input('significance2_type');
+            $significance2->name = $request->input('Significance2_subcategory_name');
+            $significance2->significance2_title = $request->input('significance2_title');
+            $significance2->significance2_short_description = $request->input('significance2_short_description');
+            $significance2->significance2_long_description = $request->input('significance2_long_description');
+        
+            // Handle image upload
+            if ($request->hasFile('image')) {
+                $significance2->image = $this->uploadImage($request, 'significance2');
             }
-
-            // Perform update or create
-            Significance2::updateOrCreate(
-                ['l3_content_info_id' => $l3ContentInfo->id],
-                $data
-            );
+        
+            $significance2->save();
         }
-
+        
         if ($request->l3_layout_type == 'significance') {
             SignificanceTitle::updateOrCreate(
                 ['l3_content_info_id' => $l3ContentInfo->id], // Condition

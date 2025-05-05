@@ -232,7 +232,7 @@
                         <textarea class="ckeditor" name="overview2_paragraph5">{{ old('overview2_paragraph5') }}</textarea>
                     </div>
 
-                    <div class="form-group" id="dynamic_overview_sections"></div>
+                    {{-- <div class="form-group" id="dynamic_overview_sections"></div> --}}
 
 
                     <!-- Overview 2 Form ends-->
@@ -325,14 +325,13 @@
 
                     <!-- Significance Form Start -->
                     <div class="l3-form" id="significance_form" style="display: none;">
-
                         <div class="body-title  ">Select Significance Type <span class="tf-color-1">*</span></div>
-                        <select class="flex-grow" id="significance_category" name="significance_type">
-                            <option value="" disabled selected>Select Significance</option>
-                            @foreach ($significanceCategories as $category)
-                                <option value="{{ $category->id }}">{{ $category->name }}</option>
-                            @endforeach
-                        </select>
+                            <select class="flex-grow" id="significance_category" name="significance_type">
+                                <option value="" disabled selected>Select Significance</option>
+                                @foreach ($significanceCategories as $category)
+                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                @endforeach
+                            </select>
                     </div>
 
                     <div class="l3-form form-group significance_short_description">
@@ -363,6 +362,12 @@
                                 <option value="{{ $category->id }}">{{ $category->name }}</option>
                             @endforeach
                         </select>
+                    </div>
+
+                    <div class="name l3-form Significance2_subcategory" id="">
+                        <div class="body-title">Significance2 Sub-Category Name </div>
+                        <input class="flex-grow" type="text" placeholder="Sub Category Name"
+                            name="Significance2_subcategory_name" tabindex="0" value="{{ old('Significance2_subcategory_name') }}">
                     </div>
 
                     <div class="l3-form form-group significance2_title">
@@ -838,6 +843,7 @@
                     $('#l3_layout_type').val('overview17'); // Set hidden input to 'significance'
                 } else if (selectedL3Category === "significance2") {
                     $('#significance2_form').show();
+                    $('.Significance2_subcategory').show();
                     $('.significance2_title').show();
                     $('.significance2_desc').show();
                     $('.significance2_short_description').show();
