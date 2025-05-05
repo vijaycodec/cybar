@@ -2329,6 +2329,742 @@
             </section>
         @endif
     @endforeach
+
+    <section class="cn-iws mhspace" id="mhome-div9">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 cn-title">
+                    <h2>Industry We Serve</h2>
+                    <p>Serve large segment of SME & Hi-cap Enterprise customers</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <!--  -->
+                <!--  -->
+                <div class="industry-slider">
+                    <div id="industry-slider" class="owl-carousel owl-theme">
+                        <!-- logo item1 -->
+                        <div class="items active">
+                            <a href="#partnter1">
+                                <div class="team-details">
+                                    <div class="team-img part-bg1">
+                                        <img src="{{asset('assets/images/Industries/Technology-IT-Telecom.webp')}}"
+                                            alt="" title="">
+                                        <h3 class="team-name">Technology, IT <br>&amp; Telecom</h3>
+                                    </div>
+                                    <div class="team-bottom">
+                                        <div class="team-text"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- logo item1 end -->
+                        <!-- logo item1 -->
+                        <div class="items">
+                            <a href="#partnter2">
+                                <div class="team-details">
+                                    <div class="team-img part-bg2">
+                                        <img src="{{ asset('assets/images/Industries/Education.webp') }}" alt=""
+                                            title="">
+                                        <h3 class="team-name">Education</h3>
+                                    </div>
+                                    <div class="team-bottom">
+                                        <div class="team-text"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- logo item1 end -->
+                        <!-- logo item1 -->
+                        <div class="items">
+                            <a href="#partnter3">
+                                <div class="team-details">
+                                    <div class="team-img part-bg3">
+                                        <img src="{{asset('assets/images/Industries/Banking-Finance-Insurance.webp')}}"
+                                            alt="" title="">
+                                        <h3 class="team-name">Banking, Finance <br>&amp; Insurance</h3>
+                                    </div>
+                                    <div class="team-bottom">
+                                        <div class="team-text">
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- logo item1 end -->
+                        <!-- logo item1 -->
+                        <div class="items">
+                            <a href="#partnter4">
+                                <div class="team-details">
+                                    <div class="team-img part-bg4">
+                                        <img src="{{ asset('assets/images/Industries/Healthcare.webp') }}" alt=""
+                                            title="">
+                                        <h3 class="team-name">Healthcare</h3>
+                                    </div>
+                                    <div class="team-bottom">
+                                        <div class="team-text"> </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- logo item1 end -->
+                        <!-- logo item1 -->
+                        <div class="items">
+                            <a href="#partnter5">
+                                <div class="team-details">
+                                    <div class="team-img part-bg5">
+                                        <img src="{{ asset('assets/images/Industries/Retail-E-Commerce.webp') }}" alt=""
+                                            title="">
+                                        <h3 class="team-name">Retail <br>&amp; E-Commerce</h3>
+                                    </div>
+                                    <div class="team-bottom">
+                                        <div class="team-text"> </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- logo item1 end -->
+                        <!-- logo item1 -->
+                        <div class="items">
+                            <a href="#partnter6">
+                                <div class="team-details">
+                                    <div class="team-img part-bg6">
+                                        <img src="{{ asset('assets/images/Industries/Power-Energy.webp') }}" alt=""
+                                            title="">
+                                        <h3 class="team-name">Power &amp; Energy</h3>
+                                    </div>
+                                    <div class="team-bottom">
+                                        <div class="team-text"> </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- logo item1 end -->
+                        <!-- logo item1 -->
+                        <div class="items">
+                            <a href="#partnter7">
+                                <div class="team-details">
+                                    <div class="team-img part-bg7">
+                                        <img src="{{ asset('assets/images/Industries/Government-Defence.webp') }}" alt=""
+                                            title="">
+                                        <h3 class="team-name">Government <br>&amp; Defence</h3>
+                                    </div>
+                                    <div class="team-bottom">
+                                        <div class="team-text"> </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- logo item1 end -->
+                        <!-- logo item1 -->
+                        <div class="items">
+                            <a href="#partnter8">
+                                <div class="team-details">
+                                    <div class="team-img part-bg8">
+                                        <img src="{{ asset('assets/images/Industries/Utilities.webp') }}" alt=""
+                                            title="">
+                                        <h3 class="team-name">Utilities</h3>
+                                    </div>
+                                    <div class="team-bottom">
+                                        <div class="team-text"> </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- logo item1 end -->
+                        <!-- logo item1 -->
+                        <div class="items">
+                            <a href="#partnter9">
+                                <div class="team-details">
+                                    <div class="team-img part-bg9">
+                                        <img src="{{ asset('assets/images/Industries/Industruies-Manufacturing.webp') }}"
+                                            alt="" title="">
+                                        <h3 class="team-name">Industruies <br>&amp; Manufacturing</h3>
+                                    </div>
+                                    <div class="team-bottom">
+                                        <div class="team-text"> </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- logo item1 end -->
+                        <!-- logo item1 -->
+                        <div class="items">
+                            <a href="#partnter10">
+                                <div class="team-details">
+                                    <div class="team-img part-bg10">
+                                        <img src="{{ asset('assets/images/Industries/Tourism-Hospitality.webp') }}"
+                                            alt="" title="">
+                                        <h3 class="team-name">Tourism &amp; Hospitality</h3>
+                                    </div>
+                                    <div class="team-bottom">
+                                        <div class="team-text"> </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- logo item1 end -->
+                        <!-- logo item1 -->
+                        <div class="items">
+                            <a href="#partnter11">
+                                <div class="team-details">
+                                    <div class="team-img part-bg11">
+                                        <img src="{{ asset('assets/images/Industries/Media-Entertainment.webp') }}"
+                                            alt="" title="">
+                                        <h3 class="team-name">Media <br>&amp; Entertainment</h3>
+                                    </div>
+                                    <div class="team-bottom">
+                                        <div class="team-text"> </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- logo item1 end -->
+                        <!-- logo item1 -->
+                        <div class="items">
+                            <a href="#partnter12">
+                                <div class="team-details">
+                                    <div class="team-img part-bg12">
+                                        <img src="{{ asset('assets/images/Industries/RealEstate.webp') }}" alt=""
+                                            title="">
+                                        <h3 class="team-name">Real Estate</h3>
+                                    </div>
+                                    <div class="team-bottom">
+                                        <div class="team-text"> </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- logo item1 end -->
+                    </div>
+                    <!-- partner logo start -->
+                    <div class="partner-mian">
+                        <!-- partner logo row 1 -->
+                        <div class="partner-logo" id="partnter1" style="display:block">
+                            <h4>Technology, IT &amp; Telecom</h4>
+                            <ul>
+                                <li>
+                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/aic.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/MCX.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/Samsung.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/metlife.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/aic.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/MCX.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/Samsung.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/metlife.webp" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- partner logo row 1 end  -->
+                        <!-- partner logo row 1 -->
+                        <div class="partner-logo" id="partnter2">
+                            <h4>Education</h4>
+                            <ul>
+                                <li>
+                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/aic.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/MCX.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/Samsung.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/metlife.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/aic.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/MCX.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/Samsung.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/metlife.webp" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- partner logo row 1 end  -->
+                        <!-- partner logo row 1 -->
+                        <div class="partner-logo" id="partnter3">
+                            <h4>Banking, Finance &amp; Insurance</h4>
+                            <ul>
+                                <li>
+                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/aic.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/MCX.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/Samsung.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/metlife.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/aic.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/MCX.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/Samsung.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/metlife.webp" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- partner logo row 1 end  -->
+                        <!-- partner logo row 1 -->
+                        <div class="partner-logo" id="partnter4">
+                            <h4>Healthcare</h4>
+                            <ul>
+                                <li>
+                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/aic.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/MCX.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/Samsung.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/metlife.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/aic.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/MCX.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/Samsung.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/metlife.webp" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- partner logo row 1 end  -->
+                        <!-- partner logo row 1 -->
+                        <div class="partner-logo" id="partnter5">
+                            <h4>Retail &amp; E-Commerce</h4>
+                            <ul>
+                                <li>
+                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/aic.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/MCX.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/Samsung.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/metlife.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/aic.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/MCX.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/Samsung.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/metlife.webp" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- partner logo row 1 end  -->
+                        <!-- partner logo row 1 -->
+                        <div class="partner-logo" id="partnter6">
+                            <h4>Power & Energy</h4>
+                            <ul>
+                                <li>
+                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/aic.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/MCX.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/Samsung.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/metlife.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/aic.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/MCX.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/Samsung.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/metlife.webp" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- partner logo row 1 end  -->
+                        <!-- partner logo row 1 -->
+                        <div class="partner-logo" id="partnter7">
+                            <h4>Government &amp; Defence</h4>
+                            <ul>
+                                <li>
+                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/aic.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/MCX.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/Samsung.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/metlife.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/aic.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/MCX.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/Samsung.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/metlife.webp" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- partner logo row 1 end  -->
+                        <!-- partner logo row 1 -->
+                        <div class="partner-logo" id="partnter8">
+                            <h4>Utilities</h4>
+                            <ul>
+                                <li>
+                                    <img src="{{ asset('assets/images/clients/ncdc-client-logo.webp')}}" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/aic.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/MCX.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/Samsung.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/metlife.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/aic.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/MCX.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/Samsung.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/metlife.webp" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- partner logo row 1 end  -->
+                        <!-- partner logo row 1 -->
+                        <div class="partner-logo" id="partnter9">
+                            <h4>Industruies &amp; Manufacturing</h4>
+                            <ul>
+                                <li>
+                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/aic.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/MCX.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/Samsung.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/metlife.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/aic.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/MCX.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/Samsung.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/metlife.webp" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- partner logo row 1 end  -->
+                        <!-- partner logo row 1 -->
+                        <div class="partner-logo" id="partnter10">
+                            <h4>Tourism & Hospitality</h4>
+                            <ul>
+                                <li>
+                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/aic.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/MCX.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/Samsung.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/metlife.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/aic.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/MCX.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/Samsung.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/metlife.webp" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- partner logo row 1 end  -->
+                        <!-- partner logo row 1 -->
+                        <div class="partner-logo" id="partnter11">
+                            <h4>Media &amp; Entertainment</h4>
+                            <ul>
+                                <li>
+                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/aic.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/MCX.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/Samsung.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/metlife.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/aic.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/MCX.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/Samsung.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/metlife.webp" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- partner logo row 1 end  -->
+                        <!-- partner logo row 1 -->
+                        <div class="partner-logo" id="partnter12">
+                            <h4>Real Estate</h4>
+                            <ul>
+                                <li>
+                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/aic.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/MCX.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/Samsung.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/metlife.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/ncdc-client-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/aic.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/MCX.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/Samsung.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/hcl-logo.webp" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/clients/metlife.webp" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- partner logo row 1 end  -->
+                    </div>
+                    <!--  partner logo end-->
+                </div>
+                <!--  -->
+                <!--  -->
+            </div>
+        </div>
+    </section>
         <div class="popup" id="global-testimonial-popup">
             <div class="popup-box popup-testo">
                 <div class="testo-popup">
