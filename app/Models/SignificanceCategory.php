@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class SignificanceCategory extends Model
 {
-    protected $fillable = ['name', 'slug', 'page_category_id', 'category_id', 'sub_category_id'];
+    protected $fillable = ['name', 'slug', 'image', 'page_category_id', 'category_id', 'sub_category_id'];
 
     public function pageCategory()
     {

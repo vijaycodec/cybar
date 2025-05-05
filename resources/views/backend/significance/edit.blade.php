@@ -79,6 +79,34 @@
                             value="{{ old('slug', $l3Category->slug) }}" required readonly>
                     </fieldset>
 
+                    <fieldset>
+                        <div class="body-title">Upload Image <span class="tf-color-1">*</span></div>
+                        <div class="upload-image flex-grow">
+
+                            <!-- Image preview container -->
+                            <div class="item" id="imgpreview" style="text-align: center;">
+                                @if ($l3Category->image)
+                                    <img src="{{ asset('storage/uploads/backend/significanceCategory/' . $l3Category->image) }}" id="preview-img"
+                                        class="effect8" alt="Preview Image" style="max-width: 50%; height: auto;">
+                                    <!-- Adjusted image width -->
+                                    <button type="button" id="deleteImage" class="delete-btn">Delete</button>
+                                @else
+                                    <img src="" id="preview-img" class="effect8"
+                                        style="display:none; max-width: 50%; height: auto;">
+                                @endif
+                            </div>
+
+                            <div id="upload-file" class="item up-load">
+                                <label class="uploadfile" for="myFile">
+                                    <span class="icon"><i class="icon-upload-cloud"></i></span>
+                                    <span class="body-text">Drop your images here or select <span class="tf-color">click to
+                                            browse</span></span>
+                                    <input type="file" id="myFile" name="image" accept="image/*">
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+
                     <div class="bot">
                         <div></div>
                         <button class="tf-button w208" type="submit">Update</button>
