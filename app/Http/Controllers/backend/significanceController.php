@@ -8,36 +8,31 @@ use App\Models\PageDetail;
 use App\Models\SignificanceCategory;
 use App\Models\SubCategory;
 use Illuminate\Http\Request;
+use App\Repositories\Interfaces\UploadServiceInterface;
 
-class significanceController extends Controller
+class SignificanceController extends Controller
 {
-    
+    protected $uploadService;
+
+    public function __construct(UploadServiceInterface $uploadService)
+    {
+        $this->uploadService = $uploadService;
+    }
+
     public function index()
     {
-        $subcategories = SignificanceCategory::all(); // Fetch all categories
+        $subcategories = SignificanceCategory::all();
         return view('backend.significance.index', compact('subcategories'));
     }
 
-    /**
-     * Show the form for creating a new category.
-     */
-    // public function create()
-    // {
-    //     'page_categories' => PageDetail::all(),
-    //     return view('backend.significance.create');
-    // }
-
     public function create()
-{
-    $pageCategories = PageDetail::all();
-    return view('backend.significance.create', [
-        'page_categories' => $pageCategories
-    ]);
-}
+    {
+        $pageCategories = PageDetail::all();
+        return view('backend.significance.create', [
+            'page_categories' => $pageCategories
+        ]);
+    }
 
-    /**
-     * Store a newly created category.
-     */
     public function store(Request $request)
     {
         $request->validate([
@@ -46,19 +41,28 @@ class significanceController extends Controller
             'page_category_id' => 'required',
             'category_id' => 'required',
             'sub_category_id' => 'required',
-
-
+            'image' => 'nullable',
         ]);
 
-        SignificanceCategory::create([
-            'name' => $request->name,
-            'slug' => $request->slug,
-            'page_category_id' =>$request->page_category_id,
-            'category_id' =>$request->category_id,
-            'sub_category_id' =>$request->sub_category_id,
-        ]);
+        try {
+            $data = $request->only([
+                'name',
+                'slug',
+                'page_category_id',
+                'category_id',
+                'sub_category_id'
+            ]);
 
-        return redirect()->route('significance.list')->with('success', 'Category created successfully!');
+            if ($request->hasFile('image')) {
+                $data['image'] = $this->uploadService->uploadImage($request, 'significanceCategory');
+            }
+
+            SignificanceCategory::create($data);
+
+            return redirect()->route('significance.list')->with('success', 'Category created successfully!');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'An error occurred: ' . $e->getMessage());
+        }
     }
 
     public function edit($id)
@@ -66,8 +70,14 @@ class significanceController extends Controller
         $l3Category = SignificanceCategory::findOrFail($id);
         $page_categories = PageDetail::all();
         $categories = CourseCategory::where('page_category', $l3Category->page_category_id)->get();
-        $subCategories =SubCategory::where('category_id', $l3Category->category_id)->get();
-        return view('backend.significance.edit',  compact('l3Category', 'page_categories', 'categories', 'subCategories'));
+        $subCategories = SubCategory::where('category_id', $l3Category->category_id)->get();
+
+        return view('backend.significance.edit', compact(
+            'l3Category',
+            'page_categories',
+            'categories',
+            'subCategories'
+        ));
     }
 
     public function update(Request $request, $id)
@@ -78,16 +88,24 @@ class significanceController extends Controller
             'page_category_id' => 'required',
             'category_id' => 'required',
             'sub_category_id' => 'required',
+            'image' => 'nullable',
         ]);
 
         $subcategory = SignificanceCategory::findOrFail($id);
-        $subcategory->update([
-            'name' => $request->name,
-            'slug' => $request->slug,
-            'page_category_id' =>$request->page_category_id,
-            'category_id' =>$request->category_id,
-            'sub_category_id' =>$request->sub_category_id,
+
+        $data = $request->only([
+            'name',
+            'slug',
+            'page_category_id',
+            'category_id',
+            'sub_category_id'
         ]);
+
+        if ($request->hasFile('image')) {
+            $data['image'] = $this->uploadService->uploadImage($request, 'significanceCategory');
+        }
+
+        $subcategory->update($data);
 
         return redirect()->route('significance.list')->with('success', 'Subcategory updated successfully.');
     }
@@ -95,9 +113,14 @@ class significanceController extends Controller
     public function destroy($id)
     {
         $subcategory = SignificanceCategory::findOrFail($id);
+        // Delete the existing image from storage
+
+        if ($subcategory->image) {
+            $this->uploadService->deleteImage($subcategory->image, 'significanceCategory');
+        }
+
         $subcategory->delete();
 
         return redirect()->route('significance.list')->with('success', 'Subcategory deleted successfully.');
     }
 }
-

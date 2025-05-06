@@ -19,4 +19,19 @@ class ProgramCategory extends Model
     {
         return $this->hasOne(L3ContentInfo::class, 'program_category_id');
     }
+
+    public function pageCategory()
+    {
+        return $this->belongsTo(PageDetail::class);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(CourseCategory::class);
+    }
+
+    public function subCategory()
+    {
+        return $this->belongsTo(SubCategory::class);
+    }
 }

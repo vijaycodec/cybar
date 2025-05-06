@@ -74,6 +74,24 @@
                             tabindex="0" value="{{ old('slug') }}" aria-required="true" required readonly>
                     </fieldset>
 
+                    <fieldset>
+                        <div class="body-title">Upload images <span class="tf-color-1">*</span></div>
+                        <div class="upload-image flex-grow">
+                            <!-- Image preview container -->
+                            <div class="item" id="imgpreview" style="display:none; text-align: center;">
+                                <img src="" class="effect8" alt="Preview Image" style="max-width: 50%; height: auto; border-radius: 5px;">
+                                <button type="button" id="deleteImage" class="delete-btn">Delete</button>
+                            </div>
+                            <div id="upload-file" class="item up-load">
+                                <label class="uploadfile" for="myFile">
+                                    <span class="icon"><i class="icon-upload-cloud"></i></span>
+                                    <span class="body-text">Drop your images here or select <span class="tf-color">click to browse</span></span>
+                                    <input type="file" id="myFile" name="image" accept="image/*">
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+
                     <div class="bot">
                         <div></div>
                         <button class="tf-button w208" type="submit">Save</button>

@@ -61,7 +61,6 @@ class l3templateController extends Controller
             $subcategoryname = $subcategory->sub_category;
 
             $l3Categories = $this->l3CategoryRepository->getL3Categories($pageId, $categoryId, $subcategoryId);
-
             if ($l3Categories->isEmpty()) {
                 abort(404, 'No L3 categories found.');
             }

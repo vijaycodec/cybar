@@ -55,8 +55,8 @@ class L3CategoryRepository implements L3CategoryRepositoryInterface
                     'overview2SubDescriptions',
                     'industry2Title', 
                     'overview15s',
-                    'significance2s',
-                    'significance2Category',
+                    // 'significance2s',
+                    // 'significance2Category',
                     'significanceCategory',
                     'significance_title',
                     'coursefeatureCategory',
@@ -76,6 +76,13 @@ class L3CategoryRepository implements L3CategoryRepositoryInterface
 
                     'faqCategory' => function ($query) use ($subcategoryId, $pageId) {
                         $query->with(['faqSubCategory' => function ($subQuery) use ($subcategoryId, $pageId) {
+                            $subQuery->where('page_id', $pageId)
+                                     ->where('sub_category_id', $subcategoryId);
+                        }]);
+                    },
+
+                    'significance2Category' => function ($query) use ($subcategoryId, $pageId) {
+                        $query->with(['Significance2SubCategory' => function ($subQuery) use ($subcategoryId, $pageId) {
                             $subQuery->where('page_id', $pageId)
                                      ->where('sub_category_id', $subcategoryId);
                         }]);

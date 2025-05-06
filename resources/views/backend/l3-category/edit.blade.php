@@ -90,6 +90,13 @@
                             'testimonials' => 'Testimonials',
                             'blogCategory' => 'Blog',
                             'FaqCategory' => 'FAQs',
+                            'overview2Descriptions' => 'Section12',
+                            'overview2SubDescriptions' => 'Section13',
+                            'industry2_description' => 'Section14',
+                            'overview15s' => 'Section15',
+                            'overview16_short_descriptions' => 'Section16',
+                            'overview17_descriptions' => 'Section17',
+                            'significance2s' => 'Section18',
                         ];
                     @endphp
                     <fieldset class="name">

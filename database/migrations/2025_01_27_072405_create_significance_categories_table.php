@@ -18,6 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('sub_category_id')->nullable();
             $table->string('name');
             $table->string('slug')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
