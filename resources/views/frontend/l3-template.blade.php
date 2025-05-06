@@ -1463,9 +1463,9 @@
                 <!--  -->
                 <div class="container desktop-view why-chossetab" id="industry_challenges">
                     <div class="row">
-                        <div class="col-md-3 tab3-tab1">
+                        <div class="col-md-3 tab3-tab1 significance2-tab">
                             <!--  -->
-                            <div class="tab3-tab">
+                            <div class="tab3-tab significance2-subtab">
 
                                 @foreach ($l3Categories as $category)
                                     {{-- <li class="active"><a data-toggle="tab" href="#ic">BANKING & FINANCE</a></li> --}}
@@ -1486,7 +1486,7 @@
                             </div>
                             <!--  -->
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-md-9 significance2-content-sub">
                             <!--  -->
                             <div class="tab3-content">
                                 @foreach ($l3Categories as $category)
@@ -2162,7 +2162,7 @@
                             <div class="row">
                                 <div class="cn-tabs1">
                                     {{-- Tab Navigation --}}
-                                    <ul id="tabs-nav100">
+                                    <ul id="tabs-nav100" class="tabs-signi2sec">
                                         @foreach ($categoriesMap as $group)
                                             <li class="{{ $loop->first ? 'active' : '' }}">
                                                 <a href="#{{ strtolower(str_replace([' ', '&', ','], '-', $group['category']->name)) }}">
@@ -2183,8 +2183,8 @@
                                                         <div class="container desktop-view why-chossetab">
                                                             <div class="row">
                                                                 {{-- Left Side Buttons --}}
-                                                                <div class="col-md-3 tab3-tab1">
-                                                                    <div class="tab3-tab significance2-tab" id="tab3_why_us">
+                                                                <div class="col-md-3 tab3-tab1 significance2-tab">
+                                                                    <div class="tab3-tab significance2-subtab" id="tab3_why_us">
                                                                         @foreach ($group['significance2s'] as $significance)
                                                                             <button class="tablinks{{ $group['index'] }} {{ $loop->first ? 'tab3-active' : '' }}"
                                                                                     onclick="openCity{{ $group['index'] }}(event, '{{ strtolower(str_replace([' ', '&', ','], '-', $significance->name)) }}')">
@@ -2195,7 +2195,7 @@
                                                                 </div>
 
                                                                 {{-- Right Side Content --}}
-                                                                <div class="col-md-9">
+                                                                <div class="col-md-9 significance2-content-sub">
                                                                     <div class="tab3-content">
                                                                         @foreach ($group['significance2s'] as $significance)
                                                                             <div id="{{ strtolower(str_replace([' ', '&', ','], '-', $significance->name)) }}"
@@ -2548,6 +2548,29 @@
             });
 
         });
+    </script>
+    <script>
+        if (!isMobile()) {
+            function scrollToFirstElement(className, offset = 100) {
+                document.querySelectorAll(`.${className}`).forEach(element => {
+                    element.addEventListener("click", function (e) {
+                        e.preventDefault();
+                        setTimeout(() => {
+                            const firstElement = document.querySelector(`.${className}`);
+                            if (firstElement) {
+                                window.scrollTo({
+                                    top: firstElement.offsetTop - offset,
+                                    behavior: "smooth"
+                                });
+                            }
+                        }, 0); // Ensures content loads before scrolling
+                    });
+                });
+            }
+        }
+
+        // Example usage:
+        scrollToFirstElement("tabs-signi2sec", 120);
     </script>
 
     <script type="text/javascript" src="{{ asset('assets/js/common.js') }}"></script>

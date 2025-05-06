@@ -5760,7 +5760,7 @@ ul#tabs-nav100 li {
 
 ul#tabs-nav100 li {
     background: #dae4f7 !important;
-    border-bottom: 4px solid #dae4f7;
+    border-bottom: 5px solid #dae4f7;
     display: inline-block;
     margin: auto 1px;
     width: inherit;
@@ -5769,22 +5769,33 @@ ul#tabs-nav100 li {
 }
 
 ul#tabs-nav100 li:first-of-type {
-    margin-left: -150px;
+    margin-left: 0px;
 }
 
 ul#tabs-nav100 li:last-of-type {
-    margin-right: -150px;
+    margin-right: 0px;
+    background: #C0C0C0 !important;
+    border-bottom: 5px solid #C0C0C0 !important;
 }
 
 .significance2-tab {
-    width: 350px;
-    margin-left: -100px;
+    width: 35%;
+    margin-left: -20px;
+}
+.significance2-subtab {
+    width: 110%;
 }
 
 ul#tabs-nav100 li.active, ul#tabs-nav100 li:hover {
     outline: 0;
-    border-bottom: 4px solid #18ba60;
+    border-bottom: 5px solid #18ba60 !important;
 }
+
+.significance2-content-sub{
+    width: 65% !important;
+    margin-left: 20px;
+}
+
 #tabs-nav100 li a {
     color: #333;
 }

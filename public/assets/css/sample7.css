@@ -217,6 +217,7 @@
 .tab3-content {
   padding-top: 0px;
   height: 400px;
+  overflow-y: auto;
   overscroll-behavior: contain;
   margin-top: 40px;
 }
