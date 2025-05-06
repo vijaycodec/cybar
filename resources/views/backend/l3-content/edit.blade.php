@@ -403,6 +403,12 @@
                         </select>
                     </div>
 
+                    <div class="name l3-form Significance2_subcategory" id="">
+                        <div class="body-title">Significance2 Sub-Category Name </div>
+                        <input class="flex-grow" type="text" placeholder="Sub Category Name"
+                            name="Significance2_subcategory_name" tabindex="0" value="{{ $significance2->name  ?? '' }}">
+                    </div>
+
                     <div class="l3-form form-group significance2_title">
                         <div class="body-title">Significance Title :<span class="tf-color-1">*</span></div>
 
@@ -1043,7 +1049,7 @@
                         $('.significance2_desc').show();
                         $('.significance2_short_description').show();
                         $('.significance2_title').show();
-                        // $('.comman_images').show();
+                        $('.Significance2_subcategory').show();
                         $('#l3_layout_type').val('significance2'); // Set hidden input to 'significance'
 
                     } else if (selectedL3Category === "industries2") {
