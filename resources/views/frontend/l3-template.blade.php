@@ -2119,46 +2119,44 @@
 
             @elseif ($fieldKey == 'significance2s' && $contents->contains(fn($info) => $info->{$fieldKey}))
                 <section class="why-codec codec-page-section anchor-link light-grey" id="{{ $slug }}">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 cn-title">
-                                @foreach ($l3Categories as $category)
-                                    @foreach ($category->contentInfos as $info)
-                                        @foreach ($info->significance2s as $significance)
-                                            @if ($significance->significance2_title)
-                                                {!! $significance->significance2_title !!}
-                                            @endif
-                                        @endforeach
-                                    @endforeach
-                                @endforeach
-                            </div>
-                        </div>
-                    </div>
-                @php
-                    $categoriesMap = [];
+                            @php
+                                $categoriesMap = [];
 
-                    foreach ($l3Categories as $category) {
-                        foreach ($category->contentInfos as $index => $contentInfo) {
-                            if ($contentInfo->significance2Category) {
-                                $categoryId = $contentInfo->significance2Category->id;
+                                foreach ($l3Categories as $category) {
+                                    foreach ($category->contentInfos as $index => $contentInfo) {
+                                        if ($contentInfo->significance2Category) {
+                                            $categoryId = $contentInfo->significance2Category->id;
 
-                                if (!isset($categoriesMap[$categoryId])) {
-                                    $categoriesMap[$categoryId] = [
-                                        'category' => $contentInfo->significance2Category,
-                                        'significance2s' => [],
-                                        'index' => $index+2,
-                                    ];
+                                            if (!isset($categoriesMap[$categoryId])) {
+                                                $categoriesMap[$categoryId] = [
+                                                    'category' => $contentInfo->significance2Category,
+                                                    'significance2s' => [],
+                                                    'index' => $index+2,
+                                                ];
+                                            }
+
+                                            foreach ($contentInfo->significance2s as $significance2) {
+                                                $categoriesMap[$categoryId]['significance2s'][] = $significance2;
+                                            }
+                                        }
+                                    }
                                 }
-
-                                foreach ($contentInfo->significance2s as $significance2) {
-                                    $categoriesMap[$categoryId]['significance2s'][] = $significance2;
-                                }
-                            }
-                        }
-                    }
-                @endphp
+                            @endphp
 
                         <div class="container desktop-view">
+                            <div class="row">
+                                <div class="col-md-12 cn-title">
+                                    @foreach ($l3Categories as $category)
+                                        @foreach ($category->contentInfos as $info)
+                                            @foreach ($info->significance2s as $significance)
+                                                @if ($significance->significance2_title)
+                                                    {!! $significance->significance2_title !!}
+                                                @endif
+                                            @endforeach
+                                        @endforeach
+                                    @endforeach
+                                </div>
+                            </div>
                             <div class="row">
                                 <div class="cn-tabs1">
                                     {{-- Tab Navigation --}}
@@ -2203,22 +2201,44 @@
                                                                                 style="display: {{ $loop->first ? 'block' : 'none' }};">
                                                                                 <div class="container">
                                                                                     <div class="row rowp">
-                                                                                        <div class="col-md-5">
-                                                                                            <div class="template12-img">
-                                                                                                <img src="{{ asset($significance->image ?? 'assets/images/placeholder.jpg') }}">
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="col-md-7">
-                                                                                            <div class="red-title">
-                                                                                                {!! $significance->significance2_short_description !!}
-                                                                                                <a href="javascript:void(0);" class="btn-show">Read More ...</a>
-                                                                                                <div class="content-hide">
-                                                                                                    {!! $significance->significance2_long_description !!}
+                                                                                        @if ($significance->image)
+                                                                                            <div class="col-md-5">
+                                                                                                <div class="template12-img">
+                                                                                                    <img
+                                                                                                        src="{{ asset('storage/uploads/frontend/l3_template/significance2/' . $significance->image) }}">
                                                                                                 </div>
-                                                                                                <a href="javascript:void(0);" class="btn-hide hide-btn_tab3">Hide Content ...</a>
                                                                                             </div>
-                                                                                        </div>
-                                                                                    </div>
+                                                                                            <div class="col-md-7">
+                                                                                                <div class="red-title">
+                                                                                                    {!! $significance->significance2_short_description !!}
+                                                                                                    <a href="javascript:void(0);"
+                                                                                                        class="btn-show">Read
+                                                                                                        More ...</a>
+                                                                                                    <div class="content-hide">
+                                                                                                        {!! $significance->significance2_long_description !!}
+                                                                                                    </div>
+                                                                                                    <a href="javascript:void(0);"
+                                                                                                        class="btn-hide hide-btn_tab3">Hide
+                                                                                                        Content ...</a>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            @else
+                                                                                            <div class="col-md-12">
+                                                                                                <div class="red-title">
+                                                                                                    {!! $significance->significance2_short_description !!}
+                                                                                                    <a href="javascript:void(0);"
+                                                                                                        class="btn-show">Read
+                                                                                                        More ...</a>
+                                                                                                    <div class="content-hide">
+                                                                                                        {!! $significance->significance2_long_description !!}
+                                                                                                    </div>
+                                                                                                    <a href="javascript:void(0);"
+                                                                                                        class="btn-hide hide-btn_tab3">Hide
+                                                                                                        Content ...</a>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        @endif
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
                                                                         @endforeach
@@ -2235,65 +2255,72 @@
                             </div>
                         </div>
 
-                       
-                        @php
-                        $groupedSignificance2 = [];
-                    
-                        foreach ($l3Categories as $category) {
-                            foreach ($category->contentInfos as $contentInfo) {
-                                if ($contentInfo->significance2Category) {
-                                    $categoryId = $contentInfo->significance2Category->id;
-                    
-                                    if (!isset($groupedSignificance2[$categoryId])) {
-                                        $groupedSignificance2[$categoryId] = [];
+                                @php
+                                    $groupedSignificance2 = [];
+                                    foreach ($l3Categories as $category) {
+                                        foreach ($category->contentInfos as $contentInfo) {
+                                            if ($contentInfo->significance2Category) {
+                                                $categoryId = $contentInfo->significance2Category->id;
+                                
+                                                if (!isset($groupedSignificance2[$categoryId])) {
+                                                    $groupedSignificance2[$categoryId] = [
+                                                        'category' => $contentInfo->significance2Category,
+                                                        'items' => []
+                                                    ];
+                                                }
+                                
+                                                foreach ($contentInfo->significance2s as $significance) {
+                                                    $groupedSignificance2[$categoryId]['items'][] = $significance;
+                                                }
+                                            }
+                                        }
                                     }
-                    
-                                    foreach ($contentInfo->significance2s as $significance) {
-                                        $groupedSignificance2[$categoryId][] = $significance;
-                                    }
-                                }
-                            }
-                        }
-                    @endphp
+                                @endphp
                     
                     <div class="container mobile-view significance-space" id="sf_mob">
-                        <div class="acc">
-                            @foreach ($groupedSignificance2 as $group)
-                                @foreach ($group as $index => $significance)
-                                    <div class="acc__card">
-                                        <!-- Accordion Title: Subcategory Name -->
-                                        <a href="#significance2s-{{ $significance->id }}"
-                                            class="acc__title {{ $loop->first ? 'active' : '' }}"
-                                            data-target="significance2s-{{ $significance->id }}">
-                                            {{ $significance->name }}
-                                        </a>
+                        <div class="row">
+                            <div class="col-md-12 cn-title">
+                                @foreach ($groupedSignificance2 as $group)
+                                    {{-- Display the Main Category Title --}}
+                                    @if (!empty($group['category']->name))
+                                        <h2  style="margin-bottom: 1rem;">{{ $group['category']->name }}</h2>
+                                    @endif
                     
-                                        <!-- Accordion Panel -->
-                                        <div class="acc__panel" style="{{ $loop->first ? 'display:block;' : '' }}"
-                                            id="significance2s-{{ $significance->id }}">
-                                            <div class="box-height vert-box">
-                                                <div class="red-title">
-                                                    @if ($significance->image)
-                                                        <div class="template12-img">
-                                                            <img src="{{ asset('storage/uploads/frontend/l3_template/significance2/' . $significance->image) }}"
-                                                                 alt="{{ $significance->significance2_title }}">
+                                    {{-- Accordion for Subcategories --}}
+                                    <div class="acc">
+                                        @foreach ($group['items'] as $index => $significance)
+                                            <div class="acc__card">
+                                                <a href="#significance2s-{{ $significance->id }}"
+                                                   class="acc__title {{ $loop->first ? 'active' : '' }}"
+                                                   data-target="significance2s-{{ $significance->id }}">
+                                                    {{ $significance->name }}
+                                                </a>
+                    
+                                                <div class="acc__panel" style="{{ $loop->first ? 'display:block;' : '' }}"
+                                                     id="significance2s-{{ $significance->id }}">
+                                                    <div class="box-height vert-box">
+                                                        <div class="red-title">
+                                                            @if ($significance->image)
+                                                                <div class="template12-img">
+                                                                    <img src="{{ asset('storage/uploads/frontend/l3_template/significance2/' . $significance->image) }}"
+                                                                         alt="{{ $significance->significance2_title }}">
+                                                                </div>
+                                                            @endif
+                    
+                                                            {!! $significance->significance2_short_description !!}
+                                                            {!! $significance->significance2_long_description !!}
                                                         </div>
-                                                    @endif
-                    
-                                                    {{-- Content --}}
-                                                    {!! $significance->significance2_short_description !!}
-                                                   
-                                                    {!! $significance->significance2_long_description !!}
-                                                   
+                                                    </div>
+                                                    <a href="javascript:void(0)" class="close-acrodin">Close</a>
                                                 </div>
                                             </div>
-                                            <a href="javascript:void(0)" class="close-acrodin">Close</a>
-                                        </div>
+                                        @endforeach
                                     </div>
                                 @endforeach
-                            @endforeach
+                            </div>
                         </div>
                     </div>
+                    
 
                 </section>
 
