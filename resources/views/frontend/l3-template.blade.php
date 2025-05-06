@@ -2138,7 +2138,7 @@
                     $categoriesMap = [];
 
                     foreach ($l3Categories as $category) {
-                        foreach ($category->contentInfos as $contentInfo) {
+                        foreach ($category->contentInfos as $index => $contentInfo) {
                             if ($contentInfo->significance2Category) {
                                 $categoryId = $contentInfo->significance2Category->id;
 
@@ -2146,6 +2146,7 @@
                                     $categoriesMap[$categoryId] = [
                                         'category' => $contentInfo->significance2Category,
                                         'significance2s' => [],
+                                        'index' => $index+2,
                                     ];
                                 }
 
@@ -2185,8 +2186,8 @@
                                                                 <div class="col-md-3 tab3-tab1">
                                                                     <div class="tab3-tab" id="tab3_why_us">
                                                                         @foreach ($group['significance2s'] as $significance)
-                                                                            <button class="tablinks1 {{ $loop->first ? 'tab3-active' : '' }}"
-                                                                                    onclick="openCity2(event, '{{ strtolower(str_replace([' ', '&', ','], '-', $significance->name)) }}')">
+                                                                            <button class="tablinks{{ $group['index'] }} {{ $loop->first ? 'tab3-active' : '' }}"
+                                                                                    onclick="openCity{{ $group['index'] }}(event, '{{ strtolower(str_replace([' ', '&', ','], '-', $significance->name)) }}')">
                                                                                 {{ $significance->name }}
                                                                             </button>
                                                                         @endforeach
@@ -2198,7 +2199,7 @@
                                                                     <div class="tab3-content">
                                                                         @foreach ($group['significance2s'] as $significance)
                                                                             <div id="{{ strtolower(str_replace([' ', '&', ','], '-', $significance->name)) }}"
-                                                                                class="tabcontent1"
+                                                                                class="tabcontent{{ $group['index'] }}"
                                                                                 style="display: {{ $loop->first ? 'block' : 'none' }};">
                                                                                 <div class="container">
                                                                                     <div class="row rowp">

@@ -235,7 +235,7 @@
   z-index: 908;
 }
 
-.tab3-tab .tablinks1 {
+.tab3-tab .tablinks2 {
   display: block;
   background: transparent;
   border: none;
@@ -246,27 +246,27 @@
   text-align: start;
 }
 
-.tab3-tab .tablinks1.tab3-active,
-.tab3-tab .tablinks1.tab3-active:hover {
+.tab3-tab .tablinks2.tab3-active,
+.tab3-tab .tablinks2.tab3-active:hover {
   color: #fff !important;
   background: #18ba60;
   border-bottom: 0px solid #18ba60;
 }
 
-.tab3-tab .tablinks1:hover {
+.tab3-tab .tablinks2:hover {
   color: #000 !important;
   background: #dddddd;
   border-bottom: 0px solid #18ba60;
 }
 
-.tabcontent1 {
+.tabcontent2 {
   padding-top: 0px;
   height: 400px;
   overflow-y: auto;
   overscroll-behavior: contain;
 }
 
-.tabcontent1 .container {
+.tabcontent2 .container {
   width: 100%;
 }
 
