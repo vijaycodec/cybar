@@ -2184,7 +2184,7 @@
                                                             <div class="row">
                                                                 {{-- Left Side Buttons --}}
                                                                 <div class="col-md-3 tab3-tab1">
-                                                                    <div class="tab3-tab" id="tab3_why_us">
+                                                                    <div class="tab3-tab significance2-tab" id="tab3_why_us">
                                                                         @foreach ($group['significance2s'] as $significance)
                                                                             <button class="tablinks{{ $group['index'] }} {{ $loop->first ? 'tab3-active' : '' }}"
                                                                                     onclick="openCity{{ $group['index'] }}(event, '{{ strtolower(str_replace([' ', '&', ','], '-', $significance->name)) }}')">

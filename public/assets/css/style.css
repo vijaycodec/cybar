@@ -5735,7 +5735,7 @@ ul#tabs-nav100 {
     list-style: none;
     margin: 0;
     padding: 5px;
-    overflow: auto;
+    overflow: visible;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -5760,12 +5760,25 @@ ul#tabs-nav100 li {
 
 ul#tabs-nav100 li {
     background: #dae4f7 !important;
-    border: 2px solid #dae4f7;
+    border-bottom: 4px solid #dae4f7;
     display: inline-block;
-    margin: auto 30px;
+    margin: auto 1px;
     width: inherit;
     float: none;
     display: inline-block;
+}
+
+ul#tabs-nav100 li:first-of-type {
+    margin-left: -150px;
+}
+
+ul#tabs-nav100 li:last-of-type {
+    margin-right: -150px;
+}
+
+.significance2-tab {
+    width: 350px;
+    margin-left: -100px;
 }
 
 ul#tabs-nav100 li.active, ul#tabs-nav100 li:hover {
