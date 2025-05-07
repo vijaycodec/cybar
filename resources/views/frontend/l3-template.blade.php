@@ -2158,9 +2158,9 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="cn-tabs1">
+                                <div class="cn-tabs1 tabs-signi2sec">
                                     {{-- Tab Navigation --}}
-                                    <ul id="tabs-nav100" class="tabs-signi2sec">
+                                    <ul id="tabs-nav100" class="signi2-main">
                                         @foreach ($categoriesMap as $group)
                                             <li class="{{ $loop->first ? 'active' : '' }}">
                                                 <a href="#{{ strtolower(str_replace([' ', '&', ','], '-', $group['category']->name)) }}">
@@ -2178,7 +2178,7 @@
                                                 style="display: {{ $loop->first ? 'block' : 'none' }};">
                                                 <div class="container">
                                                     <div class="row rowp">
-                                                        <div class="container desktop-view why-chossetab">
+                                                        <div class="container desktop-view why-chossetab2">
                                                             <div class="row">
                                                                 {{-- Left Side Buttons --}}
                                                                 <div class="col-md-3 tab3-tab1 significance2-tab">

@@ -1193,6 +1193,10 @@ if (isMobile()) {
             scrollToElement(".faq", 100);
         });
 
+        $('.tabs-signi2sec li').click(function () {
+            scrollToElement(".signi2-main", 120);
+        });
+
         "use strict";
         var offSetTop = 100;
         var $scrollToTopButton = $('.scrollToTop');
