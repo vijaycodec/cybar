@@ -757,6 +757,16 @@ if (isMobile()) {
             scrollTop: 0
         }, 0);
     });
+    $('.hide-btn_tab4').on('click', function () {
+        $('.tabcontent2').animate({
+            scrollTop: 0
+        }, 0);
+    });
+    $('.hide-btn_tab5').on('click', function () {
+        $('.tabcontent3').animate({
+            scrollTop: 0
+        }, 0);
+    });
     $('.nav-tabs li').on('click', function () {
         $('.tab-content').animate({
             scrollTop: 0

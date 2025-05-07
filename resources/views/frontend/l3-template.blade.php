@@ -2218,7 +2218,7 @@
                                                                                                         {!! $significance->significance2_long_description !!}
                                                                                                     </div>
                                                                                                     <a href="javascript:void(0);"
-                                                                                                        class="btn-hide hide-btn_tab3">Hide
+                                                                                                        class="btn-hide hide-btn_tab{{ $group['index'] + 2}}">Hide
                                                                                                         Content ...</a>
                                                                                                 </div>
                                                                                             </div>
@@ -2233,7 +2233,7 @@
                                                                                                         {!! $significance->significance2_long_description !!}
                                                                                                     </div>
                                                                                                     <a href="javascript:void(0);"
-                                                                                                        class="btn-hide hide-btn_tab3">Hide
+                                                                                                        class="btn-hide hide-btn_tab{{ $group['index'] + 2}}">Hide
                                                                                                         Content ...</a>
                                                                                                 </div>
                                                                                             </div>
