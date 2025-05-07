@@ -1145,6 +1145,13 @@ body{
     .light-grey{
     background: #F1F2F8 !important;
     }
+    .sig2_gr1{
+        background: #FFFFFF !important;
+    }
+    .sig2_gr2{
+        padding-top: 10px;
+        background: #FFFFFF !important;
+    }
     .third-content h3{
     font-size: 26px;
     color: #444;
@@ -2106,6 +2113,9 @@ body{
     }
     .codec-page-section{
     padding: 65px 0px 30px !important;
+    }
+    .codec-page-sectionl3{
+        padding: 20px 0px 20px !important;
     }
     #course-features{    padding: 60px 0px 0px 0px !important;}
     #specialisation, #wcn{padding: 48px 0px 0px !important;}
