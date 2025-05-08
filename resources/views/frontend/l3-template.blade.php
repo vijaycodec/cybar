@@ -2323,7 +2323,7 @@
                                             @endforeach
                                         </div>
                                     </div>
-                                    <hr style="border: none; height: 3px; background-color: #222222;">
+                                    <hr style="border: none; height: 3px; background-color: #222222; margin-top: 30px;">
                                 @endforeach
                             </div>
                         </div>
