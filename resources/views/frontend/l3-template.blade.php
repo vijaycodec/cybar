@@ -2118,7 +2118,7 @@
                 </section>
 
             @elseif ($fieldKey == 'significance2s' && $contents->contains(fn($info) => $info->{$fieldKey}))
-                <section class="why-codec codec-page-sectionl3 anchor-link light-grey" id="{{ $slug }}">
+                <section class="why-codec codec-page-sectionl3 anchor-link" id="{{ $slug }}">
                     @php
                         $categoriesMap = [];
 

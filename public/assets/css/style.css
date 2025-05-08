@@ -1145,12 +1145,15 @@ body{
     .light-grey{
     background: #F1F2F8 !important;
     }
+    .light-grey2{
+        background: #F2F2F2 !important;
+    }
     .sig2_gr1{
-        background: #F1F2F8 !important;
+        background: #FFFFFF !important;
     }
     .sig2_gr2{
-        padding-top: 10px;
-        background: #F1F2F8 !important;
+        padding-top: 20px;
+        background: #FFFFFF !important;
     }
     .third-content h3{
     font-size: 26px;
@@ -1198,7 +1201,7 @@ body{
     margin: auto;
     }
     .red-title h3{letter-spacing: 2px;color: #FA492B;line-height: 1.3;font-size: 22px;/* font-weight: 700; */margin-bottom: 0px;}
-    .red-title p{ color: #333;
+    .red-title p{ color: #444444;
     font-size: 13px;
     line-height: 26px;
     }
@@ -2115,7 +2118,7 @@ body{
     padding: 65px 0px 30px !important;
     }
     .codec-page-sectionl3{
-        padding: 20px 0px 20px !important;
+        padding: 40px 0px 20px !important;
     }
     #course-features{    padding: 60px 0px 0px 0px !important;}
     #specialisation, #wcn{padding: 48px 0px 0px !important;}
