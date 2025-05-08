@@ -2670,7 +2670,7 @@
     }
     .outer-pro-mbile.acc__title {
         padding: 12px 20px;
-        font-size: 17px;
+        font-size: 18px;
         position: relative;
         border-left: 4px solid #15416e;
         color: #fff;
@@ -3765,6 +3765,15 @@
         padding: 20px 15px;
     }
     .acc__title {
+        font-size: 18px;
+    }
+    .vert-box p {
+        font-size: 18px;
+    }
+    body{
+        font-size: 18px;
+    }
+    p{
         font-size: 18px;
     }
 }
