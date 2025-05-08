@@ -1146,11 +1146,11 @@ body{
     background: #F1F2F8 !important;
     }
     .sig2_gr1{
-        background: #FFFFFF !important;
+        background: #F1F2F8 !important;
     }
     .sig2_gr2{
         padding-top: 10px;
-        background: #FFFFFF !important;
+        background: #F1F2F8 !important;
     }
     .third-content h3{
     font-size: 26px;
@@ -3538,6 +3538,12 @@ body{
     .rowp{
     padding-top: 30px;
     }
+    .tabcontent2 .rowp{
+        padding-top: 0px;
+    }
+    .tabcontent3 .rowp{
+        padding-top: 0px;
+    }
     .row20{
     padding-top: 20px;
     }
@@ -4143,8 +4149,8 @@ body{
     }
     .cf-title h3{text-align: center;font-size: 20px;margin-top: 10px;}
     .red-title p{
-    font-size: 16px;
-    padding-top: 10px;
+    font-size: 15px;
+    padding-top: 0px;
     }
     .template12-img img{
     width: 100%;

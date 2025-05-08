@@ -2118,7 +2118,7 @@
                 </section>
 
             @elseif ($fieldKey == 'significance2s' && $contents->contains(fn($info) => $info->{$fieldKey}))
-                <section class="why-codec codec-page-sectionl3 anchor-link" id="{{ $slug }}">
+                <section class="why-codec codec-page-sectionl3 anchor-link light-grey" id="{{ $slug }}">
                     @php
                         $categoriesMap = [];
 
@@ -2212,7 +2212,8 @@
                                                                                         <div class="col-md-7">
                                                                                             <div class="red-title">
                                                                                                 {!! $significance->significance2_short_description !!}
-                                                                                                <a href="javascript:void(0);"
+                                                                                                {!! $significance->significance2_long_description !!}
+                                                                                                {{-- <a href="javascript:void(0);"
                                                                                                     class="btn-show">Read
                                                                                                     More ...</a>
                                                                                                 <div class="content-hide">
@@ -2220,14 +2221,15 @@
                                                                                                 </div>
                                                                                                 <a href="javascript:void(0);"
                                                                                                     class="btn-hide hide-btn_tab{{ $group['index'] + 2}}">Hide
-                                                                                                    Content ...</a>
+                                                                                                    Content ...</a> --}}
                                                                                             </div>
                                                                                         </div>
                                                                                     @else
                                                                                         <div class="col-md-12">
                                                                                             <div class="red-title">
                                                                                                 {!! $significance->significance2_short_description !!}
-                                                                                                <a href="javascript:void(0);"
+                                                                                                {!! $significance->significance2_long_description !!}
+                                                                                                {{-- <a href="javascript:void(0);"
                                                                                                     class="btn-show">Read
                                                                                                     More ...</a>
                                                                                                 <div class="content-hide">
@@ -2235,7 +2237,7 @@
                                                                                                 </div>
                                                                                                 <a href="javascript:void(0);"
                                                                                                     class="btn-hide hide-btn_tab{{ $group['index'] + 2}}">Hide
-                                                                                                    Content ...</a>
+                                                                                                    Content ...</a> --}}
                                                                                             </div>
                                                                                         </div>
                                                                                     @endif
@@ -2321,7 +2323,7 @@
                                             @endforeach
                                         </div>
                                     </div>
-                                    <hr style="border: none; height: 3px; background-color: #333333;">
+                                    <hr style="border: none; height: 3px; background-color: #222222;">
                                 @endforeach
                             </div>
                         </div>
