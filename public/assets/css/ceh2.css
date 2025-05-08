@@ -1945,7 +1945,7 @@
     padding: 12px 20px;
     position: relative;
     text-align: left;
-    font-size: 16px;
+    font-size: 15px;
     color: #222;
 }
 .acc__title.active {
@@ -3000,7 +3000,7 @@
 .ceh-testo-body span {
     background: #15416e;
     padding: 10px 20px;
-    font-size: 14px;
+    font-size: 15px;
     text-transform: uppercase;
     border-radius: 0px;
     margin-top: 20px;

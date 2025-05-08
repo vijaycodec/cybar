@@ -246,7 +246,7 @@ body{
     overflow: hidden;
     }
     .cn-content p{
-    font-size: 16px;
+    font-size: 15px;
     text-align: left;
     margin: 0px;
     padding: 40px 11px 0px 11px;
@@ -5360,7 +5360,7 @@ a{
     text-decoration: none;
 }
 p{
-    font-size: 14px;
+    font-size: 15px;
 }
 .mobilewidth{
     width: 100%;
