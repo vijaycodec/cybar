@@ -807,6 +807,9 @@
     }
     .pro-mbile .acc__title.active i {
     }
+    .acc__card{
+        font-size: 18px;
+    }
     .pro-mbile .acc__panel {
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
         margin-top: 20px;
@@ -2469,7 +2472,7 @@
         line-height: 1.4;
     }
     .cn-title p {
-        font-size: 14px;
+        font-size: 16px;
     }
     .price-box {
         height: auto;
@@ -2483,7 +2486,7 @@
     }
     .ceh-video-ul ul li {
         padding-bottom: 10px;
-        font-size: 14px;
+        font-size: 18px;
     }
     .ceh-video {
         margin-top: 20px;
@@ -2563,7 +2566,7 @@
         font-size: 14px;
     }
     .pro-mod1 .acc__title {
-        font-size: 14px;
+        font-size: 18px;
         /* overflow: hidden; */
         /* display: -webkit-box; */
         /* -webkit-line-clamp: 1; */ /* number of lines to show */
@@ -3118,6 +3121,11 @@
     display: block;
 }
 @media screen and (max-width: 991px) {
+    .testo-popup-body p {
+        color: #222;
+        line-height: 1.7;
+        font-size: 18px;
+    }
     .ser-h {
         display: none;
     }
@@ -3143,6 +3151,7 @@
     }
     .ceh-testo-body p {
         -webkit-line-clamp: 5;
+        font-size: 18px;
     }
     .ceh-testo-body span {
         margin: 20px auto auto;
@@ -3756,7 +3765,7 @@
         padding: 20px 15px;
     }
     .acc__title {
-        font-size: 14px;
+        font-size: 18px;
     }
 }
 .cn-main-content-enclosed {
