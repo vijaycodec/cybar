@@ -1876,7 +1876,7 @@
 .pro-ul-box ul {
     padding: 0px;
     margin: 0px;
-    column-count: 2;
+    column-count: 1;
     gap: 15px;
 }
 .pro-ul-box ul li {
