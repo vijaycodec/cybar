@@ -2198,8 +2198,8 @@
 }
 .ceh-title h2:before {
     content: "";
-    width: 200px;
-    height: 2px;
+    width: 0px;
+    height: 0px;
     position: absolute;
     background: #1c68b5;
     text-align: center;
