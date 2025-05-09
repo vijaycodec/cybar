@@ -1387,18 +1387,26 @@
 .bg2:hover,
 .bg3:hover,
 .bg4:hover,
+.bg5:hover,
+.bg6:hover,
 .bg1:hover a,
 .bg2:hover a,
 .bg3:hover a,
 .bg4:hover a,
+.bg5:hover a,
+.bg6:hover a,
 .bg1.active,
 .bg2.active,
 .bg3.active,
 .bg4.active,
+.bg5.active,
+.bg6.active,
 .vertical-ceh-nav li.bg1.active a,
 .vertical-ceh-nav li.bg2.active a,
 .vertical-ceh-nav li.bg3.active a,
-.vertical-ceh-nav li.bg4.active a {
+.vertical-ceh-nav li.bg4.active a,
+.vertical-ceh-nav li.bg5.active a,
+.vertical-ceh-nav li.bg6.active a {
     background: #15416e !important;
     color: #fff !important;
 }
@@ -3216,6 +3224,12 @@
 .bg4 {
     background: #f5abab !important;
 }
+.bg5 {
+    background: #dab6fc !important; /* light lavender */
+}
+.bg6 {
+    background: #ffd6cc !important; /* soft peach */
+}
 .video-popup {
     display: none;
     position: fixed;
@@ -3255,10 +3269,14 @@
 .bg2.active,
 .bg3.active,
 .bg4.active,
+.bg5.active,
+.bg6.active,
 .vertical-ceh-nav li.bg1.active a,
 .vertical-ceh-nav li.bg2.active a,
 .vertical-ceh-nav li.bg3.active a,
-.vertical-ceh-nav li.bg4.active a {
+.vertical-ceh-nav li.bg4.active a,
+.vertical-ceh-nav li.bg5.active a,
+.vertical-ceh-nav li.bg6.active a {
     background: #15416e !important;
     color: #fff !important;
 }
@@ -3266,10 +3284,14 @@
 .bg2:hover,
 .bg3:hover,
 .bg4:hover,
+.bg5:hover,
+.bg6:hover,
 .bg1:hover a,
 .bg2:hover a,
 .bg3:hover a,
-.bg4:hover a {
+.bg4:hover a,
+.bg5:hover a,
+.bg6:hover a {
     background: #eee !important;
     color: #000 !important;
 }
@@ -3616,9 +3638,6 @@
 }
 .m-pro-faq .acc__title.active.bg4 {
     background: #eee !important;
-}
-.bg5 {
-    background: #deecfb !important;
 }
 
 .testo-popup-body::-webkit-scrollbar,
