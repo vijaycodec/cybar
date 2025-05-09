@@ -2164,7 +2164,7 @@
                                     @foreach ($categoriesMap as $group)
                                         <li class="{{ $loop->first ? 'active' : '' }}">
                                             <a
-                                                href="#{{ strtolower(str_replace([' ', '&', ','], '-', $group['category']->name)) }}">
+                                                href="#{{ strtolower(str_replace([' ', '&', ','], '-', $group['category']->name)) }}" style="font-weight: 600;">
                                                 {{ $group['category']->name }}
                                             </a>
                                         </li>
@@ -2284,12 +2284,12 @@
 
                     <div class="container mobile-view significance-space" id="sf_mob">
                         <div class="row">
-                            <div class="col-md-12 cn-title">
+                            <div class="col-md-12 cn-title sig2_grtitle">
                                 @foreach ($groupedSignificance2 as $group)
                                     <div class="sig2_gr{{ $group['index'] }}">
                                         {{-- Display the Main Category Title --}}
                                         @if (!empty($group['category']->name))
-                                            <h2 style="margin-bottom: 1rem;">{{ $group['category']->name }}</h2>
+                                            <h2 style="margin-bottom: 1.25rem;">{{ $group['category']->name }}</h2>
                                         @endif
 
                                         {{-- Accordion for Subcategories --}}

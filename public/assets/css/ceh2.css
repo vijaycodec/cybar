@@ -2471,6 +2471,10 @@
         font-size: 20px;
         line-height: 1.4;
     }
+    .sig2_grtitle h2{
+        font-size: 21px;
+        font-weight: 600;
+    }
     .cn-title p {
         font-size: 16px;
     }
