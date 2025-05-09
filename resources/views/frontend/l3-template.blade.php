@@ -512,7 +512,7 @@
 
             <!-- program info 3-->
         @elseif ($fieldKey == 'programCategory' && $contents->contains(fn($info) => $info->{$fieldKey}))
-            <section class="anchor-link sample7-line space7 ceh-pro" id="{{ $slug }}">
+            <section class="anchor-link sample7-line space7 ceh-pro light-grey" id="{{ $slug }}">
                 <!-- title  -->
                 <div class="container ">
                     <div class="row">
