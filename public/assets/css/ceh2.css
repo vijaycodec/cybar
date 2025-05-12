@@ -1909,6 +1909,12 @@
     top: 5px;
     border-radius: 100%;
 }
+.programscrolbox ul li {
+    font-size: 17px;
+}
+.programscrolbox ol li {
+    font-size: 17px;
+}
 .ceh-video-sec {
     background: #ebebed;
 }
