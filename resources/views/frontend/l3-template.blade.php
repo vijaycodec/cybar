@@ -756,8 +756,7 @@
                                                         <div class="pro-ul-box programscrolbox">
 
                                                             {!! $contentInfo->program_description !!}
-                                                            {!! $contentInfo->program_description !!}{!! $contentInfo->program_description !!}{!! $contentInfo->program_description !!}
-
+                                                            
                                                         </div>
                                                         <!--  -->
                                                     </div>
