@@ -1508,7 +1508,7 @@
                                                                     @if ($contentInfo->cyberwind_short_description)
                                                                         {!! $contentInfo->cyberwind_short_description !!}
                                                                     @endif
-                                                                    <a href="javascript:void(0);" class="btn-show">Read
+                                                                    {{-- <a href="javascript:void(0);" class="btn-show">Read
                                                                         More
                                                                         ...</a>
 
@@ -1516,7 +1516,7 @@
                                                                         {!! $contentInfo->cyberwind_description !!}
                                                                         <a href="javascript:void(0);" class="btn-hide hide-btn_tab3"
                                                                             style="display: none;">Hide Content ...</a>
-                                                                    </div>
+                                                                    </div> --}}
 
                                                                 </div>
                                                             </div>
@@ -1525,8 +1525,9 @@
                                                                 <div class="red-title">
                                                                     @if ($contentInfo->cyberwind_short_description)
                                                                         {!! $contentInfo->cyberwind_short_description !!}
+                                                                        {!! $contentInfo->cyberwind_description !!}
                                                                     @endif
-                                                                    <a href="javascript:void(0);" class="btn-show">Read
+                                                                    {{-- <a href="javascript:void(0);" class="btn-show">Read
                                                                         More
                                                                         ...</a>
 
@@ -1534,7 +1535,7 @@
                                                                         {!! $contentInfo->cyberwind_description !!}
                                                                         <a href="javascript:void(0);" class="btn-hide hide-btn_tab3"
                                                                             style="display: none;">Hide Content ...</a>
-                                                                    </div>
+                                                                    </div> --}}
 
                                                                 </div>
                                                             </div>
