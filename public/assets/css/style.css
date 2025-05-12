@@ -3541,6 +3541,9 @@ body{
     .rowp{
     padding-top: 30px;
     }
+    .rowlandscape{
+    padding-top: 0px;
+    }
     .tabcontent2 .rowp{
         padding-top: 0px;
     }

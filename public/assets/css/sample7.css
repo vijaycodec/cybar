@@ -192,26 +192,29 @@
 
 .tab3-tab .tab3-tablinks {
   display: block;
-  background: transparent;
+  background: #FFFFFF;
   border: none;
   outline: none;
   padding: 10px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 2px solid #ddd;
   width: 100%;
   text-align: start;
+}
+.tablinks_space_between{
+  margin-bottom: 10px;
 }
 
 .tab3-tab .tab3-tablinks.tab3-active,
 .tab3-tab .tab3-tablinks.tab3-active:hover {
   color: #fff !important;
   background: #18ba60;
-  border-bottom: 0px solid #18ba60;
+  border-bottom: 2px solid #18ba60;
 }
 
 .tab3-tab .tab3-tablinks:hover {
   color: #000 !important;
   background: #dddddd;
-  border-bottom: 0px solid #18ba60;
+  border-bottom: 2px solid #18ba60;
 }
 
 .tab3-content {
@@ -238,11 +241,11 @@
 
 .tab3-tab .tablinks2 {
   display: block;
-  background: transparent;
+  background: #FFFFFF;
   border: none;
   outline: none;
   padding: 10px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 2px solid #ddd;
   width: 100%;
   text-align: start;
 }
@@ -251,13 +254,13 @@
 .tab3-tab .tablinks2.tab3-active:hover {
   color: #fff !important;
   background: #18ba60;
-  border-bottom: 0px solid #18ba60;
+  border-bottom: 2px solid #18ba60;
 }
 
 .tab3-tab .tablinks2:hover {
   color: #000 !important;
   background: #dddddd;
-  border-bottom: 0px solid #18ba60;
+  border-bottom: 2px solid #18ba60;
 }
 
 .tabcontent2 {
@@ -272,7 +275,7 @@
 }
 
 .tab3-tab {
-  background: #ffffffad;
+  background: #F1F2F8;
 }
 
 .tab3-tab1 {
@@ -283,11 +286,11 @@
 
 .tab3-tab .tablinks3 {
   display: block;
-  background: transparent;
+  background: #FFFFFF;
   border: none;
   outline: none;
   padding: 10px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 2px solid #ddd;
   width: 100%;
   text-align: start;
 }
@@ -296,13 +299,13 @@
 .tab3-tab .tablinks3.tab3-active:hover {
   color: #fff !important;
   background: #18ba60;
-  border-bottom: 0px solid #18ba60;
+  border-bottom: 2px solid #18ba60;
 }
 
 .tab3-tab .tablinks3:hover {
   color: #000 !important;
   background: #dddddd;
-  border-bottom: 0px solid #18ba60;
+  border-bottom: 2px solid #18ba60;
 }
 
 .tabcontent3 {

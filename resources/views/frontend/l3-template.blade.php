@@ -720,8 +720,8 @@
                                                         <div class="col-md-8 tab-content program-content">
                                                             @foreach ($contentInfo->programCategory->programSubCategories as $subCategory)
                                                                 <div id="{{ strtolower(preg_replace('/[^a-zA-Z0-9]/', '', str_replace([' ', '&', ','], '-', $subCategory->name))) }}"
-                                                                    class="tab-pane fade {{ $loop->first ? 'in active' : '' }}">
-                                                                    <div class="vert-box">
+                                                                    class="tab-pane fade {{ $loop->first ? 'in active' : '' }} programcontentspace">
+                                                                    <div class="vert-box programvertbox">
 
                                                                         <p>{!! $subCategory->description !!}</p>
 
@@ -753,9 +753,10 @@
 
                                                         </div>
                                                         <!--  -->
-                                                        <div class="pro-ul-box">
+                                                        <div class="pro-ul-box programscrolbox">
 
                                                             {!! $contentInfo->program_description !!}
+                                                            {!! $contentInfo->program_description !!}{!! $contentInfo->program_description !!}{!! $contentInfo->program_description !!}
 
                                                         </div>
                                                         <!--  -->
@@ -1475,7 +1476,7 @@
                                                     href="#{{ strtolower(str_replace([' ', '&', ','], '-', $contentInfo->cyberwindCategory->name)) }}">{{
                                                     $contentInfo->cyberwindCategory->name }}</a>
                                             </li> --}}
-                                            <button class="tab3-tablinks"
+                                            <button class="tab3-tablinks tablinks_space_between"
                                                 onclick="openCity(event, '{{ strtolower(str_replace([' ', '&', ','], '-', $contentInfo->cyberwindCategory->name)) }}')"
                                                 id="{{ $loop->first ? 'defaultOpen' : ' ' }}">
                                                 {{ $contentInfo->cyberwindCategory->name }}</button>
@@ -1495,7 +1496,7 @@
                                             <div id="{{ strtolower(str_replace([' ', '&', ','], '-', $contentInfo->cyberwindCategory->name)) }}"
                                                 class="tab3-tabcontent">
                                                 <div class="container">
-                                                    <div class="row rowp">
+                                                    <div class="row rowp rowlandscape">
                                                         @if ($contentInfo->images)
                                                             <div class="col-md-5">
                                                                 <div class="template12-img">
