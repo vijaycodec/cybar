@@ -114,7 +114,7 @@ if (isMobile()) {
                     items: 1
                 },
                 1200: {
-                    items: 3
+                    items: 4
                 }
             },
             onInitialized: updateNavigationCount,
@@ -781,7 +781,7 @@ if (isMobile()) {
     $(function () {
         $("#owl-demo63").owlCarousel({
             loop: false,
-            margin: 10,
+            margin: 0,
             nav: true,
             dots: true,
             navigationText: ['<i class="fa fa-long-arrow-left" aria-hidden="true"></i>', '<i class="fa fa-long-arrow-right" aria-hidden="true"></i>'],
@@ -796,7 +796,7 @@ if (isMobile()) {
                     items: 1
                 },
                 1200: {
-                    items: 3
+                    items: 4
                 }
             },
             onInitialized: updateNavigationCount,
