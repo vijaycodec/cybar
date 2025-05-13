@@ -359,10 +359,15 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 cn-title">
+                            @php $breakAll = false; @endphp
                             @foreach ($l3Categories as $category)
+                                @if ($breakAll) @break @endif
+                            
                                 @foreach ($category->contentInfos as $contentInfo)
                                     @if ($contentInfo->significance_title)
                                         <h2>{!! $contentInfo->significance_title->title !!}</h2>
+                                        @php $breakAll = true; @endphp
+                                        @break
                                     @endif
                                 @endforeach
                             @endforeach
@@ -518,13 +523,20 @@
                     <div class="row">
                         <div class="col-md-12 cn-title ceh-title">
 
+                            @php $found = false; @endphp
+
                             @foreach ($l3Categories as $category)
+                                @if ($found) @break @endif
+
                                 @foreach ($category->contentInfos as $contentInfo)
                                     @if ($contentInfo->program_title)
                                         <h2>{!! $contentInfo->program_title !!}</h2>
+                                        @php $found = true; @endphp
+                                        @break
                                     @endif
                                 @endforeach
                             @endforeach
+
                         </div>
                     </div>
                 </div>
@@ -1087,13 +1099,20 @@
                         <div class="col-md-12 cn-title">
                             {{-- <h2>COURSE FEATURES</h2>
                             <p>The essential technology that matter most for business today</p> --}}
+                            @php $found = false; @endphp
+
                             @foreach ($l3Categories as $category)
+                                @if ($found) @break @endif
+
                                 @foreach ($category->contentInfos as $contentInfo)
                                     @if ($contentInfo->coursefeature_title)
                                         <h2>{!! $contentInfo->coursefeature_title->title !!}</h2>
+                                        @php $found = true; @endphp
+                                        @break
                                     @endif
                                 @endforeach
                             @endforeach
+
                         </div>
                     </div>
                 </div>
@@ -1287,11 +1306,14 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 cn-title ceh-title">
+                            @php $found = false; @endphp
                             @foreach ($l3Categories as $category)
+                                @if ($found) @break @endif
                                 @foreach ($category->contentInfos as $contentInfo)
-                                    <!-- Overview Section -->
                                     @if ($contentInfo->main_title)
                                         {!! $contentInfo->main_title !!}
+                                        @php $found = true; @endphp
+                                        @break
                                     @endif
                                 @endforeach
                             @endforeach
@@ -1351,10 +1373,14 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 cn-title ceh-title">
+                            @php $found = false; @endphp
                             @foreach ($l3Categories as $category)
+                                @if ($found) @break @endif
                                 @foreach ($category->contentInfos as $contentInfo)
                                     @if ($contentInfo->incident_title)
                                         {!! $contentInfo->incident_title !!}
+                                        @php $found = true; @endphp
+                                        @break
                                     @endif
                                 @endforeach
                             @endforeach
@@ -1410,14 +1436,20 @@
                     <div class="row">
                         <div class="col-md-12 cn-title ceh-title">
                             <!-- <h1>Industries we cater</h1> -->
+                            @php $found = false; @endphp
+
                             @foreach ($l3Categories as $category)
-                                {{-- <li class="active"><a data-toggle="tab" href="#ic">BANKING & FINANCE</a></li> --}}
+                                @if ($found) @break @endif
+                            
                                 @foreach ($category->contentInfos as $contentInfo)
                                     @if ($contentInfo->industry_title)
                                         <h1>{!! $contentInfo->industry_title->title !!}</h1>
+                                        @php $found = true; @endphp
+                                        @break
                                     @endif
                                 @endforeach
                             @endforeach
+                            
                         </div>
                     </div>
                 </div>
@@ -1481,13 +1513,20 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 cn-title">
+                            @php $found = false; @endphp
+
                             @foreach ($l3Categories as $category)
+                                @if ($found) @break @endif
+                            
                                 @foreach ($category->contentInfos as $contentInfo)
                                     @if ($contentInfo->cyberwind_title)
                                         <h2>{!! $contentInfo->cyberwind_title->title !!}</h2>
+                                        @php $found = true; @endphp
+                                        @break
                                     @endif
                                 @endforeach
                             @endforeach
+                            
                         </div>
                     </div>
                 </div>
@@ -1654,15 +1693,24 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="tsto-title">
+                                @php $found = false; @endphp
+
                                 @foreach ($l3Categories as $category)
+                                    @if ($found) @break @endif
+                                
                                     @foreach ($category->contentInfos as $contentInfo)
+                                        @if ($found) @break @endif
+                                
                                         @foreach ($contentInfo->testimonials as $index => $testimonial)
                                             @if ($testimonial->testimonial_title)
-                                                <h2><i class="fa  fa-commenting"></i>{!! $testimonial->testimonial_title !!}</h2>
+                                                <h2><i class="fa fa-commenting"></i>{!! $testimonial->testimonial_title !!}</h2>
+                                                @php $found = true; @endphp
+                                                @break
                                             @endif
                                         @endforeach
                                     @endforeach
                                 @endforeach
+                                
                             </div>
                         </div>
                     </div>
@@ -1725,17 +1773,23 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 cn-title">
+                            @php $found = false; @endphp
+
                             @foreach ($l3Categories as $category)
+                                @if ($found) @break @endif
+                            
                                 @foreach ($category->contentInfos as $contentInfo)
+                                    @if ($found) @break @endif
+                            
                                     @if ($contentInfo->blog_title)
-                                        {{-- <h2>{!! $contentInfo->blog_title->title !!}</h2> --}}
-                                        <h2
-                                            style="margin: auto; font-weight: 500; line-height: 1.2; font-size: 24px; letter-spacing: 2px; color: rgb(66, 66, 66); text-align: center; font-family: &quot;Roboto Medium&quot;; max-width: 100%; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; background-color: rgb(241, 242, 248); scroll-behavior: smooth !important;">
+                                        <h2 style="margin: auto; font-weight: 500; line-height: 1.2; font-size: 24px; letter-spacing: 2px; color: rgb(66, 66, 66); text-align: center; font-family: &quot;Roboto Medium&quot;; max-width: 100%; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; background-color: rgb(241, 242, 248); scroll-behavior: smooth !important;">
                                             {{ $contentInfo->blog_title->title }}
                                         </h2>
+                                        @php $found = true; @endphp
                                     @endif
                                 @endforeach
                             @endforeach
+                            
                         </div>
                     </div>
                 </div>
@@ -1763,7 +1817,7 @@
 
             </section>
 
-            {{-- blog section end 10 --}}
+              {{-- blog section end 10 --}}
 
             <!-- FAQ info start 11 -->
         @elseif ($fieldKey == 'FaqCategory' && $contents->contains(fn($info) => $info->{$fieldKey}))
@@ -1952,8 +2006,14 @@
                     <!--  -->
                     <div class="container desktop-view">
                         <div class="row">
+                            @php $found = false; @endphp
+
                             @foreach ($l3Categories as $category)
+                                @if ($found) @break @endif
+                            
                                 @foreach ($category->contentInfos as $info)
+                                    @if ($found) @break @endif
+                            
                                     @if ($info->l3_layout_type === 'overview2' && $info->overview2Descriptions->count())
                                         <div class="col-md-12">
                                             <div class="third-content" id="overview2">
@@ -1975,9 +2035,11 @@
                                                 <a href="#overview2" class="btn-hide" id="btn-hide1">Hide Content ...</a>
                                             </div>
                                         </div>
+                                        @php $found = true; @endphp
                                     @endif
                                 @endforeach
                             @endforeach
+                            
                         </div>
                     </div>
                     <!--  -->
@@ -2015,7 +2077,7 @@
                     </div>
 
                 </section>
-            @elseif ($fieldKey == 'overview2SubDescriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
+        @elseif ($fieldKey == 'overview2SubDescriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
                 <section class="light-grey sample7-line anchor-link space7_1" id="{{ $slug }}">
                     @foreach ($l3Categories as $category)
                         @foreach ($category->contentInfos as $contentInfo)
@@ -2084,20 +2146,30 @@
                     @endforeach
                 </section>
 
-            @elseif ($fieldKey == 'industry2_description' && $contents->contains(fn($info) => $info->{$fieldKey}))
+        @elseif ($fieldKey == 'industry2_description' && $contents->contains(fn($info) => $info->{$fieldKey}))
                 <section class="sec-wrap-cod-2" style="background: #dceff6;" id="{{ $slug }}">
                     <div class="container">
                         <div class="row">
                             <div class="col-12 text-center">
                                 <!-- Dynamic Title -->
+                                @php
+                                $foundIndustry2Title = false; // Flag to track if we have found the title
+                                @endphp
+                                
                                 @foreach ($l3Categories as $category)
                                     @foreach ($category->contentInfos as $contentInfo)
-                                        @if (!empty($contentInfo->industry2title))
+                                        @if (!empty($contentInfo->industry2title) && !$foundIndustry2Title)
                                             <h3 class="temp-head">{!! $contentInfo->industry2title->title !!}</h3>
-                                            @break <!-- We only need one title -->
+                                            @php
+                                                $foundIndustry2Title = true; // Set the flag to true once the title is found
+                                            @endphp
                                         @endif
                                     @endforeach
+                                    @if ($foundIndustry2Title)
+                                        @break <!-- Break the outer loop if the title was found -->
+                                    @endif
                                 @endforeach
+                            
                             </div>
                         </div>
 
@@ -2124,7 +2196,7 @@
                         @endforeach
                     </div>
                 </section>
-            @elseif ($fieldKey == 'overview15s' && $contents->contains(fn($info) => $info->{$fieldKey}))
+        @elseif ($fieldKey == 'overview15s' && $contents->contains(fn($info) => $info->{$fieldKey}))
                 <section class="sec-wrap-cod-2"
                     style="background-image:url('assets/images/image-bg-top.jpg'); background-repeat: repeat;" id="{{ $slug }}">
                     <div class="container">
@@ -2149,7 +2221,7 @@
                     </div>
                 </section>
 
-            @elseif ($fieldKey == 'significance2s' && $contents->contains(fn($info) => $info->{$fieldKey}))
+        @elseif ($fieldKey == 'significance2s' && $contents->contains(fn($info) => $info->{$fieldKey}))
                 <section class="why-codec codec-page-sectionl3 anchor-link" id="{{ $slug }}">
                     @php
                         $categoriesMap = [];
@@ -2178,15 +2250,29 @@
                     <div class="container desktop-view">
                         <div class="row">
                             <div class="col-md-12 cn-title">
+                                @php
+                                $foundSignificance = false; // Flag to track if significance title is found
+                                @endphp
+                                
                                 @foreach ($l3Categories as $category)
                                     @foreach ($category->contentInfos as $info)
                                         @foreach ($info->significance2s as $significance)
-                                            @if ($significance->significance2_title)
+                                            @if ($significance->significance2_title && !$foundSignificance)
                                                 {!! $significance->significance2_title !!}
+                                                @php
+                                                    $foundSignificance = true; // Set the flag to true once a significance title is found
+                                                @endphp
                                             @endif
                                         @endforeach
+                                        @if ($foundSignificance)
+                                            @break <!-- Break inner loop if title is found -->
+                                        @endif
                                     @endforeach
+                                    @if ($foundSignificance)
+                                        @break <!-- Break outer loop if title is found -->
+                                    @endif
                                 @endforeach
+                            
                             </div>
                         </div>
                         <div class="row">
@@ -2273,7 +2359,7 @@
                                                                                             </div>
                                                                                         </div>
                                                                                     @endif
-          
+
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -2364,19 +2450,30 @@
 
                 </section>
 
-            @elseif ($fieldKey == 'overview16_short_descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
+        @elseif ($fieldKey == 'overview16_short_descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
                 <section class="empower-industry-bg codec-page-section anchor-link"
                     style="padding-bottom: 20px !important; padding-top: 40px !important;" id="{{ $slug }}">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 cn-title">
+                                @php
+                                $foundOverview16 = false; // Flag to track if overview16_title is found
+                                @endphp
+                                
                                 @foreach ($l3Categories as $category)
                                     @foreach ($category->contentInfos as $contentInfo)
-                                        @if (!empty($contentInfo->overview16_title))
+                                        @if (!$foundOverview16 && !empty($contentInfo->overview16_title))
                                             <h2>{!! $contentInfo->overview16_title !!}</h2>
+                                            @php
+                                                $foundOverview16 = true; // Set the flag to true once overview16_title is found
+                                            @endphp
                                         @endif
                                     @endforeach
+                                    @if ($foundOverview16)
+                                        @break <!-- Break outer loop if overview16_title is found -->
+                                    @endif
                                 @endforeach
+                            
                             </div>
                         </div>
                     </div>
@@ -2437,7 +2534,7 @@
                         @endforeach
                     @endforeach
                 </section>
-            @elseif ($fieldKey == 'overview17_descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
+        @elseif ($fieldKey == 'overview17_descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
                 <section class="light-grey sample7-line anchor-link space7_1" id="{{ $slug }}">
                     <div class="container">
                         <div class="row">
