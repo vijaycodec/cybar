@@ -2199,7 +2199,7 @@
     padding: 0px !important;
 }
 .ceh-title {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 .ceh-title p {
     font-size: 16px;
@@ -2207,13 +2207,13 @@
     padding-bottom: 0;
 }
 .ceh-title h2 {
-    font-size: 34px;
+    font-size: 26px;
     color: #222;
     position: relative;
     line-height: 36px;
     margin-bottom: 6px;
     max-width: none;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
 }
 .ceh-title h2:before {
     content: "";
@@ -2652,7 +2652,7 @@
         line-height: 40px !important;
     }
     .brochure-box p {
-        font-size: 14px;
+        font-size: 18px;
         line-height: 1.6;
         margin-bottom: 18px;
     }
