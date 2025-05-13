@@ -769,34 +769,48 @@
                                                 <div class="container">
                                                     <div class="pro-ul-box">
                                                         <div class="row">
-                                                            <!--  -->
-                                                            <div class="col-md-8">
-                                                                <!--  -->
-                                                                <div class="brochure-box">
-                                                                    {!! $contentInfo->program_description !!}
+                                                             @if ($contentInfo->images)
+                                                              <div class="col-md-8">
+                                                                    <div class="brochure-box">
+                                                                        {!! $contentInfo->program_description !!}
 
-                                                                    @if (!empty($contentInfo->brochure_pdf) && $contentInfo->brochure_pdf !== null)
-                                                                        <a href="{{ asset('storage/uploads/frontend/l3_template/program/' . $contentInfo->brochure_pdf) }}"
-                                                                            download>Download Brochure</a>
-                                                                    @else
-                                                                        <a href="javascript:void(0);"
-                                                                            onclick="alert('Brochure not available')">Download
-                                                                            Brochure</a>
-                                                                    @endif
+                                                                        @if (!empty($contentInfo->brochure_pdf) && $contentInfo->brochure_pdf !== null)
+                                                                            <a href="{{ asset('storage/uploads/frontend/l3_template/program/' . $contentInfo->brochure_pdf) }}"
+                                                                                download>Download Brochure</a>
+                                                                        {{-- @else
+                                                                            <a href="javascript:void(0);"
+                                                                                onclick="alert('Brochure not available')">Download
+                                                                                Brochure</a> --}}
+                                                                        @endif
+                                                                    </div>
+                                                                    <!--  -->
                                                                 </div>
-                                                                <!--  -->
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                                <div class="brochure-img">
-                                                                    @if ($contentInfo->images)
-                                                                        <img
-                                                                            src="{{ asset('storage/uploads/frontend/l3_template/program/' . $contentInfo->images) }}">
-                                                                    @else
-                                                                        <img
-                                                                            src="https://www.eccouncil.org/wp-content/uploads/2023/01/CEH-cover-broucher-scaled.jpg.webp">
-                                                                    @endif
+                                                                <div class="col-md-4">
+                                                                    <div class="brochure-img">
+                                                                        @if ($contentInfo->images)
+                                                                            <img
+                                                                                src="{{ asset('storage/uploads/frontend/l3_template/program/' . $contentInfo->images) }}">
+                                                                        @endif
+                                                                    </div>
                                                                 </div>
-                                                            </div>
+                                                               
+                                                            @else
+                                                                <div class="col-md-12">
+                                                                    <div class="brochure-box">
+                                                                        {!! $contentInfo->program_description !!}
+
+                                                                        @if (!empty($contentInfo->brochure_pdf) && $contentInfo->brochure_pdf !== null)
+                                                                            <a href="{{ asset('storage/uploads/frontend/l3_template/program/' . $contentInfo->brochure_pdf) }}"
+                                                                                download>Download Brochure</a>
+                                                                            {{-- @else
+                                                                                <a href="javascript:void(0);"
+                                                                                    onclick="alert('Brochure not available')">Download
+                                                                                    Brochure</a> --}}
+                                                                        @endif
+                                                                    </div>
+                                                                    <!--  -->
+                                                                </div>
+                                                            @endif
                                                             <!--  -->
                                                         </div>
                                                         <!--  -->
@@ -1003,16 +1017,17 @@
                                                 <div class="container">
                                                     <div class="pro-ul-box">
                                                         <div class="row">
+                                                        @if ($contentInfo->images)
                                                             <div class="col-md-8">
                                                                 <div class="brochure-box">
                                                                     {!! $contentInfo->program_description !!}
                                                                     @if (!empty($contentInfo->brochure_pdf) && $contentInfo->brochure_pdf !== null)
                                                                         <a href="{{ asset('storage/uploads/frontend/l3_template/program/' . $contentInfo->brochure_pdf) }}"
                                                                             download>Download Brochure</a>
-                                                                    @else
+                                                                    {{-- @else
                                                                         <a href="javascript:void(0);"
                                                                             onclick="alert('Brochure not available')">Download
-                                                                            Brochure</a>
+                                                                            Brochure</a> --}}
                                                                     @endif
                                                                 </div>
                                                             </div>
@@ -1021,12 +1036,28 @@
                                                                     @if ($contentInfo->images)
                                                                         <img src="{{ asset('storage/uploads/frontend/l3_template/program/' . $contentInfo->images) }}"
                                                                             alt="Brochure Image">
-                                                                    @else
+                                                                    {{-- @else
                                                                         <img src="https://www.eccouncil.org/wp-content/uploads/2023/01/CEH-cover-broucher-scaled.jpg.webp"
-                                                                            alt="Default Brochure Image">
+                                                                            alt="Default Brochure Image"> --}}
                                                                     @endif
                                                                 </div>
                                                             </div>
+                                                        @else
+                                                            <div class="col-md-12">
+                                                                <div class="brochure-box">
+                                                                    {!! $contentInfo->program_description !!}
+                                                                    @if (!empty($contentInfo->brochure_pdf) && $contentInfo->brochure_pdf !== null)
+                                                                        <a href="{{ asset('storage/uploads/frontend/l3_template/program/' . $contentInfo->brochure_pdf) }}"
+                                                                            download>Download Brochure</a>
+                                                                    {{-- @else
+                                                                        <a href="javascript:void(0);"
+                                                                            onclick="alert('Brochure not available')">Download
+                                                                            Brochure</a> --}}
+                                                                    @endif
+                                                                </div>
+                                                            </div>
+                                                        @endif
+
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1508,7 +1539,7 @@
                                                                     @if ($contentInfo->cyberwind_short_description)
                                                                         {!! $contentInfo->cyberwind_short_description !!}
                                                                     @endif
-                                                                    <a href="javascript:void(0);" class="btn-show">Read
+                                                                    {{-- <a href="javascript:void(0);" class="btn-show">Read
                                                                         More
                                                                         ...</a>
 
@@ -1516,7 +1547,7 @@
                                                                         {!! $contentInfo->cyberwind_description !!}
                                                                         <a href="javascript:void(0);" class="btn-hide hide-btn_tab3"
                                                                             style="display: none;">Hide Content ...</a>
-                                                                    </div>
+                                                                    </div> --}}
 
                                                                 </div>
                                                             </div>
@@ -1525,8 +1556,9 @@
                                                                 <div class="red-title">
                                                                     @if ($contentInfo->cyberwind_short_description)
                                                                         {!! $contentInfo->cyberwind_short_description !!}
+                                                                        {!! $contentInfo->cyberwind_description !!}
                                                                     @endif
-                                                                    <a href="javascript:void(0);" class="btn-show">Read
+                                                                    {{-- <a href="javascript:void(0);" class="btn-show">Read
                                                                         More
                                                                         ...</a>
 
@@ -1534,7 +1566,7 @@
                                                                         {!! $contentInfo->cyberwind_description !!}
                                                                         <a href="javascript:void(0);" class="btn-hide hide-btn_tab3"
                                                                             style="display: none;">Hide Content ...</a>
-                                                                    </div>
+                                                                    </div> --}}
 
                                                                 </div>
                                                             </div>

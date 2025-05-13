@@ -1909,6 +1909,12 @@
     top: 5px;
     border-radius: 100%;
 }
+.programscrolbox ul li {
+    font-size: 17px;
+}
+.programscrolbox ol li {
+    font-size: 17px;
+}
 .ceh-video-sec {
     background: #ebebed;
 }
@@ -2039,7 +2045,8 @@
 .price-content {
     padding: 0px 20px 20px;
     height: 100%;
-    max-height: 460px;
+    max-height: 720px;
+    min-height: 720px;
 }
 .price-content ul {
     padding: 0px;
@@ -2647,7 +2654,7 @@
     .brochure-box p {
         font-size: 14px;
         line-height: 1.6;
-        margin-bottom: 14px;
+        margin-bottom: 18px;
     }
     .brochure-box {
         padding-right: 0px;
@@ -3810,6 +3817,10 @@
     }
     p{
         font-size: 18px;
+    }
+    .price-content {
+        max-height: 600px;
+        min-height: 600px;
     }
 }
 .cn-main-content-enclosed {
