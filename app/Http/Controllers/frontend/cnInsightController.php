@@ -17,7 +17,9 @@ class cnInsightController extends Controller
         $page_name = 'CNinsight';
 
         // Fetch latest blogs
-        $TrendingBlogs = MenuBlog::with('category')->latest()->take(6)->get();
+        // $TrendingBlogs = MenuBlog::with('category')->latest()->take(6)->get();
+        $TrendingBlogs = MenuBlog::with('category')->orderBy('created_at', 'asc')->take(6)->get();
+
 
         // Fetch newsletters
         $NewsLetters = Category::with('newsletters')

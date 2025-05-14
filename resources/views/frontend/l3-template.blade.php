@@ -1782,7 +1782,7 @@
                                     @if ($found) @break @endif
                             
                                     @if ($contentInfo->blog_title)
-                                        <h2 style="margin: auto; font-weight: 500; line-height: 1.2; font-size: 24px; letter-spacing: 2px; color: rgb(66, 66, 66); text-align: center; font-family: &quot;Roboto Medium&quot;; max-width: 100%; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; background-color: rgb(241, 242, 248); scroll-behavior: smooth !important;">
+                                        <h2 style="margin: auto; font-weight: 500; line-height: 1.2; font-size: 24px; letter-spacing: 2px; color: rgb(66, 66, 66); text-align: center; font-family: &quot;Roboto &quot;; max-width: 100%; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; background-color: rgb(241, 242, 248); scroll-behavior: smooth !important;">
                                             {{ $contentInfo->blog_title->title }}
                                         </h2>
                                         @php $found = true; @endphp
