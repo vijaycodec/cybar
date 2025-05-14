@@ -73,7 +73,7 @@
                     
                     <div class="form-group">
                         <label><strong>Description :</strong></label>
-                        <textarea class="summernote" name="description">{{ old('description') }}</textarea>
+                        <textarea class="ckeditor" name="description">{{ old('description') }}</textarea> 
                     </div>
 
                     <div class="bot">
@@ -87,6 +87,8 @@
 @endsection
 
 @push('scripts')
+<!-- Add this to the head or before the closing </body> tag -->
+
     <!-- jQuery script to generate slug on change -->
     <script>
         $(document).ready(function() {

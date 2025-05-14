@@ -230,6 +230,7 @@ class l3_contentController extends Controller
 
             case 'blog':
                 $rules['blog_category_type'] = 'required|integer';
+                $rules['blog_link'] = 'nullable|string';
                 $rules['blog_description'] = 'required|string';
                 break;
 
@@ -346,6 +347,7 @@ class l3_contentController extends Controller
                 break;
             case 'blog':
                 $rules['blog_category_type'] = 'required|integer';
+                $rules['blog_link'] = 'nullable|string';
                 $rules['blog_description'] = 'required|string';
                 break;
             case 'incidents':

@@ -552,6 +552,12 @@
                         <input type="color" name="style_class" id="colorPicker" class="color-picker-input"
                             value="#f40a0a">
                     </div>
+
+                    <div class="l3-form form-group blog_link">
+                        <div class="body-title">Blog Link : <span class="tf-color-1">*</span></div>
+                        <input type="text" name="blog_link" value="{{ old('blog_link') }}"> </input>
+                    </div>
+
                     <div class="l3-form form-group blog_title">
                         <div class="body-title">Blog Title : <span class="tf-color-1">*</span></div>
                         <input type="text" name="blog_description" {{ old('blog_description') }}></input>
@@ -780,6 +786,7 @@
                     $('#blog_form').show();
                     $('.blog_title').show();
                     $('#style_form').show();
+                    $('.blog_link').show();
                     $('.blog_main_title').show();
                     $('#l3_layout_type').val('blog'); // Set hidden input to 'blog'
                 } else if (selectedL3Category === "testimonials") {
