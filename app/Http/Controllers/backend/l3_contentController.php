@@ -210,7 +210,7 @@ class l3_contentController extends Controller
                 break;
 
             case 'cyberwind':
-                $rules['cyberwind_description'] = 'required|string';
+                $rules['cyberwind_description'] = 'nullable|string';
                 $rules['cyberwind_type'] = 'required|integer';
                 break;
 
@@ -328,7 +328,7 @@ class l3_contentController extends Controller
                 $rules['coursefeature_type'] = 'required|integer';
                 break;
             case 'cyberwind':
-                $rules['cyberwind_description'] = 'required|string';
+                $rules['cyberwind_description'] = 'nullable|string';
                 $rules['cyberwind_type'] = 'required|integer';
                 break;
             case 'industries':

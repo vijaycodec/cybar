@@ -114,7 +114,7 @@ if (isMobile()) {
                     items: 1
                 },
                 1200: {
-                    items: 3
+                    items: 4
                 }
             },
             onInitialized: updateNavigationCount,
@@ -757,6 +757,16 @@ if (isMobile()) {
             scrollTop: 0
         }, 0);
     });
+    $('.hide-btn_tab4').on('click', function () {
+        $('.tabcontent2').animate({
+            scrollTop: 0
+        }, 0);
+    });
+    $('.hide-btn_tab5').on('click', function () {
+        $('.tabcontent3').animate({
+            scrollTop: 0
+        }, 0);
+    });
     $('.nav-tabs li').on('click', function () {
         $('.tab-content').animate({
             scrollTop: 0
@@ -771,7 +781,7 @@ if (isMobile()) {
     $(function () {
         $("#owl-demo63").owlCarousel({
             loop: false,
-            margin: 10,
+            margin: 0,
             nav: true,
             dots: true,
             navigationText: ['<i class="fa fa-long-arrow-left" aria-hidden="true"></i>', '<i class="fa fa-long-arrow-right" aria-hidden="true"></i>'],
@@ -786,7 +796,7 @@ if (isMobile()) {
                     items: 1
                 },
                 1200: {
-                    items: 3
+                    items: 4
                 }
             },
             onInitialized: updateNavigationCount,
@@ -1191,6 +1201,10 @@ if (isMobile()) {
 
         $('.program-tab2 li a').click(function () {
             scrollToElement(".faq", 100);
+        });
+
+        $('.tabs-signi2sec li').click(function () {
+            scrollToElement(".signi2-main", 120);
         });
 
         "use strict";

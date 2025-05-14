@@ -232,7 +232,8 @@ class L3ContentRepository implements L3ContentRepositoryInterface
                     }
 
                     $programSubCategory->save();  // Save data in `ProgramSubCategory`
-                } else {
+                } 
+                else {
                     // If `program_subcategory` does NOT exist, modify `l3ContentInfo`
                     if ($request->program_description) {
                         $l3ContentInfo->program_description = $request->program_description;
@@ -974,54 +975,50 @@ class L3ContentRepository implements L3ContentRepositoryInterface
 
         //data update in program table
         if ($request->l3_layout_type == 'program') {
-            $shouldSave = false; // Flag to track if we need to save updates
-
+            $shouldSave = false; // Flag to track if l3ContentInfo needs to be saved
+        
+            // STEP 1: Update l3ContentInfo base fields
             if ($request->filled('program_category_id')) {
                 $l3ContentInfo->program_category_id = $request->program_category_id;
                 $l3ContentInfo->l3_layout_program = $request->l3_layout_program;
                 $shouldSave = true;
             }
+        
             if ($request->filled('program_title')) {
                 $l3ContentInfo->program_title = $request->program_title;
                 $shouldSave = true;
             }
+        
             if ($request->filled('program_sub_title')) {
                 $l3ContentInfo->program_sub_title = $request->program_sub_title;
                 $shouldSave = true;
             }
+        
             if ($request->hasFile('brochure_pdf')) {
-                // Validate PDF
                 $l3ContentInfo->brochure_pdf = $this->uploadPDF($request, 'program');
                 $shouldSave = true;
             }
-
-            //  Save `l3ContentInfo` if any field was updated
+        
+            // STEP 2: Save l3ContentInfo initially if required
             if ($shouldSave) {
                 $l3ContentInfo->save();
             }
-
-            //  Handle `program_subcategory` creation or update
-            if ($request->program_subcategory) {
-                // Fetch the existing record
+        
+            // STEP 3: Handle ProgramSubCategory logic
+            if ($request->filled('program_subcategory')) {
                 $programSubCategory = ProgramSubCategory::where('l3_content_info_id', $l3ContentInfo->id)->first();
-
+        
                 if ($programSubCategory) {
-                    // Debug Before Updating
-                    // dd($programSubCategory); // Check if we get the record correctly
-
-                    // Perform the update
+                    // Update existing subcategory
                     $programSubCategory->update([
                         'program_category_id' => $request->program_category_id,
-                        'l3_content_info_id'  => $l3ContentInfo->id, // Not necessary if already correct
-                        'sub_category_id' => $request->sub_category_id,
-                        'page_id' => $request->page_category_id,
-                        'name' => $request->program_subcategory,
-                        'description' => $request->program_description,
+                        'sub_category_id'     => $request->sub_category_id,
+                        'page_id'             => $request->page_category_id,
+                        'name'                => $request->program_subcategory,
+                        'description'         => $request->program_description,
                     ]);
-
-                    // dd("Updated successfully", $programSubCategory); //  Debug after updating
-
-                    //  Only update the image if a new one is uploaded
+        
+                    // Update image if new one is uploaded
                     if ($request->hasFile('image')) {
                         if ($programSubCategory->image) {
                             $this->deleteImage($programSubCategory->image, 'program');
@@ -1031,30 +1028,46 @@ class L3ContentRepository implements L3ContentRepositoryInterface
                         ]);
                     }
                 } else {
-                    //  Update `program_description` only if it's provided
-                    if ($request->filled('program_description')) {
-                        $l3ContentInfo->program_description = $request->program_description;
-                        $shouldSave = true;
-                    }
-
-                    //  Only update the image if a new one is uploaded
+                    // No existing subcategory, create a new one
+                    $programSubCategory = new ProgramSubCategory();
+                    $programSubCategory->l3_content_info_id  = $l3ContentInfo->id;
+                    $programSubCategory->program_category_id = $request->program_category_id;
+                    $programSubCategory->sub_category_id     = $request->sub_category_id;
+                    $programSubCategory->page_id             = $request->page_category_id;
+                    $programSubCategory->name                = $request->program_subcategory;
+                    $programSubCategory->description         = $request->program_description;
+        
                     if ($request->hasFile('image')) {
-                        if ($l3ContentInfo->images) {
-                            $this->deleteImage($l3ContentInfo->images, 'program');
-                        }
-                        $l3ContentInfo->images = $this->uploadImage($request, 'program');
-                        $shouldSave = true;
+                        $programSubCategory->image = $this->uploadImage($request, 'program');
                     }
-
-                    //  Save `l3ContentInfo` again if necessary
-                    if ($shouldSave) {
-                        $l3ContentInfo->save();
+        
+                    $programSubCategory->save();
+                }
+            } else {
+                // STEP 4: No subcategory provided, apply content directly to l3ContentInfo
+                $shouldSave = false;
+        
+                if ($request->filled('program_description')) {
+                    $l3ContentInfo->program_description = $request->program_description;
+                    $shouldSave = true;
+                }
+        
+                if ($request->hasFile('image')) {
+                    if ($l3ContentInfo->images) {
+                        $this->deleteImage($l3ContentInfo->images, 'program');
                     }
+                    $l3ContentInfo->images = $this->uploadImage($request, 'program');
+                    $shouldSave = true;
+                }
+        
+                if ($shouldSave) {
+                    $l3ContentInfo->save();
                 }
             }
-
+        
             return true;
         }
+        
     }
 
 

@@ -359,10 +359,15 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 cn-title">
+                            @php $breakAll = false; @endphp
                             @foreach ($l3Categories as $category)
+                                @if ($breakAll) @break @endif
+                            
                                 @foreach ($category->contentInfos as $contentInfo)
                                     @if ($contentInfo->significance_title)
                                         <h2>{!! $contentInfo->significance_title->title !!}</h2>
+                                        @php $breakAll = true; @endphp
+                                        @break
                                     @endif
                                 @endforeach
                             @endforeach
@@ -512,19 +517,26 @@
 
             <!-- program info 3-->
         @elseif ($fieldKey == 'programCategory' && $contents->contains(fn($info) => $info->{$fieldKey}))
-            <section class="anchor-link sample7-line space7 ceh-pro" id="{{ $slug }}">
+            <section class="anchor-link sample7-line space7 ceh-pro light-grey" id="{{ $slug }}">
                 <!-- title  -->
                 <div class="container ">
                     <div class="row">
                         <div class="col-md-12 cn-title ceh-title">
 
+                            @php $found = false; @endphp
+
                             @foreach ($l3Categories as $category)
+                                @if ($found) @break @endif
+
                                 @foreach ($category->contentInfos as $contentInfo)
                                     @if ($contentInfo->program_title)
                                         <h2>{!! $contentInfo->program_title !!}</h2>
+                                        @php $found = true; @endphp
+                                        @break
                                     @endif
                                 @endforeach
                             @endforeach
+
                         </div>
                     </div>
                 </div>
@@ -720,8 +732,8 @@
                                                         <div class="col-md-8 tab-content program-content">
                                                             @foreach ($contentInfo->programCategory->programSubCategories as $subCategory)
                                                                 <div id="{{ strtolower(preg_replace('/[^a-zA-Z0-9]/', '', str_replace([' ', '&', ','], '-', $subCategory->name))) }}"
-                                                                    class="tab-pane fade {{ $loop->first ? 'in active' : '' }}">
-                                                                    <div class="vert-box">
+                                                                    class="tab-pane fade {{ $loop->first ? 'in active' : '' }} programcontentspace">
+                                                                    <div class="vert-box programvertbox">
 
                                                                         <p>{!! $subCategory->description !!}</p>
 
@@ -753,10 +765,10 @@
 
                                                         </div>
                                                         <!--  -->
-                                                        <div class="pro-ul-box">
+                                                        <div class="pro-ul-box programscrolbox">
 
                                                             {!! $contentInfo->program_description !!}
-
+                                                            
                                                         </div>
                                                         <!--  -->
                                                     </div>
@@ -769,34 +781,48 @@
                                                 <div class="container">
                                                     <div class="pro-ul-box">
                                                         <div class="row">
-                                                            <!--  -->
-                                                            <div class="col-md-8">
-                                                                <!--  -->
-                                                                <div class="brochure-box">
-                                                                    {!! $contentInfo->program_description !!}
+                                                             @if ($contentInfo->images)
+                                                              <div class="col-md-8">
+                                                                    <div class="brochure-box">
+                                                                        {!! $contentInfo->program_description !!}
 
-                                                                    @if (!empty($contentInfo->brochure_pdf) && $contentInfo->brochure_pdf !== null)
-                                                                        <a href="{{ asset('storage/uploads/frontend/l3_template/program/' . $contentInfo->brochure_pdf) }}"
-                                                                            download>Download Brochure</a>
-                                                                    @else
-                                                                        <a href="javascript:void(0);"
-                                                                            onclick="alert('Brochure not available')">Download
-                                                                            Brochure</a>
-                                                                    @endif
+                                                                        @if (!empty($contentInfo->brochure_pdf) && $contentInfo->brochure_pdf !== null)
+                                                                            <a href="{{ asset('storage/uploads/frontend/l3_template/program/' . $contentInfo->brochure_pdf) }}"
+                                                                                download>Download Brochure</a>
+                                                                        {{-- @else
+                                                                            <a href="javascript:void(0);"
+                                                                                onclick="alert('Brochure not available')">Download
+                                                                                Brochure</a> --}}
+                                                                        @endif
+                                                                    </div>
+                                                                    <!--  -->
                                                                 </div>
-                                                                <!--  -->
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                                <div class="brochure-img">
-                                                                    @if ($contentInfo->images)
-                                                                        <img
-                                                                            src="{{ asset('storage/uploads/frontend/l3_template/program/' . $contentInfo->images) }}">
-                                                                    @else
-                                                                        <img
-                                                                            src="https://www.eccouncil.org/wp-content/uploads/2023/01/CEH-cover-broucher-scaled.jpg.webp">
-                                                                    @endif
+                                                                <div class="col-md-4">
+                                                                    <div class="brochure-img">
+                                                                        @if ($contentInfo->images)
+                                                                            <img
+                                                                                src="{{ asset('storage/uploads/frontend/l3_template/program/' . $contentInfo->images) }}">
+                                                                        @endif
+                                                                    </div>
                                                                 </div>
-                                                            </div>
+                                                               
+                                                            @else
+                                                                <div class="col-md-12">
+                                                                    <div class="brochure-box">
+                                                                        {!! $contentInfo->program_description !!}
+
+                                                                        @if (!empty($contentInfo->brochure_pdf) && $contentInfo->brochure_pdf !== null)
+                                                                            <a href="{{ asset('storage/uploads/frontend/l3_template/program/' . $contentInfo->brochure_pdf) }}"
+                                                                                download>Download Brochure</a>
+                                                                            {{-- @else
+                                                                                <a href="javascript:void(0);"
+                                                                                    onclick="alert('Brochure not available')">Download
+                                                                                    Brochure</a> --}}
+                                                                        @endif
+                                                                    </div>
+                                                                    <!--  -->
+                                                                </div>
+                                                            @endif
                                                             <!--  -->
                                                         </div>
                                                         <!--  -->
@@ -1003,16 +1029,17 @@
                                                 <div class="container">
                                                     <div class="pro-ul-box">
                                                         <div class="row">
+                                                        @if ($contentInfo->images)
                                                             <div class="col-md-8">
                                                                 <div class="brochure-box">
                                                                     {!! $contentInfo->program_description !!}
                                                                     @if (!empty($contentInfo->brochure_pdf) && $contentInfo->brochure_pdf !== null)
                                                                         <a href="{{ asset('storage/uploads/frontend/l3_template/program/' . $contentInfo->brochure_pdf) }}"
                                                                             download>Download Brochure</a>
-                                                                    @else
+                                                                    {{-- @else
                                                                         <a href="javascript:void(0);"
                                                                             onclick="alert('Brochure not available')">Download
-                                                                            Brochure</a>
+                                                                            Brochure</a> --}}
                                                                     @endif
                                                                 </div>
                                                             </div>
@@ -1021,12 +1048,28 @@
                                                                     @if ($contentInfo->images)
                                                                         <img src="{{ asset('storage/uploads/frontend/l3_template/program/' . $contentInfo->images) }}"
                                                                             alt="Brochure Image">
-                                                                    @else
+                                                                    {{-- @else
                                                                         <img src="https://www.eccouncil.org/wp-content/uploads/2023/01/CEH-cover-broucher-scaled.jpg.webp"
-                                                                            alt="Default Brochure Image">
+                                                                            alt="Default Brochure Image"> --}}
                                                                     @endif
                                                                 </div>
                                                             </div>
+                                                        @else
+                                                            <div class="col-md-12">
+                                                                <div class="brochure-box">
+                                                                    {!! $contentInfo->program_description !!}
+                                                                    @if (!empty($contentInfo->brochure_pdf) && $contentInfo->brochure_pdf !== null)
+                                                                        <a href="{{ asset('storage/uploads/frontend/l3_template/program/' . $contentInfo->brochure_pdf) }}"
+                                                                            download>Download Brochure</a>
+                                                                    {{-- @else
+                                                                        <a href="javascript:void(0);"
+                                                                            onclick="alert('Brochure not available')">Download
+                                                                            Brochure</a> --}}
+                                                                    @endif
+                                                                </div>
+                                                            </div>
+                                                        @endif
+
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1056,13 +1099,20 @@
                         <div class="col-md-12 cn-title">
                             {{-- <h2>COURSE FEATURES</h2>
                             <p>The essential technology that matter most for business today</p> --}}
+                            @php $found = false; @endphp
+
                             @foreach ($l3Categories as $category)
+                                @if ($found) @break @endif
+
                                 @foreach ($category->contentInfos as $contentInfo)
                                     @if ($contentInfo->coursefeature_title)
                                         <h2>{!! $contentInfo->coursefeature_title->title !!}</h2>
+                                        @php $found = true; @endphp
+                                        @break
                                     @endif
                                 @endforeach
                             @endforeach
+
                         </div>
                     </div>
                 </div>
@@ -1256,11 +1306,14 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 cn-title ceh-title">
+                            @php $found = false; @endphp
                             @foreach ($l3Categories as $category)
+                                @if ($found) @break @endif
                                 @foreach ($category->contentInfos as $contentInfo)
-                                    <!-- Overview Section -->
                                     @if ($contentInfo->main_title)
                                         {!! $contentInfo->main_title !!}
+                                        @php $found = true; @endphp
+                                        @break
                                     @endif
                                 @endforeach
                             @endforeach
@@ -1320,10 +1373,14 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 cn-title ceh-title">
+                            @php $found = false; @endphp
                             @foreach ($l3Categories as $category)
+                                @if ($found) @break @endif
                                 @foreach ($category->contentInfos as $contentInfo)
                                     @if ($contentInfo->incident_title)
                                         {!! $contentInfo->incident_title !!}
+                                        @php $found = true; @endphp
+                                        @break
                                     @endif
                                 @endforeach
                             @endforeach
@@ -1379,14 +1436,20 @@
                     <div class="row">
                         <div class="col-md-12 cn-title ceh-title">
                             <!-- <h1>Industries we cater</h1> -->
+                            @php $found = false; @endphp
+
                             @foreach ($l3Categories as $category)
-                                {{-- <li class="active"><a data-toggle="tab" href="#ic">BANKING & FINANCE</a></li> --}}
+                                @if ($found) @break @endif
+                            
                                 @foreach ($category->contentInfos as $contentInfo)
                                     @if ($contentInfo->industry_title)
-                                        <h1>{!! $contentInfo->industry_title->title !!}</h1>
+                                        {!! $contentInfo->industry_title->title !!}
+                                        @php $found = true; @endphp
+                                        @break
                                     @endif
                                 @endforeach
                             @endforeach
+                            
                         </div>
                     </div>
                 </div>
@@ -1450,22 +1513,29 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 cn-title">
+                            @php $found = false; @endphp
+
                             @foreach ($l3Categories as $category)
+                                @if ($found) @break @endif
+                            
                                 @foreach ($category->contentInfos as $contentInfo)
                                     @if ($contentInfo->cyberwind_title)
                                         <h2>{!! $contentInfo->cyberwind_title->title !!}</h2>
+                                        @php $found = true; @endphp
+                                        @break
                                     @endif
                                 @endforeach
                             @endforeach
+                            
                         </div>
                     </div>
                 </div>
                 <!--  -->
                 <div class="container desktop-view why-chossetab" id="industry_challenges">
                     <div class="row">
-                        <div class="col-md-3 tab3-tab1">
+                        <div class="col-md-3 tab3-tab1 significance2-tab">
                             <!--  -->
-                            <div class="tab3-tab">
+                            <div class="tab3-tab significance2-subtab">
 
                                 @foreach ($l3Categories as $category)
                                     {{-- <li class="active"><a data-toggle="tab" href="#ic">BANKING & FINANCE</a></li> --}}
@@ -1475,7 +1545,7 @@
                                                     href="#{{ strtolower(str_replace([' ', '&', ','], '-', $contentInfo->cyberwindCategory->name)) }}">{{
                                                     $contentInfo->cyberwindCategory->name }}</a>
                                             </li> --}}
-                                            <button class="tab3-tablinks"
+                                            <button class="tab3-tablinks tablinks_space_between"
                                                 onclick="openCity(event, '{{ strtolower(str_replace([' ', '&', ','], '-', $contentInfo->cyberwindCategory->name)) }}')"
                                                 id="{{ $loop->first ? 'defaultOpen' : ' ' }}">
                                                 {{ $contentInfo->cyberwindCategory->name }}</button>
@@ -1486,7 +1556,7 @@
                             </div>
                             <!--  -->
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-md-9 significance2-content-sub">
                             <!--  -->
                             <div class="tab3-content">
                                 @foreach ($l3Categories as $category)
@@ -1495,7 +1565,7 @@
                                             <div id="{{ strtolower(str_replace([' ', '&', ','], '-', $contentInfo->cyberwindCategory->name)) }}"
                                                 class="tab3-tabcontent">
                                                 <div class="container">
-                                                    <div class="row rowp">
+                                                    <div class="row rowp rowlandscape">
                                                         @if ($contentInfo->images)
                                                             <div class="col-md-5">
                                                                 <div class="template12-img">
@@ -1508,7 +1578,7 @@
                                                                     @if ($contentInfo->cyberwind_short_description)
                                                                         {!! $contentInfo->cyberwind_short_description !!}
                                                                     @endif
-                                                                    <a href="javascript:void(0);" class="btn-show">Read
+                                                                    {{-- <a href="javascript:void(0);" class="btn-show">Read
                                                                         More
                                                                         ...</a>
 
@@ -1516,7 +1586,7 @@
                                                                         {!! $contentInfo->cyberwind_description !!}
                                                                         <a href="javascript:void(0);" class="btn-hide hide-btn_tab3"
                                                                             style="display: none;">Hide Content ...</a>
-                                                                    </div>
+                                                                    </div> --}}
 
                                                                 </div>
                                                             </div>
@@ -1525,8 +1595,9 @@
                                                                 <div class="red-title">
                                                                     @if ($contentInfo->cyberwind_short_description)
                                                                         {!! $contentInfo->cyberwind_short_description !!}
+                                                                        {!! $contentInfo->cyberwind_description !!}
                                                                     @endif
-                                                                    <a href="javascript:void(0);" class="btn-show">Read
+                                                                    {{-- <a href="javascript:void(0);" class="btn-show">Read
                                                                         More
                                                                         ...</a>
 
@@ -1534,7 +1605,7 @@
                                                                         {!! $contentInfo->cyberwind_description !!}
                                                                         <a href="javascript:void(0);" class="btn-hide hide-btn_tab3"
                                                                             style="display: none;">Hide Content ...</a>
-                                                                    </div>
+                                                                    </div> --}}
 
                                                                 </div>
                                                             </div>
@@ -1622,15 +1693,24 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="tsto-title">
+                                @php $found = false; @endphp
+
                                 @foreach ($l3Categories as $category)
+                                    @if ($found) @break @endif
+                                
                                     @foreach ($category->contentInfos as $contentInfo)
+                                        @if ($found) @break @endif
+                                
                                         @foreach ($contentInfo->testimonials as $index => $testimonial)
                                             @if ($testimonial->testimonial_title)
-                                                <h2><i class="fa  fa-commenting"></i>{!! $testimonial->testimonial_title !!}</h2>
+                                                <h2><i class="fa fa-commenting"></i>{!! $testimonial->testimonial_title !!}</h2>
+                                                @php $found = true; @endphp
+                                                @break
                                             @endif
                                         @endforeach
                                     @endforeach
                                 @endforeach
+                                
                             </div>
                         </div>
                     </div>
@@ -1693,17 +1773,23 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 cn-title">
+                            @php $found = false; @endphp
+
                             @foreach ($l3Categories as $category)
+                                @if ($found) @break @endif
+                            
                                 @foreach ($category->contentInfos as $contentInfo)
+                                    @if ($found) @break @endif
+                            
                                     @if ($contentInfo->blog_title)
-                                        {{-- <h2>{!! $contentInfo->blog_title->title !!}</h2> --}}
-                                        <h2
-                                            style="margin: auto; font-weight: 500; line-height: 1.2; font-size: 24px; letter-spacing: 2px; color: rgb(66, 66, 66); text-align: center; font-family: &quot;Roboto Medium&quot;; max-width: 100%; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; background-color: rgb(241, 242, 248); scroll-behavior: smooth !important;">
+                                        <h2 style="margin: auto; font-weight: 500; line-height: 1.2; font-size: 24px; letter-spacing: 2px; color: rgb(66, 66, 66); text-align: center; font-family: &quot;Roboto Medium&quot;; max-width: 100%; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; background-color: rgb(241, 242, 248); scroll-behavior: smooth !important;">
                                             {{ $contentInfo->blog_title->title }}
                                         </h2>
+                                        @php $found = true; @endphp
                                     @endif
                                 @endforeach
                             @endforeach
+                            
                         </div>
                     </div>
                 </div>
@@ -1731,7 +1817,7 @@
 
             </section>
 
-            {{-- blog section end 10 --}}
+              {{-- blog section end 10 --}}
 
             <!-- FAQ info start 11 -->
         @elseif ($fieldKey == 'FaqCategory' && $contents->contains(fn($info) => $info->{$fieldKey}))
@@ -1920,8 +2006,14 @@
                     <!--  -->
                     <div class="container desktop-view">
                         <div class="row">
+                            @php $found = false; @endphp
+
                             @foreach ($l3Categories as $category)
+                                @if ($found) @break @endif
+                            
                                 @foreach ($category->contentInfos as $info)
+                                    @if ($found) @break @endif
+                            
                                     @if ($info->l3_layout_type === 'overview2' && $info->overview2Descriptions->count())
                                         <div class="col-md-12">
                                             <div class="third-content" id="overview2">
@@ -1943,9 +2035,11 @@
                                                 <a href="#overview2" class="btn-hide" id="btn-hide1">Hide Content ...</a>
                                             </div>
                                         </div>
+                                        @php $found = true; @endphp
                                     @endif
                                 @endforeach
                             @endforeach
+                            
                         </div>
                     </div>
                     <!--  -->
@@ -1983,7 +2077,7 @@
                     </div>
 
                 </section>
-            @elseif ($fieldKey == 'overview2SubDescriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
+        @elseif ($fieldKey == 'overview2SubDescriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
                 <section class="light-grey sample7-line anchor-link space7_1" id="{{ $slug }}">
                     @foreach ($l3Categories as $category)
                         @foreach ($category->contentInfos as $contentInfo)
@@ -2052,20 +2146,30 @@
                     @endforeach
                 </section>
 
-            @elseif ($fieldKey == 'industry2_description' && $contents->contains(fn($info) => $info->{$fieldKey}))
+        @elseif ($fieldKey == 'industry2_description' && $contents->contains(fn($info) => $info->{$fieldKey}))
                 <section class="sec-wrap-cod-2" style="background: #dceff6;" id="{{ $slug }}">
                     <div class="container">
                         <div class="row">
                             <div class="col-12 text-center">
                                 <!-- Dynamic Title -->
+                                @php
+                                $foundIndustry2Title = false; // Flag to track if we have found the title
+                                @endphp
+                                
                                 @foreach ($l3Categories as $category)
                                     @foreach ($category->contentInfos as $contentInfo)
-                                        @if (!empty($contentInfo->industry2title))
+                                        @if (!empty($contentInfo->industry2title) && !$foundIndustry2Title)
                                             <h3 class="temp-head">{!! $contentInfo->industry2title->title !!}</h3>
-                                            @break <!-- We only need one title -->
+                                            @php
+                                                $foundIndustry2Title = true; // Set the flag to true once the title is found
+                                            @endphp
                                         @endif
                                     @endforeach
+                                    @if ($foundIndustry2Title)
+                                        @break <!-- Break the outer loop if the title was found -->
+                                    @endif
                                 @endforeach
+                            
                             </div>
                         </div>
 
@@ -2092,7 +2196,7 @@
                         @endforeach
                     </div>
                 </section>
-            @elseif ($fieldKey == 'overview15s' && $contents->contains(fn($info) => $info->{$fieldKey}))
+        @elseif ($fieldKey == 'overview15s' && $contents->contains(fn($info) => $info->{$fieldKey}))
                 <section class="sec-wrap-cod-2"
                     style="background-image:url('assets/images/image-bg-top.jpg'); background-repeat: repeat;" id="{{ $slug }}">
                     <div class="container">
@@ -2117,226 +2221,259 @@
                     </div>
                 </section>
 
-            @elseif ($fieldKey == 'significance2s' && $contents->contains(fn($info) => $info->{$fieldKey}))
-                <section class="why-codec codec-page-section anchor-link light-grey" id="{{ $slug }}">
-                            @php
-                                $categoriesMap = [];
+        @elseif ($fieldKey == 'significance2s' && $contents->contains(fn($info) => $info->{$fieldKey}))
+                <section class="why-codec codec-page-sectionl3 anchor-link" id="{{ $slug }}">
+                    @php
+                        $categoriesMap = [];
 
-                                foreach ($l3Categories as $category) {
-                                    foreach ($category->contentInfos as $index => $contentInfo) {
-                                        if ($contentInfo->significance2Category) {
-                                            $categoryId = $contentInfo->significance2Category->id;
+                        foreach ($l3Categories as $category) {
+                            foreach ($category->contentInfos as $index => $contentInfo) {
+                                if ($contentInfo->significance2Category) {
+                                    $categoryId = $contentInfo->significance2Category->id;
 
-                                            if (!isset($categoriesMap[$categoryId])) {
-                                                $categoriesMap[$categoryId] = [
-                                                    'category' => $contentInfo->significance2Category,
-                                                    'significance2s' => [],
-                                                    'index' => $index+2,
-                                                ];
-                                            }
+                                    if (!isset($categoriesMap[$categoryId])) {
+                                        $categoriesMap[$categoryId] = [
+                                            'category' => $contentInfo->significance2Category,
+                                            'significance2s' => [],
+                                            'index' => $index + 2,
+                                        ];
+                                    }
 
-                                            foreach ($contentInfo->significance2s as $significance2) {
-                                                $categoriesMap[$categoryId]['significance2s'][] = $significance2;
-                                            }
-                                        }
+                                    foreach ($contentInfo->significance2s as $significance2) {
+                                        $categoriesMap[$categoryId]['significance2s'][] = $significance2;
                                     }
                                 }
-                            @endphp
+                            }
+                        }
+                    @endphp
 
-                        <div class="container desktop-view">
-                            <div class="row">
-                                <div class="col-md-12 cn-title">
-                                    @foreach ($l3Categories as $category)
-                                        @foreach ($category->contentInfos as $info)
-                                            @foreach ($info->significance2s as $significance)
-                                                @if ($significance->significance2_title)
-                                                    {!! $significance->significance2_title !!}
-                                                @endif
-                                            @endforeach
-                                        @endforeach
-                                    @endforeach
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="cn-tabs1">
-                                    {{-- Tab Navigation --}}
-                                    <ul id="tabs-nav100">
-                                        @foreach ($categoriesMap as $group)
-                                            <li class="{{ $loop->first ? 'active' : '' }}">
-                                                <a href="#{{ strtolower(str_replace([' ', '&', ','], '-', $group['category']->name)) }}">
-                                                    {{ $group['category']->name }}
-                                                </a>
-                                            </li>
-                                        @endforeach
-                                    </ul>
-
-                                    {{-- Tab Content --}}
-                                    <div id="tabs-content100">
-                                        @foreach ($categoriesMap as $group)
-                                            <div id="{{ strtolower(str_replace([' ', '&', ','], '-', $group['category']->name)) }}"
-                                                class="tab-content100"
-                                                style="display: {{ $loop->first ? 'block' : 'none' }};">
-                                                <div class="container">
-                                                    <div class="row rowp">
-                                                        <div class="container desktop-view why-chossetab">
-                                                            <div class="row">
-                                                                {{-- Left Side Buttons --}}
-                                                                <div class="col-md-3 tab3-tab1">
-                                                                    <div class="tab3-tab significance2-tab" id="tab3_why_us">
-                                                                        @foreach ($group['significance2s'] as $significance)
-                                                                            <button class="tablinks{{ $group['index'] }} {{ $loop->first ? 'tab3-active' : '' }}"
-                                                                                    onclick="openCity{{ $group['index'] }}(event, '{{ strtolower(str_replace([' ', '&', ','], '-', $significance->name)) }}')">
-                                                                                {{ $significance->name }}
-                                                                            </button>
-                                                                        @endforeach
-                                                                    </div>
-                                                                </div>
-
-                                                                {{-- Right Side Content --}}
-                                                                <div class="col-md-9">
-                                                                    <div class="tab3-content">
-                                                                        @foreach ($group['significance2s'] as $significance)
-                                                                            <div id="{{ strtolower(str_replace([' ', '&', ','], '-', $significance->name)) }}"
-                                                                                class="tabcontent{{ $group['index'] }}"
-                                                                                style="display: {{ $loop->first ? 'block' : 'none' }};">
-                                                                                <div class="container">
-                                                                                    <div class="row rowp">
-                                                                                        @if ($significance->image)
-                                                                                            <div class="col-md-5">
-                                                                                                <div class="template12-img">
-                                                                                                    <img
-                                                                                                        src="{{ asset('storage/uploads/frontend/l3_template/significance2/' . $significance->image) }}">
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div class="col-md-7">
-                                                                                                <div class="red-title">
-                                                                                                    {!! $significance->significance2_short_description !!}
-                                                                                                    <a href="javascript:void(0);"
-                                                                                                        class="btn-show">Read
-                                                                                                        More ...</a>
-                                                                                                    <div class="content-hide">
-                                                                                                        {!! $significance->significance2_long_description !!}
-                                                                                                    </div>
-                                                                                                    <a href="javascript:void(0);"
-                                                                                                        class="btn-hide hide-btn_tab3">Hide
-                                                                                                        Content ...</a>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            @else
-                                                                                            <div class="col-md-12">
-                                                                                                <div class="red-title">
-                                                                                                    {!! $significance->significance2_short_description !!}
-                                                                                                    <a href="javascript:void(0);"
-                                                                                                        class="btn-show">Read
-                                                                                                        More ...</a>
-                                                                                                    <div class="content-hide">
-                                                                                                        {!! $significance->significance2_long_description !!}
-                                                                                                    </div>
-                                                                                                    <a href="javascript:void(0);"
-                                                                                                        class="btn-hide hide-btn_tab3">Hide
-                                                                                                        Content ...</a>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        @endif
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        @endforeach
-                                                                    </div>
-                                                                </div>
-                                                            </div> <!-- /.row -->
-                                                        </div> <!-- /.why-chossetab -->
-                                                    </div> <!-- /.rowp -->
-                                                </div> <!-- /.container -->
-                                            </div>
-                                        @endforeach
-                                    </div> <!-- /#tabs-content100 -->
-                                </div>
-                            </div>
-                        </div>
-
-                                @php
-                                    $groupedSignificance2 = [];
-                                    foreach ($l3Categories as $category) {
-                                        foreach ($category->contentInfos as $contentInfo) {
-                                            if ($contentInfo->significance2Category) {
-                                                $categoryId = $contentInfo->significance2Category->id;
-                                
-                                                if (!isset($groupedSignificance2[$categoryId])) {
-                                                    $groupedSignificance2[$categoryId] = [
-                                                        'category' => $contentInfo->significance2Category,
-                                                        'items' => []
-                                                    ];
-                                                }
-                                
-                                                foreach ($contentInfo->significance2s as $significance) {
-                                                    $groupedSignificance2[$categoryId]['items'][] = $significance;
-                                                }
-                                            }
-                                        }
-                                    }
-                                @endphp
-                    
-                    <div class="container mobile-view significance-space" id="sf_mob">
+                    <div class="container desktop-view">
                         <div class="row">
                             <div class="col-md-12 cn-title">
-                                @foreach ($groupedSignificance2 as $group)
-                                    {{-- Display the Main Category Title --}}
-                                    @if (!empty($group['category']->name))
-                                        <h2  style="margin-bottom: 1rem;">{{ $group['category']->name }}</h2>
-                                    @endif
-                    
-                                    {{-- Accordion for Subcategories --}}
-                                    <div class="acc">
-                                        @foreach ($group['items'] as $index => $significance)
-                                            <div class="acc__card">
-                                                <a href="#significance2s-{{ $significance->id }}"
-                                                   class="acc__title {{ $loop->first ? 'active' : '' }}"
-                                                   data-target="significance2s-{{ $significance->id }}">
-                                                    {{ $significance->name }}
-                                                </a>
-                    
-                                                <div class="acc__panel" style="{{ $loop->first ? 'display:block;' : '' }}"
-                                                     id="significance2s-{{ $significance->id }}">
-                                                    <div class="box-height vert-box">
-                                                        <div class="red-title">
-                                                            @if ($significance->image)
-                                                                <div class="template12-img">
-                                                                    <img src="{{ asset('storage/uploads/frontend/l3_template/significance2/' . $significance->image) }}"
-                                                                         alt="{{ $significance->significance2_title }}">
-                                                                </div>
-                                                            @endif
-                    
-                                                            {!! $significance->significance2_short_description !!}
-                                                            {!! $significance->significance2_long_description !!}
-                                                        </div>
-                                                    </div>
-                                                    <a href="javascript:void(0)" class="close-acrodin">Close</a>
-                                                </div>
-                                            </div>
+                                @php
+                                $foundSignificance = false; // Flag to track if significance title is found
+                                @endphp
+                                
+                                @foreach ($l3Categories as $category)
+                                    @foreach ($category->contentInfos as $info)
+                                        @foreach ($info->significance2s as $significance)
+                                            @if ($significance->significance2_title && !$foundSignificance)
+                                                {!! $significance->significance2_title !!}
+                                                @php
+                                                    $foundSignificance = true; // Set the flag to true once a significance title is found
+                                                @endphp
+                                            @endif
                                         @endforeach
+                                        @if ($foundSignificance)
+                                            @break <!-- Break inner loop if title is found -->
+                                        @endif
+                                    @endforeach
+                                    @if ($foundSignificance)
+                                        @break <!-- Break outer loop if title is found -->
+                                    @endif
+                                @endforeach
+                            
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="cn-tabs1 tabs-signi2sec">
+                                {{-- Tab Navigation --}}
+                                <ul id="tabs-nav100" class="signi2-main">
+                                    @foreach ($categoriesMap as $group)
+                                        <li class="{{ $loop->first ? 'active' : '' }}">
+                                            <a
+                                                href="#{{ strtolower(str_replace([' ', '&', ','], '-', $group['category']->name)) }}" style="font-weight: 600;">
+                                                {{ $group['category']->name }}
+                                            </a>
+                                        </li>
+                                    @endforeach
+                                </ul>
+
+                                {{-- Tab Content --}}
+                                <div id="tabs-content100">
+                                    @foreach ($categoriesMap as $group)
+                                        <div id="{{ strtolower(str_replace([' ', '&', ','], '-', $group['category']->name)) }}"
+                                            class="tab-content100" style="display: {{ $loop->first ? 'block' : 'none' }};">
+                                            <div class="container">
+                                                <div class="row rowp">
+                                                    <div class="container desktop-view why-chossetab2">
+                                                        <div class="row">
+                                                            {{-- Left Side Buttons --}}
+                                                            <div class="col-md-3 tab3-tab1 significance2-tab">
+                                                                <div class="tab3-tab significance2-subtab" id="tab3_why_us">
+                                                                    @foreach ($group['significance2s'] as $significance)
+                                                                        <button
+                                                                            class="tablinks{{ $group['index'] }} {{ $loop->first ? 'tab3-active' : '' }}"
+                                                                            onclick="openCity{{ $group['index'] }}(event, '{{ strtolower(str_replace([' ', '&', ','], '-', $significance->name)) }}')">
+                                                                            {{ $significance->name }}
+                                                                        </button>
+                                                                    @endforeach
+                                                                </div>
+                                                            </div>
+
+                                                            {{-- Right Side Content --}}
+                                                            <div class="col-md-9 significance2-content-sub">
+                                                                <div class="tab3-content">
+                                                                    @foreach ($group['significance2s'] as $significance)
+                                                                        <div id="{{ strtolower(str_replace([' ', '&', ','], '-', $significance->name)) }}"
+                                                                            class="tabcontent{{ $group['index'] }}"
+                                                                            style="display: {{ $loop->first ? 'block' : 'none' }};">
+                                                                            <div class="container">
+                                                                                <div class="row rowp">
+                                                                                    @if ($significance->image)
+                                                                                        <div class="col-md-5">
+                                                                                            <div class="template12-img">
+                                                                                                <img
+                                                                                                    src="{{ asset('storage/uploads/frontend/l3_template/significance2/' . $significance->image) }}">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-md-7">
+                                                                                            <div class="red-title">
+                                                                                                {!! $significance->significance2_short_description !!}
+                                                                                                {!! $significance->significance2_long_description !!}
+                                                                                                {{-- <a href="javascript:void(0);"
+                                                                                                    class="btn-show">Read
+                                                                                                    More ...</a>
+                                                                                                <div class="content-hide">
+                                                                                                    {!! $significance->significance2_long_description !!}
+                                                                                                </div>
+                                                                                                <a href="javascript:void(0);"
+                                                                                                    class="btn-hide hide-btn_tab{{ $group['index'] + 2}}">Hide
+                                                                                                    Content ...</a> --}}
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    @else
+                                                                                        <div class="col-md-12">
+                                                                                            <div class="red-title">
+                                                                                                {!! $significance->significance2_short_description !!}
+                                                                                                {!! $significance->significance2_long_description !!}
+                                                                                                {{-- <a href="javascript:void(0);"
+                                                                                                    class="btn-show">Read
+                                                                                                    More ...</a>
+                                                                                                <div class="content-hide">
+                                                                                                    {!! $significance->significance2_long_description !!}
+                                                                                                </div>
+                                                                                                <a href="javascript:void(0);"
+                                                                                                    class="btn-hide hide-btn_tab{{ $group['index'] + 2}}">Hide
+                                                                                                    Content ...</a> --}}
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    @endif
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    @endforeach
+                                                                </div>
+                                                            </div>
+                                                        </div> <!-- /.row -->
+                                                    </div> <!-- /.why-chossetab -->
+                                                </div> <!-- /.rowp -->
+                                            </div> <!-- /.container -->
+                                        </div>
+                                    @endforeach
+                                </div> <!-- /#tabs-content100 -->
+                            </div>
+                        </div>
+                    </div>
+
+                    @php
+                        $groupedSignificance2 = [];
+                        foreach ($l3Categories as $category) {
+                            foreach ($category->contentInfos as $index => $contentInfo) {
+                                if ($contentInfo->significance2Category) {
+                                    $categoryId = $contentInfo->significance2Category->id;
+
+                                    if (!isset($groupedSignificance2[$categoryId])) {
+                                        $groupedSignificance2[$categoryId] = [
+                                            'category' => $contentInfo->significance2Category,
+                                            'items' => [],
+                                            'index' => $index +1,
+                                        ];
+                                    }
+
+                                    foreach ($contentInfo->significance2s as $significance) {
+                                        $groupedSignificance2[$categoryId]['items'][] = $significance;
+                                    }
+                                }
+                            }
+                        }
+                    @endphp
+
+                    <div class="container mobile-view significance-space" id="sf_mob">
+                        <div class="row">
+                            <div class="col-md-12 cn-title sig2_grtitle">
+                                @foreach ($groupedSignificance2 as $group)
+                                    <div class="sig2_gr{{ $group['index'] }}">
+                                        {{-- Display the Main Category Title --}}
+                                        @if (!empty($group['category']->name))
+                                            <h2 style="margin-bottom: 1.25rem;">{{ $group['category']->name }}</h2>
+                                        @endif
+
+                                        {{-- Accordion for Subcategories --}}
+                                        <div class="acc">
+                                            @foreach ($group['items'] as $index => $significance)
+                                                <div class="acc__card">
+                                                    <a href="#significance2s-{{ $significance->id }}"
+                                                        class="acc__title {{ $loop->first ? 'active' : '' }}"
+                                                        data-target="significance2s-{{ $significance->id }}">
+                                                        {{ $significance->name }}
+                                                    </a>
+
+                                                    <div class="acc__panel" style="{{ $loop->first ? 'display:block;' : '' }}"
+                                                        id="significance2s-{{ $significance->id }}">
+                                                        <div class="box-height vert-box">
+                                                            <div class="red-title">
+                                                                @if ($significance->image)
+                                                                    <div class="template12-img">
+                                                                        <img src="{{ asset('storage/uploads/frontend/l3_template/significance2/' . $significance->image) }}"
+                                                                            alt="{{ $significance->significance2_title }}">
+                                                                    </div>
+                                                                @endif
+
+                                                                {!! $significance->significance2_short_description !!}
+                                                                {!! $significance->significance2_long_description !!}
+                                                            </div>
+                                                        </div>
+                                                        <a href="javascript:void(0)" class="close-acrodin">Close</a>
+                                                    </div>
+                                                </div>
+                                            @endforeach
+                                        </div>
                                     </div>
+                                    <hr style="border: none; height: 3px; background-color: #222222; margin-top: 30px;">
                                 @endforeach
                             </div>
                         </div>
                     </div>
-                    
+
 
                 </section>
 
-            @elseif ($fieldKey == 'overview16_short_descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
+        @elseif ($fieldKey == 'overview16_short_descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
                 <section class="empower-industry-bg codec-page-section anchor-link"
                     style="padding-bottom: 20px !important; padding-top: 40px !important;" id="{{ $slug }}">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 cn-title">
+                                @php
+                                $foundOverview16 = false; // Flag to track if overview16_title is found
+                                @endphp
+                                
                                 @foreach ($l3Categories as $category)
                                     @foreach ($category->contentInfos as $contentInfo)
-                                        @if (!empty($contentInfo->overview16_title))
+                                        @if (!$foundOverview16 && !empty($contentInfo->overview16_title))
                                             <h2>{!! $contentInfo->overview16_title !!}</h2>
+                                            @php
+                                                $foundOverview16 = true; // Set the flag to true once overview16_title is found
+                                            @endphp
                                         @endif
                                     @endforeach
+                                    @if ($foundOverview16)
+                                        @break <!-- Break outer loop if overview16_title is found -->
+                                    @endif
                                 @endforeach
+                            
                             </div>
                         </div>
                     </div>
@@ -2397,7 +2534,7 @@
                         @endforeach
                     @endforeach
                 </section>
-            @elseif ($fieldKey == 'overview17_descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
+        @elseif ($fieldKey == 'overview17_descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
                 <section class="light-grey sample7-line anchor-link space7_1" id="{{ $slug }}">
                     <div class="container">
                         <div class="row">
@@ -2418,7 +2555,7 @@
             @endif
     @endforeach
 
-       
+
         <div class="popup" id="global-testimonial-popup">
             <div class="popup-box popup-testo">
                 <div class="testo-popup">
@@ -2575,6 +2712,29 @@
             });
 
         });
+    </script>
+    <script>
+        if (!isMobile()) {
+            function scrollToFirstElement(className, offset = 100) {
+                document.querySelectorAll(`.${className}`).forEach(element => {
+                    element.addEventListener("click", function (e) {
+                        e.preventDefault();
+                        setTimeout(() => {
+                            const firstElement = document.querySelector(`.${className}`);
+                            if (firstElement) {
+                                window.scrollTo({
+                                    top: firstElement.offsetTop - offset,
+                                    behavior: "smooth"
+                                });
+                            }
+                        }, 0); // Ensures content loads before scrolling
+                    });
+                });
+            }
+        }
+
+        // Example usage:
+        scrollToFirstElement("tabs-signi2sec", 120);
     </script>
 
     <script type="text/javascript" src="{{ asset('assets/js/common.js') }}"></script>
