@@ -1443,7 +1443,7 @@
                             
                                 @foreach ($category->contentInfos as $contentInfo)
                                     @if ($contentInfo->industry_title)
-                                        <h1>{!! $contentInfo->industry_title->title !!}</h1>
+                                        {!! $contentInfo->industry_title->title !!}
                                         @php $found = true; @endphp
                                         @break
                                     @endif

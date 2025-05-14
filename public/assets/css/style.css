@@ -982,7 +982,7 @@ body{
     border: 1px solid #e3e5ea;
     background: #fff;
     }
-    }
+    
     .iconbox .box-header {
     margin-bottom: 12px;
     }
@@ -1687,7 +1687,7 @@ body{
     .black-bg a:hover{background:#dddddd;
     color: #000;}
     .industry-box h3,  .industry-box1 h3{color: #fff;
-    font-size: 26px;
+    font-size: 21px;
     line-height: 36px;}
     .industry-box a, .industry-box1 a{
     border: #fff 1px solid;
@@ -4068,7 +4068,7 @@ body{
     font-size: 16px;}
     .customers-btn1 a:hover{color: #00828C;
     background-color: #fff;}
-    .industry-box{height: 210px;
+    .industry-box{height: 240px;
     padding: 30px;
     }
     .template10-title h2 {
