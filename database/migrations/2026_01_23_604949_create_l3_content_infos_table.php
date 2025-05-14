@@ -70,6 +70,7 @@ return new class extends Migration
             //Blog section columns
             $table->unsignedBigInteger('blog_category_type')->nullable(); // blog Category Name
             $table->longText('blog_description')->nullable();  // blog description
+            $table->string('blog_link')->nullable();
 
             $table->string('style_class_id')->nullable(); // Column to store background class
 

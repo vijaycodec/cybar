@@ -90,7 +90,7 @@
 
                     <div class="form-group">
                         <label><strong>Description :</strong></label>
-                        <textarea class="summernote" name="description" value="{{ $blogs->description }}" id="description">{!! $blogs->description !!}</textarea>
+                        <textarea class="ckeditor" name="description" value="{{ $blogs->description }}" id="description">{!! $blogs->description !!}</textarea>
                     </div>
 
                     <div class="bot">

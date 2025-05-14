@@ -176,6 +176,7 @@ class L3ContentRepository implements L3ContentRepositoryInterface
             case 'blog':
                 $l3ContentInfo->blog_category_type = $request->blog_category_type;
                 $l3ContentInfo->blog_description = $request->blog_description;
+                $l3ContentInfo->blog_link = $request->blog_link;
                 $l3ContentInfo->style_class_id = $request->style_class;
                 break;
             case 'incidents':
@@ -826,6 +827,7 @@ class L3ContentRepository implements L3ContentRepositoryInterface
             case 'blog':
                 $l3ContentInfo->blog_category_type = $request->blog_category_type;
                 $l3ContentInfo->blog_description = $request->blog_description;
+                $l3ContentInfo->blog_link = $request->blog_link;
                 $l3ContentInfo->style_class_id = $request->style_class;
                 break;
 

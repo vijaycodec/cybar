@@ -591,8 +591,14 @@
                     <div class="l3-form" id="style_form" style="display: none;">
                         <div class="body-title">Pick Background Color <span class="tf-color-1">*</span></div>
                         <input type="color" name="style_class" id="colorPicker" class="color-picker-input"
-                            value="#f40a0a">
+                        value="{{ old('style_class', $l3Content->style_class_id ?? '#ffffff') }}">
                     </div>
+
+                    <div class="l3-form form-group blog_link">
+                        <div class="body-title">Blog Link : <span class="tf-color-1">*</span></div>
+                        <input type="text" name="blog_link" value="{{ $l3Content->blog_link  }}"> </input>
+                    </div>
+
                     <div class="l3-form form-group blog_title">
                         <div class="body-title">Blog Title : <span class="tf-color-1">*</span></div>
                         <input type="text" name="blog_description" placeholder="Enter Blog Title"
@@ -996,6 +1002,7 @@
                         $('#blog_form').show();
                         $('.blog_title').show();
                         $('.blog_main_title').show();
+                        $('.blog_link').show();
                         $('.blog_image').hide();
                         $('#style_form').show();
                         $('#l3_layout_type').val('blog'); // Set hidden input to 'blog'

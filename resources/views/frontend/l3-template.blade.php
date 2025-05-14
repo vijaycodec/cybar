@@ -1802,7 +1802,7 @@
                                         <div class="industry-box black-bg" style="background-color: {{ $contentInfo->style_class_id }}">
                                             <p>{{ $contentInfo->blogCategory->name }}</p> <!-- Blog Category Name -->
                                             <h3>{{ $contentInfo->blog_description }}</h3> <!-- Blog Title -->
-                                            <a href="#">Watch Now</a>
+                                            <a href="{{ $contentInfo->blog_link }}">Watch Now</a>
                                         </div>
                                     </div>
                                     <!-- Add bottom margin after every 2 items (full row) -->
