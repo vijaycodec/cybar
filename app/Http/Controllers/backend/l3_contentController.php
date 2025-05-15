@@ -28,6 +28,7 @@ use App\Models\TestimonialDetails;
 use Illuminate\Http\Request;
 use App\Repositories\Interfaces\L3ContentRepositoryInterface;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\DB;
 
 
 use function Laravel\Prompts\select;
@@ -264,6 +265,57 @@ class l3_contentController extends Controller
         $data = $this->l3ContentRepository->getl3contentById($id);
         return view('backend.l3-content.edit', $data);
     }
+    
+
+        public function swap($id)
+    {
+        $RecordsID=L3ContentInfo::findOrfail($id);
+        $RecordsID= $RecordsID->l3_category_id;
+
+        $data = $this->l3ContentRepository->getl3contentById($id);
+        $data['RecordsID'] = $RecordsID; 
+        return view('backend.l3-content.swap', $data);
+    }
+
+public function SwapUpdate(Request $request, $id)
+{
+     $recordId = $id; // Use the ID passed from the route
+
+    $record = DB::table('l3_content_infos')->where('id', $recordId)->first();
+
+    if (!$record) {
+        return response()->json(['error' => 'Record not found'], 404);
+    }
+
+    $oldCategoryId = $record->l3_category_id;
+    $newCategoryId = $request->l3_category_id;
+    $tempId = 999999; // Safe temporary value (not used in l3_categories)
+
+    DB::transaction(function () use ($oldCategoryId, $newCategoryId, $recordId, $tempId) {
+        // Step 1: Temporarily mark oldCategoryId rows
+        DB::table('l3_content_infos')
+            ->where('l3_category_id', $oldCategoryId)
+            ->update(['l3_category_id' => $tempId]);
+
+        // Step 2: Replace newCategoryId with oldCategoryId
+        DB::table('l3_content_infos')
+            ->where('l3_category_id', $newCategoryId)
+            ->update(['l3_category_id' => $oldCategoryId]);
+
+        // Step 3: Replace tempId with newCategoryId
+        DB::table('l3_content_infos')
+            ->where('l3_category_id', $tempId)
+            ->update(['l3_category_id' => $newCategoryId]);
+
+        // Step 4: (optional - not strictly necessary unless extra updates needed)
+        DB::table('l3_content_infos')
+            ->where('id', $recordId)
+            ->update(['l3_category_id' => $newCategoryId]);
+    });
+
+    return response()->json(['message' => 'Category IDs swapped globally']);
+}
+
 
     public function update(Request $request, $id)
     {
