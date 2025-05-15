@@ -566,7 +566,7 @@
                             @endforeach
                         </ul>
 
-                        <div class="tab-content program-content">
+                        <div class="tab-content program-content" style="min-height: 420px; max-height: 420px; overflow-y: auto; overscroll-behavior: unset;">
                             @php
                                 $displayedProgramCategories = []; // Track displayed program categories
                             @endphp

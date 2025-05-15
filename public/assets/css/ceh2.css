@@ -1881,11 +1881,7 @@
 }
 .pro-ul-box {
 }
-.programscrolbox{
-    overflow-y: auto;
-    height: 350px;
-    overscroll-behavior: contain;
-}
+
 .pro-ul-box ul {
     padding: 0px;
     margin: 0px;
