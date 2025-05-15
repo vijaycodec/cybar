@@ -298,7 +298,7 @@ Route::middleware(['auth', 'admin', 'prevent_history'])->group(function () {
 Route::middleware(['FrameGuard'])->group(function () {
     Route::get('/', [homeController::class, 'index'])->name('home');
 
-    Route::middleware(['TrackPage'])->group(function () {
+    // Route::middleware(['TrackPage'])->group(function () {
 
         Route::get('/services/{category?}', [servicesController::class, 'getServices'])
             ->where('category', '[A-Za-z0-9-]+') // Allow slugs
@@ -319,7 +319,7 @@ Route::middleware(['FrameGuard'])->group(function () {
         Route::get('/newsletter', [NewsLetterMainController::class, 'index'])->name('newsletter.main');
 
 
-    });
+    // });
     Route::get('/resources/{category_slug}/{resource_slug}', [resourcesViewController::class, 'view'])
         ->where(['category_slug' => '[a-zA-Z0-9-]+', 'resource_slug' => '[a-zA-Z0-9-]+'])
         ->name('resources-view');
