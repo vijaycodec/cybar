@@ -244,12 +244,14 @@ body{
     color: #fff;
     transition: 1.0s ease;
     overflow: hidden;
+    align-items: center;
+    display: flex;
     }
     .cn-content p{
     font-size: 15px;
     text-align: left;
     margin: 0px;
-    padding: 40px 11px 0px 11px;
+    padding: 0px 11px 0px 11px;
     line-height: 1.4;
     display: none;
     }
@@ -301,7 +303,7 @@ body{
     }
     .tab-content-box{
     background-color: #e5e8ee;
-    padding: 18px 8px;
+    padding: 18px 8px 0px;
     text-align: left;
     height: 100%;
     }
