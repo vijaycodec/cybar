@@ -951,6 +951,9 @@ body{
     background-color: #15416e;
     color: #fff !important;
     }
+    .home-slider p{
+        color: #212529;
+    }
     .box-wrap {
     margin: 10px;
     }
@@ -5862,4 +5865,14 @@ ul#tabs-nav100 li.active, ul#tabs-nav100 li:hover {
         font-size: 18px;
         color: #000;
     }
+}
+@media (min-width: 768px) {
+    .home-slider .col-md-2 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+
+.home-slider-spacing{
+    margin-bottom: 40px;
 }

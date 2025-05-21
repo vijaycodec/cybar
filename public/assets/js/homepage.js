@@ -46,6 +46,52 @@ $("#home-slider1, #home-slider2, #home-slider3, #home-slider4, #home-slider5, #h
 
  });
 
+ $("#home-slider1_1, #home-slider1_2, #home-slider1_3, #home-slider1_4, #home-slider1_5, #home-slider2_1, #home-slider2_2, #home-slider2_3, #home-slider2_4, #home-slider2_5").owlCarousel({
+   loop: false,
+   margin: 10,
+   nav: true,
+   dots: false,
+
+   responsive: {
+      0: {
+         items: 1
+      },
+      600: {
+         items: 1
+      },
+      900: {
+         items: 6
+      },
+      1200: {
+         items: 6
+      }
+   }
+
+});
+$("#owl-demo91, #owl-demo92").owlCarousel({
+   loop: false,
+   margin: 10,
+   nav: true,
+   dots: false,
+
+   responsive: {
+      0: {
+         items: 1
+      },
+      600: {
+         items: 1
+      },
+      900: {
+         items: 5
+      },
+      1200: {
+         items: 5
+      }
+   }
+
+});
+
+
  // review
  $("#client-testimonials").owlCarousel({
     loop: true,
