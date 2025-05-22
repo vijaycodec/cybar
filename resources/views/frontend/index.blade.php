@@ -176,11 +176,12 @@
                 <div class="row">
                     <div class="cn-tabs1">
                         <ul id="tabs-nav1" class="home-tabs">
-                            <li><a class="scr-tabs1" href="#tab11">Vulnerability Assesement & Penetration Testing</a></li>
-                            <li><a class="scr-tabs1" href="#tab12">IT Security Audit, Risk & Compliance</a></li>
-                            <li><a class="scr-tabs1" href="#tab13">Managed IT Security Solutions </a></li>
-                            <li><a class="scr-tabs1" href="#tab14">Digital Forensic & Cyber Fraud Management </a></li>
-                            <li><a class="scr-tabs1" href="#tab15">SOC (Security Operation Center) as a Service </a></li>
+                            <li><a class="scr-tabs1" href="#tab11"> Application Vapt Services</a></li>
+                            <li><a class="scr-tabs1" href="#tab12">Network Vapt Services</a></li>
+                            <li><a class="scr-tabs1" href="#tab13">Cloud Vapt Services </a></li>
+                            <li><a class="scr-tabs1" href="#tab14"> Server And Storage Vapt Services </a></li>
+                            <li><a class="scr-tabs1" href="#tab15"> Digital Technologies Penetration Testing Services </a>
+                            </li>
                         </ul>
                         <!-- END tabs-nav -->
                         <div id="tabs-content">
@@ -192,11 +193,10 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>Network Architecture Design Review</h3>
-                                                            <p>Security focused evaluation of your network-based computing
-                                                                environment,
-                                                                from both
-                                                                an architecture and operational perspective.
+                                                            <h3>Web Application / Website VAPT Services </h3>
+                                                            <p>Web Application/Website VAPT services assess vulnerabilities
+                                                                like XSS, SQL injection, and misconfigurations to enhance
+                                                                security and protect sensitive user data.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -204,12 +204,10 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Network Infrastructure Penetration Testing</h3>
-                                                            <p>Identifies and exploits network infrastructure
-                                                                vulnerabilities
-                                                                and
-                                                                validate result
-                                                                with efficiently evaluate a security posture.
+                                                            <h3>API VAPT Testing</h3>
+                                                            <p>API VAPT testing detects vulnerabilities in endpoints,
+                                                                focusing on authentication, data exposure, and injection
+                                                                flaws to ensure secure communication and integration.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -217,11 +215,10 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>Web Application Penetration Testing</h3>
-                                                            <p>Our comprehensive security assessment framework focuses to
-                                                                evaluate and
-                                                                analyse
-                                                                existing vulnerabilities for web-based applications.
+                                                            <h3>Mobile Application VAPT Testing (Android, IOS)</h3>
+                                                            <p>Mobile Application VAPT testing identifies security flaws in
+                                                                Android and iOS apps, including insecure storage, weak
+                                                                authentication, and unauthorized data access risks.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -229,12 +226,11 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>Wireless Network Penetration Testing</h3>
-                                                            <p>We simulates real-world attacks to provide a real time
-                                                                assessment
-                                                                of
-                                                                vulnerabilities
-                                                                and threats to your wireless network infrastructure.
+                                                            <h3>EPR System and Business Application VAPT Testing (SAP, HANA
+                                                                PeopleSoft etc )</h3>
+                                                            <p>ERP and Business Application VAPT testing identifies
+                                                                vulnerabilities in systems like SAP, HANA, and PeopleSoft,
+                                                                focusing on access control and data integrity risks.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -242,12 +238,10 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Mobile Application Penetration Testing</h3>
-                                                            <p>We go beyond looking at API and web vulnerabilities to
-                                                                examine
-                                                                the risk
-                                                                of the
-                                                                application on a mobile platform.
+                                                            <h3>Thick Client & Thin Client VAPT Testing </h3>
+                                                            <p>Thick and Thin Client VAPT testing identifies security flaws
+                                                                in client-server applications, focusing on data handling,
+                                                                authentication, and communication vulnerabilities.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -255,13 +249,10 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Source Code Review</h3>
-                                                            <p>Identifies and locate security risk and misconfigurations
-                                                                that
-                                                                have been
-                                                                ignored
-                                                                during SDLC process and can help invaders to abstract key
-                                                                information.
+                                                            <h3>Secure Code Review ( SAST ) Testing</h3>
+                                                            <p>Secure Code Review (SAST) analyzes source code to detect
+                                                                security vulnerabilities early, ensuring code quality and
+                                                                preventing potential exploits before deployment.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -269,27 +260,10 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Source Code Review</h3>
-                                                            <p>Identifies and locate security risk and misconfigurations
-                                                                that
-                                                                have been
-                                                                ignored
-                                                                during SDLC process and can help invaders to abstract key
-                                                                information.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5">
-                                                        <div class="tab-content-box">
-                                                            <h3>Source Code Review</h3>
-                                                            <p>Identifies and locate security risk and misconfigurations
-                                                                that
-                                                                have been
-                                                                ignored
-                                                                during SDLC process and can help invaders to abstract key
-                                                                information.
+                                                            <h3>Secure Code Review ( SAST ) Testing</h3>
+                                                            <p>Secure Code Review (SAST) analyzes source code to detect
+                                                                security vulnerabilities early, ensuring code quality and
+                                                                preventing potential exploits before deployment.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -307,11 +281,11 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>IT Risk, Compliance & Governance</h3>
-                                                            <p>We evaluate current IT governance, risk management and
-                                                                compliance
-                                                                structures for
-                                                                process maturity and design Effectiveness.
+                                                            <h3>Network VAPT Testing - Internal and External </h3>
+                                                            <p>Network VAPT testing evaluates internal and external network
+                                                                security, identifying vulnerabilities in devices,
+                                                                configurations, and protocols to prevent unauthorized access
+                                                                and attacks.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -319,12 +293,11 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Information Security Management Systems</h3>
-                                                            <p>We demonstrate business is compliant and is taking all
-                                                                necessary measures
-                                                                to secure
-                                                                IT information in compliance with the ISO 27001 (ISMS)
-                                                                standard.
+                                                            <h3>Wireless Network VAPT Testing </h3>
+                                                            <p>Wireless Network VAPT testing identifies vulnerabilities in
+                                                                Wi-Fi networks, including encryption weaknesses,
+                                                                unauthorized access points, and configuration flaws to
+                                                                enhance wireless security.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -332,12 +305,11 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>GDPR & Data Privacy</h3>
-                                                            <p>Our deep portfolio enables businesses to reduce the time,
-                                                                cost and
-                                                                complexity of
-                                                                responding to various international data privacy mandates
-                                                                like GDPR.
+                                                            <h3>ICS - SCADA VAPT Testing </h3>
+                                                            <p>ICS-SCADA VAPT testing identifies security vulnerabilities in
+                                                                industrial control and SCADA systems, focusing on network
+                                                                weaknesses, access controls, and potential operational
+                                                                disruptions.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -345,12 +317,11 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>GDPR & Data Privacy</h3>
-                                                            <p>Our deep portfolio enables businesses to reduce the time,
-                                                                cost and
-                                                                complexity of
-                                                                responding to various international data privacy mandates
-                                                                like GDPR.
+                                                            <h3>Network Security Architecture Review</h3>
+                                                            <p>Network Security Architecture Review evaluates design and
+                                                                implementation of network security controls to ensure
+                                                                effective protection against threats and compliance with
+                                                                best practices.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -358,14 +329,11 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Information Technology Service Management</h3>
-                                                            <p>Our experts ensure the right processes, people and technology
-                                                                are in
-                                                                place to meet
-                                                                business respective goals in agreement with industry
-                                                                standards like ISO
-                                                                20000
-                                                                (ITSMS) and ISO 22301 (BCMS).
+                                                            <h3>Firewall VAPT Testing</h3>
+                                                            <p>Firewall VAPT testing assesses firewall configurations and
+                                                                rules to identify weaknesses, ensuring proper traffic
+                                                                filtering and protection against unauthorized network
+                                                                access.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -373,68 +341,11 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Incidence & Emergency Response Services</h3>
-                                                            <p>Our key offerings involve and improve incident response
-                                                                preparedness plan
-                                                                and
-                                                                minimize the impact of breaches with latest threat
-                                                                intelligence
-                                                                mechanism.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5 ">
-                                                        <div class="tab-content-box">
-                                                            <h3>GDPR & Data Privacy</h3>
-                                                            <p>Our deep portfolio enables businesses to reduce the time,
-                                                                cost and
-                                                                complexity of
-                                                                responding to various international data privacy mandates
-                                                                like GDPR.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5 ">
-                                                        <div class="tab-content-box">
-                                                            <h3>GDPR & Data Privacy</h3>
-                                                            <p>Our deep portfolio enables businesses to reduce the time,
-                                                                cost and
-                                                                complexity of
-                                                                responding to various international data privacy mandates
-                                                                like GDPR.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5">
-                                                        <div class="tab-content-box">
-                                                            <h3>Information Technology Service Management</h3>
-                                                            <p>Our experts ensure the right processes, people and technology
-                                                                are in
-                                                                place to meet
-                                                                business respective goals in agreement with industry
-                                                                standards like ISO
-                                                                20000
-                                                                (ITSMS) and ISO 22301 (BCMS).
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5">
-                                                        <div class="tab-content-box">
-                                                            <h3>Incidence & Emergency Response Services</h3>
-                                                            <p>Our key offerings involve and improve incident response
-                                                                preparedness plan
-                                                                and
-                                                                minimize the impact of breaches with latest threat
-                                                                intelligence
-                                                                mechanism.
+                                                            <h3>Configuration & Hardening Security Review AD IPT</h3>
+                                                            <p>Configuration and Hardening Security Review for AD and IPT
+                                                                ensures secure system settings, reduces vulnerabilities, and
+                                                                strengthens defenses against unauthorized access and
+                                                                attacks.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -452,14 +363,11 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>Firewall Management and Implementation</h3>
-                                                            <p>Our Managed Firewall/UTM solution provides monitoring,
-                                                                administration &
-                                                                maintenance
-                                                                of gateway level security along with policy supervision,
-                                                                upgrades and
-                                                                patch
-                                                                deployment.
+                                                            <h3>AWS Cloud Security Penetration Testing</h3>
+                                                            <p>AWS Cloud Security Penetration Testing identifies
+                                                                vulnerabilities in AWS environments, including
+                                                                misconfigurations, weak access controls, and insecure
+                                                                services to enhance cloud security posture.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -467,13 +375,10 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Endpoint Security Protection</h3>
-                                                            <p>We offers a wide range of EPS solutions which integrates new
-                                                                and
-                                                                innovative
-                                                                technologies / features to protect endpoints from today’s
-                                                                advanced
-                                                                threats.
+                                                            <h3>Azure (Office 365, AD) Penetration Testing</h3>
+                                                            <p>Identify and exploit vulnerabilities in Office 365 and Azure
+                                                                Active Directory to assess security posture and strengthen
+                                                                cloud infrastructure defenses
                                                             </p>
                                                         </div>
                                                     </div>
@@ -481,13 +386,10 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>Data Leakage Protection Management</h3>
-                                                            <p>Our Data Loss Prevention (DLP) comes with Unique capture
-                                                                technology to
-                                                                safeguards
-                                                                intellectual property and protect sensitive data in-line
-                                                                with
-                                                                compliance.
+                                                            <h3>Google Cloud Security Penetration Testing</h3>
+                                                            <p>Assess and exploit security gaps in Google Cloud environments
+                                                                to evaluate configurations, detect vulnerabilities, and
+                                                                enhance overall cloud security posture.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -495,13 +397,10 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>Data Encryption Solution</h3>
-                                                            <p>Our Data Encryption solution help businesses looking to
-                                                                bolster their
-                                                                data security,
-                                                                increase customer confidence and ensure compliance with data
-                                                                protection
-                                                                laws.
+                                                            <h3>Oracle Cloud Security Penetration Testing</h3>
+                                                            <p>Evaluate and test Oracle Cloud infrastructure for
+                                                                misconfigurations, vulnerabilities, and access controls to
+                                                                enhance security and ensure compliance.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -509,13 +408,10 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Mobile Device & BYOD Security Management</h3>
-                                                            <p>Our Mobile Device Management (MDM) Solutions allows business
-                                                                to secure
-                                                                and manage
-                                                                employee-owned (BYOD) and company-owned devices to drive
-                                                                effective team
-                                                                conversations.
+                                                            <h3>SAAS Penetration Testing </h3>
+                                                            <p>Simulate real-world attacks on SaaS applications to uncover
+                                                                vulnerabilities, assess data exposure risks, and ensure
+                                                                robust security controls.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -523,14 +419,10 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Secure Web Gateway Solution</h3>
-                                                            <p>We provides an intuitive solution that filters unwanted
-                                                                software and
-                                                                malware from
-                                                                user-initiated Web/Internet traffic and enforces corporate
-                                                                and
-                                                                regulatory policy
-                                                                compliance.
+                                                            <h3>IAAS Penetration Testing </h3>
+                                                            <p>Conduct security assessments on IaaS environments to identify
+                                                                misconfigurations, access issues, and vulnerabilities across
+                                                                virtual machines, networks, and storage.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -538,12 +430,10 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>GDPR & Data Privacy</h3>
-                                                            <p>Our deep portfolio enables businesses to reduce the time,
-                                                                cost and
-                                                                complexity of
-                                                                responding to various international data privacy mandates
-                                                                like GDPR.
+                                                            <h3>Kubernetes Penetration Testing</h3>
+                                                            <p>Assess Kubernetes clusters for misconfigurations, privilege
+                                                                escalations, and insecure deployments to strengthen
+                                                                container orchestration security and prevent breaches.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -551,12 +441,10 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>GDPR & Data Privacy</h3>
-                                                            <p>Our deep portfolio enables businesses to reduce the time,
-                                                                cost and
-                                                                complexity of
-                                                                responding to various international data privacy mandates
-                                                                like GDPR.
+                                                            <h3>Containers Penetration Testing</h3>
+                                                            <p>Identify vulnerabilities in container images, configurations,
+                                                                and runtimes to uncover risks, prevent privilege escalation,
+                                                                and secure containerized applications.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -564,28 +452,10 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Information Technology Service Management</h3>
-                                                            <p>Our experts ensure the right processes, people and technology
-                                                                are in
-                                                                place to meet
-                                                                business respective goals in agreement with industry
-                                                                standards like ISO
-                                                                20000
-                                                                (ITSMS) and ISO 22301 (BCMS).
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5">
-                                                        <div class="tab-content-box">
-                                                            <h3>Incidence & Emergency Response Services</h3>
-                                                            <p>Our key offerings involve and improve incident response
-                                                                preparedness plan
-                                                                and
-                                                                minimize the impact of breaches with latest threat
-                                                                intelligence
-                                                                mechanism.
+                                                            <h3>Virtualisation Penetration Testing</h3>
+                                                            <p>Evaluate virtualized environments for hypervisor
+                                                                vulnerabilities, misconfigurations, and isolation flaws to
+                                                                ensure secure and resilient virtual infrastructure.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -603,144 +473,66 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>Firewall Management and Implementation</h3>
-                                                            <p>Our Managed Firewall/UTM solution provides monitoring,
-                                                                administration &
-                                                                maintenance
-                                                                of gateway level security along with policy supervision,
-                                                                upgrades and
-                                                                patch
-                                                                deployment.
-                                                            </p>
+                                                            <h3>Operating System Security Testing</h3>
+                                                            <p>Assess server OS (Windows, Linux, UNIX) for known
+                                                                vulnerabilities, misconfigurations, and patch issues.
+                                                                Identify privilege escalation paths and access risks.</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Endpoint Security Protection</h3>
-                                                            <p>We offers a wide range of EPS solutions which integrates new
-                                                                and
-                                                                innovative
-                                                                technologies / features to protect endpoints from today’s
-                                                                advanced
-                                                                threats.
-                                                            </p>
+                                                            <h3>Application and Service Layer Testing</h3>
+                                                            <p>Evaluate hosted applications like web, database, and mail
+                                                                servers for injection flaws, insecure APIs, and data
+                                                                exposure vulnerabilities.</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>Data Leakage Protection Management</h3>
-                                                            <p>Our Data Loss Prevention (DLP) comes with Unique capture
-                                                                technology to
-                                                                safeguards
-                                                                intellectual property and protect sensitive data in-line
-                                                                with
-                                                                compliance.
-                                                            </p>
+                                                            <h3>Network and Protocol Security Testing</h3>
+                                                            <p>Analyze network-facing protocols like TCP/IP, SMB, FTP, and
+                                                                NFS for misconfigurations, weaknesses, and potential
+                                                                firewall rule bypasses.</p>
+
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>Data Encryption Solution</h3>
-                                                            <p>Our Data Encryption solution help businesses looking to
-                                                                bolster their
-                                                                data security,
-                                                                increase customer confidence and ensure compliance with data
-                                                                protection
-                                                                laws.
-                                                            </p>
+                                                            <h3>Storage Systems and Data Protection Testing</h3>
+                                                            <p>Test SAN/NAS devices and storage arrays for weak encryption,
+                                                                default credentials, improper access controls, and outdated
+                                                                firmware vulnerabilities.</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Mobile Device & BYOD Security Management</h3>
-                                                            <p>Our Mobile Device Management (MDM) Solutions allows business
-                                                                to secure
-                                                                and manage
-                                                                employee-owned (BYOD) and company-owned devices to drive
-                                                                effective team
-                                                                conversations.
-                                                            </p>
+                                                            <h3>Access Control and Identity Management Testing</h3>
+                                                            <p>Verify roles, permissions, and authentication systems.
+                                                                Evaluate MFA and privileged access to mitigate risks from
+                                                                insider threats.</p>
+
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Secure Web Gateway Solution</h3>
-                                                            <p>We provides an intuitive solution that filters unwanted
-                                                                software and
-                                                                malware from
-                                                                user-initiated Web/Internet traffic and enforces corporate
-                                                                and
-                                                                regulatory policy
-                                                                compliance.
-                                                            </p>
+                                                            <h3>Virtualization and Hypervisor Security Testing</h3>
+                                                            <p>Assess hypervisors and virtual environments for breakout
+                                                                vulnerabilities, poor resource isolation, and insecure
+                                                                virtual machine configurations.</p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5 ">
-                                                        <div class="tab-content-box">
-                                                            <h3>GDPR & Data Privacy</h3>
-                                                            <p>Our deep portfolio enables businesses to reduce the time,
-                                                                cost and
-                                                                complexity of
-                                                                responding to various international data privacy mandates
-                                                                like GDPR.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5 ">
-                                                        <div class="tab-content-box">
-                                                            <h3>GDPR & Data Privacy</h3>
-                                                            <p>Our deep portfolio enables businesses to reduce the time,
-                                                                cost and
-                                                                complexity of
-                                                                responding to various international data privacy mandates
-                                                                like GDPR.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5">
-                                                        <div class="tab-content-box">
-                                                            <h3>Information Technology Service Management</h3>
-                                                            <p>Our experts ensure the right processes, people and technology
-                                                                are in
-                                                                place to meet
-                                                                business respective goals in agreement with industry
-                                                                standards like ISO
-                                                                20000
-                                                                (ITSMS) and ISO 22301 (BCMS).
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5">
-                                                        <div class="tab-content-box">
-                                                            <h3>Incidence & Emergency Response Services</h3>
-                                                            <p>Our key offerings involve and improve incident response
-                                                                preparedness plan
-                                                                and
-                                                                minimize the impact of breaches with latest threat
-                                                                intelligence
-                                                                mechanism.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -754,11 +546,11 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>SOC/SIEM Monitoring</h3>
-                                                            <p>We provide comprehensive real-time monitoring of
-                                                                infrastructure and
-                                                                round-the clock
-                                                                response to any security Breaches that may Occur.
+                                                            <h3>Blockchain Security VAPT Testing Services</h3>
+                                                            <p>Conduct Vulnerability Assessment and Penetration Testing
+                                                                (VAPT) on blockchain networks and smart contracts to
+                                                                identify security flaws, ensuring integrity and
+                                                                trustworthiness.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -766,12 +558,12 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Rapid Threat Containment</h3>
-                                                            <p>WWe rapidly response to a security incident by locating,
-                                                                analysing and
-                                                                quarantining
-                                                                the
-                                                                affects followed by reducing the impact on the environment.
+                                                            <h3>AI based Large Language Models (LLM) Penetration Testing
+                                                                Services</h3>
+                                                            <p>Perform specialized penetration testing on AI-powered Large
+                                                                Language Models to identify vulnerabilities, data leaks, and
+                                                                manipulation risks, ensuring robust and secure AI
+                                                                deployments.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -779,12 +571,11 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>Insider Threat Monitoring</h3>
-                                                            <p>We uses a multi-tiered approach to identify the activities of
-                                                                different
-                                                                groups and
-                                                                users in order to identify, monitor and respond to any
-                                                                insider threats.
+                                                            <h3>Machine Learning Penetration Testing Services</h3>
+                                                            <p>
+                                                                Evaluate machine learning systems for adversarial attacks,
+                                                                data poisoning, and model vulnerabilities to strengthen
+                                                                security and maintain reliable AI performance.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -792,12 +583,10 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>GDPR & Data Privacy</h3>
-                                                            <p>Our deep portfolio enables businesses to reduce the time,
-                                                                cost and
-                                                                complexity of
-                                                                responding to various international data privacy mandates
-                                                                like GDPR.
+                                                            <h3>Internet of Things (IoT) Penetration Testing Services</h3>
+                                                            <p>Identify vulnerabilities in IoT devices, networks, and
+                                                                protocols through penetration testing to secure connected
+                                                                environments and prevent unauthorized access.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -805,12 +594,10 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>GDPR & Data Privacy</h3>
-                                                            <p>Our deep portfolio enables businesses to reduce the time,
-                                                                cost and
-                                                                complexity of
-                                                                responding to various international data privacy mandates
-                                                                like GDPR.
+                                                            <h3>AR-VR-XR Penetration Testing Services</h3>
+                                                            <p>Assess AR, VR, and XR platforms for security flaws, data
+                                                                privacy risks, and unauthorized access to protect immersive
+                                                                experiences and sensitive user information.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -818,14 +605,11 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Information Technology Service Management</h3>
-                                                            <p>Our experts ensure the right processes, people and technology
-                                                                are in
-                                                                place to meet
-                                                                business respective goals in agreement with industry
-                                                                standards like ISO
-                                                                20000
-                                                                (ITSMS) and ISO 22301 (BCMS).
+                                                            <h3>Metaverse Penetration Testing Services</h3>
+                                                            <p>Metaverse Penetration Testing Services Identify and mitigate
+                                                                security vulnerabilities in metaverse platforms to protect
+                                                                virtual assets, ensure data privacy, and maintain safe,
+                                                                immersive user experiences.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -833,13 +617,12 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Incidence & Emergency Response Services</h3>
-                                                            <p>Our key offerings involve and improve incident response
-                                                                preparedness plan
-                                                                and
-                                                                minimize the impact of breaches with latest threat
-                                                                intelligence
-                                                                mechanism.
+                                                            <h3>Software Defines Networks SDN Penetration Testing Services
+                                                            </h3>
+                                                            <p>Software-Defined Networks (SDN) Penetration Testing Services
+                                                                Evaluate SDN architectures for vulnerabilities in
+                                                                controllers, switches, and APIs to ensure secure, flexible,
+                                                                and resilient network operations.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -862,26 +645,17 @@
                 <div class="acc">
                     <!-- box first start -->
                     <div class="acc__card">
-                        <a href="#significance1" class="acc__title active">Vulnerability Assese. & Penet. Testing</a>
+                        <a href="#significance1" class="acc__title active">Application Vapt Services</a>
                         <div class="acc__panel" style="display:block" id="significance1">
                             <!--  -->
                             <div class="indu-moblie indu-moblie1 mhslider count-navigation">
                                 <div id="mhome-slider16" class="owl-carousel owl-theme">
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Network Architecture Design Review</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. We provide End-to-End
-                                                Information Security
-                                                Solutions and Services to help our Clients secure their
-                                                most critical business data assets and operate business in most secure
-                                                environment We
-                                                provide End-to-End Information Security Solutions and Services to help our
-                                                Clients
-                                                secure their
-                                                most critical business data assets and operate business in most secure
-                                                environment
+                                            <h3>Web Application / Website VAPT Services </h3>
+                                            <p>Web Application/Website VAPT services assess vulnerabilities like XSS, SQL
+                                                injection, and misconfigurations to enhance security and protect sensitive
+                                                user data.
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
@@ -892,19 +666,10 @@
                                     </div>
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Network Infrastructure Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. We provide End-to-End
-                                                Information Security
-                                                Solutions and Services to help our Clients secure their
-                                                most critical business data assets and operate business in most secure
-                                                environment We
-                                                provide End-to-End Information Security Solutions and Services to help our
-                                                Clients
-                                                secure their
-                                                most critical business data assets and operate business in most secure
-                                                environment
+                                            <h3>API VAPT Testing</h3>
+                                            <p>API VAPT testing detects vulnerabilities in endpoints, focusing on
+                                                authentication, data exposure, and injection flaws to ensure secure
+                                                communication and integration.
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
@@ -915,19 +680,10 @@
                                     </div>
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Web Application Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. We provide End-to-End
-                                                Information Security
-                                                Solutions and Services to help our Clients secure their
-                                                most critical business data assets and operate business in most secure
-                                                environment We
-                                                provide End-to-End Information Security Solutions and Services to help our
-                                                Clients
-                                                secure their
-                                                most critical business data assets and operate business in most secure
-                                                environment
+                                            <h3>Mobile Application VAPT Testing (Android, IOS)</h3>
+                                            <p>Mobile Application VAPT testing identifies security flaws in Android and iOS
+                                                apps, including insecure storage, weak authentication, and unauthorized data
+                                                access risks.
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
@@ -938,19 +694,39 @@
                                     </div>
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Wireless Network Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. We provide End-to-End
-                                                Information Security
-                                                Solutions and Services to help our Clients secure their
-                                                most critical business data assets and operate business in most secure
-                                                environment We
-                                                provide End-to-End Information Security Solutions and Services to help our
-                                                Clients
-                                                secure their
-                                                most critical business data assets and operate business in most secure
-                                                environment
+                                            <h3>EPR System and Business Application VAPT Testing (SAP, HANA PeopleSoft etc )
+                                            </h3>
+                                            <p>ERP and Business Application VAPT testing identifies vulnerabilities in
+                                                systems like SAP, HANA, and PeopleSoft, focusing on access control and data
+                                                integrity risks.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Thick Client & Thin Client VAPT Testing </h3>
+                                            <p>Thick and Thin Client VAPT testing identifies security flaws in client-server
+                                                applications, focusing on data handling, authentication, and communication
+                                                vulnerabilities.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Secure Code Review ( SAST ) Testing</h3>
+                                            <p>Secure Code Review (SAST) analyzes source code to detect security
+                                                vulnerabilities early, ensuring code quality and preventing potential
+                                                exploits before deployment.
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
@@ -970,24 +746,16 @@
                     <!-- box first end -->
                     <!-- box two end -->
                     <div class="acc__card">
-                        <a href="#significance2" class="acc__title">IT Security Audit, Risk & Compliance</a>
+                        <a href="#significance2" class="acc__title">Network Vapt Services</a>
                         <div class="acc__panel" id="significance2">
-                            <!--  -->
-                            <!--  -->
                             <div class="indu-moblie indu-moblie1 mhslider count-navigation">
                                 <div id="mhome-slider12" class="owl-carousel owl-theme">
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Network Architecture Design Review</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective.Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
+                                            <h3>Network VAPT Testing - Internal and External </h3>
+                                            <p>Network VAPT testing evaluates internal and external network security,
+                                                identifying vulnerabilities in devices, configurations, and protocols to
+                                                prevent unauthorized access and attacks.
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
@@ -998,16 +766,10 @@
                                     </div>
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Network Infrastructure Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective.Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
+                                            <h3>Wireless Network VAPT Testing </h3>
+                                            <p>Wireless Network VAPT testing identifies vulnerabilities in Wi-Fi networks,
+                                                including encryption weaknesses, unauthorized access points, and
+                                                configuration flaws to enhance wireless security.
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
@@ -1018,16 +780,10 @@
                                     </div>
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Web Application Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective.Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
+                                            <h3>ICS - SCADA VAPT Testing </h3>
+                                            <p>ICS-SCADA VAPT testing identifies security vulnerabilities in industrial
+                                                control and SCADA systems, focusing on network weaknesses, access controls,
+                                                and potential operational disruptions.
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
@@ -1038,16 +794,38 @@
                                     </div>
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Wireless Network Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective.Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
+                                            <h3>Network Security Architecture Review</h3>
+                                            <p>Network Security Architecture Review evaluates design and implementation of
+                                                network security controls to ensure effective protection against threats and
+                                                compliance with best practices.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Firewall VAPT Testing</h3>
+                                            <p>Firewall VAPT testing assesses firewall configurations and rules to identify
+                                                weaknesses, ensuring proper traffic filtering and protection against
+                                                unauthorized network access.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Configuration & Hardening Security Review AD IPT</h3>
+                                            <p>Configuration and Hardening Security Review for AD and IPT ensures secure
+                                                system settings, reduces vulnerabilities, and strengthens defenses against
+                                                unauthorized access and attacks.
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
@@ -1060,14 +838,13 @@
                                 <div id="navigation-count11" class="count-nav-box"></div>
                             </div>
                             <!--  -->
-                            <!--  -->
                             <a href="javascript:void(0)" class="close-acrodin"> Close</a>
                         </div>
                     </div>
                     <!-- box two end -->
                     <!-- box three end -->
                     <div class="acc__card">
-                        <a href="#significance3" class="acc__title">Managed IT Security Solutions</a>
+                        <a href="#significance3" class="acc__title">Cloud Vapt Services</a>
                         <div class="acc__panel" id="significance3">
                             <!--  -->
                             <!--  -->
@@ -1075,16 +852,10 @@
                                 <div id="mhome-slider13" class="owl-carousel owl-theme">
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Network Architecture Design Review</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
+                                            <h3>AWS Cloud Security Penetration Testing</h3>
+                                            <p>AWS Cloud Security Penetration Testing identifies vulnerabilities in AWS
+                                                environments, including misconfigurations, weak access controls, and
+                                                insecure services to enhance cloud security posture.
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
@@ -1095,16 +866,9 @@
                                     </div>
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Network Infrastructure Penetration Testing</h3>
-                                            <p>Identifies and exploits network infrastructure vulnerabilities and validate
-                                                result
-                                                with efficiently evaluate a security posture. Identifies and exploits
-                                                network
-                                                infrastructure vulnerabilities and validate result
-                                                with efficiently evaluate a security posture. Identifies and exploits
-                                                network
-                                                infrastructure vulnerabilities and validate result
-                                                with efficiently evaluate a security posture.
+                                            <h3>Azure (Office 365, AD) Penetration Testing</h3>
+                                            <p>Identify and exploit vulnerabilities in Office 365 and Azure Active Directory
+                                                to assess security posture and strengthen cloud infrastructure defenses
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
@@ -1115,16 +879,10 @@
                                     </div>
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Web Application Penetration Testing</h3>
-                                            <p>Identifies and exploits network infrastructure vulnerabilities and validate
-                                                result
-                                                with efficiently evaluate a security posture. Identifies and exploits
-                                                network
-                                                infrastructure vulnerabilities and validate result
-                                                with efficiently evaluate a security posture. Identifies and exploits
-                                                network
-                                                infrastructure vulnerabilities and validate result
-                                                with efficiently evaluate a security posture.
+                                            <h3>Google Cloud Security Penetration Testing</h3>
+                                            <p>Assess and exploit security gaps in Google Cloud environments to evaluate
+                                                configurations, detect vulnerabilities, and enhance overall cloud security
+                                                posture.
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
@@ -1135,16 +893,80 @@
                                     </div>
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Wireless Network Penetration Testing</h3>
-                                            <p>Identifies and exploits network infrastructure vulnerabilities and validate
-                                                result
-                                                with efficiently evaluate a security posture. Identifies and exploits
-                                                network
-                                                infrastructure vulnerabilities and validate result
-                                                with efficiently evaluate a security posture. Identifies and exploits
-                                                network
-                                                infrastructure vulnerabilities and validate result
-                                                with efficiently evaluate a security posture.
+                                            <h3>Oracle Cloud Security Penetration Testing</h3>
+                                            <p>Evaluate and test Oracle Cloud infrastructure for misconfigurations,
+                                                vulnerabilities, and access controls to enhance security and ensure
+                                                compliance.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>SAAS Penetration Testing </h3>
+                                            <p>Simulate real-world attacks on SaaS applications to uncover vulnerabilities,
+                                                assess data exposure risks, and ensure robust security controls.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>IAAS Penetration Testing </h3>
+                                            <p>Conduct security assessments on IaaS environments to identify
+                                                misconfigurations, access issues, and vulnerabilities across virtual
+                                                machines, networks, and storage.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Kubernetes Penetration Testing</h3>
+                                            <p>Assess Kubernetes clusters for misconfigurations, privilege escalations, and
+                                                insecure deployments to strengthen container orchestration security and
+                                                prevent breaches.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Containers Penetration Testing</h3>
+                                            <p>Identify vulnerabilities in container images, configurations, and runtimes to
+                                                uncover risks, prevent privilege escalation, and secure containerized
+                                                applications.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Virtualisation Penetration Testing</h3>
+                                            <p>Evaluate virtualized environments for hypervisor vulnerabilities,
+                                                misconfigurations, and isolation flaws to ensure secure and resilient
+                                                virtual infrastructure.
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
@@ -1164,7 +986,7 @@
                     <!-- box three end -->
                     <!-- box four end -->
                     <div class="acc__card">
-                        <a href="#significance4" class="acc__title">Digital Forensic & Cyber Fraud Manag.</a>
+                        <a href="#significance4" class="acc__title">Server And Storage Vapt Services.</a>
                         <div class="acc__panel" id="significance4">
                             <!--  -->
                             <!--  -->
@@ -1172,17 +994,9 @@
                                 <div id="mhome-slider14" class="owl-carousel owl-theme">
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Network Architecture Design Review</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
+                                            <h3>Application and Service Layer Testing</h3>
+                                            <p>Evaluate hosted applications like web, database, and mail servers for
+                                                injection flaws, insecure APIs, and data exposure vulnerabilities.</p>
                                             <!--  -->
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
@@ -1192,17 +1006,9 @@
                                     </div>
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Network Infrastructure Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
+                                            <h3>Application and Service Layer Testing</h3>
+                                            <p>Evaluate hosted applications like web, database, and mail servers for
+                                                injection flaws, insecure APIs, and data exposure vulnerabilities.</p>
                                             <!--  -->
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
@@ -1212,17 +1018,10 @@
                                     </div>
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Web Application Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
+                                            <h3>Network and Protocol Security Testing</h3>
+                                            <p>Analyze network-facing protocols like TCP/IP, SMB, FTP, and NFS for
+                                                misconfigurations, weaknesses, and potential firewall rule bypasses.</p>
+
                                             <!--  -->
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
@@ -1232,17 +1031,34 @@
                                     </div>
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Wireless Network Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
+                                            <h3>Storage Systems and Data Protection Testing</h3>
+                                            <p>Test SAN/NAS devices and storage arrays for weak encryption, default
+                                                credentials, improper access controls, and outdated firmware
+                                                vulnerabilities.</p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Access Control and Identity Management Testing</h3>
+                                            <p>Verify roles, permissions, and authentication systems. Evaluate MFA and
+                                                privileged access to mitigate risks from insider threats.</p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Virtualization and Hypervisor Security Testing</h3>
+                                            <p>Assess hypervisors and virtual environments for breakout vulnerabilities,
+                                                poor resource isolation, and insecure virtual machine configurations.</p>
                                             <!--  -->
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
@@ -1261,7 +1077,7 @@
                     <!-- box four end -->
                     <!-- box 5 end -->
                     <div class="acc__card">
-                        <a href="#significance5" class="acc__title">SOC as a Service</a>
+                        <a href="#significance5" class="acc__title">Digital Technologies Penetration Testing Services</a>
                         <div class="acc__panel" id="significance5">
                             <!--  -->
                             <!--  -->
@@ -1269,16 +1085,10 @@
                                 <div id="mhome-slider15" class="owl-carousel owl-theme">
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Network Architecture Design Review</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
+                                            <h3>Blockchain Security VAPT Testing Services</h3>
+                                            <p>Conduct Vulnerability Assessment and Penetration Testing (VAPT) on blockchain
+                                                networks and smart contracts to identify security flaws, ensuring integrity
+                                                and trustworthiness.
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
@@ -1289,16 +1099,11 @@
                                     </div>
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Network Infrastructure Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
+                                            <h3>AI based Large Language Models (LLM) Penetration Testing
+                                                Services</h3>
+                                            <p>Perform specialized penetration testing on AI-powered Large Language Models
+                                                to identify vulnerabilities, data leaks, and manipulation risks, ensuring
+                                                robust and secure AI deployments.
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
@@ -1309,16 +1114,11 @@
                                     </div>
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Web Application Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
+                                            <h3>Machine Learning Penetration Testing Services</h3>
+                                            <p>
+                                                Evaluate machine learning systems for adversarial attacks, data poisoning,
+                                                and model vulnerabilities to strengthen security and maintain reliable AI
+                                                performance.
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
@@ -1329,16 +1129,53 @@
                                     </div>
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Wireless Network Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
+                                            <h3>Internet of Things (IoT) Penetration Testing Services</h3>
+                                            <p>Identify vulnerabilities in IoT devices, networks, and protocols through
+                                                penetration testing to secure connected environments and prevent
+                                                unauthorized access.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>AR-VR-XR Penetration Testing Services</h3>
+                                            <p>Assess AR, VR, and XR platforms for security flaws, data privacy risks, and
+                                                unauthorized access to protect immersive experiences and sensitive user
+                                                information.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Metaverse Penetration Testing Services</h3>
+                                            <p>Metaverse Penetration Testing Services Identify and mitigate security
+                                                vulnerabilities in metaverse platforms to protect virtual assets, ensure
+                                                data privacy, and maintain safe, immersive user experiences.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Software Defines Networks SDN Penetration Testing Services
+                                            </h3>
+                                            <p>Software-Defined Networks (SDN) Penetration Testing Services Evaluate SDN
+                                                architectures for vulnerabilities in controllers, switches, and APIs to
+                                                ensure secure, flexible, and resilient network operations.
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
@@ -1659,7 +1496,8 @@
                     <div class="item">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/managed-it-services.webp') }}">
+                                <div class="cn-hover-img"> <img
+                                        src="{{ asset('assets/images/managed-it-services.webp') }}">
                                 </div>
                                 <div class="cn-content">
                                     <p>Preferred Service Partner" for corporate clients with array of customized security
@@ -1680,7 +1518,8 @@
                     <div class="item">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/forensic-seervices.webp') }}">
+                                <div class="cn-hover-img"> <img
+                                        src="{{ asset('assets/images/forensic-seervices.webp') }}">
                                 </div>
                                 <div class="cn-content">
                                     <p>Identify and resolve Ecrime incidents that adversely impact organizations with
@@ -3115,7 +2954,8 @@
                     <div class="item">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/forensic-seervices.webp') }}">
+                                <div class="cn-hover-img"> <img
+                                        src="{{ asset('assets/images/forensic-seervices.webp') }}">
                                 </div>
                                 <div class="cn-content">
                                     <p>Identify and resolve Ecrime incidents that adversely impact organizations with
@@ -3179,7 +3019,8 @@
                     <div class="item">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/managed-it-services.webp') }}">
+                                <div class="cn-hover-img"> <img
+                                        src="{{ asset('assets/images/managed-it-services.webp') }}">
                                 </div>
                                 <div class="cn-content">
                                     <p>Preferred Service Partner" for corporate clients with array of customized security
@@ -3273,7 +3114,8 @@
                                         </div>
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="{{ asset('assets/images/IT-Security.webp') }}" alt="">
+                                                <img src="{{ asset('assets/images/IT-Security.webp') }}"
+                                                    alt="">
                                             </div>
                                         </div>
                                         <div class="itmes">
@@ -3364,7 +3206,8 @@
                                         </div>
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="{{ asset('assets/images/IT-Security.webp') }}" alt="">
+                                                <img src="{{ asset('assets/images/IT-Security.webp') }}"
+                                                    alt="">
                                             </div>
                                         </div>
                                         <div class="itmes">
@@ -3395,7 +3238,8 @@
                                         </div>
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="{{ asset('assets/images/IT-Security.webp') }}" alt="">
+                                                <img src="{{ asset('assets/images/IT-Security.webp') }}"
+                                                    alt="">
                                             </div>
                                         </div>
                                         <div class="itmes">
@@ -3427,7 +3271,8 @@
                                         </div>
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="{{ asset('assets/images/IT-Security.webp') }}" alt="">
+                                                <img src="{{ asset('assets/images/IT-Security.webp') }}"
+                                                    alt="">
                                             </div>
                                         </div>
                                         <div class="itmes">
@@ -3699,7 +3544,8 @@
                         <a href="">
                             <div class="tdw-box row">
                                 <div class="col-md-4 pd0">
-                                    <div class="tdw-img"> <img src="{{ asset('assets/images/cyber-security-pene.webp') }}">
+                                    <div class="tdw-img"> <img
+                                            src="{{ asset('assets/images/cyber-security-pene.webp') }}">
                                     </div>
                                 </div>
                                 <div class="col-md-8">
@@ -3718,7 +3564,8 @@
                     <div class="col-md-4 mb-3">
                         <div class="tdw-box row">
                             <div class="col-md-4 pd0">
-                                <div class="tdw-img"> <img src="{{ asset('assets/images/Security-oprations-4.webp') }}">
+                                <div class="tdw-img"> <img
+                                        src="{{ asset('assets/images/Security-oprations-4.webp') }}">
                                 </div>
                             </div>
                             <div class="col-md-8">
@@ -3770,7 +3617,8 @@
                     <div class="col-md-4 mb-3">
                         <div class="tdw-box row">
                             <div class="col-md-4 pd0">
-                                <div class="tdw-img"> <img src="{{ asset('assets/images/Security-oprations-4.webp') }}">
+                                <div class="tdw-img"> <img
+                                        src="{{ asset('assets/images/Security-oprations-4.webp') }}">
                                 </div>
                             </div>
                             <div class="col-md-8">
@@ -3802,7 +3650,8 @@
                     <div class="col-md-4 mb-3">
                         <div class="tdw-box row">
                             <div class="col-md-4 pd0">
-                                <div class="tdw-img"> <img src="{{ asset('assets/images/it-security-opration9.webp') }}">
+                                <div class="tdw-img"> <img
+                                        src="{{ asset('assets/images/it-security-opration9.webp') }}">
                                 </div>
                             </div>
                             <div class="col-md-8">
@@ -3988,7 +3837,8 @@
                         <div class="item">
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
-                                    <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-security-pene.webp') }}">
+                                    <div class="ftd-img"> <img
+                                            src="{{ asset('assets/images/cyber-security-pene.webp') }}">
                                     </div>
                                     <div class="ftd-header">
                                         <h3>Cyber Security and Penetration Testing</h3>
@@ -4003,7 +3853,8 @@
                         <div class="item">
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
-                                    <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-security-pene.webp') }}">
+                                    <div class="ftd-img"> <img
+                                            src="{{ asset('assets/images/cyber-security-pene.webp') }}">
                                     </div>
                                     <div class="ftd-header">
                                         <h3>Cyber Security and Penetration Testing</h3>
@@ -4018,7 +3869,8 @@
                         <div class="item">
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
-                                    <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-security-pene.webp') }}">
+                                    <div class="ftd-img"> <img
+                                            src="{{ asset('assets/images/cyber-security-pene.webp') }}">
                                     </div>
                                     <div class="ftd-header">
                                         <h3>Cyber Security and Penetration Testing</h3>
@@ -4042,7 +3894,8 @@
                         <div class="item">
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
-                                    <div class="ftd-img"> <img src="{{ asset('assets/images/Security-oprations-4.webp') }}">
+                                    <div class="ftd-img"> <img
+                                            src="{{ asset('assets/images/Security-oprations-4.webp') }}">
                                     </div>
                                     <div class="ftd-header">
                                         <h3>Security Operations and Management</h3>
@@ -4057,7 +3910,8 @@
                         <div class="item">
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
-                                    <div class="ftd-img"> <img src="{{ asset('assets/images/Security-oprations-4.webp') }}">
+                                    <div class="ftd-img"> <img
+                                            src="{{ asset('assets/images/Security-oprations-4.webp') }}">
                                     </div>
                                     <div class="ftd-header">
                                         <h3>Security Operations and Management</h3>
@@ -4072,7 +3926,8 @@
                         <div class="item">
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
-                                    <div class="ftd-img"> <img src="{{ asset('assets/images/Security-oprations-4.webp') }}">
+                                    <div class="ftd-img"> <img
+                                            src="{{ asset('assets/images/Security-oprations-4.webp') }}">
                                     </div>
                                     <div class="ftd-header">
                                         <h3>Security Operations and Management</h3>
@@ -4096,7 +3951,8 @@
                         <div class="item">
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
-                                    <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-forensic-5.webp') }}">
+                                    <div class="ftd-img"> <img
+                                            src="{{ asset('assets/images/cyber-forensic-5.webp') }}">
                                     </div>
                                     <div class="ftd-header">
                                         <h3>Cyber Forensic and Fraud Management</h3>
@@ -4111,7 +3967,8 @@
                         <div class="item">
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
-                                    <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-forensic-5.webp') }}">
+                                    <div class="ftd-img"> <img
+                                            src="{{ asset('assets/images/cyber-forensic-5.webp') }}">
                                     </div>
                                     <div class="ftd-header">
                                         <h3>Cyber Forensic and Fraud Management</h3>
@@ -4126,7 +3983,8 @@
                         <div class="item">
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
-                                    <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-forensic-5.webp') }}">
+                                    <div class="ftd-img"> <img
+                                            src="{{ asset('assets/images/cyber-forensic-5.webp') }}">
                                     </div>
                                     <div class="ftd-header">
                                         <h3>Cyber Forensic and Fraud Management</h3>
@@ -4244,32 +4102,35 @@
             <div class="container">
                 <div class="row">
                     <div id="client-logo" class="owl-carousel owl-theme">
-                        <div class="item"> <img src="{{ asset('assets/images/clients/eccoincil-partnerlogo.webp') }}"
+                        <div class="item"> <img
+                                src="{{ asset('assets/images/clients/eccoincil-partnerlogo.webp') }}"
                                 class="img-fluid" alt="">
                         </div>
                         <div class="item"> <img src="{{ asset('assets/images/clients/pecb-partnerlogo.webp') }}"
                                 class="img-fluid" alt="">
                         </div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/mcafee.webp') }}" class="img-fluid"
-                                alt=""></div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/being-cert-logopartner.webp') }}"
+                        <div class="item"><img src="{{ asset('assets/images/clients/mcafee.webp') }}"
+                                class="img-fluid" alt=""></div>
+                        <div class="item"><img
+                                src="{{ asset('assets/images/clients/being-cert-logopartner.webp') }}"
                                 class="img-fluid" alt="">
                         </div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/quick-heal.webp') }}" class="img-fluid"
-                                alt=""></div>
+                        <div class="item"><img src="{{ asset('assets/images/clients/quick-heal.webp') }}"
+                                class="img-fluid" alt=""></div>
                         <div class="item"><img src="{{ asset('assets/images/clients/shophospartnerlogo.webp') }}"
                                 alt="Owl Image">
                         </div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/symantec.webp') }}" class="img-fluid"
-                                alt=""></div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/tenable.webp') }}" class="img-fluid"
-                                alt=""></div>
+                        <div class="item"><img src="{{ asset('assets/images/clients/symantec.webp') }}"
+                                class="img-fluid" alt=""></div>
+                        <div class="item"><img src="{{ asset('assets/images/clients/tenable.webp') }}"
+                                class="img-fluid" alt=""></div>
                         <div class="item"><img src="{{ asset('assets/images/clients/kesperskypartner.webp') }}"
                                 class="img-fluid" alt="">
                         </div>
                         <div class="item"><img src="{{ asset('assets/images/clients/acunetix-partner-logo.webp') }}"
                                 alt="Owl Image"></div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/seqrite.webp') }}" alt="Owl Image">
+                        <div class="item"><img src="{{ asset('assets/images/clients/seqrite.webp') }}"
+                                alt="Owl Image">
                         </div>
                         <div class="item"><img src="{{ asset('assets/images/clients/inspira-partnerlogo.webp') }}"
                                 class="img-fluid" alt="">
@@ -4314,7 +4175,8 @@
                                         </div>
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="{{ asset('assets/images/IT-Security.webp') }}" alt="">
+                                                <img src="{{ asset('assets/images/IT-Security.webp') }}"
+                                                    alt="">
                                             </div>
                                         </div>
                                         <div class="itmes">
@@ -4345,7 +4207,8 @@
                                         </div>
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="{{ asset('assets/images/IT-Security.webp') }}" alt="">
+                                                <img src="{{ asset('assets/images/IT-Security.webp') }}"
+                                                    alt="">
                                             </div>
                                         </div>
                                         <div class="itmes">
@@ -4438,7 +4301,8 @@
                                         </div>
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="{{ asset('assets/images/IT-Security.webp') }}" alt="">
+                                                <img src="{{ asset('assets/images/IT-Security.webp') }}"
+                                                    alt="">
                                             </div>
                                         </div>
                                         <div class="itmes">
@@ -4470,7 +4334,8 @@
                                         </div>
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="{{ asset('assets/images/IT-Security.webp') }}" alt="">
+                                                <img src="{{ asset('assets/images/IT-Security.webp') }}"
+                                                    alt="">
                                             </div>
                                         </div>
                                         <div class="itmes">
@@ -4722,8 +4587,8 @@
                                 <a href="#partnter2">
                                     <div class="team-details">
                                         <div class="team-img part-bg2">
-                                            <img src="{{ asset('assets/images/Industries/Education.webp') }}" alt=""
-                                                title="">
+                                            <img src="{{ asset('assets/images/Industries/Education.webp') }}"
+                                                alt="" title="">
                                             <h3 class="team-name">Education</h3>
                                         </div>
                                         <div class="team-bottom">
@@ -4755,8 +4620,8 @@
                                 <a href="#partnter4">
                                     <div class="team-details">
                                         <div class="team-img part-bg4">
-                                            <img src="{{ asset('assets/images/Industries/Healthcare.webp') }}" alt=""
-                                                title="">
+                                            <img src="{{ asset('assets/images/Industries/Healthcare.webp') }}"
+                                                alt="" title="">
                                             <h3 class="team-name">Healthcare</h3>
                                         </div>
                                         <div class="team-bottom">
@@ -4771,8 +4636,8 @@
                                 <a href="#partnter5">
                                     <div class="team-details">
                                         <div class="team-img part-bg5">
-                                            <img src="{{ asset('assets/images/Industries/Retail-E-Commerce.webp') }}" alt=""
-                                                title="">
+                                            <img src="{{ asset('assets/images/Industries/Retail-E-Commerce.webp') }}"
+                                                alt="" title="">
                                             <h3 class="team-name">Retail <br>&amp; E-Commerce</h3>
                                         </div>
                                         <div class="team-bottom">
@@ -4787,8 +4652,8 @@
                                 <a href="#partnter6">
                                     <div class="team-details">
                                         <div class="team-img part-bg6">
-                                            <img src="{{ asset('assets/images/Industries/Power-Energy.webp') }}" alt=""
-                                                title="">
+                                            <img src="{{ asset('assets/images/Industries/Power-Energy.webp') }}"
+                                                alt="" title="">
                                             <h3 class="team-name">Power &amp; Energy</h3>
                                         </div>
                                         <div class="team-bottom">
@@ -4819,8 +4684,8 @@
                                 <a href="#partnter8">
                                     <div class="team-details">
                                         <div class="team-img part-bg8">
-                                            <img src="{{ asset('assets/images/Industries/Utilities.webp') }}" alt=""
-                                                title="">
+                                            <img src="{{ asset('assets/images/Industries/Utilities.webp') }}"
+                                                alt="" title="">
                                             <h3 class="team-name">Utilities</h3>
                                         </div>
                                         <div class="team-bottom">
@@ -4883,8 +4748,8 @@
                                 <a href="#partnter12">
                                     <div class="team-details">
                                         <div class="team-img part-bg12">
-                                            <img src="{{ asset('assets/images/Industries/RealEstate.webp') }}" alt=""
-                                                title="">
+                                            <img src="{{ asset('assets/images/Industries/RealEstate.webp') }}"
+                                                alt="" title="">
                                             <h3 class="team-name">Real Estate</h3>
                                         </div>
                                         <div class="team-bottom">
@@ -5203,7 +5068,8 @@
                                 <h4>Utilities</h4>
                                 <ul>
                                     <li>
-                                        <img src="{{ asset('assets/images/clients/ncdc-client-logo.webp') }}" alt="">
+                                        <img src="{{ asset('assets/images/clients/ncdc-client-logo.webp') }}"
+                                            alt="">
                                     </li>
                                     <li>
                                         <img src="assets/images/clients/aic.webp" alt="">
@@ -5442,8 +5308,9 @@
                             <div class="ceh-testo-box" data-target="client-testimonials-popup1">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <div class="ceh-testo-image"><img src="{{ asset('assets/images/testo.webp') }}"
-                                                class="img-fluid" alt="t1">
+                                        <div class="ceh-testo-image"><img
+                                                src="{{ asset('assets/images/testo.webp') }}" class="img-fluid"
+                                                alt="t1">
                                         </div>
                                     </div>
                                     <div class="col-md-8">
@@ -5474,8 +5341,9 @@
                             <div class="ceh-testo-box" data-target="client-testimonials-popup2">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <div class="ceh-testo-image"><img src="{{ asset('assets/images/testo.webp') }}"
-                                                class="img-fluid" alt="t1">
+                                        <div class="ceh-testo-image"><img
+                                                src="{{ asset('assets/images/testo.webp') }}" class="img-fluid"
+                                                alt="t1">
                                         </div>
                                     </div>
                                     <div class="col-md-8">
@@ -5506,8 +5374,9 @@
                             <div class="ceh-testo-box" data-target="client-testimonials-popup3">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <div class="ceh-testo-image"><img src="{{ asset('assets/images/testo.webp') }}"
-                                                class="img-fluid" alt="t1">
+                                        <div class="ceh-testo-image"><img
+                                                src="{{ asset('assets/images/testo.webp') }}" class="img-fluid"
+                                                alt="t1">
                                         </div>
                                     </div>
                                     <div class="col-md-8">
@@ -5538,8 +5407,9 @@
                             <div class="ceh-testo-box" data-target="client-testimonials-popup4">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <div class="ceh-testo-image"><img src="{{ asset('assets/images/testo.webp') }}"
-                                                class="img-fluid" alt="t1">
+                                        <div class="ceh-testo-image"><img
+                                                src="{{ asset('assets/images/testo.webp') }}" class="img-fluid"
+                                                alt="t1">
                                         </div>
                                     </div>
                                     <div class="col-md-8">
@@ -5578,7 +5448,8 @@
         @include('frontend.layouts.mobile-components.m-testimonials')
 
         <!-- Our Customers end -->
-        <section class="core-domain-section-blog mhspace mhspace1" id="mhome-div11" style="background-color: #e5e8ee;">
+        <section class="core-domain-section-blog mhspace mhspace1" id="mhome-div11"
+            style="background-color: #e5e8ee;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 cn-title">
@@ -6176,10 +6047,12 @@
                     </div>
                     <div class="col-md-4">
                         <div class="box-wrappercareer12">
-                            <div class="box-image-career123"> <img src="{{ asset('assets/images/career-img-png.webp') }}"
-                                    class="img-fluid-career12" alt=""> </div>
+                            <div class="box-image-career123"> <img
+                                    src="{{ asset('assets/images/career-img-png.webp') }}" class="img-fluid-career12"
+                                    alt=""> </div>
                             <div class="box-button-career">
-                                <a href="https://www.cybarwind.com/new-demo/asaraf/codec/careers.php" target="_blank">Join
+                                <a href="https://www.cybarwind.com/new-demo/asaraf/codec/careers.php"
+                                    target="_blank">Join
                                     Our
                                     Team</a>
                             </div>
@@ -6190,8 +6063,8 @@
         <!-- career end -->
         <section>
             <div class="coach">
-                <div class="coach-img"> <img src="{{ asset('assets/images/career-opportunities.webp') }}" class="img-fluid"
-                        alt="coach image">
+                <div class="coach-img"> <img src="{{ asset('assets/images/career-opportunities.webp') }}"
+                        class="img-fluid" alt="coach image">
                 </div>
                 <div class="coach-text">
                     <h3>Career Opportunities. <br></h3>
@@ -6199,8 +6072,8 @@
                     <p>We bring together the best and the brightest in the industry to solve transformative cases with Data.
                     </p>
                     <div class="wpb_wrapper bdr-top1 pt-4 mt-4">
-                        <p class="text-center"><a class="chevron chevron link-more aos-init aos-animate" style="color:#fff;"
-                                href="javascript:void(0)">Browse Cybar Wind Job </a></p>
+                        <p class="text-center"><a class="chevron chevron link-more aos-init aos-animate"
+                                style="color:#fff;" href="javascript:void(0)">Browse Cybar Wind Job </a></p>
                     </div>
                 </div>
             </div>
@@ -6247,7 +6120,7 @@
     </script> --}}
 
     <script>
-        $('.close-acrodin').click(function (e) {
+        $('.close-acrodin').click(function(e) {
             e.preventDefault();
             var $panel = $(this).closest('.acc__panel');
             $panel.slideUp();
@@ -6306,10 +6179,10 @@
         });
     </script>
     <script>
-        $('.cn-content').click(function () {
+        $('.cn-content').click(function() {
             $(this).addClass('height');
         });
-        $('.cn-hover-img').click(function () {
+        $('.cn-hover-img').click(function() {
             $('.cn-content').removeClass('height');
         });
     </script>
@@ -6325,28 +6198,28 @@
         }
 
         // Open the corresponding popup when clicking on elements with the class "popup-btn"
-        $(".ceh-testo-box").click(function (e) {
+        $(".ceh-testo-box").click(function(e) {
             e.preventDefault();
             var target = $(this).data('target');
             openPopup(target);
         });
 
         // Close the popup when clicking on elements with the class "close_1"
-        $(".close_1").click(function (e) {
+        $(".close_1").click(function(e) {
             e.preventDefault();
             var target = $(this).closest('.popup').attr('id');
             closePopup(target);
         });
 
         // Close the popup when clicking outside the popup
-        $(".popup").click(function (event) {
+        $(".popup").click(function(event) {
             if ($(event.target).is('.popup')) {
                 var target = $(this).attr('id');
                 closePopup(target);
             }
         });
 
-        $('.close_1, .popup').on('click', function () {
+        $('.close_1, .popup').on('click', function() {
             $('.testo-popup-body').scrollTop(0);
         })
     </script>
@@ -6375,7 +6248,7 @@
         if (!isMobile()) {
             function scrollToFirstElement(className, offset = 100) {
                 document.querySelectorAll(`.${className}`).forEach(element => {
-                    element.addEventListener("click", function (e) {
+                    element.addEventListener("click", function(e) {
                         e.preventDefault();
                         setTimeout(() => {
                             const firstElement = document.querySelector(`.${className}`);
