@@ -180,8 +180,7 @@
                             <li><a class="scr-tabs1" href="#tab12">Network Vapt Services</a></li>
                             <li><a class="scr-tabs1" href="#tab13">Cloud Vapt Services </a></li>
                             <li><a class="scr-tabs1" href="#tab14"> Server And Storage Vapt Services </a></li>
-                            <li><a class="scr-tabs1" href="#tab15"> Digital Technologies Penetration Testing Services </a>
-                            </li>
+                            <li><a class="scr-tabs1" href="#tab15"> Digital Technologies Penetration Testing Services </a></li>
                         </ul>
                         <!-- END tabs-nav -->
                         <div id="tabs-content">
@@ -1577,7 +1576,7 @@
             </div>
             <div class="container desktop-view">
                 <div class="row">
-                    <div class="cn-tabs">
+                    <div class="cn-tabs" style="margin-bottom: 40px">
                         <ul id="tabs-nav" class="home-tabs">
                             <li><a class="scr-tabs" href="#tab1">Vulnerability Assesement & Penetration Testing</a></li>
                             <li><a class="scr-tabs" href="#tab2">IT Security Audit, Risk & Compliance</a></li>
@@ -2265,6 +2264,695 @@
                     </div>
                     <!-- END tabs-content -->
                 </div>
+                <div class="row">
+                    <div class="cn-tabs" style="margin-bottom: 20px">
+                        <ul id="tabs-nav_1" class="home-tabs">
+                            <li><a class="scr-tabs_1" href="#tab1_1">Vulnerability Assesement & Penetration Testing</a></li>
+                            <li><a class="scr-tabs_1" href="#tab2_1">IT Security Audit, Risk & Compliance</a></li>
+                            <li><a class="scr-tabs_1" href="#tab3_1">Managed IT Security Solutions </a></li>
+                            <li><a class="scr-tabs_1" href="#tab4_1">Digital Forensic & Cyber Fraud Management </a></li>
+                            <li><a class="scr-tabs_1" href="#tab5_1">SOC (Security Operations Center) as a Service </a></li>
+                        </ul>
+                        <!-- END tabs-nav -->
+                        <div id="tabs-content">
+                            <div id="tab1_1" class="tab-content_1">
+                                <div class="container mobilewidth">
+                                    <!-- box start -->
+                                    <div class="row">
+                                        <div class="home-slider home-slider-spacing">
+                                            <div id="home-slider2_6" class="owl-carousel owl-theme ">
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>Network Architecture Design Review</h3>
+                                                            <p>Security focused evaluation of your network-based computing
+                                                                environment,
+                                                                from both
+                                                                an architecture and operational perspective.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Network Infrastructure Penetration Testing</h3>
+                                                            <p>Identifies and exploits network infrastructure
+                                                                vulnerabilities
+                                                                and
+                                                                validate result
+                                                                with efficiently evaluate a security posture.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>Web Application Penetration Testing</h3>
+                                                            <p>Our comprehensive security assessment framework focuses to
+                                                                evaluate and
+                                                                analyse
+                                                                existing vulnerabilities for web-based applications.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>Wireless Network Penetration Testing</h3>
+                                                            <p>We simulates real-world attacks to provide a real time
+                                                                assessment
+                                                                of
+                                                                vulnerabilities
+                                                                and threats to your wireless network infrastructure.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Mobile Application Penetration Testing</h3>
+                                                            <p>We go beyond looking at API and web vulnerabilities to
+                                                                examine
+                                                                the risk
+                                                                of the
+                                                                application on a mobile platform.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Source Code Review</h3>
+                                                            <p>Identifies and locate security risk and misconfigurations
+                                                                that
+                                                                have been
+                                                                ignored
+                                                                during SDLC process and can help invaders to abstract key
+                                                                information.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Source Code Review</h3>
+                                                            <p>Identifies and locate security risk and misconfigurations
+                                                                that
+                                                                have been
+                                                                ignored
+                                                                during SDLC process and can help invaders to abstract key
+                                                                information.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Source Code Review</h3>
+                                                            <p>Identifies and locate security risk and misconfigurations
+                                                                that
+                                                                have been
+                                                                ignored
+                                                                during SDLC process and can help invaders to abstract key
+                                                                information.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- box end -->
+                                </div>
+                            </div>
+                            <div id="tab2_1" class="tab-content_1">
+                                <div class="container  mobilewidth">
+                                    <!-- box start -->
+                                    <div class="row">
+                                        <div class="home-slider home-slider-spacing">
+                                            <div id="home-slider2_7" class="owl-carousel owl-theme ">
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>IT Risk, Compliance & Governance</h3>
+                                                            <p>We evaluate current IT governance, risk management and
+                                                                compliance structures for process maturity and design
+                                                                Effectiveness.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Information Security Management Systems</h3>
+                                                            <p>We demonstrate business is compliant and is taking all
+                                                                necessary measures
+                                                                to secure
+                                                                IT information in compliance with the ISO 27001 (ISMS)
+                                                                standard.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>GDPR & Data Privacy</h3>
+                                                            <p>Our deep portfolio enables businesses to reduce the time,
+                                                                cost and
+                                                                complexity of
+                                                                responding to various international data privacy mandates
+                                                                like GDPR.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>GDPR & Data Privacy</h3>
+                                                            <p>Our deep portfolio enables businesses to reduce the time,
+                                                                cost and
+                                                                complexity of
+                                                                responding to various international data privacy mandates
+                                                                like GDPR.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Information Technology Service Management</h3>
+                                                            <p>Our experts ensure the right processes, people and technology
+                                                                are in
+                                                                place to meet
+                                                                business respective goals in agreement with industry
+                                                                standards like ISO
+                                                                20000
+                                                                (ITSMS) and ISO 22301 (BCMS).
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Incidence & Emergency Response Services</h3>
+                                                            <p>Our key offerings involve and improve incident response
+                                                                preparedness plan
+                                                                and
+                                                                minimize the impact of breaches with latest threat
+                                                                intelligence
+                                                                mechanism.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>GDPR & Data Privacy</h3>
+                                                            <p>Our deep portfolio enables businesses to reduce the time,
+                                                                cost and
+                                                                complexity of
+                                                                responding to various international data privacy mandates
+                                                                like GDPR.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>GDPR & Data Privacy</h3>
+                                                            <p>Our deep portfolio enables businesses to reduce the time,
+                                                                cost and
+                                                                complexity of
+                                                                responding to various international data privacy mandates
+                                                                like GDPR.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Information Technology Service Management</h3>
+                                                            <p>Our experts ensure the right processes, people and technology
+                                                                are in
+                                                                place to meet
+                                                                business respective goals in agreement with industry
+                                                                standards like ISO
+                                                                20000
+                                                                (ITSMS) and ISO 22301 (BCMS).
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Incidence & Emergency Response Services</h3>
+                                                            <p>Our key offerings involve and improve incident response
+                                                                preparedness plan
+                                                                and
+                                                                minimize the impact of breaches with latest threat
+                                                                intelligence
+                                                                mechanism.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- box end -->
+                                </div>
+                            </div>
+                            <div id="tab3_1" class="tab-content_1">
+                                <div class="container  mobilewidth">
+                                    <!-- box start -->
+                                    <div class="row">
+                                        <div class="home-slider home-slider-spacing">
+                                            <div id="home-slider2_8" class="owl-carousel owl-theme ">
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>Firewall Management and Implementation</h3>
+                                                            <p>Our Managed Firewall/UTM solution provides monitoring,
+                                                                administration &
+                                                                maintenance
+                                                                of gateway level security along with policy supervision,
+                                                                upgrades and
+                                                                patch
+                                                                deployment.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Endpoint Security Protection</h3>
+                                                            <p>We offers a wide range of EPS solutions which integrates new
+                                                                and
+                                                                innovative
+                                                                technologies / features to protect endpoints from today’s
+                                                                advanced
+                                                                threats.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>Data Leakage Protection Management</h3>
+                                                            <p>Our Data Loss Prevention (DLP) comes with Unique capture
+                                                                technology to
+                                                                safeguards
+                                                                intellectual property and protect sensitive data in-line
+                                                                with
+                                                                compliance.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>Data Encryption Solution</h3>
+                                                            <p>Our Data Encryption solution help businesses looking to
+                                                                bolster their
+                                                                data security,
+                                                                increase customer confidence and ensure compliance with data
+                                                                protection
+                                                                laws.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Mobile Device & BYOD Security Management</h3>
+                                                            <p>Our Mobile Device Management (MDM) Solutions allows business
+                                                                to secure
+                                                                and manage
+                                                                employee-owned (BYOD) and company-owned devices to drive
+                                                                effective team
+                                                                conversations.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Secure Web Gateway Solution</h3>
+                                                            <p>We provides an intuitive solution that filters unwanted
+                                                                software and
+                                                                malware from
+                                                                user-initiated Web/Internet traffic and enforces corporate
+                                                                and
+                                                                regulatory policy
+                                                                compliance.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>GDPR & Data Privacy</h3>
+                                                            <p>Our deep portfolio enables businesses to reduce the time,
+                                                                cost and
+                                                                complexity of
+                                                                responding to various international data privacy mandates
+                                                                like GDPR.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>GDPR & Data Privacy</h3>
+                                                            <p>Our deep portfolio enables businesses to reduce the time,
+                                                                cost and
+                                                                complexity of
+                                                                responding to various international data privacy mandates
+                                                                like GDPR.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Information Technology Service Management</h3>
+                                                            <p>Our experts ensure the right processes, people and technology
+                                                                are in
+                                                                place to meet
+                                                                business respective goals in agreement with industry
+                                                                standards like ISO
+                                                                20000
+                                                                (ITSMS) and ISO 22301 (BCMS).
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Incidence & Emergency Response Services</h3>
+                                                            <p>Our key offerings involve and improve incident response
+                                                                preparedness plan
+                                                                and
+                                                                minimize the impact of breaches with latest threat
+                                                                intelligence
+                                                                mechanism.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- box end -->
+                                </div>
+                            </div>
+                            <div id="tab4_1" class="tab-content_1">
+                                <div class="container  mobilewidth">
+                                    <!-- box start -->
+                                    <div class="row">
+                                        <div class="home-slider home-slider-spacing">
+                                            <div id="home-slider2_9" class="owl-carousel owl-theme ">
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>Firewall Management and Implementation</h3>
+                                                            <p>Our Managed Firewall/UTM solution provides monitoring,
+                                                                administration &
+                                                                maintenance
+                                                                of gateway level security along with policy supervision,
+                                                                upgrades and
+                                                                patch
+                                                                deployment.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Endpoint Security Protection</h3>
+                                                            <p>We offers a wide range of EPS solutions which integrates new
+                                                                and
+                                                                innovative
+                                                                technologies / features to protect endpoints from today’s
+                                                                advanced
+                                                                threats.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>Data Leakage Protection Management</h3>
+                                                            <p>Our Data Loss Prevention (DLP) comes with Unique capture
+                                                                technology to
+                                                                safeguards
+                                                                intellectual property and protect sensitive data in-line
+                                                                with
+                                                                compliance.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>Data Encryption Solution</h3>
+                                                            <p>Our Data Encryption solution help businesses looking to
+                                                                bolster their
+                                                                data security,
+                                                                increase customer confidence and ensure compliance with data
+                                                                protection
+                                                                laws.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Mobile Device & BYOD Security Management</h3>
+                                                            <p>Our Mobile Device Management (MDM) Solutions allows business
+                                                                to secure
+                                                                and manage
+                                                                employee-owned (BYOD) and company-owned devices to drive
+                                                                effective team
+                                                                conversations.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Secure Web Gateway Solution</h3>
+                                                            <p>We provides an intuitive solution that filters unwanted
+                                                                software and
+                                                                malware from
+                                                                user-initiated Web/Internet traffic and enforces corporate
+                                                                and
+                                                                regulatory policy
+                                                                compliance.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>GDPR & Data Privacy</h3>
+                                                            <p>Our deep portfolio enables businesses to reduce the time,
+                                                                cost and
+                                                                complexity of
+                                                                responding to various international data privacy mandates
+                                                                like GDPR.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>GDPR & Data Privacy</h3>
+                                                            <p>Our deep portfolio enables businesses to reduce the time,
+                                                                cost and
+                                                                complexity of
+                                                                responding to various international data privacy mandates
+                                                                like GDPR.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Information Technology Service Management</h3>
+                                                            <p>Our experts ensure the right processes, people and technology
+                                                                are in
+                                                                place to meet
+                                                                business respective goals in agreement with industry
+                                                                standards like ISO
+                                                                20000
+                                                                (ITSMS) and ISO 22301 (BCMS).
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Incidence & Emergency Response Services</h3>
+                                                            <p>Our key offerings involve and improve incident response
+                                                                preparedness plan
+                                                                and
+                                                                minimize the impact of breaches with latest threat
+                                                                intelligence
+                                                                mechanism.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- box end -->
+                                </div>
+                            </div>
+                            <div id="tab5_1" class="tab-content_1">
+                                <div class="container  mobilewidth">
+                                    <!-- box start -->
+                                    <div class="row">
+                                        <div class="home-slider home-slider-spacing">
+                                            <div id="home-slider2_10" class="owl-carousel owl-theme ">
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>SOC/SIEM Monitoring</h3>
+                                                            <p>We provide comprehensive real-time monitoring of
+                                                                infrastructure and
+                                                                round-the clock
+                                                                response to any security Breaches that may Occur.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Rapid Threat Containment</h3>
+                                                            <p>WWe rapidly response to a security incident by locating,
+                                                                analysing and
+                                                                quarantining
+                                                                the
+                                                                affects followed by reducing the impact on the environment.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>Insider Threat Monitoring</h3>
+                                                            <p>We uses a multi-tiered approach to identify the activities of
+                                                                different
+                                                                groups and
+                                                                users in order to identify, monitor and respond to any
+                                                                insider threats.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>GDPR & Data Privacy</h3>
+                                                            <p>Our deep portfolio enables businesses to reduce the time,
+                                                                cost and
+                                                                complexity of
+                                                                responding to various international data privacy mandates
+                                                                like GDPR.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>GDPR & Data Privacy</h3>
+                                                            <p>Our deep portfolio enables businesses to reduce the time,
+                                                                cost and
+                                                                complexity of
+                                                                responding to various international data privacy mandates
+                                                                like GDPR.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Information Technology Service Management</h3>
+                                                            <p>Our experts ensure the right processes, people and technology
+                                                                are in
+                                                                place to meet
+                                                                business respective goals in agreement with industry
+                                                                standards like ISO
+                                                                20000
+                                                                (ITSMS) and ISO 22301 (BCMS).
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Incidence & Emergency Response Services</h3>
+                                                            <p>Our key offerings involve and improve incident response
+                                                                preparedness plan
+                                                                and
+                                                                minimize the impact of breaches with latest threat
+                                                                intelligence
+                                                                mechanism.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- box end -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END tabs-content -->
+                </div>
                 <!-- END tabs -->
             </div>
             <!--  -->
@@ -2687,6 +3375,428 @@
                                     </div>
                                 </div>
                                 <div id="navigation-count9" class="count-nav-box"></div>
+                            </div>
+                            <!--  -->
+                            <a href="javascript:void(0)" class="close-acrodin"> Close</a>
+                        </div>
+                    </div>
+                    <!-- box 5 end -->
+                    <!-- box first start -->
+                    <div class="acc__card">
+                        <a href="#offer6" class="acc__title">Vulnerability Assese. & Penet. Testing</a>
+                        <div class="acc__panel" id="offer6">
+                            <!--  -->
+                            <div class="indu-moblie indu-moblie1 mhslider count-navigation">
+                                <div id="mhome-slider2_1" class="owl-carousel owl-theme">
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Network Architecture Design Review</h3>
+                                            <p>Security focused evaluation of your network-based computing environment, from
+                                                both
+                                                an architecture and operational perspective. Security focused evaluation of
+                                                your
+                                                network-based computing environment, from both
+                                                an architecture and operational perspective.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Network Infrastructure Penetration Testing</h3>
+                                            <p>Security focused evaluation of your network-based computing environment, from
+                                                both
+                                                an architecture and operational perspective. Security focused evaluation of
+                                                your
+                                                network-based computing environment, from both
+                                                an architecture and operational perspective.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Web Application Penetration Testing</h3>
+                                            <p>Security focused evaluation of your network-based computing environment, from
+                                                both
+                                                an architecture and operational perspective. Security focused evaluation of
+                                                your
+                                                network-based computing environment, from both
+                                                an architecture and operational perspective.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Wireless Network Penetration Testing</h3>
+                                            <p>Security focused evaluation of your network-based computing environment, from
+                                                both
+                                                an architecture and operational perspective. Security focused evaluation of
+                                                your
+                                                network-based computing environment, from both
+                                                an architecture and operational perspective.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="navigation-count1_1" class="count-nav-box"></div>
+                            </div>
+                            <!--  -->
+                            <a href="javascript:void(0)" class="close-acrodin"> Close</a>
+                            <!--  -->
+                        </div>
+                    </div>
+                    <!-- box first end -->
+                    <!-- box two end -->
+                    <div class="acc__card">
+                        <a href="#offer7" class="acc__title">IT Security Audit, Risk & Compliance</a>
+                        <div class="acc__panel" id="offer7">
+                            <!--  -->
+                            <!--  -->
+                            <div class="indu-moblie indu-moblie1 mhslider count-navigation">
+                                <div id="mhome-slider4_1" class="owl-carousel owl-theme">
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Network Architecture Design Review</h3>
+                                            <p>Security focused evaluation of your network-based computing environment, from
+                                                both
+                                                an architecture and operational perspective. Security focused evaluation of
+                                                your
+                                                network-based computing environment, from both
+                                                an architecture and operational perspective.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Network Infrastructure Penetration Testing</h3>
+                                            <p>Security focused evaluation of your network-based computing environment, from
+                                                both
+                                                an architecture and operational perspective. Security focused evaluation of
+                                                your
+                                                network-based computing environment, from both
+                                                an architecture and operational perspective.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Web Application Penetration Testing</h3>
+                                            <p>Security focused evaluation of your network-based computing environment, from
+                                                both
+                                                an architecture and operational perspective. Security focused evaluation of
+                                                your
+                                                network-based computing environment, from both
+                                                an architecture and operational perspective.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Wireless Network Penetration Testing</h3>
+                                            <p>Security focused evaluation of your network-based computing environment, from
+                                                both
+                                                an architecture and operational perspective. Security focused evaluation of
+                                                your
+                                                network-based computing environment, from both
+                                                an architecture and operational perspective.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="navigation-count3_1" class="count-nav-box"></div>
+                            </div>
+                            <!--  -->
+                            <a href="javascript:void(0)" class="close-acrodin"> Close</a>
+                        </div>
+                    </div>
+                    <!-- box two end -->
+                    <!-- box three end -->
+                    <div class="acc__card">
+                        <a href="#offer8" class="acc__title">Managed IT Security Solutions</a>
+                        <div class="acc__panel" id="offer8">
+                            <!--  -->
+                            <!--  -->
+                            <div class="indu-moblie indu-moblie1 mhslider count-navigation">
+                                <div id="mhome-slider6_1" class="owl-carousel owl-theme">
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Network Architecture Design Review</h3>
+                                            <p>Security focused evaluation of your network-based computing environment, from
+                                                both
+                                                an architecture and operational perspective. Security focused evaluation of
+                                                your
+                                                network-based computing environment, from both
+                                                an architecture and operational perspective.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Network Infrastructure Penetration Testing</h3>
+                                            <p>Security focused evaluation of your network-based computing environment, from
+                                                both
+                                                an architecture and operational perspective. Security focused evaluation of
+                                                your
+                                                network-based computing environment, from both
+                                                an architecture and operational perspective.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Web Application Penetration Testing</h3>
+                                            <p>Security focused evaluation of your network-based computing environment, from
+                                                both
+                                                an architecture and operational perspective. Security focused evaluation of
+                                                your
+                                                network-based computing environment, from both
+                                                an architecture and operational perspective.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Wireless Network Penetration Testing</h3>
+                                            <p>Security focused evaluation of your network-based computing environment, from
+                                                both
+                                                an architecture and operational perspective. Security focused evaluation of
+                                                your
+                                                network-based computing environment, from both
+                                                an architecture and operational perspective.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="navigation-count5_1" class="count-nav-box"></div>
+                            </div>
+                            <!--  -->
+                            <a href="javascript:void(0)" class="close-acrodin"> Close</a>
+                            <!--  -->
+                        </div>
+                    </div>
+                    <!-- box three end -->
+                    <!-- box four end -->
+                    <div class="acc__card">
+                        <a href="#offer9" class="acc__title">Digital Forensic & Cyber Fraud Manag.</a>
+                        <div class="acc__panel" id="offer9">
+                            <!--  -->
+                            <!--  -->
+                            <div class="indu-moblie indu-moblie1 mhslider count-navigation">
+                                <div id="mhome-slider8_1" class="owl-carousel owl-theme">
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Network Architecture Design Review</h3>
+                                            <p>Security focused evaluation of your network-based computing environment, from
+                                                both
+                                                an architecture and operational perspective. Security focused evaluation of
+                                                your
+                                                network-based computing environment, from both
+                                                an architecture and operational perspective.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Network Infrastructure Penetration Testing</h3>
+                                            <p>Security focused evaluation of your network-based computing environment, from
+                                                both
+                                                an architecture and operational perspective. Security focused evaluation of
+                                                your
+                                                network-based computing environment, from both
+                                                an architecture and operational perspective.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Web Application Penetration Testing</h3>
+                                            <p>Security focused evaluation of your network-based computing environment, from
+                                                both
+                                                an architecture and operational perspective. Security focused evaluation of
+                                                your
+                                                network-based computing environment, from both
+                                                an architecture and operational perspective.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Wireless Network Penetration Testing</h3>
+                                            <p>Security focused evaluation of your network-based computing environment, from
+                                                both
+                                                an architecture and operational perspective. Security focused evaluation of
+                                                your
+                                                network-based computing environment, from both
+                                                an architecture and operational perspective.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="navigation-count7_1" class="count-nav-box"></div>
+                            </div>
+                            <!--  -->
+                            <a href="javascript:void(0)" class="close-acrodin"> Close</a>
+                            <!--  -->
+                        </div>
+                    </div>
+                    <!-- box four end -->
+                    <!-- box 5 end -->
+                    <div class="acc__card">
+                        <a href="#offer10" class="acc__title">SOC as a Service</a>
+                        <div class="acc__panel" id="offer10">
+                            <!--  -->
+                            <!--  -->
+                            <div class="indu-moblie indu-moblie1 mhslider count-navigation">
+                                <div id="mhome-slider10_1" class="owl-carousel owl-theme">
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Network Architecture Design Review</h3>
+                                            <p>Security focused evaluation of your network-based computing environment, from
+                                                both
+                                                an architecture and operational perspective. Security focused evaluation of
+                                                your
+                                                network-based computing environment, from both
+                                                an architecture and operational perspective.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Network Infrastructure Penetration Testing</h3>
+                                            <p>Security focused evaluation of your network-based computing environment, from
+                                                both
+                                                an architecture and operational perspective. Security focused evaluation of
+                                                your
+                                                network-based computing environment, from both
+                                                an architecture and operational perspective.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Web Application Penetration Testing</h3>
+                                            <p>Security focused evaluation of your network-based computing environment, from
+                                                both
+                                                an architecture and operational perspective. Security focused evaluation of
+                                                your
+                                                network-based computing environment, from both
+                                                an architecture and operational perspective.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Wireless Network Penetration Testing</h3>
+                                            <p>Security focused evaluation of your network-based computing environment, from
+                                                both
+                                                an architecture and operational perspective. Security focused evaluation of
+                                                your
+                                                network-based computing environment, from both
+                                                an architecture and operational perspective.
+                                            </p>
+                                            <!--  -->
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="navigation-count9_1" class="count-nav-box"></div>
                             </div>
                             <!--  -->
                             <a href="javascript:void(0)" class="close-acrodin"> Close</a>
@@ -6266,6 +7376,7 @@
 
         // Example usage:
         scrollToFirstElement("scr-tabs", 80);
+        scrollToFirstElement("scr-tabs_1", 80);
         scrollToFirstElement("scr-tabs1", 80);
         scrollToFirstElement("scr-tabs3", 80);
         scrollToFirstElement("industry-slider", 50);

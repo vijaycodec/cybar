@@ -339,7 +339,7 @@ body{
     grid-template-columns: auto auto auto auto auto;
     gap: 5px;
     }
-    .home-tabs li {padding: 6px 22px;cursor: pointer;font-size: 16px;background: #e5e8ee;text-align: center;line-height: 1.4;}
+    .home-tabs li {padding: 6px 22px;cursor: pointer;font-size: 16px;background: #e5e8ee;text-align: center;line-height: 1.4;display: flex;align-items: center;}
     .home-tabs li:hover {}
     .home-tabs li.active {outline: 0;background-color: #15416E;}
     .home-tabs li.active a{color: #fff;}

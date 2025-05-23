@@ -46,7 +46,7 @@ $("#home-slider1, #home-slider2, #home-slider3, #home-slider4, #home-slider5, #h
 
  });
 
- $("#home-slider1_1, #home-slider1_2, #home-slider1_3, #home-slider1_4, #home-slider1_5, #home-slider2_1, #home-slider2_2, #home-slider2_3, #home-slider2_4, #home-slider2_5").owlCarousel({
+ $("#home-slider1_1, #home-slider1_2, #home-slider1_3, #home-slider1_4, #home-slider1_5, #home-slider2_1, #home-slider2_2, #home-slider2_3, #home-slider2_4, #home-slider2_5, #home-slider2_6, #home-slider2_7, #home-slider2_8, #home-slider2_9, #home-slider2_10" ).owlCarousel({
    loop: false,
    margin: 10,
    nav: true,
@@ -215,6 +215,11 @@ $(function () {
    initializeCarousel("mhome-slider42", "navigation-count42");
    initializeCarousel("mhome-slider43", "navigation-count43");
    initializeCarousel("mhome-slider44", "navigation-count44");
+   initializeCarousel("mhome-slider2_1", "navigation-count1_1");
+   initializeCarousel("mhome-slider4_1", "navigation-count3_1");
+   initializeCarousel("mhome-slider6_1", "navigation-count5_1");
+   initializeCarousel("mhome-slider8_1", "navigation-count7_1");
+   initializeCarousel("mhome-slider10_1", "navigation-count9_1");
    function initializeCarousel(carouselID, navigationCountID) {
       var owl = $("#" + carouselID);
 
