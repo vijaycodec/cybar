@@ -29,51 +29,44 @@
             <div class="container">
                 <div class="row">
                     <!--  -->
-                    <div class="col-md-3">
-                        <div class="categories csn sidebar-fixed" id="cd-sidebar-nav">
+                    <div class="col-sm-6 col-md-3 filtercatsec ">
+                        <div class="categories training_cat">
                             <div class="cc-sidebar">
-                                <div class="cat-title1">
-                                    <h4>Course Categories</h4>
+                                <div class="categorytitle sign-arrow">Course Categories</div>
+                                <div class="ecsp_div">
+                                    <ul class="tab2">
+                                        @foreach ($categories as $category)
+                                            <li id="li_border">
+                                                <a class="tablinks1 {{ $loop->first ? 'active' : ' ' }}"
+                                                    href="#{{ Str::slug($category->name) }}"
+                                                    onclick="openCity(event, '{{ Str::slug($category->name) }}')">
+                                                    {{ $category->name }}
+                                                </a>
+                                            </li>
+                                        @endforeach
+                                    </ul>
                                 </div>
-                                <ul class="case1-tab">
-
-                                    @foreach ($categories as $category)
-                                        <li><a class="{{ $loop->first ? 'active' : ' ' }}"
-                                                href="#{{ Str::slug($category->name) }}">{{ $category->name }}</a>
-                                        </li>
-                                        {{-- <li>
-                                            <a href="javascript:void(0);"
-                                                class="{{ request()->segment(2) === Str::slug($category->name) ? 'active' : '' }} {{ $loop->first ? 'active' : ' ' }}"
-                                                data-category="{{ Str::slug($category->name) }}"
-                                                onclick="updateURL('{{ Str::slug($category->name) }}')">
-                                                {{ $category->name }}
-                                            </a>
-                                        </li> --}}
-                                    @endforeach
-                                </ul>
-
+                                <!--  -->
                             </div>
                         </div>
                     </div>
                     <!--  -->
                     <!--  -->
-                    <div class="col-md-9 ser-codec-box" id="code-content">
-                        <!--  -->
-                        <div class="codec-content pl-10">
+                    <div class="col-sm-6 col-md-9">
+                        <div id="code-content">
                             <!--  -->
-                            <!-- EC Council Accredited Certification Programs start  -->
                             @foreach ($categories as $category)
-                                <div id="{{ Str::slug($category->name) }}" class="tabcontent1 code-div-box">
-                                    <div class="mrgn-brdr">
-                                        <div class="row box-wrap">
-                                            <div class="c-title">
-                                                <h4 class="cat-title">{{ $category->name }}</h4>
-                                                <a href="javascript:void(0)" class="course-btn show-btn"
-                                                    data-category="{{ $category->name }}">View All</a>
-                                            </div>
+                            <div id="{{ Str::slug($category->name) }}" class="tabcontent1"
+                                style="display:{{ $loop->first ? 'block' : ' ' }};">
+                                <div class="mrgn-brdr">
+                                    <div class="row box-wrap">
+
+                                        <h4 class="cat-title">
+                                            {{ $category->name }}
+                                        </h4>
 
                                             <!-- Display first 3 services -->
-                                            @foreach ($services->where('category_id', $category->id)->take(3) as $service)
+                                            @foreach ($services->where('category_id', $category->id)->all() as $service)
                                                 <div class="col-md-4">
                                                     <div class="empower-industry-box">
                                                         <div class="cn-hover-box">
@@ -96,43 +89,7 @@
                                                     </div>
                                                 </div>
                                             @endforeach
-
-                                            <!-- Hidden content section (chunking records in groups of 3) -->
-                                            <div class="content-hide">
-                                                @foreach ($services->where('category_id', $category->id)->skip(3)->chunk(3) as $chunk)
-                                                    <div class="row">
-                                                        @foreach ($chunk as $service)
-                                                            <div class="col-md-4">
-                                                                <div class="empower-industry-box">
-                                                                    <div class="cn-hover-box">
-                                                                        <div class="cn-hover-img">
-                                                                            <img
-                                                                                src="{{ asset('storage/uploads/backend/trainings/' . $service->images) }}">
-                                                                        </div>
-                                                                        <div class="cn-content">
-                                                                            <p>{{ $service->description }}</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="cn-main-content">
-                                                                        <h3>{{ $service->subcategory->sub_category }}</h3>
-                                                                        <a
-                                                                            href="{{ route('l3-template', ['sb' => $service->subcategory->id, 'pg' => $page_id, 'ct' => $category->id]) }}">
-                                                                            Know more <i class="fa fa-chevron-right"></i>
-                                                                        </a>
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        @endforeach
-                                                    </div>
-                                                @endforeach
-                                            </div>
-
-                                            <div class="hide-btn">
-                                                <a href="javascript:void(0)">Hide Content</a>
-                                            </div>
                                         </div>
-
                                     </div>
                                 </div>
                             @endforeach
@@ -206,34 +163,47 @@
     <script type="text/javascript" src="assets/js/common.js?v-1"></script>
     <script type="text/javascript" src="assets/js/mobile-menu.js"></script>
     @include('frontend.layouts.right-menu-js')
-
-    <!-- Jquery code -->
-
     <script type="text/javascript">
-        $(document).ready(function () {
-            $('#cd-sidebar-nav a').bind('click', function (e) {
+        $(document).ready(function() {
+            $('.ecsp_div a').bind('click', function(e) {
                 e.preventDefault();
                 var target = $(this).attr("href");
                 $('html, body').stop().animate({
                     scrollTop: $(target).offset().top - 80
-                }, 600, function () {
+                }, 100, function() {
                     // location.hash = target;
                 });
                 return false;
             });
-
         });
+    </script>
+    <!-- Jquery code -->
 
-        $(window).scroll(function () {
-            var scrollDistance = $(window).scrollTop();
+    <script type="text/javascript">
+        // $(document).ready(function () {
+        //     $('#cd-sidebar-nav a').bind('click', function (e) {
+        //         e.preventDefault();
+        //         var target = $(this).attr("href");
+        //         $('html, body').stop().animate({
+        //             scrollTop: $(target).offset().top - 80
+        //         }, 600, function () {
+        //             // location.hash = target;
+        //         });
+        //         return false;
+        //     });
 
-            $('.code-div-box').each(function (i) {
-                if ($(this).position().top - 100 <= scrollDistance) { // Adjust for header height
-                    $('#cd-sidebar-nav a.active').removeClass('active');
-                    $('#cd-sidebar-nav a').eq(i).addClass('active');
-                }
-            });
-        }).scroll();
+        // });
+
+        // $(window).scroll(function () {
+        //     var scrollDistance = $(window).scrollTop();
+
+        //     $('.code-div-box').each(function (i) {
+        //         if ($(this).position().top - 100 <= scrollDistance) { // Adjust for header height
+        //             $('#cd-sidebar-nav a.active').removeClass('active');
+        //             $('#cd-sidebar-nav a').eq(i).addClass('active');
+        //         }
+        //     });
+        // }).scroll();
 
 
         $(document).ready(function () {
