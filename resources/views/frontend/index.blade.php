@@ -1218,19 +1218,15 @@
                                                 src="{{ asset('assets/images/vapt-services.webp') }}">
                                         </div>
                                         <div class="cn-content">
-                                            <p>Services to ensure the Integrity of Information Systems, Softwares &
-                                                Applications,
-                                                block
-                                                illegal access and protect organizations against data theft, productivity
-                                                loss and
-                                                fraud.
+                                            <p>SOC as a Service provides outsourced security monitoring,
+                                                 threat detection, and incident response to protect organizations from cyber threats 24/7.
                                             </p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
                                         <a href="javascript:void(0)" class="cn-main-content-enclosed"
                                             style="display: block; text-decoration: none;">
-                                            <h3>Vulnerability Assesement &amp; Penetration Testing</h3>
+                                            <h3>SOC as a Services </h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
                                     </div>
@@ -1242,17 +1238,15 @@
                                         <div class="cn-hover-img"> <img
                                                 src="{{ asset('assets/images/security-audit-compliance.webp') }}"> </div>
                                         <div class="cn-content">
-                                            <p>Help organizations with regular and structured evaluation of compliance with
-                                                the
-                                                security
-                                                policies,standards, guidelines and procedures.
+                                            <p>Security Monitoring and SIEM Services offer real-time threat detection,
+                                                 log analysis, and incident response to enhance organizational cybersecurity posture.
                                             </p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
                                         <a href="javascript:void(0)" class="cn-main-content-enclosed"
                                             style="display: block; text-decoration: none;">
-                                            <h3>IT Security Audit, Risk & Compliance</h3>
+                                            <h3>Security Monitoring & SIEM Services    </h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
                                     </div>
@@ -1265,17 +1259,15 @@
                                                 src="{{ asset('assets/images/managed-it-services.webp') }}">
                                         </div>
                                         <div class="cn-content">
-                                            <p>Preferred Service Partner" for corporate clients with array of customized
-                                                security
-                                                solutions
-                                                and services to operate in a secure environment.
+                                            <p>Managed Endpoint Detection & Response (EDR) delivers continuous monitoring,
+                                                 threat detection, and automated response to protect endpoints from cyberattacks.
                                             </p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
                                         <a href="javascript:void(0)" class="cn-main-content-enclosed"
                                             style="display: block; text-decoration: none;">
-                                            <h3>Managed IT Security Solutions</h3>
+                                            <h3>Managed Endpoint Detection & Response (EDR)   </h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
                                     </div>
@@ -1288,17 +1280,15 @@
                                                 src="{{ asset('assets/images/forensic-seervices.webp') }}">
                                         </div>
                                         <div class="cn-content">
-                                            <p>Identify and resolve Ecrime incidents that adversely impact organizations
-                                                with
-                                                cybercrime /
-                                                online fraud and proactively manage 24x7 hours security risks.
+                                            <p>Extended Detection & Response (XDR) Services unify data across endpoints, 
+                                                networks, and cloud to detect, investigate, and respond to threats efficiently.
                                             </p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
                                         <a href="javascript:void(0)" class="cn-main-content-enclosed"
                                             style="display: block; text-decoration: none;">
-                                            <h3>Digital Forensic &amp; Cyber Fraud Management</h3>
+                                            <h3>Extended Detection & Response (XDR) Services</h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
                                     </div>
@@ -1311,16 +1301,15 @@
                                                 src="{{ asset('assets/images/soc-services.webp') }}">
                                         </div>
                                         <div class="cn-content">
-                                            <p>Provides round-the-clock proactive event monitoring with prioritized alert
-                                                notification &
-                                                threat mitigation.
+                                            <p>SOAR services integrate security tools, automate workflows, and coordinate response 
+                                                actions to streamline threat detection, investigation, and incident resolution.
                                             </p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
                                         <a href="javascript:void(0)" class="cn-main-content-enclosed"
                                             style="display: block; text-decoration: none;">
-                                            <h3>SOC (Security Operation Center) as a Service</h3>
+                                            <h3>Security Orchestration, Automation, and Response (SOAR) </h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
                                     </div>
@@ -1333,19 +1322,15 @@
                                                 src="{{ asset('assets/images/vapt-services.webp') }}">
                                         </div>
                                         <div class="cn-content">
-                                            <p>Services to ensure the Integrity of Information Systems, Softwares &
-                                                Applications,
-                                                block
-                                                illegal access and protect organizations against data theft, productivity
-                                                loss and
-                                                fraud.
+                                            <p>Cloud Security Monitoring & Protection ensures continuous visibility, 
+                                                threat detection, and compliance across cloud environments to safeguard data and applications.
                                             </p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
                                         <a href="javascript:void(0)" class="cn-main-content-enclosed"
                                             style="display: block; text-decoration: none;">
-                                            <h3>Vulnerability Assesement &amp; Penetration Testing</h3>
+                                            <h3>Cloud Security Monitoring & Protection  </h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
                                     </div>
@@ -1357,23 +1342,21 @@
                                         <div class="cn-hover-img"> <img
                                                 src="{{ asset('assets/images/security-audit-compliance.webp') }}"> </div>
                                         <div class="cn-content">
-                                            <p>Help organizations with regular and structured evaluation of compliance with
-                                                the
-                                                security
-                                                policies,standards, guidelines and procedures.
+                                            <p>Dark Web Intelligence & Threat Hunting identifies exposed data, 
+                                                monitors cybercriminal activity, and proactively detects threats targeting your organization.
                                             </p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
                                         <a href="javascript:void(0)" class="cn-main-content-enclosed"
                                             style="display: block; text-decoration: none;">
-                                            <h3>IT Security Audit, Risk & Compliance</h3>
+                                            <h3>Dark Web Intelligence & Threat Hunting  </h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="item11">
+                            {{-- <div class="item11">
                                 <div class="empower-industry-box">
                                     <div class="cn-hover-box">
                                         <div class="cn-hover-img"> <img
@@ -1440,7 +1423,7 @@
                                         </a>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -1455,16 +1438,15 @@
                                 <div class="cn-hover-img"> <img
                                         src="{{ asset('assets/images/security-audit-compliance.webp') }}"> </div>
                                 <div class="cn-content">
-                                    <p>Help organizations with regular and structured evaluation of compliance with the
-                                        security
-                                        policies,standards, guidelines and procedures.
+                                    <p>SOC as a Service provides outsourced security monitoring, threat detection, 
+                                        and incident response to protect organizations from cyber threats 24/7.
                                     </p>
                                 </div>
                             </div>
                             <div class="cn-main-content">
                                 <a href="javascript:void(0)" class="cn-main-content-enclosed"
                                     style="display: block; text-decoration: none;">
-                                    <h3>IT Security Audit, Risk & Compliance</h3>
+                                    <h3>SOC as a Service </h3>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
                             </div>
@@ -1476,17 +1458,15 @@
                                 <div class="cn-hover-img"> <img src="{{ asset('assets/images/vapt-services.webp') }}">
                                 </div>
                                 <div class="cn-content">
-                                    <p>Services to ensure the Integrity of Information Systems, Softwares & Applications,
-                                        block
-                                        illegal access and protect organizations against data theft, productivity loss and
-                                        fraud.
+                                    <p>Security Monitoring and SIEM Services offer real-time threat detection,
+                                         log analysis, and incident response to enhance organizational cybersecurity posture.
                                     </p>
                                 </div>
                             </div>
                             <div class="cn-main-content">
                                 <a href="javascript:void(0)" class="cn-main-content-enclosed"
                                     style="display: block; text-decoration: none;">
-                                    <h3>Vulnerability Assesement &amp; Penetration Testing</h3>
+                                    <h3>Security Monitoring & SIEM Services</h3>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
                             </div>
@@ -1499,16 +1479,15 @@
                                         src="{{ asset('assets/images/managed-it-services.webp') }}">
                                 </div>
                                 <div class="cn-content">
-                                    <p>Preferred Service Partner" for corporate clients with array of customized security
-                                        solutions
-                                        and services to operate in a secure environment.
+                                    <p>Managed Endpoint Detection & Response (EDR) delivers continuous monitoring, threat detection,
+                                         and automated response to protect endpoints from cyberattacks.
                                     </p>
                                 </div>
                             </div>
                             <div class="cn-main-content">
                                 <a href="javascript:void(0)" class="cn-main-content-enclosed"
                                     style="display: block; text-decoration: none;">
-                                    <h3>Managed IT Security Solutions</h3>
+                                    <h3>Managed Endpoint Detection & Response (EDR)</h3>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
                             </div>
@@ -1521,16 +1500,15 @@
                                         src="{{ asset('assets/images/forensic-seervices.webp') }}">
                                 </div>
                                 <div class="cn-content">
-                                    <p>Identify and resolve Ecrime incidents that adversely impact organizations with
-                                        cybercrime /
-                                        online fraud and proactively manage 24x7 hours security risks.
+                                    <p>Extended Detection & Response (XDR) Services unify data across endpoints, networks,
+                                         and cloud to detect, investigate, and respond to threats efficiently.
                                     </p>
                                 </div>
                             </div>
                             <div class="cn-main-content">
                                 <a href="javascript:void(0)" class="cn-main-content-enclosed"
                                     style="display: block; text-decoration: none;">
-                                    <h3>Digital Forensic &amp; Cyber Fraud Management</h3>
+                                    <h3>Extended Detection & Response (XDR) Services</h3>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
                             </div>
@@ -1542,16 +1520,55 @@
                                 <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}">
                                 </div>
                                 <div class="cn-content">
-                                    <p>Provides round-the-clock proactive event monitoring with prioritized alert
-                                        notification &
-                                        threat mitigation.
+                                    <p>SOAR services integrate security tools, automate workflows, and coordinate response
+                                         actions to streamline threat detection, investigation, and incident resolution.
                                     </p>
                                 </div>
                             </div>
                             <div class="cn-main-content">
                                 <a href="javascript:void(0)" class="cn-main-content-enclosed"
                                     style="display: block; text-decoration: none;">
-                                    <h3>SOC (Security Operation Center) as a Service</h3>
+                                    <h3>Security Orchestration, Automation, and Response (SOAR)</h3>
+                                    Know more <i class="fa">&#xf054;</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="empower-industry-box">
+                            <div class="cn-hover-box">
+                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}">
+                                </div>
+                                <div class="cn-content">
+                                    <p>Cloud Security Monitoring & Protection ensures continuous visibility, threat detection,
+                                         and compliance across cloud environments to safeguard data and applications.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="cn-main-content">
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed"
+                                    style="display: block; text-decoration: none;">
+                                    <h3>Cloud Security Monitoring & Protection</h3>
+                                    Know more <i class="fa">&#xf054;</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="empower-industry-box">
+                            <div class="cn-hover-box">
+                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}">
+                                </div>
+                                <div class="cn-content">
+                                    <p>Dark Web Intelligence & Threat Hunting identifies exposed data, 
+                                        monitors cybercriminal activity, and proactively detects threats targeting your organization.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="cn-main-content">
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed"
+                                    style="display: block; text-decoration: none;">
+                                    <h3>Dark Web Intelligence & Threat Hunting</h3>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
                             </div>

@@ -23,7 +23,15 @@
                     </li>
                 </ul>
             </div>
-
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <div class="wg-box">
                 <form class="form-new-brand form-style-1"
                     action="{{ route('course-category.update', $courseCategory->id) }}" method="POST"

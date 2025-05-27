@@ -66,15 +66,17 @@
                     </fieldset>
                     <fieldset class="name">
                         <div class="body-title">Short Description <span class="tf-color-1">*</span></div>
-                        <textarea class="flex-grow"  style="height:90px;" placeholder="Short Description" name="short_desc" tabindex="0"
+                        <textarea class="flex-grow ckeditor"  style="height:90px;" placeholder="Short Description" name="short_desc" tabindex="0"
                             value="" aria-required="true" required="">{{ old('short_desc') }}
                         </textarea>
                     </fieldset>
                     
-                    <div class="form-group">
-                        <label><strong>Description :</strong></label>
-                        <textarea class="summernote" name="description">{{ old('description') }}</textarea>
-                    </div>
+                    <fieldset class="name">
+                        <div class="body-title">Description <span class="tf-color-1">*</span></div>
+                        <textarea class="flex-grow ckeditor "  style="height:90px;" placeholder="Short Description" name="description" tabindex="0"
+                            value="" aria-required="true" required="">{{ old('description') }}
+                        </textarea>
+                    </fieldset>
 
                     <div class="bot">
                         <div></div>

@@ -25,6 +25,16 @@
                 </ul>
             </div>
 
+             @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
             <div class="wg-box">
                 <form class="form-new-brand form-style-1" action="{{ route('sub-category.store') }}" method="POST"
                     enctype="multipart/form-data">
@@ -55,7 +65,7 @@
                     <fieldset class="name">
                         <div class="body-title">Sub Category Name <span class="tf-color-1">*</span></div>
                         <input class="flex-grow" type="text" placeholder="Category Name" id="categorySelect"  name="sub_category" tabindex="0"
-                            value="{{ old('name') }}" aria-required="true" required="">
+                            value="" aria-required="true" required="">
                     </fieldset>
 
                     <fieldset class="name">

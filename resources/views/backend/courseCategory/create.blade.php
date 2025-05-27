@@ -27,6 +27,15 @@
                     </li>
                 </ul>
             </div>
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <!-- new-category -->
             <div class="wg-box">
                 <form class="form-new-brand form-style-1" action="{{ route('course-category.store') }}" method="POST"
@@ -35,19 +44,19 @@
                     <a class="tf-button style-1 w208" style="padding-left: 75px;"
                         href=" {{ route('course-category.list') }}">
                         Back</a>
-                        <fieldset class="name">
-                            <div class="body-title">Select Page Category <span class="tf-color-1">*</span></div>
-                            <select class="flex-grow" name="category_id" tabindex="0" required>
-                                <option value="" disabled selected>Select a category</option>
-                                @foreach ($categories as $category)
-                                    <option value="{{ $category->id }}">{{ $category->page_name }}</option>
-                                @endforeach
-                            </select>
-                        </fieldset>
+                    <fieldset class="name">
+                        <div class="body-title">Select Page Category <span class="tf-color-1">*</span></div>
+                        <select class="flex-grow" name="category_id" tabindex="0" required>
+                            <option value="" disabled selected>Select a category</option>
+                            @foreach ($categories as $category)
+                                <option value="{{ $category->id }}">{{ $category->page_name }}</option>
+                            @endforeach
+                        </select>
+                    </fieldset>
                     <fieldset class="name">
                         <div class="body-title">Category Name <span class="tf-color-1">*</span></div>
-                        <input class="flex-grow" type="text" placeholder="Category Name" id="categorySelect" name="name" tabindex="0"
-                            value="{{ old('name') }}" aria-required="true" required="">
+                        <input class="flex-grow" type="text" placeholder="Category Name" id="categorySelect"
+                            name="name" tabindex="0" value="{{ old('name') }}" aria-required="true" required="">
                     </fieldset>
 
                     <fieldset class="name">
@@ -73,21 +82,21 @@
 @endsection
 
 @push('scripts')
-<script>
-    $(document).ready(function() {
-        function slugify(text) {
-            return text.toString().toLowerCase()
-                .trim()
-                .replace(/\s+/g, '-') // Replace spaces with hyphens
-                .replace(/[^\w\-]+/g, '') // Remove all non-word characters
-                .replace(/\-\-+/g, '-'); // Replace multiple hyphens with single hyphen
-        }
+    <script>
+        $(document).ready(function() {
+            function slugify(text) {
+                return text.toString().toLowerCase()
+                    .trim()
+                    .replace(/\s+/g, '-') // Replace spaces with hyphens
+                    .replace(/[^\w\-]+/g, '') // Remove all non-word characters
+                    .replace(/\-\-+/g, '-'); // Replace multiple hyphens with single hyphen
+            }
 
-        $('#categorySelect').on('input', function() {
-            var title = $(this).val();
-            var slug = slugify(title);
-            $('#categorySlug').val(slug); // Set generated slug in the input field
+            $('#categorySelect').on('input', function() {
+                var title = $(this).val();
+                var slug = slugify(title);
+                $('#categorySlug').val(slug); // Set generated slug in the input field
+            });
         });
-    });
-</script>
+    </script>
 @endpush

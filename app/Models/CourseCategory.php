@@ -9,12 +9,15 @@ class CourseCategory extends Model
 {
     use HasFactory;
 
-    // // Define the relationship between Services and Category
+     // Define the relationship between Services and Category
+
+    protected $fillable = ['page_category', 'name', 'slug', 'title'];
 
     public function services()
     {
         return $this->hasMany(OurServices::class, 'category_id');
     }
+    
     public function training()
     {
         return $this->hasMany(CorporateTraining::class, 'category_id');
