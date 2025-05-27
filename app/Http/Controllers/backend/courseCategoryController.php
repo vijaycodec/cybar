@@ -8,14 +8,15 @@ use App\Models\PageDetail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Carbon;
+use Illuminate\Validation\Rule;
 
 class courseCategoryController extends Controller
 {
     public function index()
     {
         $categories = CourseCategory::with('pageCategory')
-        ->orderBy('id', 'ASC')
-        ->get();
+            ->orderBy('id', 'ASC')
+            ->get();
         //dd($categories);
         return view('backend.courseCategory.index', compact('categories'));
     }
@@ -24,49 +25,46 @@ class courseCategoryController extends Controller
     {
         $categories = PageDetail::all();
         // dd($categories);
-        return view('backend.courseCategory.create',compact('categories'));
+        return view('backend.courseCategory.create', compact('categories'));
     }
 
     public function store(Request $request)
     {
-    //   dd($request->all());
+        // Validate input
+        $validator = Validator::make($request->all(), [
+            'category_id' => 'required',
+            'name' => [
+                'required',
+                Rule::unique('course_categories', 'name')->where(
+                    fn($query) =>
+                    $query->where('page_category', $request->category_id)
+                ),
+            ],
+            'title' => 'required',
+            'slug'  => 'required',
+        ], [
+            'name.unique' => 'Category already exists for this page.',
+        ]);
+
+        if ($validator->fails()) {
+            return back()->withErrors($validator)->withInput();
+        }
+
         try {
-            // Validate input using Validator::make
-            $validator = Validator::make($request->all(), [
-                'category_id' => 'required',
-                'name' => 'required',  
-                'title' => 'required',  
-                'slug' => 'required',
+            CourseCategory::create([
+                'page_category' => $request->category_id,
+                'name'          => $request->name,
+                'slug'          => $request->slug,
+                'title'         => $request->title,
             ]);
 
-            // Check if validation fails
-            if ($validator->fails()) {
-                return redirect()->back()
-                    ->withErrors($validator)
-                    ->withInput(); // Return old input for user convenience
-            }
-
-            // Save the new category
-            $category = new CourseCategory();
-            $category->page_category = $request->category_id;
-            $category->name = $request->name;
-            $category->slug = $request->slug;
-            $category->title = $request->title;
-            
-            // Save the updated category data
-
-            $category->save();
-
-            return redirect()->route('course-category.list')->with('success', 'Category Added successfully!');
+            return redirect()->route('course-category.list')->with('success', 'Category added successfully!');
         } catch (\Exception $e) {
-            // Handle any unexpected errors
-            return redirect()->back()
-                ->withErrors(['error' => 'Something went wrong. Please try again later.'])
-                ->withInput();
+            return back()->with('error', 'An unexpected error occurred: ' . $e->getMessage())->withInput();
         }
     }
 
-    
+
     public function show($id)
     {
         $category = CourseCategory::findOrFail($id);
@@ -86,30 +84,44 @@ class courseCategoryController extends Controller
         return view('backend.courseCategory.edit', compact('courseCategory', 'categories'));
     }
 
-    public function update(Request $request, $id)
-    {
-        // Validate input data
-        $request->validate([
-            'category_id' => 'required',
-                'name' => 'required',  
-                'title' => 'required', 
-                'slug' => 'required',
-        ]);
+   public function update(Request $request, $id)
+{
+    // Validate input
+    $validator = Validator::make($request->all(), [
+        'category_id' => 'required',
+        'name' => [
+            'required',
+            Rule::unique('course_categories', 'name')
+                ->where(fn($query) => $query->where('page_category', $request->category_id))
+                ->ignore($id), // Ignore current record
+        ],
+        'title' => 'required',
+        'slug'  => 'required',
+    ], [
+        'name.unique' => 'Category already exists for this page.',
+    ]);
 
-        // Find the service or return 404
-        $courseCategory = CourseCategory::findOrFail($id);
-
-        // Update fields
-        $courseCategory->page_category = $request->category_id;
-        $courseCategory->name = $request->name;
-        $courseCategory->slug = $request->slug;
-        $courseCategory->title = $request->title;
-        // Save changes
-        $courseCategory->save();
-
-        return redirect()->route('course-category.list')->with('success', 'Record has been updated successfully!');
+    // Return with errors if validation fails
+    if ($validator->fails()) {
+        return back()->withErrors($validator)->withInput();
     }
 
+    try {
+        // Find and update the category
+        $courseCategory = CourseCategory::findOrFail($id);
+
+        $courseCategory->page_category = $request->category_id;
+        $courseCategory->name          = $request->name;
+        $courseCategory->slug          = $request->slug;
+        $courseCategory->title         = $request->title;
+
+        $courseCategory->save();
+
+        return redirect()->route('course-category.list')->with('success', 'Category updated successfully!');
+    } catch (\Exception $e) {
+        return back()->with('error', 'An unexpected error occurred: ' . $e->getMessage())->withInput();
+    }
+}
 
     public function destroy($id)
     {
@@ -120,12 +132,11 @@ class courseCategoryController extends Controller
                 'message' => 'Category deleted successfully!',
                 'redirect' => route('course-category.list') // Include the redirect URL
             ], 200);
-        }else{
+        } else {
             return response()->json([
                 'message' => 'No Category Found! ',
                 'redirect' => route('course-category.list') // Include the redirect URL
-            ], 404); 
+            ], 404);
         }
     }
-
 }

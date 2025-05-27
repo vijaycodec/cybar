@@ -83,15 +83,15 @@
 
                     <fieldset class="name">
                         <div class="body-title">Short Description <span class="tf-color-1">*</span></div>
-                        <textarea class="flex-grow" style="height:90px;" type="text" placeholder="Short Description" name="short_desc"
+                        <textarea class="flex-grow ckeditor" style="height:90px;" type="text" placeholder="Short Description" name="short_desc"
                             id="short_desc" tabindex="0" aria-required="true" value="{{ $newsletter->short_desc }}">{{ $newsletter->short_desc }}
                         </textarea>
                     </fieldset>
 
-                    <div class="form-group">
-                        <label><strong>Description :</strong></label>
-                        <textarea class="summernote" name="description" value="{{ $newsletter->description }}" id="description">{!! $newsletter->description !!}</textarea>
-                    </div>
+                     <fieldset class="name">
+                        <div class="body-title">Description <span class="tf-color-1">*</span></div>
+                         <textarea class="ckeditor" name="description" value="{{ $newsletter->description }}" id="description">{!! $newsletter->description !!}</textarea>
+                    </fieldset>
 
                     <div class="bot">
                         <div></div>

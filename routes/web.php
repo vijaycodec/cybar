@@ -137,6 +137,8 @@ Route::middleware(['auth', 'admin', 'prevent_history'])->group(function () {
     route::get('/l3-content/edit/{id}', [l3_contentController::class, 'edit'])->name('l3-content.edit');
     Route::put('l3-content/update/{id}', [l3_contentController::class, 'update'])->name('l3-content.update');
     Route::delete('l3-content/delete/{id}', [l3_contentController::class, 'destroy'])->name('l3-content.destroy');
+    route::get('/l3-content/swap/{id}', [l3_contentController::class, 'swap'])->name('l3-content.swap');
+    Route::put('l3-content/swap/update/{id}', [l3_contentController::class, 'SwapUpdate'])->name('l3-content.UpdateSwap');
     //category and sub-category and L3 Dependent Routes 
     Route::get('content/l3-get-categories', [l3_contentController::class, 'l3GetL3Categories'])->name('l3-get-l3categories')->middleware('throttle:10,1'); // 10 requests per minute;
 
@@ -298,7 +300,7 @@ Route::middleware(['auth', 'admin', 'prevent_history'])->group(function () {
 Route::middleware(['FrameGuard'])->group(function () {
     Route::get('/', [homeController::class, 'index'])->name('home');
 
-    Route::middleware(['TrackPage'])->group(function () {
+    // Route::middleware(['TrackPage'])->group(function () {
 
         Route::get('/services/{category?}', [servicesController::class, 'getServices'])
             ->where('category', '[A-Za-z0-9-]+') // Allow slugs
@@ -319,7 +321,7 @@ Route::middleware(['FrameGuard'])->group(function () {
         Route::get('/newsletter', [NewsLetterMainController::class, 'index'])->name('newsletter.main');
 
 
-    });
+    // });
     Route::get('/resources/{category_slug}/{resource_slug}', [resourcesViewController::class, 'view'])
         ->where(['category_slug' => '[a-zA-Z0-9-]+', 'resource_slug' => '[a-zA-Z0-9-]+'])
         ->name('resources-view');

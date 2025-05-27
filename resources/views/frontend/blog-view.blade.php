@@ -20,7 +20,7 @@
                 @if (isset($resource) && $resource)
                     <div class="over-h2">
                         <h1>{{ $resource->category->name }}</h1>
-                        <p>{{ $resource->category->title }}</p>
+                        <p>{{ $resource->sub_category }}</p>
                     </div>
                 @else
                     <div class="over-h2">

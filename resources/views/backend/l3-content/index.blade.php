@@ -74,6 +74,7 @@
                                     <th>Blog Category Type</th>
                                     <th>Faqs Type</th>
                                     <th>Actions</th>
+                                    <th>Swap</th>
 
                                 </tr>
                             </thead>
@@ -112,6 +113,13 @@
                                                     </div>
                                                 </button>
                                             </div>
+                                        </td>
+                                        <td>
+                                            <a href="{{ route('l3-content.swap', $content->id) }}">
+                                                <div class="item edit">
+                                                    <i class="icon-edit-3"></i>
+                                                </div>
+                                            </a>
                                         </td>
                                     </tr>
                                 @empty

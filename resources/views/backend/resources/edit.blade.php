@@ -102,7 +102,7 @@
 
                     <div class="form-group">
                         <label><strong>Description :</strong></label>
-                        <textarea class="summernote" name="description" value="{{ $resources->description }}" id="description">{!! $resources->description !!}</textarea>
+                        <textarea class="ckeditor" name="description" value="{{ $resources->description }}" id="description">{!! $resources->description !!}</textarea>
                     </div>
                     <p id="description-error" class="tf-color-1"></p>
 

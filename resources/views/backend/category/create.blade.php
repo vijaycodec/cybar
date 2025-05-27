@@ -49,8 +49,16 @@
 
                     <fieldset class="name">
                         <div class="body-title">Category Type <span class="tf-color-1">*</span></div>
-                        <input class="flex-grow" type="text" placeholder="Category Type" name="category_type" tabindex="0"
-                            value="{{ old('category_type') }}" aria-required="true" required="">
+                        <select class="flex-grow" name="category_type" required aria-required="true">
+                            <option value="" disabled selected>Select Category Type</option>
+                            <option value="resources">Resources</option>
+                            <option value="event">Event</option>
+                            <option value="blog">Blog</option>
+                            <option value="testimonials">Testimonials</option>
+                            <option value="careers">Careers</option>
+                            <option value="newsletter">Newsletter</option>
+                            <option value="podcast">Podcast</option>
+                        </select>
                     </fieldset>
 
                     <fieldset class="name">

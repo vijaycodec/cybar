@@ -85,12 +85,12 @@
 
                     <div class="form-group">
                         <label><strong> Short Description :</strong></label>
-                        <textarea class="summernote" name="short_desc">{{ old('short_desc') }}</textarea>
+                        <textarea class="ckeditor" name="short_desc">{{ old('short_desc') }}</textarea>
                     </div>
                     
                     <div class="form-group">
                         <label><strong>Description :</strong></label>
-                        <textarea class="summernote" name="description">{{ old('description') }}</textarea>
+                        <textarea class="ckeditor" name="description">{{ old('description') }}</textarea>
                     </div>
 
                     <div class="bot">

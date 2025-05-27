@@ -607,8 +607,8 @@ class L3ContentRepository implements L3ContentRepositoryInterface
         return [
             'l3Content'              => $l3Content,
             'page_categories'        => PageDetail::all(),
-            'coursecategories'       => CourseCategory::all(),
-            'subCategories'          => SubCategory::all(),
+            'coursecategories'       => CourseCategory::where('page_category', $l3Content->page_category_id)->get(),
+            'subCategories'          => SubCategory::where('category_id', $l3Content->category_id)->get(),
             'l3Categories'           => L3Category::where('sub_category_id', $l3Content->sub_category_id)->get(),
             'significanceCategories' => SignificanceCategory::where('sub_category_id', $l3Content->sub_category_id)->get(),
             'significance2Categories' => Significance2Category::where('sub_category_id', $l3Content->sub_category_id)->get(),

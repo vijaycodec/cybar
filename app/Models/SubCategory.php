@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class SubCategory extends Model
 {
+
+    protected $fillable = ['page_category_id', 'category_id', 'sub_category', 'slug'];
+
     public function subcategory()
     {
         return $this->belongsTo(SubCategory::class, 'sub_category_id');
