@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('course_categories', function (Blueprint $table) {
             $table->id();
             $table->integer('page_category'); // Name column with max length of 100 characters
+            $table->string('category_group', 100); // Name column with max length of 100 character
             $table->string('name', 100); // Name column with max length of 100 characters
             $table->string('slug', 500); // Name column with max length of 100 characters
             $table->string('title', 100); // Name column with max length of 100 characters
