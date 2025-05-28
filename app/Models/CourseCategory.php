@@ -11,7 +11,7 @@ class CourseCategory extends Model
 
      // Define the relationship between Services and Category
 
-    protected $fillable = ['page_category', 'name', 'slug', 'title'];
+    protected $fillable = ['page_category', 'name', 'slug', 'title','category_group'];
 
     public function services()
     {
