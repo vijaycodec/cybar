@@ -77,7 +77,7 @@
                                                 </li>
 
                                                 <ul id="group-{{ Str::slug($heading) }}" class="group-categories"
-                                                    style="display: none; margin-left: 15px;">
+                                                    style="display: none;">
                                                     @foreach ($groupedCategories as $category)
                                                         <li id="li_border">
                                                             <a class="tablinks1 {{ !$firstCategorySet ? 'active' : '' }}"
