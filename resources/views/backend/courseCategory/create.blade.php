@@ -54,6 +54,11 @@
                         </select>
                     </fieldset>
                     <fieldset class="name">
+                        <div class="body-title">Category Group <span class="tf-color-1">*</span></div>
+                        <input class="flex-grow" type="text" placeholder="Category Group" id=""
+                            name="category_group" tabindex="0" value="{{ old('category_group') }}" aria-required="true" required="">
+                    </fieldset>
+                    <fieldset class="name">
                         <div class="body-title">Category Name <span class="tf-color-1">*</span></div>
                         <input class="flex-grow" type="text" placeholder="Category Name" id="categorySelect"
                             name="name" tabindex="0" value="{{ old('name') }}" aria-required="true" required="">

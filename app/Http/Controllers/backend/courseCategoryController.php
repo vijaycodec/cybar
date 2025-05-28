@@ -53,6 +53,7 @@ class courseCategoryController extends Controller
         try {
             CourseCategory::create([
                 'page_category' => $request->category_id,
+                'category_group' => $request->category_group,
                 'name'          => $request->name,
                 'slug'          => $request->slug,
                 'title'         => $request->title,

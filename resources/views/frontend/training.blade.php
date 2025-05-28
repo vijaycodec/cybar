@@ -3,12 +3,48 @@
 @section('title', $seoData['seo_title'])
 @section('meta_description', $seoData['seo_description'])
 @section('meta_keywords', $seoData['seo_keywords'])
+<style>
+    .group-heading {
+        background-color: #b6c9db;
+        padding: 6px 10px;
+        margin-bottom: 4px;
+        border-radius: 3px;
+    }
 
+    .group-heading:hover {
+        background-color: #ddd;
+    }
+
+    ul {
+        /* Default list style (disc) */
+        list-style-type: disc;
+        /* or circle, square, etc. */
+        padding-left: 20px;
+        /* to keep indentation */
+    }
+
+    .group-heading {
+        list-style-type: none;
+        /* Remove bullet only for group heading */
+        cursor: pointer;
+        font-weight: bold;
+        /* You can add padding/margin to align nicely */
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    /* Categories inside group can have bullets (default) */
+    .group-categories {
+        list-style-type: disc;
+        /* keep bullets */
+        padding-left: 20px;
+    }
+</style>
 @section('content')
 
     <body class="" id="training-page">
         <!-- Header start -->
-        @include('frontend.layouts.training-header',['categories' => $categories])
+        @include('frontend.layouts.training-header', ['categories' => $categories_header])
         <!-- main section-->
         <section class="training-page desktop-view">
             <div class="container">
@@ -19,24 +55,57 @@
                                 <div class="categorytitle sign-arrow">Course Categories</div>
                                 <div class="ecsp_div">
                                     <ul class="tab2">
-                                        @foreach ($categories as $category)
-                                            <li id="li_border">
-                                                <a class="tablinks1 {{ $loop->first ? 'active' : ' ' }}"
-                                                    href="#{{ Str::slug($category->name) }}"
-                                                    onclick="openCity(event, '{{ Str::slug($category->name) }}')">
-                                                    {{ $category->name }}
-                                                </a>
-                                            </li>
-                                            {{-- <li id="li_border">
-                                                <a class="tablinks1 {{ $loop->first ? 'active' : '' }}"
-                                                    href="javascript:void(0);"
-                                                    data-category="{{ Str::slug($category->name) }}"
-                                                    onclick="updateURLAndOpenCity(event, '{{ Str::slug($category->name) }}')">
-                                                    {{ $category->name }}
-                                                </a>
-                                            </li> --}}
+                                        @php
+                                            $firstCategorySet = false;
+                                        @endphp
+
+                                        @foreach ($categories as $groupName => $groupedCategories)
+                                            @php
+                                                $heading = $groupName ?: null; // If null or empty string, consider ungrouped
+                                            @endphp
+
+                                            @if ($heading)
+                                                <!-- Group Category Heading -->
+                                                <li class="group-heading"
+                                                    style="font-weight: bold; cursor: pointer; position: relative; padding-right: 25px;"
+                                                    onclick="toggleGroup('{{ Str::slug($heading) }}')">
+                                                    {{ $heading }}
+                                                    <span class="toggle-icon" id="icon-{{ Str::slug($heading) }}"
+                                                        style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%);">
+                                                        +
+                                                    </span>
+                                                </li>
+
+                                                <ul id="group-{{ Str::slug($heading) }}" class="group-categories"
+                                                    style="display: none; margin-left: 15px;">
+                                                    @foreach ($groupedCategories as $category)
+                                                        <li id="li_border">
+                                                            <a class="tablinks1 {{ !$firstCategorySet ? 'active' : '' }}"
+                                                                href="#{{ Str::slug($category->name) }}"
+                                                                onclick="openCity(event, '{{ Str::slug($category->name) }}')">
+                                                                {{ $category->name }}
+                                                            </a>
+                                                        </li>
+                                                        @php $firstCategorySet = true; @endphp
+                                                    @endforeach
+                                                </ul>
+                                            @else
+                                                <!-- Directly show ungrouped categories -->
+                                                @foreach ($groupedCategories as $category)
+                                                    <li id="li_border">
+                                                        <a class="tablinks1 {{ !$firstCategorySet ? 'active' : '' }}"
+                                                            href="#{{ Str::slug($category->name) }}"
+                                                            onclick="openCity(event, '{{ Str::slug($category->name) }}')">
+                                                            {{ $category->name }}
+                                                        </a>
+                                                    </li>
+                                                    @php $firstCategorySet = true; @endphp
+                                                @endforeach
+                                            @endif
                                         @endforeach
                                     </ul>
+
+
                                 </div>
                                 <!--  -->
                             </div>
@@ -45,53 +114,47 @@
                     <!--  -->
                     <div class="col-sm-6 col-md-9">
                         <div id="code-content">
-                            <!-- 11 -->
-                            @foreach ($categories as $category)
-                                <div id="{{ Str::slug($category->name) }}" class="tabcontent1"
-                                    style="display:{{ $loop->first ? 'block' : ' ' }};">
-                                    <div class="mrgn-brdr">
-                                        <div class="row box-wrap">
+                            @foreach ($categories as $groupName => $groupedCategories)
+                                @foreach ($groupedCategories as $category)
+                                    <div id="{{ Str::slug($category->name) }}" class="tabcontent1"
+                                        style="display:{{ $loop->parent->first && $loop->first ? 'block' : 'none' }};">
+                                        <div class="mrgn-brdr">
+                                            <div class="row box-wrap">
 
-                                            <h4 class="cat-title">
-                                                {{ $category->name }}
-                                            </h4>
+                                                <h4 class="cat-title">{{ $category->name }}</h4>
 
-                                            <!--  -->
-
-                                            @foreach ($trainings->where('category_id', $category->id)->all() as $index => $training)
-                                                <div class="col-md-4 pdg-rght-0 mrgn-btm-iconbx">
-                                                    {{-- <a href="{{route('l3-template')}}"> --}}
-                                                    <div class="iconbox">
-                                                        <div class="box-header">
-                                                            <div class="box-icon pst-listing"></div>
-                                                            <h4 class="box-title">{{ $training->subcategory->sub_category }}
-                                                            </h4>
-                                                        </div>
-
-                                                        <div class="box-content" id="clr-learn">
-                                                            <div class="box-content-p">
-                                                                <p>{{ $training->description }}</p>
+                                                @foreach ($trainings->where('category_id', $category->id) as $training)
+                                                    <div class="col-md-4 pdg-rght-0 mrgn-btm-iconbx">
+                                                        <div class="iconbox">
+                                                            <div class="box-header">
+                                                                <div class="box-icon pst-listing"></div>
+                                                                <h4 class="box-title">
+                                                                    {{ $training->subcategory->sub_category ?? '-' }}</h4>
                                                             </div>
-                                                            <span class="box-readmore">
-                                                                <a
-                                                                    href="{{ route('l3-template', ['sb' => $training->subcategory->id, 'pg' => $page_id, 'ct' => $category->id]) }}">Learn
-                                                                    more
-                                                                    <i class="fa fa-chevron-right"></i></a>
-                                                            </span>
+
+                                                            <div class="box-content" id="clr-learn">
+                                                                <div class="box-content-p">
+                                                                    <p>{{ $training->description }}</p>
+                                                                </div>
+                                                                <span class="box-readmore">
+                                                                    <a
+                                                                        href="{{ route('l3-template', ['sb' => $training->subcategory->id ?? 0, 'pg' => $page_id, 'ct' => $category->id]) }}">
+                                                                        Learn more <i class="fa fa-chevron-right"></i>
+                                                                    </a>
+                                                                </span>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    </a>
-                                                </div>
-                                            @endforeach
-                                            <!--11  -->
+                                                @endforeach
+
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                @endforeach
                             @endforeach
-
                         </div>
-
                     </div>
+
                 </div>
                 <!--  -->
             </div>
@@ -101,7 +164,7 @@
         <div class="ser-h"></div>
         <!-- mobile start  -->
         <section class="training-page training-page-m mobile-view">
-            @foreach ($categories as $index => $category)
+            @foreach ($categories_header as $index => $category)
                 <div class="m-container" id="m-{{ Str::slug($category->name) }}">
                     <div class="m-title m-bg{{ $index + 1 }}">
                         <h3>{{ $category->name }}</h3> <!-- Parent Category Name -->
@@ -297,7 +360,7 @@
     </script>
 
 
-{{-- <script>
+    {{-- <script>
     // Ensure the active tab and section are displayed based on URL hash
     document.addEventListener("DOMContentLoaded", function () {
         let pathSegments = window.location.pathname.split('/');
@@ -336,5 +399,26 @@
     }
 </script> --}}
 
-    
+
+    <script>
+        function toggleGroup(groupSlug) {
+            const groupList = document.getElementById('group-' + groupSlug);
+            if (!groupList) return;
+
+            if (groupList.style.display === 'none' || groupList.style.display === '') {
+                groupList.style.display = 'block'; // Show categories
+            } else {
+                groupList.style.display = 'none'; // Hide categories
+            }
+        }
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const firstGroup = document.querySelector('.group-categories');
+            if (firstGroup) {
+                firstGroup.style.display = 'block';
+            }
+        });
+    </script>
 @endpush

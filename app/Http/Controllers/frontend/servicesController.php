@@ -24,7 +24,8 @@ class servicesController extends Controller
 
         $trainings = $this->servicesRepository->getAllServices();
         $groupedServices = $this->servicesRepository->getGroupedServices();
-        $categories = $this->servicesRepository->getCategoriesByPage($page_id);
+        $categories_header = $this->servicesRepository->getCategoriesByPage($page_id);
+        $categories=$categories_header->groupBy('category_group'); // <- group here
 
         $seoDetails = Seo::where('page_name', $page_name)
         ->where('category_name', $category)
@@ -47,7 +48,7 @@ class servicesController extends Controller
             $seoData['google_analytics'] = $seoDetails->google_analytics;
         }
 
-        return view('frontend.training', compact('categories', 'trainings', 'page_id', 'groupedServices','seoData'));
+        return view('frontend.training', compact('categories', 'trainings', 'page_id', 'groupedServices','seoData','categories_header'));
     }
 
 //     public function getServices(Request $request , $category = null)
