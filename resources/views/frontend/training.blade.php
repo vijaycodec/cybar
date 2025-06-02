@@ -39,6 +39,7 @@
         /* keep bullets */
         padding-left: 20px;
     }
+
 </style>
 @section('content')
 
@@ -421,4 +422,93 @@
             }
         });
     </script>
+
+
+{{-- 
+<script>
+    function toggleGroup(groupSlug) {
+        const allGroups = document.querySelectorAll('.group-categories');
+        const allIcons = document.querySelectorAll('.toggle-icon');
+        const allTabs = document.querySelectorAll('.tablinks1');
+
+        // Hide all groups
+        allGroups.forEach(group => {
+            group.style.display = 'none';
+        });
+
+        // Reset all icons
+        allIcons.forEach(icon => {
+            icon.innerText = '+';
+        });
+
+        // Remove 'active' from all category links
+        allTabs.forEach(tab => {
+            tab.classList.remove('active');
+        });
+
+        // Get the clicked group and icon
+        const currentGroup = document.getElementById(`group-${groupSlug}`);
+        const currentIcon = document.getElementById(`icon-${groupSlug}`);
+
+        // Show the clicked group
+        currentGroup.style.display = 'block';
+        currentIcon.innerText = '-';
+
+        // Activate the first category in the opened group
+        const firstCategoryLink = currentGroup.querySelector('.tablinks1');
+        if (firstCategoryLink) {
+            const cityName = firstCategoryLink.getAttribute('href').substring(1); // remove #
+            openCity(null, cityName); // Show tab content
+            firstCategoryLink.classList.add('active'); // Now mark visually active
+        }
+    }
+</script> --}}
+
+<script>
+    function toggleGroup(groupSlug) {
+    const allGroups = document.querySelectorAll('.group-categories');
+    const allIcons = document.querySelectorAll('.toggle-icon');
+    const allTabs = document.querySelectorAll('.tablinks1');
+
+    // 1. Close all groups
+    allGroups.forEach(group => {
+        group.style.display = 'none';
+    });
+
+    // 2. Reset all toggle icons to '+'
+    allIcons.forEach(icon => {
+        icon.innerText = '+';
+    });
+
+    // 3. Remove 'active' class from all categories
+    allTabs.forEach(tab => {
+        tab.classList.remove('active');
+    });
+
+    // 4. Open clicked group
+    const currentGroup = document.getElementById(`group-${groupSlug}`);
+    const currentIcon = document.getElementById(`icon-${groupSlug}`);
+
+    if (!currentGroup) return; // safety check
+
+    currentGroup.style.display = 'block';
+    currentIcon.innerText = '-';
+
+    // 5. Mark first category link in this group as active
+    const firstCategoryLink = currentGroup.querySelector('.tablinks1');
+
+    if (firstCategoryLink) {
+        firstCategoryLink.classList.add('active');
+
+        // 6. Open corresponding tab content by calling openCity()
+        // Pass null event because this is programmatic activation
+        const cityName = firstCategoryLink.getAttribute('href').substring(1); // remove '#'
+        openCity(null, cityName);
+    }
+}
+
+</script>
+
+
+
 @endpush
