@@ -50,6 +50,7 @@ use App\Http\Controllers\backend\podcastController as BackendPodcastController;
 use App\Http\Controllers\backend\programController;
 use App\Http\Controllers\backend\significance2Controller;
 use App\Http\Controllers\backend\significanceController;
+use App\Http\Controllers\frontend\GroupedServicesController;
 use App\Http\Controllers\frontend\NewsLetterMainController;
 use Illuminate\Support\Facades\Route;
 
@@ -375,4 +376,8 @@ Route::middleware(['FrameGuard'])->group(function () {
 
     Route::get('/download-brochure/{file}', [BrochurePdfController::class, 'download'])
         ->name('download.brochure');
+
+    Route::get('/soc', [GroupedServicesController::class, 'Soc'])->name('soc');
+    Route::get('/vapt', [GroupedServicesController::class, 'vapt'])->name('vapt');
+    Route::get('/grc', [GroupedServicesController::class, 'Grc'])->name('grc');
 });
