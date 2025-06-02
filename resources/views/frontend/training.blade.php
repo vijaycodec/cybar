@@ -483,6 +483,7 @@
     // 3. Remove 'active' class from all categories
     allTabs.forEach(tab => {
         tab.classList.remove('active');
+        tab.classList.remove('act-new');
     });
 
     // 4. Open clicked group
@@ -498,7 +499,8 @@
     const firstCategoryLink = currentGroup.querySelector('.tablinks1');
 
     if (firstCategoryLink) {
-        firstCategoryLink.classList.add('active');
+        firstCategoryLink.classList.add('act-new'); // Now mark visually active
+        console.log(firstCategoryLink);
 
         // 6. Open corresponding tab content by calling openCity()
         // Pass null event because this is programmatic activation
@@ -506,6 +508,9 @@
         openCity(null, cityName);
     }
 }
+$('.tablinks1').on('click', function() {
+  $('.tablinks1').removeClass('act-new');
+});
 
 </script>
 
