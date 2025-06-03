@@ -7,13 +7,27 @@
         height: 0px;
         display: block;
     }
+
+    #Ec-council-training {
+    background-image: url('/assets/images/long_back.webp');
+    background-size: cover;
+    background-position: center;
+    height: 390px; /* Let content height adjust naturally */
+   
+}
+
+#heade_img {
+    max-height: 150px; /* Adjust based on design */
+    height: auto;
+}
+
 </style>
 @section('content')
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style_old.css') }}">
     <body class="home-page" id="mian-body">
 
         @include('frontend.layouts.header')
-        <div class="container" id="second_pad">
+        {{-- <div class="container" id="second_pad">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel-heading">
@@ -21,7 +35,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     
         <div class="success" id="Ec-council-training" style="background-image: url({{ asset('assets/images/long_back.webp') }})">
             <div class="container">
