@@ -57,28 +57,21 @@
                                     <ul class="tab2">
                                         @php
                                             $firstCategorySet = false;
+                                            $groupOrder = ['VAPT', 'GRC', 'SOC'];
                                         @endphp
 
-                                        @foreach ($categories as $groupName => $groupedCategories)
-                                            @php
-                                                $heading = $groupName ?: null; // If null or empty string, consider ungrouped
-                                            @endphp
-
-                                            @if ($heading)
-                                                <!-- Group Category Heading -->
+                                        @foreach ($groupOrder as $group)
+                                            @if (!empty($categories[$group]))
                                                 <li class="group-heading"
                                                     style="font-weight: bold; cursor: pointer; position: relative; padding-right: 25px;"
-                                                    onclick="toggleGroup('{{ Str::slug($heading) }}')">
-                                                    {{ $heading }}
-                                                    <span class="toggle-icon" id="icon-{{ Str::slug($heading) }}"
-                                                        style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%);">
-                                                        +
-                                                    </span>
+                                                    onclick="toggleGroup('{{ Str::slug($group) }}')">
+                                                    {{ $group }}
+                                                    <span class="toggle-icon" id="icon-{{ Str::slug($group) }}"
+                                                        style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%);">+</span>
                                                 </li>
-
-                                                <ul id="group-{{ Str::slug($heading) }}" class="group-categories"
-                                                    style="display: none; margin-left: 15px;">
-                                                    @foreach ($groupedCategories as $category)
+                                                <ul id="group-{{ Str::slug($group) }}" class="group-categories"
+                                                    style="display: none;">
+                                                    @foreach ($categories[$group] as $category)
                                                         <li id="li_border">
                                                             <a class="tablinks1 {{ !$firstCategorySet ? 'active' : '' }}"
                                                                 href="#{{ Str::slug($category->name) }}"
@@ -89,23 +82,22 @@
                                                         @php $firstCategorySet = true; @endphp
                                                     @endforeach
                                                 </ul>
-                                            @else
-                                                <!-- Directly show ungrouped categories -->
-                                                @foreach ($groupedCategories as $category)
-                                                    <li id="li_border">
-                                                        <a class="tablinks1 {{ !$firstCategorySet ? 'active' : '' }}"
-                                                            href="#{{ Str::slug($category->name) }}"
-                                                            onclick="openCity(event, '{{ Str::slug($category->name) }}')">
-                                                            {{ $category->name }}
-                                                        </a>
-                                                    </li>
-                                                    @php $firstCategorySet = true; @endphp
-                                                @endforeach
                                             @endif
                                         @endforeach
+                                        {{-- Ungrouped / Others --}}
+                                        @if (isset($categories['']) && count($categories['']) > 0)
+                                            @foreach ($categories[''] as $category)
+                                                <li id="li_border">
+                                                    <a class="tablinks1 {{ !$firstCategorySet ? 'active' : '' }}"
+                                                        href="#{{ Str::slug($category->name) }}"
+                                                        onclick="openCity(event, '{{ Str::slug($category->name) }}')">
+                                                        {{ $category->name }}
+                                                    </a>
+                                                </li>
+                                                @php $firstCategorySet = true; @endphp
+                                            @endforeach
+                                        @endif
                                     </ul>
-
-
                                 </div>
                                 <!--  -->
                             </div>
@@ -419,6 +411,96 @@
             if (firstGroup) {
                 firstGroup.style.display = 'block';
             }
+        });
+    </script>
+
+
+    {{-- 
+<script>
+    function toggleGroup(groupSlug) {
+        const allGroups = document.querySelectorAll('.group-categories');
+        const allIcons = document.querySelectorAll('.toggle-icon');
+        const allTabs = document.querySelectorAll('.tablinks1');
+
+        // Hide all groups
+        allGroups.forEach(group => {
+            group.style.display = 'none';
+        });
+
+        // Reset all icons
+        allIcons.forEach(icon => {
+            icon.innerText = '+';
+        });
+
+        // Remove 'active' from all category links
+        allTabs.forEach(tab => {
+            tab.classList.remove('active');
+        });
+
+        // Get the clicked group and icon
+        const currentGroup = document.getElementById(`group-${groupSlug}`);
+        const currentIcon = document.getElementById(`icon-${groupSlug}`);
+
+        // Show the clicked group
+        currentGroup.style.display = 'block';
+        currentIcon.innerText = '-';
+
+        // Activate the first category in the opened group
+        const firstCategoryLink = currentGroup.querySelector('.tablinks1');
+        if (firstCategoryLink) {
+            const cityName = firstCategoryLink.getAttribute('href').substring(1); // remove #
+            openCity(null, cityName); // Show tab content
+            firstCategoryLink.classList.add('active'); // Now mark visually active
+        }
+    }
+</script> --}}
+
+    <script>
+        function toggleGroup(groupSlug) {
+            const allGroups = document.querySelectorAll('.group-categories');
+            const allIcons = document.querySelectorAll('.toggle-icon');
+            const allTabs = document.querySelectorAll('.tablinks1');
+
+            // 1. Close all groups
+            allGroups.forEach(group => {
+                group.style.display = 'none';
+            });
+
+            // 2. Reset all toggle icons to '+'
+            allIcons.forEach(icon => {
+                icon.innerText = '+';
+            });
+
+            // 3. Remove 'active' class from all categories
+            allTabs.forEach(tab => {
+                tab.classList.remove('active');
+                tab.classList.remove('act-new');
+            });
+
+            // 4. Open clicked group
+            const currentGroup = document.getElementById(`group-${groupSlug}`);
+            const currentIcon = document.getElementById(`icon-${groupSlug}`);
+
+            if (!currentGroup) return; // safety check
+
+            currentGroup.style.display = 'block';
+            currentIcon.innerText = '-';
+
+            // 5. Mark first category link in this group as active
+            const firstCategoryLink = currentGroup.querySelector('.tablinks1');
+
+            if (firstCategoryLink) {
+                firstCategoryLink.classList.add('act-new'); // Now mark visually active
+                console.log(firstCategoryLink);
+
+                // 6. Open corresponding tab content by calling openCity()
+                // Pass null event because this is programmatic activation
+                const cityName = firstCategoryLink.getAttribute('href').substring(1); // remove '#'
+                openCity(null, cityName);
+            }
+        }
+        $('.tablinks1').on('click', function() {
+            $('.tablinks1').removeClass('act-new');
         });
     </script>
 @endpush

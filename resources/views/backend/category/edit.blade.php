@@ -51,12 +51,27 @@
                             tabindex="0" value="{{ $category->slug }}" aria-required="true" required readonly>
                     </fieldset>
 
-                    <fieldset class="name">
+                    {{-- <fieldset class="name">
                         <div class="body-title mb-10">Category Type <span class="tf-color-1">*</span></div>
                         <input class="mb-10" type="text" placeholder="Enter Category name" name="category_type"
                             id="category-name" tabindex="0" value="{{ $category->category_type }}">
                         <p id="name-error" class="tf-color-1 error-text"></p> <!-- Error Below Input -->
+                    </fieldset> --}}
+                    <fieldset class="name">
+                        <div class="body-title">Category Type <span class="tf-color-1">*</span></div>
+                        <select class="flex-grow" name="category_type" required aria-required="true" id="category-name">
+                            <option value="" disabled {{ $category->category_type ? '' : 'selected' }}>Select Category Type</option>
+                            <option value="resources" {{ $category->category_type == 'resources' ? 'selected' : '' }}>Resources</option>
+                            <option value="event" {{ $category->category_type == 'event' ? 'selected' : '' }}>Event</option>
+                            <option value="blog" {{ $category->category_type == 'blog' ? 'selected' : '' }}>Blog</option>
+                            <option value="testimonials" {{ $category->category_type == 'testimonials' ? 'selected' : '' }}>Testimonials</option>
+                            <option value="careers" {{ $category->category_type == 'careers' ? 'selected' : '' }}>Careers</option>
+                            <option value="newsletter" {{ $category->category_type == 'newsletter' ? 'selected' : '' }}>Newsletter</option>
+                            <option value="podcast" {{ $category->category_type == 'podcast' ? 'selected' : '' }}>Podcast</option>
+                            <p id="name-error" class="tf-color-1 error-text"></p>
+                        </select>
                     </fieldset>
+
 
                     <fieldset class="name">
                         <div class="body-title">Category Title <span class="tf-color-1">*</span></div>

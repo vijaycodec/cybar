@@ -112,6 +112,7 @@ class courseCategoryController extends Controller
         $courseCategory = CourseCategory::findOrFail($id);
 
         $courseCategory->page_category = $request->category_id;
+        $courseCategory->category_group = $request->category_group;
         $courseCategory->name          = $request->name;
         $courseCategory->slug          = $request->slug;
         $courseCategory->title         = $request->title;

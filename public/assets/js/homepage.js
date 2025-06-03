@@ -46,7 +46,7 @@ $("#home-slider1, #home-slider2, #home-slider3, #home-slider4, #home-slider5, #h
 
  });
 
- $("#home-slider1_1, #home-slider1_2, #home-slider1_3, #home-slider1_4, #home-slider1_5, #home-slider2_1, #home-slider2_2, #home-slider2_3, #home-slider2_4, #home-slider2_5, #home-slider2_6, #home-slider2_7, #home-slider2_8, #home-slider2_9, #home-slider2_10" ).owlCarousel({
+ $("#home-slider1_1, #home-slider1_2, #home-slider1_3, #home-slider1_4, #home-slider1_5, #home-slider2_1, #home-slider2_2, #home-slider2_3, #home-slider2_4, #home-slider2_5, #home-slider2_6, #home-slider2_7, #home-slider2_8, #home-slider2_9, #home-slider2_10, #home-slider4_1, #home-slider4_2, #home-slider4_3, #home-slider4_4, #home-slider4_5" ).owlCarousel({
    loop: false,
    margin: 10,
    nav: true,
@@ -181,6 +181,11 @@ function showContent(index) {
 $(function () {
    initializeCarousel("mhome-slider1", "navigation-count");
    initializeCarousel("mhome-slider2", "navigation-count1");
+   initializeCarousel("mhome-slider2_21", "navigation-count1_21");
+   initializeCarousel("mhome-slider2_22", "navigation-count1_22");
+   initializeCarousel("mhome-slider2_23", "navigation-count1_23");
+   initializeCarousel("mhome-slider2_24", "navigation-count1_24");
+   initializeCarousel("mhome-slider2_25", "navigation-count1_25");
    initializeCarousel("mhome-slider3", "navigation-count2");
    initializeCarousel("mhome-slider4", "navigation-count3");
    initializeCarousel("mhome-slider5", "navigation-count4");
@@ -196,6 +201,7 @@ $(function () {
    initializeCarousel("mhome-slider15", "navigation-count14");
    initializeCarousel("mhome-slider16", "navigation-count15");
    initializeCarousel("mhome-slider17", "navigation-count16");
+   initializeCarousel("mhome-slider17_2", "navigation-count16_2");
    initializeCarousel("mhome-slider18", "navigation-count17");
    initializeCarousel("mhome-slider19", "navigation-count18");
    initializeCarousel("mhome-slider20", "navigation-count19");
