@@ -92,7 +92,7 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="javascript:void(0)" class="cn-main-content-enclosed"
+                                <a href="{{ route('vapt') }}" class="cn-main-content-enclosed"
                                     style="display: block; text-decoration: none;">
                                     <h3>Vulnerability Assesement &amp; Penetration Testing</h3>
                                     <p>Services to ensure the Integrity of Information Systems, Softwares & Applications,
@@ -120,9 +120,9 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="javascript:void(0)" class="cn-main-content-enclosed"
+                                <a href="{{ route('grc') }}" class="cn-main-content-enclosed"
                                     style="display: block; text-decoration: none;">
-                                    <h3>Digital Forensic &amp; Cyber Fraud Management</h3>
+                                    <h3>Governance, Risk &amp; Compliance</h3>
                                     <p>Identify and resolve Ecrime incidents that adversely impact organizations with
                                         cybercrime
                                         /
@@ -145,7 +145,7 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="javascript:void(0)" class="cn-main-content-enclosed"
+                                <a href="{{ route('soc') }}" class="cn-main-content-enclosed"
                                     style="display: block; text-decoration: none;">
                                     <h3>SOC (Security Operation Center) as a Service</h3>
                                     <p>Provides round-the-clock proactive event monitoring with prioritized alert
