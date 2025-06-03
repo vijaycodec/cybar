@@ -60,16 +60,17 @@
             <div class="row" id="second_mar">
     
                 <div class="col-md-4" id="sec_bg">
-                    <a href="Trainings/EC-COUNCIL-Training-Certification-Programs.php" id="second_a">
+                    <a href="javascript:void(0)" id="second_a">
                         <div class="panel-heading">
-                            <h2 id="second-font">EC COUNCIL</h2>
+                            <h2 id="second-font">Application Security Testing</h2>
                         </div>
                         <div class="panel-body">
-                            <img id="image" src="{{ asset('assets/images/ECCouncil-Training-Course.webp') }}" alt="">
+                            <img id="image" src="{{ asset('assets/images/Application-Security-Testing.jpg') }}" alt="">
                             <div class="caption">
-                                <p id="second-p">Codec Networks as a EC-Council Accredited partner provides completely Vendor neutral tactical security programs that are globally accepted in Information Security Assurance which teaches techniques of the worlds ..</p>
-                                <p>
-                                
+                                <p id="second-p">Application security testing identifies vulnerabilities in software 
+                                    applications through static and dynamic analysis, ensuring robust
+                                     protection against attacks and safeguarding sensitive data from exploitation.</p>
+                                </p>
                                 
                                 <div class="btn-success btn-sm" id="second_btn">Read More..</div>
                                 </p>
@@ -79,55 +80,69 @@
                 </div>
     
                 <div class="col-md-4" id="sec_bg">
-                    <a href="Trainings/Assessment-Audit-&-Compliance.php" id="second_a">
+                    <a href="javascript:void(0)" id="second_a">
                         <div class="panel-heading">
-                            <h2 id="second-font">PECB (AUDIT & COMPLIANCE)</h2>
-                        </div>
-                        <div class="panel-body">
-                            <img id="image" src="{{ asset('assets/images/Assessment-Audit-Compliance-Training-Course.webp') }}" alt="Assessment-Audit-Complaince">
-                            <div class="caption">
-                                <p id="second-p">Codec Networks as PECB Accredited Partner provides the most up-to-date ISO trainings that are needed to succeed and assure confidence in your everyday life and ensure that you have the necessary capabilities of shielding ...</p>
-                                <p>
-                                
-                                
-                                <div class="btn-success btn-sm" id="second_btn">Read More..</div>
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-    
-                <div class="col-md-4" id="sec_bg">
-                    <a href="Trainings/ISACA-&-ISC2.php" id="second_a">
-                        <div class="panel-heading">
-                            <h2 id="second-font">
-                                ISACA & ISC <sup>2</sup>
-                            </h2>
-                        </div>
-                        <div class="panel-body">
-                            <img id="image" src="{{ asset('assets/images/ISCA-Training-Course.webp') }}" alt="">
-                            <div class="caption">
-                                <p id="second-p">Independent studies consistently rate ISACA and ISC2 designations among the highest paying IT and impactful certifications for an IT professional. Learn and Earn with ISACA and ISC2 Training and Certification.</p>
-                                <p>
-                                
-                                
-                                <div class="btn-success btn-sm" id="second_btn">Read More..</div>
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-    
-                <div class="col-md-4" id="sec_bg">
-                    <a href="Trainings/CISCO-Training-Certification-Programs.php" id="second_a">
-                        <div class="panel-heading">
-                            <h2 id="second-font">NETWORK & NETWORK SECURITY</h2>
+                            <h2 id="second-font">Network Security Testing</h2>
                         </div>
                         <div class="panel-body">
                             <img id="image" src="{{ asset('assets/images/network-security.webp') }}" alt="">
                             <div class="caption">
-                                <p id="second-p">For Professional interested in Network & Network Security Trainings, Codec Networks facilitates three levels of Network Courses i.e. Associate, Professional and Expert recommended as best Industry Practices
-                                    Programs..</p>
+                                <p id="second-p">Network security testing evaluates the security posture of networks by identifying vulnerabilities, testing firewall effectiveness, detecting intrusions, and ensuring protection against unauthorized access and cyber threats.</p>
+                                
+                            </p>
+                                <div class="btn-success btn-sm" id="second_btn">Read More..</div>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+    
+                <div class="col-md-4" id="sec_bg">
+                    <a href="javascript:void(0)" id="second_a">
+                        <div class="panel-heading">
+                            <h2 id="second-font">
+                                Database Security Testing
+                            </h2>
+                        </div>
+                        <div class="panel-body">
+                            <img id="image" src="{{ asset('assets/images/Database Security Testing.webp') }}" alt="">
+                            <div class="caption">
+                                <p id="second-p">Database security testing identifies vulnerabilities, misconfigurations, and access control issues to protect sensitive data from SQL injection, privilege escalation, data leaks, and unauthorized access.</p>
+                                 <p>
+                                
+                                <div class="btn-success btn-sm" id="second_btn">Read More..</div>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+    
+                <div class="col-md-4" id="sec_bg">
+                    <a href="javascript:void(0)" id="second_a">
+                        <div class="panel-heading">
+                            <h2 id="second-font">Server & Storage Security Testing</h2>
+                        </div>
+                        <div class="panel-body">
+                            <img id="image" src="{{ asset('assets/images/Security-Testing.jpg') }}" alt="">
+                            <div class="caption">
+                                <p id="second-p">Server & storage security testing assesses configurations, access controls, and patch levels to prevent unauthorized access, data breaches, ransomware, and ensure resilience against cyber threats.</p>
+                                <p>
+                                <div class="btn-success btn-sm" id="second_btn">Read More..</div>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+    
+                <div class="col-md-4" id="sec_bg">
+                    <a href="javascript:void(0)" id="second_a">
+                        <div class="panel-heading">
+                            <h2 id="second-font">People & Process Security Testing</h2>
+                        </div>
+                        <div class="panel-body">
+                            <img id="image" src="{{ asset('assets/images/People-&-Process-Security-Testing.jpg') }}" alt="">
+                            <div class="caption">
+                                <p id="second-p">People & process security testing evaluates human and procedural vulnerabilities, including insider threats, social engineering, and policy adherence to strengthen organizational security posture and reduce risk exposure.</p>
                                 <p>
                                 
                                 
@@ -139,36 +154,17 @@
                 </div>
     
                 <div class="col-md-4" id="sec_bg">
-                    <a href="Trainings/IT-Security-&-Pen-Testing.php" id="second_a">
+                    <a href="javascript:void(0)" id="second_a">
                         <div class="panel-heading">
-                            <h2 id="second-font">Specialised Security Programs</h2>
+                            <h2 id="second-font">IT Security Auditing & Testing</h2>
                         </div>
                         <div class="panel-body">
-                            <img id="image" src="{{ asset('assets/images/IT-Security-_-PEN-Testing.webp') }}" alt="">
+                            <img id="image" src="{{ asset('assets/images/IT-Security-Auditing-&-Testing.jpg') }}" alt="">
                             <div class="caption">
-                                <p id="second-p">Codec Networks Specialize IT Security courses are the foundation, from where anyone can sign up for our Security Courses and can get the most up-to-date information, complete hands-on labs and certification preparation ..</p>
+                                <p id="second-p">IT Security Auditing & Testing involves systematic evaluation of systems, networks, 
+                                    and policies to identify vulnerabilities, ensure compliance,
+                                     and validate the effectiveness of cybersecurity controls.</p>
                                 <p>
-                                
-                                
-                                <div class="btn-success btn-sm" id="second_btn">Read More..</div>
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-    
-                <div class="col-md-4" id="sec_bg">
-                    <a href="Trainings/Forensic-&-Fraud-Investigation.php" id="second_a">
-                        <div class="panel-heading">
-                            <h2 id="second-font">FORENSIC & FRAUD INVESTIGATION</h2>
-                        </div>
-                        <div class="panel-body">
-                            <img id="image" src="{{ asset('assets/images/Forensic-Freaud-Investigation-Training-Course.webp') }}" alt="">
-                            <div class="caption">
-                                <p id="second-p">Codec Networks specialist Forensics & Fraud Investigation courses drivend by our experts in the field of high-tech forensic lab and focuses on Technological issues including cyber security, encryption, cryptography and digital forensics...</p>
-                                <p>
-                                
-                                
                                 <div class="btn-success btn-sm" id="second_btn">Read More..</div>
                                 </p>
                             </div>
@@ -176,17 +172,15 @@
                     </a>
                 </div>
             <div class="col-md-4" id="sec_bg">
-                    <a href="Trainings/Big-Data-Analytics.php" id="second_a">
+                    <a href="javascript:void(0)" id="second_a">
                         <div class="panel-heading">
-                            <h2 id="second-font">Data Science / Analytic</h2>
+                            <h2 id="second-font">Offensive Security & Ethical Hacking Services</h2>
                         </div>
                         <div class="panel-body">
-                            <img id="image" src="{{ asset('assets/images/Data-Science-python.webp') }}" alt="">
+                            <img id="image" src="{{ asset('assets/images/Offensive-Security-&-Ethical-Hacking-Services.jpg') }}" alt="">
                             <div class="caption">
-                                <p id="second-p">With Codec Networks' Data Science & Analytics training; gain skills in data-driven business strategy and learn tools / techniques to Analytics technology falls into four major: analysts, scientists, developer and administrator...</p>
+                                <p id="second-p">Offensive Security & Ethical Hacking Services simulate real-world attacks to uncover vulnerabilities, test defenses, and strengthen security posture without causing harm to the target systems.</p>
                                 <p>
-                                
-                                
                                 <div class="btn-success btn-sm" id="second_btn">Read More..</div>
                                 </p>
                             </div>

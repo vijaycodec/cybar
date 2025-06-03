@@ -61,14 +61,14 @@
             <div class="row" id="second_mar">
     
                 <div class="col-md-4" id="sec_bg">
-                    <a href="Trainings/EC-COUNCIL-Training-Certification-Programs.php" id="second_a">
+                    <a href="javascript:void(0)" id="second_a">
                         <div class="panel-heading">
-                            <h2 id="second-font">EC COUNCIL</h2>
+                            <h2 id="second-font">Cyber Forensic And Threat Analysis as a Service</h2>
                         </div>
                         <div class="panel-body">
-                            <img id="image" src="{{ asset('assets/images/ECCouncil-Training-Course.webp') }}" alt="">
+                            <img id="image" src="{{ asset('assets/images/cybersapiens-soc-as-a-service-socaas-page-featured-image.jpg') }}" alt="">
                             <div class="caption">
-                                <p id="second-p">Codec Networks as a EC-Council Accredited partner provides completely Vendor neutral tactical security programs that are globally accepted in Information Security Assurance which teaches techniques of the worlds ..</p>
+                                <p id="second-p">Cyber Forensic and Threat Analysis as a Service identifies root causes of incidents, analyzes threat vectors, preserves digital evidence, and supports legal or compliance-driven investigations.</p>
                                 <p>
                                 
                                 
@@ -80,14 +80,14 @@
                 </div>
     
                 <div class="col-md-4" id="sec_bg">
-                    <a href="Trainings/Assessment-Audit-&-Compliance.php" id="second_a">
+                    <a href="javascript:void(0)" id="second_a">
                         <div class="panel-heading">
-                            <h2 id="second-font">PECB (AUDIT & COMPLIANCE)</h2>
+                            <h2 id="second-font">Brand Reputation Threat Analysis and Risk Management Services</h2>
                         </div>
                         <div class="panel-body">
-                            <img id="image" src="{{ asset('assets/images/Assessment-Audit-Compliance-Training-Course.webp') }}" alt="Assessment-Audit-Complaince">
+                            <img id="image" src="{{ asset('assets/images/Brand Reputation Threat Analysis and Risk Management Services.png') }}" alt="Assessment-Audit-Complaince">
                             <div class="caption">
-                                <p id="second-p">Codec Networks as PECB Accredited Partner provides the most up-to-date ISO trainings that are needed to succeed and assure confidence in your everyday life and ensure that you have the necessary capabilities of shielding ...</p>
+                                <p id="second-p">Brand Reputation Threat Analysis and Risk Management Services identify online risks, monitor digital presence, detect impersonation or defamation, and mitigate potential brand damage effectively.</p>
                                 <p>
                                 
                                 
@@ -99,101 +99,25 @@
                 </div>
     
                 <div class="col-md-4" id="sec_bg">
-                    <a href="Trainings/ISACA-&-ISC2.php" id="second_a">
+                    <a href="javascript:void(0)" id="second_a">
                         <div class="panel-heading">
                             <h2 id="second-font">
-                                ISACA & ISC <sup>2</sup>
+                                Managed SOC Service
                             </h2>
                         </div>
                         <div class="panel-body">
-                            <img id="image" src="{{ asset('assets/images/ISCA-Training-Course.webp') }}" alt="">
+                            <img id="image" src="{{ asset('assets/images/managed-soc.jpg') }}" alt="">
                             <div class="caption">
-                                <p id="second-p">Independent studies consistently rate ISACA and ISC2 designations among the highest paying IT and impactful certifications for an IT professional. Learn and Earn with ISACA and ISC2 Training and Certification.</p>
+                                <p id="second-p">Managed SOC Service provides 24/7 threat monitoring, detection,
+                                     incident response, and log analysis, ensuring proactive cybersecurity defense with expert
+                                      analysts and advanced threat intelligence.</p>
                                 <p>
-                                
-                                
                                 <div class="btn-success btn-sm" id="second_btn">Read More..</div>
                                 </p>
                             </div>
                         </div>
                     </a>
                 </div>
-    
-                <div class="col-md-4" id="sec_bg">
-                    <a href="Trainings/CISCO-Training-Certification-Programs.php" id="second_a">
-                        <div class="panel-heading">
-                            <h2 id="second-font">NETWORK & NETWORK SECURITY</h2>
-                        </div>
-                        <div class="panel-body">
-                            <img id="image" src="{{ asset('assets/images/network-security.webp') }}" alt="">
-                            <div class="caption">
-                                <p id="second-p">For Professional interested in Network & Network Security Trainings, Codec Networks facilitates three levels of Network Courses i.e. Associate, Professional and Expert recommended as best Industry Practices
-                                    Programs..</p>
-                                <p>
-                                
-                                
-                                <div class="btn-success btn-sm" id="second_btn">Read More..</div>
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-    
-                <div class="col-md-4" id="sec_bg">
-                    <a href="Trainings/IT-Security-&-Pen-Testing.php" id="second_a">
-                        <div class="panel-heading">
-                            <h2 id="second-font">Specialised Security Programs</h2>
-                        </div>
-                        <div class="panel-body">
-                            <img id="image" src="{{ asset('assets/images/IT-Security-_-PEN-Testing.webp') }}" alt="">
-                            <div class="caption">
-                                <p id="second-p">Codec Networks Specialize IT Security courses are the foundation, from where anyone can sign up for our Security Courses and can get the most up-to-date information, complete hands-on labs and certification preparation ..</p>
-                                <p>
-                                
-                                
-                                <div class="btn-success btn-sm" id="second_btn">Read More..</div>
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-    
-                <div class="col-md-4" id="sec_bg">
-                    <a href="Trainings/Forensic-&-Fraud-Investigation.php" id="second_a">
-                        <div class="panel-heading">
-                            <h2 id="second-font">FORENSIC & FRAUD INVESTIGATION</h2>
-                        </div>
-                        <div class="panel-body">
-                            <img id="image" src="{{ asset('assets/images/Forensic-Freaud-Investigation-Training-Course.webp') }}" alt="">
-                            <div class="caption">
-                                <p id="second-p">Codec Networks specialist Forensics & Fraud Investigation courses drivend by our experts in the field of high-tech forensic lab and focuses on Technological issues including cyber security, encryption, cryptography and digital forensics...</p>
-                                <p>
-                                
-                                
-                                <div class="btn-success btn-sm" id="second_btn">Read More..</div>
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            <div class="col-md-4" id="sec_bg">
-                    <a href="Trainings/Big-Data-Analytics.php" id="second_a">
-                        <div class="panel-heading">
-                            <h2 id="second-font">Data Science / Analytic</h2>
-                        </div>
-                        <div class="panel-body">
-                            <img id="image" src="{{ asset('assets/images/Data-Science-python.webp') }}" alt="">
-                            <div class="caption">
-                                <p id="second-p">With Codec Networks' Data Science & Analytics training; gain skills in data-driven business strategy and learn tools / techniques to Analytics technology falls into four major: analysts, scientists, developer and administrator...</p>
-                                <p>
-                                
-                                
-                                <div class="btn-success btn-sm" id="second_btn">Read More..</div>
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                </div>  
             </div>
     
         <a href="#mian-body" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
