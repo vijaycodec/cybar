@@ -65,7 +65,7 @@
                             <h2 id="second-font">Governance, Risk & Compliance (GRC) Services</h2>
                         </div>
                         <div class="panel-body">
-                            <img id="image" src="{{ asset('assets/images/ECCouncil-Training-Course.webp') }}" alt="">
+                            <img id="image" src="{{ asset('assets/images/grc-governance-risk-compliance.webp') }}" alt="">
                             <div class="caption">
                                 <p id="second-p">We deliver global GRC services that streamline compliance, manage enterprise risks, ensure regulatory adherence, and enhance governance frameworks across multinational operations for business resilience and integrity</p>
                                 <p>
@@ -82,7 +82,7 @@
                             <h2 id="second-font">Data Privacy & Protection Services </h2>
                         </div>
                         <div class="panel-body">
-                            <img id="image" src="{{ asset('assets/images/Assessment-Audit-Compliance-Training-Course.webp') }}" alt="Assessment-Audit-Complaince">
+                            <img id="image" src="{{ asset('assets/images/Data-Privacy.webp') }}" alt="Assessment-Audit-Complaince">
                             <div class="caption">
                                 <p id="second-p">Our Data Privacy & Protection Services ensure compliance with global regulations, safeguard sensitive information, mitigate breaches, and build trust through robust data governance and security frameworks</p>
                                 <p>
@@ -101,7 +101,7 @@
                             </h2>
                         </div>
                         <div class="panel-body">
-                            <img id="image" src="{{ asset('assets/images/ISCA-Training-Course.webp') }}" alt="">
+                            <img id="image" src="{{ asset('assets/images/StrategicRiskAssessmentManagement.jpeg') }}" alt="">
                             <div class="caption">
                                 <p id="second-p">We provide strategic risk assessment and management services to identify, evaluate, and mitigate business risks, enabling informed decisions, resilience, and long-term organizational success.</p>
                                 <p>
@@ -118,7 +118,7 @@
                             <h2 id="second-font">Emerging Tech & Web3.0 Security</h2>
                         </div>
                         <div class="panel-body">
-                            <img id="image" src="{{ asset('assets/images/network-security.webp') }}" alt="">
+                            <img id="image" src="{{ asset('assets/images/Strengthening-Cybersecurity-in-the-Web.jpg') }}" alt="">
                             <div class="caption">
                                 <p id="second-p">Our services secure emerging technologies and Web3.0 ecosystems, addressing blockchain, DeFi, metaverse, and AI risks with advanced threat protection, compliance strategies, and cybersecurity frameworks</p>
                                 <p>
@@ -135,7 +135,7 @@
                             <h2 id="second-font">Industry-Specific Compliance & Advisory</h2>
                         </div>
                         <div class="panel-body">
-                            <img id="image" src="{{ asset('assets/images/IT-Security-_-PEN-Testing.webp') }}" alt="">
+                            <img id="image" src="{{ asset('assets/images/Industry-Specific-compliance.jpeg') }}" alt="">
                             <div class="caption">
                                 <p id="second-p">We offer tailored compliance and advisory services aligned with industry regulations, helping businesses navigate legal complexities, reduce risks, and achieve operational excellence across sectors.</p>
                                 <p>
