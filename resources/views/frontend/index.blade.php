@@ -92,8 +92,8 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="{{ route('vapt') }}" class="cn-main-content-enclosed"
-                                    style="display: block; text-decoration: none;">
+                                <a href="#" class="cn-main-content-enclosed scroll-link" data-target="#mhome-div2"
+                                    data-offset="-60x" data-speed="400" style="display: block; text-decoration: none;">
                                     <h3>Vulnerability Assesement &amp; Penetration Testing</h3>
                                     <p>Services to ensure the Integrity of Information Systems, Softwares & Applications,
                                         block
@@ -120,7 +120,8 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="{{ route('grc') }}" class="cn-main-content-enclosed"
+                                <a href="#" class="cn-main-content-enclosed scroll-link" data-target="#mhome-div4"
+                                data-offset="-60x" data-speed="600" 
                                     style="display: block; text-decoration: none;">
                                     <h3>Governance, Risk &amp; Compliance</h3>
                                     <p>Identify and resolve Ecrime incidents that adversely impact organizations with
@@ -145,7 +146,8 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="{{ route('soc') }}" class="cn-main-content-enclosed"
+                                <a href="#" class="cn-main-content-enclosed scroll-link" data-target="#mhome-div4-1"
+                                data-offset="-60x" data-speed=" 800" 
                                     style="display: block; text-decoration: none;">
                                     <h3>SOC (Security Operation Center) as a Service</h3>
                                     <p>Provides round-the-clock proactive event monitoring with prioritized alert
@@ -163,7 +165,8 @@
         </section>
         <!-- empower industry end -->
         <!--Offering start -->
-        <section class="Offering-bg1 home-sec mhspace" id="mhome-div2" style="    background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.2'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);">
+        <section class="Offering-bg1 home-sec mhspace" id="mhome-div2"
+            style="    background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.2'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 cn-title">
@@ -180,7 +183,8 @@
                             <li><a class="scr-tabs1" href="#tab12">Network Vapt Services</a></li>
                             <li><a class="scr-tabs1" href="#tab13">Cloud Vapt Services </a></li>
                             <li><a class="scr-tabs1" href="#tab14"> Server And Storage Vapt Services </a></li>
-                            <li><a class="scr-tabs1" href="#tab15"> Digital Technologies Penetration Testing Services </a></li>
+                            <li><a class="scr-tabs1" href="#tab15"> Digital Technologies Penetration Testing Services </a>
+                            </li>
                         </ul>
                         <!-- END tabs-nav -->
                         <div id="tabs-content">
@@ -1219,7 +1223,8 @@
                                         </div>
                                         <div class="cn-content">
                                             <p>SOC as a Service provides outsourced security monitoring,
-                                                 threat detection, and incident response to protect organizations from cyber threats 24/7.
+                                                threat detection, and incident response to protect organizations from cyber
+                                                threats 24/7.
                                             </p>
                                         </div>
                                     </div>
@@ -1239,14 +1244,15 @@
                                                 src="{{ asset('assets/images/security-audit-compliance.webp') }}"> </div>
                                         <div class="cn-content">
                                             <p>Security Monitoring and SIEM Services offer real-time threat detection,
-                                                 log analysis, and incident response to enhance organizational cybersecurity posture.
+                                                log analysis, and incident response to enhance organizational cybersecurity
+                                                posture.
                                             </p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
                                         <a href="javascript:void(0)" class="cn-main-content-enclosed"
                                             style="display: block; text-decoration: none;">
-                                            <h3>Security Monitoring & SIEM Services    </h3>
+                                            <h3>Security Monitoring & SIEM Services </h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
                                     </div>
@@ -1260,14 +1266,15 @@
                                         </div>
                                         <div class="cn-content">
                                             <p>Managed Endpoint Detection & Response (EDR) delivers continuous monitoring,
-                                                 threat detection, and automated response to protect endpoints from cyberattacks.
+                                                threat detection, and automated response to protect endpoints from
+                                                cyberattacks.
                                             </p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
                                         <a href="javascript:void(0)" class="cn-main-content-enclosed"
                                             style="display: block; text-decoration: none;">
-                                            <h3>Managed Endpoint Detection & Response (EDR)   </h3>
+                                            <h3>Managed Endpoint Detection & Response (EDR) </h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
                                     </div>
@@ -1280,8 +1287,9 @@
                                                 src="{{ asset('assets/images/forensic-seervices.webp') }}">
                                         </div>
                                         <div class="cn-content">
-                                            <p>Extended Detection & Response (XDR) Services unify data across endpoints, 
-                                                networks, and cloud to detect, investigate, and respond to threats efficiently.
+                                            <p>Extended Detection & Response (XDR) Services unify data across endpoints,
+                                                networks, and cloud to detect, investigate, and respond to threats
+                                                efficiently.
                                             </p>
                                         </div>
                                     </div>
@@ -1301,8 +1309,10 @@
                                                 src="{{ asset('assets/images/soc-services.webp') }}">
                                         </div>
                                         <div class="cn-content">
-                                            <p>SOAR services integrate security tools, automate workflows, and coordinate response 
-                                                actions to streamline threat detection, investigation, and incident resolution.
+                                            <p>SOAR services integrate security tools, automate workflows, and coordinate
+                                                response
+                                                actions to streamline threat detection, investigation, and incident
+                                                resolution.
                                             </p>
                                         </div>
                                     </div>
@@ -1322,15 +1332,16 @@
                                                 src="{{ asset('assets/images/vapt-services.webp') }}">
                                         </div>
                                         <div class="cn-content">
-                                            <p>Cloud Security Monitoring & Protection ensures continuous visibility, 
-                                                threat detection, and compliance across cloud environments to safeguard data and applications.
+                                            <p>Cloud Security Monitoring & Protection ensures continuous visibility,
+                                                threat detection, and compliance across cloud environments to safeguard data
+                                                and applications.
                                             </p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
                                         <a href="javascript:void(0)" class="cn-main-content-enclosed"
                                             style="display: block; text-decoration: none;">
-                                            <h3>Cloud Security Monitoring & Protection  </h3>
+                                            <h3>Cloud Security Monitoring & Protection </h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
                                     </div>
@@ -1342,15 +1353,16 @@
                                         <div class="cn-hover-img"> <img
                                                 src="{{ asset('assets/images/security-audit-compliance.webp') }}"> </div>
                                         <div class="cn-content">
-                                            <p>Dark Web Intelligence & Threat Hunting identifies exposed data, 
-                                                monitors cybercriminal activity, and proactively detects threats targeting your organization.
+                                            <p>Dark Web Intelligence & Threat Hunting identifies exposed data,
+                                                monitors cybercriminal activity, and proactively detects threats targeting
+                                                your organization.
                                             </p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
                                         <a href="javascript:void(0)" class="cn-main-content-enclosed"
                                             style="display: block; text-decoration: none;">
-                                            <h3>Dark Web Intelligence & Threat Hunting  </h3>
+                                            <h3>Dark Web Intelligence & Threat Hunting </h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
                                     </div>
@@ -1438,7 +1450,7 @@
                                 <div class="cn-hover-img"> <img
                                         src="{{ asset('assets/images/security-audit-compliance.webp') }}"> </div>
                                 <div class="cn-content">
-                                    <p>SOC as a Service provides outsourced security monitoring, threat detection, 
+                                    <p>SOC as a Service provides outsourced security monitoring, threat detection,
                                         and incident response to protect organizations from cyber threats 24/7.
                                     </p>
                                 </div>
@@ -1459,7 +1471,7 @@
                                 </div>
                                 <div class="cn-content">
                                     <p>Security Monitoring and SIEM Services offer real-time threat detection,
-                                         log analysis, and incident response to enhance organizational cybersecurity posture.
+                                        log analysis, and incident response to enhance organizational cybersecurity posture.
                                     </p>
                                 </div>
                             </div>
@@ -1475,12 +1487,12 @@
                     <div class="item">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img
-                                        src="{{ asset('assets/images/managed-it-services.webp') }}">
+                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/managed-it-services.webp') }}">
                                 </div>
                                 <div class="cn-content">
-                                    <p>Managed Endpoint Detection & Response (EDR) delivers continuous monitoring, threat detection,
-                                         and automated response to protect endpoints from cyberattacks.
+                                    <p>Managed Endpoint Detection & Response (EDR) delivers continuous monitoring, threat
+                                        detection,
+                                        and automated response to protect endpoints from cyberattacks.
                                     </p>
                                 </div>
                             </div>
@@ -1496,12 +1508,11 @@
                     <div class="item">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img
-                                        src="{{ asset('assets/images/forensic-seervices.webp') }}">
+                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/forensic-seervices.webp') }}">
                                 </div>
                                 <div class="cn-content">
                                     <p>Extended Detection & Response (XDR) Services unify data across endpoints, networks,
-                                         and cloud to detect, investigate, and respond to threats efficiently.
+                                        and cloud to detect, investigate, and respond to threats efficiently.
                                     </p>
                                 </div>
                             </div>
@@ -1521,7 +1532,7 @@
                                 </div>
                                 <div class="cn-content">
                                     <p>SOAR services integrate security tools, automate workflows, and coordinate response
-                                         actions to streamline threat detection, investigation, and incident resolution.
+                                        actions to streamline threat detection, investigation, and incident resolution.
                                     </p>
                                 </div>
                             </div>
@@ -1540,8 +1551,9 @@
                                 <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}">
                                 </div>
                                 <div class="cn-content">
-                                    <p>Cloud Security Monitoring & Protection ensures continuous visibility, threat detection,
-                                         and compliance across cloud environments to safeguard data and applications.
+                                    <p>Cloud Security Monitoring & Protection ensures continuous visibility, threat
+                                        detection,
+                                        and compliance across cloud environments to safeguard data and applications.
                                     </p>
                                 </div>
                             </div>
@@ -1560,8 +1572,9 @@
                                 <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}">
                                 </div>
                                 <div class="cn-content">
-                                    <p>Dark Web Intelligence & Threat Hunting identifies exposed data, 
-                                        monitors cybercriminal activity, and proactively detects threats targeting your organization.
+                                    <p>Dark Web Intelligence & Threat Hunting identifies exposed data,
+                                        monitors cybercriminal activity, and proactively detects threats targeting your
+                                        organization.
                                     </p>
                                 </div>
                             </div>
@@ -1582,7 +1595,8 @@
         </section>
         <!-- empower industry end -->
         <!--Offering start -->
-        <section class="Offering mhspace" id="mhome-div4" style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.25'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);">
+        <section class="Offering mhspace" id="mhome-div4"
+            style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.25'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 cn-title">
@@ -4081,8 +4095,7 @@
                     <div class="item">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img
-                                        src="{{ asset('assets/images/forensic-seervices.webp') }}">
+                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/forensic-seervices.webp') }}">
                                 </div>
                                 <div class="cn-content">
                                     <p>Identify and resolve Ecrime incidents that adversely impact organizations with
@@ -4146,8 +4159,7 @@
                     <div class="item">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img
-                                        src="{{ asset('assets/images/managed-it-services.webp') }}">
+                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/managed-it-services.webp') }}">
                                 </div>
                                 <div class="cn-content">
                                     <p>Preferred Service Partner" for corporate clients with array of customized security
@@ -4192,9 +4204,10 @@
             </div>
             <!-- mobile code end -->
         </section>
-        <!-- empower industry end --> 
+        <!-- empower industry end -->
         <!--Offering start -->
-        <section class="Offering mhspace" id="mhome-div4-1" style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.35'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);">
+        <section class="Offering mhspace" id="mhome-div4-1"
+            style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.35'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 cn-title">
@@ -4207,11 +4220,13 @@
                 <div class="row">
                     <div class="cn-tabs" style="margin-bottom: 40px">
                         <ul id="tabs-nav4_1" class="home-tabs">
-                            <li><a class="scr-tabs_4" href="#tab_4_1">Vulnerability Assesement & Penetration Testing</a></li>
+                            <li><a class="scr-tabs_4" href="#tab_4_1">Vulnerability Assesement & Penetration Testing</a>
+                            </li>
                             <li><a class="scr-tabs_4" href="#tab_4_2">IT Security Audit, Risk & Compliance</a></li>
                             <li><a class="scr-tabs_4" href="#tab_4_3">Managed IT Security Solutions </a></li>
                             <li><a class="scr-tabs_4" href="#tab_4_4">Digital Forensic & Cyber Fraud Management </a></li>
-                            <li><a class="scr-tabs_4" href="#tab_4_5">SOC (Security Operations Center) as a Service </a></li>
+                            <li><a class="scr-tabs_4" href="#tab_4_5">SOC (Security Operations Center) as a Service </a>
+                            </li>
                         </ul>
                         <!-- END tabs-nav -->
                         <div id="tabs-content">
@@ -5350,7 +5365,8 @@
                                         </div>
                                         <div class="cn-content">
                                             <p>SOC as a Service provides outsourced security monitoring,
-                                                 threat detection, and incident response to protect organizations from cyber threats 24/7.
+                                                threat detection, and incident response to protect organizations from cyber
+                                                threats 24/7.
                                             </p>
                                         </div>
                                     </div>
@@ -5370,14 +5386,15 @@
                                                 src="{{ asset('assets/images/security-audit-compliance.webp') }}"> </div>
                                         <div class="cn-content">
                                             <p>Security Monitoring and SIEM Services offer real-time threat detection,
-                                                 log analysis, and incident response to enhance organizational cybersecurity posture.
+                                                log analysis, and incident response to enhance organizational cybersecurity
+                                                posture.
                                             </p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
                                         <a href="javascript:void(0)" class="cn-main-content-enclosed"
                                             style="display: block; text-decoration: none;">
-                                            <h3>Security Monitoring & SIEM Services    </h3>
+                                            <h3>Security Monitoring & SIEM Services </h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
                                     </div>
@@ -5391,14 +5408,15 @@
                                         </div>
                                         <div class="cn-content">
                                             <p>Managed Endpoint Detection & Response (EDR) delivers continuous monitoring,
-                                                 threat detection, and automated response to protect endpoints from cyberattacks.
+                                                threat detection, and automated response to protect endpoints from
+                                                cyberattacks.
                                             </p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
                                         <a href="javascript:void(0)" class="cn-main-content-enclosed"
                                             style="display: block; text-decoration: none;">
-                                            <h3>Managed Endpoint Detection & Response (EDR)   </h3>
+                                            <h3>Managed Endpoint Detection & Response (EDR) </h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
                                     </div>
@@ -5411,8 +5429,9 @@
                                                 src="{{ asset('assets/images/forensic-seervices.webp') }}">
                                         </div>
                                         <div class="cn-content">
-                                            <p>Extended Detection & Response (XDR) Services unify data across endpoints, 
-                                                networks, and cloud to detect, investigate, and respond to threats efficiently.
+                                            <p>Extended Detection & Response (XDR) Services unify data across endpoints,
+                                                networks, and cloud to detect, investigate, and respond to threats
+                                                efficiently.
                                             </p>
                                         </div>
                                     </div>
@@ -5432,8 +5451,10 @@
                                                 src="{{ asset('assets/images/soc-services.webp') }}">
                                         </div>
                                         <div class="cn-content">
-                                            <p>SOAR services integrate security tools, automate workflows, and coordinate response 
-                                                actions to streamline threat detection, investigation, and incident resolution.
+                                            <p>SOAR services integrate security tools, automate workflows, and coordinate
+                                                response
+                                                actions to streamline threat detection, investigation, and incident
+                                                resolution.
                                             </p>
                                         </div>
                                     </div>
@@ -5453,15 +5474,16 @@
                                                 src="{{ asset('assets/images/vapt-services.webp') }}">
                                         </div>
                                         <div class="cn-content">
-                                            <p>Cloud Security Monitoring & Protection ensures continuous visibility, 
-                                                threat detection, and compliance across cloud environments to safeguard data and applications.
+                                            <p>Cloud Security Monitoring & Protection ensures continuous visibility,
+                                                threat detection, and compliance across cloud environments to safeguard data
+                                                and applications.
                                             </p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
                                         <a href="javascript:void(0)" class="cn-main-content-enclosed"
                                             style="display: block; text-decoration: none;">
-                                            <h3>Cloud Security Monitoring & Protection  </h3>
+                                            <h3>Cloud Security Monitoring & Protection </h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
                                     </div>
@@ -5473,15 +5495,16 @@
                                         <div class="cn-hover-img"> <img
                                                 src="{{ asset('assets/images/security-audit-compliance.webp') }}"> </div>
                                         <div class="cn-content">
-                                            <p>Dark Web Intelligence & Threat Hunting identifies exposed data, 
-                                                monitors cybercriminal activity, and proactively detects threats targeting your organization.
+                                            <p>Dark Web Intelligence & Threat Hunting identifies exposed data,
+                                                monitors cybercriminal activity, and proactively detects threats targeting
+                                                your organization.
                                             </p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
                                         <a href="javascript:void(0)" class="cn-main-content-enclosed"
                                             style="display: block; text-decoration: none;">
-                                            <h3>Dark Web Intelligence & Threat Hunting  </h3>
+                                            <h3>Dark Web Intelligence & Threat Hunting </h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
                                     </div>
@@ -5569,7 +5592,7 @@
                                 <div class="cn-hover-img"> <img
                                         src="{{ asset('assets/images/security-audit-compliance.webp') }}"> </div>
                                 <div class="cn-content">
-                                    <p>SOC as a Service provides outsourced security monitoring, threat detection, 
+                                    <p>SOC as a Service provides outsourced security monitoring, threat detection,
                                         and incident response to protect organizations from cyber threats 24/7.
                                     </p>
                                 </div>
@@ -5590,7 +5613,7 @@
                                 </div>
                                 <div class="cn-content">
                                     <p>Security Monitoring and SIEM Services offer real-time threat detection,
-                                         log analysis, and incident response to enhance organizational cybersecurity posture.
+                                        log analysis, and incident response to enhance organizational cybersecurity posture.
                                     </p>
                                 </div>
                             </div>
@@ -5606,12 +5629,12 @@
                     <div class="item">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img
-                                        src="{{ asset('assets/images/managed-it-services.webp') }}">
+                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/managed-it-services.webp') }}">
                                 </div>
                                 <div class="cn-content">
-                                    <p>Managed Endpoint Detection & Response (EDR) delivers continuous monitoring, threat detection,
-                                         and automated response to protect endpoints from cyberattacks.
+                                    <p>Managed Endpoint Detection & Response (EDR) delivers continuous monitoring, threat
+                                        detection,
+                                        and automated response to protect endpoints from cyberattacks.
                                     </p>
                                 </div>
                             </div>
@@ -5627,12 +5650,11 @@
                     <div class="item">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img
-                                        src="{{ asset('assets/images/forensic-seervices.webp') }}">
+                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/forensic-seervices.webp') }}">
                                 </div>
                                 <div class="cn-content">
                                     <p>Extended Detection & Response (XDR) Services unify data across endpoints, networks,
-                                         and cloud to detect, investigate, and respond to threats efficiently.
+                                        and cloud to detect, investigate, and respond to threats efficiently.
                                     </p>
                                 </div>
                             </div>
@@ -5652,7 +5674,7 @@
                                 </div>
                                 <div class="cn-content">
                                     <p>SOAR services integrate security tools, automate workflows, and coordinate response
-                                         actions to streamline threat detection, investigation, and incident resolution.
+                                        actions to streamline threat detection, investigation, and incident resolution.
                                     </p>
                                 </div>
                             </div>
@@ -5671,8 +5693,9 @@
                                 <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}">
                                 </div>
                                 <div class="cn-content">
-                                    <p>Cloud Security Monitoring & Protection ensures continuous visibility, threat detection,
-                                         and compliance across cloud environments to safeguard data and applications.
+                                    <p>Cloud Security Monitoring & Protection ensures continuous visibility, threat
+                                        detection,
+                                        and compliance across cloud environments to safeguard data and applications.
                                     </p>
                                 </div>
                             </div>
@@ -5691,8 +5714,9 @@
                                 <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}">
                                 </div>
                                 <div class="cn-content">
-                                    <p>Dark Web Intelligence & Threat Hunting identifies exposed data, 
-                                        monitors cybercriminal activity, and proactively detects threats targeting your organization.
+                                    <p>Dark Web Intelligence & Threat Hunting identifies exposed data,
+                                        monitors cybercriminal activity, and proactively detects threats targeting your
+                                        organization.
                                     </p>
                                 </div>
                             </div>
@@ -5712,7 +5736,7 @@
             <!-- mobile code end -->
         </section>
         <!-- empower industry end -->
-       
+
         <!-- bg banner start -->
         <section class="mhspace mhspace00" id="mhome-div6">
             <div class="traing-banner desktop-view">
@@ -5728,7 +5752,8 @@
         </section>
         <!-- bg banner end -->
         <!--Offering start -->
-        <section class="home-banner-sec" id="mhome-div6-1" style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.06'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);">
+        <section class="home-banner-sec" id="mhome-div6-1"
+            style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.06'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 cn-title">
@@ -5761,8 +5786,7 @@
                                         </div>
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="{{ asset('assets/images/IT-Security.webp') }}"
-                                                    alt="">
+                                                <img src="{{ asset('assets/images/IT-Security.webp') }}" alt="">
                                             </div>
                                         </div>
                                         <div class="itmes">
@@ -5853,8 +5877,7 @@
                                         </div>
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="{{ asset('assets/images/IT-Security.webp') }}"
-                                                    alt="">
+                                                <img src="{{ asset('assets/images/IT-Security.webp') }}" alt="">
                                             </div>
                                         </div>
                                         <div class="itmes">
@@ -5885,8 +5908,7 @@
                                         </div>
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="{{ asset('assets/images/IT-Security.webp') }}"
-                                                    alt="">
+                                                <img src="{{ asset('assets/images/IT-Security.webp') }}" alt="">
                                             </div>
                                         </div>
                                         <div class="itmes">
@@ -5918,8 +5940,7 @@
                                         </div>
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="{{ asset('assets/images/IT-Security.webp') }}"
-                                                    alt="">
+                                                <img src="{{ asset('assets/images/IT-Security.webp') }}" alt="">
                                             </div>
                                         </div>
                                         <div class="itmes">
@@ -6191,8 +6212,7 @@
                         <a href="">
                             <div class="tdw-box row">
                                 <div class="col-md-4 pd0">
-                                    <div class="tdw-img"> <img
-                                            src="{{ asset('assets/images/cyber-security-pene.webp') }}">
+                                    <div class="tdw-img"> <img src="{{ asset('assets/images/cyber-security-pene.webp') }}">
                                     </div>
                                 </div>
                                 <div class="col-md-8">
@@ -6211,8 +6231,7 @@
                     <div class="col-md-4 mb-3">
                         <div class="tdw-box row">
                             <div class="col-md-4 pd0">
-                                <div class="tdw-img"> <img
-                                        src="{{ asset('assets/images/Security-oprations-4.webp') }}">
+                                <div class="tdw-img"> <img src="{{ asset('assets/images/Security-oprations-4.webp') }}">
                                 </div>
                             </div>
                             <div class="col-md-8">
@@ -6264,8 +6283,7 @@
                     <div class="col-md-4 mb-3">
                         <div class="tdw-box row">
                             <div class="col-md-4 pd0">
-                                <div class="tdw-img"> <img
-                                        src="{{ asset('assets/images/Security-oprations-4.webp') }}">
+                                <div class="tdw-img"> <img src="{{ asset('assets/images/Security-oprations-4.webp') }}">
                                 </div>
                             </div>
                             <div class="col-md-8">
@@ -6297,8 +6315,7 @@
                     <div class="col-md-4 mb-3">
                         <div class="tdw-box row">
                             <div class="col-md-4 pd0">
-                                <div class="tdw-img"> <img
-                                        src="{{ asset('assets/images/it-security-opration9.webp') }}">
+                                <div class="tdw-img"> <img src="{{ asset('assets/images/it-security-opration9.webp') }}">
                                 </div>
                             </div>
                             <div class="col-md-8">
@@ -6484,8 +6501,7 @@
                         <div class="item">
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
-                                    <div class="ftd-img"> <img
-                                            src="{{ asset('assets/images/cyber-security-pene.webp') }}">
+                                    <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-security-pene.webp') }}">
                                     </div>
                                     <div class="ftd-header">
                                         <h3>Cyber Security and Penetration Testing</h3>
@@ -6500,8 +6516,7 @@
                         <div class="item">
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
-                                    <div class="ftd-img"> <img
-                                            src="{{ asset('assets/images/cyber-security-pene.webp') }}">
+                                    <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-security-pene.webp') }}">
                                     </div>
                                     <div class="ftd-header">
                                         <h3>Cyber Security and Penetration Testing</h3>
@@ -6516,8 +6531,7 @@
                         <div class="item">
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
-                                    <div class="ftd-img"> <img
-                                            src="{{ asset('assets/images/cyber-security-pene.webp') }}">
+                                    <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-security-pene.webp') }}">
                                     </div>
                                     <div class="ftd-header">
                                         <h3>Cyber Security and Penetration Testing</h3>
@@ -6541,8 +6555,7 @@
                         <div class="item">
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
-                                    <div class="ftd-img"> <img
-                                            src="{{ asset('assets/images/Security-oprations-4.webp') }}">
+                                    <div class="ftd-img"> <img src="{{ asset('assets/images/Security-oprations-4.webp') }}">
                                     </div>
                                     <div class="ftd-header">
                                         <h3>Security Operations and Management</h3>
@@ -6557,8 +6570,7 @@
                         <div class="item">
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
-                                    <div class="ftd-img"> <img
-                                            src="{{ asset('assets/images/Security-oprations-4.webp') }}">
+                                    <div class="ftd-img"> <img src="{{ asset('assets/images/Security-oprations-4.webp') }}">
                                     </div>
                                     <div class="ftd-header">
                                         <h3>Security Operations and Management</h3>
@@ -6573,8 +6585,7 @@
                         <div class="item">
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
-                                    <div class="ftd-img"> <img
-                                            src="{{ asset('assets/images/Security-oprations-4.webp') }}">
+                                    <div class="ftd-img"> <img src="{{ asset('assets/images/Security-oprations-4.webp') }}">
                                     </div>
                                     <div class="ftd-header">
                                         <h3>Security Operations and Management</h3>
@@ -6598,8 +6609,7 @@
                         <div class="item">
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
-                                    <div class="ftd-img"> <img
-                                            src="{{ asset('assets/images/cyber-forensic-5.webp') }}">
+                                    <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-forensic-5.webp') }}">
                                     </div>
                                     <div class="ftd-header">
                                         <h3>Cyber Forensic and Fraud Management</h3>
@@ -6614,8 +6624,7 @@
                         <div class="item">
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
-                                    <div class="ftd-img"> <img
-                                            src="{{ asset('assets/images/cyber-forensic-5.webp') }}">
+                                    <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-forensic-5.webp') }}">
                                     </div>
                                     <div class="ftd-header">
                                         <h3>Cyber Forensic and Fraud Management</h3>
@@ -6630,8 +6639,7 @@
                         <div class="item">
                             <a href="javascript:void(0)">
                                 <div class="ftd-box">
-                                    <div class="ftd-img"> <img
-                                            src="{{ asset('assets/images/cyber-forensic-5.webp') }}">
+                                    <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-forensic-5.webp') }}">
                                     </div>
                                     <div class="ftd-header">
                                         <h3>Cyber Forensic and Fraud Management</h3>
@@ -6749,35 +6757,32 @@
             <div class="container">
                 <div class="row">
                     <div id="client-logo" class="owl-carousel owl-theme">
-                        <div class="item"> <img
-                                src="{{ asset('assets/images/clients/eccoincil-partnerlogo.webp') }}"
+                        <div class="item"> <img src="{{ asset('assets/images/clients/eccoincil-partnerlogo.webp') }}"
                                 class="img-fluid" alt="">
                         </div>
                         <div class="item"> <img src="{{ asset('assets/images/clients/pecb-partnerlogo.webp') }}"
                                 class="img-fluid" alt="">
                         </div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/mcafee.webp') }}"
-                                class="img-fluid" alt=""></div>
-                        <div class="item"><img
-                                src="{{ asset('assets/images/clients/being-cert-logopartner.webp') }}"
+                        <div class="item"><img src="{{ asset('assets/images/clients/mcafee.webp') }}" class="img-fluid"
+                                alt=""></div>
+                        <div class="item"><img src="{{ asset('assets/images/clients/being-cert-logopartner.webp') }}"
                                 class="img-fluid" alt="">
                         </div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/quick-heal.webp') }}"
-                                class="img-fluid" alt=""></div>
+                        <div class="item"><img src="{{ asset('assets/images/clients/quick-heal.webp') }}" class="img-fluid"
+                                alt=""></div>
                         <div class="item"><img src="{{ asset('assets/images/clients/shophospartnerlogo.webp') }}"
                                 alt="Owl Image">
                         </div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/symantec.webp') }}"
-                                class="img-fluid" alt=""></div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/tenable.webp') }}"
-                                class="img-fluid" alt=""></div>
+                        <div class="item"><img src="{{ asset('assets/images/clients/symantec.webp') }}" class="img-fluid"
+                                alt=""></div>
+                        <div class="item"><img src="{{ asset('assets/images/clients/tenable.webp') }}" class="img-fluid"
+                                alt=""></div>
                         <div class="item"><img src="{{ asset('assets/images/clients/kesperskypartner.webp') }}"
                                 class="img-fluid" alt="">
                         </div>
                         <div class="item"><img src="{{ asset('assets/images/clients/acunetix-partner-logo.webp') }}"
                                 alt="Owl Image"></div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/seqrite.webp') }}"
-                                alt="Owl Image">
+                        <div class="item"><img src="{{ asset('assets/images/clients/seqrite.webp') }}" alt="Owl Image">
                         </div>
                         <div class="item"><img src="{{ asset('assets/images/clients/inspira-partnerlogo.webp') }}"
                                 class="img-fluid" alt="">
@@ -6788,7 +6793,8 @@
         </section>
         <!-- WHY CHOOSE Cybar Wind? end -->
         <!--Offering start -->
-        <section class="home-banner-sec mhspace" id="mhome-div91" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.12' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E&quot;);">
+        <section class="home-banner-sec mhspace" id="mhome-div91"
+            style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.12' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E&quot;);">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 cn-title">
@@ -6822,8 +6828,7 @@
                                         </div>
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="{{ asset('assets/images/IT-Security.webp') }}"
-                                                    alt="">
+                                                <img src="{{ asset('assets/images/IT-Security.webp') }}" alt="">
                                             </div>
                                         </div>
                                         <div class="itmes">
@@ -6854,8 +6859,7 @@
                                         </div>
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="{{ asset('assets/images/IT-Security.webp') }}"
-                                                    alt="">
+                                                <img src="{{ asset('assets/images/IT-Security.webp') }}" alt="">
                                             </div>
                                         </div>
                                         <div class="itmes">
@@ -6948,8 +6952,7 @@
                                         </div>
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="{{ asset('assets/images/IT-Security.webp') }}"
-                                                    alt="">
+                                                <img src="{{ asset('assets/images/IT-Security.webp') }}" alt="">
                                             </div>
                                         </div>
                                         <div class="itmes">
@@ -6981,8 +6984,7 @@
                                         </div>
                                         <div class="itmes">
                                             <div class="home-banner1">
-                                                <img src="{{ asset('assets/images/IT-Security.webp') }}"
-                                                    alt="">
+                                                <img src="{{ asset('assets/images/IT-Security.webp') }}" alt="">
                                             </div>
                                         </div>
                                         <div class="itmes">
@@ -7234,8 +7236,8 @@
                                 <a href="#partnter2">
                                     <div class="team-details">
                                         <div class="team-img part-bg2">
-                                            <img src="{{ asset('assets/images/Industries/Education.webp') }}"
-                                                alt="" title="">
+                                            <img src="{{ asset('assets/images/Industries/Education.webp') }}" alt=""
+                                                title="">
                                             <h3 class="team-name">Education</h3>
                                         </div>
                                         <div class="team-bottom">
@@ -7267,8 +7269,8 @@
                                 <a href="#partnter4">
                                     <div class="team-details">
                                         <div class="team-img part-bg4">
-                                            <img src="{{ asset('assets/images/Industries/Healthcare.webp') }}"
-                                                alt="" title="">
+                                            <img src="{{ asset('assets/images/Industries/Healthcare.webp') }}" alt=""
+                                                title="">
                                             <h3 class="team-name">Healthcare</h3>
                                         </div>
                                         <div class="team-bottom">
@@ -7283,8 +7285,8 @@
                                 <a href="#partnter5">
                                     <div class="team-details">
                                         <div class="team-img part-bg5">
-                                            <img src="{{ asset('assets/images/Industries/Retail-E-Commerce.webp') }}"
-                                                alt="" title="">
+                                            <img src="{{ asset('assets/images/Industries/Retail-E-Commerce.webp') }}" alt=""
+                                                title="">
                                             <h3 class="team-name">Retail <br>&amp; E-Commerce</h3>
                                         </div>
                                         <div class="team-bottom">
@@ -7299,8 +7301,8 @@
                                 <a href="#partnter6">
                                     <div class="team-details">
                                         <div class="team-img part-bg6">
-                                            <img src="{{ asset('assets/images/Industries/Power-Energy.webp') }}"
-                                                alt="" title="">
+                                            <img src="{{ asset('assets/images/Industries/Power-Energy.webp') }}" alt=""
+                                                title="">
                                             <h3 class="team-name">Power &amp; Energy</h3>
                                         </div>
                                         <div class="team-bottom">
@@ -7331,8 +7333,8 @@
                                 <a href="#partnter8">
                                     <div class="team-details">
                                         <div class="team-img part-bg8">
-                                            <img src="{{ asset('assets/images/Industries/Utilities.webp') }}"
-                                                alt="" title="">
+                                            <img src="{{ asset('assets/images/Industries/Utilities.webp') }}" alt=""
+                                                title="">
                                             <h3 class="team-name">Utilities</h3>
                                         </div>
                                         <div class="team-bottom">
@@ -7395,8 +7397,8 @@
                                 <a href="#partnter12">
                                     <div class="team-details">
                                         <div class="team-img part-bg12">
-                                            <img src="{{ asset('assets/images/Industries/RealEstate.webp') }}"
-                                                alt="" title="">
+                                            <img src="{{ asset('assets/images/Industries/RealEstate.webp') }}" alt=""
+                                                title="">
                                             <h3 class="team-name">Real Estate</h3>
                                         </div>
                                         <div class="team-bottom">
@@ -7715,8 +7717,7 @@
                                 <h4>Utilities</h4>
                                 <ul>
                                     <li>
-                                        <img src="{{ asset('assets/images/clients/ncdc-client-logo.webp') }}"
-                                            alt="">
+                                        <img src="{{ asset('assets/images/clients/ncdc-client-logo.webp') }}" alt="">
                                     </li>
                                     <li>
                                         <img src="assets/images/clients/aic.webp" alt="">
@@ -7955,9 +7956,8 @@
                             <div class="ceh-testo-box" data-target="client-testimonials-popup1">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <div class="ceh-testo-image"><img
-                                                src="{{ asset('assets/images/testo.webp') }}" class="img-fluid"
-                                                alt="t1">
+                                        <div class="ceh-testo-image"><img src="{{ asset('assets/images/testo.webp') }}"
+                                                class="img-fluid" alt="t1">
                                         </div>
                                     </div>
                                     <div class="col-md-8">
@@ -7988,9 +7988,8 @@
                             <div class="ceh-testo-box" data-target="client-testimonials-popup2">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <div class="ceh-testo-image"><img
-                                                src="{{ asset('assets/images/testo.webp') }}" class="img-fluid"
-                                                alt="t1">
+                                        <div class="ceh-testo-image"><img src="{{ asset('assets/images/testo.webp') }}"
+                                                class="img-fluid" alt="t1">
                                         </div>
                                     </div>
                                     <div class="col-md-8">
@@ -8021,9 +8020,8 @@
                             <div class="ceh-testo-box" data-target="client-testimonials-popup3">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <div class="ceh-testo-image"><img
-                                                src="{{ asset('assets/images/testo.webp') }}" class="img-fluid"
-                                                alt="t1">
+                                        <div class="ceh-testo-image"><img src="{{ asset('assets/images/testo.webp') }}"
+                                                class="img-fluid" alt="t1">
                                         </div>
                                     </div>
                                     <div class="col-md-8">
@@ -8054,9 +8052,8 @@
                             <div class="ceh-testo-box" data-target="client-testimonials-popup4">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <div class="ceh-testo-image"><img
-                                                src="{{ asset('assets/images/testo.webp') }}" class="img-fluid"
-                                                alt="t1">
+                                        <div class="ceh-testo-image"><img src="{{ asset('assets/images/testo.webp') }}"
+                                                class="img-fluid" alt="t1">
                                         </div>
                                     </div>
                                     <div class="col-md-8">
@@ -8095,8 +8092,7 @@
         @include('frontend.layouts.mobile-components.m-testimonials')
 
         <!-- Our Customers end -->
-        <section class="core-domain-section-blog mhspace mhspace1" id="mhome-div11"
-            style="background-color: #e5e8ee;">
+        <section class="core-domain-section-blog mhspace mhspace1" id="mhome-div11" style="background-color: #e5e8ee;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 cn-title">
@@ -8694,12 +8690,10 @@
                     </div>
                     <div class="col-md-4">
                         <div class="box-wrappercareer12">
-                            <div class="box-image-career123"> <img
-                                    src="{{ asset('assets/images/career-img-png.webp') }}" class="img-fluid-career12"
-                                    alt=""> </div>
+                            <div class="box-image-career123"> <img src="{{ asset('assets/images/career-img-png.webp') }}"
+                                    class="img-fluid-career12" alt=""> </div>
                             <div class="box-button-career">
-                                <a href="https://www.cybarwind.com/new-demo/asaraf/codec/careers.php"
-                                    target="_blank">Join
+                                <a href="https://www.cybarwind.com/new-demo/asaraf/codec/careers.php" target="_blank">Join
                                     Our
                                     Team</a>
                             </div>
@@ -8710,8 +8704,8 @@
         <!-- career end -->
         <section>
             <div class="coach">
-                <div class="coach-img"> <img src="{{ asset('assets/images/career-opportunities.webp') }}"
-                        class="img-fluid" alt="coach image">
+                <div class="coach-img"> <img src="{{ asset('assets/images/career-opportunities.webp') }}" class="img-fluid"
+                        alt="coach image">
                 </div>
                 <div class="coach-text">
                     <h3>Career Opportunities. <br></h3>
@@ -8719,8 +8713,8 @@
                     <p>We bring together the best and the brightest in the industry to solve transformative cases with Data.
                     </p>
                     <div class="wpb_wrapper bdr-top1 pt-4 mt-4">
-                        <p class="text-center"><a class="chevron chevron link-more aos-init aos-animate"
-                                style="color:#fff;" href="javascript:void(0)">Browse Cybar Wind Job </a></p>
+                        <p class="text-center"><a class="chevron chevron link-more aos-init aos-animate" style="color:#fff;"
+                                href="javascript:void(0)">Browse Cybar Wind Job </a></p>
                     </div>
                 </div>
             </div>
@@ -8767,7 +8761,7 @@
     </script> --}}
 
     <script>
-        $('.close-acrodin').click(function(e) {
+        $('.close-acrodin').click(function (e) {
             e.preventDefault();
             var $panel = $(this).closest('.acc__panel');
             $panel.slideUp();
@@ -8826,10 +8820,10 @@
         });
     </script>
     <script>
-        $('.cn-content').click(function() {
+        $('.cn-content').click(function () {
             $(this).addClass('height');
         });
-        $('.cn-hover-img').click(function() {
+        $('.cn-hover-img').click(function () {
             $('.cn-content').removeClass('height');
         });
     </script>
@@ -8845,28 +8839,28 @@
         }
 
         // Open the corresponding popup when clicking on elements with the class "popup-btn"
-        $(".ceh-testo-box").click(function(e) {
+        $(".ceh-testo-box").click(function (e) {
             e.preventDefault();
             var target = $(this).data('target');
             openPopup(target);
         });
 
         // Close the popup when clicking on elements with the class "close_1"
-        $(".close_1").click(function(e) {
+        $(".close_1").click(function (e) {
             e.preventDefault();
             var target = $(this).closest('.popup').attr('id');
             closePopup(target);
         });
 
         // Close the popup when clicking outside the popup
-        $(".popup").click(function(event) {
+        $(".popup").click(function (event) {
             if ($(event.target).is('.popup')) {
                 var target = $(this).attr('id');
                 closePopup(target);
             }
         });
 
-        $('.close_1, .popup').on('click', function() {
+        $('.close_1, .popup').on('click', function () {
             $('.testo-popup-body').scrollTop(0);
         })
     </script>
@@ -8895,7 +8889,7 @@
         if (!isMobile()) {
             function scrollToFirstElement(className, offset = 100) {
                 document.querySelectorAll(`.${className}`).forEach(element => {
-                    element.addEventListener("click", function(e) {
+                    element.addEventListener("click", function (e) {
                         e.preventDefault();
                         setTimeout(() => {
                             const firstElement = document.querySelector(`.${className}`);
@@ -8918,6 +8912,25 @@
         scrollToFirstElement("scr-tabs3", 80);
         scrollToFirstElement("scr-tabs_4", 80);
         scrollToFirstElement("industry-slider", 50);
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.scroll-link').on('click', function (e) {
+                e.preventDefault();
+
+                const target = $(this).data('target');     // e.g., "#section2"
+                const offset = parseInt($(this).data('offset')) || 0;  // e.g., -100
+                const speed = parseInt($(this).data('speed')) || 400;  // e.g., 800
+
+                const $target = $(target);
+                if ($target.length) {
+                    $('html, body').animate({
+                        scrollTop: $target.offset().top + offset
+                    }, speed);
+                }
+            });
+        });
+
     </script>
     @include('frontend.layouts.right-menu-js')
 @endpush
