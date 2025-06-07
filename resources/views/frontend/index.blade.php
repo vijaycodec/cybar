@@ -3832,7 +3832,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 cn-title">
-                        <h2>We1 empower industry to Secure Digitally, Reduce Threats & align</h2>
+                        <h2>We empower industry to Secure Digitally, Reduce Threats & align</h2>
                     </div>
                 </div>
             </div>
