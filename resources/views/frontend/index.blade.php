@@ -92,7 +92,7 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="{{ route('vapt') }}" class="cn-main-content-enclosed"
+                                <a href="#mhome-div2" class="cn-main-content-enclosed"
                                     style="display: block; text-decoration: none;">
                                     <h3>Vulnerability Assesement &amp; Penetration Testing</h3>
                                     <p>Services to ensure the Integrity of Information Systems, Softwares & Applications,
@@ -120,7 +120,7 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="{{ route('grc') }}" class="cn-main-content-enclosed"
+                                <a href="#mhome-div5" class="cn-main-content-enclosed"
                                     style="display: block; text-decoration: none;">
                                     <h3>Governance, Risk &amp; Compliance</h3>
                                     <p>Identify and resolve Ecrime incidents that adversely impact organizations with
@@ -145,7 +145,7 @@
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="{{ route('soc') }}" class="cn-main-content-enclosed"
+                                <a href="#mhome-div3" class="cn-main-content-enclosed"
                                     style="display: block; text-decoration: none;">
                                     <h3>SOC (Security Operation Center) as a Service</h3>
                                     <p>Provides round-the-clock proactive event monitoring with prioritized alert
@@ -3832,7 +3832,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 cn-title">
-                        <h2>We empower industry to Secure Digitally, Reduce Threats & align</h2>
+                        <h2>We1 empower industry to Secure Digitally, Reduce Threats & align</h2>
                     </div>
                 </div>
             </div>
@@ -8918,6 +8918,24 @@
         scrollToFirstElement("scr-tabs3", 80);
         scrollToFirstElement("scr-tabs_4", 80);
         scrollToFirstElement("industry-slider", 50);
+    </script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const offset = 60; // Adjust based on fixed header height
+    const target = document.querySelector(this.getAttribute('href'));
+    const bodyRect = document.body.getBoundingClientRect().top;
+    const elementRect = target.getBoundingClientRect().top;
+    const offsetPosition = elementRect - bodyRect - offset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  });
+});
+
     </script>
     @include('frontend.layouts.right-menu-js')
 @endpush
