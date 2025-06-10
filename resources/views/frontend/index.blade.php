@@ -8,6 +8,91 @@
         display: block;
     }
 </style>
+<style>
+/* Section container padding top and bottom */
+#mhome-div6 {
+    padding: 60px 0; /* top and bottom spacing */
+      background-image: url(https://www.oneeducation.org.uk/wp-content/uploads/2022/12/Hero-Section-Background-2048x852.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    color: #fff; /* Optional: if you want text white by default */
+}
+
+/* Optional dark overlay for better contrast */
+#mhome-div6::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(51, 224, 243, 0.5); /* Adjust opacity as needed */ (74 124 239 / 50%)
+    z-index: 0;
+}
+
+/* Keep content above overlay */
+#mhome-div6 > .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Title container: flex with vertical center and left alignment */
+#mhome-div6 .section-title-left {
+    display: flex;               /* flex container */
+    align-items: center;         /* vertical center */
+    justify-content: flex-start; /* align left horizontally */
+    height: 100%;                /* full height */
+    padding: 0 20px;             /* horizontal padding */
+}
+
+/* Title text */
+#mhome-div6 .section-title-left h1 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #fff; /* Changed to white for better contrast on dark bg */
+    margin: 0;
+    text-align: left; /* text aligned left */
+}
+
+/* Counter cards style */
+#mhome-div6 .counter-box {
+    background: rgba(18, 25, 44, 0.85);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px -4px #66676c;
+    color: #fff;
+    text-align: center;
+
+    /* Fixed size */
+    width: 250px;   /* Adjust width as needed */
+    height: 200px;  /* Adjust height as needed */
+
+    /* Center content vertically and horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Icons inside counter cards */
+#mhome-div6 .counter-box .fa {
+    font-size: 40px;
+    color: rgba(16, 211, 97, 0.8);
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Numbers inside counter cards */
+#mhome-div6 .counter-box h2,
+#mhome-div6 .counter-box span {
+    font-size: 40px;
+    color: #fff;
+    margin: 10px 0;
+}
+
+</style>
 {{-- <title>Cyber Security Industry Solutions Services Training in Delhi,NCR</title> --}}
 {{--
 <meta name="viewport" content="width=device-width, initial-scale=1"> --}}
@@ -5739,17 +5824,71 @@
 
         <!-- bg banner start -->
         <section class="mhspace mhspace00" id="mhome-div6">
-            <div class="traing-banner desktop-view">
-                <img src="{{ asset('assets/images/training-domain-bg.webp') }}">
-                <div class="cn-btn"> <a href="javascript:void(0)">KNOW MORE</a> </div>
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Left Title Column (col-6) -->
+            <div class="col-md-6">
+                <div class="section-title-left">
+                    <h1>CYBARWIND – CENTER FOR CYBER PROFESSIONAL</h1>
+                </div>
             </div>
-            <!-- bg banner end -->
-            <!-- bg banner start -->
-            <div class="traing-banner mobile-view">
-                <img src="{{ asset('assets/images/mimg3.webp') }}">
-                <div class="cn-btn"> <a href="javascript:void(0)">KNOW MORE</a> </div>
+
+            <!-- Counter Column 1 (col-3) -->
+            <div class="col-md-3">
+                <div class="counter-box">
+                    <i class="fa fa-book"></i>
+                    <h5>Team Of</h5>
+                    <h2 class="counter">120+</h2>
+                    <h5>Subject Matter Expert</h5>
+                </div>
+                <div class="counter-box">
+                    <i class="fa fa-users"></i>
+                    <h5>Average Exp. of</h5>
+                    <h2 class="counter">14 Years</h2>
+                    <h5>Industry Experts</h5>
+                </div>
+                <div class="counter-box">
+                    <i class="fa fa-users"></i>
+                    <h5>Over 1,350</h5>
+                    <h2 class="counter">14 Years</h2>
+                    <h5>Client Testimonials</h5>
+                </div>
+                <div class="counter-box">
+                   <i class="fa fa-users"></i>
+                    <h5>Average Exp. of</h5>
+                    <h2 class="counter">14 Years</h2>
+                    <h5>Industry Experts</h5>
+                </div>
             </div>
-        </section>
+
+            <!-- Counter Column 2 (col-3) -->
+            <div class="col-md-3">
+                <div class="counter-box">
+                    <i class="fa fa-certificate"></i>
+                    <h2 class="counter">78</h2>
+                    <h4>CERTIFICATIONS</h4>
+                </div>
+                <div class="counter-box">
+                    <i class="fa fa-building"></i>
+                    <h2 class="counter">35</h2>
+                    <h4>PARTNER COMPANIES</h4>
+                </div>
+                <div class="counter-box">
+                    <i class="fa fa-lightbulb-o"></i>
+                    <h2 class="counter">126</h2>
+                    <h4>INNOVATIONS</h4>
+                </div>
+                <div class="counter-box">
+                    <i class="fa fa-trophy"></i>
+                    <h2 class="counter">12</h2>
+                    <h4>AWARDS WON</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
         <!-- bg banner end -->
         <!--Offering start -->
         <section class="home-banner-sec" id="mhome-div6-1"
