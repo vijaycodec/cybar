@@ -7249,7 +7249,7 @@
         </section>
         <!-- Offering end -->
         <!-- start Industries We Serve -->
-        <section class="cn-iws mhspace" id="mhome-div9" style="background-color: #e5e8ee;">
+        <section class="cn-iws mhspace" id="mhome-div9">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 cn-title">
