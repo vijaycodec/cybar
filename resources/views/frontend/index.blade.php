@@ -78,10 +78,10 @@
             </div>
             <div class="container p40">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4" style="width: 20%;">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/vapt-services.webp') }}">
+                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/vapt-services.webp') }}" style="aspect-ratio: 1 / 1; height: auto;">
                                 </div>
                                 <div class="cn-content">
                                     <p>Services to ensure the Integrity of Information Systems, Softwares & Applications,
@@ -107,10 +107,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4" style="width: 20%;">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/forensic-seervices.webp') }}">
+                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/forensic-seervices.webp') }}" style="aspect-ratio: 1 / 1; height: auto;">
                                 </div>
                                 <div class="cn-content">
                                     <p>Identify and resolve Ecrime incidents that adversely impact organizations with
@@ -134,10 +134,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4" style="width: 20%;">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}"> </div>
+                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}" style="aspect-ratio: 1 / 1; height: auto;"> </div>
                                 <div class="cn-content">
                                     <p>Provides round-the-clock proactive event monitoring with prioritized alert
                                         notification &
@@ -150,6 +150,58 @@
                                 data-offset="-60x" data-speed=" 800" 
                                     style="display: block; text-decoration: none;">
                                     <h3>SOC (Security Operation Center) as a Service</h3>
+                                    <p>Provides round-the-clock proactive event monitoring with prioritized alert
+                                        notification &
+                                        threat
+                                        mitigation.
+                                    </p>
+                                    Know more <i class="fa">&#xf054;</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" style="width: 20%;">
+                        <div class="empower-industry-box">
+                            <div class="cn-hover-box">
+                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}" style="aspect-ratio: 1 / 1; height: auto;"> </div>
+                                <div class="cn-content">
+                                    <p>Provides round-the-clock proactive event monitoring with prioritized alert
+                                        notification &
+                                        threat mitigation.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="cn-main-content">
+                                <a href="#" class="cn-main-content-enclosed scroll-link" data-target="#mhome-div6"
+                                data-offset="-60x" data-speed=" 1000" 
+                                    style="display: block; text-decoration: none;">
+                                    <h3>Education</h3>
+                                    <p>Provides round-the-clock proactive event monitoring with prioritized alert
+                                        notification &
+                                        threat
+                                        mitigation.
+                                    </p>
+                                    Know more <i class="fa">&#xf054;</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" style="width: 20%;">
+                        <div class="empower-industry-box">
+                            <div class="cn-hover-box">
+                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}" style="aspect-ratio: 1 / 1; height: auto;"> </div>
+                                <div class="cn-content">
+                                    <p>Provides round-the-clock proactive event monitoring with prioritized alert
+                                        notification &
+                                        threat mitigation.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="cn-main-content">
+                                <a href="#" class="cn-main-content-enclosed scroll-link" data-target="#mhome-div11"
+                                data-offset="-60x" data-speed=" 1500" 
+                                    style="display: block; text-decoration: none;">
+                                    <h3>CN Insight</h3>
                                     <p>Provides round-the-clock proactive event monitoring with prioritized alert
                                         notification &
                                         threat
@@ -5740,13 +5792,11 @@
         <section class="mhspace mhspace00" id="mhome-div6">
             <div class="traing-banner desktop-view">
                 <img src="{{ asset('assets/images/clients/banner.png') }}">
-                <div class="cn-btn"> <a href="javascript:void(0)">KNOW MORE</a> </div>
             </div>
             <!-- bg banner end -->
             <!-- bg banner start -->
             <div class="traing-banner mobile-view">
                 <img src="{{ asset('assets/images/mimg3.webp') }}">
-                <div class="cn-btn"> <a href="javascript:void(0)">KNOW MORE</a> </div>
             </div>
         </section>
         <!-- bg banner end -->
@@ -7199,7 +7249,7 @@
         </section>
         <!-- Offering end -->
         <!-- start Industries We Serve -->
-        <section class="cn-iws mhspace" id="mhome-div9">
+        <section class="cn-iws mhspace" id="mhome-div9" style="background-color: #e5e8ee;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 cn-title">

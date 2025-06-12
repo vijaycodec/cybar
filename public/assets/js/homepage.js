@@ -139,16 +139,16 @@ $("#owl-demo91, #owl-demo92").owlCarousel({
       showContent(0); // Show content for the initial active item
    },
    onChanged: function (event) {
-      var activeIndex = event.item.index;
-      let next;
-      if(activeIndex==18){
-          next = 0;
-      }else{
-          next = Math.floor((activeIndex - 7) + 1);
-      }
+      // var activeIndex = event.item.index;
+      // let next;
+      // if(activeIndex==18){
+      //     next = 0;
+      // }else{
+      //     next = Math.floor((activeIndex - 7) + 1);
+      // }
 
-      // console.log(next);
-      showContent(next); // Show content for the newly active item
+      // // console.log(next);
+      // showContent(next); // Show content for the newly active item
    }
 });
 
@@ -161,14 +161,14 @@ $(".items a").click(function (e) {
    $(target).show();
 });
 
-$(".industry-slider .owl-nav button").click(function () {
-   var activeIndex = $("#industry-slider .owl-item.active").index();
+// $(".industry-slider .owl-nav button").click(function () {
+//    var activeIndex = $("#industry-slider .owl-item.active").index();
 
-   console.log(activeIndex, Math.floor((activeIndex - 7) + 1) );
-   const next = Math.floor((activeIndex - 7) + 1);
-   // console.log(next);
-   showContent(next); // Show content for the newly active item after navigation
-});
+//    console.log(activeIndex, Math.floor((activeIndex - 7) + 1) );
+//    const next = Math.floor((activeIndex - 7) + 1);
+//    // console.log(next);
+//    showContent(next); // Show content for the newly active item after navigation
+// });
 
 function showContent(index) {
    // console.log(index,"shdcsbdcjh")
