@@ -641,7 +641,6 @@
                 </div>
                 <!-- END tabs -->
             </div>
-            </div>
             <!-- mobile start -->
             <div class="container mobile-view significance-space significance-spac2">
                 <!--  -->
