@@ -78,7 +78,7 @@
             </div>
             <div class="container p40">
                 <div class="row">
-                    <div class="col-md-4" style="width: 20%;">
+                    <div class="col-md-4">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
                                 <div class="cn-hover-img"> <img src="{{ asset('assets/images/vapt-services.webp') }}" style="aspect-ratio: 1 / 1; height: auto;">
@@ -107,7 +107,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4" style="width: 20%;">
+                    <div class="col-md-4">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
                                 <div class="cn-hover-img"> <img src="{{ asset('assets/images/forensic-seervices.webp') }}" style="aspect-ratio: 1 / 1; height: auto;">
@@ -134,7 +134,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4" style="width: 20%;">
+                    <div class="col-md-4">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
                                 <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}" style="aspect-ratio: 1 / 1; height: auto;"> </div>
@@ -160,7 +160,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4" style="width: 20%;">
+                    <div class="col-md-4">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
                                 <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}" style="aspect-ratio: 1 / 1; height: auto;"> </div>
@@ -186,7 +186,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4" style="width: 20%;">
+                    <div class="col-md-4">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
                                 <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}" style="aspect-ratio: 1 / 1; height: auto;"> </div>

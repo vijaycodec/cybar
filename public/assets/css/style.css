@@ -5854,6 +5854,9 @@ ul#tabs-nav100 li.active, ul#tabs-nav100 li:hover {
     p.sign {
     padding-left: 80px;
     }
+    #mhome-div1 .col-md-4 {
+        width: 20%;
+    }
 }
 @media (max-width: 981px) {
     .red-title p {
