@@ -263,3 +263,23 @@ $(function () {
    }
 });
 
+$(document).ready(function () {
+    const offset = 80;
+    const speed = 250;
+    $('#tabs-nav4 .scr-tabs4').on('click', function (e) {
+        $('html, body').animate({
+            scrollTop: $('#tabs-nav4').offset().top - offset
+        }, speed);
+    });
+});
+
+$(document).ready(function () {
+   const offset = 80;
+   const speed = 250;
+   $('#tabs-nav2 .scr-tabs2').on('click', function (e) {
+       $('html, body').animate({
+           scrollTop: $('#tabs-nav2').offset().top - offset
+       }, speed);
+   });
+});
+
