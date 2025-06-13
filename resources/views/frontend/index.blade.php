@@ -8117,7 +8117,7 @@
         @include('frontend.layouts.mobile-components.m-testimonials')
 
         <!-- Our Customers end -->
-        <section class="core-domain-section-blog mhspace mhspace1" id="mhome-div11" style="background-color: #e5e8ee;">
+        <section class="core-domain-section-blog mhspace mhspace1" id="mhome-div11">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 cn-title">
