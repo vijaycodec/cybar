@@ -6713,7 +6713,7 @@
         <section class="wccn mhspace" id="mhome-div8">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-9">
+                    <div class="col-md-12">
                         <div class="wccn-title">
                             <h3 class="style2"><span style="color: #ffffff;"> Why Cybar Wind?</span></h3>
                         </div>
@@ -6776,31 +6776,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="wccn-title">
-                            <h3 class="style2"><span style="color: #ffffff;"> AWARDS & RECOGNITION</span></h3>
-                        </div>
-                        <div id="awrad-slider" class="owl-carousel owl-theme">
-                            <div class="item">
-                                <div class="award-img">
-                                    <img src="{{ asset('assets/images/EC-Council-Accredited-Training-Center.webp') }}">
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="award-img">
-                                    <img src="{{ asset('assets/images/EC-Council-Accredited-Training-Center.webp') }}">
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="award-img">
-                                    <img src="{{ asset('assets/images/EC-Council-Accredited-Training-Center.webp') }}">
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
+                   
                 </div>
             </div>
             <div class="container">
