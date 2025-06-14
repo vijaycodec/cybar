@@ -6782,34 +6782,33 @@
             <div class="container">
                 <div class="row">
                     <div id="client-logo" class="owl-carousel owl-theme">
-                        <div class="item"> <img src="{{ asset('assets/images/clients/eccoincil-partnerlogo.webp') }}"
+                        <div class="item"> <img src="{{ asset('assets/images/clients/eccounsil2.png') }}"
                                 class="img-fluid" alt="">
                         </div>
-                        <div class="item"> <img src="{{ asset('assets/images/clients/pecb-partnerlogo.webp') }}"
+                        <div class="item"><img src="{{ asset('assets/images/clients/beingcert_logo.jpeg') }}"
+                                class="img-fluid" alt="">
+                        </div> <div class="item"> <img src="{{ asset('assets/images/clients/pecb.png') }}"
                                 class="img-fluid" alt="">
                         </div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/mcafee.webp') }}" class="img-fluid"
+                        <div class="item"><img src="{{ asset('assets/images/clients/Quick-Heal.jpg') }}" class="img-fluid"
                                 alt=""></div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/being-cert-logopartner.webp') }}"
-                                class="img-fluid" alt="">
-                        </div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/quick-heal.webp') }}" class="img-fluid"
-                                alt=""></div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/shophospartnerlogo.webp') }}"
+                        <div class="item"><img src="{{ asset('assets/images/clients/Sophos.jpg') }}"
                                 alt="Owl Image">
                         </div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/symantec.webp') }}" class="img-fluid"
+                         <div class="item"><img src="{{ asset('assets/images/clients/mcafee.png') }}" class="img-fluid"
                                 alt=""></div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/tenable.webp') }}" class="img-fluid"
+                        <div class="item"><img src="{{ asset('assets/images/clients/Symantec.png') }}" class="img-fluid"
                                 alt=""></div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/kesperskypartner.webp') }}"
+                        <div class="item"><img src="{{ asset('assets/images/clients/tenable.png') }}" class="img-fluid"
+                                alt=""></div>
+                        <div class="item"><img src="{{ asset('assets/images/clients/Kaspersky.png') }}"
                                 class="img-fluid" alt="">
                         </div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/acunetix-partner-logo.webp') }}"
+                        <div class="item"><img src="{{ asset('assets/images/clients/acunetix.png') }}"
                                 alt="Owl Image"></div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/seqrite.webp') }}" alt="Owl Image">
+                        <div class="item"><img src="{{ asset('assets/images/clients/Seqrite_logo.png') }}" alt="Owl Image">
                         </div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/inspira-partnerlogo.webp') }}"
+                        <div class="item"><img src="{{ asset('assets/images/clients/INSPIRA.png') }}"
                                 class="img-fluid" alt="">
                         </div>
                     </div>
