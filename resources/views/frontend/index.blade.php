@@ -707,9 +707,7 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Web Application / Website VAPT Services </h3>
-                                            <p>Web Application/Website VAPT services assess vulnerabilities like XSS, SQL
-                                                injection, and misconfigurations to enhance security and protect sensitive
-                                                user data.
+                                            <p>Web Application/Website VAPT services thoroughly assess vulnerabilities such as XSS, SQL injection, authentication flaws, and server misconfigurations. These tests simulate real-world attacks to identify security weaknesses. By uncovering and mitigating risks, VAPT enhances application resilience, safeguards sensitive user data, and ensures compliance with cybersecurity standards and best practices.
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
@@ -5796,7 +5794,7 @@
             <!-- bg banner end -->
             <!-- bg banner start -->
             <div class="traing-banner mobile-view">
-                <img src="{{ asset('assets/images/mimg3.webp') }}">
+                <img src="{{ asset('assets/images/banner2image.jpg') }}">
             </div>
         </section>
         <!-- bg banner end -->

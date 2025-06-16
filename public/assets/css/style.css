@@ -5221,10 +5221,10 @@ ul#tabs-nav1.home-nav-v1  li:hover a{
         display: none;
     } */
     .significance-space1 .tab-content-box{
-        height: 240px;
+        height: 200px;
     }
     .significance-spac2 .tab-content-box{
-        height: 360px;
+        height: 200px;
     }
     .ftd-box{
     margin-bottom: 20px;
@@ -5313,7 +5313,7 @@ ul#tabs-nav1.home-nav-v1  li:hover a{
     }
     .team-img {
 
-        min-height: 120px;
+        min-height: 132px;
     }
     .team-details h3 {
         font-size: 13px;
