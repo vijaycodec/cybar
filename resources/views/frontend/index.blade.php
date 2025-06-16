@@ -7819,24 +7819,19 @@
                             <div class="ceh-testo-box" data-target="client-testimonials-popup1">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <div class="ceh-testo-image"><img src="{{ asset('assets/images/testo.webp') }}"
+                                        <div class="ceh-testo-image"><img src="{{ asset('assets/images/vijay.png') }}"
                                                 class="img-fluid" alt="t1">
                                         </div>
                                     </div>
                                     <div class="col-md-8">
                                         <div class="ceh-testo-cont">
                                             <div class="ceh-testo-title">
-                                                <h3>Vijay</h3>
-                                                <span>Developer</span>
+                                                <h3>Vijay Pratap</h3>
+                                                <span>Security Analyst</span>
                                             </div>
                                             <div class="ceh-testo-body">
-                                                <p>Fresh-Net has a way of changing my perspective so that life's
-                                                    possibilities open up
-                                                    tremendously
-                                                    when I work with them. It feels great having when someone listens to you
-                                                    and helps
-                                                    you figure out
-                                                    your own next steps in your life.&nbsp;
+                                                <p>As a Security Analyst overseeing the protection of financial systems, I’ve worked with several VAPT providers, but this team truly stood out. Their in-depth vulnerability assessment 
+                                                    and real-world penetration testing techniques revealed gaps that our internal tools had overlooked.&nbsp;
                                                 </p>
                                                 <span>Read More</span>
                                             </div>
@@ -7851,7 +7846,7 @@
                             <div class="ceh-testo-box" data-target="client-testimonials-popup2">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <div class="ceh-testo-image"><img src="{{ asset('assets/images/testo.webp') }}"
+                                        <div class="ceh-testo-image"><img src="{{ asset('assets/images/sudeep_pandey.jpg') }}"
                                                 class="img-fluid" alt="t1">
                                         </div>
                                     </div>
@@ -7859,16 +7854,11 @@
                                         <div class="ceh-testo-cont">
                                             <div class="ceh-testo-title">
                                                 <h3>Sudeep Pandey</h3>
-                                                <span>Developer</span>
+                                                <span>Chief Information Security Officer</span>
                                             </div>
                                             <div class="ceh-testo-body">
-                                                <p>Fresh-Net has a way of changing my perspective so that life's
-                                                    possibilities open up
-                                                    tremendously
-                                                    when I work with them. It feels great having when someone listens to you
-                                                    and helps
-                                                    you figure out
-                                                    your own next steps in your life.&nbsp;
+                                                <p>As a CISO responsible for safeguarding sensitive healthcare data, 
+                                                    finding a trusted VAPT partner is critical. The team’s work exceeded all expectations.&nbsp;
                                                 </p>
                                                 <span onclick="openPopup1(2)">Read More</span>
                                             </div>
@@ -7883,7 +7873,7 @@
                             <div class="ceh-testo-box" data-target="client-testimonials-popup3">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <div class="ceh-testo-image"><img src="{{ asset('assets/images/testo.webp') }}"
+                                        <div class="ceh-testo-image"><img src="{{ asset('assets/images/Dhruv.jpg') }}"
                                                 class="img-fluid" alt="t1">
                                         </div>
                                     </div>
@@ -7891,16 +7881,11 @@
                                         <div class="ceh-testo-cont">
                                             <div class="ceh-testo-title">
                                                 <h3>Dhruv</h3>
-                                                <span>Developer</span>
+                                                <span>Security Analyst</span>
                                             </div>
                                             <div class="ceh-testo-body">
-                                                <p>Fresh-Net has a way of changing my perspective so that life's
-                                                    possibilities open up
-                                                    tremendously
-                                                    when I work with them. It feels great having when someone listens to you
-                                                    and helps
-                                                    you figure out
-                                                    your own next steps in your life.&nbsp;
+                                                <p>As a Security Analyst overseeing the protection of financial systems,
+                                                     I’ve worked with several VAPT providers, but this team truly stood out.&nbsp;
                                                 </p>
                                                 <span onclick="openPopup1(3)">Read More</span>
                                             </div>
@@ -7915,7 +7900,7 @@
                             <div class="ceh-testo-box" data-target="client-testimonials-popup4">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <div class="ceh-testo-image"><img src="{{ asset('assets/images/testo.webp') }}"
+                                        <div class="ceh-testo-image"><img src="{{ asset('assets/images/deepak.jpg') }}"
                                                 class="img-fluid" alt="t1">
                                         </div>
                                     </div>
@@ -7923,16 +7908,11 @@
                                         <div class="ceh-testo-cont">
                                             <div class="ceh-testo-title">
                                                 <h3>Deepak</h3>
-                                                <span>Developer</span>
+                                                <span>Penetration Testing Lead</span>
                                             </div>
                                             <div class="ceh-testo-body">
-                                                <p>Fresh-Net has a way of changing my perspective so that life's
-                                                    possibilities open up
-                                                    tremendously
-                                                    when I work with them. It feels great having when someone listens to you
-                                                    and helps
-                                                    you figure out
-                                                    your own next steps in your life.&nbsp;
+                                                <p>Leading the internal red team for our e-commerce platform means I'm constantly
+                                                     testing our defenses—but an external VAPT audit offers a fresh, unbiased perspective.&nbsp;
                                                 </p>
                                                 <span onclick="openPopup1(4)">Read More</span>
                                             </div>
