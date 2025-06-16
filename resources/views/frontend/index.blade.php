@@ -6377,57 +6377,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3">
-                        <div class="tdw-box row">
-                            <div class="col-md-4 pd0">
-                                <div class="tdw-img"> <img src="{{ asset('assets/images/other-quality10.webp') }}">
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="feature-header">
-                                    <h3>Other Quality Management Programs</h3>
-                                    <p>Industry specific (Aerospace, Oil, Gas, Health, Education, Medical, Energy etc) based
-                                        QM
-                                        programs assist executives in understanding the business processes.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <div class="tdw-box row">
-                            <div class="col-md-4 pd0">
-                                <div class="tdw-img"> <img src="{{ asset('assets/images/other-quality10.webp') }}">
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="feature-header">
-                                    <h3>Other Quality Management Programs</h3>
-                                    <p>Industry specific (Aerospace, Oil, Gas, Health, Education, Medical, Energy etc) based
-                                        QM
-                                        programs assist executives in understanding the business processes.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <div class="tdw-box row">
-                            <div class="col-md-4 pd0">
-                                <div class="tdw-img"> <img src="{{ asset('assets/images/other-quality10.webp') }}">
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="feature-header">
-                                    <h3>Other Quality Management Programs</h3>
-                                    <p>Industry specific (Aerospace, Oil, Gas, Health, Education, Medical, Energy etc) based
-                                        QM
-                                        programs assist executives in understanding the business processes.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
             <!-- mobile code start -->
@@ -6593,114 +6542,6 @@
                         <!--  -->
                     </div>
                     <div id="navigation-count42" class="count-nav-box"></div>
-                </div>
-                <!-- slider1 end  -->
-                <!-- slider 1 start -->
-                <div class="slider1">
-                    <div id="mhome-slider43" class="owl-carousel owl-theme">
-                        <!--  -->
-                        <div class="item">
-                            <a href="javascript:void(0)">
-                                <div class="ftd-box">
-                                    <div class="ftd-img"> <img src="{{ asset('assets/images/Security-oprations-4.webp') }}">
-                                    </div>
-                                    <div class="ftd-header">
-                                        <h3>Security Operations and Management</h3>
-                                        <p>Offers buffey of security programs, tools and techniques that are globally
-                                            accepted in
-                                            Information and Cyber Security Assurance.
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="javascript:void(0)">
-                                <div class="ftd-box">
-                                    <div class="ftd-img"> <img src="{{ asset('assets/images/Security-oprations-4.webp') }}">
-                                    </div>
-                                    <div class="ftd-header">
-                                        <h3>Security Operations and Management</h3>
-                                        <p>Offers buffey of security programs, tools and techniques that are globally
-                                            accepted in
-                                            Information and Cyber Security Assurance.
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="javascript:void(0)">
-                                <div class="ftd-box">
-                                    <div class="ftd-img"> <img src="{{ asset('assets/images/Security-oprations-4.webp') }}">
-                                    </div>
-                                    <div class="ftd-header">
-                                        <h3>Security Operations and Management</h3>
-                                        <p>Offers buffey of security programs, tools and techniques that are globally
-                                            accepted in
-                                            Information and Cyber Security Assurance.
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!--  -->
-                    </div>
-                    <div id="navigation-count43" class="count-nav-box"></div>
-                </div>
-                <!-- slider1 end  -->
-                <!-- slider 1 start -->
-                <div class="slider1">
-                    <div id="mhome-slider44" class="owl-carousel owl-theme">
-                        <!--  -->
-                        <div class="item">
-                            <a href="javascript:void(0)">
-                                <div class="ftd-box">
-                                    <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-forensic-5.webp') }}">
-                                    </div>
-                                    <div class="ftd-header">
-                                        <h3>Cyber Forensic and Fraud Management</h3>
-                                        <p>Offers buffey of security programs, tools and techniques that are globally
-                                            accepted in
-                                            Information and Cyber Security Assurance.
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="javascript:void(0)">
-                                <div class="ftd-box">
-                                    <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-forensic-5.webp') }}">
-                                    </div>
-                                    <div class="ftd-header">
-                                        <h3>Cyber Forensic and Fraud Management</h3>
-                                        <p>Offers buffey of security programs, tools and techniques that are globally
-                                            accepted in
-                                            Information and Cyber Security Assurance.
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="javascript:void(0)">
-                                <div class="ftd-box">
-                                    <div class="ftd-img"> <img src="{{ asset('assets/images/cyber-forensic-5.webp') }}">
-                                    </div>
-                                    <div class="ftd-header">
-                                        <h3>Cyber Forensic and Fraud Management</h3>
-                                        <p>Offers buffey of security programs, tools and techniques that are globally
-                                            accepted in
-                                            Information and Cyber Security Assurance.
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!--  -->
-                    </div>
-                    <div id="navigation-count44" class="count-nav-box"></div>
                 </div>
                 <!-- slider1 end  -->
             </div>
@@ -8105,7 +7946,7 @@
                     <!--  -->
                 </div>
                 <div class="testo-view">
-                    <a href="">View all</a>
+                    <a href="{{ route('testimonials') }}">View all</a>
                 </div>
             </div>
         </section>
