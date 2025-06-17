@@ -84,10 +84,7 @@
                                 <div class="cn-hover-img"> <img src="{{ asset('assets/images/vapt-services.webp') }}" style="aspect-ratio: 1 / 1; height: auto;">
                                 </div>
                                 <div class="cn-content">
-                                    <p>Services to ensure the Integrity of Information Systems, Softwares & Applications,
-                                        block
-                                        illegal access and protect organizations against data theft, productivity loss and
-                                        fraud.
+                                    <p>Codec Networks offers advanced VAPT services to identify, exploit, and mitigate security vulnerabilities across applications, networks, databases, and infrastructure, ensuring robust cyber defense and compliance.
                                     </p>
                                 </div>
                             </div>
@@ -95,10 +92,7 @@
                                 <a href="#" class="cn-main-content-enclosed scroll-link" data-target="#mhome-div2"
                                     data-offset="-60x" data-speed="400" style="display: block; text-decoration: none;">
                                     <h3>Vulnerability Assesement &amp; Penetration Testing</h3>
-                                    <p>Services to ensure the Integrity of Information Systems, Softwares & Applications,
-                                        block
-                                        illegal
-                                        access and protect organizations against data theft, productivity loss and fraud.
+                                    <p>Codec Networks offers advanced VAPT services to identify, exploit, and mitigate security vulnerabilities across applications, networks, databases, and infrastructure, ensuring robust cyber defense and compliance.
                                     </p>
                                     Know more <i class="fa fa-chevron-right"></i>
                                 </a>
@@ -113,9 +107,7 @@
                                 <div class="cn-hover-img"> <img src="{{ asset('assets/images/forensic-seervices.webp') }}" style="aspect-ratio: 1 / 1; height: auto;">
                                 </div>
                                 <div class="cn-content">
-                                    <p>Identify and resolve Ecrime incidents that adversely impact organizations with
-                                        cybercrime /
-                                        online fraud and proactively manage 24x7 hours security risks.
+                                    <p>Codec Networks delivers expert consulting, audits, and compliance services to help businesses meet global cybersecurity standards, manage risks, and ensure regulatory readiness across industries.
                                     </p>
                                 </div>
                             </div>
@@ -124,10 +116,7 @@
                                 data-offset="-60x" data-speed="600" 
                                     style="display: block; text-decoration: none;">
                                     <h3>Governance, Risk &amp; Compliance</h3>
-                                    <p>Identify and resolve Ecrime incidents that adversely impact organizations with
-                                        cybercrime
-                                        /
-                                        online fraud and proactively manage 24x7 hours security risks.
+                                    <p>Codec Networks delivers expert consulting, audits, and compliance services to help businesses meet global cybersecurity standards, manage risks, and ensure regulatory readiness across industries
                                     </p>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
@@ -139,9 +128,7 @@
                             <div class="cn-hover-box">
                                 <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}" style="aspect-ratio: 1 / 1; height: auto;"> </div>
                                 <div class="cn-content">
-                                    <p>Provides round-the-clock proactive event monitoring with prioritized alert
-                                        notification &
-                                        threat mitigation.
+                                    <p>Codec Networks provides 24x7 Managed SOC and Cyber Forensic services for real-time threat detection, incident response, and digital investigations across cloud, endpoint, and emerging tech environments.
                                     </p>
                                 </div>
                             </div>
@@ -150,10 +137,7 @@
                                 data-offset="-60x" data-speed=" 800" 
                                     style="display: block; text-decoration: none;">
                                     <h3>SOC (Security Operation Center) as a Service</h3>
-                                    <p>Provides round-the-clock proactive event monitoring with prioritized alert
-                                        notification &
-                                        threat
-                                        mitigation.
+                                    <p>Codec Networks provides 24x7 Managed SOC and Cyber Forensic services for real-time threat detection, incident response, and digital investigations across cloud, endpoint, and emerging tech environments.
                                     </p>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
@@ -165,9 +149,7 @@
                             <div class="cn-hover-box">
                                 <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}" style="aspect-ratio: 1 / 1; height: auto;"> </div>
                                 <div class="cn-content">
-                                    <p>Provides round-the-clock proactive event monitoring with prioritized alert
-                                        notification &
-                                        threat mitigation.
+                                    <p>Codec Networks’ CoPE offers industry-driven cybersecurity education, hands-on internships, and real-world projects to equip professionals with cutting-edge skills for today’s evolving threat landscape.
                                     </p>
                                 </div>
                             </div>
@@ -176,10 +158,7 @@
                                 data-offset="-60x" data-speed=" 1000" 
                                     style="display: block; text-decoration: none;">
                                     <h3>Education</h3>
-                                    <p>Provides round-the-clock proactive event monitoring with prioritized alert
-                                        notification &
-                                        threat
-                                        mitigation.
+                                    <p>Codec Networks’ CoPE offers industry-driven cybersecurity education, hands-on internships, and real-world projects to equip professionals with cutting-edge skills for today’s evolving threat landscape.
                                     </p>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
@@ -191,9 +170,7 @@
                             <div class="cn-hover-box">
                                 <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}" style="aspect-ratio: 1 / 1; height: auto;"> </div>
                                 <div class="cn-content">
-                                    <p>Provides round-the-clock proactive event monitoring with prioritized alert
-                                        notification &
-                                        threat mitigation.
+                                    <p>CN Insight by Codec Networks shares expert podcasts, blogs, and cybersecurity news—delivering sharp insights, threat updates, and trends to keep professionals informed and future-ready.
                                     </p>
                                 </div>
                             </div>
@@ -202,10 +179,7 @@
                                 data-offset="-60x" data-speed=" 1500" 
                                     style="display: block; text-decoration: none;">
                                     <h3>CN Insight</h3>
-                                    <p>Provides round-the-clock proactive event monitoring with prioritized alert
-                                        notification &
-                                        threat
-                                        mitigation.
+                                    <p>CN Insight by Codec Networks shares expert podcasts, blogs, and cybersecurity news—delivering sharp insights, threat updates, and trends to keep professionals informed and future-ready.
                                     </p>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
