@@ -264,7 +264,7 @@ $(function () {
 });
 
 $(document).ready(function () {
-    const offset = 80;
+    const offset = 140;
     const speed = 250;
     $('#tabs-nav4 .scr-tabs4').on('click', function (e) {
         $('html, body').animate({
@@ -274,7 +274,7 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-   const offset = 80;
+   const offset = 140;
    const speed = 250;
    $('#tabs-nav2 .scr-tabs2').on('click', function (e) {
        $('html, body').animate({

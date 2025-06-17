@@ -81,18 +81,23 @@
                     <div class="col-md-4">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/vapt-services.webp') }}" style="aspect-ratio: 1 / 1; height: auto;">
+                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/vapt-services.webp') }}"
+                                        style="aspect-ratio: 1 / 1; height: auto;">
                                 </div>
                                 <div class="cn-content">
-                                    <p>Codec Networks offers advanced VAPT services to identify, exploit, and mitigate security vulnerabilities across applications, networks, databases, and infrastructure, ensuring robust cyber defense and compliance.
+                                    <p>Codec Networks offers advanced VAPT services to identify, exploit, and mitigate
+                                        security vulnerabilities across applications, networks, databases, and
+                                        infrastructure, ensuring robust cyber defense and compliance.
                                     </p>
                                 </div>
                             </div>
                             <div class="cn-main-content">
                                 <a href="#" class="cn-main-content-enclosed scroll-link" data-target="#mhome-div2"
-                                    data-offset="-60x" data-speed="400" style="display: block; text-decoration: none;">
+                                    data-offset="-90px" data-speed="400" style="display: block; text-decoration: none;">
                                     <h3>Vulnerability Assesement &amp; Penetration Testing</h3>
-                                    <p>Codec Networks offers advanced VAPT services to identify, exploit, and mitigate security vulnerabilities across applications, networks, databases, and infrastructure, ensuring robust cyber defense and compliance.
+                                    <p>Codec Networks offers advanced VAPT services to identify, exploit, and mitigate
+                                        security vulnerabilities across applications, networks, databases, and
+                                        infrastructure, ensuring robust cyber defense and compliance.
                                     </p>
                                     Know more <i class="fa fa-chevron-right"></i>
                                 </a>
@@ -104,19 +109,23 @@
                     <div class="col-md-4">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/forensic-seervices.webp') }}" style="aspect-ratio: 1 / 1; height: auto;">
+                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/forensic-seervices.webp') }}"
+                                        style="aspect-ratio: 1 / 1; height: auto;">
                                 </div>
                                 <div class="cn-content">
-                                    <p>Codec Networks delivers expert consulting, audits, and compliance services to help businesses meet global cybersecurity standards, manage risks, and ensure regulatory readiness across industries.
+                                    <p>Codec Networks delivers expert consulting, audits, and compliance services to help
+                                        businesses meet global cybersecurity standards, manage risks, and ensure regulatory
+                                        readiness across industries.
                                     </p>
                                 </div>
                             </div>
                             <div class="cn-main-content">
                                 <a href="#" class="cn-main-content-enclosed scroll-link" data-target="#mhome-div4"
-                                data-offset="-60x" data-speed="600" 
-                                    style="display: block; text-decoration: none;">
+                                    data-offset="-100px" data-speed="600" style="display: block; text-decoration: none;">
                                     <h3>Governance, Risk &amp; Compliance</h3>
-                                    <p>Codec Networks delivers expert consulting, audits, and compliance services to help businesses meet global cybersecurity standards, manage risks, and ensure regulatory readiness across industries
+                                    <p>Codec Networks delivers expert consulting, audits, and compliance services to help
+                                        businesses meet global cybersecurity standards, manage risks, and ensure regulatory
+                                        readiness across industries
                                     </p>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
@@ -126,18 +135,22 @@
                     <div class="col-md-4">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}" style="aspect-ratio: 1 / 1; height: auto;"> </div>
+                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}"
+                                        style="aspect-ratio: 1 / 1; height: auto;"> </div>
                                 <div class="cn-content">
-                                    <p>Codec Networks provides 24x7 Managed SOC and Cyber Forensic services for real-time threat detection, incident response, and digital investigations across cloud, endpoint, and emerging tech environments.
+                                    <p>Codec Networks provides 24x7 Managed SOC and Cyber Forensic services for real-time
+                                        threat detection, incident response, and digital investigations across cloud,
+                                        endpoint, and emerging tech environments.
                                     </p>
                                 </div>
                             </div>
                             <div class="cn-main-content">
                                 <a href="#" class="cn-main-content-enclosed scroll-link" data-target="#mhome-div4-1"
-                                data-offset="-60x" data-speed=" 800" 
-                                    style="display: block; text-decoration: none;">
+                                    data-offset="-100px" data-speed=" 800" style="display: block; text-decoration: none;">
                                     <h3>SOC (Security Operation Center) as a Service</h3>
-                                    <p>Codec Networks provides 24x7 Managed SOC and Cyber Forensic services for real-time threat detection, incident response, and digital investigations across cloud, endpoint, and emerging tech environments.
+                                    <p>Codec Networks provides 24x7 Managed SOC and Cyber Forensic services for real-time
+                                        threat detection, incident response, and digital investigations across cloud,
+                                        endpoint, and emerging tech environments.
                                     </p>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
@@ -147,18 +160,22 @@
                     <div class="col-md-4">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}" style="aspect-ratio: 1 / 1; height: auto;"> </div>
+                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}"
+                                        style="aspect-ratio: 1 / 1; height: auto;"> </div>
                                 <div class="cn-content">
-                                    <p>Codec Networks’ CoPE offers industry-driven cybersecurity education, hands-on internships, and real-world projects to equip professionals with cutting-edge skills for today’s evolving threat landscape.
+                                    <p>Codec Networks’ CoPE offers industry-driven cybersecurity education, hands-on
+                                        internships, and real-world projects to equip professionals with cutting-edge skills
+                                        for today’s evolving threat landscape.
                                     </p>
                                 </div>
                             </div>
                             <div class="cn-main-content">
                                 <a href="#" class="cn-main-content-enclosed scroll-link" data-target="#mhome-div6"
-                                data-offset="-60x" data-speed=" 1000" 
-                                    style="display: block; text-decoration: none;">
+                                    data-offset="-95px" data-speed=" 1000" style="display: block; text-decoration: none;">
                                     <h3>Education</h3>
-                                    <p>Codec Networks’ CoPE offers industry-driven cybersecurity education, hands-on internships, and real-world projects to equip professionals with cutting-edge skills for today’s evolving threat landscape.
+                                    <p>Codec Networks’ CoPE offers industry-driven cybersecurity education, hands-on
+                                        internships, and real-world projects to equip professionals with cutting-edge skills
+                                        for today’s evolving threat landscape.
                                     </p>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
@@ -168,18 +185,22 @@
                     <div class="col-md-4">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}" style="aspect-ratio: 1 / 1; height: auto;"> </div>
+                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}"
+                                        style="aspect-ratio: 1 / 1; height: auto;"> </div>
                                 <div class="cn-content">
-                                    <p>CN Insight by Codec Networks shares expert podcasts, blogs, and cybersecurity news—delivering sharp insights, threat updates, and trends to keep professionals informed and future-ready.
+                                    <p>CN Insight by Codec Networks shares expert podcasts, blogs, and cybersecurity
+                                        news—delivering sharp insights, threat updates, and trends to keep professionals
+                                        informed and future-ready.
                                     </p>
                                 </div>
                             </div>
                             <div class="cn-main-content">
                                 <a href="#" class="cn-main-content-enclosed scroll-link" data-target="#mhome-div11"
-                                data-offset="-60x" data-speed=" 1500" 
-                                    style="display: block; text-decoration: none;">
+                                    data-offset="-100px" data-speed=" 1500" style="display: block; text-decoration: none;">
                                     <h3>CN Insight</h3>
-                                    <p>CN Insight by Codec Networks shares expert podcasts, blogs, and cybersecurity news—delivering sharp insights, threat updates, and trends to keep professionals informed and future-ready.
+                                    <p>CN Insight by Codec Networks shares expert podcasts, blogs, and cybersecurity
+                                        news—delivering sharp insights, threat updates, and trends to keep professionals
+                                        informed and future-ready.
                                     </p>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
@@ -681,7 +702,12 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Web Application / Website VAPT Services </h3>
-                                            <p>Web Application/Website VAPT services thoroughly assess vulnerabilities such as XSS, SQL injection, authentication flaws, and server misconfigurations. These tests simulate real-world attacks to identify security weaknesses. By uncovering and mitigating risks, VAPT enhances application resilience, safeguards sensitive user data, and ensures compliance with cybersecurity standards and best practices.
+                                            <p>Web Application/Website VAPT services thoroughly assess vulnerabilities such
+                                                as XSS, SQL injection, authentication flaws, and server misconfigurations.
+                                                These tests simulate real-world attacks to identify security weaknesses. By
+                                                uncovering and mitigating risks, VAPT enhances application resilience,
+                                                safeguards sensitive user data, and ensures compliance with cybersecurity
+                                                standards and best practices.
                                             </p>
                                             <!--  -->
                                             <div class="know-more">
@@ -5761,7 +5787,7 @@
         <!-- empower industry end -->
 
         <!-- bg banner start -->
-        <section class="mhspace mhspace00" id="mhome-div6">
+        <section class="mhspace mhspace00" id="mhome-div6" style="padding-top: 25px;background: #E5E8ED;">
             <div class="traing-banner desktop-view">
                 <img src="{{ asset('assets/images/clients/banner.png') }}">
             </div>
@@ -6589,40 +6615,40 @@
                             </div>
                         </div>
                     </div>
-                   
+
                 </div>
             </div>
             <div class="container">
                 <div class="row">
                     <div id="client-logo" class="owl-carousel owl-theme">
-                        <div class="item"> <img src="{{ asset('assets/images/clients/eccounsil2.png') }}"
-                                class="img-fluid" alt="">
+                        <div class="item"> <img src="{{ asset('assets/images/clients/eccounsil2.png') }}" class="img-fluid"
+                                alt="">
                         </div>
                         <div class="item"><img src="{{ asset('assets/images/clients/beingcert_logo.jpeg') }}"
                                 class="img-fluid" alt="">
-                        </div> <div class="item"> <img src="{{ asset('assets/images/clients/pecb.png') }}"
-                                class="img-fluid" alt="">
+                        </div>
+                        <div class="item"> <img src="{{ asset('assets/images/clients/pecb.png') }}" class="img-fluid"
+                                alt="">
                         </div>
                         <div class="item"><img src="{{ asset('assets/images/clients/Quick-Heal.jpg') }}" class="img-fluid"
                                 alt=""></div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/Sophos.jpg') }}"
-                                alt="Owl Image">
+                        <div class="item"><img src="{{ asset('assets/images/clients/Sophos.jpg') }}" alt="Owl Image">
                         </div>
-                         <div class="item"><img src="{{ asset('assets/images/clients/mcafee.png') }}" class="img-fluid"
+                        <div class="item"><img src="{{ asset('assets/images/clients/mcafee.png') }}" class="img-fluid"
                                 alt=""></div>
                         <div class="item"><img src="{{ asset('assets/images/clients/Symantec.png') }}" class="img-fluid"
                                 alt=""></div>
                         <div class="item"><img src="{{ asset('assets/images/clients/tenable.png') }}" class="img-fluid"
                                 alt=""></div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/Kaspersky.png') }}"
-                                class="img-fluid" alt="">
+                        <div class="item"><img src="{{ asset('assets/images/clients/Kaspersky.png') }}" class="img-fluid"
+                                alt="">
                         </div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/acunetix.png') }}"
-                                alt="Owl Image"></div>
+                        <div class="item"><img src="{{ asset('assets/images/clients/acunetix.png') }}" alt="Owl Image">
+                        </div>
                         <div class="item"><img src="{{ asset('assets/images/clients/Seqrite_logo.png') }}" alt="Owl Image">
                         </div>
-                        <div class="item"><img src="{{ asset('assets/images/clients/INSPIRA.png') }}"
-                                class="img-fluid" alt="">
+                        <div class="item"><img src="{{ asset('assets/images/clients/INSPIRA.png') }}" class="img-fluid"
+                                alt="">
                         </div>
                     </div>
                 </div>
@@ -7804,8 +7830,11 @@
                                                 <span>Security Analyst</span>
                                             </div>
                                             <div class="ceh-testo-body">
-                                                <p>As a Security Analyst overseeing the protection of financial systems, I’ve worked with several VAPT providers, but this team truly stood out. Their in-depth vulnerability assessment 
-                                                    and real-world penetration testing techniques revealed gaps that our internal tools had overlooked.&nbsp;
+                                                <p>As a Security Analyst overseeing the protection of financial systems,
+                                                    I’ve worked with several VAPT providers, but this team truly stood out.
+                                                    Their in-depth vulnerability assessment
+                                                    and real-world penetration testing techniques revealed gaps that our
+                                                    internal tools had overlooked.&nbsp;
                                                 </p>
                                                 <span>Read More</span>
                                             </div>
@@ -7820,8 +7849,9 @@
                             <div class="ceh-testo-box" data-target="client-testimonials-popup2">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <div class="ceh-testo-image"><img src="{{ asset('assets/images/sudeep_pandey.jpg') }}"
-                                                class="img-fluid" alt="t1">
+                                        <div class="ceh-testo-image"><img
+                                                src="{{ asset('assets/images/sudeep_pandey.jpg') }}" class="img-fluid"
+                                                alt="t1">
                                         </div>
                                     </div>
                                     <div class="col-md-8">
@@ -7831,8 +7861,9 @@
                                                 <span>Chief Information Security Officer</span>
                                             </div>
                                             <div class="ceh-testo-body">
-                                                <p>As a CISO responsible for safeguarding sensitive healthcare data, 
-                                                    finding a trusted VAPT partner is critical. The team’s work exceeded all expectations.&nbsp;
+                                                <p>As a CISO responsible for safeguarding sensitive healthcare data,
+                                                    finding a trusted VAPT partner is critical. The team’s work exceeded all
+                                                    expectations.&nbsp;
                                                 </p>
                                                 <span onclick="openPopup1(2)">Read More</span>
                                             </div>
@@ -7859,7 +7890,8 @@
                                             </div>
                                             <div class="ceh-testo-body">
                                                 <p>As a Security Analyst overseeing the protection of financial systems,
-                                                     I’ve worked with several VAPT providers, but this team truly stood out.&nbsp;
+                                                    I’ve worked with several VAPT providers, but this team truly stood
+                                                    out.&nbsp;
                                                 </p>
                                                 <span onclick="openPopup1(3)">Read More</span>
                                             </div>
@@ -7885,8 +7917,10 @@
                                                 <span>Penetration Testing Lead</span>
                                             </div>
                                             <div class="ceh-testo-body">
-                                                <p>Leading the internal red team for our e-commerce platform means I'm constantly
-                                                     testing our defenses—but an external VAPT audit offers a fresh, unbiased perspective.&nbsp;
+                                                <p>Leading the internal red team for our e-commerce platform means I'm
+                                                    constantly
+                                                    testing our defenses—but an external VAPT audit offers a fresh, unbiased
+                                                    perspective.&nbsp;
                                                 </p>
                                                 <span onclick="openPopup1(4)">Read More</span>
                                             </div>
@@ -8540,6 +8574,46 @@
 
         {{-- @include('frontend.layouts.footer') --}}
         <a href="#mian-body" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
+        <!-- Place this just after your main header in index.blade.php -->
+        <div id="home_float_head">
+            <section class="services-menu">
+                <div id="floating-sub-header" style="display:none;">
+                    <!-- Your floating header content here -->
+                    <div class="row body_container">
+                        <div class="col-md-12 text-center">
+                            <ul id="sticky-control" class="anchor-nav">
+                                <li><a href="#mhome-div2" class="sticky_link">VAPT Services</a></li>
+                                <li><a href="#mhome-div4" class="sticky_link">Governance, Risk & Compliance</a></li>
+                                <li><a href="#mhome-div4-1" class="sticky_link">Managed SOC and Cyber Forensics</a></li>
+                                <li><a href="#mhome-div6" class="sticky_link">CN Education</a></li>
+                                <li><a href="#mhome-div11" class="sticky_link">CN Insight</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <style>
+            /* Adjust the top value to the height of your main header */
+            #floating-sub-header {
+                position: fixed;
+                top: 60px;
+                /* Change this to your main header's height */
+                left: 0;
+                width: 100%;
+                z-index: 999;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+                transition: top 0.3s;
+                background-color: #cbdef1;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cg fill='%23ffffff' fill-opacity='0.17'%3E%3Cpath fill-rule='evenodd' d='M0 0h4v4H0V0zm4 4h4v4H4V4z'/%3E%3C/g%3E%3C/svg%3E");
+            }
+
+            .floating-header-nav {
+                padding: 16px;
+                text-align: center;
+                font-weight: bold;
+            }
+        </style>
     </body>
 @endsection
 
@@ -8550,7 +8624,56 @@
     <script type="text/javascript" src="{{ asset('assets/js/homepage.js?v14') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/mobile-menu.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/main.js?v=32') }}"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var floatingHeader = document.getElementById('floating-sub-header');
+            var targetSection = document.getElementById('mhome-div2');
+            var mainHeader = document.querySelector('header'); // Adjust selector if needed
 
+            function checkSectionInView() {
+                var rect = targetSection.getBoundingClientRect();
+                var mainHeaderHeight = mainHeader ? mainHeader.offsetHeight : 0;
+                var floatingHeaderHeight = floatingHeader ? floatingHeader.offsetHeight : 0;
+                // Show header if top of section is less than or equal to (mainHeaderHeight + floatingHeaderHeight)
+                if (rect.top <= (mainHeaderHeight + floatingHeaderHeight)) {
+                    floatingHeader.style.display = 'block';
+                } else {
+                    floatingHeader.style.display = 'none';
+                }
+            }
+
+            // Run once to get correct floatingHeaderHeight after DOM is ready
+            setTimeout(checkSectionInView, 100);
+            window.addEventListener('scroll', checkSectionInView);
+            window.addEventListener('resize', checkSectionInView);
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(document).on("scroll", onScroll);
+
+            //smoothscroll
+            $('.sticky_link').on('click', function (e) {
+                e.preventDefault();
+                $(document).off("scroll");
+
+                $('a').each(function () {
+                    $(this).removeClass('sapme_active');
+                })
+                $(this).addClass('sapme_active');
+
+                var target = this.hash,
+                    menu = target;
+                $target = $(target);
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top - 120
+                }, 500, 'swing', function () {
+                    window.location.hash = target;
+                    $(document).on("scroll", onScroll);
+                });
+            });
+        });
+    </script>
     {{--
     <script type="text/javascript">
         function addVersionToFiles() {
@@ -8723,12 +8846,12 @@
         }
 
         // Example usage:
-        scrollToFirstElement("scr-tabs", 80);
-        scrollToFirstElement("scr-tabs_1", 80);
-        scrollToFirstElement("scr-tabs1", 80);
-        scrollToFirstElement("scr-tabs3", 80);
-        scrollToFirstElement("scr-tabs_4", 80);
-        scrollToFirstElement("industry-slider", 50);
+        scrollToFirstElement("scr-tabs", 140);
+        scrollToFirstElement("scr-tabs_1", 140);
+        scrollToFirstElement("scr-tabs1", 140);
+        scrollToFirstElement("scr-tabs3", 140);
+        scrollToFirstElement("scr-tabs_4", 140);
+        scrollToFirstElement("industry-slider", 110);
     </script>
     <script>
         $(document).ready(function () {
