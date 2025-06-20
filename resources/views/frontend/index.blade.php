@@ -226,11 +226,11 @@
                 <div class="row">
                     <div class="cn-tabs1">
                         <ul id="tabs-nav1" class="home-tabs">
-                            <li><a class="scr-tabs1" href="#tab11"> Application Vapt Services</a></li>
-                            <li><a class="scr-tabs1" href="#tab12">Network Vapt Services</a></li>
-                            <li><a class="scr-tabs1" href="#tab13">Cloud Vapt Services </a></li>
-                            <li><a class="scr-tabs1" href="#tab14"> Server And Storage Vapt Services </a></li>
-                            <li><a class="scr-tabs1" href="#tab15"> Digital Technologies Penetration Testing Services </a>
+                            <li><a class="scr-tabs1" href="#tab11"> Application Security Testing </a></li>
+                            <li><a class="scr-tabs1" href="#tab12">Network Security Testing </a></li>
+                            <li><a class="scr-tabs1" href="#tab13">Database Security Testing  </a></li>
+                            <li><a class="scr-tabs1" href="#tab14"> Server & Storage Security Testing  </a></li>
+                            <li><a class="scr-tabs1" href="#tab15"> People & Process Security Testing  </a>
                             </li>
                         </ul>
                         <!-- END tabs-nav -->
@@ -243,10 +243,8 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>Web Application / Website VAPT Services </h3>
-                                                            <p>Web Application/Website VAPT services assess vulnerabilities
-                                                                like XSS, SQL injection, and misconfigurations to enhance
-                                                                security and protect sensitive user data.
+                                                            <h3>Web Application Penetration Testing</h3>
+                                                            <p>Web Application Penetration Testing is the process of identifying, exploiting, and reporting security vulnerabilities in web apps to prevent real-world attacks.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -254,10 +252,8 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>API VAPT Testing</h3>
-                                                            <p>API VAPT testing detects vulnerabilities in endpoints,
-                                                                focusing on authentication, data exposure, and injection
-                                                                flaws to ensure secure communication and integration.
+                                                            <h3>Mobile App Security Testing </h3>
+                                                            <p>Mobile App Security Testing involves analyzing mobile applications to identify security flaws, data leaks, and vulnerabilities across Android and iOS platforms.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -265,10 +261,8 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>Mobile Application VAPT Testing (Android, IOS)</h3>
-                                                            <p>Mobile Application VAPT testing identifies security flaws in
-                                                                Android and iOS apps, including insecure storage, weak
-                                                                authentication, and unauthorized data access risks.
+                                                            <h3>API Security Testing </h3>
+                                                            <p>API Security Testing ensures APIs are protected against vulnerabilities by identifying flaws like authentication issues, data exposure, and injection attacks.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -276,11 +270,8 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>EPR System and Business Application VAPT Testing (SAP, HANA
-                                                                PeopleSoft etc )</h3>
-                                                            <p>ERP and Business Application VAPT testing identifies
-                                                                vulnerabilities in systems like SAP, HANA, and PeopleSoft,
-                                                                focusing on access control and data integrity risks.
+                                                            <h3>Thick Client/Desktop App Testing </h3>
+                                                            <p>Thick Client/Desktop App Testing involves assessing security risks in desktop applications, focusing on data storage, authentication, and client-server communication vulnerabilities.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -288,10 +279,8 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Thick Client & Thin Client VAPT Testing </h3>
-                                                            <p>Thick and Thin Client VAPT testing identifies security flaws
-                                                                in client-server applications, focusing on data handling,
-                                                                authentication, and communication vulnerabilities.
+                                                            <h3>Cloud-Native App Testing </h3>
+                                                            <p>Cloud-Native App Testing evaluates the security of applications built for cloud environments, focusing on containers, microservices, APIs, and cloud configurations.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -299,10 +288,8 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Secure Code Review ( SAST ) Testing</h3>
-                                                            <p>Secure Code Review (SAST) analyzes source code to detect
-                                                                security vulnerabilities early, ensuring code quality and
-                                                                preventing potential exploits before deployment.
+                                                            <h3>Smart Contract Audits </h3>
+                                                            <p>Smart Contract Audits involve reviewing blockchain-based code to identify vulnerabilities, logic errors, and security risks before deployment on decentralized platforms.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -310,14 +297,39 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Secure Code Review ( SAST ) Testing</h3>
-                                                            <p>Secure Code Review (SAST) analyzes source code to detect
-                                                                security vulnerabilities early, ensuring code quality and
-                                                                preventing potential exploits before deployment.
+                                                            <h3>DApp Security Testing </h3>
+                                                            <p>DApp Security Testing assesses decentralized applications for vulnerabilities in smart contracts, blockchain interactions, authentication, and data integrity across distributed networks.
                                                             </p>
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>SAST + DAST  </h3>
+                                                            <p>SAST + DAST combines static and dynamic analysis to identify security vulnerabilities in source code and runtime behavior of applications during development.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>CI/CD Pipeline Security Testing </h3>
+                                                            <p>CI/CD Pipeline Security Testing evaluates automated build and deployment workflows to detect vulnerabilities, misconfigurations, and insecure integrations in DevOps environments.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Zero-Day Vulnerability Exploitation Testing</h3>
+                                                            <p>Zero-Day Vulnerability Exploitation Testing simulates attacks using unknown vulnerabilities to assess an organization’s ability to detect, prevent, and respond to emerging threats.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>  
                                             </div>
                                         </div>
                                     </div>
@@ -331,11 +343,8 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>Network VAPT Testing - Internal and External </h3>
-                                                            <p>Network VAPT testing evaluates internal and external network
-                                                                security, identifying vulnerabilities in devices,
-                                                                configurations, and protocols to prevent unauthorized access
-                                                                and attacks.
+                                                            <h3>External/Internal Network Pentesting </h3>
+                                                            <p>External/Internal Network Penetration Testing identifies vulnerabilities in network infrastructure by simulating real-world attacks from both outside and inside the organization.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -343,11 +352,8 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Wireless Network VAPT Testing </h3>
-                                                            <p>Wireless Network VAPT testing identifies vulnerabilities in
-                                                                Wi-Fi networks, including encryption weaknesses,
-                                                                unauthorized access points, and configuration flaws to
-                                                                enhance wireless security.
+                                                            <h3>Wireless Security Testing  </h3>
+                                                            <p>Wireless Security Testing evaluates Wi-Fi networks for vulnerabilities such as weak encryption, rogue access points, and unauthorized access to ensure secure communication.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -355,11 +361,8 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>ICS - SCADA VAPT Testing </h3>
-                                                            <p>ICS-SCADA VAPT testing identifies security vulnerabilities in
-                                                                industrial control and SCADA systems, focusing on network
-                                                                weaknesses, access controls, and potential operational
-                                                                disruptions.
+                                                            <h3>Cloud Infrastructure Testing  </h3>
+                                                            <p>Cloud Infrastructure Testing assesses cloud environments for misconfigurations, access control flaws, and vulnerabilities to ensure secure deployment and management of resources.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -367,11 +370,8 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>Network Security Architecture Review</h3>
-                                                            <p>Network Security Architecture Review evaluates design and
-                                                                implementation of network security controls to ensure
-                                                                effective protection against threats and compliance with
-                                                                best practices.
+                                                            <h3>VPN & Remote Work Security Testing</h3>
+                                                            <p>VPN & Remote Work Security Testing evaluates remote access solutions for vulnerabilities, misconfigurations, and data exposure risks to ensure secure remote connectivity.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -379,11 +379,8 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Firewall VAPT Testing</h3>
-                                                            <p>Firewall VAPT testing assesses firewall configurations and
-                                                                rules to identify weaknesses, ensuring proper traffic
-                                                                filtering and protection against unauthorized network
-                                                                access.
+                                                            <h3>IoT/OT Network Testing </h3>
+                                                            <p>IoT/OT Network Testing identifies security vulnerabilities in Internet of Things and Operational Technology networks, focusing on device communication, protocols, and access controls.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -391,11 +388,44 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Configuration & Hardening Security Review AD IPT</h3>
-                                                            <p>Configuration and Hardening Security Review for AD and IPT
-                                                                ensures secure system settings, reduces vulnerabilities, and
-                                                                strengthens defenses against unauthorized access and
-                                                                attacks.
+                                                            <h3>Blockchain Node Testing </h3>
+                                                            <p>Blockchain Node Testing assesses the security and integrity of blockchain nodes, focusing on configuration, consensus mechanisms, data validation, and network communication.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>5G Network Security Testing </h3>
+                                                            <p>5G Network Security Testing evaluates 5G infrastructure for vulnerabilities in protocols, slicing, authentication, and data transmission to ensure secure connectivity and performance.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Red Team Exercises </h3>
+                                                            <p>Red Team Exercises simulate real-world cyberattacks to test an organization’s detection, response, and defense capabilities across systems, networks, and employees.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>PCI DSS Network Compliance Testing</h3>
+                                                            <p>PCI DSS Network Compliance Testing assesses network security controls to ensure compliance with PCI standards for protecting cardholder data and preventing breaches.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Zero Trust Architecture (ZTA) Assessments</h3>
+                                                            <p>Zero Trust Architecture (ZTA) Assessments evaluate security frameworks that enforce strict identity verification and least privilege access across users, devices, and applications.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -411,13 +441,28 @@
                                         <div class="home-slider home-slider-spacing">
                                             <div id="home-slider1_3" class="owl-carousel owl-theme ">
                                                 <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>SQL Injection & NoSQL Testing </h3>
+                                                            <p>SQL Injection & NoSQL Testing identifies injection vulnerabilities in traditional and NoSQL databases to prevent unauthorized data access, manipulation, and breaches.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>AWS Cloud Security Penetration Testing</h3>
-                                                            <p>AWS Cloud Security Penetration Testing identifies
-                                                                vulnerabilities in AWS environments, including
-                                                                misconfigurations, weak access controls, and insecure
-                                                                services to enhance cloud security posture.
+                                                            <h3>Database Misconfiguration Reviews </h3>
+                                                            <p>Database Misconfiguration Reviews assess database settings to identify weak permissions, default credentials, and insecure configurations that could lead to data breaches.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>Data Encryption Testing </h3>
+                                                            <p>Data Encryption Testing evaluates encryption methods used for data at rest and in transit to ensure confidentiality, integrity, and compliance with security standards.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -425,32 +470,8 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Azure (Office 365, AD) Penetration Testing</h3>
-                                                            <p>Identify and exploit vulnerabilities in Office 365 and Azure
-                                                                Active Directory to assess security posture and strengthen
-                                                                cloud infrastructure defenses
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5 ">
-                                                        <div class="tab-content-box">
-                                                            <h3>Google Cloud Security Penetration Testing</h3>
-                                                            <p>Assess and exploit security gaps in Google Cloud environments
-                                                                to evaluate configurations, detect vulnerabilities, and
-                                                                enhance overall cloud security posture.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5 ">
-                                                        <div class="tab-content-box">
-                                                            <h3>Oracle Cloud Security Penetration Testing</h3>
-                                                            <p>Evaluate and test Oracle Cloud infrastructure for
-                                                                misconfigurations, vulnerabilities, and access controls to
-                                                                enhance security and ensure compliance.
+                                                            <h3>Big Data Security Testing  </h3>
+                                                            <p>Big Data Security Testing examines large-scale data systems for vulnerabilities in storage, processing, access controls, and data leakage risks across distributed environments.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -458,21 +479,8 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>SAAS Penetration Testing </h3>
-                                                            <p>Simulate real-world attacks on SaaS applications to uncover
-                                                                vulnerabilities, assess data exposure risks, and ensure
-                                                                robust security controls.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5">
-                                                        <div class="tab-content-box">
-                                                            <h3>IAAS Penetration Testing </h3>
-                                                            <p>Conduct security assessments on IaaS environments to identify
-                                                                misconfigurations, access issues, and vulnerabilities across
-                                                                virtual machines, networks, and storage.
+                                                            <h3>Active Directory (AD) Exploitation Testing </h3>
+                                                            <p>Active Directory (AD) Exploitation Testing identifies security weaknesses in AD configurations, permissions, and trust relationships to prevent privilege escalation and lateral movement.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -480,10 +488,8 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>Kubernetes Penetration Testing</h3>
-                                                            <p>Assess Kubernetes clusters for misconfigurations, privilege
-                                                                escalations, and insecure deployments to strengthen
-                                                                container orchestration security and prevent breaches.
+                                                            <h3>Blockchain Storage Testing </h3>
+                                                            <p>Blockchain Storage Testing evaluates the security of on-chain and off-chain data storage to prevent tampering, unauthorized access, and data integrity issues.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -491,10 +497,8 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>Containers Penetration Testing</h3>
-                                                            <p>Identify vulnerabilities in container images, configurations,
-                                                                and runtimes to uncover risks, prevent privilege escalation,
-                                                                and secure containerized applications.
+                                                            <h3>Data Masking & Anonymization Testing </h3>
+                                                            <p>Data Masking & Anonymization Testing assesses techniques used to protect sensitive data by replacing or obfuscating identifiers while preserving usability and compliance.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -502,10 +506,35 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Virtualisation Penetration Testing</h3>
-                                                            <p>Evaluate virtualized environments for hypervisor
-                                                                vulnerabilities, misconfigurations, and isolation flaws to
-                                                                ensure secure and resilient virtual infrastructure.
+                                                            <h3>Database Audit Logging & Monitoring Tests</h3>
+                                                            <p>Database Audit Logging & Monitoring Tests verify the effectiveness of logging mechanisms to track access, detect anomalies, and ensure compliance with data security policies.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Cloud Database Testing </h3>
+                                                            <p>Cloud Database Testing evaluates cloud-hosted databases for vulnerabilities, access control flaws, encryption, and configuration issues to ensure data security and compliance.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Data Exfiltration Simulation </h3>
+                                                            <p>Data Exfiltration Simulation mimics unauthorized data extraction techniques to assess an organization’s ability to detect, prevent, and respond to data breaches.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Dark Web OSINT: Automate Threat Monitoring</h3>
+                                                            <p>Dark Web OSINT: Automate Threat Monitoring uses open-source intelligence tools to continuously monitor dark web sources for leaked data, threats, and credentials.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -519,66 +548,94 @@
                                 <div class="container mobilewidth">
                                     <div class="row">
                                         <div class="home-slider home-slider-spacing">
-                                            <div id="home-slider1_4" class="owl-carousel owl-theme ">
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5 ">
-                                                        <div class="tab-content-box">
-                                                            <h3>Operating System Security Testing</h3>
-                                                            <p>Assess server OS (Windows, Linux, UNIX) for known
-                                                                vulnerabilities, misconfigurations, and patch issues.
-                                                                Identify privilege escalation paths and access risks.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5">
-                                                        <div class="tab-content-box">
-                                                            <h3>Application and Service Layer Testing</h3>
-                                                            <p>Evaluate hosted applications like web, database, and mail
-                                                                servers for injection flaws, insecure APIs, and data
-                                                                exposure vulnerabilities.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5 ">
-                                                        <div class="tab-content-box">
-                                                            <h3>Network and Protocol Security Testing</h3>
-                                                            <p>Analyze network-facing protocols like TCP/IP, SMB, FTP, and
-                                                                NFS for misconfigurations, weaknesses, and potential
-                                                                firewall rule bypasses.</p>
+                                            <div id="home-slider1_4" class="owl-carousel owl-theme">
 
-                                                        </div>
-                                                    </div>
-                                                </div>
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>Storage Systems and Data Protection Testing</h3>
-                                                            <p>Test SAN/NAS devices and storage arrays for weak encryption,
-                                                                default credentials, improper access controls, and outdated
-                                                                firmware vulnerabilities.</p>
+                                                            <h3>OS Hardening Assessments</h3>
+                                                            <p>Evaluate operating systems for weak configurations, unnecessary services, missing patches, and privilege escalation to strengthen endpoint-level cyber defenses.</p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5">
-                                                        <div class="tab-content-box">
-                                                            <h3>Access Control and Identity Management Testing</h3>
-                                                            <p>Verify roles, permissions, and authentication systems.
-                                                                Evaluate MFA and privileged access to mitigate risks from
-                                                                insider threats.</p>
 
-                                                        </div>
-                                                    </div>
-                                                </div>
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Virtualization and Hypervisor Security Testing</h3>
-                                                            <p>Assess hypervisors and virtual environments for breakout
-                                                                vulnerabilities, poor resource isolation, and insecure
-                                                                virtual machine configurations.</p>
+                                                            <h3>Container Security Testing</h3>
+                                                            <p>Test container images, configurations, and Kubernetes environments to detect vulnerabilities, exposed APIs, and insecure runtime or permission settings.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>Cloud VM Pentesting</h3>
+                                                            <p>Perform penetration testing on cloud virtual machines to uncover misconfigurations, exposed services, insecure access keys, and privilege escalation risks.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>SAN/NAS Storage Testing</h3>
+                                                            <p>Assess SAN/NAS systems for data exposure, weak credentials, encryption flaws, firmware vulnerabilities, and unauthorized access or privilege escalation risks.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Serverless Security Testing</h3>
+                                                            <p>Test cloud-native serverless apps for insecure triggers, misconfigured roles, privilege abuse, and event injection vulnerabilities affecting cloud functions.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Hypervisor & Virtualization Testing</h3>
+                                                            <p>Evaluate hypervisors for breakout attacks, insecure configurations, weak inter-VM isolation, and exposed management interfaces in virtualized infrastructure.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Blockchain Validator Node Security</h3>
+                                                            <p>Audit validator nodes for key exposure, consensus manipulation, DDoS attack vectors, and insecure APIs within blockchain infrastructure environments.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Backup Storage Security Testing</h3>
+                                                            <p>Check backup storage for improper access controls, outdated software, encryption failures, and vulnerabilities exploitable by ransomware or insider threats.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Firmware Security Testing</h3>
+                                                            <p>Analyze firmware for backdoors, hardcoded credentials, outdated modules, insecure update mechanisms, and vulnerabilities exploitable at the hardware layer.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Email Server Testing</h3>
+                                                            <p>Test mail servers for spoofing, open relays, weak authentication, vulnerable mail protocols, and exposure to phishing or spam attacks.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -593,90 +650,97 @@
                                     <div class="row">
                                         <div class="home-slider home-slider-spacing">
                                             <div id="home-slider1_5" class="owl-carousel owl-theme ">
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>Blockchain Security VAPT Testing Services</h3>
-                                                            <p>Conduct Vulnerability Assessment and Penetration Testing
-                                                                (VAPT) on blockchain networks and smart contracts to
-                                                                identify security flaws, ensuring integrity and
-                                                                trustworthiness.
-                                                            </p>
+                                                            <h3>Phishing Simulation & Awareness Training</h3>
+                                                            <p>Simulate phishing attacks to evaluate employee response and improve security awareness, reducing organizational exposure to social engineering threats.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>AI based Large Language Models (LLM) Penetration Testing
-                                                                Services</h3>
-                                                            <p>Perform specialized penetration testing on AI-powered Large
-                                                                Language Models to identify vulnerabilities, data leaks, and
-                                                                manipulation risks, ensuring robust and secure AI
-                                                                deployments.
-                                                            </p>
+                                                            <h3>Red Team Exercises</h3>
+                                                            <p>Simulate real-world attacks across infrastructure, applications, and users to identify security gaps and validate defensive response effectiveness.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>Machine Learning Penetration Testing Services</h3>
-                                                            <p>
-                                                                Evaluate machine learning systems for adversarial attacks,
-                                                                data poisoning, and model vulnerabilities to strengthen
-                                                                security and maintain reliable AI performance.
-                                                            </p>
+                                                            <h3>Insider Threat Simulations</h3>
+                                                            <p>Test organizational resilience against insider threats by simulating privileged misuse, sabotage, data exfiltration, and policy circumvention scenarios.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>Internet of Things (IoT) Penetration Testing Services</h3>
-                                                            <p>Identify vulnerabilities in IoT devices, networks, and
-                                                                protocols through penetration testing to secure connected
-                                                                environments and prevent unauthorized access.
-                                                            </p>
+                                                            <h3>IAM & MFA Bypass Testing</h3>
+                                                            <p>Assess identity and access management systems for vulnerabilities that allow bypassing MFA, privilege abuse, and unauthorized access escalation techniques.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>AR-VR-XR Penetration Testing Services</h3>
-                                                            <p>Assess AR, VR, and XR platforms for security flaws, data
-                                                                privacy risks, and unauthorized access to protect immersive
-                                                                experiences and sensitive user information.
-                                                            </p>
+                                                            <h3>Process Bypass Testing</h3>
+                                                            <p>Test business workflows, security operations, and policy enforcement mechanisms for weaknesses exploitable by attackers or malicious insiders.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Metaverse Penetration Testing Services</h3>
-                                                            <p>Metaverse Penetration Testing Services Identify and mitigate
-                                                                security vulnerabilities in metaverse platforms to protect
-                                                                virtual assets, ensure data privacy, and maintain safe,
-                                                                immersive user experiences.
-                                                            </p>
+                                                            <h3>Crypto Social Engineering Tests</h3>
+                                                            <p>Evaluate human-layer risks in crypto platforms using phishing, impersonation, and manipulation to access wallets, private keys, or assets.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Software Defines Networks SDN Penetration Testing Services
-                                                            </h3>
-                                                            <p>Software-Defined Networks (SDN) Penetration Testing Services
-                                                                Evaluate SDN architectures for vulnerabilities in
-                                                                controllers, switches, and APIs to ensure secure, flexible,
-                                                                and resilient network operations.
-                                                            </p>
+                                                            <h3>DAO Governance Attack Simulations</h3>
+                                                            <p>Simulate governance manipulation attacks in DAOs to identify vulnerabilities in smart contracts, quorum logic, and decision-making processes.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Compliance Testing</h3>
+                                                            <p>Validate cybersecurity posture against frameworks like ISO 27001, SOC2, GDPR, or HIPAA by auditing technical and procedural security controls.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Tabletop Exercises</h3>
+                                                            <p>Conduct scenario-based tabletop drills to assess incident response capabilities, improve decision-making, and align teams with security playbooks.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>AI-Powered Deepfake Testing</h3>
+                                                            <p>Identify organizational vulnerabilities to AI-generated deepfakes by simulating voice and video-based impersonation for fraud, manipulation, or breaches.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -699,94 +763,107 @@
                             <!--  -->
                             <div class="indu-moblie indu-moblie1 mhslider count-navigation">
                                 <div id="mhome-slider16" class="owl-carousel owl-theme">
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Web Application / Website VAPT Services </h3>
-                                            <p>Web Application/Website VAPT services thoroughly assess vulnerabilities such
-                                                as XSS, SQL injection, authentication flaws, and server misconfigurations.
-                                                These tests simulate real-world attacks to identify security weaknesses. By
-                                                uncovering and mitigating risks, VAPT enhances application resilience,
-                                                safeguards sensitive user data, and ensures compliance with cybersecurity
-                                                standards and best practices.
-                                            </p>
-                                            <!--  -->
+                                            <h3>Web Application Penetration Testing</h3>
+                                            <p>Web Application Penetration Testing is the process of identifying, exploiting, and reporting security vulnerabilities in web apps to prevent real-world attacks.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
-                                            <!--  -->
                                         </div>
                                     </div>
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>API VAPT Testing</h3>
-                                            <p>API VAPT testing detects vulnerabilities in endpoints, focusing on
-                                                authentication, data exposure, and injection flaws to ensure secure
-                                                communication and integration.
-                                            </p>
-                                            <!--  -->
+                                            <h3>Mobile App Security Testing</h3>
+                                            <p>Mobile App Security Testing involves analyzing mobile applications to identify security flaws, data leaks, and vulnerabilities across Android and iOS platforms.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
-                                            <!--  -->
                                         </div>
                                     </div>
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Mobile Application VAPT Testing (Android, IOS)</h3>
-                                            <p>Mobile Application VAPT testing identifies security flaws in Android and iOS
-                                                apps, including insecure storage, weak authentication, and unauthorized data
-                                                access risks.
-                                            </p>
-                                            <!--  -->
+                                            <h3>API Security Testing</h3>
+                                            <p>API Security Testing ensures APIs are protected against vulnerabilities by identifying flaws like authentication issues, data exposure, and injection attacks.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
-                                            <!--  -->
                                         </div>
                                     </div>
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>EPR System and Business Application VAPT Testing (SAP, HANA PeopleSoft etc )
-                                            </h3>
-                                            <p>ERP and Business Application VAPT testing identifies vulnerabilities in
-                                                systems like SAP, HANA, and PeopleSoft, focusing on access control and data
-                                                integrity risks.
-                                            </p>
-                                            <!--  -->
+                                            <h3>Thick Client/Desktop App Testing</h3>
+                                            <p>Thick Client/Desktop App Testing involves assessing security risks in desktop applications, focusing on data storage, authentication, and client-server communication vulnerabilities.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
-                                            <!--  -->
                                         </div>
                                     </div>
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Thick Client & Thin Client VAPT Testing </h3>
-                                            <p>Thick and Thin Client VAPT testing identifies security flaws in client-server
-                                                applications, focusing on data handling, authentication, and communication
-                                                vulnerabilities.
-                                            </p>
-                                            <!--  -->
+                                            <h3>Cloud-Native App Testing</h3>
+                                            <p>Cloud-Native App Testing evaluates the security of applications built for cloud environments, focusing on containers, microservices, APIs, and cloud configurations.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
-                                            <!--  -->
                                         </div>
                                     </div>
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Secure Code Review ( SAST ) Testing</h3>
-                                            <p>Secure Code Review (SAST) analyzes source code to detect security
-                                                vulnerabilities early, ensuring code quality and preventing potential
-                                                exploits before deployment.
-                                            </p>
-                                            <!--  -->
+                                            <h3>Smart Contract Audits</h3>
+                                            <p>Smart Contract Audits involve reviewing blockchain-based code to identify vulnerabilities, logic errors, and security risks before deployment on decentralized platforms.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
-                                            <!--  -->
                                         </div>
                                     </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>DApp Security Testing</h3>
+                                            <p>DApp Security Testing assesses decentralized applications for vulnerabilities in smart contracts, blockchain interactions, authentication, and data integrity across distributed networks.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>SAST + DAST</h3>
+                                            <p>SAST + DAST combines static and dynamic analysis to identify security vulnerabilities in source code and runtime behavior of applications during development.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>CI/CD Pipeline Security Testing</h3>
+                                            <p>CI/CD Pipeline Security Testing evaluates automated build and deployment workflows to detect vulnerabilities, misconfigurations, and insecure integrations in DevOps environments.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Zero-Day Vulnerability Exploitation Testing</h3>
+                                            <p>Zero-Day Vulnerability Exploitation Testing simulates attacks using unknown vulnerabilities to assess an organization’s ability to detect, prevent, and respond to emerging threats.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                                 <div id="navigation-count15" class="count-nav-box"></div>
                             </div>
@@ -802,90 +879,87 @@
                         <div class="acc__panel" id="significance2">
                             <div class="indu-moblie indu-moblie1 mhslider count-navigation">
                                 <div id="mhome-slider12" class="owl-carousel owl-theme">
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Network VAPT Testing - Internal and External </h3>
-                                            <p>Network VAPT testing evaluates internal and external network security,
-                                                identifying vulnerabilities in devices, configurations, and protocols to
-                                                prevent unauthorized access and attacks.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
+                                            <h3>External/Internal Network Pentesting</h3>
+                                            <p>External/Internal Network Penetration Testing identifies vulnerabilities in network infrastructure by simulating real-world attacks from both outside and inside the organization.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Wireless Network VAPT Testing </h3>
-                                            <p>Wireless Network VAPT testing identifies vulnerabilities in Wi-Fi networks,
-                                                including encryption weaknesses, unauthorized access points, and
-                                                configuration flaws to enhance wireless security.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
+                                            <h3>Wireless Security Testing</h3>
+                                            <p>Wireless Security Testing evaluates Wi-Fi networks for vulnerabilities such as weak encryption, rogue access points, and unauthorized access to ensure secure communication.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>ICS - SCADA VAPT Testing </h3>
-                                            <p>ICS-SCADA VAPT testing identifies security vulnerabilities in industrial
-                                                control and SCADA systems, focusing on network weaknesses, access controls,
-                                                and potential operational disruptions.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
+                                            <h3>Cloud Infrastructure Testing</h3>
+                                            <p>Cloud Infrastructure Testing assesses cloud environments for misconfigurations, access control flaws, and vulnerabilities to ensure secure deployment and management of resources.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Network Security Architecture Review</h3>
-                                            <p>Network Security Architecture Review evaluates design and implementation of
-                                                network security controls to ensure effective protection against threats and
-                                                compliance with best practices.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
+                                            <h3>VPN & Remote Work Security Testing</h3>
+                                            <p>VPN & Remote Work Security Testing evaluates remote access solutions for vulnerabilities, misconfigurations, and data exposure risks to ensure secure remote connectivity.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Firewall VAPT Testing</h3>
-                                            <p>Firewall VAPT testing assesses firewall configurations and rules to identify
-                                                weaknesses, ensuring proper traffic filtering and protection against
-                                                unauthorized network access.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
+                                            <h3>IoT/OT Network Testing</h3>
+                                            <p>IoT/OT Network Testing identifies security vulnerabilities in Internet of Things and Operational Technology networks, focusing on device communication, protocols, and access controls.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Configuration & Hardening Security Review AD IPT</h3>
-                                            <p>Configuration and Hardening Security Review for AD and IPT ensures secure
-                                                system settings, reduces vulnerabilities, and strengthens defenses against
-                                                unauthorized access and attacks.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
+                                            <h3>Blockchain Node Testing</h3>
+                                            <p>Blockchain Node Testing assesses the security and integrity of blockchain nodes, focusing on configuration, consensus mechanisms, data validation, and network communication.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>5G Network Security Testing</h3>
+                                            <p>5G Network Security Testing evaluates 5G infrastructure for vulnerabilities in protocols, slicing, authentication, and data transmission to ensure secure connectivity and performance.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Red Team Exercises</h3>
+                                            <p>Red Team Exercises simulate real-world cyberattacks to test an organization’s detection, response, and defense capabilities across systems, networks, and employees.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>PCI DSS Network Compliance Testing</h3>
+                                            <p>PCI DSS Network Compliance Testing assesses network security controls to ensure compliance with PCI standards for protecting cardholder data and preventing breaches.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Zero Trust Architecture (ZTA) Assessments</h3>
+                                            <p>Zero Trust Architecture (ZTA) Assessments evaluate security frameworks that enforce strict identity verification and least privilege access across users, devices, and applications.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
                                 </div>
                                 <div id="navigation-count11" class="count-nav-box"></div>
                             </div>
@@ -904,129 +978,92 @@
                                 <div id="mhome-slider13" class="owl-carousel owl-theme">
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>AWS Cloud Security Penetration Testing</h3>
-                                            <p>AWS Cloud Security Penetration Testing identifies vulnerabilities in AWS
-                                                environments, including misconfigurations, weak access controls, and
-                                                insecure services to enhance cloud security posture.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Azure (Office 365, AD) Penetration Testing</h3>
-                                            <p>Identify and exploit vulnerabilities in Office 365 and Azure Active Directory
-                                                to assess security posture and strengthen cloud infrastructure defenses
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Google Cloud Security Penetration Testing</h3>
-                                            <p>Assess and exploit security gaps in Google Cloud environments to evaluate
-                                                configurations, detect vulnerabilities, and enhance overall cloud security
-                                                posture.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Oracle Cloud Security Penetration Testing</h3>
-                                            <p>Evaluate and test Oracle Cloud infrastructure for misconfigurations,
-                                                vulnerabilities, and access controls to enhance security and ensure
-                                                compliance.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>SAAS Penetration Testing </h3>
-                                            <p>Simulate real-world attacks on SaaS applications to uncover vulnerabilities,
-                                                assess data exposure risks, and ensure robust security controls.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>IAAS Penetration Testing </h3>
-                                            <p>Conduct security assessments on IaaS environments to identify
-                                                misconfigurations, access issues, and vulnerabilities across virtual
-                                                machines, networks, and storage.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Kubernetes Penetration Testing</h3>
-                                            <p>Assess Kubernetes clusters for misconfigurations, privilege escalations, and
-                                                insecure deployments to strengthen container orchestration security and
-                                                prevent breaches.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Containers Penetration Testing</h3>
-                                            <p>Identify vulnerabilities in container images, configurations, and runtimes to
-                                                uncover risks, prevent privilege escalation, and secure containerized
-                                                applications.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
+                                            <h3>SQL Injection & NoSQL Testing</h3>
+                                            <p>SQL Injection & NoSQL Testing identifies injection vulnerabilities in traditional and NoSQL databases to prevent unauthorized data access, manipulation, and breaches.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
 
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Virtualisation Penetration Testing</h3>
-                                            <p>Evaluate virtualized environments for hypervisor vulnerabilities,
-                                                misconfigurations, and isolation flaws to ensure secure and resilient
-                                                virtual infrastructure.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
+                                            <h3>Database Misconfiguration Reviews</h3>
+                                            <p>Database Misconfiguration Reviews assess database settings to identify weak permissions, default credentials, and insecure configurations that could lead to data breaches.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Data Encryption Testing</h3>
+                                            <p>Data Encryption Testing evaluates encryption methods used for data at rest and in transit to ensure confidentiality, integrity, and compliance with security standards.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Big Data Security Testing</h3>
+                                            <p>Big Data Security Testing examines large-scale data systems for vulnerabilities in storage, processing, access controls, and data leakage risks across distributed environments.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Active Directory (AD) Exploitation Testing</h3>
+                                            <p>Active Directory (AD) Exploitation Testing identifies security weaknesses in AD configurations, permissions, and trust relationships to prevent privilege escalation and lateral movement.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Blockchain Storage Testing</h3>
+                                            <p>Blockchain Storage Testing evaluates the security of on-chain and off-chain data storage to prevent tampering, unauthorized access, and data integrity issues.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Data Masking & Anonymization Testing</h3>
+                                            <p>Data Masking & Anonymization Testing assesses techniques used to protect sensitive data by replacing or obfuscating identifiers while preserving usability and compliance.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Database Audit Logging & Monitoring Tests</h3>
+                                            <p>Database Audit Logging & Monitoring Tests verify the effectiveness of logging mechanisms to track access, detect anomalies, and ensure compliance with data security policies.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Cloud Database Testing</h3>
+                                            <p>Cloud Database Testing evaluates cloud-hosted databases for vulnerabilities, access control flaws, encryption, and configuration issues to ensure data security and compliance.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Data Exfiltration Simulation</h3>
+                                            <p>Data Exfiltration Simulation mimics unauthorized data extraction techniques to assess an organization’s ability to detect, prevent, and respond to data breaches.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Dark Web OSINT: Automate Threat Monitoring</h3>
+                                            <p>Dark Web OSINT: Automate Threat Monitoring uses open-source intelligence tools to continuously monitor dark web sources for leaked data, threats, and credentials.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
                                 </div>
                                 <div id="navigation-count12" class="count-nav-box"></div>
                             </div>
@@ -1044,80 +1081,87 @@
                             <!--  -->
                             <div class="indu-moblie indu-moblie1 mhslider count-navigation">
                                 <div id="mhome-slider14" class="owl-carousel owl-theme">
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Application and Service Layer Testing</h3>
-                                            <p>Evaluate hosted applications like web, database, and mail servers for
-                                                injection flaws, insecure APIs, and data exposure vulnerabilities.</p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Application and Service Layer Testing</h3>
-                                            <p>Evaluate hosted applications like web, database, and mail servers for
-                                                injection flaws, insecure APIs, and data exposure vulnerabilities.</p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Network and Protocol Security Testing</h3>
-                                            <p>Analyze network-facing protocols like TCP/IP, SMB, FTP, and NFS for
-                                                misconfigurations, weaknesses, and potential firewall rule bypasses.</p>
 
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Storage Systems and Data Protection Testing</h3>
-                                            <p>Test SAN/NAS devices and storage arrays for weak encryption, default
-                                                credentials, improper access controls, and outdated firmware
-                                                vulnerabilities.</p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
+                                            <h3>OS Hardening Assessments</h3>
+                                            <p>Evaluate operating systems for weak configurations, unnecessary services, missing patches, and privilege escalation to strengthen endpoint-level cyber defenses.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Access Control and Identity Management Testing</h3>
-                                            <p>Verify roles, permissions, and authentication systems. Evaluate MFA and
-                                                privileged access to mitigate risks from insider threats.</p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
+                                            <h3>Container Security Testing</h3>
+                                            <p>Test container images, configurations, and Kubernetes environments to detect vulnerabilities, exposed APIs, and insecure runtime or permission settings.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Virtualization and Hypervisor Security Testing</h3>
-                                            <p>Assess hypervisors and virtual environments for breakout vulnerabilities,
-                                                poor resource isolation, and insecure virtual machine configurations.</p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
+                                            <h3>Cloud VM Pentesting</h3>
+                                            <p>Perform penetration testing on cloud virtual machines to uncover misconfigurations, exposed services, insecure access keys, and privilege escalation risks.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>SAN/NAS Storage Testing</h3>
+                                            <p>Assess SAN/NAS systems for data exposure, weak credentials, encryption flaws, firmware vulnerabilities, and unauthorized access or privilege escalation risks.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Serverless Security Testing</h3>
+                                            <p>Test cloud-native serverless apps for insecure triggers, misconfigured roles, privilege abuse, and event injection vulnerabilities affecting cloud functions.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Hypervisor & Virtualization Testing</h3>
+                                            <p>Evaluate hypervisors for breakout attacks, insecure configurations, weak inter-VM isolation, and exposed management interfaces in virtualized infrastructure.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Blockchain Validator Node Security</h3>
+                                            <p>Audit validator nodes for key exposure, consensus manipulation, DDoS attack vectors, and insecure APIs within blockchain infrastructure environments.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Backup Storage Security Testing</h3>
+                                            <p>Check backup storage for improper access controls, outdated software, encryption failures, and vulnerabilities exploitable by ransomware or insider threats.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Firmware Security Testing</h3>
+                                            <p>Analyze firmware for backdoors, hardcoded credentials, outdated modules, insecure update mechanisms, and vulnerabilities exploitable at the hardware layer.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Email Server Testing</h3>
+                                            <p>Test mail servers for spoofing, open relays, weak authentication, vulnerable mail protocols, and exposure to phishing or spam attacks.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
                                 </div>
                                 <div id="navigation-count13" class="count-nav-box"></div>
                             </div>
@@ -1135,107 +1179,87 @@
                             <!--  -->
                             <div class="indu-moblie indu-moblie1 mhslider count-navigation">
                                 <div id="mhome-slider15" class="owl-carousel owl-theme">
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Blockchain Security VAPT Testing Services</h3>
-                                            <p>Conduct Vulnerability Assessment and Penetration Testing (VAPT) on blockchain
-                                                networks and smart contracts to identify security flaws, ensuring integrity
-                                                and trustworthiness.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
+                                            <h3>Phishing Simulation & Awareness Training</h3>
+                                            <p>Simulate phishing attacks to evaluate employee response and improve security awareness, reducing organizational exposure to social engineering threats.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>AI based Large Language Models (LLM) Penetration Testing
-                                                Services</h3>
-                                            <p>Perform specialized penetration testing on AI-powered Large Language Models
-                                                to identify vulnerabilities, data leaks, and manipulation risks, ensuring
-                                                robust and secure AI deployments.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
+                                            <h3>Red Team Exercises</h3>
+                                            <p>Simulate real-world attacks across infrastructure, applications, and users to identify security gaps and validate defensive response effectiveness.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Machine Learning Penetration Testing Services</h3>
-                                            <p>
-                                                Evaluate machine learning systems for adversarial attacks, data poisoning,
-                                                and model vulnerabilities to strengthen security and maintain reliable AI
-                                                performance.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
+                                            <h3>Insider Threat Simulations</h3>
+                                            <p>Test organizational resilience against insider threats by simulating privileged misuse, sabotage, data exfiltration, and policy circumvention scenarios.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Internet of Things (IoT) Penetration Testing Services</h3>
-                                            <p>Identify vulnerabilities in IoT devices, networks, and protocols through
-                                                penetration testing to secure connected environments and prevent
-                                                unauthorized access.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
+                                            <h3>IAM & MFA Bypass Testing</h3>
+                                            <p>Assess identity and access management systems for vulnerabilities that allow bypassing MFA, privilege abuse, and unauthorized access escalation techniques.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>AR-VR-XR Penetration Testing Services</h3>
-                                            <p>Assess AR, VR, and XR platforms for security flaws, data privacy risks, and
-                                                unauthorized access to protect immersive experiences and sensitive user
-                                                information.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
+                                            <h3>Process Bypass Testing</h3>
+                                            <p>Test business workflows, security operations, and policy enforcement mechanisms for weaknesses exploitable by attackers or malicious insiders.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Metaverse Penetration Testing Services</h3>
-                                            <p>Metaverse Penetration Testing Services Identify and mitigate security
-                                                vulnerabilities in metaverse platforms to protect virtual assets, ensure
-                                                data privacy, and maintain safe, immersive user experiences.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
+                                            <h3>Crypto Social Engineering Tests</h3>
+                                            <p>Evaluate human-layer risks in crypto platforms using phishing, impersonation, and manipulation to access wallets, private keys, or assets.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Software Defines Networks SDN Penetration Testing Services
-                                            </h3>
-                                            <p>Software-Defined Networks (SDN) Penetration Testing Services Evaluate SDN
-                                                architectures for vulnerabilities in controllers, switches, and APIs to
-                                                ensure secure, flexible, and resilient network operations.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
+                                            <h3>DAO Governance Attack Simulations</h3>
+                                            <p>Simulate governance manipulation attacks in DAOs to identify vulnerabilities in smart contracts, quorum logic, and decision-making processes.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Compliance Testing</h3>
+                                            <p>Validate cybersecurity posture against frameworks like ISO 27001, SOC2, GDPR, or HIPAA by auditing technical and procedural security controls.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Tabletop Exercises</h3>
+                                            <p>Conduct scenario-based tabletop drills to assess incident response capabilities, improve decision-making, and align teams with security playbooks.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>AI-Powered Deepfake Testing</h3>
+                                            <p>Identify organizational vulnerabilities to AI-generated deepfakes by simulating voice and video-based impersonation for fraud, manipulation, or breaches.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
                                 </div>
                                 <div id="navigation-count14" class="count-nav-box"></div>
                             </div>
@@ -1264,231 +1288,202 @@
                 <div class="row">
                     <div class="indu-moblie count-navigation home-slider-spacing">
                         <div id="owl-demo91" class="owl-carousel  inud-nav owl-theme">
+
                             <div class="item11">
                                 <div class="empower-industry-box">
                                     <div class="cn-hover-box">
-                                        <div class="cn-hover-img"> <img
-                                                src="{{ asset('assets/images/vapt-services.webp') }}">
+                                        <div class="cn-hover-img">
+                                            <img src="{{ asset('assets/images/vapt-services.webp') }}">
                                         </div>
                                         <div class="cn-content">
-                                            <p>SOC as a Service provides outsourced security monitoring,
-                                                threat detection, and incident response to protect organizations from cyber
-                                                threats 24/7.
-                                            </p>
+                                            <p>Advanced penetration testing identifies security gaps by simulating sophisticated cyberattacks across networks, web apps, mobile platforms, APIs, and cloud infrastructure to prevent breaches before they occur and enhance cyber resilience effectively.</p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
-                                        <a href="javascript:void(0)" class="cn-main-content-enclosed"
-                                            style="display: block; text-decoration: none;">
-                                            <h3>SOC as a Services </h3>
+                                        <a href="javascript:void(0)" class="cn-main-content-enclosed">
+                                            <h3>Advanced Penetration Testing (Network, Web, Mobile, API, Cloud)</h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
                                     </div>
                                 </div>
                             </div>
+
                             <div class="item11">
                                 <div class="empower-industry-box">
                                     <div class="cn-hover-box">
-                                        <div class="cn-hover-img"> <img
-                                                src="{{ asset('assets/images/security-audit-compliance.webp') }}"> </div>
+                                        <div class="cn-hover-img">
+                                            <img src="{{ asset('assets/images/security-audit-compliance.webp') }}">
+                                        </div>
                                         <div class="cn-content">
-                                            <p>Security Monitoring and SIEM Services offer real-time threat detection,
-                                                log analysis, and incident response to enhance organizational cybersecurity
-                                                posture.
-                                            </p>
+                                            <p>Red teaming simulates multi-layered attacks using real-world tactics to test your organization's detection, prevention, and incident response capabilities—ensuring your defenses can withstand persistent threats and advanced adversarial techniques.</p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
-                                        <a href="javascript:void(0)" class="cn-main-content-enclosed"
-                                            style="display: block; text-decoration: none;">
-                                            <h3>Security Monitoring & SIEM Services </h3>
+                                        <a href="javascript:void(0)" class="cn-main-content-enclosed">
+                                            <h3>Red Teaming (Full-Scope Attack Simulation)</h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
                                     </div>
                                 </div>
                             </div>
+
                             <div class="item11">
                                 <div class="empower-industry-box">
                                     <div class="cn-hover-box">
-                                        <div class="cn-hover-img"> <img
-                                                src="{{ asset('assets/images/managed-it-services.webp') }}">
+                                        <div class="cn-hover-img">
+                                            <img src="{{ asset('assets/images/managed-it-services.webp') }}">
                                         </div>
                                         <div class="cn-content">
-                                            <p>Managed Endpoint Detection & Response (EDR) delivers continuous monitoring,
-                                                threat detection, and automated response to protect endpoints from
-                                                cyberattacks.
-                                            </p>
+                                            <p>Purple teaming bridges the gap between offensive and defensive teams by fostering collaboration during simulated attacks, improving threat visibility, detection rules, response playbooks, and overall cybersecurity defense effectiveness.</p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
-                                        <a href="javascript:void(0)" class="cn-main-content-enclosed"
-                                            style="display: block; text-decoration: none;">
-                                            <h3>Managed Endpoint Detection & Response (EDR) </h3>
+                                        <a href="javascript:void(0)" class="cn-main-content-enclosed">
+                                            <h3>Purple Teaming (Collaborative Attack-Defense Drills)</h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
                                     </div>
                                 </div>
                             </div>
+
                             <div class="item11">
                                 <div class="empower-industry-box">
                                     <div class="cn-hover-box">
-                                        <div class="cn-hover-img"> <img
-                                                src="{{ asset('assets/images/forensic-seervices.webp') }}">
+                                        <div class="cn-hover-img">
+                                            <img src="{{ asset('assets/images/forensic-seervices.webp') }}">
                                         </div>
                                         <div class="cn-content">
-                                            <p>Extended Detection & Response (XDR) Services unify data across endpoints,
-                                                networks, and cloud to detect, investigate, and respond to threats
-                                                efficiently.
-                                            </p>
+                                            <p>Cloud-native pentesting evaluates AWS, Azure, GCP, and Kubernetes platforms for misconfigurations, identity issues, privilege escalations, and insecure APIs—ensuring your cloud deployments meet security and compliance best practices.</p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
-                                        <a href="javascript:void(0)" class="cn-main-content-enclosed"
-                                            style="display: block; text-decoration: none;">
-                                            <h3>Extended Detection & Response (XDR) Services</h3>
+                                        <a href="javascript:void(0)" class="cn-main-content-enclosed">
+                                            <h3>Cloud-Native Pentesting (AWS, Azure, GCP, Kubernetes)</h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
                                     </div>
                                 </div>
                             </div>
+
                             <div class="item11">
                                 <div class="empower-industry-box">
                                     <div class="cn-hover-box">
-                                        <div class="cn-hover-img"> <img
-                                                src="{{ asset('assets/images/soc-services.webp') }}">
+                                        <div class="cn-hover-img">
+                                            <img src="{{ asset('assets/images/soc-services.webp') }}">
                                         </div>
                                         <div class="cn-content">
-                                            <p>SOAR services integrate security tools, automate workflows, and coordinate
-                                                response
-                                                actions to streamline threat detection, investigation, and incident
-                                                resolution.
-                                            </p>
+                                            <p>IoT and OT security assessments target embedded devices and industrial systems using firmware reverse engineering, protocol fuzzing, and hardware exploitation to identify vulnerabilities in smart factories, SCADA, and connected infrastructure.</p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
-                                        <a href="javascript:void(0)" class="cn-main-content-enclosed"
-                                            style="display: block; text-decoration: none;">
-                                            <h3>Security Orchestration, Automation, and Response (SOAR) </h3>
+                                        <a href="javascript:void(0)" class="cn-main-content-enclosed">
+                                            <h3>IoT & OT Security Hacking (Smart Devices, Industrial Systems)</h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
                                     </div>
                                 </div>
                             </div>
+
                             <div class="item11">
                                 <div class="empower-industry-box">
                                     <div class="cn-hover-box">
-                                        <div class="cn-hover-img"> <img
-                                                src="{{ asset('assets/images/vapt-services.webp') }}">
+                                        <div class="cn-hover-img">
+                                            <img src="{{ asset('assets/images/vapt-services.webp') }}">
                                         </div>
                                         <div class="cn-content">
-                                            <p>Cloud Security Monitoring & Protection ensures continuous visibility,
-                                                threat detection, and compliance across cloud environments to safeguard data
-                                                and applications.
-                                            </p>
+                                            <p>Wireless and RFID testing uncovers weaknesses in Wi-Fi, Bluetooth, and NFC environments by simulating proximity-based attacks to prevent unauthorized access, data leaks, and man-in-the-middle vulnerabilities in physical networks.</p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
-                                        <a href="javascript:void(0)" class="cn-main-content-enclosed"
-                                            style="display: block; text-decoration: none;">
-                                            <h3>Cloud Security Monitoring & Protection </h3>
+                                        <a href="javascript:void(0)" class="cn-main-content-enclosed">
+                                            <h3>Wireless & RFID Security Testing (Wi-Fi, Bluetooth, NFC)</h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
                                     </div>
                                 </div>
                             </div>
+
                             <div class="item11">
                                 <div class="empower-industry-box">
                                     <div class="cn-hover-box">
-                                        <div class="cn-hover-img"> <img
-                                                src="{{ asset('assets/images/security-audit-compliance.webp') }}"> </div>
+                                        <div class="cn-hover-img">
+                                            <img src="{{ asset('assets/images/security-audit-compliance.webp') }}">
+                                        </div>
                                         <div class="cn-content">
-                                            <p>Dark Web Intelligence & Threat Hunting identifies exposed data,
-                                                monitors cybercriminal activity, and proactively detects threats targeting
-                                                your organization.
-                                            </p>
+                                            <p>Simulates social engineering attacks including phishing, vishing, baiting, and tailgating to test human susceptibility and evaluate how employees respond to manipulation attempts, helping improve organizational security awareness.</p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
-                                        <a href="javascript:void(0)" class="cn-main-content-enclosed"
-                                            style="display: block; text-decoration: none;">
-                                            <h3>Dark Web Intelligence & Threat Hunting </h3>
+                                        <a href="javascript:void(0)" class="cn-main-content-enclosed">
+                                            <h3>Social Engineering & Phishing Simulations</h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                            {{-- <div class="item11">
+
+                            <div class="item11">
                                 <div class="empower-industry-box">
                                     <div class="cn-hover-box">
-                                        <div class="cn-hover-img"> <img
-                                                src="{{ asset('assets/images/managed-it-services.webp') }}">
+                                        <div class="cn-hover-img">
+                                            <img src="{{ asset('assets/images/managed-it-services.webp') }}">
                                         </div>
                                         <div class="cn-content">
-                                            <p>Preferred Service Partner" for corporate clients with array of customized
-                                                security
-                                                solutions
-                                                and services to operate in a secure environment.
-                                            </p>
+                                            <p>API and microservices testing identifies issues like broken object level authorization, data exposure, rate limiting flaws, and input tampering to secure communication between microservices and external applications effectively.</p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
-                                        <a href="javascript:void(0)" class="cn-main-content-enclosed"
-                                            style="display: block; text-decoration: none;">
-                                            <h3>Managed IT Security Solutions</h3>
+                                        <a href="javascript:void(0)" class="cn-main-content-enclosed">
+                                            <h3>API & Microservices Security Testing</h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
                                     </div>
                                 </div>
                             </div>
+
                             <div class="item11">
                                 <div class="empower-industry-box">
                                     <div class="cn-hover-box">
-                                        <div class="cn-hover-img"> <img
-                                                src="{{ asset('assets/images/forensic-seervices.webp') }}">
+                                        <div class="cn-hover-img">
+                                            <img src="{{ asset('assets/images/forensic-seervices.webp') }}">
                                         </div>
                                         <div class="cn-content">
-                                            <p>Identify and resolve Ecrime incidents that adversely impact organizations
-                                                with
-                                                cybercrime /
-                                                online fraud and proactively manage 24x7 hours security risks.
-                                            </p>
+                                            <p>Zero-day vulnerability research involves discovering unknown software flaws that could be exploited by attackers, responsibly reporting them, and contributing to improved patch management and secure product development cycles.</p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
-                                        <a href="javascript:void(0)" class="cn-main-content-enclosed"
-                                            style="display: block; text-decoration: none;">
-                                            <h3>Digital Forensic &amp; Cyber Fraud Management</h3>
+                                        <a href="javascript:void(0)" class="cn-main-content-enclosed">
+                                            <h3>Zero-Day Vulnerability Research (For Critical Systems)</h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
                                     </div>
                                 </div>
                             </div>
+
                             <div class="item11">
                                 <div class="empower-industry-box">
                                     <div class="cn-hover-box">
-                                        <div class="cn-hover-img"> <img
-                                                src="{{ asset('assets/images/soc-services.webp') }}">
+                                        <div class="cn-hover-img">
+                                            <img src="{{ asset('assets/images/soc-services.webp') }}">
                                         </div>
                                         <div class="cn-content">
-                                            <p>Provides round-the-clock proactive event monitoring with prioritized alert
-                                                notification &
-                                                threat mitigation.
-                                            </p>
+                                            <p>Bug bounty programs encourage ethical hackers to discover and report vulnerabilities through managed disclosure channels, helping organizations reduce risk and improve product security posture with real-world feedback.</p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
-                                        <a href="javascript:void(0)" class="cn-main-content-enclosed"
-                                            style="display: block; text-decoration: none;">
-                                            <h3>SOC (Security Operation Center) as a Service</h3>
+                                        <a href="javascript:void(0)" class="cn-main-content-enclosed">
+                                            <h3>Bug Bounty Program Management</h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
                                     </div>
                                 </div>
-                            </div> --}}
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
+
             <!-- mobile code start -->
             <div class="mobile-view indu-moblie indu-moblie1 count-navigation mhome-space mhome-space1">
                 <div id="mhome-slider17" class="owl-carousel owl-theme">
@@ -1658,11 +1653,11 @@
                 <div class="row">
                     <div class="cn-tabs" style="margin-bottom: 40px">
                         <ul id="tabs-nav" class="home-tabs">
-                            <li><a class="scr-tabs" href="#tab1">Vulnerability Assesement & Penetration Testing</a></li>
-                            <li><a class="scr-tabs" href="#tab2">IT Security Audit, Risk & Compliance</a></li>
-                            <li><a class="scr-tabs" href="#tab3">Managed IT Security Solutions </a></li>
-                            <li><a class="scr-tabs" href="#tab4">Digital Forensic & Cyber Fraud Management </a></li>
-                            <li><a class="scr-tabs" href="#tab5">SOC (Security Operations Center) as a Service </a></li>
+                            <li><a class="scr-tabs" href="#tab1">Governance, Risk & Compliance (GRC) Services</a></li>
+                            <li><a class="scr-tabs" href="#tab2">Data Privacy & Protection Services</a></li>
+                            <li><a class="scr-tabs" href="#tab3">Strategic Risk Assessment & Management </a></li>
+                            <li><a class="scr-tabs" href="#tab4">Emerging Tech & Web3.0 Security</a></li>
+                            <li><a class="scr-tabs" href="#tab5">Industry-Specific Compliance & Advisory </a></li>
                         </ul>
                         <!-- END tabs-nav -->
                         <div id="tabs-content">
@@ -1671,113 +1666,100 @@
                                     <!-- box start -->
                                     <div class="row">
                                         <div class="home-slider home-slider-spacing">
-                                            <div id="home-slider2_1" class="owl-carousel owl-theme ">
+                                           <div id="home-slider2_1" class="owl-carousel owl-theme ">
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>Network Architecture Design Review</h3>
-                                                            <p>Security focused evaluation of your network-based computing
-                                                                environment,
-                                                                from both
-                                                                an architecture and operational perspective.
-                                                            </p>
+                                                            <h3>ISO 27001:2022 Implementation & Certification</h3>
+                                                            <p>Implements and certifies ISO 27001:2022 for establishing an effective ISMS to protect organizational data and ensure regulatory compliance.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Network Infrastructure Penetration Testing</h3>
-                                                            <p>Identifies and exploits network infrastructure
-                                                                vulnerabilities
-                                                                and
-                                                                validate result
-                                                                with efficiently evaluate a security posture.
-                                                            </p>
+                                                            <h3>NIST CSF (Cybersecurity Framework) Alignment</h3>
+                                                            <p>Aligns cybersecurity policies and practices with the NIST CSF to manage, detect, and respond to security risks effectively.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>Web Application Penetration Testing</h3>
-                                                            <p>Our comprehensive security assessment framework focuses to
-                                                                evaluate and
-                                                                analyse
-                                                                existing vulnerabilities for web-based applications.
-                                                            </p>
+                                                            <h3>DPDPA 2023 (India Data Privacy Law) Compliance Advisory</h3>
+                                                            <p>Guides businesses in complying with India’s DPDPA 2023 law through risk assessments, policy implementation, and privacy management frameworks.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>Wireless Network Penetration Testing</h3>
-                                                            <p>We simulates real-world attacks to provide a real time
-                                                                assessment
-                                                                of
-                                                                vulnerabilities
-                                                                and threats to your wireless network infrastructure.
-                                                            </p>
+                                                            <h3>GDPR, CCPA, HIPAA Compliance Audits</h3>
+                                                            <p>Performs audits to ensure data protection laws like GDPR, CCPA, and HIPAA are followed across systems and business processes.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Mobile Application Penetration Testing</h3>
-                                                            <p>We go beyond looking at API and web vulnerabilities to
-                                                                examine
-                                                                the risk
-                                                                of the
-                                                                application on a mobile platform.
-                                                            </p>
+                                                            <h3>PCI DSS Compliance for Payment Gateways & FinTech</h3>
+                                                            <p>Ensures secure handling of cardholder data in FinTech and eCommerce platforms through PCI DSS implementation and audit support.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Source Code Review</h3>
-                                                            <p>Identifies and locate security risk and misconfigurations
-                                                                that
-                                                                have been
-                                                                ignored
-                                                                during SDLC process and can help invaders to abstract key
-                                                                information.
-                                                            </p>
+                                                            <h3>SOC 2 (Type 1 & Type 2) Audits</h3>
+                                                            <p>Assists with SOC 2 audits to evaluate and report on internal controls for security, availability, confidentiality, and integrity.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Source Code Review</h3>
-                                                            <p>Identifies and locate security risk and misconfigurations
-                                                                that
-                                                                have been
-                                                                ignored
-                                                                during SDLC process and can help invaders to abstract key
-                                                                information.
-                                                            </p>
+                                                            <h3>RBI Cyber Security Framework Audit</h3>
+                                                            <p>Conducts RBI-mandated audits to ensure banking institutions meet cybersecurity standards for risk, governance, and incident response.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Source Code Review</h3>
-                                                            <p>Identifies and locate security risk and misconfigurations
-                                                                that
-                                                                have been
-                                                                ignored
-                                                                during SDLC process and can help invaders to abstract key
-                                                                information.
-                                                            </p>
+                                                            <h3>SEBI Cyber Resilience Audit</h3>
+                                                            <p>Assesses SEBI cyber resilience compliance for brokers and exchanges to ensure operational continuity and regulatory cyber defense readiness.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Third-Party Risk Management (TPRM) for Vendors</h3>
+                                                            <p>Implements TPRM frameworks to identify, assess, and mitigate cybersecurity and compliance risks arising from external vendors and partners.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Fraud Risk Assessment & Forensic Audits</h3>
+                                                            <p>Detects fraud risks and conducts forensic audits to investigate financial irregularities, internal threats, and compliance breaches.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
                                             </div>
+
                                         </div>
                                     </div>
                                     <!-- box end -->
@@ -1789,141 +1771,99 @@
                                     <div class="row">
                                         <div class="home-slider home-slider-spacing">
                                             <div id="home-slider2_2" class="owl-carousel owl-theme ">
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>IT Risk, Compliance & Governance</h3>
-                                                            <p>We evaluate current IT governance, risk management and
-                                                                compliance structures for process maturity and design
-                                                                Effectiveness.
-                                                            </p>
+                                                            <h3>India DPDPA 2023 Readiness Assessment & Implementation</h3>
+                                                            <p>Helps organizations assess readiness and implement frameworks for India’s DPDPA 2023 with policy, consent, and data handling controls.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Information Security Management Systems</h3>
-                                                            <p>We demonstrate business is compliant and is taking all
-                                                                necessary measures
-                                                                to secure
-                                                                IT information in compliance with the ISO 27001 (ISMS)
-                                                                standard.
-                                                            </p>
+                                                            <h3>GDPR Compliance Audit & Data Protection Officer (DPO) Services</h3>
+                                                            <p>Conducts GDPR audits and provides outsourced DPO services to meet global data privacy requirements across EU and international operations.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>GDPR & Data Privacy</h3>
-                                                            <p>Our deep portfolio enables businesses to reduce the time,
-                                                                cost and
-                                                                complexity of
-                                                                responding to various international data privacy mandates
-                                                                like GDPR.
-                                                            </p>
+                                                            <h3>ISO 27701 (PIMS) Certification</h3>
+                                                            <p>Implements and certifies ISO 27701 to extend your ISMS with privacy controls for personal data processing and accountability management.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>GDPR & Data Privacy</h3>
-                                                            <p>Our deep portfolio enables businesses to reduce the time,
-                                                                cost and
-                                                                complexity of
-                                                                responding to various international data privacy mandates
-                                                                like GDPR.
-                                                            </p>
+                                                            <h3>Data Protection Impact Assessment (DPIA)</h3>
+                                                            <p>Conducts DPIA to identify and reduce data processing risks for high-risk activities as mandated by GDPR and privacy laws.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Information Technology Service Management</h3>
-                                                            <p>Our experts ensure the right processes, people and technology
-                                                                are in
-                                                                place to meet
-                                                                business respective goals in agreement with industry
-                                                                standards like ISO
-                                                                20000
-                                                                (ITSMS) and ISO 22301 (BCMS).
-                                                            </p>
+                                                            <h3>Cross-Border Data Transfer Compliance (India DPDPA vs. GDPR)</h3>
+                                                            <p>Ensures legal compliance for cross-border personal data flows between jurisdictions by aligning with DPDPA, GDPR, SCCs, and transfer mechanisms.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Incidence & Emergency Response Services</h3>
-                                                            <p>Our key offerings involve and improve incident response
-                                                                preparedness plan
-                                                                and
-                                                                minimize the impact of breaches with latest threat
-                                                                intelligence
-                                                                mechanism.
-                                                            </p>
+                                                            <h3>Consent Management & Privacy Policy Design</h3>
+                                                            <p>Designs transparent privacy policies and robust consent mechanisms to comply with legal requirements and build user trust in data practices.</p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5 ">
-                                                        <div class="tab-content-box">
-                                                            <h3>GDPR & Data Privacy</h3>
-                                                            <p>Our deep portfolio enables businesses to reduce the time,
-                                                                cost and
-                                                                complexity of
-                                                                responding to various international data privacy mandates
-                                                                like GDPR.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5 ">
-                                                        <div class="tab-content-box">
-                                                            <h3>GDPR & Data Privacy</h3>
-                                                            <p>Our deep portfolio enables businesses to reduce the time,
-                                                                cost and
-                                                                complexity of
-                                                                responding to various international data privacy mandates
-                                                                like GDPR.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Information Technology Service Management</h3>
-                                                            <p>Our experts ensure the right processes, people and technology
-                                                                are in
-                                                                place to meet
-                                                                business respective goals in agreement with industry
-                                                                standards like ISO
-                                                                20000
-                                                                (ITSMS) and ISO 22301 (BCMS).
-                                                            </p>
+                                                            <h3>Data Discovery & Classification (PII, Sensitive Data Mapping)</h3>
+                                                            <p>Identifies and classifies sensitive data such as PII to enable privacy controls, reduce risk, and enhance breach preparedness.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Incidence & Emergency Response Services</h3>
-                                                            <p>Our key offerings involve and improve incident response
-                                                                preparedness plan
-                                                                and
-                                                                minimize the impact of breaches with latest threat
-                                                                intelligence
-                                                                mechanism.
-                                                            </p>
+                                                            <h3>Breach Response & Incident Management</h3>
+                                                            <p>Establishes incident response plans and supports timely breach notification and containment aligned with global privacy regulations.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Employee Data Privacy Training</h3>
+                                                            <p>Provides structured awareness training to employees on privacy principles, regulatory requirements, and handling of sensitive personal data securely.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>AI & Big Data Privacy Risk Assessment</h3>
+                                                            <p>Evaluates AI and big data platforms for privacy risks, bias, and transparency to ensure responsible data processing and governance.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
                                             </div>
+
                                         </div>
                                     </div>
                                     <!-- box end -->
@@ -1934,149 +1874,100 @@
                                     <!-- box start -->
                                     <div class="row">
                                         <div class="home-slider home-slider-spacing">
-                                            <div id="home-slider2_3" class="owl-carousel owl-theme ">
+                                           <div id="home-slider2_3" class="owl-carousel owl-theme ">
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>Firewall Management and Implementation</h3>
-                                                            <p>Our Managed Firewall/UTM solution provides monitoring,
-                                                                administration &
-                                                                maintenance
-                                                                of gateway level security along with policy supervision,
-                                                                upgrades and
-                                                                patch
-                                                                deployment.
-                                                            </p>
+                                                            <h3>Enterprise Risk Management (ERM) – ISO 31000</h3>
+                                                            <p>Implements ERM aligned with ISO 31000 to identify, assess, and treat enterprise-level strategic, operational, and cyber risks.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Endpoint Security Protection</h3>
-                                                            <p>We offers a wide range of EPS solutions which integrates new
-                                                                and
-                                                                innovative
-                                                                technologies / features to protect endpoints from today’s
-                                                                advanced
-                                                                threats.
-                                                            </p>
+                                                            <h3>Cyber Risk Quantification (CRQ) & Financial Impact Modeling</h3>
+                                                            <p>Uses CRQ models to translate cyber risks into financial impact, supporting investment decisions and board-level reporting.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>Data Leakage Protection Management</h3>
-                                                            <p>Our Data Loss Prevention (DLP) comes with Unique capture
-                                                                technology to
-                                                                safeguards
-                                                                intellectual property and protect sensitive data in-line
-                                                                with
-                                                                compliance.
-                                                            </p>
+                                                            <h3>M&A Cybersecurity Due Diligence</h3>
+                                                            <p>Assesses cybersecurity maturity, risks, and liabilities during mergers or acquisitions to inform valuations and reduce exposure.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>Data Encryption Solution</h3>
-                                                            <p>Our Data Encryption solution help businesses looking to
-                                                                bolster their
-                                                                data security,
-                                                                increase customer confidence and ensure compliance with data
-                                                                protection
-                                                                laws.
-                                                            </p>
+                                                            <h3>Third-Party & Supply Chain Risk Management (TPRM)</h3>
+                                                            <p>Identifies and mitigates risks from third-party vendors and supply chains through continuous monitoring and contractual controls.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Mobile Device & BYOD Security Management</h3>
-                                                            <p>Our Mobile Device Management (MDM) Solutions allows business
-                                                                to secure
-                                                                and manage
-                                                                employee-owned (BYOD) and company-owned devices to drive
-                                                                effective team
-                                                                conversations.
-                                                            </p>
+                                                            <h3>Fraud Risk Assessment & Forensic Audits</h3>
+                                                            <p>Conducts fraud risk assessments and forensic audits to detect, investigate, and prevent insider threats and financial frauds.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Secure Web Gateway Solution</h3>
-                                                            <p>We provides an intuitive solution that filters unwanted
-                                                                software and
-                                                                malware from
-                                                                user-initiated Web/Internet traffic and enforces corporate
-                                                                and
-                                                                regulatory policy
-                                                                compliance.
-                                                            </p>
+                                                            <h3>Digital Transformation Risk Advisory</h3>
+                                                            <p>Advises on risk governance during digital transformation initiatives by aligning IT modernization with enterprise risk objectives.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>GDPR & Data Privacy</h3>
-                                                            <p>Our deep portfolio enables businesses to reduce the time,
-                                                                cost and
-                                                                complexity of
-                                                                responding to various international data privacy mandates
-                                                                like GDPR.
-                                                            </p>
+                                                            <h3>Web3.0 & DeFi Risk Assessment</h3>
+                                                            <p>Evaluates risks in Web3, blockchain, and DeFi environments including smart contract vulnerabilities, token misuse, and platform governance.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>GDPR & Data Privacy</h3>
-                                                            <p>Our deep portfolio enables businesses to reduce the time,
-                                                                cost and
-                                                                complexity of
-                                                                responding to various international data privacy mandates
-                                                                like GDPR.
-                                                            </p>
+                                                            <h3>Regulatory Compliance Risk (India DPDPA, GDPR, SEBI, RBI)</h3>
+                                                            <p>Analyzes regulatory exposure and gaps to ensure compliance with global and Indian data, financial, and cybersecurity mandates.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Information Technology Service Management</h3>
-                                                            <p>Our experts ensure the right processes, people and technology
-                                                                are in
-                                                                place to meet
-                                                                business respective goals in agreement with industry
-                                                                standards like ISO
-                                                                20000
-                                                                (ITSMS) and ISO 22301 (BCMS).
-                                                            </p>
+                                                            <h3>Board-Level Cyber Risk Reporting (NIST CSF, ISO 27005)</h3>
+                                                            <p>Enables boardroom risk communication by mapping threats and metrics to frameworks like NIST CSF and ISO 27005.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Incidence & Emergency Response Services</h3>
-                                                            <p>Our key offerings involve and improve incident response
-                                                                preparedness plan
-                                                                and
-                                                                minimize the impact of breaches with latest threat
-                                                                intelligence
-                                                                mechanism.
-                                                            </p>
+                                                            <h3>Stress Testing & Cyber War-Gaming</h3>
+                                                            <p>Simulates advanced threat scenarios to test organizational resilience, response readiness, and decision-making under pressure.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                             </div>
+
                                         </div>
                                     </div>
                                     <!-- box end -->
@@ -2088,148 +1979,99 @@
                                     <div class="row">
                                         <div class="home-slider home-slider-spacing">
                                             <div id="home-slider2_4" class="owl-carousel owl-theme ">
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5 ">
-                                                        <div class="tab-content-box">
-                                                            <h3>Firewall Management and Implementation</h3>
-                                                            <p>Our Managed Firewall/UTM solution provides monitoring,
-                                                                administration &
-                                                                maintenance
-                                                                of gateway level security along with policy supervision,
-                                                                upgrades and
-                                                                patch
-                                                                deployment.
-                                                            </p>
+
+                                                    <div class="itmes">
+                                                        <div class="col-md-2 p5 ">
+                                                            <div class="tab-content-box">
+                                                                <h3>Smart Contract Audit (Ethereum, Solana, Polygon)</h3>
+                                                                <p>Performs static and dynamic analysis of smart contracts to detect logic flaws, reentrancy, and gas inefficiencies across top blockchain platforms.</p>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5">
-                                                        <div class="tab-content-box">
-                                                            <h3>Endpoint Security Protection</h3>
-                                                            <p>We offers a wide range of EPS solutions which integrates new
-                                                                and
-                                                                innovative
-                                                                technologies / features to protect endpoints from today’s
-                                                                advanced
-                                                                threats.
-                                                            </p>
+
+                                                    <div class="itmes">
+                                                        <div class="col-md-2 p5">
+                                                            <div class="tab-content-box">
+                                                                <h3>DeFi & Crypto Exchange Security Assessment</h3>
+                                                                <p>Evaluates DeFi protocols and exchanges for exploits in smart contracts, wallet integrations, liquidity pools, and access controls.</p>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5 ">
-                                                        <div class="tab-content-box">
-                                                            <h3>Data Leakage Protection Management</h3>
-                                                            <p>Our Data Loss Prevention (DLP) comes with Unique capture
-                                                                technology to
-                                                                safeguards
-                                                                intellectual property and protect sensitive data in-line
-                                                                with
-                                                                compliance.
-                                                            </p>
+
+                                                    <div class="itmes">
+                                                        <div class="col-md-2 p5 ">
+                                                            <div class="tab-content-box">
+                                                                <h3>Blockchain Node & Consensus Security Review</h3>
+                                                                <p>Audits blockchain node configurations and consensus mechanisms to prevent manipulation, replay attacks, and Sybil-based vulnerabilities.</p>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5 ">
-                                                        <div class="tab-content-box">
-                                                            <h3>Data Encryption Solution</h3>
-                                                            <p>Our Data Encryption solution help businesses looking to
-                                                                bolster their
-                                                                data security,
-                                                                increase customer confidence and ensure compliance with data
-                                                                protection
-                                                                laws.
-                                                            </p>
+
+                                                    <div class="itmes">
+                                                        <div class="col-md-2 p5 ">
+                                                            <div class="tab-content-box">
+                                                                <h3>NFT Fraud Detection & Smart Contract Risks</h3>
+                                                                <p>Detects phishing, counterfeit NFTs, and contract-level exploits that threaten digital ownership and trust in NFT ecosystems.</p>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5">
-                                                        <div class="tab-content-box">
-                                                            <h3>Mobile Device & BYOD Security Management</h3>
-                                                            <p>Our Mobile Device Management (MDM) Solutions allows business
-                                                                to secure
-                                                                and manage
-                                                                employee-owned (BYOD) and company-owned devices to drive
-                                                                effective team
-                                                                conversations.
-                                                            </p>
+
+                                                    <div class="itmes">
+                                                        <div class="col-md-2 p5">
+                                                            <div class="tab-content-box">
+                                                                <h3>Metaverse Security (Virtual Asset Protection)</h3>
+                                                                <p>Secures user identity, transactions, and virtual assets in immersive platforms through behavioral analytics and cryptographic asset protection.</p>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5">
-                                                        <div class="tab-content-box">
-                                                            <h3>Secure Web Gateway Solution</h3>
-                                                            <p>We provides an intuitive solution that filters unwanted
-                                                                software and
-                                                                malware from
-                                                                user-initiated Web/Internet traffic and enforces corporate
-                                                                and
-                                                                regulatory policy
-                                                                compliance.
-                                                            </p>
+
+                                                    <div class="itmes">
+                                                        <div class="col-md-2 p5">
+                                                            <div class="tab-content-box">
+                                                                <h3>AI Security & ISO 42001 Compliance</h3>
+                                                                <p>Advises on securing AI systems against poisoning, model theft, and bias while aligning with ISO 42001 AI governance framework.</p>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5 ">
-                                                        <div class="tab-content-box">
-                                                            <h3>GDPR & Data Privacy</h3>
-                                                            <p>Our deep portfolio enables businesses to reduce the time,
-                                                                cost and
-                                                                complexity of
-                                                                responding to various international data privacy mandates
-                                                                like GDPR.
-                                                            </p>
+
+                                                    <div class="itmes">
+                                                        <div class="col-md-2 p5 ">
+                                                            <div class="tab-content-box">
+                                                                <h3>Post-Quantum Cryptography Readiness</h3>
+                                                                <p>Assesses cryptographic systems for quantum threats and prepares transition plans using NIST-recommended post-quantum cryptographic algorithms.</p>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5 ">
-                                                        <div class="tab-content-box">
-                                                            <h3>GDPR & Data Privacy</h3>
-                                                            <p>Our deep portfolio enables businesses to reduce the time,
-                                                                cost and
-                                                                complexity of
-                                                                responding to various international data privacy mandates
-                                                                like GDPR.
-                                                            </p>
+
+                                                    <div class="itmes">
+                                                        <div class="col-md-2 p5 ">
+                                                            <div class="tab-content-box">
+                                                                <h3>5G & IoT Security Audits</h3>
+                                                                <p>Reviews 5G and IoT deployments for flaws in network slicing, edge computing, and embedded device authentication protocols.</p>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5">
-                                                        <div class="tab-content-box">
-                                                            <h3>Information Technology Service Management</h3>
-                                                            <p>Our experts ensure the right processes, people and technology
-                                                                are in
-                                                                place to meet
-                                                                business respective goals in agreement with industry
-                                                                standards like ISO
-                                                                20000
-                                                                (ITSMS) and ISO 22301 (BCMS).
-                                                            </p>
+
+                                                    <div class="itmes">
+                                                        <div class="col-md-2 p5">
+                                                            <div class="tab-content-box">
+                                                                <h3>Decentralized Identity (DID) Security</h3>
+                                                                <p>Evaluates decentralized identity systems for tamper resistance, verifiable credentials integrity, and compliance with W3C DID standards.</p>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5">
-                                                        <div class="tab-content-box">
-                                                            <h3>Incidence & Emergency Response Services</h3>
-                                                            <p>Our key offerings involve and improve incident response
-                                                                preparedness plan
-                                                                and
-                                                                minimize the impact of breaches with latest threat
-                                                                intelligence
-                                                                mechanism.
-                                                            </p>
+
+                                                    <div class="itmes">
+                                                        <div class="col-md-2 p5">
+                                                            <div class="tab-content-box">
+                                                                <h3>Web3 Regulatory Compliance (FATF, India Crypto Laws)</h3>
+                                                                <p>Advises Web3 projects on anti-money laundering (AML), KYC, and data protection requirements across FATF and Indian crypto guidelines.</p>
+                                                            </div>
                                                         </div>
                                                     </div>
+
                                                 </div>
-                                            </div>
+
                                         </div>
                                     </div>
                                     <!-- box end -->
@@ -2241,100 +2083,99 @@
                                     <div class="row">
                                         <div class="home-slider home-slider-spacing">
                                             <div id="home-slider2_5" class="owl-carousel owl-theme ">
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>SOC/SIEM Monitoring</h3>
-                                                            <p>We provide comprehensive real-time monitoring of
-                                                                infrastructure and
-                                                                round-the clock
-                                                                response to any security Breaches that may Occur.
-                                                            </p>
+                                                            <h3>BFSI: RBI Guidelines, PCI DSS, SWIFT CSP Audit</h3>
+                                                            <p>Ensures regulatory compliance for banks and NBFCs across RBI circulars, PCI DSS mandates, and SWIFT customer security program.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Rapid Threat Containment</h3>
-                                                            <p>WWe rapidly response to a security incident by locating,
-                                                                analysing and
-                                                                quarantining
-                                                                the
-                                                                affects followed by reducing the impact on the environment.
-                                                            </p>
+                                                            <h3>Healthcare: HIPAA & HITRUST CSF Compliance</h3>
+                                                            <p>Implements HIPAA and HITRUST controls to protect patient data and meet regulatory needs across healthcare providers and platforms.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>Insider Threat Monitoring</h3>
-                                                            <p>We uses a multi-tiered approach to identify the activities of
-                                                                different
-                                                                groups and
-                                                                users in order to identify, monitor and respond to any
-                                                                insider threats.
-                                                            </p>
+                                                            <h3>Insurance: IRDA ISNP Audit</h3>
+                                                            <p>Conducts ISNP security audits for insurance portals as mandated by IRDA to ensure secure digital policy servicing environment.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>GDPR & Data Privacy</h3>
-                                                            <p>Our deep portfolio enables businesses to reduce the time,
-                                                                cost and
-                                                                complexity of
-                                                                responding to various international data privacy mandates
-                                                                like GDPR.
-                                                            </p>
+                                                            <h3>Critical Infrastructure: ISO 27019 (Energy/Power)</h3>
+                                                            <p>Implements ISO 27019 controls to secure information systems in energy and power sectors against targeted cyber-physical threats.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>GDPR & Data Privacy</h3>
-                                                            <p>Our deep portfolio enables businesses to reduce the time,
-                                                                cost and
-                                                                complexity of
-                                                                responding to various international data privacy mandates
-                                                                like GDPR.
-                                                            </p>
+                                                            <h3>E-Commerce: PA-DSS & Payment Gateway Security</h3>
+                                                            <p>Secures online transactions and payment systems with PA-DSS compliance, gateway hardening, and secure customer data handling practices.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Information Technology Service Management</h3>
-                                                            <p>Our experts ensure the right processes, people and technology
-                                                                are in
-                                                                place to meet
-                                                                business respective goals in agreement with industry
-                                                                standards like ISO
-                                                                20000
-                                                                (ITSMS) and ISO 22301 (BCMS).
-                                                            </p>
+                                                            <h3>IT/ITES: ISO 20000 (ITSM) & Cloud Compliance</h3>
+                                                            <p>Aligns IT services and cloud operations with ISO 20000, ISO 27017, and SOC 2 for managed service environments.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Incidence & Emergency Response Services</h3>
-                                                            <p>Our key offerings involve and improve incident response
-                                                                preparedness plan
-                                                                and
-                                                                minimize the impact of breaches with latest threat
-                                                                intelligence
-                                                                mechanism.
-                                                            </p>
+                                                            <h3>Government: UIDAI AUA/KUA, GST Suvidha Audit</h3>
+                                                            <p>Audits UIDAI AUA/KUA and GSP platforms for Aadhaar security compliance and robust GST Suvidha provider cybersecurity posture.</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>Manufacturing: OT/ICS Security (IEC 62443)</h3>
+                                                            <p>Implements industrial cybersecurity using IEC 62443 to protect OT networks, SCADA systems, and PLCs in manufacturing environments.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>Startups: Seed-Stage Security & Compliance Setup</h3>
+                                                            <p>Helps early-stage startups establish foundational security, basic compliance, and investor-readiness for scaling and funding discussions.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>M&A Cybersecurity Due Diligence</h3>
+                                                            <p>Assesses cybersecurity maturity, controls, and liabilities in target companies to minimize risks during mergers or acquisitions.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
                                             </div>
+
                                         </div>
                                     </div>
                                     <!-- box end -->
@@ -2352,79 +2193,111 @@
                 <div class="acc">
                     <!-- box first start -->
                     <div class="acc__card">
-                        <a href="#offer1" class="acc__title active">Vulnerability Assese. & Penet. Testing</a>
+                        <a href="#offer1" class="acc__title active">Governance, Risk & Compliance (GRC) Services</a>
                         <div class="acc__panel" style="display:block" id="offer1">
                             <!--  -->
                             <div class="indu-moblie indu-moblie1 mhslider count-navigation">
                                 <div id="mhome-slider2" class="owl-carousel owl-theme">
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Network Architecture Design Review</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
+                                            <h3>ISO 27001:2022 Implementation & Certification</h3>
+                                            <p>Implements and certifies ISO 27001:2022 for establishing an effective ISMS to protect organizational data and ensure regulatory compliance.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
-                                            <!--  -->
                                         </div>
                                     </div>
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Network Infrastructure Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
+                                            <h3>NIST CSF (Cybersecurity Framework) Alignment</h3>
+                                            <p>Aligns cybersecurity policies and practices with the NIST CSF to manage, detect, and respond to security risks effectively.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
-                                            <!--  -->
                                         </div>
                                     </div>
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Web Application Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
+                                            <h3>DPDPA 2023 (India Data Privacy Law) Compliance Advisory</h3>
+                                            <p>Guides businesses in complying with India’s DPDPA 2023 law through risk assessments, policy implementation, and privacy management frameworks.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
-                                            <!--  -->
                                         </div>
                                     </div>
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Wireless Network Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
+                                            <h3>GDPR, CCPA, HIPAA Compliance Audits</h3>
+                                            <p>Performs audits to ensure data protection laws like GDPR, CCPA, and HIPAA are followed across systems and business processes.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
-                                            <!--  -->
                                         </div>
                                     </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>PCI DSS Compliance for Payment Gateways & FinTech</h3>
+                                            <p>Ensures secure handling of cardholder data in FinTech and eCommerce platforms through PCI DSS implementation and audit support.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>SOC 2 (Type 1 & Type 2) Audits</h3>
+                                            <p>Assists with SOC 2 audits to evaluate and report on internal controls for security, availability, confidentiality, and integrity.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>RBI Cyber Security Framework Audit</h3>
+                                            <p>Conducts RBI-mandated audits to ensure banking institutions meet cybersecurity standards for risk, governance, and incident response.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>SEBI Cyber Resilience Audit</h3>
+                                            <p>Assesses SEBI cyber resilience compliance for brokers and exchanges to ensure operational continuity and regulatory cyber defense readiness.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Third-Party Risk Management (TPRM) for Vendors</h3>
+                                            <p>Implements TPRM frameworks to identify, assess, and mitigate cybersecurity and compliance risks arising from external vendors and partners.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Fraud Risk Assessment & Forensic Audits</h3>
+                                            <p>Detects fraud risks and conducts forensic audits to investigate financial irregularities, internal threats, and compliance breaches.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                                 <div id="navigation-count1" class="count-nav-box"></div>
                             </div>
@@ -2436,760 +2309,397 @@
                     <!-- box first end -->
                     <!-- box two end -->
                     <div class="acc__card">
-                        <a href="#offer2" class="acc__title">IT Security Audit, Risk & Compliance</a>
+                        <a href="#offer2" class="acc__title">Data Privacy & Protection Services</a>
                         <div class="acc__panel" id="offer2">
-                            <!--  -->
-                            <!--  -->
                             <div class="indu-moblie indu-moblie1 mhslider count-navigation">
                                 <div id="mhome-slider4" class="owl-carousel owl-theme">
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Network Architecture Design Review</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
+                                            <h3>India DPDPA 2023 Readiness Assessment & Implementation</h3>
+                                            <p>Helps organizations assess readiness and implement frameworks for India’s DPDPA 2023 with policy, consent, and data handling controls.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
-                                            <!--  -->
                                         </div>
                                     </div>
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Network Infrastructure Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
+                                            <h3>GDPR Compliance Audit & Data Protection Officer (DPO) Services</h3>
+                                            <p>Conducts GDPR audits and provides outsourced DPO services to meet global data privacy requirements across EU and international operations.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
-                                            <!--  -->
                                         </div>
                                     </div>
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Web Application Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
+                                            <h3>ISO 27701 (PIMS) Certification</h3>
+                                            <p>Implements and certifies ISO 27701 to extend your ISMS with privacy controls for personal data processing and accountability management.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
-                                            <!--  -->
                                         </div>
                                     </div>
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Wireless Network Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
+                                            <h3>Data Protection Impact Assessment (DPIA)</h3>
+                                            <p>Conducts DPIA to identify and reduce data processing risks for high-risk activities as mandated by GDPR and privacy laws.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
-                                            <!--  -->
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Cross-Border Data Transfer Compliance (India DPDPA vs. GDPR)</h3>
+                                            <p>Ensures legal compliance for cross-border personal data flows between jurisdictions by aligning with DPDPA, GDPR, SCCs, and transfer mechanisms.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Consent Management & Privacy Policy Design</h3>
+                                            <p>Designs transparent privacy policies and robust consent mechanisms to comply with legal requirements and build user trust in data practices.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Data Discovery & Classification (PII, Sensitive Data Mapping)</h3>
+                                            <p>Identifies and classifies sensitive data such as PII to enable privacy controls, reduce risk, and enhance breach preparedness.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Breach Response & Incident Management</h3>
+                                            <p>Establishes incident response plans and supports timely breach notification and containment aligned with global privacy regulations.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Employee Data Privacy Training</h3>
+                                            <p>Provides structured awareness training to employees on privacy principles, regulatory requirements, and handling of sensitive personal data securely.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>AI & Big Data Privacy Risk Assessment</h3>
+                                            <p>Evaluates AI and big data platforms for privacy risks, bias, and transparency to ensure responsible data processing and governance.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div id="navigation-count3" class="count-nav-box"></div>
                             </div>
-                            <!--  -->
-                            <a href="javascript:void(0)" class="close-acrodin"> Close</a>
+
+                            <a href="javascript:void(0)" class="close-acrodin">Close</a>
                         </div>
                     </div>
                     <!-- box two end -->
                     <!-- box three end -->
                     <div class="acc__card">
-                        <a href="#offer3" class="acc__title">Managed IT Security Solutions</a>
-                        <div class="acc__panel" id="offer3">
-                            <!--  -->
-                            <!--  -->
-                            <div class="indu-moblie indu-moblie1 mhslider count-navigation">
-                                <div id="mhome-slider6" class="owl-carousel owl-theme">
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Network Architecture Design Review</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
+                            <a href="#offer3" class="acc__title">Strategic Risk Assessment & Management</a>
+                            <div class="acc__panel" id="offer3">
+                                <div class="indu-moblie indu-moblie1 mhslider count-navigation">
+                                    <div id="mhome-slider6" class="owl-carousel owl-theme">
+                                        <div class="item">
+                                            <div class="tab-content-box">
+                                                <h3>Enterprise Risk Management (ERM) – ISO 31000</h3>
+                                                <p>Implements ERM aligned with ISO 31000 to identify, assess, and treat enterprise-level strategic, operational, and cyber risks.</p>
+                                                <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                             </div>
-                                            <!--  -->
+                                        </div>
+
+                                        <div class="item">
+                                            <div class="tab-content-box">
+                                                <h3>Cyber Risk Quantification (CRQ) & Financial Impact Modeling</h3>
+                                                <p>Uses CRQ models to translate cyber risks into financial impact, supporting investment decisions and board-level reporting.</p>
+                                                <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="item">
+                                            <div class="tab-content-box">
+                                                <h3>M&A Cybersecurity Due Diligence</h3>
+                                                <p>Assesses cybersecurity maturity, risks, and liabilities during mergers or acquisitions to inform valuations and reduce exposure.</p>
+                                                <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="item">
+                                            <div class="tab-content-box">
+                                                <h3>Third-Party & Supply Chain Risk Management (TPRM)</h3>
+                                                <p>Identifies and mitigates risks from third-party vendors and supply chains through continuous monitoring and contractual controls.</p>
+                                                <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="item">
+                                            <div class="tab-content-box">
+                                                <h3>Fraud Risk Assessment & Forensic Audits</h3>
+                                                <p>Conducts fraud risk assessments and forensic audits to detect, investigate, and prevent insider threats and financial frauds.</p>
+                                                <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="item">
+                                            <div class="tab-content-box">
+                                                <h3>Digital Transformation Risk Advisory</h3>
+                                                <p>Advises on risk governance during digital transformation initiatives by aligning IT modernization with enterprise risk objectives.</p>
+                                                <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="item">
+                                            <div class="tab-content-box">
+                                                <h3>Web3.0 & DeFi Risk Assessment</h3>
+                                                <p>Evaluates risks in Web3, blockchain, and DeFi environments including smart contract vulnerabilities, token misuse, and platform governance.</p>
+                                                <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="item">
+                                            <div class="tab-content-box">
+                                                <h3>Regulatory Compliance Risk (India DPDPA, GDPR, SEBI, RBI)</h3>
+                                                <p>Analyzes regulatory exposure and gaps to ensure compliance with global and Indian data, financial, and cybersecurity mandates.</p>
+                                                <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="item">
+                                            <div class="tab-content-box">
+                                                <h3>Board-Level Cyber Risk Reporting (NIST CSF, ISO 27005)</h3>
+                                                <p>Enables boardroom risk communication by mapping threats and metrics to frameworks like NIST CSF and ISO 27005.</p>
+                                                <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="item">
+                                            <div class="tab-content-box">
+                                                <h3>Stress Testing & Cyber War-Gaming</h3>
+                                                <p>Simulates advanced threat scenarios to test organizational resilience, response readiness, and decision-making under pressure.</p>
+                                                <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Network Infrastructure Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Web Application Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Wireless Network Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
+
+                                    <div id="navigation-count5" class="count-nav-box"></div>
                                 </div>
-                                <div id="navigation-count5" class="count-nav-box"></div>
+
+                                <a href="javascript:void(0)" class="close-acrodin"> Close</a>
                             </div>
-                            <!--  -->
-                            <a href="javascript:void(0)" class="close-acrodin"> Close</a>
-                            <!--  -->
                         </div>
-                    </div>
+
                     <!-- box three end -->
                     <!-- box four end -->
                     <div class="acc__card">
-                        <a href="#offer4" class="acc__title">Digital Forensic & Cyber Fraud Manag.</a>
+                        <a href="#offer4" class="acc__title">Emerging Tech & Web3.0 Security</a>
                         <div class="acc__panel" id="offer4">
-                            <!--  -->
-                            <!--  -->
                             <div class="indu-moblie indu-moblie1 mhslider count-navigation">
                                 <div id="mhome-slider8" class="owl-carousel owl-theme">
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Network Architecture Design Review</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
+                                            <h3>Smart Contract Audit (Ethereum, Solana, Polygon)</h3>
+                                            <p>Performs static and dynamic analysis of smart contracts to detect logic flaws, reentrancy, and gas inefficiencies across top blockchain platforms.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Network Infrastructure Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
+                                            <h3>DeFi & Crypto Exchange Security Assessment</h3>
+                                            <p>Evaluates DeFi protocols and exchanges for exploits in smart contracts, wallet integrations, liquidity pools, and access controls.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Web Application Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
+                                            <h3>Blockchain Node & Consensus Security Review</h3>
+                                            <p>Audits blockchain node configurations and consensus mechanisms to prevent manipulation, replay attacks, and Sybil-based vulnerabilities.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Wireless Network Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
+                                            <h3>NFT Fraud Detection & Smart Contract Risks</h3>
+                                            <p>Detects phishing, counterfeit NFTs, and contract-level exploits that threaten digital ownership and trust in NFT ecosystems.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Metaverse Security (Virtual Asset Protection)</h3>
+                                            <p>Secures user identity, transactions, and virtual assets in immersive platforms through behavioral analytics and cryptographic asset protection.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>AI Security & ISO 42001 Compliance</h3>
+                                            <p>Advises on securing AI systems against poisoning, model theft, and bias while aligning with ISO 42001 AI governance framework.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Post-Quantum Cryptography Readiness</h3>
+                                            <p>Assesses cryptographic systems for quantum threats and prepares transition plans using NIST-recommended post-quantum cryptographic algorithms.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>5G & IoT Security Audits</h3>
+                                            <p>Reviews 5G and IoT deployments for flaws in network slicing, edge computing, and embedded device authentication protocols.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Decentralized Identity (DID) Security</h3>
+                                            <p>Evaluates decentralized identity systems for tamper resistance, verifiable credentials integrity, and compliance with W3C DID standards.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Web3 Regulatory Compliance (FATF, India Crypto Laws)</h3>
+                                            <p>Advises Web3 projects on anti-money laundering (AML), KYC, and data protection requirements across FATF and Indian crypto guidelines.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div id="navigation-count7" class="count-nav-box"></div>
                             </div>
-                            <!--  -->
-                            <a href="javascript:void(0)" class="close-acrodin"> Close</a>
-                            <!--  -->
+
+                            <a href="javascript:void(0)" class="close-acrodin">Close</a>
                         </div>
                     </div>
                     <!-- box four end -->
                     <!-- box 5 end -->
                     <div class="acc__card">
-                        <a href="#offer5" class="acc__title">SOC as a Service</a>
+                        <a href="#offer5" class="acc__title">Industry-Specific Compliance & Advisory</a>
                         <div class="acc__panel" id="offer5">
-                            <!--  -->
-                            <!--  -->
                             <div class="indu-moblie indu-moblie1 mhslider count-navigation">
                                 <div id="mhome-slider10" class="owl-carousel owl-theme">
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Network Architecture Design Review</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
+                                            <h3>BFSI: RBI Guidelines, PCI DSS, SWIFT CSP Audit</h3>
+                                            <p>Ensures regulatory compliance for banks and NBFCs across RBI circulars, PCI DSS mandates, and SWIFT customer security program.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Network Infrastructure Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
+                                            <h3>Healthcare: HIPAA & HITRUST CSF Compliance</h3>
+                                            <p>Implements HIPAA and HITRUST controls to protect patient data and meet regulatory needs across healthcare providers and platforms.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Web Application Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
+                                            <h3>Insurance: IRDA ISNP Audit</h3>
+                                            <p>Conducts ISNP security audits for insurance portals as mandated by IRDA to ensure secure digital policy servicing environment.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
+
                                     <div class="item">
                                         <div class="tab-content-box">
-                                            <h3>Wireless Network Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
+                                            <h3>Critical Infrastructure: ISO 27019 (Energy/Power)</h3>
+                                            <p>Implements ISO 27019 controls to secure information systems in energy and power sectors against targeted cyber-physical threats.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>E-Commerce: PA-DSS & Payment Gateway Security</h3>
+                                            <p>Secures online transactions and payment systems with PA-DSS compliance, gateway hardening, and secure customer data handling practices.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>IT/ITES: ISO 20000 (ITSM) & Cloud Compliance</h3>
+                                            <p>Aligns IT services and cloud operations with ISO 20000, ISO 27017, and SOC 2 for managed service environments.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Government: UIDAI AUA/KUA, GST Suvidha Audit</h3>
+                                            <p>Audits UIDAI AUA/KUA and GSP platforms for Aadhaar security compliance and robust GST Suvidha provider cybersecurity posture.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Manufacturing: OT/ICS Security (IEC 62443)</h3>
+                                            <p>Implements industrial cybersecurity using IEC 62443 to protect OT networks, SCADA systems, and PLCs in manufacturing environments.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Startups: Seed-Stage Security & Compliance Setup</h3>
+                                            <p>Helps early-stage startups establish foundational security, basic compliance, and investor-readiness for scaling and funding discussions.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>M&A Cybersecurity Due Diligence</h3>
+                                            <p>Assesses cybersecurity maturity, controls, and liabilities in target companies to minimize risks during mergers or acquisitions.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
                                 </div>
                                 <div id="navigation-count9" class="count-nav-box"></div>
                             </div>
-                            <!--  -->
-                            <a href="javascript:void(0)" class="close-acrodin"> Close</a>
-                        </div>
-                    </div>
-                    <!-- box 5 end -->
-                    <!-- box first start -->
-                    <div class="acc__card">
-                        <a href="#offer6" class="acc__title">Vulnerability Assese. & Penet. Testing</a>
-                        <div class="acc__panel" id="offer6">
-                            <!--  -->
-                            <div class="indu-moblie indu-moblie1 mhslider count-navigation">
-                                <div id="mhome-slider2_1" class="owl-carousel owl-theme">
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Network Architecture Design Review</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Network Infrastructure Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Web Application Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Wireless Network Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="navigation-count1_1" class="count-nav-box"></div>
-                            </div>
-                            <!--  -->
-                            <a href="javascript:void(0)" class="close-acrodin"> Close</a>
-                            <!--  -->
-                        </div>
-                    </div>
-                    <!-- box first end -->
-                    <!-- box two end -->
-                    <div class="acc__card">
-                        <a href="#offer7" class="acc__title">IT Security Audit, Risk & Compliance</a>
-                        <div class="acc__panel" id="offer7">
-                            <!--  -->
-                            <!--  -->
-                            <div class="indu-moblie indu-moblie1 mhslider count-navigation">
-                                <div id="mhome-slider4_1" class="owl-carousel owl-theme">
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Network Architecture Design Review</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Network Infrastructure Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Web Application Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Wireless Network Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="navigation-count3_1" class="count-nav-box"></div>
-                            </div>
-                            <!--  -->
-                            <a href="javascript:void(0)" class="close-acrodin"> Close</a>
-                        </div>
-                    </div>
-                    <!-- box two end -->
-                    <!-- box three end -->
-                    <div class="acc__card">
-                        <a href="#offer8" class="acc__title">Managed IT Security Solutions</a>
-                        <div class="acc__panel" id="offer8">
-                            <!--  -->
-                            <!--  -->
-                            <div class="indu-moblie indu-moblie1 mhslider count-navigation">
-                                <div id="mhome-slider6_1" class="owl-carousel owl-theme">
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Network Architecture Design Review</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Network Infrastructure Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Web Application Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Wireless Network Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="navigation-count5_1" class="count-nav-box"></div>
-                            </div>
-                            <!--  -->
-                            <a href="javascript:void(0)" class="close-acrodin"> Close</a>
-                            <!--  -->
-                        </div>
-                    </div>
-                    <!-- box three end -->
-                    <!-- box four end -->
-                    <div class="acc__card">
-                        <a href="#offer9" class="acc__title">Digital Forensic & Cyber Fraud Manag.</a>
-                        <div class="acc__panel" id="offer9">
-                            <!--  -->
-                            <!--  -->
-                            <div class="indu-moblie indu-moblie1 mhslider count-navigation">
-                                <div id="mhome-slider8_1" class="owl-carousel owl-theme">
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Network Architecture Design Review</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Network Infrastructure Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Web Application Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Wireless Network Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="navigation-count7_1" class="count-nav-box"></div>
-                            </div>
-                            <!--  -->
-                            <a href="javascript:void(0)" class="close-acrodin"> Close</a>
-                            <!--  -->
-                        </div>
-                    </div>
-                    <!-- box four end -->
-                    <!-- box 5 end -->
-                    <div class="acc__card">
-                        <a href="#offer10" class="acc__title">SOC as a Service</a>
-                        <div class="acc__panel" id="offer10">
-                            <!--  -->
-                            <!--  -->
-                            <div class="indu-moblie indu-moblie1 mhslider count-navigation">
-                                <div id="mhome-slider10_1" class="owl-carousel owl-theme">
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Network Architecture Design Review</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Network Infrastructure Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Web Application Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Wireless Network Penetration Testing</h3>
-                                            <p>Security focused evaluation of your network-based computing environment, from
-                                                both
-                                                an architecture and operational perspective. Security focused evaluation of
-                                                your
-                                                network-based computing environment, from both
-                                                an architecture and operational perspective.
-                                            </p>
-                                            <!--  -->
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="navigation-count9_1" class="count-nav-box"></div>
-                            </div>
-                            <!--  -->
                             <a href="javascript:void(0)" class="close-acrodin"> Close</a>
                         </div>
                     </div>
