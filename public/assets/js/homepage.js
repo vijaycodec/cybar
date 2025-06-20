@@ -5,7 +5,7 @@ function isMobile() {
     );
 }
 
-if (isMobile) {
+if (!isMobile) {
     $(".cn-content").click(function () {
         $(this)
             .css({
