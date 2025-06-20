@@ -1,11 +1,12 @@
 function isMobile() {
     const userAgent = navigator.userAgent.toLowerCase();
+    console.log(userAgent);
     return /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/.test(
         userAgent
     );
 }
 
-if (isMobile) {
+if (isMobile()) {
     $(".cn-content").click(function () {
         $(this)
             .css({
