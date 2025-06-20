@@ -270,7 +270,7 @@ body{
     .empower-industry-box .cn-main-content{
     background: #fff !important;
     margin: 0px;
-    padding: 15px 10px;
+    padding: 20px 10px;
     }
     .cn-main-content h3{
     font-size: 16px;
@@ -306,12 +306,12 @@ body{
     text-align: left;
     height: 100%;
     }
-    .tab-content-box h3{font-size: 18px;
+    .tab-content-box h3{font-size: 15.5px;
     line-height: 20px;
     font-weight: 600;
     color: #363333;}
     .tab-content-box p{
-    font-size: 15px;
+    font-size: 13.5px;
     line-height: 1.5;
     }
     .tab-content-box:hover{
@@ -3077,7 +3077,7 @@ body{
     line-height: 1.5;
     }
     .wccn-content h4 {
-    font-size: 15px;
+    font-size: 14px;
     position: relative;
     padding-left: 28px;
     }
@@ -5261,7 +5261,7 @@ ul#tabs-nav1.home-nav-v1  li:hover a{
         padding: 15px;
     }
         .it-content p{
-        font-size: 15px;
+        font-size: 14px;
         line-height: 1.6;
     }
         .it-content a{
