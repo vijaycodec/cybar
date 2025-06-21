@@ -758,7 +758,7 @@
                 <div class="acc">
                     <!-- box first start -->
                     <div class="acc__card">
-                        <a href="#significance1" class="acc__title active">Application Vapt Services</a>
+                        <a href="#significance1" class="acc__title active">Application Security Testing</a>
                         <div class="acc__panel" style="display:block" id="significance1">
                             <!--  -->
                             <div class="indu-moblie indu-moblie1 mhslider count-navigation">
@@ -875,7 +875,7 @@
                     <!-- box first end -->
                     <!-- box two end -->
                     <div class="acc__card">
-                        <a href="#significance2" class="acc__title">Network Vapt Services</a>
+                        <a href="#significance2" class="acc__title">Network Security Testing </a>
                         <div class="acc__panel" id="significance2">
                             <div class="indu-moblie indu-moblie1 mhslider count-navigation">
                                 <div id="mhome-slider12" class="owl-carousel owl-theme">
@@ -970,7 +970,7 @@
                     <!-- box two end -->
                     <!-- box three end -->
                     <div class="acc__card">
-                        <a href="#significance3" class="acc__title">Cloud Vapt Services</a>
+                        <a href="#significance3" class="acc__title">Database Security Testing</a>
                         <div class="acc__panel" id="significance3">
                             <!--  -->
                             <!--  -->
@@ -1075,7 +1075,7 @@
                     <!-- box three end -->
                     <!-- box four end -->
                     <div class="acc__card">
-                        <a href="#significance4" class="acc__title">Server And Storage Vapt Services.</a>
+                        <a href="#significance4" class="acc__title">Server & Storage Security Testing.</a>
                         <div class="acc__panel" id="significance4">
                             <!--  -->
                             <!--  -->
@@ -1173,7 +1173,7 @@
                     <!-- box four end -->
                     <!-- box 5 end -->
                     <div class="acc__card">
-                        <a href="#significance5" class="acc__title">Digital Technologies Penetration Testing Services</a>
+                        <a href="#significance5" class="acc__title">People & Process Security Testing</a>
                         <div class="acc__panel" id="significance5">
                             <!--  -->
                             <!--  -->
@@ -1279,7 +1279,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 cn-title">
-                        <h2>We empower industry to Secure Digitally, Reduce Threats & align1
+                        <h2>We empower industry to Secure Digitally, Reduce Threats & align
                         </h2>
                     </div>
                 </div>
@@ -1487,154 +1487,201 @@
             <!-- mobile code start -->
             <div class="mobile-view indu-moblie indu-moblie1 count-navigation mhome-space mhome-space1">
                 <div id="mhome-slider17" class="owl-carousel owl-theme">
-                    <!--  -->
-                    <div class="item ">
-                        <div class="empower-industry-box">
-                            <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img
-                                        src="{{ asset('assets/images/security-audit-compliance.webp') }}"> </div>
-                                <div class="cn-content">
-                                    <p>SOC as a Service provides outsourced security monitoring, threat detection,
-                                        and incident response to protect organizations from cyber threats 24/7.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="cn-main-content">
-                                <a href="javascript:void(0)" class="cn-main-content-enclosed"
-                                    style="display: block; text-decoration: none;">
-                                    <h3>SOC as a Service </h3>
-                                    Know more <i class="fa">&#xf054;</i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="item">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/vapt-services.webp') }}">
+                                <div class="cn-hover-img">
+                                    <img src="{{ asset('assets/images/vapt-services.webp') }}">
                                 </div>
                                 <div class="cn-content">
-                                    <p>Security Monitoring and SIEM Services offer real-time threat detection,
-                                        log analysis, and incident response to enhance organizational cybersecurity posture.
-                                    </p>
+                                    <p>Advanced penetration testing identifies security gaps by simulating sophisticated cyberattacks across networks, web apps, mobile platforms, APIs, and cloud infrastructure to prevent breaches before they occur and enhance cyber resilience effectively.</p>
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="javascript:void(0)" class="cn-main-content-enclosed"
-                                    style="display: block; text-decoration: none;">
-                                    <h3>Security Monitoring & SIEM Services</h3>
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed">
+                                    <h3>Advanced Penetration Testing (Network, Web, Mobile, API, Cloud)</h3>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
                             </div>
                         </div>
                     </div>
+
                     <div class="item">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/managed-it-services.webp') }}">
+                                <div class="cn-hover-img">
+                                    <img src="{{ asset('assets/images/security-audit-compliance.webp') }}">
                                 </div>
                                 <div class="cn-content">
-                                    <p>Managed Endpoint Detection & Response (EDR) delivers continuous monitoring, threat
-                                        detection,
-                                        and automated response to protect endpoints from cyberattacks.
-                                    </p>
+                                    <p>Red teaming simulates multi-layered attacks using real-world tactics to test your organization's detection, prevention, and incident response capabilities—ensuring your defenses can withstand persistent threats and advanced adversarial techniques.</p>
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="javascript:void(0)" class="cn-main-content-enclosed"
-                                    style="display: block; text-decoration: none;">
-                                    <h3>Managed Endpoint Detection & Response (EDR)</h3>
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed">
+                                    <h3>Red Teaming (Full-Scope Attack Simulation)</h3>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
                             </div>
                         </div>
                     </div>
+
                     <div class="item">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/forensic-seervices.webp') }}">
+                                <div class="cn-hover-img">
+                                    <img src="{{ asset('assets/images/managed-it-services.webp') }}">
                                 </div>
                                 <div class="cn-content">
-                                    <p>Extended Detection & Response (XDR) Services unify data across endpoints, networks,
-                                        and cloud to detect, investigate, and respond to threats efficiently.
-                                    </p>
+                                    <p>Purple teaming bridges the gap between offensive and defensive teams by fostering collaboration during simulated attacks, improving threat visibility, detection rules, response playbooks, and overall cybersecurity defense effectiveness.</p>
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="javascript:void(0)" class="cn-main-content-enclosed"
-                                    style="display: block; text-decoration: none;">
-                                    <h3>Extended Detection & Response (XDR) Services</h3>
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed">
+                                    <h3>Purple Teaming (Collaborative Attack-Defense Drills)</h3>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
                             </div>
                         </div>
                     </div>
+
                     <div class="item">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}">
+                                <div class="cn-hover-img">
+                                    <img src="{{ asset('assets/images/forensic-seervices.webp') }}">
                                 </div>
                                 <div class="cn-content">
-                                    <p>SOAR services integrate security tools, automate workflows, and coordinate response
-                                        actions to streamline threat detection, investigation, and incident resolution.
-                                    </p>
+                                    <p>Cloud-native pentesting evaluates AWS, Azure, GCP, and Kubernetes platforms for misconfigurations, identity issues, privilege escalations, and insecure APIs—ensuring your cloud deployments meet security and compliance best practices.</p>
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="javascript:void(0)" class="cn-main-content-enclosed"
-                                    style="display: block; text-decoration: none;">
-                                    <h3>Security Orchestration, Automation, and Response (SOAR)</h3>
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed">
+                                    <h3>Cloud-Native Pentesting (AWS, Azure, GCP, Kubernetes)</h3>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
                             </div>
                         </div>
                     </div>
+
                     <div class="item">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}">
+                                <div class="cn-hover-img">
+                                    <img src="{{ asset('assets/images/soc-services.webp') }}">
                                 </div>
                                 <div class="cn-content">
-                                    <p>Cloud Security Monitoring & Protection ensures continuous visibility, threat
-                                        detection,
-                                        and compliance across cloud environments to safeguard data and applications.
-                                    </p>
+                                    <p>IoT and OT security assessments target embedded devices and industrial systems using firmware reverse engineering, protocol fuzzing, and hardware exploitation to identify vulnerabilities in smart factories, SCADA, and connected infrastructure.</p>
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="javascript:void(0)" class="cn-main-content-enclosed"
-                                    style="display: block; text-decoration: none;">
-                                    <h3>Cloud Security Monitoring & Protection</h3>
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed">
+                                    <h3>IoT & OT Security Hacking (Smart Devices, Industrial Systems)</h3>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
                             </div>
                         </div>
                     </div>
+
                     <div class="item">
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}">
+                                <div class="cn-hover-img">
+                                    <img src="{{ asset('assets/images/vapt-services.webp') }}">
                                 </div>
                                 <div class="cn-content">
-                                    <p>Dark Web Intelligence & Threat Hunting identifies exposed data,
-                                        monitors cybercriminal activity, and proactively detects threats targeting your
-                                        organization.
-                                    </p>
+                                    <p>Wireless and RFID testing uncovers weaknesses in Wi-Fi, Bluetooth, and NFC environments by simulating proximity-based attacks to prevent unauthorized access, data leaks, and man-in-the-middle vulnerabilities in physical networks.</p>
                                 </div>
                             </div>
                             <div class="cn-main-content">
-                                <a href="javascript:void(0)" class="cn-main-content-enclosed"
-                                    style="display: block; text-decoration: none;">
-                                    <h3>Dark Web Intelligence & Threat Hunting</h3>
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed">
+                                    <h3>Wireless & RFID Security Testing (Wi-Fi, Bluetooth, NFC)</h3>
                                     Know more <i class="fa">&#xf054;</i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <!--  -->
+
+                    <div class="item">
+                        <div class="empower-industry-box">
+                            <div class="cn-hover-box">
+                                <div class="cn-hover-img">
+                                    <img src="{{ asset('assets/images/security-audit-compliance.webp') }}">
+                                </div>
+                                <div class="cn-content">
+                                    <p>Simulates social engineering attacks including phishing, vishing, baiting, and tailgating to test human susceptibility and evaluate how employees respond to manipulation attempts, helping improve organizational security awareness.</p>
+                                </div>
+                            </div>
+                            <div class="cn-main-content">
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed">
+                                    <h3>Social Engineering & Phishing Simulations</h3>
+                                    Know more <i class="fa">&#xf054;</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="empower-industry-box">
+                            <div class="cn-hover-box">
+                                <div class="cn-hover-img">
+                                    <img src="{{ asset('assets/images/managed-it-services.webp') }}">
+                                </div>
+                                <div class="cn-content">
+                                    <p>API and microservices testing identifies issues like broken object level authorization, data exposure, rate limiting flaws, and input tampering to secure communication between microservices and external applications effectively.</p>
+                                </div>
+                            </div>
+                            <div class="cn-main-content">
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed">
+                                    <h3>API & Microservices Security Testing</h3>
+                                    Know more <i class="fa">&#xf054;</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="empower-industry-box">
+                            <div class="cn-hover-box">
+                                <div class="cn-hover-img">
+                                    <img src="{{ asset('assets/images/forensic-seervices.webp') }}">
+                                </div>
+                                <div class="cn-content">
+                                    <p>Zero-day vulnerability research involves discovering unknown software flaws that could be exploited by attackers, responsibly reporting them, and contributing to improved patch management and secure product development cycles.</p>
+                                </div>
+                            </div>
+                            <div class="cn-main-content">
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed">
+                                    <h3>Zero-Day Vulnerability Research (For Critical Systems)</h3>
+                                    Know more <i class="fa">&#xf054;</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="empower-industry-box">
+                            <div class="cn-hover-box">
+                                <div class="cn-hover-img">
+                                    <img src="{{ asset('assets/images/soc-services.webp') }}">
+                                </div>
+                                <div class="cn-content">
+                                    <p>Bug bounty programs encourage ethical hackers to discover and report vulnerabilities through managed disclosure channels, helping organizations reduce risk and improve product security posture with real-world feedback.</p>
+                                </div>
+                            </div>
+                            <div class="cn-main-content">
+                                <a href="javascript:void(0)" class="cn-main-content-enclosed">
+                                    <h3>Bug Bounty Program Management</h3>
+                                    Know more <i class="fa">&#xf054;</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 <div id="navigation-count16" class="count-nav-box"></div>
             </div>
+
             <!-- mobile code end -->
         </section>
         <!-- empower industry end -->
