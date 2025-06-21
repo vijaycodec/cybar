@@ -3843,7 +3843,7 @@
     white-space: nowrap;
     width: 100%;
 }
-.empower-industry-box .cn-main-content p:last-of-type {
+.empower-industry-box1 .cn-main-content p:last-of-type {
     font-size: 16px;
     color: #23527c !important;
     font-weight: 600 !important;
@@ -3852,10 +3852,10 @@
     cursor: pointer; /* optional, gives a clickable look */
 }
 
-.empower-industry-box a:hover .cn-main-content {
+.empower-industry-box1 a:hover .cn-main-content {
     background-color: #dddddd !important;
 }
-.empower-industry-box .cn-main-content {
+.empower-industry-box1 .cn-main-content {
     transition: background-color 0.3s ease;
 }
 

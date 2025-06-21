@@ -79,7 +79,7 @@
             <div class="container p40">
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="empower-industry-box">
+                        <div class="empower-industry-box empower-industry-box1">
                             <a href="#" class="scroll-link" data-target="#mhome-div2" data-offset="-90px" data-speed="400"
                                 style="display: block; text-decoration: none;">
                                 <div class="cn-hover-box">
@@ -107,7 +107,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="empower-industry-box">
+                        <div class="empower-industry-box empower-industry-box1">
                             <a href="#" class="scroll-link" data-target="#mhome-div4" data-offset="-100px" data-speed="600"
                                 style="display: block; text-decoration: none;">
                                 <div class="cn-hover-box">
@@ -138,7 +138,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="empower-industry-box">
+                        <div class="empower-industry-box empower-industry-box1">
                             <a href="#" class="scroll-link" data-target="#mhome-div4-1" data-offset="-100px"
                                 data-speed=" 800" style="display: block; text-decoration: none;">
                                 <div class="cn-hover-box">
@@ -166,7 +166,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="empower-industry-box">
+                        <div class="empower-industry-box empower-industry-box1">
                             <a href="#" class="scroll-link" data-target="#mhome-div6" data-offset="-95px" data-speed=" 1000"
                                 style="display: block; text-decoration: none;">
                                 <div class="cn-hover-box">
@@ -194,7 +194,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="empower-industry-box">
+                        <div class="empower-industry-box empower-industry-box1">
                             <a href="#" class="scroll-link" data-target="#mhome-div11" data-offset="-100px"
                                 data-speed=" 1500" style="display: block; text-decoration: none;">
                                 <div class="cn-hover-box">
@@ -1526,7 +1526,7 @@
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
-                                        <a href="javascript:void(0)" class="cn-main-content-enclosed">
+                                        <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                             <h3>Advanced Penetration Testing (Network, Web, Mobile, API, Cloud)</h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
@@ -1548,7 +1548,7 @@
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
-                                        <a href="javascript:void(0)" class="cn-main-content-enclosed">
+                                        <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                             <h3>Red Teaming (Full-Scope Attack Simulation)</h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
@@ -1570,7 +1570,7 @@
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
-                                        <a href="javascript:void(0)" class="cn-main-content-enclosed">
+                                        <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                             <h3>Purple Teaming (Collaborative Attack-Defense Drills)</h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
@@ -1592,7 +1592,7 @@
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
-                                        <a href="javascript:void(0)" class="cn-main-content-enclosed">
+                                        <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                             <h3>Cloud-Native Pentesting (AWS, Azure, GCP, Kubernetes)</h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
@@ -1614,7 +1614,7 @@
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
-                                        <a href="javascript:void(0)" class="cn-main-content-enclosed">
+                                        <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                             <h3>IoT & OT Security Hacking (Smart Devices, Industrial Systems)</h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
