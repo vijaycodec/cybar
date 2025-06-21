@@ -3843,6 +3843,22 @@
     white-space: nowrap;
     width: 100%;
 }
+.empower-industry-box .cn-main-content p:last-of-type {
+    font-size: 16px;
+    color: #23527c !important;
+    font-weight: 600 !important;
+    margin: 0; /* optional, to control spacing */
+    display: inline-block; /* keeps it inline with the icon */
+    cursor: pointer; /* optional, gives a clickable look */
+}
+
+.empower-industry-box a:hover .cn-main-content {
+    background-color: #dddddd !important;
+}
+.empower-industry-box .cn-main-content {
+    transition: background-color 0.3s ease;
+}
+
 @media screen and (min-width: 991px) {
     .empower-industry-box .cn-main-content {
         min-height: 168px;
