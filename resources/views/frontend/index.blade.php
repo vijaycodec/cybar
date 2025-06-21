@@ -80,131 +80,144 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="empower-industry-box">
-                            <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/vapt-services.webp') }}"
-                                        style="aspect-ratio: 1 / 1; height: auto;">
+                            <a href="#" class="scroll-link" data-target="#mhome-div2" data-offset="-90px" data-speed="400"
+                                style="display: block; text-decoration: none;">
+                                <div class="cn-hover-box">
+                                    <div class="cn-hover-img"> <img src="{{ asset('assets/images/vapt-services.webp') }}"
+                                            style="aspect-ratio: 1 / 1; height: auto;">
+                                    </div>
+                                    <div class="cn-content">
+                                        <p>Codec Networks offers advanced VAPT services to identify, exploit, and mitigate
+                                            security vulnerabilities across applications, networks, databases, and
+                                            infrastructure, ensuring robust cyber defense and compliance.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="cn-content">
-                                    <p>Codec Networks offers advanced VAPT services to identify, exploit, and mitigate
-                                        security vulnerabilities across applications, networks, databases, and
-                                        infrastructure, ensuring robust cyber defense and compliance.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="cn-main-content">
-                                <a href="#" class="cn-main-content-enclosed scroll-link" data-target="#mhome-div2"
-                                    data-offset="-90px" data-speed="400" style="display: block; text-decoration: none;">
+                                <div class="cn-main-content">
                                     <h3>Vulnerability Assesement &amp; Penetration Testing</h3>
                                     <p>Codec Networks offers advanced VAPT services to identify, exploit, and mitigate
                                         security vulnerabilities across applications, networks, databases, and
                                         infrastructure, ensuring robust cyber defense and compliance.
                                     </p>
-                                    Know more <i class="fa fa-chevron-right"></i>
-                                </a>
-                                {{-- <a href="https://www.cybarwind.com/new-demo/asaraf/codec/second-level.php">Know more <i
-                                        class="fa fa-chevron-right"></i></a> --}}
-                            </div>
+                                    <p>
+                                        Know more <i class="fa fa-chevron-right"></i>
+                                    </p>
+                                </div>
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="empower-industry-box">
-                            <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/forensic-seervices.webp') }}"
-                                        style="aspect-ratio: 1 / 1; height: auto;">
+                            <a href="#" class="scroll-link" data-target="#mhome-div4" data-offset="-100px" data-speed="600"
+                                style="display: block; text-decoration: none;">
+                                <div class="cn-hover-box">
+                                    <div class="cn-hover-img"> <img
+                                            src="{{ asset('assets/images/forensic-seervices.webp') }}"
+                                            style="aspect-ratio: 1 / 1; height: auto;">
+                                    </div>
+                                    <div class="cn-content">
+                                        <p>Codec Networks delivers expert consulting, audits, and compliance services to
+                                            help
+                                            businesses meet global cybersecurity standards, manage risks, and ensure
+                                            regulatory
+                                            readiness across industries.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="cn-content">
-                                    <p>Codec Networks delivers expert consulting, audits, and compliance services to help
-                                        businesses meet global cybersecurity standards, manage risks, and ensure regulatory
-                                        readiness across industries.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="cn-main-content">
-                                <a href="#" class="cn-main-content-enclosed scroll-link" data-target="#mhome-div4"
-                                    data-offset="-100px" data-speed="600" style="display: block; text-decoration: none;">
+                                <div class="cn-main-content">
                                     <h3>Governance, Risk &amp; Compliance</h3>
                                     <p>Codec Networks delivers expert consulting, audits, and compliance services to help
                                         businesses meet global cybersecurity standards, manage risks, and ensure regulatory
                                         readiness across industries
                                     </p>
-                                    Know more <i class="fa">&#xf054;</i>
-                                </a>
-                            </div>
+                                    <p>
+                                        Know more <i class="fa">&#xf054;</i>
+                                    </p>
+                                </div>
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="empower-industry-box">
-                            <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}"
-                                        style="aspect-ratio: 1 / 1; height: auto;"> </div>
-                                <div class="cn-content">
-                                    <p>Codec Networks provides 24x7 Managed SOC and Cyber Forensic services for real-time
-                                        threat detection, incident response, and digital investigations across cloud,
-                                        endpoint, and emerging tech environments.
-                                    </p>
+                            <a href="#" class="scroll-link" data-target="#mhome-div4-1" data-offset="-100px"
+                                data-speed=" 800" style="display: block; text-decoration: none;">
+                                <div class="cn-hover-box">
+                                    <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}"
+                                            style="aspect-ratio: 1 / 1; height: auto;"> </div>
+                                    <div class="cn-content">
+                                        <p>Codec Networks provides 24x7 Managed SOC and Cyber Forensic services for
+                                            real-time
+                                            threat detection, incident response, and digital investigations across cloud,
+                                            endpoint, and emerging tech environments.
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="cn-main-content">
-                                <a href="#" class="cn-main-content-enclosed scroll-link" data-target="#mhome-div4-1"
-                                    data-offset="-100px" data-speed=" 800" style="display: block; text-decoration: none;">
+                                <div class="cn-main-content">
                                     <h3>SOC (Security Operation Center) as a Service</h3>
                                     <p>Codec Networks provides 24x7 Managed SOC and Cyber Forensic services for real-time
                                         threat detection, incident response, and digital investigations across cloud,
                                         endpoint, and emerging tech environments.
                                     </p>
-                                    Know more <i class="fa">&#xf054;</i>
-                                </a>
-                            </div>
+                                    <p>
+                                        Know more <i class="fa">&#xf054;</i>
+                                    </p>
+                                </div>
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="empower-industry-box">
-                            <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}"
-                                        style="aspect-ratio: 1 / 1; height: auto;"> </div>
-                                <div class="cn-content">
-                                    <p>Codec Networks’ CoPE offers industry-driven cybersecurity education, hands-on
-                                        internships, and real-world projects to equip professionals with cutting-edge skills
-                                        for today’s evolving threat landscape.
-                                    </p>
+                            <a href="#" class="scroll-link" data-target="#mhome-div6" data-offset="-95px" data-speed=" 1000"
+                                style="display: block; text-decoration: none;">
+                                <div class="cn-hover-box">
+                                    <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}"
+                                            style="aspect-ratio: 1 / 1; height: auto;"> </div>
+                                    <div class="cn-content">
+                                        <p>Codec Networks’ CoPE offers industry-driven cybersecurity education, hands-on
+                                            internships, and real-world projects to equip professionals with cutting-edge
+                                            skills
+                                            for today’s evolving threat landscape.
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="cn-main-content">
-                                <a href="#" class="cn-main-content-enclosed scroll-link" data-target="#mhome-div6"
-                                    data-offset="-95px" data-speed=" 1000" style="display: block; text-decoration: none;">
+                                <div class="cn-main-content">
                                     <h3>Education</h3>
                                     <p>Codec Networks’ CoPE offers industry-driven cybersecurity education, hands-on
                                         internships, and real-world projects to equip professionals with cutting-edge skills
                                         for today’s evolving threat landscape.
                                     </p>
-                                    Know more <i class="fa">&#xf054;</i>
-                                </a>
-                            </div>
+                                    <p>
+                                        Know more <i class="fa">&#xf054;</i>
+                                    </p>
+                                </div>
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="empower-industry-box">
-                            <div class="cn-hover-box">
-                                <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}"
-                                        style="aspect-ratio: 1 / 1; height: auto;"> </div>
-                                <div class="cn-content">
-                                    <p>CN Insight by Codec Networks shares expert podcasts, blogs, and cybersecurity
-                                        news—delivering sharp insights, threat updates, and trends to keep professionals
-                                        informed and future-ready.
-                                    </p>
+                            <a href="#" class="scroll-link" data-target="#mhome-div11" data-offset="-100px"
+                                data-speed=" 1500" style="display: block; text-decoration: none;">
+                                <div class="cn-hover-box">
+                                    <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}"
+                                            style="aspect-ratio: 1 / 1; height: auto;"> </div>
+                                    <div class="cn-content">
+                                        <p>CN Insight by Codec Networks shares expert podcasts, blogs, and cybersecurity
+                                            news—delivering sharp insights, threat updates, and trends to keep professionals
+                                            informed and future-ready.
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="cn-main-content">
-                                <a href="#" class="cn-main-content-enclosed scroll-link" data-target="#mhome-div11"
-                                    data-offset="-100px" data-speed=" 1500" style="display: block; text-decoration: none;">
+                                <div class="cn-main-content">
                                     <h3>CN Insight</h3>
                                     <p>CN Insight by Codec Networks shares expert podcasts, blogs, and cybersecurity
                                         news—delivering sharp insights, threat updates, and trends to keep professionals
                                         informed and future-ready.
                                     </p>
-                                    Know more <i class="fa">&#xf054;</i>
-                                </a>
-                            </div>
+                                    <p>
+                                        Know more <i class="fa">&#xf054;</i>
+                                    </p>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -228,9 +241,9 @@
                         <ul id="tabs-nav1" class="home-tabs">
                             <li><a class="scr-tabs1" href="#tab11"> Application Security Testing </a></li>
                             <li><a class="scr-tabs1" href="#tab12">Network Security Testing </a></li>
-                            <li><a class="scr-tabs1" href="#tab13">Database Security Testing  </a></li>
-                            <li><a class="scr-tabs1" href="#tab14"> Server & Storage Security Testing  </a></li>
-                            <li><a class="scr-tabs1" href="#tab15"> People & Process Security Testing  </a>
+                            <li><a class="scr-tabs1" href="#tab13">Database Security Testing </a></li>
+                            <li><a class="scr-tabs1" href="#tab14"> Server & Storage Security Testing </a></li>
+                            <li><a class="scr-tabs1" href="#tab15"> People & Process Security Testing </a>
                             </li>
                         </ul>
                         <!-- END tabs-nav -->
@@ -244,7 +257,9 @@
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>Web Application Penetration Testing</h3>
-                                                            <p>Web Application Penetration Testing is the process of identifying, exploiting, and reporting security vulnerabilities in web apps to prevent real-world attacks.
+                                                            <p>Web Application Penetration Testing is the process of
+                                                                identifying, exploiting, and reporting security
+                                                                vulnerabilities in web apps to prevent real-world attacks.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -253,7 +268,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Mobile App Security Testing </h3>
-                                                            <p>Mobile App Security Testing involves analyzing mobile applications to identify security flaws, data leaks, and vulnerabilities across Android and iOS platforms.
+                                                            <p>Mobile App Security Testing involves analyzing mobile
+                                                                applications to identify security flaws, data leaks, and
+                                                                vulnerabilities across Android and iOS platforms.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -262,7 +279,9 @@
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>API Security Testing </h3>
-                                                            <p>API Security Testing ensures APIs are protected against vulnerabilities by identifying flaws like authentication issues, data exposure, and injection attacks.
+                                                            <p>API Security Testing ensures APIs are protected against
+                                                                vulnerabilities by identifying flaws like authentication
+                                                                issues, data exposure, and injection attacks.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -271,7 +290,10 @@
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>Thick Client/Desktop App Testing </h3>
-                                                            <p>Thick Client/Desktop App Testing involves assessing security risks in desktop applications, focusing on data storage, authentication, and client-server communication vulnerabilities.
+                                                            <p>Thick Client/Desktop App Testing involves assessing security
+                                                                risks in desktop applications, focusing on data storage,
+                                                                authentication, and client-server communication
+                                                                vulnerabilities.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -280,7 +302,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Cloud-Native App Testing </h3>
-                                                            <p>Cloud-Native App Testing evaluates the security of applications built for cloud environments, focusing on containers, microservices, APIs, and cloud configurations.
+                                                            <p>Cloud-Native App Testing evaluates the security of
+                                                                applications built for cloud environments, focusing on
+                                                                containers, microservices, APIs, and cloud configurations.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -289,7 +313,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Smart Contract Audits </h3>
-                                                            <p>Smart Contract Audits involve reviewing blockchain-based code to identify vulnerabilities, logic errors, and security risks before deployment on decentralized platforms.
+                                                            <p>Smart Contract Audits involve reviewing blockchain-based code
+                                                                to identify vulnerabilities, logic errors, and security
+                                                                risks before deployment on decentralized platforms.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -298,7 +324,10 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>DApp Security Testing </h3>
-                                                            <p>DApp Security Testing assesses decentralized applications for vulnerabilities in smart contracts, blockchain interactions, authentication, and data integrity across distributed networks.
+                                                            <p>DApp Security Testing assesses decentralized applications for
+                                                                vulnerabilities in smart contracts, blockchain interactions,
+                                                                authentication, and data integrity across distributed
+                                                                networks.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -306,8 +335,10 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>SAST + DAST  </h3>
-                                                            <p>SAST + DAST combines static and dynamic analysis to identify security vulnerabilities in source code and runtime behavior of applications during development.
+                                                            <h3>SAST + DAST </h3>
+                                                            <p>SAST + DAST combines static and dynamic analysis to identify
+                                                                security vulnerabilities in source code and runtime behavior
+                                                                of applications during development.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -316,7 +347,10 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>CI/CD Pipeline Security Testing </h3>
-                                                            <p>CI/CD Pipeline Security Testing evaluates automated build and deployment workflows to detect vulnerabilities, misconfigurations, and insecure integrations in DevOps environments.
+                                                            <p>CI/CD Pipeline Security Testing evaluates automated build and
+                                                                deployment workflows to detect vulnerabilities,
+                                                                misconfigurations, and insecure integrations in DevOps
+                                                                environments.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -325,11 +359,13 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Zero-Day Vulnerability Exploitation Testing</h3>
-                                                            <p>Zero-Day Vulnerability Exploitation Testing simulates attacks using unknown vulnerabilities to assess an organization’s ability to detect, prevent, and respond to emerging threats.
+                                                            <p>Zero-Day Vulnerability Exploitation Testing simulates attacks
+                                                                using unknown vulnerabilities to assess an organization’s
+                                                                ability to detect, prevent, and respond to emerging threats.
                                                             </p>
                                                         </div>
                                                     </div>
-                                                </div>  
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -344,7 +380,10 @@
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>External/Internal Network Pentesting </h3>
-                                                            <p>External/Internal Network Penetration Testing identifies vulnerabilities in network infrastructure by simulating real-world attacks from both outside and inside the organization.
+                                                            <p>External/Internal Network Penetration Testing identifies
+                                                                vulnerabilities in network infrastructure by simulating
+                                                                real-world attacks from both outside and inside the
+                                                                organization.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -352,8 +391,11 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Wireless Security Testing  </h3>
-                                                            <p>Wireless Security Testing evaluates Wi-Fi networks for vulnerabilities such as weak encryption, rogue access points, and unauthorized access to ensure secure communication.
+                                                            <h3>Wireless Security Testing </h3>
+                                                            <p>Wireless Security Testing evaluates Wi-Fi networks for
+                                                                vulnerabilities such as weak encryption, rogue access
+                                                                points, and unauthorized access to ensure secure
+                                                                communication.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -361,8 +403,10 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>Cloud Infrastructure Testing  </h3>
-                                                            <p>Cloud Infrastructure Testing assesses cloud environments for misconfigurations, access control flaws, and vulnerabilities to ensure secure deployment and management of resources.
+                                                            <h3>Cloud Infrastructure Testing </h3>
+                                                            <p>Cloud Infrastructure Testing assesses cloud environments for
+                                                                misconfigurations, access control flaws, and vulnerabilities
+                                                                to ensure secure deployment and management of resources.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -371,7 +415,9 @@
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>VPN & Remote Work Security Testing</h3>
-                                                            <p>VPN & Remote Work Security Testing evaluates remote access solutions for vulnerabilities, misconfigurations, and data exposure risks to ensure secure remote connectivity.
+                                                            <p>VPN & Remote Work Security Testing evaluates remote access
+                                                                solutions for vulnerabilities, misconfigurations, and data
+                                                                exposure risks to ensure secure remote connectivity.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -380,7 +426,10 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>IoT/OT Network Testing </h3>
-                                                            <p>IoT/OT Network Testing identifies security vulnerabilities in Internet of Things and Operational Technology networks, focusing on device communication, protocols, and access controls.
+                                                            <p>IoT/OT Network Testing identifies security vulnerabilities in
+                                                                Internet of Things and Operational Technology networks,
+                                                                focusing on device communication, protocols, and access
+                                                                controls.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -389,7 +438,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Blockchain Node Testing </h3>
-                                                            <p>Blockchain Node Testing assesses the security and integrity of blockchain nodes, focusing on configuration, consensus mechanisms, data validation, and network communication.
+                                                            <p>Blockchain Node Testing assesses the security and integrity
+                                                                of blockchain nodes, focusing on configuration, consensus
+                                                                mechanisms, data validation, and network communication.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -398,7 +449,10 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>5G Network Security Testing </h3>
-                                                            <p>5G Network Security Testing evaluates 5G infrastructure for vulnerabilities in protocols, slicing, authentication, and data transmission to ensure secure connectivity and performance.
+                                                            <p>5G Network Security Testing evaluates 5G infrastructure for
+                                                                vulnerabilities in protocols, slicing, authentication, and
+                                                                data transmission to ensure secure connectivity and
+                                                                performance.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -407,7 +461,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Red Team Exercises </h3>
-                                                            <p>Red Team Exercises simulate real-world cyberattacks to test an organization’s detection, response, and defense capabilities across systems, networks, and employees.
+                                                            <p>Red Team Exercises simulate real-world cyberattacks to test
+                                                                an organization’s detection, response, and defense
+                                                                capabilities across systems, networks, and employees.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -416,7 +472,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>PCI DSS Network Compliance Testing</h3>
-                                                            <p>PCI DSS Network Compliance Testing assesses network security controls to ensure compliance with PCI standards for protecting cardholder data and preventing breaches.
+                                                            <p>PCI DSS Network Compliance Testing assesses network security
+                                                                controls to ensure compliance with PCI standards for
+                                                                protecting cardholder data and preventing breaches.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -425,7 +483,10 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Zero Trust Architecture (ZTA) Assessments</h3>
-                                                            <p>Zero Trust Architecture (ZTA) Assessments evaluate security frameworks that enforce strict identity verification and least privilege access across users, devices, and applications.
+                                                            <p>Zero Trust Architecture (ZTA) Assessments evaluate security
+                                                                frameworks that enforce strict identity verification and
+                                                                least privilege access across users, devices, and
+                                                                applications.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -444,7 +505,10 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>SQL Injection & NoSQL Testing </h3>
-                                                            <p>SQL Injection & NoSQL Testing identifies injection vulnerabilities in traditional and NoSQL databases to prevent unauthorized data access, manipulation, and breaches.
+                                                            <p>SQL Injection & NoSQL Testing identifies injection
+                                                                vulnerabilities in traditional and NoSQL databases to
+                                                                prevent unauthorized data access, manipulation, and
+                                                                breaches.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -453,7 +517,9 @@
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>Database Misconfiguration Reviews </h3>
-                                                            <p>Database Misconfiguration Reviews assess database settings to identify weak permissions, default credentials, and insecure configurations that could lead to data breaches.
+                                                            <p>Database Misconfiguration Reviews assess database settings to
+                                                                identify weak permissions, default credentials, and insecure
+                                                                configurations that could lead to data breaches.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -462,7 +528,9 @@
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>Data Encryption Testing </h3>
-                                                            <p>Data Encryption Testing evaluates encryption methods used for data at rest and in transit to ensure confidentiality, integrity, and compliance with security standards.
+                                                            <p>Data Encryption Testing evaluates encryption methods used for
+                                                                data at rest and in transit to ensure confidentiality,
+                                                                integrity, and compliance with security standards.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -470,8 +538,10 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Big Data Security Testing  </h3>
-                                                            <p>Big Data Security Testing examines large-scale data systems for vulnerabilities in storage, processing, access controls, and data leakage risks across distributed environments.
+                                                            <h3>Big Data Security Testing </h3>
+                                                            <p>Big Data Security Testing examines large-scale data systems
+                                                                for vulnerabilities in storage, processing, access controls,
+                                                                and data leakage risks across distributed environments.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -480,7 +550,10 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Active Directory (AD) Exploitation Testing </h3>
-                                                            <p>Active Directory (AD) Exploitation Testing identifies security weaknesses in AD configurations, permissions, and trust relationships to prevent privilege escalation and lateral movement.
+                                                            <p>Active Directory (AD) Exploitation Testing identifies
+                                                                security weaknesses in AD configurations, permissions, and
+                                                                trust relationships to prevent privilege escalation and
+                                                                lateral movement.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -489,7 +562,9 @@
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>Blockchain Storage Testing </h3>
-                                                            <p>Blockchain Storage Testing evaluates the security of on-chain and off-chain data storage to prevent tampering, unauthorized access, and data integrity issues.
+                                                            <p>Blockchain Storage Testing evaluates the security of on-chain
+                                                                and off-chain data storage to prevent tampering,
+                                                                unauthorized access, and data integrity issues.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -498,7 +573,9 @@
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>Data Masking & Anonymization Testing </h3>
-                                                            <p>Data Masking & Anonymization Testing assesses techniques used to protect sensitive data by replacing or obfuscating identifiers while preserving usability and compliance.
+                                                            <p>Data Masking & Anonymization Testing assesses techniques used
+                                                                to protect sensitive data by replacing or obfuscating
+                                                                identifiers while preserving usability and compliance.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -507,7 +584,10 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Database Audit Logging & Monitoring Tests</h3>
-                                                            <p>Database Audit Logging & Monitoring Tests verify the effectiveness of logging mechanisms to track access, detect anomalies, and ensure compliance with data security policies.
+                                                            <p>Database Audit Logging & Monitoring Tests verify the
+                                                                effectiveness of logging mechanisms to track access, detect
+                                                                anomalies, and ensure compliance with data security
+                                                                policies.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -516,7 +596,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Cloud Database Testing </h3>
-                                                            <p>Cloud Database Testing evaluates cloud-hosted databases for vulnerabilities, access control flaws, encryption, and configuration issues to ensure data security and compliance.
+                                                            <p>Cloud Database Testing evaluates cloud-hosted databases for
+                                                                vulnerabilities, access control flaws, encryption, and
+                                                                configuration issues to ensure data security and compliance.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -525,7 +607,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Data Exfiltration Simulation </h3>
-                                                            <p>Data Exfiltration Simulation mimics unauthorized data extraction techniques to assess an organization’s ability to detect, prevent, and respond to data breaches.
+                                                            <p>Data Exfiltration Simulation mimics unauthorized data
+                                                                extraction techniques to assess an organization’s ability to
+                                                                detect, prevent, and respond to data breaches.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -534,7 +618,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Dark Web OSINT: Automate Threat Monitoring</h3>
-                                                            <p>Dark Web OSINT: Automate Threat Monitoring uses open-source intelligence tools to continuously monitor dark web sources for leaked data, threats, and credentials.
+                                                            <p>Dark Web OSINT: Automate Threat Monitoring uses open-source
+                                                                intelligence tools to continuously monitor dark web sources
+                                                                for leaked data, threats, and credentials.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -554,7 +640,9 @@
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>OS Hardening Assessments</h3>
-                                                            <p>Evaluate operating systems for weak configurations, unnecessary services, missing patches, and privilege escalation to strengthen endpoint-level cyber defenses.</p>
+                                                            <p>Evaluate operating systems for weak configurations,
+                                                                unnecessary services, missing patches, and privilege
+                                                                escalation to strengthen endpoint-level cyber defenses.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -563,7 +651,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Container Security Testing</h3>
-                                                            <p>Test container images, configurations, and Kubernetes environments to detect vulnerabilities, exposed APIs, and insecure runtime or permission settings.</p>
+                                                            <p>Test container images, configurations, and Kubernetes
+                                                                environments to detect vulnerabilities, exposed APIs, and
+                                                                insecure runtime or permission settings.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -572,7 +662,9 @@
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>Cloud VM Pentesting</h3>
-                                                            <p>Perform penetration testing on cloud virtual machines to uncover misconfigurations, exposed services, insecure access keys, and privilege escalation risks.</p>
+                                                            <p>Perform penetration testing on cloud virtual machines to
+                                                                uncover misconfigurations, exposed services, insecure access
+                                                                keys, and privilege escalation risks.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -581,7 +673,9 @@
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>SAN/NAS Storage Testing</h3>
-                                                            <p>Assess SAN/NAS systems for data exposure, weak credentials, encryption flaws, firmware vulnerabilities, and unauthorized access or privilege escalation risks.</p>
+                                                            <p>Assess SAN/NAS systems for data exposure, weak credentials,
+                                                                encryption flaws, firmware vulnerabilities, and unauthorized
+                                                                access or privilege escalation risks.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -590,7 +684,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Serverless Security Testing</h3>
-                                                            <p>Test cloud-native serverless apps for insecure triggers, misconfigured roles, privilege abuse, and event injection vulnerabilities affecting cloud functions.</p>
+                                                            <p>Test cloud-native serverless apps for insecure triggers,
+                                                                misconfigured roles, privilege abuse, and event injection
+                                                                vulnerabilities affecting cloud functions.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -599,7 +695,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Hypervisor & Virtualization Testing</h3>
-                                                            <p>Evaluate hypervisors for breakout attacks, insecure configurations, weak inter-VM isolation, and exposed management interfaces in virtualized infrastructure.</p>
+                                                            <p>Evaluate hypervisors for breakout attacks, insecure
+                                                                configurations, weak inter-VM isolation, and exposed
+                                                                management interfaces in virtualized infrastructure.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -608,7 +706,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Blockchain Validator Node Security</h3>
-                                                            <p>Audit validator nodes for key exposure, consensus manipulation, DDoS attack vectors, and insecure APIs within blockchain infrastructure environments.</p>
+                                                            <p>Audit validator nodes for key exposure, consensus
+                                                                manipulation, DDoS attack vectors, and insecure APIs within
+                                                                blockchain infrastructure environments.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -617,7 +717,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Backup Storage Security Testing</h3>
-                                                            <p>Check backup storage for improper access controls, outdated software, encryption failures, and vulnerabilities exploitable by ransomware or insider threats.</p>
+                                                            <p>Check backup storage for improper access controls, outdated
+                                                                software, encryption failures, and vulnerabilities
+                                                                exploitable by ransomware or insider threats.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -626,7 +728,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Firmware Security Testing</h3>
-                                                            <p>Analyze firmware for backdoors, hardcoded credentials, outdated modules, insecure update mechanisms, and vulnerabilities exploitable at the hardware layer.</p>
+                                                            <p>Analyze firmware for backdoors, hardcoded credentials,
+                                                                outdated modules, insecure update mechanisms, and
+                                                                vulnerabilities exploitable at the hardware layer.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -635,7 +739,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Email Server Testing</h3>
-                                                            <p>Test mail servers for spoofing, open relays, weak authentication, vulnerable mail protocols, and exposure to phishing or spam attacks.</p>
+                                                            <p>Test mail servers for spoofing, open relays, weak
+                                                                authentication, vulnerable mail protocols, and exposure to
+                                                                phishing or spam attacks.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -655,7 +761,9 @@
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>Phishing Simulation & Awareness Training</h3>
-                                                            <p>Simulate phishing attacks to evaluate employee response and improve security awareness, reducing organizational exposure to social engineering threats.</p>
+                                                            <p>Simulate phishing attacks to evaluate employee response and
+                                                                improve security awareness, reducing organizational exposure
+                                                                to social engineering threats.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -664,7 +772,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Red Team Exercises</h3>
-                                                            <p>Simulate real-world attacks across infrastructure, applications, and users to identify security gaps and validate defensive response effectiveness.</p>
+                                                            <p>Simulate real-world attacks across infrastructure,
+                                                                applications, and users to identify security gaps and
+                                                                validate defensive response effectiveness.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -673,7 +783,9 @@
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>Insider Threat Simulations</h3>
-                                                            <p>Test organizational resilience against insider threats by simulating privileged misuse, sabotage, data exfiltration, and policy circumvention scenarios.</p>
+                                                            <p>Test organizational resilience against insider threats by
+                                                                simulating privileged misuse, sabotage, data exfiltration,
+                                                                and policy circumvention scenarios.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -682,7 +794,9 @@
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>IAM & MFA Bypass Testing</h3>
-                                                            <p>Assess identity and access management systems for vulnerabilities that allow bypassing MFA, privilege abuse, and unauthorized access escalation techniques.</p>
+                                                            <p>Assess identity and access management systems for
+                                                                vulnerabilities that allow bypassing MFA, privilege abuse,
+                                                                and unauthorized access escalation techniques.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -691,7 +805,9 @@
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>Process Bypass Testing</h3>
-                                                            <p>Test business workflows, security operations, and policy enforcement mechanisms for weaknesses exploitable by attackers or malicious insiders.</p>
+                                                            <p>Test business workflows, security operations, and policy
+                                                                enforcement mechanisms for weaknesses exploitable by
+                                                                attackers or malicious insiders.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -700,7 +816,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Crypto Social Engineering Tests</h3>
-                                                            <p>Evaluate human-layer risks in crypto platforms using phishing, impersonation, and manipulation to access wallets, private keys, or assets.</p>
+                                                            <p>Evaluate human-layer risks in crypto platforms using
+                                                                phishing, impersonation, and manipulation to access wallets,
+                                                                private keys, or assets.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -709,7 +827,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>DAO Governance Attack Simulations</h3>
-                                                            <p>Simulate governance manipulation attacks in DAOs to identify vulnerabilities in smart contracts, quorum logic, and decision-making processes.</p>
+                                                            <p>Simulate governance manipulation attacks in DAOs to identify
+                                                                vulnerabilities in smart contracts, quorum logic, and
+                                                                decision-making processes.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -718,7 +838,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Compliance Testing</h3>
-                                                            <p>Validate cybersecurity posture against frameworks like ISO 27001, SOC2, GDPR, or HIPAA by auditing technical and procedural security controls.</p>
+                                                            <p>Validate cybersecurity posture against frameworks like ISO
+                                                                27001, SOC2, GDPR, or HIPAA by auditing technical and
+                                                                procedural security controls.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -727,7 +849,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Tabletop Exercises</h3>
-                                                            <p>Conduct scenario-based tabletop drills to assess incident response capabilities, improve decision-making, and align teams with security playbooks.</p>
+                                                            <p>Conduct scenario-based tabletop drills to assess incident
+                                                                response capabilities, improve decision-making, and align
+                                                                teams with security playbooks.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -736,7 +860,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>AI-Powered Deepfake Testing</h3>
-                                                            <p>Identify organizational vulnerabilities to AI-generated deepfakes by simulating voice and video-based impersonation for fraud, manipulation, or breaches.</p>
+                                                            <p>Identify organizational vulnerabilities to AI-generated
+                                                                deepfakes by simulating voice and video-based impersonation
+                                                                for fraud, manipulation, or breaches.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -767,7 +893,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Web Application Penetration Testing</h3>
-                                            <p>Web Application Penetration Testing is the process of identifying, exploiting, and reporting security vulnerabilities in web apps to prevent real-world attacks.</p>
+                                            <p>Web Application Penetration Testing is the process of identifying,
+                                                exploiting, and reporting security vulnerabilities in web apps to prevent
+                                                real-world attacks.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
@@ -777,7 +905,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Mobile App Security Testing</h3>
-                                            <p>Mobile App Security Testing involves analyzing mobile applications to identify security flaws, data leaks, and vulnerabilities across Android and iOS platforms.</p>
+                                            <p>Mobile App Security Testing involves analyzing mobile applications to
+                                                identify security flaws, data leaks, and vulnerabilities across Android and
+                                                iOS platforms.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
@@ -787,7 +917,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>API Security Testing</h3>
-                                            <p>API Security Testing ensures APIs are protected against vulnerabilities by identifying flaws like authentication issues, data exposure, and injection attacks.</p>
+                                            <p>API Security Testing ensures APIs are protected against vulnerabilities by
+                                                identifying flaws like authentication issues, data exposure, and injection
+                                                attacks.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
@@ -797,7 +929,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Thick Client/Desktop App Testing</h3>
-                                            <p>Thick Client/Desktop App Testing involves assessing security risks in desktop applications, focusing on data storage, authentication, and client-server communication vulnerabilities.</p>
+                                            <p>Thick Client/Desktop App Testing involves assessing security risks in desktop
+                                                applications, focusing on data storage, authentication, and client-server
+                                                communication vulnerabilities.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
@@ -807,7 +941,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Cloud-Native App Testing</h3>
-                                            <p>Cloud-Native App Testing evaluates the security of applications built for cloud environments, focusing on containers, microservices, APIs, and cloud configurations.</p>
+                                            <p>Cloud-Native App Testing evaluates the security of applications built for
+                                                cloud environments, focusing on containers, microservices, APIs, and cloud
+                                                configurations.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
@@ -817,7 +953,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Smart Contract Audits</h3>
-                                            <p>Smart Contract Audits involve reviewing blockchain-based code to identify vulnerabilities, logic errors, and security risks before deployment on decentralized platforms.</p>
+                                            <p>Smart Contract Audits involve reviewing blockchain-based code to identify
+                                                vulnerabilities, logic errors, and security risks before deployment on
+                                                decentralized platforms.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
@@ -827,7 +965,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>DApp Security Testing</h3>
-                                            <p>DApp Security Testing assesses decentralized applications for vulnerabilities in smart contracts, blockchain interactions, authentication, and data integrity across distributed networks.</p>
+                                            <p>DApp Security Testing assesses decentralized applications for vulnerabilities
+                                                in smart contracts, blockchain interactions, authentication, and data
+                                                integrity across distributed networks.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
@@ -837,7 +977,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>SAST + DAST</h3>
-                                            <p>SAST + DAST combines static and dynamic analysis to identify security vulnerabilities in source code and runtime behavior of applications during development.</p>
+                                            <p>SAST + DAST combines static and dynamic analysis to identify security
+                                                vulnerabilities in source code and runtime behavior of applications during
+                                                development.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
@@ -847,7 +989,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>CI/CD Pipeline Security Testing</h3>
-                                            <p>CI/CD Pipeline Security Testing evaluates automated build and deployment workflows to detect vulnerabilities, misconfigurations, and insecure integrations in DevOps environments.</p>
+                                            <p>CI/CD Pipeline Security Testing evaluates automated build and deployment
+                                                workflows to detect vulnerabilities, misconfigurations, and insecure
+                                                integrations in DevOps environments.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
@@ -857,7 +1001,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Zero-Day Vulnerability Exploitation Testing</h3>
-                                            <p>Zero-Day Vulnerability Exploitation Testing simulates attacks using unknown vulnerabilities to assess an organization’s ability to detect, prevent, and respond to emerging threats.</p>
+                                            <p>Zero-Day Vulnerability Exploitation Testing simulates attacks using unknown
+                                                vulnerabilities to assess an organization’s ability to detect, prevent, and
+                                                respond to emerging threats.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
@@ -883,7 +1029,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>External/Internal Network Pentesting</h3>
-                                            <p>External/Internal Network Penetration Testing identifies vulnerabilities in network infrastructure by simulating real-world attacks from both outside and inside the organization.</p>
+                                            <p>External/Internal Network Penetration Testing identifies vulnerabilities in
+                                                network infrastructure by simulating real-world attacks from both outside
+                                                and inside the organization.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -891,7 +1039,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Wireless Security Testing</h3>
-                                            <p>Wireless Security Testing evaluates Wi-Fi networks for vulnerabilities such as weak encryption, rogue access points, and unauthorized access to ensure secure communication.</p>
+                                            <p>Wireless Security Testing evaluates Wi-Fi networks for vulnerabilities such
+                                                as weak encryption, rogue access points, and unauthorized access to ensure
+                                                secure communication.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -899,7 +1049,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Cloud Infrastructure Testing</h3>
-                                            <p>Cloud Infrastructure Testing assesses cloud environments for misconfigurations, access control flaws, and vulnerabilities to ensure secure deployment and management of resources.</p>
+                                            <p>Cloud Infrastructure Testing assesses cloud environments for
+                                                misconfigurations, access control flaws, and vulnerabilities to ensure
+                                                secure deployment and management of resources.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -907,7 +1059,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>VPN & Remote Work Security Testing</h3>
-                                            <p>VPN & Remote Work Security Testing evaluates remote access solutions for vulnerabilities, misconfigurations, and data exposure risks to ensure secure remote connectivity.</p>
+                                            <p>VPN & Remote Work Security Testing evaluates remote access solutions for
+                                                vulnerabilities, misconfigurations, and data exposure risks to ensure secure
+                                                remote connectivity.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -915,7 +1069,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>IoT/OT Network Testing</h3>
-                                            <p>IoT/OT Network Testing identifies security vulnerabilities in Internet of Things and Operational Technology networks, focusing on device communication, protocols, and access controls.</p>
+                                            <p>IoT/OT Network Testing identifies security vulnerabilities in Internet of
+                                                Things and Operational Technology networks, focusing on device
+                                                communication, protocols, and access controls.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -923,7 +1079,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Blockchain Node Testing</h3>
-                                            <p>Blockchain Node Testing assesses the security and integrity of blockchain nodes, focusing on configuration, consensus mechanisms, data validation, and network communication.</p>
+                                            <p>Blockchain Node Testing assesses the security and integrity of blockchain
+                                                nodes, focusing on configuration, consensus mechanisms, data validation, and
+                                                network communication.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -931,7 +1089,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>5G Network Security Testing</h3>
-                                            <p>5G Network Security Testing evaluates 5G infrastructure for vulnerabilities in protocols, slicing, authentication, and data transmission to ensure secure connectivity and performance.</p>
+                                            <p>5G Network Security Testing evaluates 5G infrastructure for vulnerabilities
+                                                in protocols, slicing, authentication, and data transmission to ensure
+                                                secure connectivity and performance.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -939,7 +1099,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Red Team Exercises</h3>
-                                            <p>Red Team Exercises simulate real-world cyberattacks to test an organization’s detection, response, and defense capabilities across systems, networks, and employees.</p>
+                                            <p>Red Team Exercises simulate real-world cyberattacks to test an organization’s
+                                                detection, response, and defense capabilities across systems, networks, and
+                                                employees.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -947,7 +1109,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>PCI DSS Network Compliance Testing</h3>
-                                            <p>PCI DSS Network Compliance Testing assesses network security controls to ensure compliance with PCI standards for protecting cardholder data and preventing breaches.</p>
+                                            <p>PCI DSS Network Compliance Testing assesses network security controls to
+                                                ensure compliance with PCI standards for protecting cardholder data and
+                                                preventing breaches.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -955,7 +1119,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Zero Trust Architecture (ZTA) Assessments</h3>
-                                            <p>Zero Trust Architecture (ZTA) Assessments evaluate security frameworks that enforce strict identity verification and least privilege access across users, devices, and applications.</p>
+                                            <p>Zero Trust Architecture (ZTA) Assessments evaluate security frameworks that
+                                                enforce strict identity verification and least privilege access across
+                                                users, devices, and applications.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -979,7 +1145,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>SQL Injection & NoSQL Testing</h3>
-                                            <p>SQL Injection & NoSQL Testing identifies injection vulnerabilities in traditional and NoSQL databases to prevent unauthorized data access, manipulation, and breaches.</p>
+                                            <p>SQL Injection & NoSQL Testing identifies injection vulnerabilities in
+                                                traditional and NoSQL databases to prevent unauthorized data access,
+                                                manipulation, and breaches.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -987,7 +1155,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Database Misconfiguration Reviews</h3>
-                                            <p>Database Misconfiguration Reviews assess database settings to identify weak permissions, default credentials, and insecure configurations that could lead to data breaches.</p>
+                                            <p>Database Misconfiguration Reviews assess database settings to identify weak
+                                                permissions, default credentials, and insecure configurations that could
+                                                lead to data breaches.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -995,7 +1165,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Data Encryption Testing</h3>
-                                            <p>Data Encryption Testing evaluates encryption methods used for data at rest and in transit to ensure confidentiality, integrity, and compliance with security standards.</p>
+                                            <p>Data Encryption Testing evaluates encryption methods used for data at rest
+                                                and in transit to ensure confidentiality, integrity, and compliance with
+                                                security standards.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -1003,7 +1175,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Big Data Security Testing</h3>
-                                            <p>Big Data Security Testing examines large-scale data systems for vulnerabilities in storage, processing, access controls, and data leakage risks across distributed environments.</p>
+                                            <p>Big Data Security Testing examines large-scale data systems for
+                                                vulnerabilities in storage, processing, access controls, and data leakage
+                                                risks across distributed environments.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -1011,7 +1185,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Active Directory (AD) Exploitation Testing</h3>
-                                            <p>Active Directory (AD) Exploitation Testing identifies security weaknesses in AD configurations, permissions, and trust relationships to prevent privilege escalation and lateral movement.</p>
+                                            <p>Active Directory (AD) Exploitation Testing identifies security weaknesses in
+                                                AD configurations, permissions, and trust relationships to prevent privilege
+                                                escalation and lateral movement.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -1019,7 +1195,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Blockchain Storage Testing</h3>
-                                            <p>Blockchain Storage Testing evaluates the security of on-chain and off-chain data storage to prevent tampering, unauthorized access, and data integrity issues.</p>
+                                            <p>Blockchain Storage Testing evaluates the security of on-chain and off-chain
+                                                data storage to prevent tampering, unauthorized access, and data integrity
+                                                issues.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -1027,7 +1205,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Data Masking & Anonymization Testing</h3>
-                                            <p>Data Masking & Anonymization Testing assesses techniques used to protect sensitive data by replacing or obfuscating identifiers while preserving usability and compliance.</p>
+                                            <p>Data Masking & Anonymization Testing assesses techniques used to protect
+                                                sensitive data by replacing or obfuscating identifiers while preserving
+                                                usability and compliance.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -1035,7 +1215,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Database Audit Logging & Monitoring Tests</h3>
-                                            <p>Database Audit Logging & Monitoring Tests verify the effectiveness of logging mechanisms to track access, detect anomalies, and ensure compliance with data security policies.</p>
+                                            <p>Database Audit Logging & Monitoring Tests verify the effectiveness of logging
+                                                mechanisms to track access, detect anomalies, and ensure compliance with
+                                                data security policies.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -1043,7 +1225,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Cloud Database Testing</h3>
-                                            <p>Cloud Database Testing evaluates cloud-hosted databases for vulnerabilities, access control flaws, encryption, and configuration issues to ensure data security and compliance.</p>
+                                            <p>Cloud Database Testing evaluates cloud-hosted databases for vulnerabilities,
+                                                access control flaws, encryption, and configuration issues to ensure data
+                                                security and compliance.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -1051,7 +1235,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Data Exfiltration Simulation</h3>
-                                            <p>Data Exfiltration Simulation mimics unauthorized data extraction techniques to assess an organization’s ability to detect, prevent, and respond to data breaches.</p>
+                                            <p>Data Exfiltration Simulation mimics unauthorized data extraction techniques
+                                                to assess an organization’s ability to detect, prevent, and respond to data
+                                                breaches.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -1059,7 +1245,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Dark Web OSINT: Automate Threat Monitoring</h3>
-                                            <p>Dark Web OSINT: Automate Threat Monitoring uses open-source intelligence tools to continuously monitor dark web sources for leaked data, threats, and credentials.</p>
+                                            <p>Dark Web OSINT: Automate Threat Monitoring uses open-source intelligence
+                                                tools to continuously monitor dark web sources for leaked data, threats, and
+                                                credentials.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -1085,7 +1273,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>OS Hardening Assessments</h3>
-                                            <p>Evaluate operating systems for weak configurations, unnecessary services, missing patches, and privilege escalation to strengthen endpoint-level cyber defenses.</p>
+                                            <p>Evaluate operating systems for weak configurations, unnecessary services,
+                                                missing patches, and privilege escalation to strengthen endpoint-level cyber
+                                                defenses.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -1093,7 +1283,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Container Security Testing</h3>
-                                            <p>Test container images, configurations, and Kubernetes environments to detect vulnerabilities, exposed APIs, and insecure runtime or permission settings.</p>
+                                            <p>Test container images, configurations, and Kubernetes environments to detect
+                                                vulnerabilities, exposed APIs, and insecure runtime or permission settings.
+                                            </p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -1101,7 +1293,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Cloud VM Pentesting</h3>
-                                            <p>Perform penetration testing on cloud virtual machines to uncover misconfigurations, exposed services, insecure access keys, and privilege escalation risks.</p>
+                                            <p>Perform penetration testing on cloud virtual machines to uncover
+                                                misconfigurations, exposed services, insecure access keys, and privilege
+                                                escalation risks.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -1109,7 +1303,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>SAN/NAS Storage Testing</h3>
-                                            <p>Assess SAN/NAS systems for data exposure, weak credentials, encryption flaws, firmware vulnerabilities, and unauthorized access or privilege escalation risks.</p>
+                                            <p>Assess SAN/NAS systems for data exposure, weak credentials, encryption flaws,
+                                                firmware vulnerabilities, and unauthorized access or privilege escalation
+                                                risks.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -1117,7 +1313,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Serverless Security Testing</h3>
-                                            <p>Test cloud-native serverless apps for insecure triggers, misconfigured roles, privilege abuse, and event injection vulnerabilities affecting cloud functions.</p>
+                                            <p>Test cloud-native serverless apps for insecure triggers, misconfigured roles,
+                                                privilege abuse, and event injection vulnerabilities affecting cloud
+                                                functions.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -1125,7 +1323,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Hypervisor & Virtualization Testing</h3>
-                                            <p>Evaluate hypervisors for breakout attacks, insecure configurations, weak inter-VM isolation, and exposed management interfaces in virtualized infrastructure.</p>
+                                            <p>Evaluate hypervisors for breakout attacks, insecure configurations, weak
+                                                inter-VM isolation, and exposed management interfaces in virtualized
+                                                infrastructure.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -1133,7 +1333,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Blockchain Validator Node Security</h3>
-                                            <p>Audit validator nodes for key exposure, consensus manipulation, DDoS attack vectors, and insecure APIs within blockchain infrastructure environments.</p>
+                                            <p>Audit validator nodes for key exposure, consensus manipulation, DDoS attack
+                                                vectors, and insecure APIs within blockchain infrastructure environments.
+                                            </p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -1141,7 +1343,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Backup Storage Security Testing</h3>
-                                            <p>Check backup storage for improper access controls, outdated software, encryption failures, and vulnerabilities exploitable by ransomware or insider threats.</p>
+                                            <p>Check backup storage for improper access controls, outdated software,
+                                                encryption failures, and vulnerabilities exploitable by ransomware or
+                                                insider threats.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -1149,7 +1353,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Firmware Security Testing</h3>
-                                            <p>Analyze firmware for backdoors, hardcoded credentials, outdated modules, insecure update mechanisms, and vulnerabilities exploitable at the hardware layer.</p>
+                                            <p>Analyze firmware for backdoors, hardcoded credentials, outdated modules,
+                                                insecure update mechanisms, and vulnerabilities exploitable at the hardware
+                                                layer.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -1157,7 +1363,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Email Server Testing</h3>
-                                            <p>Test mail servers for spoofing, open relays, weak authentication, vulnerable mail protocols, and exposure to phishing or spam attacks.</p>
+                                            <p>Test mail servers for spoofing, open relays, weak authentication, vulnerable
+                                                mail protocols, and exposure to phishing or spam attacks.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -1183,7 +1390,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Phishing Simulation & Awareness Training</h3>
-                                            <p>Simulate phishing attacks to evaluate employee response and improve security awareness, reducing organizational exposure to social engineering threats.</p>
+                                            <p>Simulate phishing attacks to evaluate employee response and improve security
+                                                awareness, reducing organizational exposure to social engineering threats.
+                                            </p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -1191,7 +1400,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Red Team Exercises</h3>
-                                            <p>Simulate real-world attacks across infrastructure, applications, and users to identify security gaps and validate defensive response effectiveness.</p>
+                                            <p>Simulate real-world attacks across infrastructure, applications, and users to
+                                                identify security gaps and validate defensive response effectiveness.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -1199,7 +1409,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Insider Threat Simulations</h3>
-                                            <p>Test organizational resilience against insider threats by simulating privileged misuse, sabotage, data exfiltration, and policy circumvention scenarios.</p>
+                                            <p>Test organizational resilience against insider threats by simulating
+                                                privileged misuse, sabotage, data exfiltration, and policy circumvention
+                                                scenarios.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -1207,7 +1419,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>IAM & MFA Bypass Testing</h3>
-                                            <p>Assess identity and access management systems for vulnerabilities that allow bypassing MFA, privilege abuse, and unauthorized access escalation techniques.</p>
+                                            <p>Assess identity and access management systems for vulnerabilities that allow
+                                                bypassing MFA, privilege abuse, and unauthorized access escalation
+                                                techniques.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -1215,7 +1429,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Process Bypass Testing</h3>
-                                            <p>Test business workflows, security operations, and policy enforcement mechanisms for weaknesses exploitable by attackers or malicious insiders.</p>
+                                            <p>Test business workflows, security operations, and policy enforcement
+                                                mechanisms for weaknesses exploitable by attackers or malicious insiders.
+                                            </p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -1223,7 +1439,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Crypto Social Engineering Tests</h3>
-                                            <p>Evaluate human-layer risks in crypto platforms using phishing, impersonation, and manipulation to access wallets, private keys, or assets.</p>
+                                            <p>Evaluate human-layer risks in crypto platforms using phishing, impersonation,
+                                                and manipulation to access wallets, private keys, or assets.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -1231,7 +1448,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>DAO Governance Attack Simulations</h3>
-                                            <p>Simulate governance manipulation attacks in DAOs to identify vulnerabilities in smart contracts, quorum logic, and decision-making processes.</p>
+                                            <p>Simulate governance manipulation attacks in DAOs to identify vulnerabilities
+                                                in smart contracts, quorum logic, and decision-making processes.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -1239,7 +1457,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Compliance Testing</h3>
-                                            <p>Validate cybersecurity posture against frameworks like ISO 27001, SOC2, GDPR, or HIPAA by auditing technical and procedural security controls.</p>
+                                            <p>Validate cybersecurity posture against frameworks like ISO 27001, SOC2, GDPR,
+                                                or HIPAA by auditing technical and procedural security controls.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -1247,7 +1466,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Tabletop Exercises</h3>
-                                            <p>Conduct scenario-based tabletop drills to assess incident response capabilities, improve decision-making, and align teams with security playbooks.</p>
+                                            <p>Conduct scenario-based tabletop drills to assess incident response
+                                                capabilities, improve decision-making, and align teams with security
+                                                playbooks.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -1255,7 +1476,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>AI-Powered Deepfake Testing</h3>
-                                            <p>Identify organizational vulnerabilities to AI-generated deepfakes by simulating voice and video-based impersonation for fraud, manipulation, or breaches.</p>
+                                            <p>Identify organizational vulnerabilities to AI-generated deepfakes by
+                                                simulating voice and video-based impersonation for fraud, manipulation, or
+                                                breaches.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -1296,7 +1519,10 @@
                                             <img src="{{ asset('assets/images/vapt-services.webp') }}">
                                         </div>
                                         <div class="cn-content">
-                                            <p>Advanced penetration testing identifies security gaps by simulating sophisticated cyberattacks across networks, web apps, mobile platforms, APIs, and cloud infrastructure to prevent breaches before they occur and enhance cyber resilience effectively.</p>
+                                            <p>Advanced penetration testing identifies security gaps by simulating
+                                                sophisticated cyberattacks across networks, web apps, mobile platforms,
+                                                APIs, and cloud infrastructure to prevent breaches before they occur and
+                                                enhance cyber resilience effectively.</p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
@@ -1315,7 +1541,10 @@
                                             <img src="{{ asset('assets/images/security-audit-compliance.webp') }}">
                                         </div>
                                         <div class="cn-content">
-                                            <p>Red teaming simulates multi-layered attacks using real-world tactics to test your organization's detection, prevention, and incident response capabilities—ensuring your defenses can withstand persistent threats and advanced adversarial techniques.</p>
+                                            <p>Red teaming simulates multi-layered attacks using real-world tactics to test
+                                                your organization's detection, prevention, and incident response
+                                                capabilities—ensuring your defenses can withstand persistent threats and
+                                                advanced adversarial techniques.</p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
@@ -1334,7 +1563,10 @@
                                             <img src="{{ asset('assets/images/managed-it-services.webp') }}">
                                         </div>
                                         <div class="cn-content">
-                                            <p>Purple teaming bridges the gap between offensive and defensive teams by fostering collaboration during simulated attacks, improving threat visibility, detection rules, response playbooks, and overall cybersecurity defense effectiveness.</p>
+                                            <p>Purple teaming bridges the gap between offensive and defensive teams by
+                                                fostering collaboration during simulated attacks, improving threat
+                                                visibility, detection rules, response playbooks, and overall cybersecurity
+                                                defense effectiveness.</p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
@@ -1353,7 +1585,10 @@
                                             <img src="{{ asset('assets/images/forensic-seervices.webp') }}">
                                         </div>
                                         <div class="cn-content">
-                                            <p>Cloud-native pentesting evaluates AWS, Azure, GCP, and Kubernetes platforms for misconfigurations, identity issues, privilege escalations, and insecure APIs—ensuring your cloud deployments meet security and compliance best practices.</p>
+                                            <p>Cloud-native pentesting evaluates AWS, Azure, GCP, and Kubernetes platforms
+                                                for misconfigurations, identity issues, privilege escalations, and insecure
+                                                APIs—ensuring your cloud deployments meet security and compliance best
+                                                practices.</p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
@@ -1372,7 +1607,10 @@
                                             <img src="{{ asset('assets/images/soc-services.webp') }}">
                                         </div>
                                         <div class="cn-content">
-                                            <p>IoT and OT security assessments target embedded devices and industrial systems using firmware reverse engineering, protocol fuzzing, and hardware exploitation to identify vulnerabilities in smart factories, SCADA, and connected infrastructure.</p>
+                                            <p>IoT and OT security assessments target embedded devices and industrial
+                                                systems using firmware reverse engineering, protocol fuzzing, and hardware
+                                                exploitation to identify vulnerabilities in smart factories, SCADA, and
+                                                connected infrastructure.</p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
@@ -1391,7 +1629,10 @@
                                             <img src="{{ asset('assets/images/vapt-services.webp') }}">
                                         </div>
                                         <div class="cn-content">
-                                            <p>Wireless and RFID testing uncovers weaknesses in Wi-Fi, Bluetooth, and NFC environments by simulating proximity-based attacks to prevent unauthorized access, data leaks, and man-in-the-middle vulnerabilities in physical networks.</p>
+                                            <p>Wireless and RFID testing uncovers weaknesses in Wi-Fi, Bluetooth, and NFC
+                                                environments by simulating proximity-based attacks to prevent unauthorized
+                                                access, data leaks, and man-in-the-middle vulnerabilities in physical
+                                                networks.</p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
@@ -1410,7 +1651,10 @@
                                             <img src="{{ asset('assets/images/security-audit-compliance.webp') }}">
                                         </div>
                                         <div class="cn-content">
-                                            <p>Simulates social engineering attacks including phishing, vishing, baiting, and tailgating to test human susceptibility and evaluate how employees respond to manipulation attempts, helping improve organizational security awareness.</p>
+                                            <p>Simulates social engineering attacks including phishing, vishing, baiting,
+                                                and tailgating to test human susceptibility and evaluate how employees
+                                                respond to manipulation attempts, helping improve organizational security
+                                                awareness.</p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
@@ -1429,7 +1673,10 @@
                                             <img src="{{ asset('assets/images/managed-it-services.webp') }}">
                                         </div>
                                         <div class="cn-content">
-                                            <p>API and microservices testing identifies issues like broken object level authorization, data exposure, rate limiting flaws, and input tampering to secure communication between microservices and external applications effectively.</p>
+                                            <p>API and microservices testing identifies issues like broken object level
+                                                authorization, data exposure, rate limiting flaws, and input tampering to
+                                                secure communication between microservices and external applications
+                                                effectively.</p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
@@ -1448,7 +1695,10 @@
                                             <img src="{{ asset('assets/images/forensic-seervices.webp') }}">
                                         </div>
                                         <div class="cn-content">
-                                            <p>Zero-day vulnerability research involves discovering unknown software flaws that could be exploited by attackers, responsibly reporting them, and contributing to improved patch management and secure product development cycles.</p>
+                                            <p>Zero-day vulnerability research involves discovering unknown software flaws
+                                                that could be exploited by attackers, responsibly reporting them, and
+                                                contributing to improved patch management and secure product development
+                                                cycles.</p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
@@ -1467,7 +1717,10 @@
                                             <img src="{{ asset('assets/images/soc-services.webp') }}">
                                         </div>
                                         <div class="cn-content">
-                                            <p>Bug bounty programs encourage ethical hackers to discover and report vulnerabilities through managed disclosure channels, helping organizations reduce risk and improve product security posture with real-world feedback.</p>
+                                            <p>Bug bounty programs encourage ethical hackers to discover and report
+                                                vulnerabilities through managed disclosure channels, helping organizations
+                                                reduce risk and improve product security posture with real-world feedback.
+                                            </p>
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
@@ -1495,7 +1748,10 @@
                                     <img src="{{ asset('assets/images/vapt-services.webp') }}">
                                 </div>
                                 <div class="cn-content">
-                                    <p>Advanced penetration testing identifies security gaps by simulating sophisticated cyberattacks across networks, web apps, mobile platforms, APIs, and cloud infrastructure to prevent breaches before they occur and enhance cyber resilience effectively.</p>
+                                    <p>Advanced penetration testing identifies security gaps by simulating sophisticated
+                                        cyberattacks across networks, web apps, mobile platforms, APIs, and cloud
+                                        infrastructure to prevent breaches before they occur and enhance cyber resilience
+                                        effectively.</p>
                                 </div>
                             </div>
                             <div class="cn-main-content">
@@ -1514,7 +1770,10 @@
                                     <img src="{{ asset('assets/images/security-audit-compliance.webp') }}">
                                 </div>
                                 <div class="cn-content">
-                                    <p>Red teaming simulates multi-layered attacks using real-world tactics to test your organization's detection, prevention, and incident response capabilities—ensuring your defenses can withstand persistent threats and advanced adversarial techniques.</p>
+                                    <p>Red teaming simulates multi-layered attacks using real-world tactics to test your
+                                        organization's detection, prevention, and incident response capabilities—ensuring
+                                        your defenses can withstand persistent threats and advanced adversarial techniques.
+                                    </p>
                                 </div>
                             </div>
                             <div class="cn-main-content">
@@ -1533,7 +1792,9 @@
                                     <img src="{{ asset('assets/images/managed-it-services.webp') }}">
                                 </div>
                                 <div class="cn-content">
-                                    <p>Purple teaming bridges the gap between offensive and defensive teams by fostering collaboration during simulated attacks, improving threat visibility, detection rules, response playbooks, and overall cybersecurity defense effectiveness.</p>
+                                    <p>Purple teaming bridges the gap between offensive and defensive teams by fostering
+                                        collaboration during simulated attacks, improving threat visibility, detection
+                                        rules, response playbooks, and overall cybersecurity defense effectiveness.</p>
                                 </div>
                             </div>
                             <div class="cn-main-content">
@@ -1552,7 +1813,10 @@
                                     <img src="{{ asset('assets/images/forensic-seervices.webp') }}">
                                 </div>
                                 <div class="cn-content">
-                                    <p>Cloud-native pentesting evaluates AWS, Azure, GCP, and Kubernetes platforms for misconfigurations, identity issues, privilege escalations, and insecure APIs—ensuring your cloud deployments meet security and compliance best practices.</p>
+                                    <p>Cloud-native pentesting evaluates AWS, Azure, GCP, and Kubernetes platforms for
+                                        misconfigurations, identity issues, privilege escalations, and insecure
+                                        APIs—ensuring your cloud deployments meet security and compliance best practices.
+                                    </p>
                                 </div>
                             </div>
                             <div class="cn-main-content">
@@ -1571,7 +1835,10 @@
                                     <img src="{{ asset('assets/images/soc-services.webp') }}">
                                 </div>
                                 <div class="cn-content">
-                                    <p>IoT and OT security assessments target embedded devices and industrial systems using firmware reverse engineering, protocol fuzzing, and hardware exploitation to identify vulnerabilities in smart factories, SCADA, and connected infrastructure.</p>
+                                    <p>IoT and OT security assessments target embedded devices and industrial systems using
+                                        firmware reverse engineering, protocol fuzzing, and hardware exploitation to
+                                        identify vulnerabilities in smart factories, SCADA, and connected infrastructure.
+                                    </p>
                                 </div>
                             </div>
                             <div class="cn-main-content">
@@ -1590,7 +1857,9 @@
                                     <img src="{{ asset('assets/images/vapt-services.webp') }}">
                                 </div>
                                 <div class="cn-content">
-                                    <p>Wireless and RFID testing uncovers weaknesses in Wi-Fi, Bluetooth, and NFC environments by simulating proximity-based attacks to prevent unauthorized access, data leaks, and man-in-the-middle vulnerabilities in physical networks.</p>
+                                    <p>Wireless and RFID testing uncovers weaknesses in Wi-Fi, Bluetooth, and NFC
+                                        environments by simulating proximity-based attacks to prevent unauthorized access,
+                                        data leaks, and man-in-the-middle vulnerabilities in physical networks.</p>
                                 </div>
                             </div>
                             <div class="cn-main-content">
@@ -1609,7 +1878,9 @@
                                     <img src="{{ asset('assets/images/security-audit-compliance.webp') }}">
                                 </div>
                                 <div class="cn-content">
-                                    <p>Simulates social engineering attacks including phishing, vishing, baiting, and tailgating to test human susceptibility and evaluate how employees respond to manipulation attempts, helping improve organizational security awareness.</p>
+                                    <p>Simulates social engineering attacks including phishing, vishing, baiting, and
+                                        tailgating to test human susceptibility and evaluate how employees respond to
+                                        manipulation attempts, helping improve organizational security awareness.</p>
                                 </div>
                             </div>
                             <div class="cn-main-content">
@@ -1628,7 +1899,9 @@
                                     <img src="{{ asset('assets/images/managed-it-services.webp') }}">
                                 </div>
                                 <div class="cn-content">
-                                    <p>API and microservices testing identifies issues like broken object level authorization, data exposure, rate limiting flaws, and input tampering to secure communication between microservices and external applications effectively.</p>
+                                    <p>API and microservices testing identifies issues like broken object level
+                                        authorization, data exposure, rate limiting flaws, and input tampering to secure
+                                        communication between microservices and external applications effectively.</p>
                                 </div>
                             </div>
                             <div class="cn-main-content">
@@ -1647,7 +1920,9 @@
                                     <img src="{{ asset('assets/images/forensic-seervices.webp') }}">
                                 </div>
                                 <div class="cn-content">
-                                    <p>Zero-day vulnerability research involves discovering unknown software flaws that could be exploited by attackers, responsibly reporting them, and contributing to improved patch management and secure product development cycles.</p>
+                                    <p>Zero-day vulnerability research involves discovering unknown software flaws that
+                                        could be exploited by attackers, responsibly reporting them, and contributing to
+                                        improved patch management and secure product development cycles.</p>
                                 </div>
                             </div>
                             <div class="cn-main-content">
@@ -1666,7 +1941,9 @@
                                     <img src="{{ asset('assets/images/soc-services.webp') }}">
                                 </div>
                                 <div class="cn-content">
-                                    <p>Bug bounty programs encourage ethical hackers to discover and report vulnerabilities through managed disclosure channels, helping organizations reduce risk and improve product security posture with real-world feedback.</p>
+                                    <p>Bug bounty programs encourage ethical hackers to discover and report vulnerabilities
+                                        through managed disclosure channels, helping organizations reduce risk and improve
+                                        product security posture with real-world feedback.</p>
                                 </div>
                             </div>
                             <div class="cn-main-content">
@@ -1713,13 +1990,15 @@
                                     <!-- box start -->
                                     <div class="row">
                                         <div class="home-slider home-slider-spacing">
-                                           <div id="home-slider2_1" class="owl-carousel owl-theme ">
+                                            <div id="home-slider2_1" class="owl-carousel owl-theme ">
 
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>ISO 27001:2022 Implementation & Certification</h3>
-                                                            <p>Implements and certifies ISO 27001:2022 for establishing an effective ISMS to protect organizational data and ensure regulatory compliance.</p>
+                                                            <p>Implements and certifies ISO 27001:2022 for establishing an
+                                                                effective ISMS to protect organizational data and ensure
+                                                                regulatory compliance.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1728,7 +2007,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>NIST CSF (Cybersecurity Framework) Alignment</h3>
-                                                            <p>Aligns cybersecurity policies and practices with the NIST CSF to manage, detect, and respond to security risks effectively.</p>
+                                                            <p>Aligns cybersecurity policies and practices with the NIST CSF
+                                                                to manage, detect, and respond to security risks
+                                                                effectively.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1737,7 +2018,9 @@
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>DPDPA 2023 (India Data Privacy Law) Compliance Advisory</h3>
-                                                            <p>Guides businesses in complying with India’s DPDPA 2023 law through risk assessments, policy implementation, and privacy management frameworks.</p>
+                                                            <p>Guides businesses in complying with India’s DPDPA 2023 law
+                                                                through risk assessments, policy implementation, and privacy
+                                                                management frameworks.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1746,7 +2029,9 @@
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>GDPR, CCPA, HIPAA Compliance Audits</h3>
-                                                            <p>Performs audits to ensure data protection laws like GDPR, CCPA, and HIPAA are followed across systems and business processes.</p>
+                                                            <p>Performs audits to ensure data protection laws like GDPR,
+                                                                CCPA, and HIPAA are followed across systems and business
+                                                                processes.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1755,7 +2040,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>PCI DSS Compliance for Payment Gateways & FinTech</h3>
-                                                            <p>Ensures secure handling of cardholder data in FinTech and eCommerce platforms through PCI DSS implementation and audit support.</p>
+                                                            <p>Ensures secure handling of cardholder data in FinTech and
+                                                                eCommerce platforms through PCI DSS implementation and audit
+                                                                support.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1764,7 +2051,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>SOC 2 (Type 1 & Type 2) Audits</h3>
-                                                            <p>Assists with SOC 2 audits to evaluate and report on internal controls for security, availability, confidentiality, and integrity.</p>
+                                                            <p>Assists with SOC 2 audits to evaluate and report on internal
+                                                                controls for security, availability, confidentiality, and
+                                                                integrity.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1773,7 +2062,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>RBI Cyber Security Framework Audit</h3>
-                                                            <p>Conducts RBI-mandated audits to ensure banking institutions meet cybersecurity standards for risk, governance, and incident response.</p>
+                                                            <p>Conducts RBI-mandated audits to ensure banking institutions
+                                                                meet cybersecurity standards for risk, governance, and
+                                                                incident response.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1782,7 +2073,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>SEBI Cyber Resilience Audit</h3>
-                                                            <p>Assesses SEBI cyber resilience compliance for brokers and exchanges to ensure operational continuity and regulatory cyber defense readiness.</p>
+                                                            <p>Assesses SEBI cyber resilience compliance for brokers and
+                                                                exchanges to ensure operational continuity and regulatory
+                                                                cyber defense readiness.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1791,7 +2084,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Third-Party Risk Management (TPRM) for Vendors</h3>
-                                                            <p>Implements TPRM frameworks to identify, assess, and mitigate cybersecurity and compliance risks arising from external vendors and partners.</p>
+                                                            <p>Implements TPRM frameworks to identify, assess, and mitigate
+                                                                cybersecurity and compliance risks arising from external
+                                                                vendors and partners.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1800,7 +2095,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Fraud Risk Assessment & Forensic Audits</h3>
-                                                            <p>Detects fraud risks and conducts forensic audits to investigate financial irregularities, internal threats, and compliance breaches.</p>
+                                                            <p>Detects fraud risks and conducts forensic audits to
+                                                                investigate financial irregularities, internal threats, and
+                                                                compliance breaches.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1823,7 +2120,9 @@
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>India DPDPA 2023 Readiness Assessment & Implementation</h3>
-                                                            <p>Helps organizations assess readiness and implement frameworks for India’s DPDPA 2023 with policy, consent, and data handling controls.</p>
+                                                            <p>Helps organizations assess readiness and implement frameworks
+                                                                for India’s DPDPA 2023 with policy, consent, and data
+                                                                handling controls.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1831,8 +2130,11 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>GDPR Compliance Audit & Data Protection Officer (DPO) Services</h3>
-                                                            <p>Conducts GDPR audits and provides outsourced DPO services to meet global data privacy requirements across EU and international operations.</p>
+                                                            <h3>GDPR Compliance Audit & Data Protection Officer (DPO)
+                                                                Services</h3>
+                                                            <p>Conducts GDPR audits and provides outsourced DPO services to
+                                                                meet global data privacy requirements across EU and
+                                                                international operations.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1841,7 +2143,9 @@
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>ISO 27701 (PIMS) Certification</h3>
-                                                            <p>Implements and certifies ISO 27701 to extend your ISMS with privacy controls for personal data processing and accountability management.</p>
+                                                            <p>Implements and certifies ISO 27701 to extend your ISMS with
+                                                                privacy controls for personal data processing and
+                                                                accountability management.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1850,7 +2154,9 @@
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>Data Protection Impact Assessment (DPIA)</h3>
-                                                            <p>Conducts DPIA to identify and reduce data processing risks for high-risk activities as mandated by GDPR and privacy laws.</p>
+                                                            <p>Conducts DPIA to identify and reduce data processing risks
+                                                                for high-risk activities as mandated by GDPR and privacy
+                                                                laws.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1858,8 +2164,11 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Cross-Border Data Transfer Compliance (India DPDPA vs. GDPR)</h3>
-                                                            <p>Ensures legal compliance for cross-border personal data flows between jurisdictions by aligning with DPDPA, GDPR, SCCs, and transfer mechanisms.</p>
+                                                            <h3>Cross-Border Data Transfer Compliance (India DPDPA vs. GDPR)
+                                                            </h3>
+                                                            <p>Ensures legal compliance for cross-border personal data flows
+                                                                between jurisdictions by aligning with DPDPA, GDPR, SCCs,
+                                                                and transfer mechanisms.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1868,7 +2177,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Consent Management & Privacy Policy Design</h3>
-                                                            <p>Designs transparent privacy policies and robust consent mechanisms to comply with legal requirements and build user trust in data practices.</p>
+                                                            <p>Designs transparent privacy policies and robust consent
+                                                                mechanisms to comply with legal requirements and build user
+                                                                trust in data practices.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1876,8 +2187,11 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Data Discovery & Classification (PII, Sensitive Data Mapping)</h3>
-                                                            <p>Identifies and classifies sensitive data such as PII to enable privacy controls, reduce risk, and enhance breach preparedness.</p>
+                                                            <h3>Data Discovery & Classification (PII, Sensitive Data
+                                                                Mapping)</h3>
+                                                            <p>Identifies and classifies sensitive data such as PII to
+                                                                enable privacy controls, reduce risk, and enhance breach
+                                                                preparedness.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1886,7 +2200,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Breach Response & Incident Management</h3>
-                                                            <p>Establishes incident response plans and supports timely breach notification and containment aligned with global privacy regulations.</p>
+                                                            <p>Establishes incident response plans and supports timely
+                                                                breach notification and containment aligned with global
+                                                                privacy regulations.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1895,7 +2211,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Employee Data Privacy Training</h3>
-                                                            <p>Provides structured awareness training to employees on privacy principles, regulatory requirements, and handling of sensitive personal data securely.</p>
+                                                            <p>Provides structured awareness training to employees on
+                                                                privacy principles, regulatory requirements, and handling of
+                                                                sensitive personal data securely.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1904,7 +2222,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>AI & Big Data Privacy Risk Assessment</h3>
-                                                            <p>Evaluates AI and big data platforms for privacy risks, bias, and transparency to ensure responsible data processing and governance.</p>
+                                                            <p>Evaluates AI and big data platforms for privacy risks, bias,
+                                                                and transparency to ensure responsible data processing and
+                                                                governance.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1921,13 +2241,15 @@
                                     <!-- box start -->
                                     <div class="row">
                                         <div class="home-slider home-slider-spacing">
-                                           <div id="home-slider2_3" class="owl-carousel owl-theme ">
+                                            <div id="home-slider2_3" class="owl-carousel owl-theme ">
 
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>Enterprise Risk Management (ERM) – ISO 31000</h3>
-                                                            <p>Implements ERM aligned with ISO 31000 to identify, assess, and treat enterprise-level strategic, operational, and cyber risks.</p>
+                                                            <p>Implements ERM aligned with ISO 31000 to identify, assess,
+                                                                and treat enterprise-level strategic, operational, and cyber
+                                                                risks.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1935,8 +2257,11 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
-                                                            <h3>Cyber Risk Quantification (CRQ) & Financial Impact Modeling</h3>
-                                                            <p>Uses CRQ models to translate cyber risks into financial impact, supporting investment decisions and board-level reporting.</p>
+                                                            <h3>Cyber Risk Quantification (CRQ) & Financial Impact Modeling
+                                                            </h3>
+                                                            <p>Uses CRQ models to translate cyber risks into financial
+                                                                impact, supporting investment decisions and board-level
+                                                                reporting.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1945,7 +2270,9 @@
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>M&A Cybersecurity Due Diligence</h3>
-                                                            <p>Assesses cybersecurity maturity, risks, and liabilities during mergers or acquisitions to inform valuations and reduce exposure.</p>
+                                                            <p>Assesses cybersecurity maturity, risks, and liabilities
+                                                                during mergers or acquisitions to inform valuations and
+                                                                reduce exposure.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1954,7 +2281,9 @@
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>Third-Party & Supply Chain Risk Management (TPRM)</h3>
-                                                            <p>Identifies and mitigates risks from third-party vendors and supply chains through continuous monitoring and contractual controls.</p>
+                                                            <p>Identifies and mitigates risks from third-party vendors and
+                                                                supply chains through continuous monitoring and contractual
+                                                                controls.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1963,7 +2292,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Fraud Risk Assessment & Forensic Audits</h3>
-                                                            <p>Conducts fraud risk assessments and forensic audits to detect, investigate, and prevent insider threats and financial frauds.</p>
+                                                            <p>Conducts fraud risk assessments and forensic audits to
+                                                                detect, investigate, and prevent insider threats and
+                                                                financial frauds.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1972,7 +2303,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Digital Transformation Risk Advisory</h3>
-                                                            <p>Advises on risk governance during digital transformation initiatives by aligning IT modernization with enterprise risk objectives.</p>
+                                                            <p>Advises on risk governance during digital transformation
+                                                                initiatives by aligning IT modernization with enterprise
+                                                                risk objectives.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1981,7 +2314,9 @@
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>Web3.0 & DeFi Risk Assessment</h3>
-                                                            <p>Evaluates risks in Web3, blockchain, and DeFi environments including smart contract vulnerabilities, token misuse, and platform governance.</p>
+                                                            <p>Evaluates risks in Web3, blockchain, and DeFi environments
+                                                                including smart contract vulnerabilities, token misuse, and
+                                                                platform governance.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1989,8 +2324,11 @@
                                                 <div class="itmes">
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
-                                                            <h3>Regulatory Compliance Risk (India DPDPA, GDPR, SEBI, RBI)</h3>
-                                                            <p>Analyzes regulatory exposure and gaps to ensure compliance with global and Indian data, financial, and cybersecurity mandates.</p>
+                                                            <h3>Regulatory Compliance Risk (India DPDPA, GDPR, SEBI, RBI)
+                                                            </h3>
+                                                            <p>Analyzes regulatory exposure and gaps to ensure compliance
+                                                                with global and Indian data, financial, and cybersecurity
+                                                                mandates.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1999,7 +2337,8 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Board-Level Cyber Risk Reporting (NIST CSF, ISO 27005)</h3>
-                                                            <p>Enables boardroom risk communication by mapping threats and metrics to frameworks like NIST CSF and ISO 27005.</p>
+                                                            <p>Enables boardroom risk communication by mapping threats and
+                                                                metrics to frameworks like NIST CSF and ISO 27005.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2008,7 +2347,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Stress Testing & Cyber War-Gaming</h3>
-                                                            <p>Simulates advanced threat scenarios to test organizational resilience, response readiness, and decision-making under pressure.</p>
+                                                            <p>Simulates advanced threat scenarios to test organizational
+                                                                resilience, response readiness, and decision-making under
+                                                                pressure.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2027,97 +2368,117 @@
                                         <div class="home-slider home-slider-spacing">
                                             <div id="home-slider2_4" class="owl-carousel owl-theme ">
 
-                                                    <div class="itmes">
-                                                        <div class="col-md-2 p5 ">
-                                                            <div class="tab-content-box">
-                                                                <h3>Smart Contract Audit (Ethereum, Solana, Polygon)</h3>
-                                                                <p>Performs static and dynamic analysis of smart contracts to detect logic flaws, reentrancy, and gas inefficiencies across top blockchain platforms.</p>
-                                                            </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>Smart Contract Audit (Ethereum, Solana, Polygon)</h3>
+                                                            <p>Performs static and dynamic analysis of smart contracts to
+                                                                detect logic flaws, reentrancy, and gas inefficiencies
+                                                                across top blockchain platforms.</p>
                                                         </div>
                                                     </div>
-
-                                                    <div class="itmes">
-                                                        <div class="col-md-2 p5">
-                                                            <div class="tab-content-box">
-                                                                <h3>DeFi & Crypto Exchange Security Assessment</h3>
-                                                                <p>Evaluates DeFi protocols and exchanges for exploits in smart contracts, wallet integrations, liquidity pools, and access controls.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="itmes">
-                                                        <div class="col-md-2 p5 ">
-                                                            <div class="tab-content-box">
-                                                                <h3>Blockchain Node & Consensus Security Review</h3>
-                                                                <p>Audits blockchain node configurations and consensus mechanisms to prevent manipulation, replay attacks, and Sybil-based vulnerabilities.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="itmes">
-                                                        <div class="col-md-2 p5 ">
-                                                            <div class="tab-content-box">
-                                                                <h3>NFT Fraud Detection & Smart Contract Risks</h3>
-                                                                <p>Detects phishing, counterfeit NFTs, and contract-level exploits that threaten digital ownership and trust in NFT ecosystems.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="itmes">
-                                                        <div class="col-md-2 p5">
-                                                            <div class="tab-content-box">
-                                                                <h3>Metaverse Security (Virtual Asset Protection)</h3>
-                                                                <p>Secures user identity, transactions, and virtual assets in immersive platforms through behavioral analytics and cryptographic asset protection.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="itmes">
-                                                        <div class="col-md-2 p5">
-                                                            <div class="tab-content-box">
-                                                                <h3>AI Security & ISO 42001 Compliance</h3>
-                                                                <p>Advises on securing AI systems against poisoning, model theft, and bias while aligning with ISO 42001 AI governance framework.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="itmes">
-                                                        <div class="col-md-2 p5 ">
-                                                            <div class="tab-content-box">
-                                                                <h3>Post-Quantum Cryptography Readiness</h3>
-                                                                <p>Assesses cryptographic systems for quantum threats and prepares transition plans using NIST-recommended post-quantum cryptographic algorithms.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="itmes">
-                                                        <div class="col-md-2 p5 ">
-                                                            <div class="tab-content-box">
-                                                                <h3>5G & IoT Security Audits</h3>
-                                                                <p>Reviews 5G and IoT deployments for flaws in network slicing, edge computing, and embedded device authentication protocols.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="itmes">
-                                                        <div class="col-md-2 p5">
-                                                            <div class="tab-content-box">
-                                                                <h3>Decentralized Identity (DID) Security</h3>
-                                                                <p>Evaluates decentralized identity systems for tamper resistance, verifiable credentials integrity, and compliance with W3C DID standards.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="itmes">
-                                                        <div class="col-md-2 p5">
-                                                            <div class="tab-content-box">
-                                                                <h3>Web3 Regulatory Compliance (FATF, India Crypto Laws)</h3>
-                                                                <p>Advises Web3 projects on anti-money laundering (AML), KYC, and data protection requirements across FATF and Indian crypto guidelines.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
                                                 </div>
+
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>DeFi & Crypto Exchange Security Assessment</h3>
+                                                            <p>Evaluates DeFi protocols and exchanges for exploits in smart
+                                                                contracts, wallet integrations, liquidity pools, and access
+                                                                controls.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>Blockchain Node & Consensus Security Review</h3>
+                                                            <p>Audits blockchain node configurations and consensus
+                                                                mechanisms to prevent manipulation, replay attacks, and
+                                                                Sybil-based vulnerabilities.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>NFT Fraud Detection & Smart Contract Risks</h3>
+                                                            <p>Detects phishing, counterfeit NFTs, and contract-level
+                                                                exploits that threaten digital ownership and trust in NFT
+                                                                ecosystems.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Metaverse Security (Virtual Asset Protection)</h3>
+                                                            <p>Secures user identity, transactions, and virtual assets in
+                                                                immersive platforms through behavioral analytics and
+                                                                cryptographic asset protection.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>AI Security & ISO 42001 Compliance</h3>
+                                                            <p>Advises on securing AI systems against poisoning, model
+                                                                theft, and bias while aligning with ISO 42001 AI governance
+                                                                framework.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>Post-Quantum Cryptography Readiness</h3>
+                                                            <p>Assesses cryptographic systems for quantum threats and
+                                                                prepares transition plans using NIST-recommended
+                                                                post-quantum cryptographic algorithms.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>5G & IoT Security Audits</h3>
+                                                            <p>Reviews 5G and IoT deployments for flaws in network slicing,
+                                                                edge computing, and embedded device authentication
+                                                                protocols.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Decentralized Identity (DID) Security</h3>
+                                                            <p>Evaluates decentralized identity systems for tamper
+                                                                resistance, verifiable credentials integrity, and compliance
+                                                                with W3C DID standards.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Web3 Regulatory Compliance (FATF, India Crypto Laws)</h3>
+                                                            <p>Advises Web3 projects on anti-money laundering (AML), KYC,
+                                                                and data protection requirements across FATF and Indian
+                                                                crypto guidelines.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
 
                                         </div>
                                     </div>
@@ -2135,7 +2496,9 @@
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>BFSI: RBI Guidelines, PCI DSS, SWIFT CSP Audit</h3>
-                                                            <p>Ensures regulatory compliance for banks and NBFCs across RBI circulars, PCI DSS mandates, and SWIFT customer security program.</p>
+                                                            <p>Ensures regulatory compliance for banks and NBFCs across RBI
+                                                                circulars, PCI DSS mandates, and SWIFT customer security
+                                                                program.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2144,7 +2507,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Healthcare: HIPAA & HITRUST CSF Compliance</h3>
-                                                            <p>Implements HIPAA and HITRUST controls to protect patient data and meet regulatory needs across healthcare providers and platforms.</p>
+                                                            <p>Implements HIPAA and HITRUST controls to protect patient data
+                                                                and meet regulatory needs across healthcare providers and
+                                                                platforms.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2153,7 +2518,9 @@
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>Insurance: IRDA ISNP Audit</h3>
-                                                            <p>Conducts ISNP security audits for insurance portals as mandated by IRDA to ensure secure digital policy servicing environment.</p>
+                                                            <p>Conducts ISNP security audits for insurance portals as
+                                                                mandated by IRDA to ensure secure digital policy servicing
+                                                                environment.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2162,7 +2529,9 @@
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>Critical Infrastructure: ISO 27019 (Energy/Power)</h3>
-                                                            <p>Implements ISO 27019 controls to secure information systems in energy and power sectors against targeted cyber-physical threats.</p>
+                                                            <p>Implements ISO 27019 controls to secure information systems
+                                                                in energy and power sectors against targeted cyber-physical
+                                                                threats.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2171,7 +2540,9 @@
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>E-Commerce: PA-DSS & Payment Gateway Security</h3>
-                                                            <p>Secures online transactions and payment systems with PA-DSS compliance, gateway hardening, and secure customer data handling practices.</p>
+                                                            <p>Secures online transactions and payment systems with PA-DSS
+                                                                compliance, gateway hardening, and secure customer data
+                                                                handling practices.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2180,7 +2551,8 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>IT/ITES: ISO 20000 (ITSM) & Cloud Compliance</h3>
-                                                            <p>Aligns IT services and cloud operations with ISO 20000, ISO 27017, and SOC 2 for managed service environments.</p>
+                                                            <p>Aligns IT services and cloud operations with ISO 20000, ISO
+                                                                27017, and SOC 2 for managed service environments.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2189,7 +2561,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>Government: UIDAI AUA/KUA, GST Suvidha Audit</h3>
-                                                            <p>Audits UIDAI AUA/KUA and GSP platforms for Aadhaar security compliance and robust GST Suvidha provider cybersecurity posture.</p>
+                                                            <p>Audits UIDAI AUA/KUA and GSP platforms for Aadhaar security
+                                                                compliance and robust GST Suvidha provider cybersecurity
+                                                                posture.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2198,7 +2572,9 @@
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>Manufacturing: OT/ICS Security (IEC 62443)</h3>
-                                                            <p>Implements industrial cybersecurity using IEC 62443 to protect OT networks, SCADA systems, and PLCs in manufacturing environments.</p>
+                                                            <p>Implements industrial cybersecurity using IEC 62443 to
+                                                                protect OT networks, SCADA systems, and PLCs in
+                                                                manufacturing environments.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2207,7 +2583,9 @@
                                                     <div class="col-md-2 p5 ">
                                                         <div class="tab-content-box">
                                                             <h3>Startups: Seed-Stage Security & Compliance Setup</h3>
-                                                            <p>Helps early-stage startups establish foundational security, basic compliance, and investor-readiness for scaling and funding discussions.</p>
+                                                            <p>Helps early-stage startups establish foundational security,
+                                                                basic compliance, and investor-readiness for scaling and
+                                                                funding discussions.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2216,7 +2594,9 @@
                                                     <div class="col-md-2 p5">
                                                         <div class="tab-content-box">
                                                             <h3>M&A Cybersecurity Due Diligence</h3>
-                                                            <p>Assesses cybersecurity maturity, controls, and liabilities in target companies to minimize risks during mergers or acquisitions.</p>
+                                                            <p>Assesses cybersecurity maturity, controls, and liabilities in
+                                                                target companies to minimize risks during mergers or
+                                                                acquisitions.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2248,7 +2628,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>ISO 27001:2022 Implementation & Certification</h3>
-                                            <p>Implements and certifies ISO 27001:2022 for establishing an effective ISMS to protect organizational data and ensure regulatory compliance.</p>
+                                            <p>Implements and certifies ISO 27001:2022 for establishing an effective ISMS to
+                                                protect organizational data and ensure regulatory compliance.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
@@ -2258,7 +2639,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>NIST CSF (Cybersecurity Framework) Alignment</h3>
-                                            <p>Aligns cybersecurity policies and practices with the NIST CSF to manage, detect, and respond to security risks effectively.</p>
+                                            <p>Aligns cybersecurity policies and practices with the NIST CSF to manage,
+                                                detect, and respond to security risks effectively.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
@@ -2268,7 +2650,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>DPDPA 2023 (India Data Privacy Law) Compliance Advisory</h3>
-                                            <p>Guides businesses in complying with India’s DPDPA 2023 law through risk assessments, policy implementation, and privacy management frameworks.</p>
+                                            <p>Guides businesses in complying with India’s DPDPA 2023 law through risk
+                                                assessments, policy implementation, and privacy management frameworks.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
@@ -2278,7 +2661,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>GDPR, CCPA, HIPAA Compliance Audits</h3>
-                                            <p>Performs audits to ensure data protection laws like GDPR, CCPA, and HIPAA are followed across systems and business processes.</p>
+                                            <p>Performs audits to ensure data protection laws like GDPR, CCPA, and HIPAA are
+                                                followed across systems and business processes.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
@@ -2288,7 +2672,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>PCI DSS Compliance for Payment Gateways & FinTech</h3>
-                                            <p>Ensures secure handling of cardholder data in FinTech and eCommerce platforms through PCI DSS implementation and audit support.</p>
+                                            <p>Ensures secure handling of cardholder data in FinTech and eCommerce platforms
+                                                through PCI DSS implementation and audit support.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
@@ -2298,7 +2683,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>SOC 2 (Type 1 & Type 2) Audits</h3>
-                                            <p>Assists with SOC 2 audits to evaluate and report on internal controls for security, availability, confidentiality, and integrity.</p>
+                                            <p>Assists with SOC 2 audits to evaluate and report on internal controls for
+                                                security, availability, confidentiality, and integrity.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
@@ -2308,7 +2694,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>RBI Cyber Security Framework Audit</h3>
-                                            <p>Conducts RBI-mandated audits to ensure banking institutions meet cybersecurity standards for risk, governance, and incident response.</p>
+                                            <p>Conducts RBI-mandated audits to ensure banking institutions meet
+                                                cybersecurity standards for risk, governance, and incident response.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
@@ -2318,7 +2705,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>SEBI Cyber Resilience Audit</h3>
-                                            <p>Assesses SEBI cyber resilience compliance for brokers and exchanges to ensure operational continuity and regulatory cyber defense readiness.</p>
+                                            <p>Assesses SEBI cyber resilience compliance for brokers and exchanges to ensure
+                                                operational continuity and regulatory cyber defense readiness.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
@@ -2328,7 +2716,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Third-Party Risk Management (TPRM) for Vendors</h3>
-                                            <p>Implements TPRM frameworks to identify, assess, and mitigate cybersecurity and compliance risks arising from external vendors and partners.</p>
+                                            <p>Implements TPRM frameworks to identify, assess, and mitigate cybersecurity
+                                                and compliance risks arising from external vendors and partners.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
@@ -2338,7 +2727,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Fraud Risk Assessment & Forensic Audits</h3>
-                                            <p>Detects fraud risks and conducts forensic audits to investigate financial irregularities, internal threats, and compliance breaches.</p>
+                                            <p>Detects fraud risks and conducts forensic audits to investigate financial
+                                                irregularities, internal threats, and compliance breaches.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
@@ -2363,7 +2753,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>India DPDPA 2023 Readiness Assessment & Implementation</h3>
-                                            <p>Helps organizations assess readiness and implement frameworks for India’s DPDPA 2023 with policy, consent, and data handling controls.</p>
+                                            <p>Helps organizations assess readiness and implement frameworks for India’s
+                                                DPDPA 2023 with policy, consent, and data handling controls.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
@@ -2373,7 +2764,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>GDPR Compliance Audit & Data Protection Officer (DPO) Services</h3>
-                                            <p>Conducts GDPR audits and provides outsourced DPO services to meet global data privacy requirements across EU and international operations.</p>
+                                            <p>Conducts GDPR audits and provides outsourced DPO services to meet global data
+                                                privacy requirements across EU and international operations.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
@@ -2383,7 +2775,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>ISO 27701 (PIMS) Certification</h3>
-                                            <p>Implements and certifies ISO 27701 to extend your ISMS with privacy controls for personal data processing and accountability management.</p>
+                                            <p>Implements and certifies ISO 27701 to extend your ISMS with privacy controls
+                                                for personal data processing and accountability management.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
@@ -2393,7 +2786,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Data Protection Impact Assessment (DPIA)</h3>
-                                            <p>Conducts DPIA to identify and reduce data processing risks for high-risk activities as mandated by GDPR and privacy laws.</p>
+                                            <p>Conducts DPIA to identify and reduce data processing risks for high-risk
+                                                activities as mandated by GDPR and privacy laws.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
@@ -2403,7 +2797,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Cross-Border Data Transfer Compliance (India DPDPA vs. GDPR)</h3>
-                                            <p>Ensures legal compliance for cross-border personal data flows between jurisdictions by aligning with DPDPA, GDPR, SCCs, and transfer mechanisms.</p>
+                                            <p>Ensures legal compliance for cross-border personal data flows between
+                                                jurisdictions by aligning with DPDPA, GDPR, SCCs, and transfer mechanisms.
+                                            </p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
@@ -2413,7 +2809,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Consent Management & Privacy Policy Design</h3>
-                                            <p>Designs transparent privacy policies and robust consent mechanisms to comply with legal requirements and build user trust in data practices.</p>
+                                            <p>Designs transparent privacy policies and robust consent mechanisms to comply
+                                                with legal requirements and build user trust in data practices.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
@@ -2423,7 +2820,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Data Discovery & Classification (PII, Sensitive Data Mapping)</h3>
-                                            <p>Identifies and classifies sensitive data such as PII to enable privacy controls, reduce risk, and enhance breach preparedness.</p>
+                                            <p>Identifies and classifies sensitive data such as PII to enable privacy
+                                                controls, reduce risk, and enhance breach preparedness.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
@@ -2433,7 +2831,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Breach Response & Incident Management</h3>
-                                            <p>Establishes incident response plans and supports timely breach notification and containment aligned with global privacy regulations.</p>
+                                            <p>Establishes incident response plans and supports timely breach notification
+                                                and containment aligned with global privacy regulations.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
@@ -2443,7 +2842,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Employee Data Privacy Training</h3>
-                                            <p>Provides structured awareness training to employees on privacy principles, regulatory requirements, and handling of sensitive personal data securely.</p>
+                                            <p>Provides structured awareness training to employees on privacy principles,
+                                                regulatory requirements, and handling of sensitive personal data securely.
+                                            </p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
@@ -2453,7 +2854,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>AI & Big Data Privacy Risk Assessment</h3>
-                                            <p>Evaluates AI and big data platforms for privacy risks, bias, and transparency to ensure responsible data processing and governance.</p>
+                                            <p>Evaluates AI and big data platforms for privacy risks, bias, and transparency
+                                                to ensure responsible data processing and governance.</p>
                                             <div class="know-more">
                                                 <a href="javascript:void(0)">Know More</a>
                                             </div>
@@ -2470,97 +2872,107 @@
                     <!-- box two end -->
                     <!-- box three end -->
                     <div class="acc__card">
-                            <a href="#offer3" class="acc__title">Strategic Risk Assessment & Management</a>
-                            <div class="acc__panel" id="offer3">
-                                <div class="indu-moblie indu-moblie1 mhslider count-navigation">
-                                    <div id="mhome-slider6" class="owl-carousel owl-theme">
-                                        <div class="item">
-                                            <div class="tab-content-box">
-                                                <h3>Enterprise Risk Management (ERM) – ISO 31000</h3>
-                                                <p>Implements ERM aligned with ISO 31000 to identify, assess, and treat enterprise-level strategic, operational, and cyber risks.</p>
-                                                <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
-                                            </div>
-                                        </div>
-
-                                        <div class="item">
-                                            <div class="tab-content-box">
-                                                <h3>Cyber Risk Quantification (CRQ) & Financial Impact Modeling</h3>
-                                                <p>Uses CRQ models to translate cyber risks into financial impact, supporting investment decisions and board-level reporting.</p>
-                                                <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
-                                            </div>
-                                        </div>
-
-                                        <div class="item">
-                                            <div class="tab-content-box">
-                                                <h3>M&A Cybersecurity Due Diligence</h3>
-                                                <p>Assesses cybersecurity maturity, risks, and liabilities during mergers or acquisitions to inform valuations and reduce exposure.</p>
-                                                <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
-                                            </div>
-                                        </div>
-
-                                        <div class="item">
-                                            <div class="tab-content-box">
-                                                <h3>Third-Party & Supply Chain Risk Management (TPRM)</h3>
-                                                <p>Identifies and mitigates risks from third-party vendors and supply chains through continuous monitoring and contractual controls.</p>
-                                                <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
-                                            </div>
-                                        </div>
-
-                                        <div class="item">
-                                            <div class="tab-content-box">
-                                                <h3>Fraud Risk Assessment & Forensic Audits</h3>
-                                                <p>Conducts fraud risk assessments and forensic audits to detect, investigate, and prevent insider threats and financial frauds.</p>
-                                                <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
-                                            </div>
-                                        </div>
-
-                                        <div class="item">
-                                            <div class="tab-content-box">
-                                                <h3>Digital Transformation Risk Advisory</h3>
-                                                <p>Advises on risk governance during digital transformation initiatives by aligning IT modernization with enterprise risk objectives.</p>
-                                                <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
-                                            </div>
-                                        </div>
-
-                                        <div class="item">
-                                            <div class="tab-content-box">
-                                                <h3>Web3.0 & DeFi Risk Assessment</h3>
-                                                <p>Evaluates risks in Web3, blockchain, and DeFi environments including smart contract vulnerabilities, token misuse, and platform governance.</p>
-                                                <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
-                                            </div>
-                                        </div>
-
-                                        <div class="item">
-                                            <div class="tab-content-box">
-                                                <h3>Regulatory Compliance Risk (India DPDPA, GDPR, SEBI, RBI)</h3>
-                                                <p>Analyzes regulatory exposure and gaps to ensure compliance with global and Indian data, financial, and cybersecurity mandates.</p>
-                                                <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
-                                            </div>
-                                        </div>
-
-                                        <div class="item">
-                                            <div class="tab-content-box">
-                                                <h3>Board-Level Cyber Risk Reporting (NIST CSF, ISO 27005)</h3>
-                                                <p>Enables boardroom risk communication by mapping threats and metrics to frameworks like NIST CSF and ISO 27005.</p>
-                                                <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
-                                            </div>
-                                        </div>
-
-                                        <div class="item">
-                                            <div class="tab-content-box">
-                                                <h3>Stress Testing & Cyber War-Gaming</h3>
-                                                <p>Simulates advanced threat scenarios to test organizational resilience, response readiness, and decision-making under pressure.</p>
-                                                <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
-                                            </div>
+                        <a href="#offer3" class="acc__title">Strategic Risk Assessment & Management</a>
+                        <div class="acc__panel" id="offer3">
+                            <div class="indu-moblie indu-moblie1 mhslider count-navigation">
+                                <div id="mhome-slider6" class="owl-carousel owl-theme">
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Enterprise Risk Management (ERM) – ISO 31000</h3>
+                                            <p>Implements ERM aligned with ISO 31000 to identify, assess, and treat
+                                                enterprise-level strategic, operational, and cyber risks.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
 
-                                    <div id="navigation-count5" class="count-nav-box"></div>
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Cyber Risk Quantification (CRQ) & Financial Impact Modeling</h3>
+                                            <p>Uses CRQ models to translate cyber risks into financial impact, supporting
+                                                investment decisions and board-level reporting.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>M&A Cybersecurity Due Diligence</h3>
+                                            <p>Assesses cybersecurity maturity, risks, and liabilities during mergers or
+                                                acquisitions to inform valuations and reduce exposure.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Third-Party & Supply Chain Risk Management (TPRM)</h3>
+                                            <p>Identifies and mitigates risks from third-party vendors and supply chains
+                                                through continuous monitoring and contractual controls.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Fraud Risk Assessment & Forensic Audits</h3>
+                                            <p>Conducts fraud risk assessments and forensic audits to detect, investigate,
+                                                and prevent insider threats and financial frauds.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Digital Transformation Risk Advisory</h3>
+                                            <p>Advises on risk governance during digital transformation initiatives by
+                                                aligning IT modernization with enterprise risk objectives.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Web3.0 & DeFi Risk Assessment</h3>
+                                            <p>Evaluates risks in Web3, blockchain, and DeFi environments including smart
+                                                contract vulnerabilities, token misuse, and platform governance.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Regulatory Compliance Risk (India DPDPA, GDPR, SEBI, RBI)</h3>
+                                            <p>Analyzes regulatory exposure and gaps to ensure compliance with global and
+                                                Indian data, financial, and cybersecurity mandates.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Board-Level Cyber Risk Reporting (NIST CSF, ISO 27005)</h3>
+                                            <p>Enables boardroom risk communication by mapping threats and metrics to
+                                                frameworks like NIST CSF and ISO 27005.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Stress Testing & Cyber War-Gaming</h3>
+                                            <p>Simulates advanced threat scenarios to test organizational resilience,
+                                                response readiness, and decision-making under pressure.</p>
+                                            <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <a href="javascript:void(0)" class="close-acrodin"> Close</a>
+                                <div id="navigation-count5" class="count-nav-box"></div>
                             </div>
+
+                            <a href="javascript:void(0)" class="close-acrodin"> Close</a>
                         </div>
+                    </div>
 
                     <!-- box three end -->
                     <!-- box four end -->
@@ -2572,7 +2984,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Smart Contract Audit (Ethereum, Solana, Polygon)</h3>
-                                            <p>Performs static and dynamic analysis of smart contracts to detect logic flaws, reentrancy, and gas inefficiencies across top blockchain platforms.</p>
+                                            <p>Performs static and dynamic analysis of smart contracts to detect logic
+                                                flaws, reentrancy, and gas inefficiencies across top blockchain platforms.
+                                            </p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -2580,7 +2994,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>DeFi & Crypto Exchange Security Assessment</h3>
-                                            <p>Evaluates DeFi protocols and exchanges for exploits in smart contracts, wallet integrations, liquidity pools, and access controls.</p>
+                                            <p>Evaluates DeFi protocols and exchanges for exploits in smart contracts,
+                                                wallet integrations, liquidity pools, and access controls.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -2588,7 +3003,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Blockchain Node & Consensus Security Review</h3>
-                                            <p>Audits blockchain node configurations and consensus mechanisms to prevent manipulation, replay attacks, and Sybil-based vulnerabilities.</p>
+                                            <p>Audits blockchain node configurations and consensus mechanisms to prevent
+                                                manipulation, replay attacks, and Sybil-based vulnerabilities.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -2596,7 +3012,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>NFT Fraud Detection & Smart Contract Risks</h3>
-                                            <p>Detects phishing, counterfeit NFTs, and contract-level exploits that threaten digital ownership and trust in NFT ecosystems.</p>
+                                            <p>Detects phishing, counterfeit NFTs, and contract-level exploits that threaten
+                                                digital ownership and trust in NFT ecosystems.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -2604,7 +3021,9 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Metaverse Security (Virtual Asset Protection)</h3>
-                                            <p>Secures user identity, transactions, and virtual assets in immersive platforms through behavioral analytics and cryptographic asset protection.</p>
+                                            <p>Secures user identity, transactions, and virtual assets in immersive
+                                                platforms through behavioral analytics and cryptographic asset protection.
+                                            </p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -2612,7 +3031,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>AI Security & ISO 42001 Compliance</h3>
-                                            <p>Advises on securing AI systems against poisoning, model theft, and bias while aligning with ISO 42001 AI governance framework.</p>
+                                            <p>Advises on securing AI systems against poisoning, model theft, and bias while
+                                                aligning with ISO 42001 AI governance framework.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -2620,7 +3040,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Post-Quantum Cryptography Readiness</h3>
-                                            <p>Assesses cryptographic systems for quantum threats and prepares transition plans using NIST-recommended post-quantum cryptographic algorithms.</p>
+                                            <p>Assesses cryptographic systems for quantum threats and prepares transition
+                                                plans using NIST-recommended post-quantum cryptographic algorithms.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -2628,7 +3049,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>5G & IoT Security Audits</h3>
-                                            <p>Reviews 5G and IoT deployments for flaws in network slicing, edge computing, and embedded device authentication protocols.</p>
+                                            <p>Reviews 5G and IoT deployments for flaws in network slicing, edge computing,
+                                                and embedded device authentication protocols.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -2636,7 +3058,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Decentralized Identity (DID) Security</h3>
-                                            <p>Evaluates decentralized identity systems for tamper resistance, verifiable credentials integrity, and compliance with W3C DID standards.</p>
+                                            <p>Evaluates decentralized identity systems for tamper resistance, verifiable
+                                                credentials integrity, and compliance with W3C DID standards.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -2644,7 +3067,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Web3 Regulatory Compliance (FATF, India Crypto Laws)</h3>
-                                            <p>Advises Web3 projects on anti-money laundering (AML), KYC, and data protection requirements across FATF and Indian crypto guidelines.</p>
+                                            <p>Advises Web3 projects on anti-money laundering (AML), KYC, and data
+                                                protection requirements across FATF and Indian crypto guidelines.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -2667,7 +3091,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>BFSI: RBI Guidelines, PCI DSS, SWIFT CSP Audit</h3>
-                                            <p>Ensures regulatory compliance for banks and NBFCs across RBI circulars, PCI DSS mandates, and SWIFT customer security program.</p>
+                                            <p>Ensures regulatory compliance for banks and NBFCs across RBI circulars, PCI
+                                                DSS mandates, and SWIFT customer security program.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -2675,7 +3100,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Healthcare: HIPAA & HITRUST CSF Compliance</h3>
-                                            <p>Implements HIPAA and HITRUST controls to protect patient data and meet regulatory needs across healthcare providers and platforms.</p>
+                                            <p>Implements HIPAA and HITRUST controls to protect patient data and meet
+                                                regulatory needs across healthcare providers and platforms.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -2683,7 +3109,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Insurance: IRDA ISNP Audit</h3>
-                                            <p>Conducts ISNP security audits for insurance portals as mandated by IRDA to ensure secure digital policy servicing environment.</p>
+                                            <p>Conducts ISNP security audits for insurance portals as mandated by IRDA to
+                                                ensure secure digital policy servicing environment.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -2691,7 +3118,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Critical Infrastructure: ISO 27019 (Energy/Power)</h3>
-                                            <p>Implements ISO 27019 controls to secure information systems in energy and power sectors against targeted cyber-physical threats.</p>
+                                            <p>Implements ISO 27019 controls to secure information systems in energy and
+                                                power sectors against targeted cyber-physical threats.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -2699,7 +3127,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>E-Commerce: PA-DSS & Payment Gateway Security</h3>
-                                            <p>Secures online transactions and payment systems with PA-DSS compliance, gateway hardening, and secure customer data handling practices.</p>
+                                            <p>Secures online transactions and payment systems with PA-DSS compliance,
+                                                gateway hardening, and secure customer data handling practices.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -2707,7 +3136,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>IT/ITES: ISO 20000 (ITSM) & Cloud Compliance</h3>
-                                            <p>Aligns IT services and cloud operations with ISO 20000, ISO 27017, and SOC 2 for managed service environments.</p>
+                                            <p>Aligns IT services and cloud operations with ISO 20000, ISO 27017, and SOC 2
+                                                for managed service environments.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -2715,7 +3145,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Government: UIDAI AUA/KUA, GST Suvidha Audit</h3>
-                                            <p>Audits UIDAI AUA/KUA and GSP platforms for Aadhaar security compliance and robust GST Suvidha provider cybersecurity posture.</p>
+                                            <p>Audits UIDAI AUA/KUA and GSP platforms for Aadhaar security compliance and
+                                                robust GST Suvidha provider cybersecurity posture.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -2723,7 +3154,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Manufacturing: OT/ICS Security (IEC 62443)</h3>
-                                            <p>Implements industrial cybersecurity using IEC 62443 to protect OT networks, SCADA systems, and PLCs in manufacturing environments.</p>
+                                            <p>Implements industrial cybersecurity using IEC 62443 to protect OT networks,
+                                                SCADA systems, and PLCs in manufacturing environments.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -2731,7 +3163,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>Startups: Seed-Stage Security & Compliance Setup</h3>
-                                            <p>Helps early-stage startups establish foundational security, basic compliance, and investor-readiness for scaling and funding discussions.</p>
+                                            <p>Helps early-stage startups establish foundational security, basic compliance,
+                                                and investor-readiness for scaling and funding discussions.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
@@ -2739,7 +3172,8 @@
                                     <div class="item">
                                         <div class="tab-content-box">
                                             <h3>M&A Cybersecurity Due Diligence</h3>
-                                            <p>Assesses cybersecurity maturity, controls, and liabilities in target companies to minimize risks during mergers or acquisitions.</p>
+                                            <p>Assesses cybersecurity maturity, controls, and liabilities in target
+                                                companies to minimize risks during mergers or acquisitions.</p>
                                             <div class="know-more"><a href="javascript:void(0)">Know More</a></div>
                                         </div>
                                     </div>
