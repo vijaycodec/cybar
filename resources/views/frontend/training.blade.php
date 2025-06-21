@@ -85,7 +85,7 @@
                                     <ul class="tab2">
                                         @php
                                             $firstCategorySet = false;
-                                            $groupOrder = ['VAPT', 'GRC', 'SOC'];
+                                            $groupOrder = ['VAPT', 'SPECIALISED VAPT' ,'GRC', 'SOC'];
                                         @endphp
 
                                         @foreach ($groupOrder as $group)
