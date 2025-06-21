@@ -1636,7 +1636,7 @@
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
-                                        <a href="javascript:void(0)" class="cn-main-content-enclosed">
+                                        <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                             <h3>Wireless & RFID Security Testing (Wi-Fi, Bluetooth, NFC)</h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
@@ -1658,7 +1658,7 @@
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
-                                        <a href="javascript:void(0)" class="cn-main-content-enclosed">
+                                        <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                             <h3>Social Engineering & Phishing Simulations</h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
@@ -1680,7 +1680,7 @@
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
-                                        <a href="javascript:void(0)" class="cn-main-content-enclosed">
+                                        <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                             <h3>API & Microservices Security Testing</h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
@@ -1702,7 +1702,7 @@
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
-                                        <a href="javascript:void(0)" class="cn-main-content-enclosed">
+                                        <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                             <h3>Zero-Day Vulnerability Research (For Critical Systems)</h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
@@ -1724,7 +1724,7 @@
                                         </div>
                                     </div>
                                     <div class="cn-main-content">
-                                        <a href="javascript:void(0)" class="cn-main-content-enclosed">
+                                        <a href="javascript:void(0)" class="cn-main-content-enclosed" style="display: block; text-decoration: none;">
                                             <h3>Bug Bounty Program Management</h3>
                                             Know more <i class="fa">&#xf054;</i>
                                         </a>
