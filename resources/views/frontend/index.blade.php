@@ -83,7 +83,7 @@
                             <a href="#" class="scroll-link" data-target="#mhome-div2" data-offset="-90px" data-speed="400"
                                 style="display: block; text-decoration: none;">
                                 <div class="cn-hover-box">
-                                    <div class="cn-hover-img"> <img src="{{ asset('assets/images/vapt-services.webp') }}"
+                                    <div class="cn-hover-img"> <img src="{{ asset('assets\images\special_vapt\VAPT.jpg') }}"
                                             style="aspect-ratio: 1 / 1; height: auto;">
                                     </div>
                                     <div class="cn-content">
@@ -112,7 +112,7 @@
                                 style="display: block; text-decoration: none;">
                                 <div class="cn-hover-box">
                                     <div class="cn-hover-img"> <img
-                                            src="{{ asset('assets/images/forensic-seervices.webp') }}"
+                                            src="{{ asset("assets\images\special_vapt\grc.png") }}"
                                             style="aspect-ratio: 1 / 1; height: auto;">
                                     </div>
                                     <div class="cn-content">
@@ -142,7 +142,7 @@
                             <a href="#" class="scroll-link" data-target="#mhome-div4-1" data-offset="-100px"
                                 data-speed=" 800" style="display: block; text-decoration: none;">
                                 <div class="cn-hover-box">
-                                    <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}"
+                                    <div class="cn-hover-img"> <img src="{{ asset("assets\images\special_vapt\SOC.jpeg") }}"
                                             style="aspect-ratio: 1 / 1; height: auto;"> </div>
                                     <div class="cn-content">
                                         <p>Codec Networks provides 24x7 Managed SOC and Cyber Forensic services for
@@ -198,7 +198,7 @@
                             <a href="#" class="scroll-link" data-target="#mhome-div11" data-offset="-100px"
                                 data-speed=" 1500" style="display: block; text-decoration: none;">
                                 <div class="cn-hover-box">
-                                    <div class="cn-hover-img"> <img src="{{ asset('assets/images/soc-services.webp') }}"
+                                    <div class="cn-hover-img"> <img src="{{ asset("assets\images\special_vapt\CNInsight.png") }}"
                                             style="aspect-ratio: 1 / 1; height: auto;"> </div>
                                     <div class="cn-content">
                                         <p>CN Insight by Codec Networks shares expert podcasts, blogs, and cybersecurity
@@ -1516,7 +1516,7 @@
                                 <div class="empower-industry-box">
                                     <div class="cn-hover-box">
                                         <div class="cn-hover-img">
-                                            <img src="{{ asset('assets/images/vapt-services.webp') }}">
+                                            <img src="{{ asset("assets\images\special_vapt\penetration-testing.jpg") }}">
                                         </div>
                                         <div class="cn-content">
                                             <p>Advanced penetration testing identifies security gaps by simulating
@@ -1538,7 +1538,7 @@
                                 <div class="empower-industry-box">
                                     <div class="cn-hover-box">
                                         <div class="cn-hover-img">
-                                            <img src="{{ asset('assets/images/security-audit-compliance.webp') }}">
+                                            <img src="{{ asset("assets\images\special_vapt\party.png") }}">
                                         </div>
                                         <div class="cn-content">
                                             <p>Red teaming simulates multi-layered attacks using real-world tactics to test
@@ -1560,7 +1560,7 @@
                                 <div class="empower-industry-box">
                                     <div class="cn-hover-box">
                                         <div class="cn-hover-img">
-                                            <img src="{{ asset('assets/images/managed-it-services.webp') }}">
+                                            <img src="{{ asset("assets\images\special_vapt\Purple-Team.png") }}">
                                         </div>
                                         <div class="cn-content">
                                             <p>Purple teaming bridges the gap between offensive and defensive teams by
@@ -1582,7 +1582,7 @@
                                 <div class="empower-industry-box">
                                     <div class="cn-hover-box">
                                         <div class="cn-hover-img">
-                                            <img src="{{ asset('assets/images/forensic-seervices.webp') }}">
+                                            <img src="{{ asset("assets\images\special_vapt\cloud-penetration-testing2.jpg") }}">
                                         </div>
                                         <div class="cn-content">
                                             <p>Cloud-native pentesting evaluates AWS, Azure, GCP, and Kubernetes platforms
@@ -1604,7 +1604,7 @@
                                 <div class="empower-industry-box">
                                     <div class="cn-hover-box">
                                         <div class="cn-hover-img">
-                                            <img src="{{ asset('assets/images/soc-services.webp') }}">
+                                            <img src="{{ asset("assets\images\special_vapt\iot.jpeg") }}">
                                         </div>
                                         <div class="cn-content">
                                             <p>IoT and OT security assessments target embedded devices and industrial
@@ -1626,7 +1626,7 @@
                                 <div class="empower-industry-box">
                                     <div class="cn-hover-box">
                                         <div class="cn-hover-img">
-                                            <img src="{{ asset('assets/images/vapt-services.webp') }}">
+                                            <img src="{{ asset("assets\images\special_vapt\RFID.jpeg") }}">
                                         </div>
                                         <div class="cn-content">
                                             <p>Wireless and RFID testing uncovers weaknesses in Wi-Fi, Bluetooth, and NFC
@@ -1648,7 +1648,7 @@
                                 <div class="empower-industry-box">
                                     <div class="cn-hover-box">
                                         <div class="cn-hover-img">
-                                            <img src="{{ asset('assets/images/security-audit-compliance.webp') }}">
+                                            <img src="{{ asset("assets\images\special_vapt\social_engineering.jpg") }}">
                                         </div>
                                         <div class="cn-content">
                                             <p>Simulates social engineering attacks including phishing, vishing, baiting,
@@ -1670,7 +1670,7 @@
                                 <div class="empower-industry-box">
                                     <div class="cn-hover-box">
                                         <div class="cn-hover-img">
-                                            <img src="{{ asset('assets/images/managed-it-services.webp') }}">
+                                            <img src="{{ asset('assets\images\special_vapt\restapis.jpg') }}">
                                         </div>
                                         <div class="cn-content">
                                             <p>API and microservices testing identifies issues like broken object level
@@ -1692,7 +1692,7 @@
                                 <div class="empower-industry-box">
                                     <div class="cn-hover-box">
                                         <div class="cn-hover-img">
-                                            <img src="{{ asset('assets/images/forensic-seervices.webp') }}">
+                                            <img src="{{ asset("assets\images\special_vapt\zero-day-vulnerability.jpg") }}">
                                         </div>
                                         <div class="cn-content">
                                             <p>Zero-day vulnerability research involves discovering unknown software flaws
@@ -1714,7 +1714,7 @@
                                 <div class="empower-industry-box">
                                     <div class="cn-hover-box">
                                         <div class="cn-hover-img">
-                                            <img src="{{ asset('assets/images/soc-services.webp') }}">
+                                            <img src="{{ asset("assets\images\special_vapt\Bug-Bounty-Program.png") }}">
                                         </div>
                                         <div class="cn-content">
                                             <p>Bug bounty programs encourage ethical hackers to discover and report
@@ -1745,7 +1745,7 @@
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
                                 <div class="cn-hover-img">
-                                    <img src="{{ asset('assets/images/vapt-services.webp') }}">
+                                    <img src="{{ asset('assets\images\special_vapt\penetration-testing.jpg') }}">
                                 </div>
                                 <div class="cn-content">
                                     <p>Advanced penetration testing identifies security gaps by simulating sophisticated
@@ -1767,7 +1767,7 @@
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
                                 <div class="cn-hover-img">
-                                    <img src="{{ asset('assets/images/security-audit-compliance.webp') }}">
+                                    <img src="{{ asset('assets\images\special_vapt\party.png') }}">
                                 </div>
                                 <div class="cn-content">
                                     <p>Red teaming simulates multi-layered attacks using real-world tactics to test your
@@ -1789,7 +1789,7 @@
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
                                 <div class="cn-hover-img">
-                                    <img src="{{ asset('assets/images/managed-it-services.webp') }}">
+                                    <img src="{{ asset('assets\images\special_vapt\Purple-Team.png') }}">
                                 </div>
                                 <div class="cn-content">
                                     <p>Purple teaming bridges the gap between offensive and defensive teams by fostering
@@ -1810,7 +1810,7 @@
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
                                 <div class="cn-hover-img">
-                                    <img src="{{ asset('assets/images/forensic-seervices.webp') }}">
+                                    <img src="{{ asset('assets\images\special_vapt\cloud-penetration-testing2.jpg') }}">
                                 </div>
                                 <div class="cn-content">
                                     <p>Cloud-native pentesting evaluates AWS, Azure, GCP, and Kubernetes platforms for
@@ -1832,7 +1832,7 @@
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
                                 <div class="cn-hover-img">
-                                    <img src="{{ asset('assets/images/soc-services.webp') }}">
+                                    <img src="{{ asset('assets\images\special_vapt\iot.jpeg') }}">
                                 </div>
                                 <div class="cn-content">
                                     <p>IoT and OT security assessments target embedded devices and industrial systems using
@@ -1854,7 +1854,7 @@
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
                                 <div class="cn-hover-img">
-                                    <img src="{{ asset('assets/images/vapt-services.webp') }}">
+                                    <img src="{{ asset('assets\images\special_vapt\RFID.jpeg') }}">
                                 </div>
                                 <div class="cn-content">
                                     <p>Wireless and RFID testing uncovers weaknesses in Wi-Fi, Bluetooth, and NFC
@@ -1875,7 +1875,7 @@
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
                                 <div class="cn-hover-img">
-                                    <img src="{{ asset('assets/images/security-audit-compliance.webp') }}">
+                                    <img src="{{ asset('assets\images\special_vapt\social_engineering.jpg') }}">
                                 </div>
                                 <div class="cn-content">
                                     <p>Simulates social engineering attacks including phishing, vishing, baiting, and
@@ -1896,7 +1896,7 @@
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
                                 <div class="cn-hover-img">
-                                    <img src="{{ asset('assets/images/managed-it-services.webp') }}">
+                                    <img src="{{ asset('assets\images\special_vapt\restapis.jpg') }}">
                                 </div>
                                 <div class="cn-content">
                                     <p>API and microservices testing identifies issues like broken object level
@@ -1917,7 +1917,7 @@
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
                                 <div class="cn-hover-img">
-                                    <img src="{{ asset('assets/images/forensic-seervices.webp') }}">
+                                    <img src="{{ asset('assets\images\special_vapt\zero-day-vulnerability.jpg') }}">
                                 </div>
                                 <div class="cn-content">
                                     <p>Zero-day vulnerability research involves discovering unknown software flaws that
@@ -1938,7 +1938,7 @@
                         <div class="empower-industry-box">
                             <div class="cn-hover-box">
                                 <div class="cn-hover-img">
-                                    <img src="{{ asset('assets/images/soc-services.webp') }}">
+                                    <img src="{{ asset('assets\images\special_vapt\Bug-Bounty-Program.png') }}">
                                 </div>
                                 <div class="cn-content">
                                     <p>Bug bounty programs encourage ethical hackers to discover and report vulnerabilities
