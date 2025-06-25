@@ -382,4 +382,5 @@ Route::middleware(['FrameGuard'])->group(function () {
     Route::get('/vapt', [GroupedServicesController::class, 'vapt'])->name('vapt');
     Route::get('/grc', [GroupedServicesController::class, 'Grc'])->name('grc');
     Route::get('/pgcac', [Courses_GradController::class, 'pgcac'])->name('pgcac');
+    Route::get('/pccs', [Courses_GradController::class, 'pccs'])->name('pccs');
 });

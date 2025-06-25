@@ -11,4 +11,9 @@ class Courses_GradController extends Controller
     {
         return view('frontend.pgcac');
     }
+
+    public function pccs()
+    {
+        return view('frontend.pccs');
+    }
 }
