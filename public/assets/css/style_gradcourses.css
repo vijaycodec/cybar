@@ -1,0 +1,40 @@
+/*
+Theme Name: Trainsec
+Description: Trainsec Chils
+Author: Trainsec
+Author URI: https://elementor.com/products/hello-theme/
+Author Email: emjeymax@gmail.com
+Version: 1.0.0
+Text Domain: hello-elementor-child
+Template: hello-elementor
+*/
+/*
+Add your custom styles here
+*/
+
+.preview-btn {
+	float: right;
+	background-color: #5569e8;
+	font-size: 14px;
+	padding: 5px 20px;
+	border-radius: 100px;
+	margin-left: 20px;
+}
+.elementor-icon-list-text,
+li.elementor-icon-list-item a,
+li.elementor-icon-list-item {
+	width: 100% !important;
+	max-width: 100% !important;
+}
+
+@media screen and (max-width: 600px) {
+	.preview-btn {
+		position: relative;
+		text-align: center;
+	}
+}
+body {
+	background-repeat: repeat-y;
+	background-position: center center;
+	background: #15416e !important;
+}
