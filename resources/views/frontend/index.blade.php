@@ -3562,7 +3562,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 cn-title">
-                        <h2>Our Comprehensive Cyber Security Offerings</h2>
+                        <h2>Our Comprehensive Cyber Security Offerings33</h2>
                         <p>We provide End-to-End IT Solutions & Services </p>
                     </div>
                 </div>
@@ -3570,14 +3570,10 @@
             <div class="container desktop-view">
                 <div class="row">
                     <div class="cn-tabs" style="margin-bottom: 40px">
-                        <ul id="tabs-nav4_1" class="home-tabs">
-                            <li><a class="scr-tabs_4" href="#tab_4_1">Vulnerability Assesement & Penetration Testing</a>
-                            </li>
-                            <li><a class="scr-tabs_4" href="#tab_4_2">IT Security Audit, Risk & Compliance</a></li>
-                            <li><a class="scr-tabs_4" href="#tab_4_3">Managed IT Security Solutions </a></li>
-                            <li><a class="scr-tabs_4" href="#tab_4_4">Digital Forensic & Cyber Fraud Management </a></li>
-                            <li><a class="scr-tabs_4" href="#tab_4_5">SOC (Security Operations Center) as a Service </a>
-                            </li>
+                        <ul id="tabs-nav4_1" class="home-tabs2">
+                            <li><a class="scr-tabs_4" href="#tab_4_1">Cyber Forensic And Threat Analysis as a Service</a></li>
+                            <li><a class="scr-tabs_4" href="#tab_4_2">Brand Reputation Threat Analysis and Risk Management Services</a></li>
+                            <li><a class="scr-tabs_4" href="#tab_4_3">Managed SOC Service</a></li>
                         </ul>
                         <!-- END tabs-nav -->
                         <div id="tabs-content">
@@ -3997,7 +3993,7 @@
                                     <!-- box end -->
                                 </div>
                             </div>
-                            <div id="tab_4_4" class="tab-content4_1">
+                            {{-- <div id="tab_4_4" class="tab-content4_1">
                                 <div class="container  mobilewidth">
                                     <!-- box start -->
                                     <div class="row">
@@ -4254,7 +4250,7 @@
                                     </div>
                                     <!-- box end -->
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                     <!-- END tabs-content -->
@@ -4267,7 +4263,7 @@
                 <div class="acc">
                     <!-- box first start -->
                     <div class="acc__card">
-                        <a href="#offer1_1" class="acc__title active">Vulnerability Assese. & Penet. Testing</a>
+                        <a href="#offer1_1" class="acc__title active">Cyber Forensic And Threat Analysis as a Service</a>
                         <div class="acc__panel" style="display:block" id="offer1_1">
                             <!--  -->
                             <div class="indu-moblie indu-moblie1 mhslider count-navigation">
@@ -4351,7 +4347,7 @@
                     <!-- box first end -->
                     <!-- box two end -->
                     <div class="acc__card">
-                        <a href="#offer2_1" class="acc__title">IT Security Audit, Risk & Compliance</a>
+                        <a href="#offer2_1" class="acc__title">Brand Reputation Threat Analysis and Risk Management Services</a>
                         <div class="acc__panel" id="offer2_1">
                             <!--  -->
                             <!--  -->
@@ -4435,7 +4431,7 @@
                     <!-- box two end -->
                     <!-- box three end -->
                     <div class="acc__card">
-                        <a href="#offer3_1" class="acc__title">Managed IT Security Solutions</a>
+                        <a href="#offer3_1" class="acc__title">Managed SOC Service</a>
                         <div class="acc__panel" id="offer3_1">
                             <!--  -->
                             <!--  -->
@@ -4519,7 +4515,7 @@
                     </div>
                     <!-- box three end -->
                     <!-- box four end -->
-                    <div class="acc__card">
+                    {{-- <div class="acc__card">
                         <a href="#offer4_1" class="acc__title">Digital Forensic & Cyber Fraud Manag.</a>
                         <div class="acc__panel" id="offer4_1">
                             <!--  -->
@@ -4601,10 +4597,10 @@
                             <a href="javascript:void(0)" class="close-acrodin"> Close</a>
                             <!--  -->
                         </div>
-                    </div>
+                    </div> --}}
                     <!-- box four end -->
                     <!-- box 5 end -->
-                    <div class="acc__card">
+                    {{-- <div class="acc__card">
                         <a href="#offer5_1" class="acc__title">SOC as a Service</a>
                         <div class="acc__panel" id="offer5_1">
                             <!--  -->
@@ -4685,7 +4681,7 @@
                             <!--  -->
                             <a href="javascript:void(0)" class="close-acrodin"> Close</a>
                         </div>
-                    </div>
+                    </div> --}}
                     <!-- box 5 end -->
                 </div>
                 <!-- faq End -->

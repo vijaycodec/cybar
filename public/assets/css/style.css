@@ -347,6 +347,30 @@ body{
     padding: 10px 0px;
     background-color: transparent;
     }
+    
+
+/* changes vijay Soc section on home page */
+ .home-tabs2 {
+    list-style: none;
+    margin: 0;
+    padding: 0px 0px 20px;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    gap: 5px;
+    }
+
+    .home-tabs2 li {padding: 17px 22px;cursor: pointer;font-size: 16px;background: #e5e8ee;text-align: center;line-height: 1.4;display: flex;align-items: center;}
+    .home-tabs2 li:hover {}
+    .home-tabs2 li.active {outline: 0;background-color: #15416E;}
+    .home-tabs2 li.active a{color: #fff;}
+    .home-tabs2 li a {text-decoration: none;color: #15416e;}
+    .tab-content1 {
+    padding: 10px 0px;
+    background-color: transparent;
+    }
+
+    
     .traing-banner img{
     width: 100%;
     }
