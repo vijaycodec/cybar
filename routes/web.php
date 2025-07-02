@@ -51,6 +51,7 @@ use App\Http\Controllers\backend\programController;
 use App\Http\Controllers\backend\significance2Controller;
 use App\Http\Controllers\backend\significanceController;
 use App\Http\Controllers\frontend\GroupedServicesController;
+use App\Http\Controllers\frontend\Courses_GradController;
 use App\Http\Controllers\frontend\NewsLetterMainController;
 use Illuminate\Support\Facades\Route;
 
@@ -380,4 +381,6 @@ Route::middleware(['FrameGuard'])->group(function () {
     Route::get('/soc', [GroupedServicesController::class, 'Soc'])->name('soc');
     Route::get('/vapt', [GroupedServicesController::class, 'vapt'])->name('vapt');
     Route::get('/grc', [GroupedServicesController::class, 'Grc'])->name('grc');
+    Route::get('/pgcac', [Courses_GradController::class, 'pgcac'])->name('pgcac');
+    Route::get('/pccs', [Courses_GradController::class, 'pccs'])->name('pccs');
 });

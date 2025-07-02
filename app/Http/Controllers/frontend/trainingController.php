@@ -7,6 +7,9 @@ use App\Models\CourseCategory;
 use App\Models\CorporateTraining;
 use App\Repositories\Interfaces\ServicesRepositoryInterface;
 use App\Models\Seo;
+use Illuminate\Support\Facades\Cache;
+
+
 
 class trainingController extends Controller
 {
@@ -19,21 +22,26 @@ class trainingController extends Controller
 
     public function get_training($category = null, $sub_category = null)
     {
-        $page_id=2;
-        $page_name = 'training';
+    $page_id = 2;
+    $page_name = 'training';
 
-        $services = CorporateTraining::with('course_category','subcategory')->get();
-        //dd($services);
-        $categories = CourseCategory::with('training')
-        
-        ->where('page_category', $page_id)
-        ->get();
+    // Cache services data with eager loading
+    $services = Cache::remember('training_services', now()->addDay(), function () {
+        return CorporateTraining::with('course_category', 'subcategory')->get();
+    });
+
+    // Cache categories data filtered by page_category
+    $categories = Cache::remember("training_categories_page_{$page_id}", now()->addDay(), function () use ($page_id) {
+        return CourseCategory::with('training')
+            ->where('page_category', $page_id)
+            ->get();
+    });
 
         $seoDetails = Seo::where('page_name', $page_name)
         ->where('category_name', $category)
         ->where('sub_category_name', $sub_category)
         ->first();
-// dd( $seoData );
+
     // Define default values if any field is NULL
         $seoData = [
             'page_name'       => $seoDetails->page_name ?? 'Training Page',

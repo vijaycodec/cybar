@@ -5,6 +5,7 @@ use App\Models\CourseCategory;
 use App\Repositories\Interfaces\ServicesRepositoryInterface;
 use App\Models\OurServices;
 use App\Repositories\Interfaces\UploadServiceInterface;
+use Illuminate\Support\Facades\Cache;
 
 class ServicesRepository implements ServicesRepositoryInterface
 {
@@ -76,18 +77,43 @@ class ServicesRepository implements ServicesRepositoryInterface
 
     //frontend services Repository 
 
+    // public function getAllServices()
+    // {
+    //     return OurServices::with('course_category', 'subcategory')->get();
+    // }
+
+    // public function getGroupedServices()
+    // {
+    //     return $this->getAllServices()->groupBy('category_id');
+    // }
+
+    // public function getCategoriesByPage($pageId)
+    // {
+    //     return CourseCategory::with('services')->where('page_category', $pageId)->get();
+    // }
+
+
     public function getAllServices()
-    {
+{
+    return Cache::remember('our_services_all', now()->addDay(), function () {
         return OurServices::with('course_category', 'subcategory')->get();
-    }
+    });
+}
 
-    public function getGroupedServices()
-    {
+public function getGroupedServices()
+{
+    // Cache the grouped result separately
+    return Cache::remember('our_services_grouped_by_category', now()->addDay(), function () {
         return $this->getAllServices()->groupBy('category_id');
-    }
+    });
+}
 
-    public function getCategoriesByPage($pageId)
-    {
-        return CourseCategory::with('services')->where('page_category', $pageId)->get();
-    }
+public function getCategoriesByPage($pageId)
+{
+    return Cache::remember("our_services_categories_page_{$pageId}", now()->addDay(), function () use ($pageId) {
+        return CourseCategory::with('services')
+            ->where('page_category', $pageId)
+            ->get();
+    });
+}
 }

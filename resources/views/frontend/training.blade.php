@@ -40,6 +40,34 @@
         padding-left: 20px;
     }
 </style>
+<style>
+    @keyframes shimmer {
+        0% {
+            background-position: -200% 0;
+        }
+
+        100% {
+            background-position: 200% 0;
+        }
+    }
+
+    .m-title.skeleton-box {
+        position: relative;
+        overflow: hidden;
+        color: transparent;
+        /* hide text */
+        background: linear-gradient(90deg, #e0e0e0 25%, #f5f5f5 50%, #e0e0e0 75%) !important;
+        background-size: 200% 100% !important;
+
+        animation: shimmer 1.5s infinite;
+        border-radius: 4px;
+        min-height: 24px;
+    }
+
+    .m-title.skeleton-box * {
+        color: transparent !important;
+    }
+</style>
 @section('content')
 
     <body class="" id="training-page">
@@ -57,7 +85,7 @@
                                     <ul class="tab2">
                                         @php
                                             $firstCategorySet = false;
-                                            $groupOrder = ['VAPT', 'GRC', 'SOC'];
+                                            $groupOrder = ['VAPT', 'SPECIALISED VAPT' ,'GRC', 'SOC'];
                                         @endphp
 
                                         @foreach ($groupOrder as $group)
@@ -155,15 +183,15 @@
         <!-- main section end -->
         <div class="ser-h"></div>
         <!-- mobile start  -->
-        <section class="training-page training-page-m mobile-view">
+        <section id="training-section" class="training-page training-page-m mobile-view">
             @foreach ($categories_header as $index => $category)
                 <div class="m-container" id="m-{{ Str::slug($category->name) }}">
-                    <div class="m-title m-bg{{ $index + 1 }}">
-                        <h3>{{ $category->name }}</h3> <!-- Parent Category Name -->
+                    <div class="m-title m-bg{{ $index + 1 }} skeleton-box" data-skeleton>
+                        <h3>{{ $category->name }}</h3>
                     </div>
 
                     @php
-                        $categoryTrainings = $trainings->where('category_id', $category->id)->values(); // Get trainings for this category
+                        $categoryTrainings = $trainings->where('category_id', $category->id)->values();
                     @endphp
 
                     @foreach ($categoryTrainings->chunk(5) as $chunkIndex => $trainingChunk)
@@ -181,14 +209,15 @@
                                                     <div class="box-header">
                                                         <div class="box-icon pst-listing">
                                                             <i class="fa fa-cube"></i>
-                                                            <h4 class="box-title">
+                                                            <h4 class="box-title skeleton-box" data-skeleton>
                                                                 {{ $singleTraining->subcategory->sub_category }}
                                                             </h4>
                                                         </div>
                                                     </div>
                                                     <div class="box-content" id="clr-learn">
                                                         <div class="box-content-p">
-                                                            <p>{{ $singleTraining->description }}</p>
+                                                            <p class="skeleton-box" data-skeleton>
+                                                                {{ $singleTraining->description }}</p>
                                                         </div>
                                                         <span class="box-readmore">Learn More</span>
                                                     </div>
@@ -203,6 +232,7 @@
                 </div>
             @endforeach
         </section>
+
         <!-- mobile end -->
         <a href="#training-page" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
 
@@ -341,7 +371,7 @@
                 );
             }
 
-            // 🚀 *Automatically Initialize All Carousels*
+            //  *Automatically Initialize All Carousels*
             $("[id^=ser-demo]").each(function() {
                 let sliderId = $(this).attr("id");
                 let countId = sliderId.replace("ser-demo",
@@ -413,6 +443,16 @@
             }
         });
     </script>
+    <script>
+        window.addEventListener('load', function() {
+            // Remove skeleton effect from real content
+            document.querySelectorAll('[data-skeleton]').forEach(el => {
+                el.classList.remove('skeleton-box');
+                el.style.color = ''; // restore text
+            });
+        });
+    </script>
+
 
 
     {{-- 

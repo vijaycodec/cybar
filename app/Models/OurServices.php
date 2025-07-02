@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Facades\Cache;
 
 class OurServices extends Model
 {
@@ -26,5 +27,19 @@ class OurServices extends Model
         return $this->belongsTo(SubCategory::class, 'sub_category_id');
     }
     
+
+
+    protected static function booted()
+{
+    static::saved(function () {
+        Cache::forget('our_services_all');
+        Cache::forget('our_services_grouped_by_category');
+    });
+
+    static::deleted(function () {
+        Cache::forget('our_services_all');
+        Cache::forget('our_services_grouped_by_category');
+    });
+}
 
 }
