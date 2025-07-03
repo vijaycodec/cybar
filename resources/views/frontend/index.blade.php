@@ -3572,8 +3572,9 @@
                     <div class="cn-tabs" style="margin-bottom: 40px">
                         <ul id="tabs-nav4_1" class="home-tabs2">
                             <li><a class="scr-tabs_4" href="#tab_4_1">Cyber Forensic And Threat Analysis as a Service</a></li>
-                            <li><a class="scr-tabs_4" href="#tab_4_2">Brand Reputation Threat Analysis and Risk Management Services</a></li>
                             <li><a class="scr-tabs_4" href="#tab_4_3">Managed SOC Service</a></li>
+                            <li><a class="scr-tabs_4" href="#tab_4_2">Brand Reputation and Risk Management Services</a></li>
+                            
                         </ul>
                         <!-- END tabs-nav -->
                         <div id="tabs-content">
@@ -3688,75 +3689,7 @@
                                     <!-- box end -->
                                 </div>
                             </div>
-                            <div id="tab_4_2" class="tab-content4_1">
-                                <div class="container  mobilewidth">
-                                    <!-- box start -->
-                                    <div class="row">
-                                        <div class="home-slider home-slider-spacing">
-                                            <div id="home-slider4_2" class="owl-carousel owl-theme ">
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5 ">
-                                                        <div class="tab-content-box">
-                                                            <h3>Brand Monitoring & Threat Detection</h3>
-                                                            <p>Brand monitoring and threat detection track online reputation and identify cyber threats to protect corporate image.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5">
-                                                        <div class="tab-content-box">
-                                                            <h3>Cyber Reputation Risk Management</h3>
-                                                            <p>Cyber reputation risk management monitors and mitigates online threats to safeguard brand trust and stakeholder confidence.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5 ">
-                                                        <div class="tab-content-box">
-                                                            <h3>Crisis Management & Incident Response</h3>
-                                                            <p>Crisis management and incident response coordinate actions to contain cyber incidents and minimize organizational impact effectively.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5 ">
-                                                        <div class="tab-content-box">
-                                                            <h3>Risk Assessment & Mitigation Strategy</h3>
-                                                            <p>Risk assessment and mitigation strategy identify threats, evaluate impact, and implement controls to reduce security risks.
-
-
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5">
-                                                        <div class="tab-content-box">
-                                                            <h3>Data Leak and PII Protection</h3>
-                                                            <p>Data leak and PII protection prevent unauthorized exposure of personal information to ensure privacy and regulatory compliance.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5">
-                                                        <div class="tab-content-box">
-                                                            <h3>Competitive Intelligence</h3>
-                                                            <p>Competitive intelligence gathers and analyzes market data to inform strategic decisions and gain business advantages.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- box end -->
-                                </div>
-                            </div>
-                            <div id="tab_4_3" class="tab-content4_1">
+                             <div id="tab_4_3" class="tab-content4_1">
                                 <div class="container  mobilewidth">
                                     <!-- box start -->
                                     <div class="row">
@@ -3821,6 +3754,74 @@
                                                         <div class="tab-content-box">
                                                             <h3>Dark Web Intelligence & Threat Hunting</h3>
                                                             <p>Dark web intelligence and threat hunting uncover hidden threats, leaked data, and malicious activity targeting organizations.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- box end -->
+                                </div>
+                            </div>
+                            <div id="tab_4_2" class="tab-content4_1">
+                                <div class="container  mobilewidth">
+                                    <!-- box start -->
+                                    <div class="row">
+                                        <div class="home-slider home-slider-spacing">
+                                            <div id="home-slider4_2" class="owl-carousel owl-theme ">
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>Brand Monitoring & Threat Detection</h3>
+                                                            <p>Brand monitoring and threat detection track online reputation and identify cyber threats to protect corporate image.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Cyber Reputation Risk Management</h3>
+                                                            <p>Cyber reputation risk management monitors and mitigates online threats to safeguard brand trust and stakeholder confidence.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>Crisis Management & Incident Response</h3>
+                                                            <p>Crisis management and incident response coordinate actions to contain cyber incidents and minimize organizational impact effectively.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>Risk Assessment & Mitigation Strategy</h3>
+                                                            <p>Risk assessment and mitigation strategy identify threats, evaluate impact, and implement controls to reduce security risks.
+
+
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Data Leak and PII Protection</h3>
+                                                            <p>Data leak and PII protection prevent unauthorized exposure of personal information to ensure privacy and regulatory compliance.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Competitive Intelligence</h3>
+                                                            <p>Competitive intelligence gathers and analyzes market data to inform strategic decisions and gain business advantages.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -3965,81 +3966,7 @@
                         </div>
                     </div>
                     <!-- box first end -->
-                    <!-- box two end -->
-                    <div class="acc__card">
-                        <a href="#offer2_1" class="acc__title">Brand Reputation Threat Analysis and Risk Management Services</a>
-                        <div class="acc__panel" id="offer2_1">
-                            <div class="indu-moblie indu-moblie1 mhslider count-navigation">
-                                <div id="mhome-slider2_22" class="owl-carousel owl-theme">
-
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Brand Monitoring & Threat Detection</h3>
-                                            <p>Brand monitoring and threat detection track online reputation and identify cyber threats to protect corporate image.</p>
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Cyber Reputation Risk Management</h3>
-                                            <p>Cyber reputation risk management monitors and mitigates online threats to safeguard brand trust and stakeholder confidence.</p>
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Crisis Management & Incident Response</h3>
-                                            <p>Crisis management and incident response coordinate actions to contain cyber incidents and minimize organizational impact effectively.</p>
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Risk Assessment & Mitigation Strategy</h3>
-                                            <p>Risk assessment and mitigation strategy identify threats, evaluate impact, and implement controls to reduce security risks.</p>
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Data Leak and PII Protection</h3>
-                                            <p>Data leak and PII protection prevent unauthorized exposure of personal information to ensure privacy and regulatory compliance.</p>
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Competitive Intelligence</h3>
-                                            <p>Competitive intelligence gathers and analyzes market data to inform strategic decisions and gain business advantages.</p>
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div id="navigation-count1_22" class="count-nav-box"></div>
-                            </div>
-                            <a href="javascript:void(0)" class="close-acrodin"> Close</a>
-                        </div>
-                    </div>
-                    <!-- box two end -->
-                    <!-- box three end -->
+                     <!-- box three end -->
                     <div class="acc__card">
                         <a href="#offer3_1" class="acc__title">Managed SOC Service</a>
                         <div class="acc__panel" id="offer3_1">
@@ -4123,6 +4050,81 @@
                         </div>
                     </div>
                     <!-- box three end -->
+                    <!-- box two end -->
+                    <div class="acc__card">
+                        <a href="#offer2_1" class="acc__title">Brand Reputation  and Risk Management Services</a>
+                        <div class="acc__panel" id="offer2_1">
+                            <div class="indu-moblie indu-moblie1 mhslider count-navigation">
+                                <div id="mhome-slider2_22" class="owl-carousel owl-theme">
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Brand Monitoring & Threat Detection</h3>
+                                            <p>Brand monitoring and threat detection track online reputation and identify cyber threats to protect corporate image.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Cyber Reputation Risk Management</h3>
+                                            <p>Cyber reputation risk management monitors and mitigates online threats to safeguard brand trust and stakeholder confidence.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Crisis Management & Incident Response</h3>
+                                            <p>Crisis management and incident response coordinate actions to contain cyber incidents and minimize organizational impact effectively.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Risk Assessment & Mitigation Strategy</h3>
+                                            <p>Risk assessment and mitigation strategy identify threats, evaluate impact, and implement controls to reduce security risks.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Data Leak and PII Protection</h3>
+                                            <p>Data leak and PII protection prevent unauthorized exposure of personal information to ensure privacy and regulatory compliance.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Competitive Intelligence</h3>
+                                            <p>Competitive intelligence gathers and analyzes market data to inform strategic decisions and gain business advantages.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div id="navigation-count1_22" class="count-nav-box"></div>
+                            </div>
+                            <a href="javascript:void(0)" class="close-acrodin"> Close</a>
+                        </div>
+                    </div>
+                    <!-- box two end -->
+                   
                     <!-- box four end -->
                     {{-- <div class="acc__card">
                         <a href="#offer4_1" class="acc__title">Digital Forensic & Cyber Fraud Manag.</a>
