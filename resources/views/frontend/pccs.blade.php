@@ -597,7 +597,7 @@
             }
 
             a:where(:not(.wp-element-button)) {
-                text-decoration: underline;
+                text-decoration: none;
             }
 
             :root :where(.wp-element-button, .wp-block-button__link) {
@@ -824,44 +824,26 @@
                 line-height: 1.6;
             }
         </style>
-        <link rel="stylesheet" id="elementor-frontend-css"
-            href="{{ asset('assets/css/custom-frontend.min.css') }}"
+        <link rel="stylesheet" id="elementor-frontend-css" href="{{ asset('assets/css/custom-frontend.min.css') }}"
             media="all" />
-        <link rel="stylesheet" id="elementor-post-6-css"
-            href="{{ asset('assets/css/post-6.css') }}" media="all" />
-        <link rel="stylesheet" id="widget-image-css"
-            href="{{ asset('assets/css/widget-image.min.css') }}"
+        <link rel="stylesheet" id="elementor-post-6-css" href="{{ asset('assets/css/post-6.css') }}" media="all" />
+        <link rel="stylesheet" id="widget-image-css" href="{{ asset('assets/css/widget-image.min.css') }}" media="all" />
+        <link rel="stylesheet" id="widget-nav-menu-css" href="{{ asset('assets/css/custom-pro-widget-nav-menu.min.css') }}"
             media="all" />
-        <link rel="stylesheet" id="widget-nav-menu-css"
-            href="{{ asset('assets/css/custom-pro-widget-nav-menu.min.css') }}"
+        <link rel="stylesheet" id="widget-heading-css" href="{{ asset('assets/css/widget-heading.min.css') }}"
             media="all" />
-        <link rel="stylesheet" id="widget-heading-css"
-            href="{{ asset('assets/css/widget-heading.min.css') }}"
+        <link rel="stylesheet" id="widget-icon-list-css" href="{{ asset('assets/css/custom-widget-icon-list.min.css') }}"
             media="all" />
-        <link rel="stylesheet" id="widget-icon-list-css"
-            href="{{ asset('assets/css/custom-widget-icon-list.min.css') }}"
+        <link rel="stylesheet" id="widget-video-css" href="{{ asset('assets/css/widget-video.min.css') }}" media="all" />
+        <link rel="stylesheet" id="widget-social-icons-css" href="{{ asset('assets/css/widget-social-icons.min.css') }}"
             media="all" />
-        <link rel="stylesheet" id="widget-video-css"
-            href="{{ asset('assets/css/widget-video.min.css') }}"
+        <link rel="stylesheet" id="e-apple-webkit-css" href="{{ asset('assets/css/custom-apple-webkit.min.css') }}"
             media="all" />
-        <link rel="stylesheet" id="widget-social-icons-css"
-            href="{{ asset('assets/css/widget-social-icons.min.css') }}"
-            media="all" />
-        <link rel="stylesheet" id="e-apple-webkit-css"
-            href="{{ asset('assets/css/custom-apple-webkit.min.css') }}"
-            media="all" />
-        <link rel="stylesheet" id="elementor-post-5346-css"
-            href="{{ asset('assets/css/post-5346.css') }}"
-            media="all" />
-        <link rel="stylesheet" id="elementor-post-762-css"
-            href="{{ asset('assets/css/post-762.css') }}" media="all" />
-        <link rel="stylesheet" id="elementor-post-941-css"
-            href="{{ asset('assets/css/post-941.css') }}" media="all" />
-        <link rel="stylesheet" id="elementor-post-5010-css"
-            href="{{ asset('assets/css/post-5010.css') }}"
-            media="all" />
-        <link rel="stylesheet" id="hello-elementor-child-style-css"
-            href="{{ asset('assets/css/style_gradcourses.css') }}"
+        <link rel="stylesheet" id="elementor-post-5346-css" href="{{ asset('assets/css/post-5346.css') }}" media="all" />
+        <link rel="stylesheet" id="elementor-post-762-css" href="{{ asset('assets/css/post-762.css') }}" media="all" />
+        <link rel="stylesheet" id="elementor-post-941-css" href="{{ asset('assets/css/post-941.css') }}" media="all" />
+        <link rel="stylesheet" id="elementor-post-5010-css" href="{{ asset('assets/css/post-5010.css') }}" media="all" />
+        <link rel="stylesheet" id="hello-elementor-child-style-css" href="{{ asset('assets/css/style_gradcourses.css') }}"
             media="all" />
         <style>
             .e-con.e-parent:nth-of-type(n + 4):not(.e-lazyloaded):not(.e-no-lazyload),
@@ -885,8 +867,7 @@
                 }
             }
         </style>
-        <link rel="stylesheet" type="text/css" media="all"
-            href="{{ asset('assets/css/universal.css') }}" />
+        <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assets/css/universal.css') }}" />
     </head>
 
     <body id="pccs-body"
@@ -1862,19 +1843,19 @@
                                             data-widget_type="text-editor.default">
                                             <div class="elementor-widget-container">
                                                 <p>
-                                                    The opening module cements every learner’s baseline, revisiting the
-                                                    networking and operating-system mechanics that power modern
-                                                    infrastructure. You will rebuild your mental model of data flow from
-                                                    physical media through OSI/TCP-IP layers, DNS resolution, VPN tunnelling
-                                                    and TLS encryption while comparing Windows and Linux internals
-                                                    side-by-side. The threat landscape is then mapped with MITRE ATT&CK and
-                                                    the Cyber Kill Chain so you can recognise how real-world actors abuse
-                                                    these building blocks. Guided labs with Nmap, Wireshark, Burp Suite,
-                                                    Nessus and Splunk turn theory into muscle-memory, and a sprint on
-                                                    Bash/Python scripting shows how to automate reconnaissance and triage.
-                                                    By the end, you can stand up a clean lab, interpret low-level traffic or
-                                                    syscalls, and speak the common language that unites offensive and
-                                                    defensive teams.
+                                                    This module lays the groundwork for ethical hacking by demystifying the
+                                                    attacker’s mindset and introducing the methodologies used in
+                                                    professional penetration testing. You’ll walk through the five core
+                                                    phases of hacking—reconnaissance, scanning, exploitation,
+                                                    post-exploitation, and reporting—while adhering to legal and ethical
+                                                    guidelines. Real-world scenarios teach you how to fingerprint networks
+                                                    and services, identify vulnerabilities, and craft payloads using tools
+                                                    like Nmap, Metasploit, Hydra, and custom scripts. You’ll also explore
+                                                    password cracking, social engineering tactics, and privilege escalation
+                                                    across Windows and Linux targets. By module’s end, you’ll have built a
+                                                    personal hacking lab, executed full attack chains in a controlled
+                                                    environment, and learned how to document findings in line with
+                                                    industry-standard report formats.
                                                 </p>
                                             </div>
                                         </div>
@@ -1893,7 +1874,8 @@
                                                                 </path>
                                                             </svg>
                                                         </span>
-                                                        <span class="elementor-icon-list-text">Foundations of Information Security &amp; Ethical Hacking</span>
+                                                        <span class="elementor-icon-list-text">Foundations of Information
+                                                            Security &amp; Ethical Hacking</span>
                                                     </li>
                                                     <li class="elementor-icon-list-item">
                                                         <span class="elementor-icon-list-icon">
@@ -1905,7 +1887,8 @@
                                                                 </path>
                                                             </svg>
                                                         </span>
-                                                        <span class="elementor-icon-list-text">Threat & Vulnerability Assessment with Password Attacks and Defenses</span>
+                                                        <span class="elementor-icon-list-text">Threat & Vulnerability
+                                                            Assessment with Password Attacks and Defenses</span>
                                                     </li>
                                                     <li class="elementor-icon-list-item">
                                                         <span class="elementor-icon-list-icon">
@@ -1917,7 +1900,8 @@
                                                                 </path>
                                                             </svg>
                                                         </span>
-                                                        <span class="elementor-icon-list-text">Exploitation Techniques: Social Engineering, Network & Web Application Attacks</span>
+                                                        <span class="elementor-icon-list-text">Exploitation Techniques:
+                                                            Social Engineering, Network & Web Application Attacks</span>
                                                     </li>
                                                     <li class="elementor-icon-list-item">
                                                         <span class="elementor-icon-list-icon">
@@ -1929,7 +1913,8 @@
                                                                 </path>
                                                             </svg>
                                                         </span>
-                                                        <span class="elementor-icon-list-text">Advanced Threat Vectors: Wireless, Mobile, IoT, and OT Attacks</span>
+                                                        <span class="elementor-icon-list-text">Advanced Threat Vectors:
+                                                            Wireless, Mobile, IoT, and OT Attacks</span>
                                                     </li>
                                                     <li class="elementor-icon-list-item">
                                                         <span class="elementor-icon-list-icon">
@@ -1941,7 +1926,8 @@
                                                                 </path>
                                                             </svg>
                                                         </span>
-                                                        <span class="elementor-icon-list-text">Cloud Security Essentials & Introduction to Penetration Testing</span>
+                                                        <span class="elementor-icon-list-text">Cloud Security Essentials &
+                                                            Introduction to Penetration Testing</span>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -1966,15 +1952,16 @@
                                             data-widget_type="text-editor.default">
                                             <div class="elementor-widget-container">
                                                 <p>
-                                                    Here you dive deep into how software is broken and how to stop it. After
-                                                    grounding yourself in the OWASP Top 10 (2021 & 2023) and Secure-SDLC
-                                                    principles, you will model threats against real codebases and then
-                                                    exploit them across web, mobile, desktop-client and API surfaces. Labs
-                                                    progress from classic SQLi/XSS to modern attacks on GraphQL, JWT and
-                                                    single-page apps, before switching gears to blockchain/Web3
-                                                    smart-contract auditing and CI/CD pipeline abuse. Throughout, DevSecOps
-                                                    workflows and bug-bounty style reporting teach you to translate findings
-                                                    into business-ready remediation.
+                                                    Dive into the protocols, architecture, and safeguards that keep modern
+                                                    networks resilient. This module walks you through key concepts like
+                                                    segmentation, firewalls, intrusion detection systems, and VPNs, while
+                                                    explaining the weaknesses attackers exploit in Layer 2–4 environments.
+                                                    You’ll analyze packet captures, configure router/firewall rules, and
+                                                    simulate attacks like ARP spoofing, DHCP starvation, and DNS poisoning
+                                                    to understand the importance of proactive defense. Labs with Wireshark,
+                                                    pfSense, and Snort reinforce theory with hands-on skills. By the end,
+                                                    you'll confidently secure enterprise networks, detect abnormal traffic,
+                                                    and architect defenses that withstand both insider and external threats.
                                                 </p>
                                             </div>
                                         </div>
@@ -1993,7 +1980,8 @@
                                                                 </path>
                                                             </svg>
                                                         </span>
-                                                        <span class="elementor-icon-list-text">Network Security Fundamentals -Identification, Authentication, and Authorization</span>
+                                                        <span class="elementor-icon-list-text">Network Security Fundamentals
+                                                            -Identification, Authentication, and Authorization</span>
                                                     </li>
                                                     <li class="elementor-icon-list-item">
                                                         <span class="elementor-icon-list-icon">
@@ -2005,7 +1993,9 @@
                                                                 </path>
                                                             </svg>
                                                         </span>
-                                                        <span class="elementor-icon-list-text">Network Security Controls - Administrative Controls, Network Security Controls - Physical Controls</span>
+                                                        <span class="elementor-icon-list-text">Network Security Controls -
+                                                            Administrative Controls, Network Security Controls - Physical
+                                                            Controls</span>
                                                     </li>
                                                     <li class="elementor-icon-list-item">
                                                         <span class="elementor-icon-list-icon">
@@ -2017,7 +2007,8 @@
                                                                 </path>
                                                             </svg>
                                                         </span>
-                                                        <span class="elementor-icon-list-text">Network Security Controls, Technical Controls, Virtualization and Cloud Computing</span>
+                                                        <span class="elementor-icon-list-text">Network Security Controls,
+                                                            Technical Controls, Virtualization and Cloud Computing</span>
                                                     </li>
                                                     <li class="elementor-icon-list-item">
                                                         <span class="elementor-icon-list-icon">
@@ -2029,7 +2020,8 @@
                                                                 </path>
                                                             </svg>
                                                         </span>
-                                                        <span class="elementor-icon-list-text">Wireless Network, Mobile & IoT Device  Security </span>
+                                                        <span class="elementor-icon-list-text">Wireless Network, Mobile &
+                                                            IoT Device Security </span>
                                                     </li>
                                                     <li class="elementor-icon-list-item">
                                                         <span class="elementor-icon-list-icon">
@@ -2041,7 +2033,8 @@
                                                                 </path>
                                                             </svg>
                                                         </span>
-                                                        <span class="elementor-icon-list-text">Cryptography, PKI & Data Security Network Traffic Monitoring</span>
+                                                        <span class="elementor-icon-list-text">Cryptography, PKI & Data
+                                                            Security Network Traffic Monitoring</span>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -2065,15 +2058,16 @@
                                             data-widget_type="text-editor.default">
                                             <div class="elementor-widget-container">
                                                 <p>
-                                                    This module turns you from pentester to full-spectrum adversary. You
-                                                    will build covert C2 infrastructure with Cobalt Strike, Brute Ratel and
-                                                    Mythic; harvest credentials through reconnaissance, Kerberoasting and
-                                                    DCSync; and chain exploits into multi-stage domain compromise including
-                                                    cross-forest pivots. Email-server attacks on Exchange / M365 illustrate
-                                                    real business impact, while continuous OPSEC and evasion drills keep you
-                                                    hidden from blue teams. The climax is a capstone red-team operation that
-                                                    demands rigorous planning, execution and reporting as you would deliver
-                                                    to the board or regulator.
+                                                    Learn how to uncover the digital footprints left behind by attackers and
+                                                    insider threats. This module introduces core forensic principles across
+                                                    disk, memory, and network artifacts, while maintaining chain-of-custody
+                                                    and evidentiary integrity. You’ll use Autopsy, Volatility, FTK Imager,
+                                                    and CyberChef to analyze compromised systems, extract deleted files,
+                                                    investigate live RAM dumps, and decode malicious payloads. Case-based
+                                                    labs simulate phishing attacks, malware intrusions, and insider data
+                                                    theft. By the end, you’ll be able to triage an incident, reconstruct an
+                                                    attacker’s timeline, and prepare forensic reports suitable for legal or
+                                                    corporate response.
                                                 </p>
                                             </div>
                                         </div>
@@ -2092,7 +2086,8 @@
                                                                 </path>
                                                             </svg>
                                                         </span>
-                                                        <span class="elementor-icon-list-text">Fundamentals of Computer Forensics & Investigation Methodology</span>
+                                                        <span class="elementor-icon-list-text">Fundamentals of Computer
+                                                            Forensics & Investigation Methodology</span>
                                                     </li>
                                                     <li class="elementor-icon-list-item">
                                                         <span class="elementor-icon-list-icon">
@@ -2104,7 +2099,8 @@
                                                                 </path>
                                                             </svg>
                                                         </span>
-                                                        <span class="elementor-icon-list-text">Understanding Hard Disks, File Systems, Data Acquisition & Duplication Techniques</span>
+                                                        <span class="elementor-icon-list-text">Understanding Hard Disks,
+                                                            File Systems, Data Acquisition & Duplication Techniques</span>
                                                     </li>
                                                     <li class="elementor-icon-list-item">
                                                         <span class="elementor-icon-list-icon">
@@ -2116,7 +2112,8 @@
                                                                 </path>
                                                             </svg>
                                                         </span>
-                                                        <span class="elementor-icon-list-text">Bypassing and Investigating Anti-Forensics Techniques</span>
+                                                        <span class="elementor-icon-list-text">Bypassing and Investigating
+                                                            Anti-Forensics Techniques</span>
                                                     </li>
                                                     <li class="elementor-icon-list-item">
                                                         <span class="elementor-icon-list-icon">
@@ -2128,7 +2125,8 @@
                                                                 </path>
                                                             </svg>
                                                         </span>
-                                                        <span class="elementor-icon-list-text">Operating System & Network Forensics: Windows, Linux, macOS</span>
+                                                        <span class="elementor-icon-list-text">Operating System & Network
+                                                            Forensics: Windows, Linux, macOS</span>
                                                     </li>
                                                     <li class="elementor-icon-list-item">
                                                         <span class="elementor-icon-list-icon">
@@ -2140,7 +2138,8 @@
                                                                 </path>
                                                             </svg>
                                                         </span>
-                                                        <span class="elementor-icon-list-text">Investigating Web Attacks, Malware, and Dark Web Artifacts</span>
+                                                        <span class="elementor-icon-list-text">Investigating Web Attacks,
+                                                            Malware, and Dark Web Artifacts</span>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -2164,14 +2163,16 @@
                                             data-widget_type="text-editor.default">
                                             <div class="elementor-widget-container">
                                                 <p>
-                                                    Flip the chessboard and learn to hunt the adversary. You will architect
-                                                    a cost-efficient SOC stack, craft incident-response playbooks, and drive
-                                                    investigations with Splunk/ELK, Zeek, Suricata and leading EDR/XDR
-                                                    platforms. Hands-on labs cover email triage, web-log anomaly hunting,
-                                                    dynamic malware reversing and live ransomware containment. The capstone
-                                                    IR drill drops you into a time-boxed breach scenario where coordination,
-                                                    evidence preservation and executive comms matter as much as technical
-                                                    chops. Graduates emerge able to defend or lead 24×7 security operations.
+                                                    Explore how security changes when infrastructure lives in the cloud.
+                                                    This module decodes the shared responsibility model and exposes threats
+                                                    unique to AWS, Azure, and GCP platforms. You’ll secure cloud identities
+                                                    with IAM, analyze misconfigurations in S3 buckets and databases, and
+                                                    perform threat simulations using tools like Prowler, ScoutSuite, and
+                                                    Cloudsploit. Labs also cover container security with Docker/Kubernetes,
+                                                    and detection via native services like GuardDuty and Azure Security
+                                                    Center. By the end, you’ll be able to assess, harden, and monitor cloud
+                                                    environments in real-time—whether managing lift-and-shift apps or full
+                                                    serverless architectures.
                                                 </p>
                                             </div>
                                         </div>
@@ -2190,7 +2191,8 @@
                                                                 </path>
                                                             </svg>
                                                         </span>
-                                                        <span class="elementor-icon-list-text">Cloud Computing & Security Fundamentals with IAM Essentials</span>
+                                                        <span class="elementor-icon-list-text">Cloud Computing & Security
+                                                            Fundamentals with IAM Essentials</span>
                                                     </li>
                                                     <li class="elementor-icon-list-item">
                                                         <span class="elementor-icon-list-icon">
@@ -2202,7 +2204,8 @@
                                                                 </path>
                                                             </svg>
                                                         </span>
-                                                        <span class="elementor-icon-list-text">Data Protection & Network Security in the Cloud</span>
+                                                        <span class="elementor-icon-list-text">Data Protection & Network
+                                                            Security in the Cloud</span>
                                                     </li>
                                                     <li class="elementor-icon-list-item">
                                                         <span class="elementor-icon-list-icon">
@@ -2214,7 +2217,8 @@
                                                                 </path>
                                                             </svg>
                                                         </span>
-                                                        <span class="elementor-icon-list-text">Application Security, Monitoring & Incident Response in the Cloud</span>
+                                                        <span class="elementor-icon-list-text">Application Security,
+                                                            Monitoring & Incident Response in the Cloud</span>
                                                     </li>
                                                     <li class="elementor-icon-list-item">
                                                         <span class="elementor-icon-list-icon">
@@ -2226,7 +2230,8 @@
                                                                 </path>
                                                             </svg>
                                                         </span>
-                                                        <span class="elementor-icon-list-text">Cloud Risk Management, Compliance & Governance</span>
+                                                        <span class="elementor-icon-list-text">Cloud Risk Management,
+                                                            Compliance & Governance</span>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -2250,14 +2255,16 @@
                                             data-widget_type="text-editor.default">
                                             <div class="elementor-widget-container">
                                                 <p>
-                                                    Modern attacks rarely respect perimeter walls. You will enumerate and
-                                                    abuse IAM in AWS, Azure and GCP, stitch together on-prem AD with cloud
-                                                    identities via AAD Connect and AWS Directory Service, and weaponise
-                                                    metadata, token theft and consent-phishing chains. Parallel tracks
-                                                    explore Docker, Kubernetes, serverless and hypervisor threats then fold
-                                                    them into a hybrid attack-and-defend simulation spanning corporate and
-                                                    cloud estates. The result: an engineer who can break or secure workloads
-                                                    wherever they run.
+                                                    This module empowers you to think like an analyst, transforming raw
+                                                    indicators into actionable intelligence. You’ll start by exploring
+                                                    threat actor profiling, TTP mapping with MITRE ATT&CK, and the
+                                                    intelligence lifecycle (collection, analysis, dissemination). Real-world
+                                                    exercises involve parsing IOC feeds, enriching data with VirusTotal,
+                                                    Shodan, and MISP, and building YARA and Sigma rules for detection.
+                                                    You’ll also learn how to write threat reports and disseminate them
+                                                    across technical and executive audiences. By the end, you’ll be able to
+                                                    identify trends, forecast attacks, and integrate threat intel into blue
+                                                    team and SOC workflows.
                                                 </p>
                                             </div>
                                         </div>
@@ -2276,7 +2283,8 @@
                                                                 </path>
                                                             </svg>
                                                         </span>
-                                                        <span class="elementor-icon-list-text">Introduction to Threat Intelligence & the Evolving Cyber Threat Landscape</span>
+                                                        <span class="elementor-icon-list-text">Introduction to Threat
+                                                            Intelligence & the Evolving Cyber Threat Landscape</span>
                                                     </li>
                                                     <li class="elementor-icon-list-item">
                                                         <span class="elementor-icon-list-icon">
@@ -2288,7 +2296,8 @@
                                                                 </path>
                                                             </svg>
                                                         </span>
-                                                        <span class="elementor-icon-list-text">Threat Data Collection, Platforms & Analytical Techniques</span>
+                                                        <span class="elementor-icon-list-text">Threat Data Collection,
+                                                            Platforms & Analytical Techniques</span>
                                                     </li>
                                                     <li class="elementor-icon-list-item">
                                                         <span class="elementor-icon-list-icon">
@@ -2300,7 +2309,8 @@
                                                                 </path>
                                                             </svg>
                                                         </span>
-                                                        <span class="elementor-icon-list-text">Operationalizing Threat Intelligence: Hunting, Response & Collaboration</span>
+                                                        <span class="elementor-icon-list-text">Operationalizing Threat
+                                                            Intelligence: Hunting, Response & Collaboration</span>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -2324,14 +2334,16 @@
                                             data-widget_type="text-editor.default">
                                             <div class="elementor-widget-container">
                                                 <p>
-                                                    Modern attacks rarely respect perimeter walls. You will enumerate and
-                                                    abuse IAM in AWS, Azure and GCP, stitch together on-prem AD with cloud
-                                                    identities via AAD Connect and AWS Directory Service, and weaponise
-                                                    metadata, token theft and consent-phishing chains. Parallel tracks
-                                                    explore Docker, Kubernetes, serverless and hypervisor threats then fold
-                                                    them into a hybrid attack-and-defend simulation spanning corporate and
-                                                    cloud estates. The result: an engineer who can break or secure workloads
-                                                    wherever they run.
+                                                    Step into the heart of real-time cyber defense by learning how modern
+                                                    Security Operations Centers operate. This module focuses on log
+                                                    aggregation, correlation, and alerting through platforms like SIEMs
+                                                    (Splunk, ELK), SOAR tools, and ticketing systems. You’ll set up
+                                                    detection rules, respond to alerts, and simulate incidents ranging from
+                                                    phishing to lateral movement. Labs walk you through alert triage, log
+                                                    parsing, use case development, and KPI reporting. You’ll also build
+                                                    familiarity with MITRE ATT&CK mapping and purple-team exercises.
+                                                    Graduates emerge ready to monitor, investigate, and escalate threats in
+                                                    a high-stakes SOC environment.
                                                 </p>
                                             </div>
                                         </div>
@@ -2350,7 +2362,8 @@
                                                                 </path>
                                                             </svg>
                                                         </span>
-                                                        <span class="elementor-icon-list-text">Foundations of Security Operations & Cyber Threat Understanding</span>
+                                                        <span class="elementor-icon-list-text">Foundations of Security
+                                                            Operations & Cyber Threat Understanding</span>
                                                     </li>
                                                     <li class="elementor-icon-list-item">
                                                         <span class="elementor-icon-list-icon">
@@ -2362,7 +2375,8 @@
                                                                 </path>
                                                             </svg>
                                                         </span>
-                                                        <span class="elementor-icon-list-text">Security Logging, Event Management & SIEM Fundamentals</span>
+                                                        <span class="elementor-icon-list-text">Security Logging, Event
+                                                            Management & SIEM Fundamentals</span>
                                                     </li>
                                                     <li class="elementor-icon-list-item">
                                                         <span class="elementor-icon-list-icon">
@@ -2374,7 +2388,8 @@
                                                                 </path>
                                                             </svg>
                                                         </span>
-                                                        <span class="elementor-icon-list-text">Advanced Detection with Threat Intelligence & Incident Response</span>
+                                                        <span class="elementor-icon-list-text">Advanced Detection with
+                                                            Threat Intelligence & Incident Response</span>
                                                     </li>
                                                 </ul>
                                             </div>
