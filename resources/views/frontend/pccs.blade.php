@@ -1317,7 +1317,7 @@
                                 <div class="elementor-element elementor-element-a407451 elementor-widget elementor-widget-text-editor"
                                     data-id="a407451" data-element_type="widget" data-widget_type="text-editor.default">
                                     <div class="elementor-widget-container">
-                                        <p style="font-size: 32px;">264+ hours</p>
+                                        <p style="font-size: 32px;">196+ hours</p>
                                     </div>
                                 </div>
                                 <div class="elementor-element elementor-element-7fdcdeb elementor-widget elementor-widget-text-editor"
