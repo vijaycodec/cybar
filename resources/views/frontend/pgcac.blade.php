@@ -597,7 +597,7 @@
             }
 
             a:where(:not(.wp-element-button)) {
-                text-decoration: underline;
+                text-decoration: none;
             }
 
             :root :where(.wp-element-button, .wp-block-button__link) {
