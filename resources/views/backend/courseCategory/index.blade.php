@@ -33,8 +33,6 @@
                             </div>
                         </form>
                     </div> --}}
-                    <a class="tf-button style-1 w208" href=" {{ route('course-category.create') }}">
-                        <i class="icon-plus"></i>Add new</a>
                         <a class="tf-button style-1 w208" 
                         href="{{ route('course-category.main-index') }}">Main index</a>
                 </div>

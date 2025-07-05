@@ -90,7 +90,7 @@ class subcategoryController extends Controller
                 'slug'             => $request->slug,
             ]);
 
-            return redirect()->route('sub-category.list')->with('success', 'Record has been added successfully!');
+            return redirect()->route('sub-category.main-index')->with('success', 'Record has been added successfully!');
         } catch (\Exception $e) {
             // Log error if needed: \Log::error($e->getMessage());
             return redirect()->back()
@@ -143,7 +143,7 @@ class subcategoryController extends Controller
 
             $subCategory->save();
 
-            return redirect()->route('sub-category.list')->with('success', 'Record has been updated successfully!');
+            return redirect()->route('sub-category.main-index')->with('success', 'Record has been updated successfully!');
         } catch (\Exception $e) {
             return redirect()->back()
                 ->withErrors(['error' => 'An error occurred while updating the record. Please try again later.'])
@@ -157,7 +157,7 @@ class subcategoryController extends Controller
             $subCategory->delete();
             return response()->json([
                 'message' => 'Sub Category deleted successfully!',
-                'redirect' => route('sub-category.list') // Include the redirect URL
+                'redirect' => route('sub-category.main-index') // Include the redirect URL
             ], 200);
         }
     }
