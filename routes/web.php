@@ -297,6 +297,13 @@ Route::middleware(['auth', 'admin', 'prevent_history'])->group(function () {
         Route::get('/change-password', [ChangePasswordController::class, 'showChangePasswordForm'])->name('password.change');
         Route::post('/change-password', [ChangePasswordController::class, 'updatePassword'])->name('password.update');
     });
+
+    Route::post('/course-category/reorder', [CourseCategoryController::class, 'reorder'])
+    ->middleware('auth') // Optional: protect this for admins only
+    ->name('course-category.reorder');
+    Route::post('/sub-categories/reorder', [SubCategoryController::class, 'reorder'])->name('sub-category.reorder');
+
+
 });
 
 Route::middleware(['FrameGuard'])->group(function () {

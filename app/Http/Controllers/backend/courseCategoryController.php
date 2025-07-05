@@ -9,15 +9,19 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Carbon;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\DB;
 
 class courseCategoryController extends Controller
 {
     public function index()
     {
+        // $categories = CourseCategory::with('pageCategory')
+        //     ->orderBy('id', 'ASC')
+        //     ->get();
+
         $categories = CourseCategory::with('pageCategory')
-            ->orderBy('id', 'ASC')
+            ->orderBy('ordering', 'asc')
             ->get();
-        //dd($categories);
         return view('backend.courseCategory.index', compact('categories'));
     }
 
@@ -85,45 +89,45 @@ class courseCategoryController extends Controller
         return view('backend.courseCategory.edit', compact('courseCategory', 'categories'));
     }
 
-   public function update(Request $request, $id)
-{
-    // Validate input
-    $validator = Validator::make($request->all(), [
-        'category_id' => 'required',
-        'name' => [
-            'required',
-            Rule::unique('course_categories', 'name')
-                ->where(fn($query) => $query->where('page_category', $request->category_id))
-                ->ignore($id), // Ignore current record
-        ],
-        'title' => 'required',
-        'slug'  => 'required',
-    ], [
-        'name.unique' => 'Category already exists for this page.',
-    ]);
+    public function update(Request $request, $id)
+    {
+        // Validate input
+        $validator = Validator::make($request->all(), [
+            'category_id' => 'required',
+            'name' => [
+                'required',
+                Rule::unique('course_categories', 'name')
+                    ->where(fn($query) => $query->where('page_category', $request->category_id))
+                    ->ignore($id), // Ignore current record
+            ],
+            'title' => 'required',
+            'slug'  => 'required',
+        ], [
+            'name.unique' => 'Category already exists for this page.',
+        ]);
 
-    // Return with errors if validation fails
-    if ($validator->fails()) {
-        return back()->withErrors($validator)->withInput();
+        // Return with errors if validation fails
+        if ($validator->fails()) {
+            return back()->withErrors($validator)->withInput();
+        }
+
+        try {
+            // Find and update the category
+            $courseCategory = CourseCategory::findOrFail($id);
+
+            $courseCategory->page_category = $request->category_id;
+            $courseCategory->category_group = $request->category_group;
+            $courseCategory->name          = $request->name;
+            $courseCategory->slug          = $request->slug;
+            $courseCategory->title         = $request->title;
+
+            $courseCategory->save();
+
+            return redirect()->route('course-category.list')->with('success', 'Category updated successfully!');
+        } catch (\Exception $e) {
+            return back()->with('error', 'An unexpected error occurred: ' . $e->getMessage())->withInput();
+        }
     }
-
-    try {
-        // Find and update the category
-        $courseCategory = CourseCategory::findOrFail($id);
-
-        $courseCategory->page_category = $request->category_id;
-        $courseCategory->category_group = $request->category_group;
-        $courseCategory->name          = $request->name;
-        $courseCategory->slug          = $request->slug;
-        $courseCategory->title         = $request->title;
-
-        $courseCategory->save();
-
-        return redirect()->route('course-category.list')->with('success', 'Category updated successfully!');
-    } catch (\Exception $e) {
-        return back()->with('error', 'An unexpected error occurred: ' . $e->getMessage())->withInput();
-    }
-}
 
     public function destroy($id)
     {
@@ -140,5 +144,24 @@ class courseCategoryController extends Controller
                 'redirect' => route('course-category.list') // Include the redirect URL
             ], 404);
         }
+    }
+
+
+    public function reorder(Request $request)
+    {
+        $orderData = $request->input('order');
+
+        foreach ($orderData as $item) {
+            if (isset($item['id'], $item['position'], $item['group'])) {
+                DB::table('course_categories')
+                    ->where('id', $item['id'])
+                    ->update([
+                        'ordering' => $item['position'],
+                        'category_group' => $item['group'], // optional if needed
+                    ]);
+            }
+        }
+
+        return response()->json(['status' => 'success']);
     }
 }

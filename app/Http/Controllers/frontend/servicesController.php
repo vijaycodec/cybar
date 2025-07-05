@@ -20,19 +20,40 @@ class servicesController extends Controller
     public function getServices($category = null, $sub_category = null)
     {
         $page_id = 1;
-        $page_name ='services';
+        $page_name = 'services';
 
         $trainings = $this->servicesRepository->getAllServices();
         $groupedServices = $this->servicesRepository->getGroupedServices();
         $categories_header = $this->servicesRepository->getCategoriesByPage($page_id);
-        $categories=$categories_header->groupBy('category_group'); // <- group here
+        
+        $categories = $categories_header
+            ->sortBy('ordering') // Redundant if already ordered, but safe
+            ->groupBy('category_group');
+        //for mobile view 
+        $groupOrder = ['VAPT', 'GRC', 'SOC', '']; // desired order for mobile
+        $orderedCategories = collect();
+
+        foreach ($groupOrder as $group) {
+            if (!empty($categories[$group])) {
+                $orderedCategories = $orderedCategories->concat($categories[$group]);
+            }
+        }
+
+        // for desktop view
+        $categoriesGrouped = [];
+        foreach ($groupOrder as $group) {
+            if (!empty($categories[$group])) {
+                $categoriesGrouped[$group] = $categories[$group];
+            }
+        }
+
 
         $seoDetails = Seo::where('page_name', $page_name)
-        ->where('category_name', $category)
-        ->where('sub_category_name', $sub_category)
-        ->first();
+            ->where('category_name', $category)
+            ->where('sub_category_name', $sub_category)
+            ->first();
 
-    // Define default values if any field is NULL
+        // Define default values if any field is NULL
         $seoData = [
             'page_name'       => $seoDetails->page_name ?? 'Services Page',
             'category_name'   => $seoDetails->category_name ?? 'General Services Category',
@@ -48,21 +69,29 @@ class servicesController extends Controller
             $seoData['google_analytics'] = $seoDetails->google_analytics;
         }
 
-        return view('frontend.training', compact('categories', 'trainings', 'page_id', 'groupedServices','seoData','categories_header'));
+        return view('frontend.training', compact(
+            'page_id',
+            'page_name',
+            'trainings',
+            'groupedServices',
+            'categories_header',
+            'orderedCategories',     // for mobile
+            'categoriesGrouped',    // for desktop
+            'seoData'
+        ));
     }
 
-//     public function getServices(Request $request , $category = null)
-// {
-//     $page_id = 1;
-    
-//     $seoData=Seo::all();
+    //     public function getServices(Request $request , $category = null)
+    // {
+    //     $page_id = 1;
 
-//     $services = $this->servicesRepository->getAllServices();
-//     $groupedServices = $this->servicesRepository->getGroupedServices();
-//     $categories = $this->servicesRepository->getCategoriesByPage($page_id);
+    //     $seoData=Seo::all();
 
-//     return view('frontend.services', compact('categories', 'services', 'page_id', 'groupedServices'));
-// }
+    //     $services = $this->servicesRepository->getAllServices();
+    //     $groupedServices = $this->servicesRepository->getGroupedServices();
+    //     $categories = $this->servicesRepository->getCategoriesByPage($page_id);
 
-    }
+    //     return view('frontend.services', compact('categories', 'services', 'page_id', 'groupedServices'));
+    // }
 
+}

@@ -7,6 +7,7 @@ use App\Models\CourseCategory;
 use App\Models\PageDetail;
 use App\Models\SubCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
 
@@ -14,13 +15,18 @@ class subcategoryController extends Controller
 {
     public function index()
     {
-        // Use eager loading to fetch related data to minimize queries
+        // Fetch all subcategories with necessary relationships
         $subCategories = SubCategory::with(['pageCategory', 'category'])
-            ->orderBy('id', 'ASC')
-            ->get(); // Paginate results for better performance
+            ->orderBy('category_id')
+            ->orderBy('ordering') // ordering within each category
+            ->get();
 
-        return view('backend.sub_category.index', compact('subCategories'));
+        // Group subcategories by category_id for the view
+        $groupedSubcategories = $subCategories->groupBy('category_id');
+
+        return view('backend.sub_category.index', compact('groupedSubcategories'));
     }
+
 
     public function create()
     {
@@ -146,4 +152,20 @@ class subcategoryController extends Controller
             ], 200);
         }
     }
+
+
+public function reorder(Request $request)
+{
+    foreach ($request->order as $item) {
+        DB::table('sub_categories')
+            ->where('id', $item['id'])
+            ->update(['ordering' => $item['position']]);
+    }
+
+    return response()->json(['status' => 'success']);
+}
+
+
+
+
 }
