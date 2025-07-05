@@ -597,7 +597,7 @@
             }
 
             a:where(:not(.wp-element-button)) {
-                text-decoration: underline;
+                text-decoration: none;
             }
 
             :root :where(.wp-element-button, .wp-block-button__link) {
@@ -1842,7 +1842,7 @@
                                 data-id="22ed98af" data-element_type="container">
                                 <h1 class="elementor-heading-title elementor-size-default"
                                     style="font-size: 40px; margin-bottom: 20px;">
-                                    Phase 1: Core Modules
+                                    Phase 1: Core Modules (6 Months)
                                 </h1>
                                 <div class="elementor-element elementor-element-37492f34 e-con-full e-flex e-con e-child"
                                     data-id="37492f34" data-element_type="container">
