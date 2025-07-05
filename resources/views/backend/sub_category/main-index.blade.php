@@ -35,11 +35,11 @@
                     <a class="tf-button style-1 w208" href=" {{ route('sub-category.create') }}">
                         <i class="icon-plus"></i>Add new</a>
                     <a class="tf-button style-1 w208" 
-                        href="{{ route('sub-category.main-index') }}">Main index</a>
+                         href="{{ route('sub-category.list') }}">Back</a>
                 </div>
 
                 <div class="table-responsive">
-                    <table id="" class="table table-striped table-bordered " style="table-layout: auto;">
+                    <table id="myTable" class="table table-striped table-bordered " style="table-layout: auto;">
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -47,55 +47,51 @@
                                 <th>Category</th>
                                 <th>Sub Category Name</th>
                                 <th>slug</th>
+
+
                                 <th>Actions</th>
                             </tr>
                         </thead>
-
-                        @foreach ($groupedSubcategories as $categoryId => $subCategories)
-                            <tbody class="sortable-group"  class="text-sm text-gray-700">
-                                @forelse ($subCategories as $index => $subCategory)
-                                    {{-- <tr class="border-t" data-id="{{ $subCategory->id }}"> --}}
-                                    <tr class="border-t" data-id="{{ $subCategory->id }}"
-                                        data-category-id="{{ $subCategory->category_id }}">
-
-                                        <td>{{ $subCategory->id }}
-                                        </td>
-                                        <td>{{ $subCategory->pageCategory->page_name ?? 'N/A' }}</td>
-                                        <td>{{ $subCategory->category->name ?? 'N/A' }}</td>
-                                        <td>{{ $subCategory->sub_category }}</td>
-                                        <td>{{ $subCategory->slug }}</td>
-                                        <td style="padding: 10px;">
-                                            <div class="list-icon-function">
-                                                <button type="button" class="show"
-                                                    data-id="{{ $subCategory->pageCategory->page_name ?? 'N/A' }}"
-                                                    data-name="{{ $subCategory->category->name ?? 'N/A' }}"
-                                                    data-sub_category="{{ $subCategory->sub_category ?? 'N/A' }}">
-                                                    <div class="item eye">
-                                                        <i class="icon-eye"></i>
-                                                    </div>
-                                                </button>
-                                                <a href="{{ route('sub-category.edit', $subCategory->id) }}">
-                                                    <div class="item edit">
-                                                        <i class="icon-edit-3"></i>
-                                                    </div>
-                                                </a>
-                                                <button type="button" class="delete" data-id="{{ $subCategory->id }}">
-                                                    {{-- <a href="{{ route('resources-category.destroy', $category->id) }}"> --}}
-                                                    <div class="item text-danger">
-                                                        <i class="icon-trash-2"></i>
-                                                    </div>
-                                                    {{-- </a> --}}
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                @empty
-                                    <tr>
-                                        <td colspan="5" class="text-center">No data found</td>
-                                    </tr>
-                                @endforelse
-                            </tbody>
-                        @endforeach
+                        <tbody class="text-sm text-gray-700">
+                            @forelse ($subCategories as $index => $subCategory)
+                                <tr class="border-t">
+                                    <td>{{$subCategory->id }}
+                                    </td>
+                                    <td>{{ $subCategory->pageCategory->page_name ?? 'N/A' }}</td>
+                                    <td>{{ $subCategory->category->name ?? 'N/A' }}</td>
+                                    <td>{{ $subCategory->sub_category }}</td>
+                                    <td>{{ $subCategory->slug }}</td>
+                                    <td style="padding: 10px;">
+                                        <div class="list-icon-function">
+                                            <button type="button" class="show"
+                                                data-id="{{ $subCategory->pageCategory->page_name ?? 'N/A' }}"
+                                                data-name="{{ $subCategory->category->name  ?? 'N/A' }}"
+                                                data-sub_category="{{ $subCategory->sub_category ?? 'N/A' }}">
+                                                <div class="item eye">
+                                                    <i class="icon-eye"></i>
+                                                </div>
+                                            </button>
+                                            <a href="{{ route('sub-category.edit', $subCategory->id) }}">
+                                                <div class="item edit">
+                                                    <i class="icon-edit-3"></i>
+                                                </div>
+                                            </a>
+                                            <button type="button" class="delete" data-id="{{ $subCategory->id }}">
+                                                {{-- <a href="{{ route('resources-category.destroy', $category->id) }}"> --}}
+                                                <div class="item text-danger">
+                                                    <i class="icon-trash-2"></i>
+                                                </div>
+                                                {{-- </a> --}}
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            @empty
+                                <tr>
+                                    <td colspan="5" class="text-center">No data found</td>
+                                </tr>
+                            @endforelse
+                        </tbody>
                     </table>
                 </div>
 
@@ -113,8 +109,7 @@
             <div class="modal-content rounded-3 shadow-lg">
                 <div class="modal-header bg-primary text-white">
                     <h5 class="modal-title text-white" id="CategoryModalLabel">Sub Category Details</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-4" style="max-height: 70vh; overflow-y: auto;">
                     <!-- Table Layout for Sub Category Details -->
@@ -141,6 +136,7 @@
             </div>
         </div>
     </div>
+    
 @endsection
 
 @push('scripts')
@@ -175,8 +171,7 @@
                     if (result.isConfirmed) {
                         // Perform AJAX request to delete
                         $.ajax({
-                            url: "{{ route('sub-category.destroy', ':id') }}".replace(
-                                ':id',
+                            url: "{{ route('sub-category.destroy', ':id') }}".replace(':id',
                                 subcategoryId),
                             method: "DELETE",
                             data: {
@@ -205,46 +200,4 @@
             });
         });
     </script>
-
-  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $('.sortable-group').each(function () {
-            const $tbody = $(this);
-            const categoryId = $tbody.data('category-id');
-
-            $tbody.sortable({
-                items: 'tr',
-                connectWith: '.sortable-group', // allow multiple tbody sortable
-                update: function () {
-                    let order = [];
-
-                    $tbody.find('tr').each(function (index) {
-                        order.push({
-                            id: $(this).data('id'),
-                            position: index + 1,
-                            category_id: categoryId
-                        });
-                    });
-
-                    // Ajax request to save order
-                    $.ajax({
-                        url: "{{ route('sub-category.reorder') }}",
-                        type: 'POST',
-                        data: {
-                            _token: '{{ csrf_token() }}',
-                            order: order
-                        },
-                        success: function (res) {
-                            console.log(`Reordered category ${categoryId}`, res);
-                        },
-                        error: function (xhr) {
-                            console.error(`Failed to reorder category ${categoryId}`, xhr.responseText);
-                        }
-                    });
-                }
-            });
-        });
-    });
-</script>
 @endpush

@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\DB;
 
 class courseCategoryController extends Controller
 {
-    public function index()
+    public function Orderingindex()
     {
         // $categories = CourseCategory::with('pageCategory')
         //     ->orderBy('id', 'ASC')
@@ -23,6 +23,18 @@ class courseCategoryController extends Controller
             ->orderBy('ordering', 'asc')
             ->get();
         return view('backend.courseCategory.index', compact('categories'));
+    }
+
+    public function index()
+    {
+        // $categories = CourseCategory::with('pageCategory')
+        //     ->orderBy('id', 'ASC')
+        //     ->get();
+
+        $categories = CourseCategory::with('pageCategory')
+            ->orderBy('ordering', 'asc')
+            ->get();
+        return view('backend.courseCategory.main-index', compact('categories'));
     }
 
     public function create()

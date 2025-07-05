@@ -13,7 +13,7 @@ use Illuminate\Validation\Rule;
 
 class subcategoryController extends Controller
 {
-    public function index()
+    public function Orderingindex()
     {
         // Fetch all subcategories with necessary relationships
         $subCategories = SubCategory::with(['pageCategory', 'category'])
@@ -26,6 +26,15 @@ class subcategoryController extends Controller
 
         return view('backend.sub_category.index', compact('groupedSubcategories'));
     }
+
+    public function Index()
+{
+    $subCategories = SubCategory::with(['pageCategory', 'category'])
+        ->orderBy('id', 'desc')
+        ->get();
+
+    return view('backend.sub_category.main-index', compact('subCategories'));
+}
 
 
     public function create()
