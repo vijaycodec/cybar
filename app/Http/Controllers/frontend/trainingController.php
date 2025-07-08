@@ -22,27 +22,31 @@ class trainingController extends Controller
 
     public function get_training($category = null, $sub_category = null)
     {
-    $page_id = 2;
-    $page_name = 'training';
+        $page_id = 2;
+        $page_name = 'training';
 
-    // Cache services data with eager loading
-    $services = Cache::remember('training_services', now()->addDay(), function () {
-        return CorporateTraining::with('course_category', 'subcategory')->get();
-    });
+        // Get services data with eager loading (no cache)
+        // $services = CorporateTraining::with('course_category', 'subcategory')->get();
+        $services= CorporateTraining::with(['course_category', 'subcategory'])
+            ->get()
+            ->sortBy(function ($item) {
+                return $item->subcategory->ordering ?? 9999; // Null-safe fallback
+            })
+            ->values(); // reset keys
 
-    // Cache categories data filtered by page_category
-    $categories = Cache::remember("training_categories_page_{$page_id}", now()->addDay(), function () use ($page_id) {
-        return CourseCategory::with('training')
+
+        // Get categories data filtered by page_category (no cache)
+        $categories = CourseCategory::with('training')
             ->where('page_category', $page_id)
+            ->orderBy('ordering')
             ->get();
-    });
 
         $seoDetails = Seo::where('page_name', $page_name)
-        ->where('category_name', $category)
-        ->where('sub_category_name', $sub_category)
-        ->first();
+            ->where('category_name', $category)
+            ->where('sub_category_name', $sub_category)
+            ->first();
 
-    // Define default values if any field is NULL
+        // Define default values if any field is NULL
         $seoData = [
             'page_name'       => $seoDetails->page_name ?? 'Training Page',
             'category_name'   => $seoDetails->category_name ?? 'General Training Category',
@@ -58,6 +62,6 @@ class trainingController extends Controller
             $seoData['google_analytics'] = $seoDetails->google_analytics;
         }
 
-        return view('frontend.services', compact('categories','services','page_id', 'seoData'));
+        return view('frontend.services', compact('categories', 'services', 'page_id', 'seoData'));
     }
 }

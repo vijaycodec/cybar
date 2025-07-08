@@ -217,30 +217,7 @@
     <!-- Jquery code -->
 
     <script type="text/javascript">
-        // $(document).ready(function () {
-        //     $('#cd-sidebar-nav a').bind('click', function (e) {
-        //         e.preventDefault();
-        //         var target = $(this).attr("href");
-        //         $('html, body').stop().animate({
-        //             scrollTop: $(target).offset().top - 80
-        //         }, 600, function () {
-        //             // location.hash = target;
-        //         });
-        //         return false;
-        //     });
 
-        // });
-
-        // $(window).scroll(function () {
-        //     var scrollDistance = $(window).scrollTop();
-
-        //     $('.code-div-box').each(function (i) {
-        //         if ($(this).position().top - 100 <= scrollDistance) { // Adjust for header height
-        //             $('#cd-sidebar-nav a.active').removeClass('active');
-        //             $('#cd-sidebar-nav a').eq(i).addClass('active');
-        //         }
-        //     });
-        // }).scroll();
 
 
         $(document).ready(function() {
@@ -260,122 +237,7 @@
             });
         });
     </script>
-    {{--
-    <script type="text/javascript">
-        $(function () {
-            function initializeCarousel(carouselId, navigationCountId) {
-                $("#" + carouselId).owlCarousel({
-                    loop: true,
-                    margin: 10,
-                    nav: true,
-                    dots: true,
-                    navigationText: ['<i class="fa fa-long-arrow-left" aria-hidden="true"></i>',
-                        '<i class="fa fa-long-arrow-right" aria-hidden="true"></i>'
-                    ],
-                    responsive: {
-                        0: {
-                            items: 1
-                        },
-                        600: {
-                            items: 1
-                        },
-                        900: {
-                            items: 1
-                        },
-                        1200: {
-                            items: 3
-                        }
-                    },
-                    onInitialized: function (event) {
-                        updateNavigationCount(event, navigationCountId);
-                    },
-                    onChanged: function (event) {
-                        updateNavigationCount(event, navigationCountId);
-                    }
-                });
-            }
-
-            function updateNavigationCount(event, navigationCountId) {
-                if (!event.namespace) {
-                    return;
-                }
-                var carousel = event.relatedTarget;
-                $("#" + navigationCountId).html(carousel.relative(carousel.current()) + 1 + '/' + carousel.items()
-                    .length);
-            }
-
-            initializeCarousel("ser-demo1", "navigation-count");
-            initializeCarousel("ser-demo2", "navigation-count1");
-            initializeCarousel("ser-demo3", "navigation-count2");
-            initializeCarousel("ser-demo4", "navigation-count3");
-            initializeCarousel("ser-demo5", "navigation-count4");
-            initializeCarousel("ser-demo6", "navigation-count5");
-            initializeCarousel("ser-demo7", "navigation-count6");
-            initializeCarousel("ser-demo8", "navigation-count7");
-            initializeCarousel("ser-demo9", "navigation-count8");
-            initializeCarousel("ser-demo10", "navigation-count9");
-            initializeCarousel("ser-demo11", "navigation-count10");
-            initializeCarousel("ser-demo12", "navigation-count11");
-            initializeCarousel("ser-demo13", "navigation-count12");
-            initializeCarousel("ser-demo14", "navigation-count13");
-            initializeCarousel("ser-demo15", "navigation-count14");
-            initializeCarousel("ser-demo16", "navigation-count15");
-        });
-    </script> --}}
-
-    {{--
-    <script>
-        $(document).ready(function () {
-            function initializeCarousel(carouselId, navigationCountId) {
-                $("#" + carouselId).owlCarousel({
-                    loop: true,
-                    margin: 10,
-                    nav: true,
-                    dots: true,
-                    navText: [
-                        '<i class="fa fa-long-arrow-left" aria-hidden="true"></i>',
-                        '<i class="fa fa-long-arrow-right" aria-hidden="true"></i>'
-                    ],
-                    responsive: {
-                        0: {
-                            items: 1
-                        },
-                        600: {
-                            items: 1
-                        },
-                        900: {
-                            items: 1
-                        },
-                        1200: {
-                            items: 3
-                        }
-                    },
-                    onInitialized: function (event) {
-                        updateNavigationCount(event, navigationCountId);
-                    },
-                    onChanged: function (event) {
-                        updateNavigationCount(event, navigationCountId);
-                    }
-                });
-            }
-
-            function updateNavigationCount(event, navigationCountId) {
-                if (!event.namespace) return;
-                var carousel = event.relatedTarget;
-                $("#" + navigationCountId).html(
-                    (carousel.relative(carousel.current()) + 1) + "/" + carousel.items().length
-                );
-            }
-
-            // ðŸš€ **Automatically Initialize All Carousels**
-            $("[id^=ser-demo]").each(function () {
-                let sliderId = $(this).attr("id");
-                let countId = sliderId.replace("ser-demo",
-                    "navigation-count"); // Generate corresponding count ID
-                initializeCarousel(sliderId, countId);
-            });
-        });
-    </script> --}}
+   
 
     <script>
         $(function() {
@@ -476,55 +338,5 @@
     </script>
 
 
-    {{-- <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        let pathSegments = window.location.pathname.split('/');
-        let category = pathSegments[2]; // Extract category name from URL
 
-        if (category) {
-            // Scroll to category section smoothly
-            let targetSection = document.getElementById(category);
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-
-            // Highlight the correct category in the menu
-            document.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
-            let activeLink = document.querySelector(`a[data-category="${category}"]`);
-            if (activeLink) {
-                activeLink.classList.add('active');
-            }
-        }
-    });
-
-    function updateURL(category) {
-        if (history.pushState) {
-            let newUrl = `/training/${category}`;
-
-            // Prevent duplicate updates
-            if (window.location.pathname !== newUrl) {
-                history.pushState({
-                    path: newUrl
-                }, '', newUrl);
-            }
-
-            // Scroll to category section smoothly
-            let targetSection = document.getElementById(category);
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-
-            // Highlight selected category in the menu
-            document.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
-            let activeLink = document.querySelector(`a[data-category="${category}"]`);
-            if (activeLink) {
-                activeLink.classList.add('active');
-            }
-        }
-    }
-</script> --}}
 @endpush
