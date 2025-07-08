@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\DB;
 
 class courseCategoryController extends Controller
 {
-    public function index()
+    public function Orderingindex()
     {
         // $categories = CourseCategory::with('pageCategory')
         //     ->orderBy('id', 'ASC')
@@ -23,6 +23,18 @@ class courseCategoryController extends Controller
             ->orderBy('ordering', 'asc')
             ->get();
         return view('backend.courseCategory.index', compact('categories'));
+    }
+
+    public function index()
+    {
+        // $categories = CourseCategory::with('pageCategory')
+        //     ->orderBy('id', 'ASC')
+        //     ->get();
+
+        $categories = CourseCategory::with('pageCategory')
+            ->orderBy('ordering', 'asc')
+            ->get();
+        return view('backend.courseCategory.main-index', compact('categories'));
     }
 
     public function create()
@@ -63,7 +75,7 @@ class courseCategoryController extends Controller
                 'title'         => $request->title,
             ]);
 
-            return redirect()->route('course-category.list')->with('success', 'Category added successfully!');
+            return redirect()->route('course-category.main-index')->with('success', 'Category added successfully!');
         } catch (\Exception $e) {
             return back()->with('error', 'An unexpected error occurred: ' . $e->getMessage())->withInput();
         }
@@ -123,7 +135,7 @@ class courseCategoryController extends Controller
 
             $courseCategory->save();
 
-            return redirect()->route('course-category.list')->with('success', 'Category updated successfully!');
+            return redirect()->route('course-category.main-index')->with('success', 'Category updated successfully!');
         } catch (\Exception $e) {
             return back()->with('error', 'An unexpected error occurred: ' . $e->getMessage())->withInput();
         }
@@ -141,7 +153,7 @@ class courseCategoryController extends Controller
         } else {
             return response()->json([
                 'message' => 'No Category Found! ',
-                'redirect' => route('course-category.list') // Include the redirect URL
+                'redirect' => route('course-category.main-index') // Include the redirect URL
             ], 404);
         }
     }

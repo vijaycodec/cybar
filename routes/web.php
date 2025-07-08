@@ -90,7 +90,8 @@ Route::middleware(['auth', 'admin', 'prevent_history'])->group(function () {
         Route::delete('/delete/{id}', [BackendResourcesController::class, 'destroy'])->name('resources.destroy');
     });
     //Course-category Routes
-    route::get('/course-category/list', [courseCategoryController::class, 'index'])->name('course-category.list');
+    route::get('/course-category/list', [courseCategoryController::class, 'index'])->name('course-category.main-index');
+    route::get('/course-category/Orderinginlist', [courseCategoryController::class, 'Orderingindex'])->name('course-category.list');
     route::get('/course-category/create', [courseCategoryController::class, 'create'])->name('course-category.create');
     route::post('/course-category/store', [courseCategoryController::class, 'store'])->name('course-category.store');
     Route::get('/course-category/show/{id}', [courseCategoryController::class, 'show'])->name('course-category.show');
@@ -109,7 +110,8 @@ Route::middleware(['auth', 'admin', 'prevent_history'])->group(function () {
     Route::get('/get-categories/services', [ourServicesController::class, 'getSubCategories'])->name('get-categories.get');
 
     // Sub Category Routes
-    route::get('/sub-category/list', [subcategoryController::class, 'index'])->name('sub-category.list');
+    route::get('/sub-category/list', [subcategoryController::class, 'index'])->name('sub-category.main-index');
+    route::get('/sub-category/Orderinginlist', [subcategoryController::class, 'Orderingindex'])->name('sub-category.list');
     route::get('/sub-category/create', [subcategoryController::class, 'create'])->name('sub-category.create');
     route::post('/sub-category/store', [subcategoryController::class, 'store'])->name('sub-category.store');
     Route::get('/sub-category/show/{id}', [subcategoryController::class, 'show'])->name('sub-category.show');
