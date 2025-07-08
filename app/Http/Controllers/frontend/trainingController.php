@@ -10,7 +10,6 @@ use App\Models\Seo;
 use Illuminate\Support\Facades\Cache;
 
 
-
 class trainingController extends Controller
 {
     protected $servicesRepository;
@@ -25,7 +24,6 @@ class trainingController extends Controller
         $page_id = 2;
         $page_name = 'training';
 
-        // Get services data with eager loading (no cache)
         // $services = CorporateTraining::with('course_category', 'subcategory')->get();
         $services= CorporateTraining::with(['course_category', 'subcategory'])
             ->get()
