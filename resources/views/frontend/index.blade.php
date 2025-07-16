@@ -3571,125 +3571,14 @@
                 <div class="row">
                     <div class="cn-tabs" style="margin-bottom: 40px">
                         <ul id="tabs-nav4_1" class="home-tabs2">
-                            <li><a class="scr-tabs_4" href="#tab_4_1">Cyber Forensic And Threat Analysis as a Service</a></li>
                             <li><a class="scr-tabs_4" href="#tab_4_3">Managed SOC Service</a></li>
-                            <li><a class="scr-tabs_4" href="#tab_4_2">Brand Reputation and Risk Management Services</a></li>
+                            <li><a class="scr-tabs_4" href="#tab_4_1">Cyber Forensic And Threat Analysis </a></li>
+                            <li><a class="scr-tabs_4" href="#tab_4_2">Brand Reputation and Risk Management </a></li>
                             
                         </ul>
                         <!-- END tabs-nav -->
                         <div id="tabs-content">
-                            <div id="tab_4_1" class="tab-content4_1">
-                                <div class="container mobilewidth">
-                                    <!-- box start -->
-                                    <div class="row">
-                                        <div class="home-slider home-slider-spacing">
-                                            <div id="home-slider4_1" class="owl-carousel owl-theme ">
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5 ">
-                                                        <div class="tab-content-box">
-                                                            <h3>Forensic Services Corporate Intelligence</h3>
-                                                            <p>Forensic services and corporate intelligence uncover cyber incidents, fraud, and insider threats to support legal and strategic actions.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5">
-                                                        <div class="tab-content-box">
-                                                            <h3>Imaging and Analysis of the System</h3>
-                                                            <p>System imaging and analysis capture and examine digital environments to identify evidence, anomalies, and security breaches.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5 ">
-                                                        <div class="tab-content-box">
-                                                            <h3>Fraud Risk Mitigation</h3>
-                                                            <p>Fraud risk mitigation involves identifying, assessing, and addressing vulnerabilities to prevent financial and reputational losses.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5 ">
-                                                        <div class="tab-content-box">
-                                                            <h3>Malware Analysis (Static & Dynamic Analysis) and Device Forensic</h3>
-                                                            <p>Malware analysis and device forensics use static and dynamic techniques to uncover threats and investigate compromised systems.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5">
-                                                        <div class="tab-content-box">
-                                                            <h3>Cloud Forensics</h3>
-                                                            <p>Cloud forensics investigates cloud environments to collect, preserve, and analyze digital evidence of cyber incidents securely.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5">
-                                                        <div class="tab-content-box">
-                                                            <h3>Blockchain Forensics</h3>
-                                                            <p>Blockchain forensics traces transactions and analyzes blockchain data to detect fraud, money laundering, and cybercrime activities.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5">
-                                                        <div class="tab-content-box">
-                                                            <h3>Cryptocurrencies Forensics</h3>
-                                                            <p>Cryptocurrency forensics investigates digital currency transactions to uncover fraud, theft, and illicit financial activities effectively.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5">
-                                                        <div class="tab-content-box">
-                                                            <h3>IoT Forensics</h3>
-                                                            <p>IoT forensics collects and analyzes data from connected devices to investigate security incidents and device misuse.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5">
-                                                        <div class="tab-content-box">
-                                                            <h3>Metaverse Forensics</h3>
-                                                            <p>Metaverse forensics investigates virtual environments to detect cybercrimes, data breaches, and user misconduct in digital spaces.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5">
-                                                        <div class="tab-content-box">
-                                                            <h3>Generative AI Forensics</h3>
-                                                            <p>Generative AI forensics analyzes AI-generated content to detect deepfakes, misinformation, and unauthorized synthetic media use.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="itmes">
-                                                    <div class="col-md-2 p5">
-                                                        <div class="tab-content-box">
-                                                            <h3>Malware Scanning</h3>
-                                                            <p>Malware scanning detects and identifies malicious software to protect systems from threats and unauthorized access.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- box end -->
-                                </div>
-                            </div>
-                             <div id="tab_4_3" class="tab-content4_1">
+                            <div id="tab_4_3" class="tab-content4_1">
                                 <div class="container  mobilewidth">
                                     <!-- box start -->
                                     <div class="row">
@@ -3754,6 +3643,117 @@
                                                         <div class="tab-content-box">
                                                             <h3>Dark Web Intelligence & Threat Hunting</h3>
                                                             <p>Dark web intelligence and threat hunting uncover hidden threats, leaked data, and malicious activity targeting organizations.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- box end -->
+                                </div>
+                            </div>
+                            <div id="tab_4_1" class="tab-content4_1">
+                                <div class="container mobilewidth">
+                                    <!-- box start -->
+                                    <div class="row">
+                                        <div class="home-slider home-slider-spacing">
+                                            <div id="home-slider4_1" class="owl-carousel owl-theme ">
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>Forensic Services Corporate Intelligence</h3>
+                                                            <p>Forensic services and corporate intelligence uncover cyber incidents, fraud, and insider threats to support legal and strategic actions.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Imaging and Analysis of the System</h3>
+                                                            <p>System imaging and analysis capture and examine digital environments to identify evidence, anomalies, and security breaches.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>Fraud Risk Mitigation</h3>
+                                                            <p>Fraud risk mitigation involves identifying, assessing, and addressing vulnerabilities to prevent financial and reputational losses.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Malware Scanning</h3>
+                                                            <p>Malware scanning detects and identifies malicious software to protect systems from threats and unauthorized access.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5 ">
+                                                        <div class="tab-content-box">
+                                                            <h3>Malware Analysis (Static & Dynamic Analysis) and Device Forensic</h3>
+                                                            <p>Malware analysis and device forensics use static and dynamic techniques to uncover threats and investigate compromised systems.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Cloud Forensics</h3>
+                                                            <p>Cloud forensics investigates cloud environments to collect, preserve, and analyze digital evidence of cyber incidents securely.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Blockchain Forensics</h3>
+                                                            <p>Blockchain forensics traces transactions and analyzes blockchain data to detect fraud, money laundering, and cybercrime activities.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Cryptocurrencies Forensics</h3>
+                                                            <p>Cryptocurrency forensics investigates digital currency transactions to uncover fraud, theft, and illicit financial activities effectively.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>IoT Forensics</h3>
+                                                            <p>IoT forensics collects and analyzes data from connected devices to investigate security incidents and device misuse.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Metaverse Forensics</h3>
+                                                            <p>Metaverse forensics investigates virtual environments to detect cybercrimes, data breaches, and user misconduct in digital spaces.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itmes">
+                                                    <div class="col-md-2 p5">
+                                                        <div class="tab-content-box">
+                                                            <h3>Generative AI Forensics</h3>
+                                                            <p>Generative AI forensics analyzes AI-generated content to detect deepfakes, misinformation, and unauthorized synthetic media use.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -3842,131 +3842,7 @@
             <div class="container mobile-view significance-space significance-space1">
                 <!--  -->
                 <div class="acc">
-                    <!-- box first start -->
-                    <div class="acc__card">
-                        <a href="#offer1_1" class="acc__title active">Cyber Forensic And Threat Analysis as a Service</a>
-                        <div class="acc__panel" style="display:block" id="offer1_1">
-                            <div class="indu-moblie indu-moblie1 mhslider count-navigation">
-                                <div id="mhome-slider2_21" class="owl-carousel owl-theme">
-
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Forensic Services Corporate Intelligence</h3>
-                                            <p>Forensic services and corporate intelligence uncover cyber incidents, fraud, and insider threats to support legal and strategic actions.</p>
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Imaging and Analysis of the System</h3>
-                                            <p>System imaging and analysis capture and examine digital environments to identify evidence, anomalies, and security breaches.</p>
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Fraud Risk Mitigation</h3>
-                                            <p>Fraud risk mitigation involves identifying, assessing, and addressing vulnerabilities to prevent financial and reputational losses.</p>
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Malware Analysis (Static & Dynamic Analysis) and Device Forensic</h3>
-                                            <p>Malware analysis and device forensics use static and dynamic techniques to uncover threats and investigate compromised systems.</p>
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Cloud Forensics</h3>
-                                            <p>Cloud forensics investigates cloud environments to collect, preserve, and analyze digital evidence of cyber incidents securely.</p>
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Blockchain Forensics</h3>
-                                            <p>Blockchain forensics traces transactions and analyzes blockchain data to detect fraud, money laundering, and cybercrime activities.</p>
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Cryptocurrencies Forensics</h3>
-                                            <p>Cryptocurrency forensics investigates digital currency transactions to uncover fraud, theft, and illicit financial activities effectively.</p>
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>IoT Forensics</h3>
-                                            <p>IoT forensics collects and analyzes data from connected devices to investigate security incidents and device misuse.</p>
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Metaverse Forensics</h3>
-                                            <p>Metaverse forensics investigates virtual environments to detect cybercrimes, data breaches, and user misconduct in digital spaces.</p>
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Generative AI Forensics</h3>
-                                            <p>Generative AI forensics analyzes AI-generated content to detect deepfakes, misinformation, and unauthorized synthetic media use.</p>
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="item">
-                                        <div class="tab-content-box">
-                                            <h3>Malware Scanning</h3>
-                                            <p>Malware scanning detects and identifies malicious software to protect systems from threats and unauthorized access.</p>
-                                            <div class="know-more">
-                                                <a href="javascript:void(0)">Know More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div id="navigation-count1_21" class="count-nav-box"></div>
-                            </div>
-                            <a href="javascript:void(0)" class="close-acrodin"> Close</a>
-                        </div>
-                    </div>
-                    <!-- box first end -->
-                     <!-- box three end -->
+                    <!-- box three end -->
                     <div class="acc__card">
                         <a href="#offer3_1" class="acc__title">Managed SOC Service</a>
                         <div class="acc__panel" id="offer3_1">
@@ -4050,9 +3926,133 @@
                         </div>
                     </div>
                     <!-- box three end -->
+                    <!-- box first start -->
+                    <div class="acc__card">
+                        <a href="#offer1_1" class="acc__title active">Cyber Forensic And Threat Analysis</a>
+                        <div class="acc__panel" style="display:block" id="offer1_1">
+                            <div class="indu-moblie indu-moblie1 mhslider count-navigation">
+                                <div id="mhome-slider2_21" class="owl-carousel owl-theme">
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Forensic Services Corporate Intelligence</h3>
+                                            <p>Forensic services and corporate intelligence uncover cyber incidents, fraud, and insider threats to support legal and strategic actions.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Imaging and Analysis of the System</h3>
+                                            <p>System imaging and analysis capture and examine digital environments to identify evidence, anomalies, and security breaches.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Fraud Risk Mitigation</h3>
+                                            <p>Fraud risk mitigation involves identifying, assessing, and addressing vulnerabilities to prevent financial and reputational losses.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Malware Scanning</h3>
+                                            <p>Malware scanning detects and identifies malicious software to protect systems from threats and unauthorized access.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Malware Analysis (Static & Dynamic Analysis) and Device Forensic</h3>
+                                            <p>Malware analysis and device forensics use static and dynamic techniques to uncover threats and investigate compromised systems.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Cloud Forensics</h3>
+                                            <p>Cloud forensics investigates cloud environments to collect, preserve, and analyze digital evidence of cyber incidents securely.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Blockchain Forensics</h3>
+                                            <p>Blockchain forensics traces transactions and analyzes blockchain data to detect fraud, money laundering, and cybercrime activities.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Cryptocurrencies Forensics</h3>
+                                            <p>Cryptocurrency forensics investigates digital currency transactions to uncover fraud, theft, and illicit financial activities effectively.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>IoT Forensics</h3>
+                                            <p>IoT forensics collects and analyzes data from connected devices to investigate security incidents and device misuse.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Metaverse Forensics</h3>
+                                            <p>Metaverse forensics investigates virtual environments to detect cybercrimes, data breaches, and user misconduct in digital spaces.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="tab-content-box">
+                                            <h3>Generative AI Forensics</h3>
+                                            <p>Generative AI forensics analyzes AI-generated content to detect deepfakes, misinformation, and unauthorized synthetic media use.</p>
+                                            <div class="know-more">
+                                                <a href="javascript:void(0)">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="navigation-count1_21" class="count-nav-box"></div>
+                            </div>
+                            <a href="javascript:void(0)" class="close-acrodin"> Close</a>
+                        </div>
+                    </div>
+                    <!-- box first end -->
+
                     <!-- box two end -->
                     <div class="acc__card">
-                        <a href="#offer2_1" class="acc__title">Brand Reputation  and Risk Management Services</a>
+                        <a href="#offer2_1" class="acc__title">Brand Reputation  and Risk Management</a>
                         <div class="acc__panel" id="offer2_1">
                             <div class="indu-moblie indu-moblie1 mhslider count-navigation">
                                 <div id="mhome-slider2_22" class="owl-carousel owl-theme">
