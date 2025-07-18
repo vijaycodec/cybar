@@ -3357,7 +3357,7 @@ body{
     .services-menu  {width: 100%;
     max-width: 1920px;
 
-    height: 60px;
+    height: 0px;
     line-height: 60px;}
     .sticky_nav_container{background-image: url(../images/image-bg-top.jpg);
     z-index: 999;}
