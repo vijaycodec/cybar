@@ -7485,7 +7485,7 @@
         <a href="#mian-body" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
         <!-- Place this just after your main header in index.blade.php -->
         <div id="home_float_head" class="desktop-view">
-            <section class="services-menu">
+            <section class="services-menu" style="height: 0px;">
                 <div id="floating-sub-header" style="display:none;">
                     <!-- Your floating header content here -->
                     <div class="row body_container">
