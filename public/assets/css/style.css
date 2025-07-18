@@ -360,7 +360,7 @@ body{
     gap: 5px;
     }
 
-    .home-tabs2 li {padding: 17px 60px;cursor: pointer;font-size: 16px;background: #e5e8ee;text-align: center;line-height: 1.4;display: flex;align-items: center;}
+    .home-tabs2 li {padding: 17px 60px;cursor: pointer;font-size: 16px;background: #e5e8ee;text-align: center;line-height: 1.4;align-items: center;}
     .home-tabs2 li:hover {}
     .home-tabs2 li.active {outline: 0;background-color: #15416E;}
     .home-tabs2 li.active a{color: #fff;}
