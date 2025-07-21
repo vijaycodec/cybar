@@ -91,8 +91,12 @@ return new class extends Migration
             $table->text('program_sub_title')->nullable();
             $table->text('program_description')->nullable(); // Category Description
             $table->string('program_image')->nullable(); // Program Image
+
+             //faq2 section columns
+            $table->integer('faq2_category_type')->nullable();  //  faq2 Category Name
+            $table->longText('faq2_description')->nullable();  //   faq2 description  
+            $table->text('faq2_short_description')->nullable();  //   faq2 description
             
-                         
             $table->timestamps();
 
             $table->foreign('program_category_id')->references('id')->on('program_categories')->onDelete('cascade');

@@ -138,4 +138,14 @@ class L3ContentInfo extends Model
     {
         return $this->belongsTo(SubCategory::class, 'sub_category_id');
     }
+
+        public function faq2Category()
+    {
+        return $this->belongsTo(Faq2Category::class, 'faq2_category_type', 'id');
+    }
+
+    public function faq2_title()
+    {
+        return $this->hasOne(Faq2Title::class, 'l3_content_info_id');
+    }
 }

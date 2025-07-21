@@ -128,6 +128,7 @@
                             <option value="overview2subdescription">overview2 Sub description</option>
                             <option value="significance2">significance 2</option>
                             <option value="industries2">industries 2</option>
+                            <option value="Faq2">faq 2</option>
                         </select>
                     </fieldset>
 
@@ -672,6 +673,38 @@
                     </div>
                     <!-- Program Form End -->
 
+
+
+
+                    <!-- faqs Form Start -->
+                    <div class="l3-form" id="faq2_form" style="display: none;">
+                        <div class="body-title  ">Select Faq2 Type <span class="tf-color-1">*</span></div>
+                            <select class="flex-grow" id="faq2_category" name="faq2_type">
+                                <option value="" disabled selected>Select Faq2 Category</option>
+                                @foreach ($faq2Categories as $category)
+                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                @endforeach
+                            </select>
+                    </div>
+
+                    <div class="l3-form form-group faq2_short_description">
+                        <div class="body-title">faq2 Short Description :<span class="tf-color-1">*</span></div>
+                        <textarea class="ckeditor" name="faq2_short_description">{{ old('faq2_short_description') }}</textarea>
+                    </div>
+                    <div class="l3-form form-group faq2_desc">
+                        <div class="body-title">faq2 Long Description :<span class="tf-color-1">*</span></div>
+                        <textarea class="ckeditor" name="faq2_description">{{ old('faq2_description') }}</textarea>
+                    </div>
+
+
+                    <div class="l3-form form-group faq2_title">
+                        <div class="body-title">Faq2 Title :<span class="tf-color-1">*</span></div>
+
+                        <textarea class="ckeditor" name="faq2_title">{{ old('faq2_title') }}</textarea>
+                    </div>
+                    <!-- faqs Form ends-->
+
+
                     {{-- comman Image for required form start --}}
                     <fieldset class="l3-form comman_images">
                         <div class="body-title">Upload images <span class="tf-color-1">*</span></div>
@@ -862,6 +895,12 @@
                     $('.industries2_desc').show();
                     // $('.comman_images').show();
                     $('#l3_layout_type').val('industries2'); // Set hidden input to 'industries'
+                 } else if (selectedL3Category === "Faq2") {
+                    $('#faq2_form').show();
+                    $('.faq2_desc').show();
+                    $('.faq2_short_description').show();
+                    $('.faq2_title').show();
+                    $('#l3_layout_type').val('faq2'); // Set hidden input to 'faq2'
                 } else if (selectedL3Category === "history") {
                     // $('#history_form').show();
                 }
