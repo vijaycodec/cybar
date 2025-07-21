@@ -2535,7 +2535,7 @@
                     @endforeach
                 </section>
         @elseif ($fieldKey == 'overview17_descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
-                <section class="light-grey sample7-line anchor-link space7_1" id="{{ $slug }}">
+                <section class="sample7-line anchor-link space7_1" id="{{ $slug }}">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
