@@ -35,6 +35,7 @@ use App\Http\Controllers\backend\careerController  as BackendCareerController;
 use App\Http\Controllers\backend\coursrfeaturesController;
 use App\Http\Controllers\backend\cyberwimdController;
 use App\Http\Controllers\backend\EnquiryController;
+use App\Http\Controllers\backend\faq2CategoryController;
 use App\Http\Controllers\backend\faqController;
 use App\Http\Controllers\backend\industriesController;
 use App\Http\Controllers\backend\jobCarrerController;
@@ -294,6 +295,15 @@ Route::middleware(['auth', 'admin', 'prevent_history'])->group(function () {
     route::get('/faq/edit/{id}', [faqController::class, 'edit'])->name('faq.edit');
     Route::put('faq/update/{id}', [faqController::class, 'update'])->name('faq.update');
     Route::delete('faq/delete/{id}', [faqController::class, 'destroy'])->name('faq.destroy');
+
+    //faq2-sub category Routes
+    route::get('/faq2/list', [faq2CategoryController::class, 'index'])->name('faq2.list');
+    route::get('/faq2/create', [faq2CategoryController::class, 'create'])->name('faq2.create');
+    route::post('/faq2/store', [faq2CategoryController::class, 'store'])->name('faq2.store');
+    Route::get('/faq2/show/{id}', [faq2CategoryController::class, 'show'])->name('faq2.show');
+    route::get('/faq2/edit/{id}', [faq2CategoryController::class, 'edit'])->name('faq2.edit');
+    Route::put('faq2/update/{id}', [faq2CategoryController::class, 'update'])->name('faq2.update');
+    Route::delete('faq2/delete/{id}', [faq2CategoryController::class, 'destroy'])->name('faq2.destroy');
 
     Route::middleware(['auth'])->group(function () {
         Route::get('/change-password', [ChangePasswordController::class, 'showChangePasswordForm'])->name('password.change');
