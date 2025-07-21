@@ -128,7 +128,7 @@
                             <option value="overview2subdescription">overview2 Sub description</option>
                             <option value="significance2">significance 2</option>
                             <option value="industries2">industries 2</option>
-                            <option value="Faq2">faq 2</option>
+                            <option value="faq2">faq2</option>
                         </select>
                     </fieldset>
 
@@ -895,7 +895,7 @@
                     $('.industries2_desc').show();
                     // $('.comman_images').show();
                     $('#l3_layout_type').val('industries2'); // Set hidden input to 'industries'
-                 } else if (selectedL3Category === "Faq2") {
+                 } else if (selectedL3Category === "faq2") {
                     $('#faq2_form').show();
                     $('.faq2_desc').show();
                     $('.faq2_short_description').show();

@@ -66,6 +66,8 @@ class L3CategoryRepository implements L3CategoryRepositoryInterface
                     'blogCategory',
                     'blog_title',
                     'testimonials',
+                    'faq2Category',
+                    'faq2_title',
                     // 'faqCategory.faqSubCategory',
                     'programCategory' => function ($query) use ($subcategoryId, $pageId) {  
                         $query->with(['programSubCategories' => function ($subQuery) use ($subcategoryId, $pageId) {

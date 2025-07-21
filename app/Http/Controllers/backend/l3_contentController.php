@@ -62,6 +62,7 @@ class l3_contentController extends Controller
         $faqCategories = $data['faqCategories'];
         $blogCategories = $data['blogCategories'];
         $programCategories = $data['programCategories'];
+        $faq2Categories = $data['faq2Categories'];
 
         return view('backend.l3-content.create', compact(
             'page_categories',
@@ -72,7 +73,8 @@ class l3_contentController extends Controller
             'industryCategories',
             'faqCategories',
             'blogCategories',
-            'programCategories'
+            'programCategories',
+            'faq2Categories'
         ));
     }
 
@@ -197,6 +199,11 @@ class l3_contentController extends Controller
             case 'significance':
                 $rules['significance_description'] = 'required|string';
                 $rules['significance_type'] = 'required|integer';
+                break;
+
+            case 'faq2':
+                $rules['faq2_short_description'] = 'required|string';
+                $rules['faq2_type'] = 'required|integer';
                 break;
 
             case 'significance2':

@@ -19,6 +19,8 @@ use App\Models\L3OverviewSubDescription;
 use App\Models\SignificanceTitle;
 use App\Models\CourseFeatureTitle;
 use App\Models\CyberwindTitle;
+use App\Models\Faq2Category;
+use App\Models\Faq2Title;
 use App\Models\FaqSubCategory;
 use App\Models\Industry2Title;
 use App\Models\IndustryTitle;
@@ -64,6 +66,7 @@ class L3ContentRepository implements L3ContentRepositoryInterface
             'faqCategories' => FaqCategory::all(),
             'blogCategories' => BlogCategory::all(),
             'programCategories' => ProgramCategory::all(),
+            'faq2Categories'=>Faq2Category::all(),
         ];
     }
 
@@ -136,6 +139,12 @@ class L3ContentRepository implements L3ContentRepositoryInterface
                 $l3ContentInfo->significance_description = $request->significance_description;
                 $l3ContentInfo->significance_short_description = $request->significance_short_description;
                 $l3ContentInfo->images = $this->uploadImage($request, 'significance');
+                break;
+
+            case 'faq2':
+                $l3ContentInfo->faq2_category_type = $request->faq2_type;
+                $l3ContentInfo->faq2_short_description = $request->faq2_short_description;
+                $l3ContentInfo->faq2_description = $request->faq2_description;
                 break;
 
             case 'significance2':
@@ -380,6 +389,13 @@ class L3ContentRepository implements L3ContentRepositoryInterface
             SignificanceTitle::updateOrCreate(
                 ['l3_content_info_id' => $l3ContentInfo->id], // Condition
                 ['title' => $request->input('Significance_title', 'Default Title')] // Use default if null
+            );
+        }
+
+        if ($request->l3_layout_type == 'faq2') {
+            Faq2Title::updateOrCreate(
+                ['l3_content_info_id' => $l3ContentInfo->id], // Condition
+                ['title' => $request->input('faq2_title', 'Default Title')] // Use default if null
             );
         }
 
