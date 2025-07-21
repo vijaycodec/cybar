@@ -463,6 +463,14 @@
                                         </li>
                                     </ul>
 
+                                    <ul class="sub-menu">
+                                        <li class="sub-menu-item">
+                                            <a href="{{ route('faq2.list') }}" class="">
+                                                <div class="text">Faq2 List</div>
+                                            </a>
+                                        </li>
+                                    </ul>
+
                                 </li>
 
                                 <li class="menu-item has-children">
