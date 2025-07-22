@@ -24,6 +24,7 @@ use App\Models\Faq2Title;
 use App\Models\FaqSubCategory;
 use App\Models\Industry2Title;
 use App\Models\IndustryTitle;
+use App\Models\L3Overview20SubDescription;
 use App\Models\L3Overview2_Description;
 use App\Models\L3Overview2SubDescription;
 use App\Models\Overview15;
@@ -125,6 +126,17 @@ class L3ContentRepository implements L3ContentRepositoryInterface
                 }
 
                 break;
+
+            case 'overview20':
+                
+
+                if ($request->has('overview20_title')) {
+                    $l3ContentInfo->overview20_title = $request->overview20_title;
+                }
+
+                $l3ContentInfo->overview20_description = $request->overview20_description;
+                break;
+
 
             case 'overview17':
                 $l3ContentInfo->overview17_descriptions = $request->overview17_descriptions;
@@ -275,6 +287,25 @@ class L3ContentRepository implements L3ContentRepositoryInterface
                         'l3_content_info_id' => $l3ContentInfo->id,
                         'overview_subdescription_title' => $index === 0 ? $request->overview_subdescription_title : null,
                         'sub_description' => $subDesc,
+                    ]);
+                }
+            }
+        }
+
+        if ($request->l3_layout_type == 'overview20') {  
+            
+
+            if ($request->has('overview20_sub_description')) {
+             
+                foreach ($request->overview20_sub_description as $index => $subDesc) {
+                   
+                    // dd($index === 0 );
+                  
+                    L3Overview20SubDescription::create([
+                        
+                        'l3_content_info_id' => $l3ContentInfo->id,
+                        'overview20_subdescription_title' => $index === 0 ? $request->overview20_subdescription_title:null,
+                        'overview20_sub_description' => $subDesc,
                     ]);
                 }
             }
@@ -689,6 +720,15 @@ class L3ContentRepository implements L3ContentRepositoryInterface
                 $l3ContentInfo->images = $this->uploadImage($request, 'overview16');
                 break;
 
+            case 'overview20':
+
+                if ($request->has('overview20_title')) {
+                    $l3ContentInfo->overview20_title = $request->overview20_title;
+                }
+
+                $l3ContentInfo->overview20_description = $request->overview20_description;
+                break;
+
             case 'overview17':
                 $l3ContentInfo->overview17_descriptions = $request->overview17_descriptions;
                 break;
@@ -888,6 +928,22 @@ class L3ContentRepository implements L3ContentRepositoryInterface
                         'l3_content_info_id'             => $id,
                         'overview_subdescription_title' => $index === 0 ? $request->overview_subdescription_title : null,
                         'sub_description'               => $subDesc,
+                    ]);
+                }
+            }
+        }
+
+        // Update overview20 sub-descriptions
+        if ($request->l3_layout_type === 'overview20' && $request->filled('overview20_sub_description')) {
+            L3Overview20SubDescription::where('l3_content_info_id', $id)->delete();
+
+            foreach ($request->overview20_sub_description as $index => $subDesc) {
+                $subDesc = trim($subDesc);
+                if (!empty($subDesc)) {
+                    L3Overview20SubDescription::create([
+                        'l3_content_info_id'             => $id,
+                        'overview20_subdescription_title' => $index === 0 ? $request->overview20_subdescription_title : null,
+                        'overview20_sub_description'      => $subDesc,
                     ]);
                 }
             }

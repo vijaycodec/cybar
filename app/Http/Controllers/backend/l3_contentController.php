@@ -160,7 +160,7 @@ class l3_contentController extends Controller
 
     public function store(Request $request)
     {
-        // dd($request->all());
+        //  dd($request->all());
 
         $rules = [
             'page_category_id' => 'required',
@@ -194,6 +194,10 @@ class l3_contentController extends Controller
 
             case 'overview17':
                 $rules['overview17_descriptions'] = 'required|string';
+                break;
+
+            case 'overview20':
+                $rules['overview20_description'] = 'required|string';
                 break;
 
             case 'significance':
@@ -366,6 +370,11 @@ public function SwapUpdate(Request $request, $id)
 
             case 'overview17':
                 $rules['overview17_descriptions'] = 'required|string';
+                break;
+
+            case 'overview20':
+                $rules['overview20_title'] = 'required|String';
+                $rules['overview20_descriptions'] = 'required|string';
                 break;
 
             case 'overview2subdescription':
