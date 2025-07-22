@@ -1088,7 +1088,6 @@
                 <!-- mobile start -->
                 <!--  -->
             </section>
-
             <!-- program info 3-->
 
             <!-- course Feature start 4-->
@@ -1426,7 +1425,6 @@
                 </div>
                 <!-- body end -->
             </section>
-
             <!-- Incident info End 6-->
 
             <!-- industries section start 7 -->
@@ -1683,7 +1681,6 @@
                 </div>
                 <!-- mobile start -->
             </section>
-
             <!-- Why Codec Network end 8 -->
 
             <!-- testimonials start 9 -->
@@ -1818,7 +1815,6 @@
                 </div>
 
             </section>
-
             {{-- blog section end 10 --}}
 
             <!-- FAQ info start 11 -->
@@ -1999,10 +1995,10 @@
                     </div>
                     <!-- mobile start -->
                     <!--  -->
-                </section>
+            </section>
                 <!-- FAQ info End 11 -->
 
-                <!-- Global Popup fot Testomonials (Only One in the Page) -->
+                <!-- Global Popup fot Testomonials (Only One in the Page) 12 -->
         @elseif ($fieldKey == 'overview2Descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
                 <section class="light-grey sample7-line anchor-link space7_1" id="{{ $slug }}">
                     <!--  -->
@@ -2079,7 +2075,9 @@
                     </div>
 
                 </section>
-            @elseif ($fieldKey == 'overview2SubDescriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
+                <!-- testimonials info End 12 -->
+
+        @elseif ($fieldKey == 'overview2SubDescriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
                 <section class="light-grey sample7-line anchor-link space7_1" id="{{ $slug }}">
                     @foreach ($l3Categories as $category)
                         @foreach ($category->contentInfos as $contentInfo)
@@ -2147,8 +2145,7 @@
                         @endforeach
                     @endforeach
                 </section>
-
-            @elseif ($fieldKey == 'industry2_description' && $contents->contains(fn($info) => $info->{$fieldKey}))
+        @elseif ($fieldKey == 'industry2_description' && $contents->contains(fn($info) => $info->{$fieldKey}))
                 <section class="sec-wrap-cod-2" style="background: #dceff6;" id="{{ $slug }}">
                     <div class="container">
                         <div class="row">
@@ -2198,7 +2195,7 @@
                         @endforeach
                     </div>
                 </section>
-            @elseif ($fieldKey == 'overview15s' && $contents->contains(fn($info) => $info->{$fieldKey}))
+        @elseif ($fieldKey == 'overview15s' && $contents->contains(fn($info) => $info->{$fieldKey}))
                 <section class="sec-wrap-cod-2"
                     style="background-image:url('assets/images/image-bg-top.jpg'); background-repeat: repeat;" id="{{ $slug }}">
                     <div class="container">
@@ -2222,8 +2219,7 @@
                         @endforeach
                     </div>
                 </section>
-
-            @elseif ($fieldKey == 'significance2s' && $contents->contains(fn($info) => $info->{$fieldKey}))
+        @elseif ($fieldKey == 'significance2s' && $contents->contains(fn($info) => $info->{$fieldKey}))
                 <section class="why-codec codec-page-sectionl3 anchor-link" id="{{ $slug }}">
                     @php
                         $categoriesMap = [];
@@ -2452,11 +2448,9 @@
                             </div>
                         </div>
                     </div>
-
-
                 </section>
 
-            @elseif ($fieldKey == 'overview16_short_descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
+        @elseif ($fieldKey == 'overview16_short_descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
                 <section class="empower-industry-bg codec-page-section anchor-link"
                     style="padding-bottom: 20px !important; padding-top: 40px !important;" id="{{ $slug }}">
                     <div class="container">
@@ -2540,7 +2534,7 @@
                         @endforeach
                     @endforeach
                 </section>
-            @elseif ($fieldKey == 'overview17_descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
+        @elseif ($fieldKey == 'overview17_descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
                 <section class="sample7-line anchor-link space7_1" id="{{ $slug }}">
                     <div class="container">
                         <div class="row">
@@ -2558,1256 +2552,116 @@
                         </div>
                     </div>
                 </section>
-            @endif
+        @elseif ($fieldKey == 'faq2Category'  && $contents->contains(fn($info) => $info->{$fieldKey}))
+               <section class="anchor-link sample7-line space7 ceh-pro ceh-pro1 sec19class" id="{{ $slug }}">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 cn-title ceh-title">
+                            @php $breakAll = false; @endphp
+                                @foreach ($l3Categories as $category)
+                                    @if ($breakAll) @break @endif
+                                    @foreach ($category->contentInfos as $contentInfo)
+                                        @if ($contentInfo->faq2_title)
+                                            <h2>{!! $contentInfo->faq2_title->title !!}</h2>
+                                            @php $breakAll = true; @endphp
+                                            @break
+                                        @endif
+                                    @endforeach
+                            @endforeach
+                            </div>
+                        </div>
+                    </div>
+                    <!-- body start -->
+                   <div class="container desktop-view faq sec19-main sec19-scr">
+                        <div class="row">
+                            <!-- Tab Menu Start -->
+                            @php $firstTabSet = false; @endphp
+                            <ul class="nav nav-tabs nav-tabs2 program-tab program-tab19" id="program_tab19">
+                                @foreach ($l3Categories as $category)
+                                    @foreach ($category->contentInfos as $contentInfo)
+                                        @if ($contentInfo->faq2Category)
+                                            @php
+                                                $id = strtolower(str_replace([' ', '&', ','], '-', $contentInfo->faq2Category->name));
+                                                $isActive = !$firstTabSet;
+                                            @endphp
+                                            <li class="{{ $isActive ? 'active' : '' }}">
+                                                <a data-toggle="tab" href="#{{ $id }}">{{ $contentInfo->faq2Category->name }}</a>
+                                            </li>
+                                            @php $firstTabSet = true; @endphp
+                                        @endif
+                                    @endforeach
+                                @endforeach
+                            </ul>
+                            <!-- Tab Menu End -->
 
+                            <!-- Tab Content Start -->
+                            @php $firstTabSet = false; @endphp
+                            <div class="tab-content program-content" style="min-height: 420px; max-height: 420px; overflow-y: auto;">
+                                @foreach ($l3Categories as $category)
+                                    @foreach ($category->contentInfos as $contentInfo)
+                                        @if ($contentInfo->faq2Category)
+                                            @php
+                                                $id = strtolower(str_replace([' ', '&', ','], '-', $contentInfo->faq2Category->name));
+                                                $isActive = !$firstTabSet;
+                                            @endphp
+                                            <div id="{{ $id }}"
+                                                class="tab-pane fade {{ $isActive ? 'show active' : '' }}"
+                                                style="background-color: #ebf5f9;">
+                                                <div class="container">
+                                                    <div class="pro-ul-box">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="brochure-box">
+                                                                    {!! $contentInfo->faq2_short_description !!}
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            @php $firstTabSet = true; @endphp
+                                        @endif
+                                    @endforeach
+                                @endforeach
+                            </div>
+                            <!-- Tab Content End -->
+                        </div>
+                    </div>
+                    <!-- mobile start -->
+                    <div class="container mobile-view" id="sec19mob">
+                        <div class="acc">
+                            <!-- FAQ Category -->
+                             @foreach ($l3Categories as $category)
+                                @foreach ($category->contentInfos as $contentInfo)
+                                    @if ($contentInfo->faq2Category)
+                                        <div class="acc__card">
+                                             <a class="acc__title {{ $loop->first ? 'active' : '' }}" style="background: #345995 !important; color: #fff !important;" href="#{{ strtolower(str_replace([' ', '&', ','], '-', $contentInfo->faq2Category->name)) }}" data-target="mob{{ strtolower(str_replace([' ', '&', ','], '-', $contentInfo->faq2Category->name)) }}">{{  $contentInfo->faq2Category->name }} 
+                                             </a>
+                                               <div id="mob{{ strtolower(str_replace([' ', '&', ','], '-', $contentInfo->faq2Category->name)) }}" class="acc__panel" style=" display:block'">
+                                                    <div class="box-height vert-box">
+                                                        <div class="red-title">
+                                                            @if ($contentInfo->faq2Category)
+                                                                @if ($contentInfo->faq2_short_description)
+                                                                    {!! $contentInfo->faq2_short_description !!}
+                                                                @endif      
+                                                            @endif                
+                                                        </div>
+                                                    </div>
+                                              </div>
+                                        </div>
+                                    @endif
+                                @endforeach
+                            @endforeach
+                            <!-- FAQ Category -->
+                        </div>
+                    </div>
+                    <!-- mobile end -->
+               </section>
+         @endif
     @endforeach
 
-        <section class="anchor-link sample7-line space7 ceh-pro ceh-pro1 sec19class" id="sec19">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 cn-title ceh-title">
-                        <h2 style="font-style:normal">Is This C|EH Course For Me?</h2>
-                        <p>We have helped over 250,000 people answer this question over the past 20 years and we are
-                            excited to help you with this big decision! Choosing the right credential can seem like a
-                            difficult task, here are some things you should consider</p>
-                    </div>
-                </div>
-            </div>
-            <!-- body start -->
-            <div class="container desktop-view faq sec19-main sec19-scr">
-                <div class="row">
-                    <!-- Tab Menu Start -->
-                    <ul class="nav nav-tabs nav-tabs2 program-tab program-tab19" id="program_tab19">
-                        <li class="active">
-                            <a data-toggle="tab" href="#sec19_1">
-                                General Questions about Managed SOC
-                            </a>
-                        </li>
-                        <li class="">
-                            <a data-toggle="tab" href="#sec19_2">
-                                Security Monitoring and Threat Detection
-                            </a>
-                        </li>
-                        <li class="">
-                            <a data-toggle="tab" href="#sec19_3">
-                                Incident Response and Management
-                            </a>
-                        </li>
-                        <li class="">
-                            <a data-toggle="tab" href="#sec19_4">
-                                Compliance and Data Privacy
-                            </a>
-                        </li>
-                        <li class="">
-                            <a data-toggle="tab" href="#sec19_5">
-                                Onboarding, Pricing, and Support
-                            </a>
-                        </li>
-                        <li class="">
-                            <a data-toggle="tab" href="#sec19_6">
-                                General Questions about Managed SOC
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- Tab Menu End -->
-                    <div class="tab-content program-content"
-                        style="min-height: 420px; max-height: 420px; overflow-y: auto; overscroll-behavior: unset; display: block;">
-                        <div id="sec19_1" class="tab-pane tab-pane19 fade show active in"
-                            style="background-color: #ebf5f9">
-                            <div class="container">
-                                <div class="pro-ul-box">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="brochure-box">
-                                                <p>&nbsp;</p>
 
-                                                <h4>Delivery Metrices 1:</h4>
-
-                                                <p><strong>1. Key Business Benefits for Clients</strong></p>
-
-                                                <ol>
-                                                    <li><strong>24/7 Cybersecurity Monitoring</strong> – Always-on
-                                                        protection against threats</li>
-                                                    <li><strong>Regulatory Compliance</strong> – Meets RBI, PCI-DSS,
-                                                        HIPAA, ISO 27001 guidelines</li>
-                                                    <li><strong>Cost Savings</strong> – Reduces in-house SOC setup costs
-                                                        by 40-50%</li>
-                                                    <li><strong>Faster Incident Response</strong> – AI-driven
-                                                        remediation minimizes impact</li>
-                                                    <li>&nbsp;<strong>Proactive Threat Defense</strong> – Early threat
-                                                        detection prevents financial &amp; reputational loss</li>
-                                                </ol>
-
-                                                <hr>
-                                                <p><strong>2. Service Delivery Methodology</strong></p>
-
-                                                <ol>
-                                                    <li><strong>Assessment &amp; Onboarding</strong> – Security
-                                                        assessment &amp; risk profiling</li>
-                                                    <li><strong>SOC Implementation</strong> – SIEM integration, endpoint
-                                                        security deployment</li>
-                                                    <li><strong>Continuous Monitoring</strong> – 24/7 threat detection
-                                                        &amp; alerting</li>
-                                                    <li><strong>Incident Response &amp; Remediation</strong> –
-                                                        AI-powered incident handling</li>
-                                                    <li><strong>Regular Reporting &amp; Compliance Support</strong> –
-                                                        Monthly security reports &amp; audits</li>
-                                                </ol>
-                                                <!--  -->
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                        <!--  -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="sec19_2" class="tab-pane tab-pane19 fade" style="background-color: #ebf5f9">
-                            <div class="container">
-                                <div class="pro-ul-box">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="brochure-box">
-                                                <p>&nbsp;</p>
-
-                                                <h4>Delivery Metrices 2:</h4>
-
-                                                <p><strong>1. Key Business Benefits for Clients</strong></p>
-
-                                                <ol>
-                                                    <li><strong>24/7 Cybersecurity Monitoring</strong> – Always-on
-                                                        protection against threats</li>
-                                                    <li><strong>Regulatory Compliance</strong> – Meets RBI, PCI-DSS,
-                                                        HIPAA, ISO 27001 guidelines</li>
-                                                    <li><strong>Cost Savings</strong> – Reduces in-house SOC setup costs
-                                                        by 40-50%</li>
-                                                    <li><strong>Faster Incident Response</strong> – AI-driven
-                                                        remediation minimizes impact</li>
-                                                    <li>&nbsp;<strong>Proactive Threat Defense</strong> – Early threat
-                                                        detection prevents financial &amp; reputational loss</li>
-                                                </ol>
-
-                                                <hr>
-                                                <p><strong>2. Service Delivery Methodology</strong></p>
-
-                                                <ol>
-                                                    <li><strong>Assessment &amp; Onboarding</strong> – Security
-                                                        assessment &amp; risk profiling</li>
-                                                    <li><strong>SOC Implementation</strong> – SIEM integration, endpoint
-                                                        security deployment</li>
-                                                    <li><strong>Continuous Monitoring</strong> – 24/7 threat detection
-                                                        &amp; alerting</li>
-                                                    <li><strong>Incident Response &amp; Remediation</strong> –
-                                                        AI-powered incident handling</li>
-                                                    <li><strong>Regular Reporting &amp; Compliance Support</strong> –
-                                                        Monthly security reports &amp; audits</li>
-                                                </ol>
-                                                <!--  -->
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                        <!--  -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="sec19_3" class="tab-pane tab-pane19 fade" style="background-color: #ebf5f9">
-                            <div class="container">
-                                <div class="pro-ul-box">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="brochure-box">
-                                                <p>&nbsp;</p>
-
-                                                <h4>Delivery Metrices 3:</h4>
-
-                                                <p><strong>1. Key Business Benefits for Clients</strong></p>
-
-                                                <ol>
-                                                    <li><strong>24/7 Cybersecurity Monitoring</strong> – Always-on
-                                                        protection against threats</li>
-                                                    <li><strong>Regulatory Compliance</strong> – Meets RBI, PCI-DSS,
-                                                        HIPAA, ISO 27001 guidelines</li>
-                                                    <li><strong>Cost Savings</strong> – Reduces in-house SOC setup costs
-                                                        by 40-50%</li>
-                                                    <li><strong>Faster Incident Response</strong> – AI-driven
-                                                        remediation minimizes impact</li>
-                                                    <li>&nbsp;<strong>Proactive Threat Defense</strong> – Early threat
-                                                        detection prevents financial &amp; reputational loss</li>
-                                                </ol>
-
-                                                <hr>
-                                                <p><strong>2. Service Delivery Methodology</strong></p>
-
-                                                <ol>
-                                                    <li><strong>Assessment &amp; Onboarding</strong> – Security
-                                                        assessment &amp; risk profiling</li>
-                                                    <li><strong>SOC Implementation</strong> – SIEM integration, endpoint
-                                                        security deployment</li>
-                                                    <li><strong>Continuous Monitoring</strong> – 24/7 threat detection
-                                                        &amp; alerting</li>
-                                                    <li><strong>Incident Response &amp; Remediation</strong> –
-                                                        AI-powered incident handling</li>
-                                                    <li><strong>Regular Reporting &amp; Compliance Support</strong> –
-                                                        Monthly security reports &amp; audits</li>
-                                                </ol>
-                                                <hr>
-                                                <div class="container">
-                                                    <div class="row overview-content">
-                                                        <!--  -->
-                                                        <div class="col-md-12">
-                                                            <div class="third-content smple-box1">
-                                                                <h4>Main Benefits For Your Orgainization</h4>
-                                                            </div>
-                                                            <!--  -->
-                                                            <div class="info-graphic">
-                                                                <div class="row info-graphic-row">
-                                                                    <div class="col-md-12">
-                                                                        <!-- desktop start  -->
-                                                                        <div class="desktop-view">
-                                                                            <!-- Checking and Displaying Sub Descriptions -->
-                                                                            <div class="wwyl-row">
-                                                                                <!-- Dynamic Class for wwyl-box -->
-
-                                                                                <div class="wwyl-box">
-
-                                                                                    <p><strong>24x7 Real-Time Threat
-                                                                                            Detection and
-                                                                                            Response</strong></p>
-
-                                                                                    <p>Managed SOC services provide
-                                                                                        continuous monitoring of your IT
-                                                                                        infrastructure, ensuring that
-                                                                                        cyber threats are identified and
-                                                                                        addressed immediately—regardless
-                                                                                        of the time of day. This reduces
-                                                                                        the risk of breaches going
-                                                                                        undetected and minimizes
-                                                                                        potential damage</p>
-
-
-                                                                                    <!-- Dynamic Circle Class -->
-                                                                                    <div class="wwyl-box-circle">
-                                                                                        <span>1</span>
-                                                                                        <!-- Simple Iteration Number -->
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="wwyl-row">
-
-                                                                                <!-- Dynamic Class for wwyl-box -->
-
-                                                                                <div class="wwyl-box orange ">
-
-                                                                                    <p><strong>Cost-Effective
-                                                                                            Alternative to In-House
-                                                                                            SOC</strong></p>
-
-                                                                                    <p>Building and maintaining an
-                                                                                        internal SOC requires
-                                                                                        significant investment in
-                                                                                        infrastructure, tools, and
-                                                                                        skilled personnel. A Managed SOC
-                                                                                        offers access to expert-level
-                                                                                        security operations at a
-                                                                                        fraction of the cost, making it
-                                                                                        ideal for companies of all
-                                                                                        sizes.</p>
-
-
-                                                                                    <!-- Dynamic Circle Class -->
-                                                                                    <div
-                                                                                        class="wwyl-box-circle orange-circle">
-                                                                                        <span>2</span>
-                                                                                        <!-- Simple Iteration Number -->
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="wwyl-row">
-
-                                                                                <!-- Dynamic Class for wwyl-box -->
-
-                                                                                <div class="wwyl-box purple">
-
-                                                                                    <p><strong>Rapid Incident Response
-                                                                                            and Containment</strong></p>
-
-                                                                                    <p>With predefined playbooks,
-                                                                                        automated workflows, and skilled
-                                                                                        analysts, Managed SOCs ensure
-                                                                                        fast response to cyber
-                                                                                        incidents. This minimizes
-                                                                                        operational downtime and
-                                                                                        accelerates recovery from
-                                                                                        threats like ransomware or
-                                                                                        insider attacks.</p>
-
-
-                                                                                    <!-- Dynamic Circle Class -->
-                                                                                    <div
-                                                                                        class="wwyl-box-circle purple-circle">
-                                                                                        <span>3</span>
-                                                                                        <!-- Simple Iteration Number -->
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="wwyl-row">
-
-                                                                                <!-- Dynamic Class for wwyl-box -->
-
-                                                                                <div class="wwyl-box color4">
-
-                                                                                    <p><strong>Regulatory Compliance and
-                                                                                            Audit Readiness</strong></p>
-
-                                                                                    <p>Managed SOCs help businesses meet
-                                                                                        industry-specific compliance
-                                                                                        requirements (e.g., ISO 27001,
-                                                                                        GDPR, RBI, HIPAA) by providing
-                                                                                        audit logs, incident reports,
-                                                                                        and continuous security
-                                                                                        monitoring aligned with
-                                                                                        regulatory standards</p>
-
-
-                                                                                    <!-- Dynamic Circle Class -->
-                                                                                    <div
-                                                                                        class="wwyl-box-circle color4-circle">
-                                                                                        <span>4</span>
-                                                                                        <!-- Simple Iteration Number -->
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="wwyl-row">
-
-                                                                                <!-- Dynamic Class for wwyl-box -->
-
-                                                                                <div class="wwyl-box green">
-
-                                                                                    <p><strong>Access to Latest Tools,
-                                                                                            Threat Intelligence &amp;
-                                                                                            Expertise</strong></p>
-
-                                                                                    <p>Corporate companies benefit from
-                                                                                        the SOC provider’s advanced
-                                                                                        security stack—including SIEM,
-                                                                                        SOAR, XDR, and threat
-                                                                                        intelligence platforms—alongside
-                                                                                        up-to-date threat data and
-                                                                                        skilled cybersecurity
-                                                                                        professionals, ensuring a
-                                                                                        future-ready security posture
-                                                                                    </p>
-
-
-                                                                                    <!-- Dynamic Circle Class -->
-                                                                                    <div
-                                                                                        class="wwyl-box-circle green-circle">
-                                                                                        <span>5</span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!--  -->
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                        <!--  -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="sec19_4" class="tab-pane tab-pane19 fade" style="background-color: #ebf5f9">
-                            <div class="container">
-                                <div class="pro-ul-box">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="brochure-box">
-                                                <p>&nbsp;</p>
-
-                                                <h4>Delivery Metrices 4:</h4>
-
-                                                <p><strong>1. Key Business Benefits for Clients</strong></p>
-
-                                                <ol>
-                                                    <li><strong>24/7 Cybersecurity Monitoring</strong> – Always-on
-                                                        protection against threats</li>
-                                                    <li><strong>Regulatory Compliance</strong> – Meets RBI, PCI-DSS,
-                                                        HIPAA, ISO 27001 guidelines</li>
-                                                    <li><strong>Cost Savings</strong> – Reduces in-house SOC setup costs
-                                                        by 40-50%</li>
-                                                    <li><strong>Faster Incident Response</strong> – AI-driven
-                                                        remediation minimizes impact</li>
-                                                    <li>&nbsp;<strong>Proactive Threat Defense</strong> – Early threat
-                                                        detection prevents financial &amp; reputational loss</li>
-                                                </ol>
-
-                                                <hr>
-                                                <p><strong>2. Service Delivery Methodology</strong></p>
-
-                                                <ol>
-                                                    <li><strong>Assessment &amp; Onboarding</strong> – Security
-                                                        assessment &amp; risk profiling</li>
-                                                    <li><strong>SOC Implementation</strong> – SIEM integration, endpoint
-                                                        security deployment</li>
-                                                    <li><strong>Continuous Monitoring</strong> – 24/7 threat detection
-                                                        &amp; alerting</li>
-                                                    <li><strong>Incident Response &amp; Remediation</strong> –
-                                                        AI-powered incident handling</li>
-                                                    <li><strong>Regular Reporting &amp; Compliance Support</strong> –
-                                                        Monthly security reports &amp; audits</li>
-                                                </ol>
-                                                <hr>
-                                                <div class="container">
-                                                    <div class="row overview-content">
-                                                        <!--  -->
-                                                        <div class="col-md-12">
-                                                            <div class="third-content smple-box1">
-                                                                <h4>Main Benefits For Your Orgainization</h4>
-                                                            </div>
-                                                            <!--  -->
-                                                            <div class="info-graphic">
-                                                                <div class="row info-graphic-row">
-                                                                    <div class="col-md-12">
-                                                                        <!-- desktop start  -->
-                                                                        <div class="desktop-view">
-                                                                            <!-- Checking and Displaying Sub Descriptions -->
-                                                                            <div class="wwyl-row">
-                                                                                <!-- Dynamic Class for wwyl-box -->
-
-                                                                                <div class="wwyl-box">
-
-                                                                                    <p><strong>24x7 Real-Time Threat
-                                                                                            Detection and
-                                                                                            Response</strong></p>
-
-                                                                                    <p>Managed SOC services provide
-                                                                                        continuous monitoring of your IT
-                                                                                        infrastructure, ensuring that
-                                                                                        cyber threats are identified and
-                                                                                        addressed immediately—regardless
-                                                                                        of the time of day. This reduces
-                                                                                        the risk of breaches going
-                                                                                        undetected and minimizes
-                                                                                        potential damage</p>
-
-
-                                                                                    <!-- Dynamic Circle Class -->
-                                                                                    <div class="wwyl-box-circle">
-                                                                                        <span>1</span>
-                                                                                        <!-- Simple Iteration Number -->
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="wwyl-row">
-
-                                                                                <!-- Dynamic Class for wwyl-box -->
-
-                                                                                <div class="wwyl-box orange ">
-
-                                                                                    <p><strong>Cost-Effective
-                                                                                            Alternative to In-House
-                                                                                            SOC</strong></p>
-
-                                                                                    <p>Building and maintaining an
-                                                                                        internal SOC requires
-                                                                                        significant investment in
-                                                                                        infrastructure, tools, and
-                                                                                        skilled personnel. A Managed SOC
-                                                                                        offers access to expert-level
-                                                                                        security operations at a
-                                                                                        fraction of the cost, making it
-                                                                                        ideal for companies of all
-                                                                                        sizes.</p>
-
-
-                                                                                    <!-- Dynamic Circle Class -->
-                                                                                    <div
-                                                                                        class="wwyl-box-circle orange-circle">
-                                                                                        <span>2</span>
-                                                                                        <!-- Simple Iteration Number -->
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="wwyl-row">
-
-                                                                                <!-- Dynamic Class for wwyl-box -->
-
-                                                                                <div class="wwyl-box purple">
-
-                                                                                    <p><strong>Rapid Incident Response
-                                                                                            and Containment</strong></p>
-
-                                                                                    <p>With predefined playbooks,
-                                                                                        automated workflows, and skilled
-                                                                                        analysts, Managed SOCs ensure
-                                                                                        fast response to cyber
-                                                                                        incidents. This minimizes
-                                                                                        operational downtime and
-                                                                                        accelerates recovery from
-                                                                                        threats like ransomware or
-                                                                                        insider attacks.</p>
-
-
-                                                                                    <!-- Dynamic Circle Class -->
-                                                                                    <div
-                                                                                        class="wwyl-box-circle purple-circle">
-                                                                                        <span>3</span>
-                                                                                        <!-- Simple Iteration Number -->
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="wwyl-row">
-
-                                                                                <!-- Dynamic Class for wwyl-box -->
-
-                                                                                <div class="wwyl-box color4">
-
-                                                                                    <p><strong>Regulatory Compliance and
-                                                                                            Audit Readiness</strong></p>
-
-                                                                                    <p>Managed SOCs help businesses meet
-                                                                                        industry-specific compliance
-                                                                                        requirements (e.g., ISO 27001,
-                                                                                        GDPR, RBI, HIPAA) by providing
-                                                                                        audit logs, incident reports,
-                                                                                        and continuous security
-                                                                                        monitoring aligned with
-                                                                                        regulatory standards</p>
-
-
-                                                                                    <!-- Dynamic Circle Class -->
-                                                                                    <div
-                                                                                        class="wwyl-box-circle color4-circle">
-                                                                                        <span>4</span>
-                                                                                        <!-- Simple Iteration Number -->
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="wwyl-row">
-
-                                                                                <!-- Dynamic Class for wwyl-box -->
-
-                                                                                <div class="wwyl-box green">
-
-                                                                                    <p><strong>Access to Latest Tools,
-                                                                                            Threat Intelligence &amp;
-                                                                                            Expertise</strong></p>
-
-                                                                                    <p>Corporate companies benefit from
-                                                                                        the SOC provider’s advanced
-                                                                                        security stack—including SIEM,
-                                                                                        SOAR, XDR, and threat
-                                                                                        intelligence platforms—alongside
-                                                                                        up-to-date threat data and
-                                                                                        skilled cybersecurity
-                                                                                        professionals, ensuring a
-                                                                                        future-ready security posture
-                                                                                    </p>
-
-
-                                                                                    <!-- Dynamic Circle Class -->
-                                                                                    <div
-                                                                                        class="wwyl-box-circle green-circle">
-                                                                                        <span>5</span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!--  -->
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                        <!--  -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="sec19_5" class="tab-pane tab-pane19 fade" style="background-color: #ebf5f9">
-                            <div class="container">
-                                <div class="pro-ul-box">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="brochure-box">
-                                                <p>&nbsp;</p>
-
-                                                <h4>Delivery Metrices 5:</h4>
-
-                                                <p><strong>1. Key Business Benefits for Clients</strong></p>
-
-                                                <ol>
-                                                    <li><strong>24/7 Cybersecurity Monitoring</strong> – Always-on
-                                                        protection against threats</li>
-                                                    <li><strong>Regulatory Compliance</strong> – Meets RBI, PCI-DSS,
-                                                        HIPAA, ISO 27001 guidelines</li>
-                                                    <li><strong>Cost Savings</strong> – Reduces in-house SOC setup costs
-                                                        by 40-50%</li>
-                                                    <li><strong>Faster Incident Response</strong> – AI-driven
-                                                        remediation minimizes impact</li>
-                                                    <li>&nbsp;<strong>Proactive Threat Defense</strong> – Early threat
-                                                        detection prevents financial &amp; reputational loss</li>
-                                                </ol>
-
-                                                <hr>
-                                                <p><strong>2. Service Delivery Methodology</strong></p>
-
-                                                <ol>
-                                                    <li><strong>Assessment &amp; Onboarding</strong> – Security
-                                                        assessment &amp; risk profiling</li>
-                                                    <li><strong>SOC Implementation</strong> – SIEM integration, endpoint
-                                                        security deployment</li>
-                                                    <li><strong>Continuous Monitoring</strong> – 24/7 threat detection
-                                                        &amp; alerting</li>
-                                                    <li><strong>Incident Response &amp; Remediation</strong> –
-                                                        AI-powered incident handling</li>
-                                                    <li><strong>Regular Reporting &amp; Compliance Support</strong> –
-                                                        Monthly security reports &amp; audits</li>
-                                                </ol>
-                                                <hr>
-                                                <div class="container">
-                                                    <div class="row overview-content">
-                                                        <!--  -->
-                                                        <div class="col-md-12">
-                                                            <div class="third-content smple-box1">
-                                                                <h4>Main Benefits For Your Orgainization</h4>
-                                                            </div>
-                                                            <!--  -->
-                                                            <div class="info-graphic">
-                                                                <div class="row info-graphic-row">
-                                                                    <div class="col-md-12">
-                                                                        <!-- desktop start  -->
-                                                                        <div class="desktop-view">
-                                                                            <!-- Checking and Displaying Sub Descriptions -->
-                                                                            <div class="wwyl-row">
-                                                                                <!-- Dynamic Class for wwyl-box -->
-
-                                                                                <div class="wwyl-box">
-
-                                                                                    <p><strong>24x7 Real-Time Threat
-                                                                                            Detection and
-                                                                                            Response</strong></p>
-
-                                                                                    <p>Managed SOC services provide
-                                                                                        continuous monitoring of your IT
-                                                                                        infrastructure, ensuring that
-                                                                                        cyber threats are identified and
-                                                                                        addressed immediately—regardless
-                                                                                        of the time of day. This reduces
-                                                                                        the risk of breaches going
-                                                                                        undetected and minimizes
-                                                                                        potential damage</p>
-
-
-                                                                                    <!-- Dynamic Circle Class -->
-                                                                                    <div class="wwyl-box-circle">
-                                                                                        <span>1</span>
-                                                                                        <!-- Simple Iteration Number -->
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="wwyl-row">
-
-                                                                                <!-- Dynamic Class for wwyl-box -->
-
-                                                                                <div class="wwyl-box orange ">
-
-                                                                                    <p><strong>Cost-Effective
-                                                                                            Alternative to In-House
-                                                                                            SOC</strong></p>
-
-                                                                                    <p>Building and maintaining an
-                                                                                        internal SOC requires
-                                                                                        significant investment in
-                                                                                        infrastructure, tools, and
-                                                                                        skilled personnel. A Managed SOC
-                                                                                        offers access to expert-level
-                                                                                        security operations at a
-                                                                                        fraction of the cost, making it
-                                                                                        ideal for companies of all
-                                                                                        sizes.</p>
-
-
-                                                                                    <!-- Dynamic Circle Class -->
-                                                                                    <div
-                                                                                        class="wwyl-box-circle orange-circle">
-                                                                                        <span>2</span>
-                                                                                        <!-- Simple Iteration Number -->
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="wwyl-row">
-
-                                                                                <!-- Dynamic Class for wwyl-box -->
-
-                                                                                <div class="wwyl-box purple">
-
-                                                                                    <p><strong>Rapid Incident Response
-                                                                                            and Containment</strong></p>
-
-                                                                                    <p>With predefined playbooks,
-                                                                                        automated workflows, and skilled
-                                                                                        analysts, Managed SOCs ensure
-                                                                                        fast response to cyber
-                                                                                        incidents. This minimizes
-                                                                                        operational downtime and
-                                                                                        accelerates recovery from
-                                                                                        threats like ransomware or
-                                                                                        insider attacks.</p>
-
-
-                                                                                    <!-- Dynamic Circle Class -->
-                                                                                    <div
-                                                                                        class="wwyl-box-circle purple-circle">
-                                                                                        <span>3</span>
-                                                                                        <!-- Simple Iteration Number -->
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="wwyl-row">
-
-                                                                                <!-- Dynamic Class for wwyl-box -->
-
-                                                                                <div class="wwyl-box color4">
-
-                                                                                    <p><strong>Regulatory Compliance and
-                                                                                            Audit Readiness</strong></p>
-
-                                                                                    <p>Managed SOCs help businesses meet
-                                                                                        industry-specific compliance
-                                                                                        requirements (e.g., ISO 27001,
-                                                                                        GDPR, RBI, HIPAA) by providing
-                                                                                        audit logs, incident reports,
-                                                                                        and continuous security
-                                                                                        monitoring aligned with
-                                                                                        regulatory standards</p>
-
-
-                                                                                    <!-- Dynamic Circle Class -->
-                                                                                    <div
-                                                                                        class="wwyl-box-circle color4-circle">
-                                                                                        <span>4</span>
-                                                                                        <!-- Simple Iteration Number -->
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="wwyl-row">
-
-                                                                                <!-- Dynamic Class for wwyl-box -->
-
-                                                                                <div class="wwyl-box green">
-
-                                                                                    <p><strong>Access to Latest Tools,
-                                                                                            Threat Intelligence &amp;
-                                                                                            Expertise</strong></p>
-
-                                                                                    <p>Corporate companies benefit from
-                                                                                        the SOC provider’s advanced
-                                                                                        security stack—including SIEM,
-                                                                                        SOAR, XDR, and threat
-                                                                                        intelligence platforms—alongside
-                                                                                        up-to-date threat data and
-                                                                                        skilled cybersecurity
-                                                                                        professionals, ensuring a
-                                                                                        future-ready security posture
-                                                                                    </p>
-
-
-                                                                                    <!-- Dynamic Circle Class -->
-                                                                                    <div
-                                                                                        class="wwyl-box-circle green-circle">
-                                                                                        <span>5</span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!--  -->
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                        <!--  -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="sec19_6" class="tab-pane tab-pane19 fade" style="background-color: #ebf5f9">
-                            <div class="container">
-                                <div class="pro-ul-box">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="brochure-box">
-                                                <p>&nbsp;</p>
-
-                                                <h4>Delivery Metrices 6:</h4>
-
-                                                <p><strong>1. Key Business Benefits for Clients</strong></p>
-
-                                                <ol>
-                                                    <li><strong>24/7 Cybersecurity Monitoring</strong> – Always-on
-                                                        protection against threats</li>
-                                                    <li><strong>Regulatory Compliance</strong> – Meets RBI, PCI-DSS,
-                                                        HIPAA, ISO 27001 guidelines</li>
-                                                    <li><strong>Cost Savings</strong> – Reduces in-house SOC setup costs
-                                                        by 40-50%</li>
-                                                    <li><strong>Faster Incident Response</strong> – AI-driven
-                                                        remediation minimizes impact</li>
-                                                    <li>&nbsp;<strong>Proactive Threat Defense</strong> – Early threat
-                                                        detection prevents financial &amp; reputational loss</li>
-                                                </ol>
-
-                                                <hr>
-                                                <p><strong>2. Service Delivery Methodology</strong></p>
-
-                                                <ol>
-                                                    <li><strong>Assessment &amp; Onboarding</strong> – Security
-                                                        assessment &amp; risk profiling</li>
-                                                    <li><strong>SOC Implementation</strong> – SIEM integration, endpoint
-                                                        security deployment</li>
-                                                    <li><strong>Continuous Monitoring</strong> – 24/7 threat detection
-                                                        &amp; alerting</li>
-                                                    <li><strong>Incident Response &amp; Remediation</strong> –
-                                                        AI-powered incident handling</li>
-                                                    <li><strong>Regular Reporting &amp; Compliance Support</strong> –
-                                                        Monthly security reports &amp; audits</li>
-                                                </ol>
-                                                <hr>
-                                                <div class="container">
-                                                    <div class="row overview-content">
-                                                        <!--  -->
-                                                        <div class="col-md-12">
-                                                            <div class="third-content smple-box1">
-                                                                <h4>Main Benefits For Your Orgainization</h4>
-                                                            </div>
-                                                            <!--  -->
-                                                            <div class="info-graphic">
-                                                                <div class="row info-graphic-row">
-                                                                    <div class="col-md-12">
-                                                                        <!-- desktop start  -->
-                                                                        <div class="desktop-view">
-                                                                            <!-- Checking and Displaying Sub Descriptions -->
-                                                                            <div class="wwyl-row">
-                                                                                <!-- Dynamic Class for wwyl-box -->
-
-                                                                                <div class="wwyl-box">
-
-                                                                                    <p><strong>24x7 Real-Time Threat
-                                                                                            Detection and
-                                                                                            Response</strong></p>
-
-                                                                                    <p>Managed SOC services provide
-                                                                                        continuous monitoring of your IT
-                                                                                        infrastructure, ensuring that
-                                                                                        cyber threats are identified and
-                                                                                        addressed immediately—regardless
-                                                                                        of the time of day. This reduces
-                                                                                        the risk of breaches going
-                                                                                        undetected and minimizes
-                                                                                        potential damage</p>
-
-
-                                                                                    <!-- Dynamic Circle Class -->
-                                                                                    <div class="wwyl-box-circle">
-                                                                                        <span>1</span>
-                                                                                        <!-- Simple Iteration Number -->
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="wwyl-row">
-
-                                                                                <!-- Dynamic Class for wwyl-box -->
-
-                                                                                <div class="wwyl-box orange ">
-
-                                                                                    <p><strong>Cost-Effective
-                                                                                            Alternative to In-House
-                                                                                            SOC</strong></p>
-
-                                                                                    <p>Building and maintaining an
-                                                                                        internal SOC requires
-                                                                                        significant investment in
-                                                                                        infrastructure, tools, and
-                                                                                        skilled personnel. A Managed SOC
-                                                                                        offers access to expert-level
-                                                                                        security operations at a
-                                                                                        fraction of the cost, making it
-                                                                                        ideal for companies of all
-                                                                                        sizes.</p>
-
-
-                                                                                    <!-- Dynamic Circle Class -->
-                                                                                    <div
-                                                                                        class="wwyl-box-circle orange-circle">
-                                                                                        <span>2</span>
-                                                                                        <!-- Simple Iteration Number -->
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="wwyl-row">
-
-                                                                                <!-- Dynamic Class for wwyl-box -->
-
-                                                                                <div class="wwyl-box purple">
-
-                                                                                    <p><strong>Rapid Incident Response
-                                                                                            and Containment</strong></p>
-
-                                                                                    <p>With predefined playbooks,
-                                                                                        automated workflows, and skilled
-                                                                                        analysts, Managed SOCs ensure
-                                                                                        fast response to cyber
-                                                                                        incidents. This minimizes
-                                                                                        operational downtime and
-                                                                                        accelerates recovery from
-                                                                                        threats like ransomware or
-                                                                                        insider attacks.</p>
-
-
-                                                                                    <!-- Dynamic Circle Class -->
-                                                                                    <div
-                                                                                        class="wwyl-box-circle purple-circle">
-                                                                                        <span>3</span>
-                                                                                        <!-- Simple Iteration Number -->
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="wwyl-row">
-
-                                                                                <!-- Dynamic Class for wwyl-box -->
-
-                                                                                <div class="wwyl-box color4">
-
-                                                                                    <p><strong>Regulatory Compliance and
-                                                                                            Audit Readiness</strong></p>
-
-                                                                                    <p>Managed SOCs help businesses meet
-                                                                                        industry-specific compliance
-                                                                                        requirements (e.g., ISO 27001,
-                                                                                        GDPR, RBI, HIPAA) by providing
-                                                                                        audit logs, incident reports,
-                                                                                        and continuous security
-                                                                                        monitoring aligned with
-                                                                                        regulatory standards</p>
-
-
-                                                                                    <!-- Dynamic Circle Class -->
-                                                                                    <div
-                                                                                        class="wwyl-box-circle color4-circle">
-                                                                                        <span>4</span>
-                                                                                        <!-- Simple Iteration Number -->
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="wwyl-row">
-
-                                                                                <!-- Dynamic Class for wwyl-box -->
-
-                                                                                <div class="wwyl-box green">
-
-                                                                                    <p><strong>Access to Latest Tools,
-                                                                                            Threat Intelligence &amp;
-                                                                                            Expertise</strong></p>
-
-                                                                                    <p>Corporate companies benefit from
-                                                                                        the SOC provider’s advanced
-                                                                                        security stack—including SIEM,
-                                                                                        SOAR, XDR, and threat
-                                                                                        intelligence platforms—alongside
-                                                                                        up-to-date threat data and
-                                                                                        skilled cybersecurity
-                                                                                        professionals, ensuring a
-                                                                                        future-ready security posture
-                                                                                    </p>
-
-
-                                                                                    <!-- Dynamic Circle Class -->
-                                                                                    <div
-                                                                                        class="wwyl-box-circle green-circle">
-                                                                                        <span>5</span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!--  -->
-                                            </div>
-                                            <!--  -->
-                                        </div>
-                                        <!--  -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- mobile start -->
-            <div class="container mobile-view" id="sec19mob">
-                <div class="acc">
-                    <!-- FAQ Category -->
-                    <div class="acc__card">
-                        <a class="acc__title" style="background: #345995 !important; color: #fff !important;"
-                            href="#sec19_1" data-target="sec19_1">
-                            Sec19_1
-                        </a>
-                        <div id="sec19_1" class="acc__panel" style="display:block;">
-                            <div class="box-height vert-box">
-                                <div class="red-title">
-                                    <p>Managed SOC Services includes 24/7 monitoring, threat detection, prevention and
-                                        analysis of your organisation’s&nbsp; IT infrastructure attack surface,
-                                        including internet traffic, corporate networks, desktops, servers, endpoint
-                                        devices, databases, applications, cloud infrastructure, firewalls, threat
-                                        intelligence, intrusion prevention, and Security Information and Event
-                                        Management (SIEM) systems.</p>
-
-                                    <p>Managed SOC (Security Operations Center) services leverage <strong>cutting-edge
-                                            cybersecurity technologies</strong> to provide <strong>real-time threat
-                                            detection, response, and compliance management </strong>. These services
-                                        integrate <strong>AI-driven analytics, automation, threat intelligence, and
-                                            advanced security tools</strong> ( like AI-driven SIEM, XDR, and SOAR ) to
-                                        protect organizations from sophisticated cyber threats and challenges</p>
-                                    <p>Managed SOC Services includes 24/7 monitoring, threat detection, prevention and
-                                        analysis of your organisation’s&nbsp; IT infrastructure attack surface,
-                                        including internet traffic, corporate networks, desktops, servers, endpoint
-                                        devices, databases, applications, cloud infrastructure, firewalls, threat
-                                        intelligence, intrusion prevention, and Security Information and Event
-                                        Management (SIEM) systems.</p>
-
-                                    <p>Managed SOC (Security Operations Center) services leverage <strong>cutting-edge
-                                            cybersecurity technologies</strong> to provide <strong>real-time threat
-                                            detection, response, and compliance management </strong>. These services
-                                        integrate <strong>AI-driven analytics, automation, threat intelligence, and
-                                            advanced security tools</strong> ( like AI-driven SIEM, XDR, and SOAR ) to
-                                        protect organizations from sophisticated cyber threats and challenges</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FAQ Category -->
-                    <div class="acc__card">
-                        <a class="acc__title" style="background: #4a4a4a !important; color: #fff !important;"
-                            href="#sec19_2" data-target="sec19_2">
-                            Sec19_2
-                        </a>
-                        <div id="sec19_2" class="acc__panel" style="">
-                            <div class="box-height vert-box">
-                                <div class="red-title">
-                                    <p>Managed SOC Services includes 24/7 monitoring, threat detection, prevention and
-                                        analysis of your organisation’s&nbsp; IT infrastructure attack surface,
-                                        including internet traffic, corporate networks, desktops, servers, endpoint
-                                        devices, databases, applications, cloud infrastructure, firewalls, threat
-                                        intelligence, intrusion prevention, and Security Information and Event
-                                        Management (SIEM) systems.</p>
-
-                                    <p>Managed SOC (Security Operations Center) services leverage <strong>cutting-edge
-                                            cybersecurity technologies</strong> to provide <strong>real-time threat
-                                            detection, response, and compliance management </strong>. These services
-                                        integrate <strong>AI-driven analytics, automation, threat intelligence, and
-                                            advanced security tools</strong> ( like AI-driven SIEM, XDR, and SOAR ) to
-                                        protect organizations from sophisticated cyber threats and challenges</p>
-                                    <p>Managed SOC Services includes 24/7 monitoring, threat detection, prevention and
-                                        analysis of your organisation’s&nbsp; IT infrastructure attack surface,
-                                        including internet traffic, corporate networks, desktops, servers, endpoint
-                                        devices, databases, applications, cloud infrastructure, firewalls, threat
-                                        intelligence, intrusion prevention, and Security Information and Event
-                                        Management (SIEM) systems.</p>
-
-                                    <p>Managed SOC (Security Operations Center) services leverage <strong>cutting-edge
-                                            cybersecurity technologies</strong> to provide <strong>real-time threat
-                                            detection, response, and compliance management </strong>. These services
-                                        integrate <strong>AI-driven analytics, automation, threat intelligence, and
-                                            advanced security tools</strong> ( like AI-driven SIEM, XDR, and SOAR ) to
-                                        protect organizations from sophisticated cyber threats and challenges</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FAQ Category -->
-                    <div class="acc__card">
-                        <a class="acc__title" style="background: #2e6e4c !important; color: #fff !important;"
-                            href="#sec19_3" data-target="sec19_3">
-                            Sec19_3
-                        </a>
-                        <div id="sec19_3" class="acc__panel" style="">
-                            <div class="box-height vert-box">
-                                <div class="red-title">
-                                    <p>Managed SOC Services includes 24/7 monitoring, threat detection, prevention and
-                                        analysis of your organisation’s&nbsp; IT infrastructure attack surface,
-                                        including internet traffic, corporate networks, desktops, servers, endpoint
-                                        devices, databases, applications, cloud infrastructure, firewalls, threat
-                                        intelligence, intrusion prevention, and Security Information and Event
-                                        Management (SIEM) systems.</p>
-
-                                    <p>Managed SOC (Security Operations Center) services leverage <strong>cutting-edge
-                                            cybersecurity technologies</strong> to provide <strong>real-time threat
-                                            detection, response, and compliance management </strong>. These services
-                                        integrate <strong>AI-driven analytics, automation, threat intelligence, and
-                                            advanced security tools</strong> ( like AI-driven SIEM, XDR, and SOAR ) to
-                                        protect organizations from sophisticated cyber threats and challenges</p>
-                                    <p>Managed SOC Services includes 24/7 monitoring, threat detection, prevention and
-                                        analysis of your organisation’s&nbsp; IT infrastructure attack surface,
-                                        including internet traffic, corporate networks, desktops, servers, endpoint
-                                        devices, databases, applications, cloud infrastructure, firewalls, threat
-                                        intelligence, intrusion prevention, and Security Information and Event
-                                        Management (SIEM) systems.</p>
-
-                                    <p>Managed SOC (Security Operations Center) services leverage <strong>cutting-edge
-                                            cybersecurity technologies</strong> to provide <strong>real-time threat
-                                            detection, response, and compliance management </strong>. These services
-                                        integrate <strong>AI-driven analytics, automation, threat intelligence, and
-                                            advanced security tools</strong> ( like AI-driven SIEM, XDR, and SOAR ) to
-                                        protect organizations from sophisticated cyber threats and challenges</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FAQ Category -->
-                    <div class="acc__card">
-                        <a class="acc__title" style="background: #702f42 !important; color: #fff !important;"
-                            href="#sec19_4" data-target="sec19_4">
-                            Sec19_4
-                        </a>
-                        <div id="sec19_4" class="acc__panel" style="">
-                            <div class="box-height vert-box">
-                                <div class="red-title">
-                                    <p>Managed SOC Services includes 24/7 monitoring, threat detection, prevention and
-                                        analysis of your organisation’s&nbsp; IT infrastructure attack surface,
-                                        including internet traffic, corporate networks, desktops, servers, endpoint
-                                        devices, databases, applications, cloud infrastructure, firewalls, threat
-                                        intelligence, intrusion prevention, and Security Information and Event
-                                        Management (SIEM) systems.</p>
-
-                                    <p>Managed SOC (Security Operations Center) services leverage <strong>cutting-edge
-                                            cybersecurity technologies</strong> to provide <strong>real-time threat
-                                            detection, response, and compliance management </strong>. These services
-                                        integrate <strong>AI-driven analytics, automation, threat intelligence, and
-                                            advanced security tools</strong> ( like AI-driven SIEM, XDR, and SOAR ) to
-                                        protect organizations from sophisticated cyber threats and challenges</p>
-                                    <p>Managed SOC Services includes 24/7 monitoring, threat detection, prevention and
-                                        analysis of your organisation’s&nbsp; IT infrastructure attack surface,
-                                        including internet traffic, corporate networks, desktops, servers, endpoint
-                                        devices, databases, applications, cloud infrastructure, firewalls, threat
-                                        intelligence, intrusion prevention, and Security Information and Event
-                                        Management (SIEM) systems.</p>
-
-                                    <p>Managed SOC (Security Operations Center) services leverage <strong>cutting-edge
-                                            cybersecurity technologies</strong> to provide <strong>real-time threat
-                                            detection, response, and compliance management </strong>. These services
-                                        integrate <strong>AI-driven analytics, automation, threat intelligence, and
-                                            advanced security tools</strong> ( like AI-driven SIEM, XDR, and SOAR ) to
-                                        protect organizations from sophisticated cyber threats and challenges</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FAQ Category -->
-                    <div class="acc__card">
-                        <a class="acc__title" style="background: #345995 !important; color: #fff !important;"
-                            href="#sec19_5" data-target="sec19_5">
-                            Sec19_5
-                        </a>
-                        <div id="sec19_5" class="acc__panel" style="">
-                            <div class="box-height vert-box">
-                                <div class="red-title">
-                                    <p>Managed SOC Services includes 24/7 monitoring, threat detection, prevention and
-                                        analysis of your organisation’s&nbsp; IT infrastructure attack surface,
-                                        including internet traffic, corporate networks, desktops, servers, endpoint
-                                        devices, databases, applications, cloud infrastructure, firewalls, threat
-                                        intelligence, intrusion prevention, and Security Information and Event
-                                        Management (SIEM) systems.</p>
-
-                                    <p>Managed SOC (Security Operations Center) services leverage <strong>cutting-edge
-                                            cybersecurity technologies</strong> to provide <strong>real-time threat
-                                            detection, response, and compliance management </strong>. These services
-                                        integrate <strong>AI-driven analytics, automation, threat intelligence, and
-                                            advanced security tools</strong> ( like AI-driven SIEM, XDR, and SOAR ) to
-                                        protect organizations from sophisticated cyber threats and challenges</p>
-                                    <p>Managed SOC Services includes 24/7 monitoring, threat detection, prevention and
-                                        analysis of your organisation’s&nbsp; IT infrastructure attack surface,
-                                        including internet traffic, corporate networks, desktops, servers, endpoint
-                                        devices, databases, applications, cloud infrastructure, firewalls, threat
-                                        intelligence, intrusion prevention, and Security Information and Event
-                                        Management (SIEM) systems.</p>
-
-                                    <p>Managed SOC (Security Operations Center) services leverage <strong>cutting-edge
-                                            cybersecurity technologies</strong> to provide <strong>real-time threat
-                                            detection, response, and compliance management </strong>. These services
-                                        integrate <strong>AI-driven analytics, automation, threat intelligence, and
-                                            advanced security tools</strong> ( like AI-driven SIEM, XDR, and SOAR ) to
-                                        protect organizations from sophisticated cyber threats and challenges</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FAQ Category -->
-                    <div class="acc__card">
-                        <a class="acc__title" style="background: #4a4a4a !important; color: #fff !important;"
-                            href="#sec19_6" data-target="sec19_6">
-                            Sec19_6
-                        </a>
-                        <div id="sec19_6" class="acc__panel" style="">
-                            <div class="box-height vert-box">
-                                <div class="red-title">
-                                    <p>Managed SOC Services includes 24/7 monitoring, threat detection, prevention and
-                                        analysis of your organisation’s&nbsp; IT infrastructure attack surface,
-                                        including internet traffic, corporate networks, desktops, servers, endpoint
-                                        devices, databases, applications, cloud infrastructure, firewalls, threat
-                                        intelligence, intrusion prevention, and Security Information and Event
-                                        Management (SIEM) systems.</p>
-
-                                    <p>Managed SOC (Security Operations Center) services leverage <strong>cutting-edge
-                                            cybersecurity technologies</strong> to provide <strong>real-time threat
-                                            detection, response, and compliance management </strong>. These services
-                                        integrate <strong>AI-driven analytics, automation, threat intelligence, and
-                                            advanced security tools</strong> ( like AI-driven SIEM, XDR, and SOAR ) to
-                                        protect organizations from sophisticated cyber threats and challenges</p>
-                                    <p>Managed SOC Services includes 24/7 monitoring, threat detection, prevention and
-                                        analysis of your organisation’s&nbsp; IT infrastructure attack surface,
-                                        including internet traffic, corporate networks, desktops, servers, endpoint
-                                        devices, databases, applications, cloud infrastructure, firewalls, threat
-                                        intelligence, intrusion prevention, and Security Information and Event
-                                        Management (SIEM) systems.</p>
-
-                                    <p>Managed SOC (Security Operations Center) services leverage <strong>cutting-edge
-                                            cybersecurity technologies</strong> to provide <strong>real-time threat
-                                            detection, response, and compliance management </strong>. These services
-                                        integrate <strong>AI-driven analytics, automation, threat intelligence, and
-                                            advanced security tools</strong> ( like AI-driven SIEM, XDR, and SOAR ) to
-                                        protect organizations from sophisticated cyber threats and challenges</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- mobile end -->
-        </section>
-        <section class="light-grey sample7-line anchor-link space7_1" id="sec20">
+        {{-- <section class="light-grey sample7-line anchor-link space7_1" id="sec20">
             <!--  -->
             <div class="container desktop-view">
               <div class="row">
@@ -4001,7 +2855,7 @@
                 </div>
               </div>
             </div>
-        </section>
+        </section> --}}
 
         <div class="popup" id="global-testimonial-popup">
             <div class="popup-box popup-testo">
