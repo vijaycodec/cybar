@@ -60,7 +60,7 @@ class L3ContentInfo extends Model
 
     public function significance2Category()
     {
-        return $this->belongsTo(significance2Category::class, 'significance2_category_type', 'id');
+        return $this->belongsTo(Significance2Category::class, 'significance2_category_type', 'id');
     }
 
     public function coursefeatureCategory()
