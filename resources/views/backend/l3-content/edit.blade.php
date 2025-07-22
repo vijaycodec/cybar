@@ -42,7 +42,6 @@
             border: 1px solid #ccc;
             cursor: pointer;
         }
-        
     </style>
     <div class="main-content-inner">
         <div class="main-content-wrap">
@@ -150,6 +149,7 @@
                                     'overview2subdescription' => 'overview2subdescription',
                                     'significance2' => 'significance2',
                                     'industries2' => 'industries2',
+                                    'overview20' => 'overview20',
                                 ];
                             @endphp
 
@@ -177,7 +177,7 @@
                         <div class="body-title">Overview Title(H) :<span class="tf-color-1">*</span></div>
                         <input type="text" class="" name="overview_title"
                             value="{{ $l3Content->overview_title ?? '' }}">
-                    </div> 
+                    </div>
 
                     <div class="form-group l3-form overview_form" id="overview_form">
 
@@ -211,7 +211,8 @@
 
                     <div class="l3-form form-group overview_subdescription_title">
                         <div class="body-title">Overview Sub Title(H) :<span class="tf-color-1">*</span></div>
-                        <input type="text" class="" name="overview_subdescription_title"  value="{{ $l3overview_desc->first()->overview_subdescription_title ?? '' }}"></input>
+                        <input type="text" class="" name="overview_subdescription_title"
+                            value="{{ $l3overview_desc->first()->overview_subdescription_title ?? '' }}"></input>
                     </div>
 
                     <div class="l3-form" id="overview_sub_desc" style="display: none;">
@@ -232,6 +233,46 @@
 
                     <div class="form-group" id="dynamic_overview_sections"></div>
                     <!-- Overview Form ends-->
+
+                    <!-- Overview 20 Form start-->
+
+                    <div class="l3-form form-group overview20_title">
+                        <div class="body-title">Overview Title(H) :<span class="tf-color-1">*</span></div>
+                        <input type="text" class="" name="overview20_title"
+                            value="{{ $l3Content->overview20_title ?? '' }}"></input>
+                    </div>
+
+                    <div class="form-group l3-form overview_form " id="overview20_form">
+
+                        <div class="body-title">Overview Description 20 :<span class="tf-color-1">*</span></div>
+                        <textarea class="ckeditor" name="overview20_description">{{ $l3Content->overview20_description ?? '' }}</textarea>
+                    </div>
+
+                    <div class="l3-form form-group overview20_subdescription_title">
+                        <div class="body-title">Overview Sub Title(H) :<span class="tf-color-1">*</span></div>
+                        <input type="text" class="" name="overview20_subdescription_title"
+                            value="{{ $l3overview20->overview20_subdescription_title ?? '' }}"></input>
+                    </div>
+
+
+                    <div class="l3-form" id="overview20_sub_desc" style="display: none;">
+                        <div class="body-title">Select Sub Descriptions: <span class="tf-color-1"></span></div>
+                        <select id="overview20_count" class="flex-grow l3_content">
+                            <option value="">Select</option>
+                            @for ($i = 1; $i <= 10; $i++)
+                                {{-- <option value="{{ $i }}">{{ $i }}</option> --}}
+                                <option value="{{ $i }}" {{ $i == $l3overview20 ? 'selected' : '' }}>
+                                    {{ $i }}
+                                </option>
+                            @endfor
+                        </select>
+                    </div>
+
+
+                    <div class="form-group" id="dynamic_overview20_sections"></div>
+
+
+                    <!-- Overview 20 Form ends-->
 
                     <!-- Overview 2 Form start-->
 
@@ -280,8 +321,7 @@
 
                     <div class="l3-form form-group overview3_title" id="overview3_form">
                         <div class="body-title">Overview Title(H) :<span class="tf-color-1">*</span></div>
-                        <textarea  class="ckeditor" name="overview3_title"
-                            >{{ $l3Content->overview3_title ?? '' }}</textarea>
+                        <textarea class="ckeditor" name="overview3_title">{{ $l3Content->overview3_title ?? '' }}</textarea>
                     </div>
 
                     <div class="l3-form" id="overview3_sub_desc" style="display: none;">
@@ -406,7 +446,8 @@
                     <div class="name l3-form Significance2_subcategory" id="">
                         <div class="body-title">Significance2 Sub-Category Name </div>
                         <input class="flex-grow" type="text" placeholder="Sub Category Name"
-                            name="Significance2_subcategory_name" tabindex="0" value="{{ $significance2->name  ?? '' }}">
+                            name="Significance2_subcategory_name" tabindex="0"
+                            value="{{ $significance2->name ?? '' }}">
                     </div>
 
                     <div class="l3-form form-group significance2_title">
@@ -591,12 +632,12 @@
                     <div class="l3-form" id="style_form" style="display: none;">
                         <div class="body-title">Pick Background Color <span class="tf-color-1">*</span></div>
                         <input type="color" name="style_class" id="colorPicker" class="color-picker-input"
-                        value="{{ old('style_class', $l3Content->style_class_id ?? '#ffffff') }}">
+                            value="{{ old('style_class', $l3Content->style_class_id ?? '#ffffff') }}">
                     </div>
 
                     <div class="l3-form form-group blog_link">
                         <div class="body-title">Blog Link : <span class="tf-color-1">*</span></div>
-                        <input type="text" name="blog_link" value="{{ $l3Content->blog_link  }}"> </input>
+                        <input type="text" name="blog_link" value="{{ $l3Content->blog_link }}"> </input>
                     </div>
 
                     <div class="l3-form form-group blog_title">
@@ -760,7 +801,7 @@
                                 {{ $program_sub_data->description }}
                                 @elseif(isset($l3Content) && $l3Content->program_description)
                                 {{ $l3Content->program_description }}
-                            @endif
+                                @endif
                         </textarea>
                     </div>
 
@@ -916,6 +957,7 @@
                 // Mapping of category names to form IDs and elements
                 var categoryMappings = {
                     "overview": "#overview_form",
+                    "overview20": "#overview20_form",
                     "significance": "#significance_form",
                     "coursefeatures": "#courseFeature_form",
                     "whycyberwind": "#cyberwind_form",
@@ -952,6 +994,12 @@
                         $('.overview_subdescription_title').show();
                         $('#overview_sub_desc').show();
                         $('#l3_layout_type').val(selectedL3Category);
+                    } else if (selectedL3Category === "overview20") {
+                        $('#overview20_form').show();
+                        $('.overview20_subdescription_title').show();
+                        $('#overview20_sub_desc').show();
+                        $('.overview20_title').show();
+                        $('#l3_layout_type').val('overview20'); // Set hidden input to 'overview'
                     } else if (selectedL3Category === "significance") {
                         $('#significance_form').show();
                         $('.significance_desc').show();
@@ -1172,49 +1220,49 @@
             }
         });
     </script> --}}
-<script>
-    $(document).ready(function() {
-    // Convert Laravel array into JavaScript array
-    let existingData = @json($l3overview_desc ?? []);
+    <script>
+        $(document).ready(function() {
+            // Convert Laravel array into JavaScript array
+            let existingData = @json($l3overview_desc ?? []);
 
-    function generateSubDescriptions(count) {
-        let container = $('#dynamic_overview_sections');
-        container.empty(); // Clear previous content
+            function generateSubDescriptions(count) {
+                let container = $('#dynamic_overview_sections');
+                container.empty(); // Clear previous content
 
-        // Iterate through the number of descriptions needed
-        for (let i = 0; i < count; i++) {
-            let content = existingData[i]?.sub_description ?? ''; // Fetch specific overview_sub_descriptions
+                // Iterate through the number of descriptions needed
+                for (let i = 0; i < count; i++) {
+                    let content = existingData[i]?.sub_description ??
+                    ''; // Fetch specific overview_sub_descriptions
 
-            let subForm = `
+                    let subForm = `
                 <div class="overview-sub-section">
                     <div class="body-title">Overview Sub Description ${i + 1} :<span class="tf-color-1">*</span></div>
                     <textarea id="overview_sub_description_${i + 1}" class="mr-5 ckeditor" name="overview_sub_descriptions[]">${content}</textarea>
                 </div>
             `;
 
-            container.append(subForm);
-        }
+                    container.append(subForm);
+                }
 
-        // Re-initialize ckeditor for new textareas (to ensure they work in both create and edit)
-        document.querySelectorAll('.ckeditor').forEach(function(element) {
-            CKEDITOR.replace(element);
+                // Re-initialize ckeditor for new textareas (to ensure they work in both create and edit)
+                document.querySelectorAll('.ckeditor').forEach(function(element) {
+                    CKEDITOR.replace(element);
+                });
+            }
+
+            // Generate fields when dropdown value changes
+            $('#overview_count').change(function() {
+                let count = parseInt($(this).val()) || 0;
+                generateSubDescriptions(count);
+            });
+
+            // Auto-generate fields on page load if a value is preselected
+            let initialCount = parseInt($('#overview_count').val()) || existingData.length;
+            if (initialCount > 0) {
+                generateSubDescriptions(initialCount);
+            }
         });
-    }
-
-    // Generate fields when dropdown value changes
-    $('#overview_count').change(function() {
-        let count = parseInt($(this).val()) || 0;
-        generateSubDescriptions(count);
-    });
-
-    // Auto-generate fields on page load if a value is preselected
-    let initialCount = parseInt($('#overview_count').val()) || existingData.length;
-    if (initialCount > 0) {
-        generateSubDescriptions(initialCount);
-    }
-});
-
-</script>
+    </script>
     <script>
         $(document).ready(function() {
             // Convert Laravel array into JavaScript array
@@ -1241,9 +1289,9 @@
 
                 // Re-initialize ckeditor for new textareas
                 document.querySelectorAll('.ckeditor').forEach(function(element) {
-                        CKEDITOR.replace(element);
-                    });
-                }
+                    CKEDITOR.replace(element);
+                });
+            }
 
             // Generate fields when dropdown value changes
             $('#overview3_count').change(function() {
@@ -1253,6 +1301,49 @@
 
             // Auto-generate fields on page load if a value is preselected
             let initialCount = parseInt($('#overview3_count').val()) || existingData.length;
+            if (initialCount > 0) {
+                generateSubDescriptions(initialCount);
+            }
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            // Convert Laravel array into JavaScript array
+            let existingData = @json($L3Overview20SubDescription ?? []);
+
+            function generateSubDescriptions(count) {
+                let container = $('#dynamic_overview20_sections');
+                container.empty(); // Clear previous content
+
+                // Iterate through the number of descriptions needed
+                for (let i = 0; i < count; i++) {
+                    let content = existingData[i]?.overview20_sub_description ??
+                        ''; // Fetch specific overview_sub_descriptions
+
+                    let subForm = `
+                    <div class="overview-sub-section">
+                        <div class="body-title">Overview2 Sub Description ${i + 1} :<span class="tf-color-1">*</span></div>
+                        <textarea id="overview20_sub_desc${i + 1}" class="mr-5 ckeditor" name="overview20_sub_description[]">${content}</textarea>
+                    </div>
+                `;
+
+                    container.append(subForm);
+                }
+
+                // Re-initialize ckeditor for new textareas
+                document.querySelectorAll('.ckeditor').forEach(function(element) {
+                    CKEDITOR.replace(element);
+                });
+            }
+
+            // Generate fields when dropdown value changes
+            $('#overview20_count').change(function() {
+                let count = parseInt($(this).val()) || 0;
+                generateSubDescriptions(count);
+            });
+
+            // Auto-generate fields on page load if a value is preselected
+            let initialCount = parseInt($('#overview20_count').val()) || existingData.length;
             if (initialCount > 0) {
                 generateSubDescriptions(initialCount);
             }

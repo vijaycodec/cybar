@@ -667,6 +667,7 @@ class L3ContentRepository implements L3ContentRepositoryInterface
             'programCategories'      => ProgramCategory::where('sub_category_id', $l3Content->sub_category_id)->get(),
             'l3overview_desc'        => L3OverviewSubDescription::where('l3_content_info_id', $id)->get(),
             'l3overview_count_desc'  => L3OverviewSubDescription::where('l3_content_info_id', $id)->count(),
+            'l3overview20'           => L3Overview20SubDescription::where('l3_content_info_id', $id)->count(),
             'significanceTitle'      => SignificanceTitle::where('l3_content_info_id', $id)->first(),
             'program_sub_data'       => ProgramSubCategory::where('l3_content_info_id', $id)->first(),
             'coursefeatureTitle'     => CourseFeatureTitle::where('l3_content_info_id', $id)->first(),
@@ -677,7 +678,7 @@ class L3ContentRepository implements L3ContentRepositoryInterface
             'BlogTitle'              => BlogTitle::where('l3_content_info_id', $id)->first(),
             'Overview2'              => L3Overview2_Description::where('l3_content_info_id', $id)->first(),
             'Overview15'             => Overview15::where('l3_content_info_id', $id)->first(),
-            'L3Overview2SubDescription' => L3Overview2SubDescription::where('l3_content_info_id', $id)->get(),
+            'L3Overview2SubDescription' => L3Overview2SubDescription::where('l3_content_info_id', $id)->get(), 
             'significance2'             => Significance2::where('l3_content_info_id', $id)->first(),
             'Industry2Title'             => Industry2Title::where('l3_content_info_id', $id)->first(),
         ];
