@@ -8,6 +8,7 @@ use App\Models\CourseFeatureCategory;
 use App\Models\CourseFeatureTitle;
 use App\Models\CyberwindCategory;
 use App\Models\CyberwindTitle;
+use App\Models\Faq2Category;
 use App\Models\FaqCategory;
 use App\Models\FaqSubCategory;
 use App\Models\Industry2Title;
@@ -143,6 +144,12 @@ class l3_contentController extends Controller
             ->orderBy('id', 'desc')
             ->get();
 
+        $faq2Categories = Faq2Category::where('page_category_id', $validated['page_category_id'])
+            ->where('category_id', $validated['category_id'])
+            ->where('sub_category_id', $validated['sub_category_Id'])
+            ->orderBy('id', 'desc')
+            ->get();
+
         // dd($programCategories);
         return response()->json([
             'l3_categories' => $l3categories,
@@ -154,6 +161,7 @@ class l3_contentController extends Controller
             'industryCategories' => $industryCategories,
             'faqCategories' => $faqCategories,
             'blogCategories' => $blogCategories,
+            'faq2Categories'=>$faq2Categories
         ]);
     }
 

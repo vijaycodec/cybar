@@ -1053,6 +1053,16 @@
                             $('#blog_category').append('<option value="' + value.id +
                                 '">' + value.name + '</option>');
                         });
+
+
+                         // Populate faq Categories 
+                        $('#faq2_category').html(
+                            '<option value="" disabled selected>Select faq2 category</option>'
+                        );
+                        $.each(data.faq2Categories, function(index, value) {
+                            $('#faq2_category').append('<option value="' + value.id +
+                                '">' + value.name + '</option>');
+                        });
                     }
                 });
             });
