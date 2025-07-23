@@ -1995,7 +1995,7 @@
                     </div>
                     <!-- mobile start -->
                     <!--  -->
-            </section>
+                </section>
                 <!-- FAQ info End 11 -->
 
                 <!-- Global Popup fot Testomonials (Only One in the Page) 12 -->
@@ -2077,7 +2077,7 @@
                 </section>
                 <!-- testimonials info End 12 -->
 
-        @elseif ($fieldKey == 'overview2SubDescriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
+            @elseif ($fieldKey == 'overview2SubDescriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
                 <section class="light-grey sample7-line anchor-link space7_1" id="{{ $slug }}">
                     @foreach ($l3Categories as $category)
                         @foreach ($category->contentInfos as $contentInfo)
@@ -2145,7 +2145,7 @@
                         @endforeach
                     @endforeach
                 </section>
-        @elseif ($fieldKey == 'industry2_description' && $contents->contains(fn($info) => $info->{$fieldKey}))
+            @elseif ($fieldKey == 'industry2_description' && $contents->contains(fn($info) => $info->{$fieldKey}))
                 <section class="sec-wrap-cod-2" style="background: #dceff6;" id="{{ $slug }}">
                     <div class="container">
                         <div class="row">
@@ -2195,7 +2195,7 @@
                         @endforeach
                     </div>
                 </section>
-        @elseif ($fieldKey == 'overview15s' && $contents->contains(fn($info) => $info->{$fieldKey}))
+            @elseif ($fieldKey == 'overview15s' && $contents->contains(fn($info) => $info->{$fieldKey}))
                 <section class="sec-wrap-cod-2"
                     style="background-image:url('assets/images/image-bg-top.jpg'); background-repeat: repeat;" id="{{ $slug }}">
                     <div class="container">
@@ -2219,7 +2219,7 @@
                         @endforeach
                     </div>
                 </section>
-        @elseif ($fieldKey == 'significance2s' && $contents->contains(fn($info) => $info->{$fieldKey}))
+            @elseif ($fieldKey == 'significance2s' && $contents->contains(fn($info) => $info->{$fieldKey}))
                 <section class="why-codec codec-page-sectionl3 anchor-link" id="{{ $slug }}">
                     @php
                         $categoriesMap = [];
@@ -2450,7 +2450,7 @@
                     </div>
                 </section>
 
-        @elseif ($fieldKey == 'overview16_short_descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
+            @elseif ($fieldKey == 'overview16_short_descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
                 <section class="empower-industry-bg codec-page-section anchor-link"
                     style="padding-bottom: 20px !important; padding-top: 40px !important;" id="{{ $slug }}">
                     <div class="container">
@@ -2534,7 +2534,7 @@
                         @endforeach
                     @endforeach
                 </section>
-        @elseif ($fieldKey == 'overview17_descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
+            @elseif ($fieldKey == 'overview17_descriptions' && $contents->contains(fn($info) => $info->{$fieldKey}))
                 <section class="sample7-line anchor-link space7_1" id="{{ $slug }}">
                     <div class="container">
                         <div class="row">
@@ -2552,12 +2552,12 @@
                         </div>
                     </div>
                 </section>
-        @elseif ($fieldKey == 'faq2Category'  && $contents->contains(fn($info) => $info->{$fieldKey}))
-               <section class="anchor-link sample7-line space7 ceh-pro ceh-pro1 sec19class" id="{{ $slug }}">
+            @elseif ($fieldKey == 'faq2Category' && $contents->contains(fn($info) => $info->{$fieldKey}))
+                <section class="anchor-link sample7-line space7 ceh-pro ceh-pro1 sec19class" id="{{ $slug }}">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 cn-title ceh-title">
-                            @php $breakAll = false; @endphp
+                                @php $breakAll = false; @endphp
                                 @foreach ($l3Categories as $category)
                                     @if ($breakAll) @break @endif
                                     @foreach ($category->contentInfos as $contentInfo)
@@ -2567,12 +2567,12 @@
                                             @break
                                         @endif
                                     @endforeach
-                            @endforeach
+                                @endforeach
                             </div>
                         </div>
                     </div>
                     <!-- body start -->
-                   <div class="container desktop-view faq sec19-main sec19-scr">
+                    <div class="container desktop-view faq sec19-main sec19-scr">
                         <div class="row">
                             <!-- Tab Menu Start -->
                             @php $firstTabSet = false; @endphp
@@ -2596,7 +2596,8 @@
 
                             <!-- Tab Content Start -->
                             @php $firstTabSet = false; @endphp
-                            <div class="tab-content program-content" style="min-height: 420px; max-height: 420px; overflow-y: auto;">
+                            <div class="tab-content program-content"
+                                style="min-height: 420px; max-height: 420px; overflow-y: auto;">
                                 @foreach ($l3Categories as $category)
                                     @foreach ($category->contentInfos as $contentInfo)
                                         @if ($contentInfo->faq2Category)
@@ -2604,8 +2605,7 @@
                                                 $id = strtolower(str_replace([' ', '&', ','], '-', $contentInfo->faq2Category->name));
                                                 $isActive = !$firstTabSet;
                                             @endphp
-                                            <div id="{{ $id }}"
-                                                class="tab-pane fade {{ $isActive ? 'show active' : '' }}"
+                                            <div id="{{ $id }}" class="tab-pane fade {{ $isActive ? 'show active' : '' }}"
                                                 style="background-color: #ebf5f9;">
                                                 <div class="container">
                                                     <div class="pro-ul-box">
@@ -2631,23 +2631,27 @@
                     <div class="container mobile-view" id="sec19mob">
                         <div class="acc">
                             <!-- FAQ Category -->
-                             @foreach ($l3Categories as $category)
+                            @foreach ($l3Categories as $category)
                                 @foreach ($category->contentInfos as $contentInfo)
                                     @if ($contentInfo->faq2Category)
                                         <div class="acc__card">
-                                             <a class="acc__title {{ $loop->first ? 'active' : '' }}" style="background: #345995 !important; color: #fff !important;" href="#{{ strtolower(str_replace([' ', '&', ','], '-', $contentInfo->faq2Category->name)) }}" data-target="mob{{ strtolower(str_replace([' ', '&', ','], '-', $contentInfo->faq2Category->name)) }}">{{  $contentInfo->faq2Category->name }} 
-                                             </a>
-                                               <div id="mob{{ strtolower(str_replace([' ', '&', ','], '-', $contentInfo->faq2Category->name)) }}" class="acc__panel" style=" display:block'">
-                                                    <div class="box-height vert-box">
-                                                        <div class="red-title">
-                                                            @if ($contentInfo->faq2Category)
-                                                                @if ($contentInfo->faq2_short_description)
-                                                                    {!! $contentInfo->faq2_short_description !!}
-                                                                @endif      
-                                                            @endif                
-                                                        </div>
+                                            <a class="acc__title {{ $loop->first ? 'active' : '' }}"
+                                                style="background: #345995 !important; color: #fff !important;"
+                                                href="#mob{{ strtolower(str_replace([' ', '&', ','], '-', $contentInfo->faq2Category->name)) }}"
+                                                data-target="mob{{ strtolower(str_replace([' ', '&', ','], '-', $contentInfo->faq2Category->name)) }}">{{  $contentInfo->faq2Category->name }}
+                                            </a>
+                                            <div id="mob{{ strtolower(str_replace([' ', '&', ','], '-', $contentInfo->faq2Category->name)) }}"
+                                                class="acc__panel" style=" display:block'">
+                                                <div class="box-height vert-box">
+                                                    <div class="red-title">
+                                                        @if ($contentInfo->faq2Category)
+                                                            @if ($contentInfo->faq2_short_description)
+                                                                {!! $contentInfo->faq2_short_description !!}
+                                                            @endif
+                                                        @endif
                                                     </div>
-                                              </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     @endif
                                 @endforeach
@@ -2656,227 +2660,231 @@
                         </div>
                     </div>
                     <!-- mobile end -->
-               </section>
-        @elseif ($fieldKey == 'overview20' )
-
-                <section class="light-grey sample7-line anchor-link space7_1" id="sec20">
+                </section>
+            @elseif ($fieldKey == 'overview20')
+                <section class="light-grey sample7-line anchor-link space7_1" id="{{ $slug }}">
                     <!--  -->
                     <div class="container desktop-view">
-                    <div class="row">
-                        <div class="col-md-12">
-                        <div class="third-content" id="overview2">
-                            <div class="container">
-                                <div class="row overview-content">
-                                    <!--  -->
-                                    <div class="col-md-12">
-                                        <div class="smple-box1">
-                                            @foreach ($l3Categories as $category)
-                                                @foreach ($category->contentInfos as $contentInfo)
-                                                    <!-- Overview Section -->
-                                                    @if ($contentInfo->overview20_title)
-                                                        <h3> {{ $contentInfo->overview20_title }} </h3>
-                                                    @endif
-                                                @endforeach
-                                            @endforeach
-                                        </div>
-                                        <div class="smple-box1">
-                                    @foreach ($l3Categories as $category)
-                                            @foreach ($category->contentInfos as $contentInfo)
-                                                <!-- Overview Section -->
-                                                @if ($contentInfo->overview20_description)
-                                                    {!! $contentInfo->overview20_description !!} <!-- First overview Description -->
-                                                @endif
-                                            @endforeach
-                                        @endforeach
-                                    </div>
-                    
-                                    <!--  -->
-                                    <div class="info-graphic">
-                                        <div class="row info-graphic-row">
-                                        <div class="col-md-12">
-                                            <!-- desktop start  -->
-                                            <div class="desktop-view">
-                                                 <div class="col-md-12">
-                                            @php
-                                                $firstTitle = null;
-
-                                                foreach ($l3Categories as $category) {
-                                                    foreach ($category->contentInfos as $contentInfo) {
-                                                        foreach ($contentInfo->overview20SubDescriptions as $subDescription) {
-                                                            if (!empty($subDescription->overview20_subdescription_title)) {
-                                                                $firstTitle = $subDescription->overview20_subdescription_title;
-                                                                break 3; // break all loops
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            @endphp
-                                            @if ($firstTitle)
-                                                <div class="third-content smple-box1">
-                                                    <h3>{!! $firstTitle !!}</h3>
-                                                </div>
-                                            @endif
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="third-content" id="overview2">
+                                    <div class="container">
+                                        <div class="row overview-content">
                                             <!--  -->
-                                            <div class="info-graphic">
-                                                <div class="row info-graphic-row">
-                                                    <div class="col-md-12">
-                                                        <!-- desktop start  -->
-                                                        <div class="desktop-view">
-                                                            @foreach ($l3Categories as $category)
-                                                                @foreach ($category->contentInfos as $contentInfo)
-                                                                    <!-- Checking and Displaying Sub Descriptions -->
-                                                                    @if ($contentInfo->overview20SubDescriptions->isNotEmpty())
-                                                                        @foreach ($contentInfo->overview20SubDescriptions as $index => $subDescription)
-                                                                            <div class="wwyl-row">
+                                            <div class="col-md-12">
+                                                <div class="smple-box1">
+                                                    @foreach ($l3Categories as $category)
+                                                        @foreach ($category->contentInfos as $contentInfo)
+                                                            <!-- Overview Section -->
+                                                            @if ($contentInfo->overview20_title)
+                                                                <h3> {{ $contentInfo->overview20_title }} </h3>
+                                                            @endif
+                                                        @endforeach
+                                                    @endforeach
+                                                </div>
+                                                <div class="smple-box1">
+                                                    @foreach ($l3Categories as $category)
+                                                        @foreach ($category->contentInfos as $contentInfo)
+                                                            <!-- Overview Section -->
+                                                            @if ($contentInfo->overview20_description)
+                                                                {!! $contentInfo->overview20_description !!}
+                                                                <!-- First overview Description -->
+                                                            @endif
+                                                        @endforeach
+                                                    @endforeach
+                                                </div>
 
-                                                                                <!-- Dynamic Class for wwyl-box -->
-                                                                                @php
-                                                                                    $boxClasses = [
-                                                                                        'wwyl-box', // For 0th index
-                                                                                        'wwyl-box orange ', // For 1st index
-                                                                                        'wwyl-box purple', // For 2nd index
-                                                                                        'wwyl-box color4', // For 3rd index
-                                                                                        'wwyl-box green', // For 4th index
-                                                                                    ];
+                                                <!--  -->
+                                                <div class="info-graphic">
+                                                    <div class="row info-graphic-row">
+                                                        <div class="col-md-12">
+                                                            <!-- desktop start  -->
+                                                            <div class="desktop-view">
+                                                                <div class="col-md-12">
+                                                                    @php
+                                                                        $firstTitle = null;
 
-                                                                                    // Use the array index, if index > 4, default to 'wwyl-box'
-                                                                                    $boxClass =
-                                                                                        $boxClasses[$index] ??
-                                                                                        'wwyl-box';
-
-                                                                                    // Circle Class (Same as before)
-                                                                                    $circleClasses = [
-                                                                                        'wwyl-box-circle', // For 0th index
-                                                                                        'wwyl-box-circle orange-circle', // For 1st index
-                                                                                        'wwyl-box-circle purple-circle', // For 2nd index
-                                                                                        'wwyl-box-circle color4-circle', // For 3rd index
-                                                                                        'wwyl-box-circle green-circle', // For 4th index
-                                                                                    ];
-
-                                                                                    // Circle class for the current index
-                                                                                    $circleClass =
-                                                                                        $circleClasses[$index] ??
-                                                                                        'wwyl-box-circle';
-                                                                                @endphp
-
-                                                                                <div class="{{ $boxClass }}">
-
-                                                                                    {!! $subDescription->overview20_sub_description !!}
-
-
-                                                                                    <!-- Dynamic Circle Class -->
-                                                                                    <div class="{{ $circleClass }}">
-                                                                                        <span>{{ $index + 1 }}</span>
-                                                                                        <!-- Simple Iteration Number -->
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        @endforeach
+                                                                        foreach ($l3Categories as $category) {
+                                                                            foreach ($category->contentInfos as $contentInfo) {
+                                                                                foreach ($contentInfo->overview20SubDescriptions as $subDescription) {
+                                                                                    if (!empty($subDescription->overview20_subdescription_title)) {
+                                                                                        $firstTitle = $subDescription->overview20_subdescription_title;
+                                                                                        break 3; // break all loops
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    @endphp
+                                                                    @if ($firstTitle)
+                                                                        <div class="third-content smple-box1">
+                                                                            <h3>{!! $firstTitle !!}</h3>
+                                                                        </div>
                                                                     @endif
-                                                                @endforeach
-                                                            @endforeach
+                                                                    <!--  -->
+                                                                    <div class="info-graphic">
+                                                                        <div class="row info-graphic-row">
+                                                                            <div class="col-md-12">
+                                                                                <!-- desktop start  -->
+                                                                                <div class="desktop-view">
+                                                                                    @foreach ($l3Categories as $category)
+                                                                                        @foreach ($category->contentInfos as $contentInfo)
+                                                                                            <!-- Checking and Displaying Sub Descriptions -->
+                                                                                            @if ($contentInfo->overview20SubDescriptions->isNotEmpty())
+                                                                                                @foreach ($contentInfo->overview20SubDescriptions as $index => $subDescription)
+                                                                                                    <div class="wwyl-row">
+
+                                                                                                        <!-- Dynamic Class for wwyl-box -->
+                                                                                                        @php
+                                                                                                            $boxClasses = [
+                                                                                                                'wwyl-box', // For 0th index
+                                                                                                                'wwyl-box orange ', // For 1st index
+                                                                                                                'wwyl-box purple', // For 2nd index
+                                                                                                                'wwyl-box color4', // For 3rd index
+                                                                                                                'wwyl-box green', // For 4th index
+                                                                                                            ];
+
+                                                                                                            // Use the array index, if index > 4, default to 'wwyl-box'
+                                                                                                            $boxClass =
+                                                                                                                $boxClasses[$index] ??
+                                                                                                                'wwyl-box';
+
+                                                                                                            // Circle Class (Same as before)
+                                                                                                            $circleClasses = [
+                                                                                                                'wwyl-box-circle', // For 0th index
+                                                                                                                'wwyl-box-circle orange-circle', // For 1st index
+                                                                                                                'wwyl-box-circle purple-circle', // For 2nd index
+                                                                                                                'wwyl-box-circle color4-circle', // For 3rd index
+                                                                                                                'wwyl-box-circle green-circle', // For 4th index
+                                                                                                            ];
+
+                                                                                                            // Circle class for the current index
+                                                                                                            $circleClass =
+                                                                                                                $circleClasses[$index] ??
+                                                                                                                'wwyl-box-circle';
+                                                                                                        @endphp
+
+                                                                                                        <div class="{{ $boxClass }}">
+
+                                                                                                            {!! $subDescription->overview20_sub_description !!}
+
+
+                                                                                                            <!-- Dynamic Circle Class -->
+                                                                                                            <div class="{{ $circleClass }}">
+                                                                                                                <span>{{ $index + 1 }}</span>
+                                                                                                                <!-- Simple Iteration Number -->
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                @endforeach
+                                                                                            @endif
+                                                                                        @endforeach
+                                                                                    @endforeach
+                                                                                </div>
+                                                                                <!--  -->
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <!-- desktop end -->
+
+                                                            </div>
+                                                            <!--  -->
+                                                            <!-- mobile start -->
+                                                            <!-- mobile end -->
+                                                            <!--  -->
                                                         </div>
-                                                        <!--  -->
                                                     </div>
                                                 </div>
-                                            </div>
 
-                                        </div>
-                                           
-                                            <!-- desktop end -->
-                    
                                             </div>
-                                            <!--  -->
-                                            <!-- mobile start -->
-                                            <!-- mobile end -->
-                                            <!--  -->
-                                        </div>
                                         </div>
                                     </div>
-                    
-                                    </div>
+                                    <!--     <a href="javascript:void(0)" class="btn-show">Read More ...</a>
+                                        <div class="content-hide"> -->
                                 </div>
+                                <!-- <a href="#overview2" class="btn-hide" id="btn-hide1">Hide Content ...</a> -->
                             </div>
-                            <!--     <a href="javascript:void(0)" class="btn-show">Read More ...</a>
-                            <div class="content-hide"> -->
                         </div>
-                        <!-- <a href="#overview2" class="btn-hide" id="btn-hide1">Hide Content ...</a> -->
-                        </div>
-                    </div>
                     </div>
                     <!--  -->
                     <div class="container mobile-view">
-                    <!--  -->
-                    <div class="third-content">
-                        <h3>Certified Ethical Hacking Certification</h3>
-                                <p>A Certified Ethical Hacker (CEH) is a trained professional who legally penetrates networks and
-                                systems to identify vulnerabilities and weaknesses. Unlike malicious hackers, CEHs operate with
-                                permission and adhere to ethical guidelines. They utilize the same tools and techniques as
-                                cybercriminals but with the goal of improving security rather than causing harm. CEHs employ various
-                                methods such as penetration testing, vulnerability assessments, and social engineering to assess the
-                                security posture of organizations.</p>
-                                <p>A Certified Ethical Hacker (CEH) is a trained professional who legally penetrates networks and
-                                systems to identify vulnerabilities and weaknesses. Unlike malicious hackers, CEHs operate with
-                                permission and adhere to ethical guidelines. They utilize the same tools and techniques as
-                                cybercriminals but with the goal of improving security rather than causing harm. CEHs employ various
-                                methods such as penetration testing, vulnerability assessments, and social engineering to assess the
-                                security posture of organizations.</p>
-                        <h3 class="space1">What Technical Skills you Learn</h3>
-                        <div class="mobile-view indu-moblie count-navigation">
-                        <div id="owl-demo64_20" class="owl-carousel owl-theme">
-                            <!--  -->
-                            <div class="wwyl-box">
-                            <p> Ethical Hacking: CEH imparts practical skills in ethical hacking, enabling
-                                professionals to identify and exploit vulnerabilities, assess security postures, and
-                                strengthen defenses against cyber threats. </p>
-                            <div class="wwyl-box-circle">
-                                <span>01</span>
+                        <!--  -->
+                        <div class="third-content">
+                            @foreach ($l3Categories as $category)
+                                @foreach ($category->contentInfos as $contentInfo)
+                                    <!-- Overview Section -->
+                                    @if ($contentInfo->overview20_title)
+                                        <h3> {{ $contentInfo->overview20_title }} </h3>
+                                    @endif
+                                    @if ($contentInfo->overview20_description)
+                                        {!! $contentInfo->overview20_description !!} <!-- First overview Description -->
+                                    @endif
+                                @endforeach
+                            @endforeach
+                            @php
+                                $firstTitle = null;
+
+                                foreach ($l3Categories as $category) {
+                                    foreach ($category->contentInfos as $contentInfo) {
+                                        foreach ($contentInfo->overview20SubDescriptions as $subDescription) {
+                                            if (!empty($subDescription->overview20_subdescription_title)) {
+                                                $firstTitle = $subDescription->overview20_subdescription_title;
+                                                break 3; // break all loops
+                                            }
+                                        }
+                                    }
+                                }
+                            @endphp
+                            @if ($firstTitle)
+                                <div class="third-content smple-box1">
+                                    <h3 class="space1">{!! $firstTitle !!}</h3>
+                                </div>
+                            @endif
+                            <div class="mobile-view indu-moblie count-navigation">
+                                <div id="owl-demo64_20" class="owl-carousel owl-theme">
+                                    <!--  -->
+                                    @foreach ($l3Categories as $category)
+                                        @foreach ($category->contentInfos as $contentInfo)
+                                            @if ($contentInfo->overview20SubDescriptions->isNotEmpty())
+                                                @foreach ($contentInfo->overview20SubDescriptions as $index => $subDescription)
+                                                    <div class="wwyl-box">
+                                                        {!! $subDescription->overview20_sub_description !!}
+
+                                                        <!-- Dynamic Circle Class -->
+                                                        @php
+                                                            $circleClasses = [
+                                                                'wwyl-box-circle', // For 0th index
+                                                                'wwyl-box-circle orange-circle', // For 1st index
+                                                                'wwyl-box-circle purple-circle', // For 2nd index
+                                                                'wwyl-box-circle color4-circle', // For 3rd index
+                                                                'wwyl-box-circle green-circle', // For 4th index
+                                                            ];
+
+                                                            // Assign the class based on the index
+                                                            $circleClass = $circleClasses[$index] ?? 'wwyl-box-circle'; // Default class if index exceeds
+                                                        @endphp
+
+                                                        <!-- Dynamic Circle -->
+                                                        <div class="{{ $circleClass }}">
+                                                            <span>{{ $index + 1}}</span>
+                                                            <!-- Dynamic Number -->
+                                                        </div>
+                                                    </div>
+                                                @endforeach
+                                            @endif
+                                        @endforeach
+                                    @endforeach
+                                    <!--  -->
+                                </div>
+                                <div id="navigation-count1_20" class="count-nav-box"></div>
                             </div>
-                            </div>
-                            <div class="wwyl-box orange ">
-                            <p> Penetration Testing: CEH equips individuals with the expertise to conduct penetration
-                                tests, simulating cyber attacks to evaluate system vulnerabilities and assess the
-                                effectiveness of security measures. </p>
-                            <div class="wwyl-box-circle orange-circle">
-                                <span>02</span>
-                            </div>
-                            </div>
-                            <div class="wwyl-box purple">
-                            <p> Incident Response: CEH provides knowledge in incident handling and response, enabling
-                                professionals to effectively manage and mitigate the impact of cybersecurity incidents,
-                                minimizing downtime and data loss. </p>
-                            <div class="wwyl-box-circle purple-circle">
-                                <span>03</span>
-                            </div>
-                            </div>
-                            <div class="wwyl-box color4">
-                            <p> Network Security: CEH covers network security concepts, offering skills in securing
-                                networks, configuring firewalls, and implementing intrusion detection systems to protect
-                                against unauthorized access and data breaches. </p>
-                            <div class="wwyl-box-circle color4-circle">
-                                <span>04</span>
-                            </div>
-                            </div>
-                            <div class="wwyl-box green">
-                            <p>Forensic Analysis: CEH includes training in digital forensics, allowing professionals
-                                to investigate and analyze cyber incidents, gather evidence, and support legal actions
-                                against cybercriminals.</p>
-                            <div class="wwyl-box-circle green-circle">
-                                <span>05</span>
-                            </div>
-                            </div>
-                            <!--  -->
                         </div>
-                        <div id="navigation-count1_20" class="count-nav-box"></div>
-                        </div>
-                    </div>
                     </div>
                 </section>
-         @endif
+            @endif
     @endforeach
-
-
-
 
         <div class="popup" id="global-testimonial-popup">
             <div class="popup-box popup-testo">
