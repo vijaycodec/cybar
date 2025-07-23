@@ -35,6 +35,12 @@ class L3ContentInfo extends Model
     {
         return $this->hasMany(L3OverviewSubDescription::class, 'l3_content_info_id', 'id');
     }
+
+    public function overview20SubDescriptions()
+    {
+        return $this->hasMany(L3Overview20SubDescription::class, 'l3_content_info_id', 'id');
+    }
+
     public function overview2Descriptions()
     {
         return $this->hasMany(L3Overview2_Description::class, 'l3_content_info_id');

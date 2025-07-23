@@ -149,7 +149,9 @@
                                     'overview2subdescription' => 'overview2subdescription',
                                     'significance2' => 'significance2',
                                     'industries2' => 'industries2',
+                                    'faq2' => 'faq2',
                                     'overview20' => 'overview20',
+                                    
                                 ];
                             @endphp
 
@@ -251,7 +253,7 @@
                     <div class="l3-form form-group overview20_subdescription_title">
                         <div class="body-title">Overview Sub Title(H) :<span class="tf-color-1">*</span></div>
                         <input type="text" class="" name="overview20_subdescription_title"
-                            value="{{ $l3overview20->overview20_subdescription_title ?? '' }}"></input>
+                            value="{{ $l3overview20->first()->overview20_subdescription_title ?? '' }}"></input>
                     </div>
 
 
@@ -261,7 +263,7 @@
                             <option value="">Select</option>
                             @for ($i = 1; $i <= 10; $i++)
                                 {{-- <option value="{{ $i }}">{{ $i }}</option> --}}
-                                <option value="{{ $i }}" {{ $i == $l3overview20 ? 'selected' : '' }}>
+                                <option value="{{ $i }}" {{ $i == $l3Overview_sub_desc ? 'selected' : '' }}>
                                     {{ $i }}
                                 </option>
                             @endfor
@@ -466,6 +468,40 @@
                     </div>
 
                     <!-- Significance2 Form ends-->
+
+                    <!-- faqs2 Form Start -->
+                    <div class="l3-form" id="faq2_form" style="display: none;">
+                        <div class="body-title">Select Faq2 Type <span class="tf-color-1">*</span></div>
+                        <select class="flex-grow" id="faq2_category" name="faq2_type">
+                            <option value="" disabled selected>Select Faq2 Category</option>/
+                           
+                            @foreach ($testcategories as $category)
+                                <option value="{{ $category->id }}"
+                                    {{ $l3Content->faq2_category_type == $category->id ? 'selected' : '' }}>
+                                    {{ $category->name }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
+
+
+                    
+                    <div class="l3-form form-group faq2_short_description">
+                        <div class="body-title">faq2 Short Description :<span class="tf-color-1">*</span></div>
+                        <textarea class="ckeditor" name="faq2_short_description">{{ $l3Content->faq2_short_description ?? '' }}</textarea>
+                    </div>
+                    <div class="l3-form form-group faq2_desc">
+                        <div class="body-title">faq2 Long Description :<span class="tf-color-1">*</span></div>
+                        <textarea class="ckeditor" name="faq2_description">{{ $l3Content->faq2_description ?? '' }}</textarea>
+                    </div>
+
+
+                    <div class="l3-form form-group faq2_title">
+                        <div class="body-title">Faq2 Title :<span class="tf-color-1">*</span></div>
+
+                        <textarea class="ckeditor" name="faq2_title">{{ $Faq2Title->title ?? '' }}</textarea>
+                    </div>
+                    <!-- faqs2 Form ends-->
 
 
                     <!-- course Feature Form Start -->
@@ -796,12 +832,12 @@
                         <div class="body-title"> Program Description : <span class="tf-color-1">*</span></div>
                         <textarea class="ckeditor" name="program_description">
                             @if (old('program_description'))
-                                {{ old('program_description') }}
-                                @elseif(isset($program_sub_data) && $program_sub_data->description)
-                                {{ $program_sub_data->description }}
-                                @elseif(isset($l3Content) && $l3Content->program_description)
-                                {{ $l3Content->program_description }}
-                                @endif
+{{ old('program_description') }}
+@elseif(isset($program_sub_data) && $program_sub_data->description)
+{{ $program_sub_data->description }}
+@elseif(isset($l3Content) && $l3Content->program_description)
+{{ $l3Content->program_description }}
+@endif
                         </textarea>
                     </div>
 
@@ -975,6 +1011,7 @@
                     "overview2subdescription": "#overview3_form",
                     "significance2": ".significance2_desc",
                     "industries2": ".industries2_title",
+                    "faq2": "#faq2_form",
                     "history": "#history_form"
                 };
 
@@ -999,6 +1036,7 @@
                         $('.overview20_subdescription_title').show();
                         $('#overview20_sub_desc').show();
                         $('.overview20_title').show();
+                        $('.blog_image').hide();
                         $('#l3_layout_type').val('overview20'); // Set hidden input to 'overview'
                     } else if (selectedL3Category === "significance") {
                         $('#significance_form').show();
@@ -1007,6 +1045,13 @@
                         $('.significance_title').show();
                         $('.comman_images').show();
                         $('#l3_layout_type').val('significance'); // Set hidden input to 'significance'
+                    } else if (selectedL3Category === "faq2") {
+                        $('#faq2_form').show();
+                        $('.faq2_desc').show();
+                        $('.faq2_short_description').show();
+                        $('.faq2_title').show();
+                        $('.blog_image').hide();
+                        $('#l3_layout_type').val('faq2'); // Set hidden input to 'faq2'
                     } else if (selectedL3Category === "program") {
                         $('#program_form').show();
                         $('#layout_program_form').show();
@@ -1232,7 +1277,7 @@
                 // Iterate through the number of descriptions needed
                 for (let i = 0; i < count; i++) {
                     let content = existingData[i]?.sub_description ??
-                    ''; // Fetch specific overview_sub_descriptions
+                        ''; // Fetch specific overview_sub_descriptions
 
                     let subForm = `
                 <div class="overview-sub-section">
@@ -1309,7 +1354,7 @@
     <script>
         $(document).ready(function() {
             // Convert Laravel array into JavaScript array
-            let existingData = @json($L3Overview20SubDescription ?? []);
+            let existingData = @json($l3overview20 ?? []);
 
             function generateSubDescriptions(count) {
                 let container = $('#dynamic_overview20_sections');

@@ -53,6 +53,7 @@ class L3CategoryRepository implements L3CategoryRepositoryInterface
                     'overviewSubDescriptions',
                     'overview2Descriptions', // <-- Add this line
                     'overview2SubDescriptions',
+                    'overview20SubDescriptions',
                     'industry2Title', 
                     'overview15s',
                     // 'significance2s',

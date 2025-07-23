@@ -56,7 +56,7 @@ class L3ContentRepository implements L3ContentRepositoryInterface
 
     public function getCreateData()
     {
-        // dd(SignificanceCategory::all());
+        // dd(faq2Categories::all());
         return [
             'page_categories' => PageDetail::all(),
             'significanceCategories' => SignificanceCategory::all(),
@@ -68,6 +68,7 @@ class L3ContentRepository implements L3ContentRepositoryInterface
             'blogCategories' => BlogCategory::all(),
             'programCategories' => ProgramCategory::all(),
             'faq2Categories'=>Faq2Category::all(),
+           
         ];
     }
 
@@ -648,7 +649,7 @@ class L3ContentRepository implements L3ContentRepositoryInterface
     public function getl3contentById($id)
     {
         $l3Content = L3ContentInfo::findOrFail($id);
-        // dd($l3Content);
+        // dd($l3Content->sub_category_id);
         // dd(L3OverviewSubDescription::where('l3_content_info_id', $id)->get());
         // dd(L3Overview2SubDescription::where('sub_category_id', $l3Content->sub_category_id)->get());
         return [
@@ -659,6 +660,7 @@ class L3ContentRepository implements L3ContentRepositoryInterface
             'l3Categories'           => L3Category::where('sub_category_id', $l3Content->sub_category_id)->get(),
             'significanceCategories' => SignificanceCategory::where('sub_category_id', $l3Content->sub_category_id)->get(),
             'significance2Categories' => Significance2Category::where('sub_category_id', $l3Content->sub_category_id)->get(),
+            'testcategories'          => Faq2Category::where('sub_category_id', $l3Content->sub_category_id)->get(), 
             'courseFeatureCategories' => CourseFeatureCategory::where('sub_category_id', $l3Content->sub_category_id)->get(),
             'cyberwindCategories'    => CyberwindCategory::where('sub_category_id', $l3Content->sub_category_id)->get(),
             'industryCategories'     => IndustryCategory::where('sub_category_id', $l3Content->sub_category_id)->get(),
@@ -667,7 +669,8 @@ class L3ContentRepository implements L3ContentRepositoryInterface
             'programCategories'      => ProgramCategory::where('sub_category_id', $l3Content->sub_category_id)->get(),
             'l3overview_desc'        => L3OverviewSubDescription::where('l3_content_info_id', $id)->get(),
             'l3overview_count_desc'  => L3OverviewSubDescription::where('l3_content_info_id', $id)->count(),
-            'l3overview20'           => L3Overview20SubDescription::where('l3_content_info_id', $id)->count(),
+            'l3overview20'           => L3Overview20SubDescription::where('l3_content_info_id', $id)->get(),
+            'l3Overview_sub_desc'    => L3Overview20SubDescription::where('l3_content_info_id', $id)->count(),
             'significanceTitle'      => SignificanceTitle::where('l3_content_info_id', $id)->first(),
             'program_sub_data'       => ProgramSubCategory::where('l3_content_info_id', $id)->first(),
             'coursefeatureTitle'     => CourseFeatureTitle::where('l3_content_info_id', $id)->first(),
@@ -681,6 +684,7 @@ class L3ContentRepository implements L3ContentRepositoryInterface
             'L3Overview2SubDescription' => L3Overview2SubDescription::where('l3_content_info_id', $id)->get(), 
             'significance2'             => Significance2::where('l3_content_info_id', $id)->first(),
             'Industry2Title'             => Industry2Title::where('l3_content_info_id', $id)->first(),
+            'Faq2Title'                 => Faq2Title::where('l3_content_info_id', $id)->first(), 
         ];
     }
 
@@ -839,6 +843,12 @@ class L3ContentRepository implements L3ContentRepositoryInterface
                     $l3ContentInfo->images = $this->uploadImage($request, 'significance');
                 }
                 break;
+            
+            case 'faq2':
+                $l3ContentInfo->faq2_category_type = $request->faq2_type;
+                $l3ContentInfo->faq2_short_description = $request->faq2_short_description;
+                $l3ContentInfo->faq2_description = $request->faq2_description;
+                break;
 
             case 'coursefeatures':
                 $l3ContentInfo->course_feature_type = $request->coursefeature_type;
@@ -983,6 +993,13 @@ class L3ContentRepository implements L3ContentRepositoryInterface
             IndustryTitle::updateOrCreate(
                 ['l3_content_info_id' => $id],
                 ['title' => $request->input('industries_title', 'Default Title')]
+            );
+        }
+
+        if ($request->l3_layout_type == 'faq2') {
+            Faq2Title::updateOrCreate(
+                ['l3_content_info_id' => $l3ContentInfo->id], // Condition
+                ['title' => $request->input('faq2_title', 'Default Title')] // Use default if null
             );
         }
 
