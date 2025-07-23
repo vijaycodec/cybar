@@ -972,9 +972,9 @@ body{
     font-size: 14px;
     width: 100%;
     }
-    ul.tab2 li a:focus, .active {
+    ul.tab2 li a:focus, ul.tab2 a.active {
     background-color: #15416e;
-    color: #444444 !important;
+    color: #fff !important;
     }
     .home-slider p{
         color: #212529;
