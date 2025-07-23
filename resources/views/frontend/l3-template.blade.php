@@ -2608,7 +2608,7 @@
                                             <div id="{{ $id }}" class="tab-pane fade {{ $isActive ? 'show active' : '' }}"
                                                 style="background-color: #ebf5f9;">
                                                 <div class="container">
-                                                    <div class="pro-ul-box">
+                                                    <div class="">
                                                         <div class="row">
                                                             <div class="col-md-12">
                                                                 <div class="brochure-box">
