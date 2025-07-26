@@ -33,12 +33,12 @@
                             </div>
                         </form>
                     </div> --}}
+                    <a class="tf-button style-1 w208" href=" {{ route('course-category.create') }}">
+                        <i class="icon-plus"></i>Add new</a>
                         <a class="tf-button style-1 w208" 
-                        href="{{ route('course-category.main-index') }}">Main index</a>
+                        href="{{ route('course-category.list') }}">Back</a>
                 </div>
                 <div class="table-responsive">
-                    @foreach ($categories->groupBy('category_group') as $group => $groupedCategories)
-                       <h4>{{ $group }}</h4>
                     <table id="myTable" class="table table-striped table-bordered "  style="table-layout: auto;">
                         <thead>
                             <tr>
@@ -46,20 +46,18 @@
                                 <th>Pages Category </th>
                                 <th>Category Group </th>
                                 <th>Name</th>
-                                <th>Ordering</th>
                                 <th>Slug</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
-                        <tbody class="sortable-rows" data-group="{{ $group }}">
+                        <tbody>
                             @if ($categories->count() > 0)
-                              @foreach ($groupedCategories as $courseCategory)
-                                    <tr data-id="{{ $courseCategory->id }}">
+                                @foreach ($categories as $index => $courseCategory)
+                                    <tr>
                                         <td  style="padding: 10px 10px;">{{ $courseCategory->id }}</td>
                                         <td style="padding: 10px;">{{ $courseCategory->pageCategory->page_name }}</td>
                                         <td  style="padding: 10px;">{{ $courseCategory->category_group }}</td>
                                         <td  style="padding: 10px;">{{ $courseCategory->name }}</td>
-                                        <td  style="padding: 10px;">{{ $courseCategory->ordering }}</td>
                                         <td  style="padding: 10px;">{{ $courseCategory->slug }}</td>
                                         <td style="padding: 10px;">
                                             <div class="list-icon-function">
@@ -94,7 +92,6 @@
                             @endif
                         </tbody>
                     </table>
-                    @endforeach
                     
                     {{-- <div>
                         {!! $categories->withQueryString()->links('pagination::bootstrap-5') !!}
@@ -110,6 +107,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- Modal Structure -->
     <div class="modal fade" id="CategoryModal" tabindex="-1" aria-labelledby="CategoryModalLabel" aria-hidden="true">
@@ -148,7 +146,6 @@
 @endsection
 
 @push('scripts')
-<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
     <script>
         $(document).ready(function() {
             // Handle Read More button click
@@ -163,6 +160,7 @@
                 // Show the modal
                 $('#CategoryModal').modal('show');
             });
+
 
             //script for Delete
             $(document).on('click', '.delete', function() {
@@ -208,48 +206,4 @@
             });
         });
     </script>
-
-    <script>
-    $(function () {
-$('.sortable-rows').each(function () {
-    let groupElement = $(this);
-    let categoryGroup = groupElement.data('group');
-
-    groupElement.sortable({
-        placeholder: "ui-state-highlight",
-        update: function (event, ui) {
-            let order = [];
-
-            groupElement.children('tr').each(function (index, element) {
-                order.push({
-                    id: $(element).data("id"),
-                    position: index + 1,
-                    group: categoryGroup
-                });
-            });
-
-            $.ajax({
-                url: "{{ route('course-category.reorder') }}",
-                method: "POST",
-                data: {
-                    _token: "{{ csrf_token() }}",
-                    order: order
-                },
-                success: function (response) {
-                    console.log("Group " + categoryGroup + " reordered successfully");
-                },
-                error: function () {
-                    alert("Failed to update order for group " + categoryGroup);
-                }
-            });
-        }
-    });
-});
-
-
-    });
-</script>
-
-
-    
 @endpush

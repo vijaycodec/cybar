@@ -35,6 +35,12 @@ class L3ContentInfo extends Model
     {
         return $this->hasMany(L3OverviewSubDescription::class, 'l3_content_info_id', 'id');
     }
+
+    public function overview20SubDescriptions()
+    {
+        return $this->hasMany(L3Overview20SubDescription::class, 'l3_content_info_id', 'id');
+    }
+
     public function overview2Descriptions()
     {
         return $this->hasMany(L3Overview2_Description::class, 'l3_content_info_id');
@@ -60,7 +66,7 @@ class L3ContentInfo extends Model
 
     public function significance2Category()
     {
-        return $this->belongsTo(significance2Category::class, 'significance2_category_type', 'id');
+        return $this->belongsTo(Significance2Category::class, 'significance2_category_type', 'id');
     }
 
     public function coursefeatureCategory()
@@ -137,5 +143,15 @@ class L3ContentInfo extends Model
     public function subcategory()
     {
         return $this->belongsTo(SubCategory::class, 'sub_category_id');
+    }
+
+        public function faq2Category()
+    {
+        return $this->belongsTo(Faq2Category::class, 'faq2_category_type', 'id');
+    }
+
+    public function faq2_title()
+    {
+        return $this->hasOne(Faq2Title::class, 'l3_content_info_id');
     }
 }

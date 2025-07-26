@@ -91,6 +91,17 @@ return new class extends Migration
             $table->text('program_sub_title')->nullable();
             $table->text('program_description')->nullable(); // Category Description
             $table->string('program_image')->nullable(); // Program Image
+
+
+             //significance section columns
+            $table->integer('faq2_category_type')->nullable();  //  faq2 Category Name
+            $table->longText('faq2_description')->nullable();  //   faq2 description  
+            $table->text('faq2_short_description')->nullable();  //   faq2 description
+
+             //overview 20 section columns
+            $table->text('overview20_title')->nullable();  //  overview 20  Category Name
+            $table->text('overview20_description')->nullable();  //   overview 20  description  
+            
             
                          
             $table->timestamps();

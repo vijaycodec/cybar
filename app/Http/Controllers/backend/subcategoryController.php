@@ -7,20 +7,35 @@ use App\Models\CourseCategory;
 use App\Models\PageDetail;
 use App\Models\SubCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
 
 class subcategoryController extends Controller
 {
-    public function index()
+    public function Orderingindex()
     {
-        // Use eager loading to fetch related data to minimize queries
+        // Fetch all subcategories with necessary relationships
         $subCategories = SubCategory::with(['pageCategory', 'category'])
-            ->orderBy('id', 'ASC')
-            ->get(); // Paginate results for better performance
+            ->orderBy('category_id')
+            ->orderBy('ordering') // ordering within each category
+            ->get();
 
-        return view('backend.sub_category.index', compact('subCategories'));
+        // Group subcategories by category_id for the view
+        $groupedSubcategories = $subCategories->groupBy('category_id');
+
+        return view('backend.sub_category.index', compact('groupedSubcategories'));
     }
+
+    public function Index()
+{
+    $subCategories = SubCategory::with(['pageCategory', 'category'])
+        ->orderBy('id', 'desc')
+        ->get();
+
+    return view('backend.sub_category.main-index', compact('subCategories'));
+}
+
 
     public function create()
     {
@@ -75,7 +90,7 @@ class subcategoryController extends Controller
                 'slug'             => $request->slug,
             ]);
 
-            return redirect()->route('sub-category.list')->with('success', 'Record has been added successfully!');
+            return redirect()->route('sub-category.main-index')->with('success', 'Record has been added successfully!');
         } catch (\Exception $e) {
             // Log error if needed: \Log::error($e->getMessage());
             return redirect()->back()
@@ -128,7 +143,7 @@ class subcategoryController extends Controller
 
             $subCategory->save();
 
-            return redirect()->route('sub-category.list')->with('success', 'Record has been updated successfully!');
+            return redirect()->route('sub-category.main-index')->with('success', 'Record has been updated successfully!');
         } catch (\Exception $e) {
             return redirect()->back()
                 ->withErrors(['error' => 'An error occurred while updating the record. Please try again later.'])
@@ -142,8 +157,24 @@ class subcategoryController extends Controller
             $subCategory->delete();
             return response()->json([
                 'message' => 'Sub Category deleted successfully!',
-                'redirect' => route('sub-category.list') // Include the redirect URL
+                'redirect' => route('sub-category.main-index') // Include the redirect URL
             ], 200);
         }
     }
+
+
+public function reorder(Request $request)
+{
+    foreach ($request->order as $item) {
+        DB::table('sub_categories')
+            ->where('id', $item['id'])
+            ->update(['ordering' => $item['position']]);
+    }
+
+    return response()->json(['status' => 'success']);
+}
+
+
+
+
 }

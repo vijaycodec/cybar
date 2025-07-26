@@ -35,6 +35,7 @@ use App\Http\Controllers\backend\careerController  as BackendCareerController;
 use App\Http\Controllers\backend\coursrfeaturesController;
 use App\Http\Controllers\backend\cyberwimdController;
 use App\Http\Controllers\backend\EnquiryController;
+use App\Http\Controllers\backend\faq2CategoryController;
 use App\Http\Controllers\backend\faqController;
 use App\Http\Controllers\backend\industriesController;
 use App\Http\Controllers\backend\jobCarrerController;
@@ -90,7 +91,8 @@ Route::middleware(['auth', 'admin', 'prevent_history'])->group(function () {
         Route::delete('/delete/{id}', [BackendResourcesController::class, 'destroy'])->name('resources.destroy');
     });
     //Course-category Routes
-    route::get('/course-category/list', [courseCategoryController::class, 'index'])->name('course-category.list');
+    route::get('/course-category/list', [courseCategoryController::class, 'index'])->name('course-category.main-index');
+    route::get('/course-category/Orderinginlist', [courseCategoryController::class, 'Orderingindex'])->name('course-category.list');
     route::get('/course-category/create', [courseCategoryController::class, 'create'])->name('course-category.create');
     route::post('/course-category/store', [courseCategoryController::class, 'store'])->name('course-category.store');
     Route::get('/course-category/show/{id}', [courseCategoryController::class, 'show'])->name('course-category.show');
@@ -109,7 +111,8 @@ Route::middleware(['auth', 'admin', 'prevent_history'])->group(function () {
     Route::get('/get-categories/services', [ourServicesController::class, 'getSubCategories'])->name('get-categories.get');
 
     // Sub Category Routes
-    route::get('/sub-category/list', [subcategoryController::class, 'index'])->name('sub-category.list');
+    route::get('/sub-category/list', [subcategoryController::class, 'index'])->name('sub-category.main-index');
+    route::get('/sub-category/Orderinginlist', [subcategoryController::class, 'Orderingindex'])->name('sub-category.list');
     route::get('/sub-category/create', [subcategoryController::class, 'create'])->name('sub-category.create');
     route::post('/sub-category/store', [subcategoryController::class, 'store'])->name('sub-category.store');
     Route::get('/sub-category/show/{id}', [subcategoryController::class, 'show'])->name('sub-category.show');
@@ -293,10 +296,26 @@ Route::middleware(['auth', 'admin', 'prevent_history'])->group(function () {
     Route::put('faq/update/{id}', [faqController::class, 'update'])->name('faq.update');
     Route::delete('faq/delete/{id}', [faqController::class, 'destroy'])->name('faq.destroy');
 
+    //faq2-sub category Routes
+    route::get('/faq2/list', [faq2CategoryController::class, 'index'])->name('faq2.list');
+    route::get('/faq2/create', [faq2CategoryController::class, 'create'])->name('faq2.create');
+    route::post('/faq2/store', [faq2CategoryController::class, 'store'])->name('faq2.store');
+    Route::get('/faq2/show/{id}', [faq2CategoryController::class, 'show'])->name('faq2.show');
+    route::get('/faq2/edit/{id}', [faq2CategoryController::class, 'edit'])->name('faq2.edit');
+    Route::put('faq2/update/{id}', [faq2CategoryController::class, 'update'])->name('faq2.update');
+    Route::delete('faq2/delete/{id}', [faq2CategoryController::class, 'destroy'])->name('faq2.destroy');
+
     Route::middleware(['auth'])->group(function () {
         Route::get('/change-password', [ChangePasswordController::class, 'showChangePasswordForm'])->name('password.change');
         Route::post('/change-password', [ChangePasswordController::class, 'updatePassword'])->name('password.update');
     });
+
+    Route::post('/course-category/reorder', [CourseCategoryController::class, 'reorder'])
+    ->middleware('auth') // Optional: protect this for admins only
+    ->name('course-category.reorder');
+    Route::post('/sub-categories/reorder', [SubCategoryController::class, 'reorder'])->name('sub-category.reorder');
+
+
 });
 
 Route::middleware(['FrameGuard'])->group(function () {

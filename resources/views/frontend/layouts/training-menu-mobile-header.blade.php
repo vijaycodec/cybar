@@ -40,11 +40,11 @@
                                     Mobile Application VAPT Testing
                                  </a>
                               </li> --}}
-                              <li class="mobile-img">
-                                 {{-- <img src="{{ asset('uploads/backend/services/' . $service->images) }}"> --}}
+                              {{-- <li class="mobile-img">
+                                 
                                  <img src="{{ asset('storage/uploads/backend/services/' . $service->images) }}">
 
-                              </li>
+                              </li> --}}
                            </ul>
                            <!-- Subcategory Dropdown End -->
                         </li>
