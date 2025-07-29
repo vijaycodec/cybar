@@ -93,27 +93,28 @@ class ServicesRepository implements ServicesRepositoryInterface
     // }
 
 
-    public function getAllServices()
+public function getAllServices()
 {
-    return Cache::remember('our_services_all', now()->addDay(), function () {
-        return OurServices::with('course_category', 'subcategory')->get();
-    });
+        return OurServices::with(['course_category', 'subcategory'])
+            ->get()
+            ->sortBy(function ($item) {
+                return $item->subcategory->ordering ?? 9999; // Null-safe fallback
+            })
+            ->values(); // reset keys
 }
+
 
 public function getGroupedServices()
 {
-    // Cache the grouped result separately
-    return Cache::remember('our_services_grouped_by_category', now()->addDay(), function () {
-        return $this->getAllServices()->groupBy('category_id');
-    });
+    return $this->getAllServices()->groupBy('category_id');
 }
 
 public function getCategoriesByPage($pageId)
 {
-    return Cache::remember("our_services_categories_page_{$pageId}", now()->addDay(), function () use ($pageId) {
-        return CourseCategory::with('services')
-            ->where('page_category', $pageId)
-            ->get();
-    });
+    return CourseCategory::with('services')
+        ->where('page_category', $pageId)
+        ->orderBy('ordering')
+        ->get();
 }
+
 }

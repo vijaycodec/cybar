@@ -67,7 +67,7 @@
                                                                 </div>
                                                                 <div class="ceh-testo-body">
                                                                     <p>{{ $testimonial->testimonial_short_description }}</p>
-                                                                    <span>Read More</span>
+                                                                    <span style="color:#fff">Read More</span>
                                                                 </div>
                                                             </div>
                                                         </div>

@@ -668,7 +668,7 @@ h6, .h6 {
 }
 
 .justify-between {
-  justify-content: space-between;
+  justify-content: start;
 }
 
 .items-center {

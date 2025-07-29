@@ -360,7 +360,7 @@ body{
     gap: 5px;
     }
 
-    .home-tabs2 li {padding: 17px 22px;cursor: pointer;font-size: 16px;background: #e5e8ee;text-align: center;line-height: 1.4;display: flex;align-items: center;}
+    .home-tabs2 li {padding: 17px 60px;cursor: pointer;font-size: 16px;background: #e5e8ee;text-align: center;line-height: 1.4;align-items: center;}
     .home-tabs2 li:hover {}
     .home-tabs2 li.active {outline: 0;background-color: #15416E;}
     .home-tabs2 li.active a{color: #fff;}
@@ -972,7 +972,7 @@ body{
     font-size: 14px;
     width: 100%;
     }
-    ul.tab2 li a:focus, .active {
+    ul.tab2 li a:focus, ul.tab2 a.active {
     background-color: #15416e;
     color: #fff !important;
     }
@@ -3628,7 +3628,7 @@ body{
     width: 100%;
     }
     .wwyl-box-circle {
-    top: -24px;
+    top: -35px;
     left: 40%;
     width: 50px;
     height: 50px;
@@ -3720,7 +3720,7 @@ body{
 
     border-left: 0px solid #F8BB43;
     margin-bottom: 40px;
-    padding: 17px 9px;
+    padding: 25px 9px;
     }
     .orange {
     border-left: 0px solid #F58D21 !important;
@@ -5412,7 +5412,7 @@ p{
    margin-bottom: 15px;
 }
 .cn-title{
-    margin-bottom: 20px;
+    margin-bottom: 26px;
 }
 .wccn-title{
     padding-bottom: 20px;

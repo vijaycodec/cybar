@@ -30,7 +30,7 @@ if (isMobile) {
 
         // Call the function for each set of tabs
         handleTabClick("#tabs-nav", ".tab-content");
-        handleTabClick('#tabs-nav_1', '.tab-content_1')
+        handleTabClick('#tabs-nav_1', '.tab-content_1');
         handleTabClick("#tabs-nav1", ".tab-content1");
         handleTabClick("#tabs-nav2", ".tab-content2");
         handleTabClick("#tabs-nav3", ".tab-content3");

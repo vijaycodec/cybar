@@ -40,7 +40,7 @@
                     enctype="multipart/form-data">
                     @csrf
                     <a class="tf-button style-1 w208" style="padding-left: 75px;"
-                        href="{{ route('sub-category.list') }}">Back</a>
+                        href="{{ route('sub-category.main-index') }}">Back</a>
 
                     <!-- Page Category -->
                     <fieldset class="name">

@@ -17,6 +17,7 @@
     @endif
 
     <!-- CSS start -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ asset('assets/css/slider.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/cns-plugin.css') }}">
@@ -66,7 +67,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script type="text/javascript" src="{{ asset('assets/js/custom.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/mobile-menu.js?v=2') }}"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
     @stack('scripts')
 
 </body>

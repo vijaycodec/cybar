@@ -42,7 +42,7 @@
                     enctype="multipart/form-data">
                     @csrf
                     <a class="tf-button style-1 w208" style="padding-left: 75px;"
-                        href=" {{ route('course-category.list') }}">
+                        href=" {{ route('course-category.main-index') }}">
                         Back</a>
                     <fieldset class="name">
                         <div class="body-title">Select Page Category <span class="tf-color-1">*</span></div>

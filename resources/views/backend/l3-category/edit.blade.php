@@ -97,6 +97,8 @@
                             'overview16_short_descriptions' => 'Section16',
                             'overview17_descriptions' => 'Section17',
                             'significance2s' => 'Section18',
+                            'faq2Category'=>'faq 2(sec-19)',
+                            'overview20' => 'overview20',
                         ];
                     @endphp
                     <fieldset class="name">

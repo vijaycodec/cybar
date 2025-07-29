@@ -53,6 +53,7 @@ class L3CategoryRepository implements L3CategoryRepositoryInterface
                     'overviewSubDescriptions',
                     'overview2Descriptions', // <-- Add this line
                     'overview2SubDescriptions',
+                    'overview20SubDescriptions',
                     'industry2Title', 
                     'overview15s',
                     // 'significance2s',
@@ -66,6 +67,8 @@ class L3CategoryRepository implements L3CategoryRepositoryInterface
                     'blogCategory',
                     'blog_title',
                     'testimonials',
+                    'faq2Category',
+                    'faq2_title',
                     // 'faqCategory.faqSubCategory',
                     'programCategory' => function ($query) use ($subcategoryId, $pageId) {  
                         $query->with(['programSubCategories' => function ($subQuery) use ($subcategoryId, $pageId) {

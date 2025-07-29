@@ -128,6 +128,8 @@
                             <option value="overview2subdescription">overview2 Sub description</option>
                             <option value="significance2">significance 2</option>
                             <option value="industries2">industries 2</option>
+                            <option value="faq2">faq2</option>
+                            <option value="overview20">overview 20</option>
                         </select>
                     </fieldset>
 
@@ -136,6 +138,7 @@
                     <!-- Forms based on L3 Category selection -->
 
                     <h5 class="form-heading"style="align-items:center">Add L3 Content Data </h5>
+
                     <!-- Overview Form start-->
 
                     <div class="l3-form form-group overview_title">
@@ -194,6 +197,41 @@
 
 
                     <!-- Overview Form ends-->
+
+                    <!-- Overview 20 Form start-->
+
+                    <div class="l3-form form-group overview20_title">
+                        <div class="body-title">Overview Title(H) :<span class="tf-color-1">*</span></div>
+                        <input type="text" class="" name="overview20_title">{{ old('overview20_title') }}</input>
+                    </div>
+
+                    <div class="form-group l3-form overview_form " id="overview20_form">
+
+                        <div class="body-title">Overview Description 20 :<span class="tf-color-1">*</span></div>
+                        <textarea class="ckeditor" name="overview20_description">{{ old('overview20_description') }}</textarea>
+                    </div>
+
+                    <div class="l3-form form-group overview20_subdescription_title">
+                        <div class="body-title">Overview Sub Title(H) :<span class="tf-color-1">*</span></div>
+                        <input type="text" class="" name="overview20_subdescription_title">{{ old('overview20_subdescription_title') }}</input>
+                    </div>
+
+
+                    <div class="l3-form" id="overview20_sub_desc" style="display: none;">
+                        <div class="body-title">Select Sub Descriptions: <span class="tf-color-1"></span></div>
+                        <select id="overview20_count" class="flex-grow l3_content">
+                            <option value="">Select</option>
+                            @for ($i = 1; $i <= 10; $i++)
+                                <option value="{{ $i }}">{{ $i }}</option>
+                            @endfor
+                        </select>
+                    </div>
+
+
+                    <div class="form-group" id="dynamic_overview20_sections"></div>
+
+
+                    <!-- Overview 20 Form ends-->
 
                     <!-- Overview 2 Form start-->
 
@@ -672,6 +710,38 @@
                     </div>
                     <!-- Program Form End -->
 
+
+
+
+                    <!-- faqs Form Start -->
+                    <div class="l3-form" id="faq2_form" style="display: none;">
+                        <div class="body-title  ">Select Faq2 Type <span class="tf-color-1">*</span></div>
+                            <select class="flex-grow" id="faq2_category" name="faq2_type">
+                                <option value="" disabled selected>Select Faq2 Category</option>
+                                @foreach ($faq2Categories as $category)
+                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                @endforeach
+                            </select>
+                    </div>
+
+                    <div class="l3-form form-group faq2_short_description">
+                        <div class="body-title">faq2 Short Description :<span class="tf-color-1">*</span></div>
+                        <textarea class="ckeditor" name="faq2_short_description">{{ old('faq2_short_description') }}</textarea>
+                    </div>
+                    <div class="l3-form form-group faq2_desc">
+                        <div class="body-title">faq2 Long Description :<span class="tf-color-1">*</span></div>
+                        <textarea class="ckeditor" name="faq2_description">{{ old('faq2_description') }}</textarea>
+                    </div>
+
+
+                    <div class="l3-form form-group faq2_title">
+                        <div class="body-title">Faq2 Title :<span class="tf-color-1">*</span></div>
+
+                        <textarea class="ckeditor" name="faq2_title">{{ old('faq2_title') }}</textarea>
+                    </div>
+                    <!-- faqs Form ends-->
+
+
                     {{-- comman Image for required form start --}}
                     <fieldset class="l3-form comman_images">
                         <div class="body-title">Upload images <span class="tf-color-1">*</span></div>
@@ -748,7 +818,13 @@
                     $('#overview_sub_desc').show();
                     $('.overview_title').show();
                     $('#l3_layout_type').val('overview'); // Set hidden input to 'overview'
-                } else if (selectedL3Category === "significance") {
+                }else if (selectedL3Category === "overview20") {
+                    $('#overview20_form').show();
+                    $('.overview20_subdescription_title').show();
+                    $('#overview20_sub_desc').show();
+                    $('.overview20_title').show();
+                    $('#l3_layout_type').val('overview20'); // Set hidden input to 'overview'
+                }else if (selectedL3Category === "significance") {
                     $('#significance_form').show();
                     $('.significance_desc').show();
                     $('.significance_short_description').show();
@@ -862,6 +938,12 @@
                     $('.industries2_desc').show();
                     // $('.comman_images').show();
                     $('#l3_layout_type').val('industries2'); // Set hidden input to 'industries'
+                 } else if (selectedL3Category === "faq2") {
+                    $('#faq2_form').show();
+                    $('.faq2_desc').show();
+                    $('.faq2_short_description').show();
+                    $('.faq2_title').show();
+                    $('#l3_layout_type').val('faq2'); // Set hidden input to 'faq2'
                 } else if (selectedL3Category === "history") {
                     // $('#history_form').show();
                 }
@@ -1014,6 +1096,16 @@
                             $('#blog_category').append('<option value="' + value.id +
                                 '">' + value.name + '</option>');
                         });
+
+
+                         // Populate faq Categories 
+                        $('#faq2_category').html(
+                            '<option value="" disabled selected>Select faq2 category</option>'
+                        );
+                        $.each(data.faq2Categories, function(index, value) {
+                            $('#faq2_category').append('<option value="' + value.id +
+                                '">' + value.name + '</option>');
+                        });
                     }
                 });
             });
@@ -1042,6 +1134,29 @@
                     });
         });
     });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('#overview20_count').change(function() {
+                let count = $(this).val();
+                let container = $('#dynamic_overview20_sections');
+
+                container.empty(); // Clear previous forms
+
+                for (let i = 1; i <= count; i++) {
+                    let subForm = `
+                        <div class="body-title">Overview Sub Description ${i} :<span class="tf-color-1">*</span></div>
+                        <textarea class="mr-5 ckeditor" name="overview20_sub_description[]"></textarea>`;
+                    container.append(subForm);
+                }
+
+                // Re-initialize ckeditor for new textareas
+                document.querySelectorAll('.ckeditor').forEach(function(element) {
+                        CKEDITOR.replace(element);
+                    });
+        });
+     });
     </script>
 
     <script>

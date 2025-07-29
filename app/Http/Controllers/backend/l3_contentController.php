@@ -8,12 +8,15 @@ use App\Models\CourseFeatureCategory;
 use App\Models\CourseFeatureTitle;
 use App\Models\CyberwindCategory;
 use App\Models\CyberwindTitle;
+use App\Models\Faq2Category;
+use App\Models\Faq2Title;
 use App\Models\FaqCategory;
 use App\Models\FaqSubCategory;
 use App\Models\Industry2Title;
 use App\Models\IndustryCategory;
 use App\Models\IndustryTitle;
 use App\Models\L3ContentInfo;
+use App\Models\L3Overview20SubDescription;
 use App\Models\L3Overview2_Description;
 use App\Models\L3Overview2SubDescription;
 use App\Models\L3OverviewSubDescription;
@@ -62,6 +65,8 @@ class l3_contentController extends Controller
         $faqCategories = $data['faqCategories'];
         $blogCategories = $data['blogCategories'];
         $programCategories = $data['programCategories'];
+        $faq2Categories = $data['faq2Categories'];
+        
 
         return view('backend.l3-content.create', compact(
             'page_categories',
@@ -72,7 +77,8 @@ class l3_contentController extends Controller
             'industryCategories',
             'faqCategories',
             'blogCategories',
-            'programCategories'
+            'programCategories',
+            'faq2Categories'
         ));
     }
 
@@ -141,6 +147,12 @@ class l3_contentController extends Controller
             ->orderBy('id', 'desc')
             ->get();
 
+        $faq2Categories = Faq2Category::where('page_category_id', $validated['page_category_id'])
+            ->where('category_id', $validated['category_id'])
+            ->where('sub_category_id', $validated['sub_category_Id'])
+            ->orderBy('id', 'desc')
+            ->get();
+
         // dd($programCategories);
         return response()->json([
             'l3_categories' => $l3categories,
@@ -152,13 +164,14 @@ class l3_contentController extends Controller
             'industryCategories' => $industryCategories,
             'faqCategories' => $faqCategories,
             'blogCategories' => $blogCategories,
+            'faq2Categories'=>$faq2Categories
         ]);
     }
 
 
     public function store(Request $request)
     {
-        // dd($request->all());
+        //  dd($request->all());
 
         $rules = [
             'page_category_id' => 'required',
@@ -194,9 +207,18 @@ class l3_contentController extends Controller
                 $rules['overview17_descriptions'] = 'required|string';
                 break;
 
+            case 'overview20':
+                $rules['overview20_description'] = 'required|string';
+                break;
+
             case 'significance':
                 $rules['significance_description'] = 'required|string';
                 $rules['significance_type'] = 'required|integer';
+                break;
+
+            case 'faq2':
+                $rules['faq2_short_description'] = 'required|string';
+                $rules['faq2_type'] = 'required|integer';
                 break;
 
             case 'significance2':
@@ -361,6 +383,10 @@ public function SwapUpdate(Request $request, $id)
                 $rules['overview17_descriptions'] = 'required|string';
                 break;
 
+            case 'overview20':
+                $rules['overview20_description'] = 'required|string';
+                break;
+
             case 'overview2subdescription':
                 $rules['overview3_title'] = 'required|String';
                 break;
@@ -397,6 +423,12 @@ public function SwapUpdate(Request $request, $id)
             case 'faqs':
                 $rules['faq_category_id'] = 'required|exists:faq_categories,id';
                 break;
+
+            case 'faq2':
+                $rules['faq2_short_description'] = 'required|string';
+                $rules['faq2_type'] = 'required|integer';
+                break;
+
             case 'blog':
                 $rules['blog_category_type'] = 'required|integer';
                 $rules['blog_link'] = 'nullable|string';
@@ -493,6 +525,11 @@ public function SwapUpdate(Request $request, $id)
                 L3Overview2SubDescription::where('l3_content_info_id', $id)->delete();
             }
 
+            $L3Overview20SubDescription = L3Overview20SubDescription::where('l3_content_info_id', $id)->get();
+            if ($L3Overview20SubDescription->isNotEmpty()) {
+                L3Overview20SubDescription::where('l3_content_info_id', $id)->delete();
+            }
+
             $significance2Records = Significance2::where('l3_content_info_id', $id)->get();
 
             if ($significance2Records->isNotEmpty()) {
@@ -507,6 +544,11 @@ public function SwapUpdate(Request $request, $id)
             $Industry2Title = Industry2Title::where('l3_content_info_id', $id)->get();
             if ($Industry2Title->isNotEmpty()) {
                 Industry2Title::where('l3_content_info_id', $id)->delete();
+            }
+
+            $Faq2Title = Faq2Title::where('l3_content_info_id', $id)->get();
+            if ($Faq2Title->isNotEmpty()) {
+                Faq2Title::where('l3_content_info_id', $id)->delete();
             }
 
             $overview15Records = Overview15::where('l3_content_info_id', $id)->get();
